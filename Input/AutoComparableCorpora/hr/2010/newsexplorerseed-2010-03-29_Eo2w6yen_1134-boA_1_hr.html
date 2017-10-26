@@ -1,0 +1,1977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+
+<!-- Meta Information -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<!--kraj-->
+
+<!--Ime bloga koje ce se prikazivati u tabu browsera-->
+<title>Muke jednog prevoditelja</title>
+<!--kraj-->
+
+<!-- Ovdje se upravlja izgledom bloga -->
+<style type="text/css">
+   #igrehr {
+      display:none !important;
+   }
+    #Banner {
+      display:none !important;
+   }
+</style>
+<style type="text/css">
+
+/*--- LINKOVI ---*/
+body {background: #669922 url(http://www.blog.hr/img/hr/design_pics/sjena-zeleno.gif) top left repeat-y;margin-left:0px;margin-right:10px;margin-top:0px;padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;margin-bottom:0px;font-size:10pt;font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;line-height:18px;}a:link {color:#BF4E27;font-size:100%;font-weight:bold;text-decoration:underline;}a:link {color:#CC2288;font-size:100%;font-weight:bold;text-decoration:none;}a:link {color:#669922;font-size:100%;font-weight:bold;text-decoration:none;}
+a:visited {color:#669922;font-size:100%;font-weight:bold;text-decoration:none;}
+a:active {color:#88BB22;font-size:100%;font-weight:bold;text-decoration:underline;}
+a:hover {color:#88BB22;font-size:100%;font-weight:bold;text-decoration:underline;}
+
+#menu a {color:#EFFDD4;}
+#menu a:visited {color:#EFFDD4;}
+#menu a:active {color:#D3F181;text-decoration:underline;}
+#menu a:hover {color:#D3F181;text-decoration:underline;}
+
+
+/*--- IME BLOGA ---*/
+h1 {font:bold 200%/55px Helvetica,Arial,Verdana,Sans-serif;color:#FFFFEE;text-align:center;background-color:#88BB22;margin-left:-20px;margin-bottom:-20px;margin-top:0px;padding-left:8px;width:520px;text-decoration:none;}
+h1 a {color:#FFFFEE;text-decoration:none;}
+h1 a:visited {color:#FFFFEE;text-decoration:none;}
+h1 a:hover {color:#FFFFEE;text-decoration:none;}
+
+/*---  LIJEVI STUPAC ---*/
+#menu {width:201px;color:#D3F181;background-color:none;font-size:90%;font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;line-height:18px;text-align:right;padding-right:10px;padding-left:10px;padding-top:10px;padding-bottom:30px;}
+
+/*---  POSTOVI ---*/
+#sadrzaj {width:508px;color:#555555;background-color:#FFFFEE;text-align:left;padding-right:0px;margin-bottom:0px;margin-left:10px;padding-bottom:30px;padding-left:20px;}
+.slika{margin:0px 13px 10px 0px;border:0px solid black;border:0px;}
+.quoted {margin:0px;padding:0px 10px 0px 10px;margin:15px 0px 15px 0px;border-left:6px solid #D3F181;border-right:6px solid #D3F181;color:#88BB22;}
+p {margin-top:10px;margin-bottom:10px;}
+
+/*--- TOÈKASTE LINIJE U LIJEVOM STUPCU ---*/
+.razmak {border-bottom:1px dotted #436416;margin-bottom:12px;margin-top:12px;}
+
+/*---  FONTOVI  ---*/
+H2 {font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;font-size:130%;color:#FFFFEE;font-weight:bold;line-height:150%;background-color:#436416;margin-left:-20px;padding-left:8px;width:520px}
+H3 {font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;font-size:140%;color:#669922;font-weight:bold;margin-bottom:8px;}
+H4 {font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;font-size:120%;color:#D3F181;margin-top:2px;margin-bottom:5px;font-weight:bold;}
+H5 {font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;font-size:110%;color:#666666;margin-top:2px;margin-bottom:2px;font-weight:normal;}
+.ispodposta {font-family:verdana,trebuchet,sans-serif;font-size:11px;color:#3A3A3A;font-weight:normal;margin-bottom:20px;}
+
+/*---  KOMENTARI ---*/
+.komentari{font-family: Verdana, Arial, sans-serif;color: #999999;font-size:11px;margin-bottom:0px;margin-top:5px;margin-left:10px;margin-right:20px;}
+
+/*---  LOGO ---*/
+.logo{margin: 0px 0px 0px 1px;border:0px solid black;}
+
+/*---  KALENDAR ---*/
+.kalendar {width:200px; background-color:#436416;text-align:center;font-size:90%;font-family:helvetica,arial,verdana,"trebuchet ms",sans-serif;}
+.kalendar-aktivni-dani {background:#436416;}
+.kalendar-aktivni-dani-linkovi {color:#555555;font-size:11px;font-weight:bold;text-decoration:none;}
+.kalendar-aktivni-dani-linkovi:visited {color:#555555;}
+.kalendar-aktivni-dani-linkovi:hover {color:#555555;text-decoration:none;}
+.kalendar-neaktivni-dani {background:#FFFFEE; color:#555555;}
+.kalendar-prazni-dani {background:#FFFFEE;}
+.kalendar-nazivi-dana {background:#88BB22;color:#FFFFEE;font-weight:bold;text-align:center;}
+.kalendar-mjesec-godina {background:#436416;color:#FFFFEE;font-weight:bold;text-align:center;}
+.kalendar-strelica-natrag {background:#436416;}
+.kalendar-strelica-natrag a:link {color:#FFFFEE;font-weight:bold;text-decoration:none;}
+.kalendar-strelica-natrag a:visited{color:#FFFFEE;text-decoration:none;}
+.kalendar-strelica-natrag a:active{color:#FF2222;}
+.kalendar-strelica-natrag a:hover{color:#FF2222;text-decoration:underline;}
+.kalendar-strelica-naprijed {background:#436416;}
+.kalendar-strelica-naprijed a:link {color:#FFFFEE;font-weight:bold;text-decoration:none;}
+.kalendar-strelica-naprijed a:visited{color:#FFFFEE;text-decoration:none;}
+.kalendar-strelica-naprijed a:active{color:#FF2222;}
+.kalendar-strelica-naprijed a:hover{color:#FF2222;text-decoration:underline;}
+
+div.igre.hr_links {display: none}
+</style>
+<!-- Kraj -->
+
+<link rel="alternate" type="application/rss+xml" title="Muke jednog prevoditelja" href="http://preveden.blog.hr/rss.xml" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.blog.hr/wlw/rsd.php?12358707" />
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+<meta name="keywords" content="preveden,blog,hrvatska,film,fotografija,gastronomija,ljubav,glazba,humor,internet,karijera,književnost,novac,obitelj,obrazovanje,osobno,poezija,politika,prièe,putopisi,raèunala,religija,seks,sex,sport,televizija,umjetnost,zdravlje,znanost,rasprave,diskusije,korisnik,politika,www" />
+<meta name="description" content="preveden.blog.hr" />
+<!-- (C)2000-2008 Gemius SA - gemiusAudience / blog.hr / Fresh -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('d61Fz4NuGYa6FYtOb8wDAnXn3wj1j_N6.vbbgTAXwYT.g7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.blog.hr/xgemius.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8213121-28']);
+  _gaq.push(['_setDomainName', '.blog.hr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="http://www.blog.hr/js/hr/prototype.lite.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/moo.ajax.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/frontend.js?=1"></script>
+
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+
+<!--JavaScript Tag // Tag for network 1086: CME Croatia // Website: Blog.hr // Page: homepage // Placement: UGC_floater (2768851) // created at: Jul 16, 2010 5:10:16 PM-->
+<script language="javascript"><!--
+document.write('<scr'+'ipt language="javascript1.1" src="http://ad.dc2.adtech.de/addyn/3.0/1086/2768851/0/0/ADTECH;loc=100;target=_blank;sub1=[subst];key=key1+key2+key3+key4;misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://ad.dc2.adtech.de/adlink/3.0/1086/2768851/0/0/ADTECH;loc=300;key=key1+key2+key3+key4;sub1=[subst]" target="_blank"><img src="http://ad.dc2.adtech.de/adserv/3.0/1086/2768851/0/0/ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="0" height="0"></a></noscript>
+<!-- End of JavaScript Tag -->
+</head>
+
+<body>
+
+<!-- Lijevi stupac -->
+<table border="0" cellpadding="0" cellspacing="0">
+<td valign="top" width="113" >
+
+<div id="menu">
+
+<!-- Logo -->
+
+<p><A HREF="http://preveden.blog.hr"><IMG SRC="http://preveden.blog.hr/slike/logo.jpg" ALT="" class="logo"></A></p>
+
+<!-- Logo kraj -->
+
+<!-- Kalendar -->
+
+<!-- Kalendar -->
+<table class="kalendar" cellspacing="1">
+<tr>
+	<td class="kalendar-strelica-natrag"><a href="http://preveden.blog.hr/2010/02/index.html">&lt;</a></td>
+	<td COLSPAN="5" class="kalendar-mjesec-godina">ožujak, 2010</td>
+	<td class="kalendar-strelica-naprijed"><a href="http://preveden.blog.hr/2010/04/index.html">&gt;</a></td>
+</tr>
+<tr class="kalendar-nazivi-dana">
+	<td>P</td>
+	<td>U</td>
+	<td>S</td>
+	<td>È</td>
+	<td>P</td>
+	<td>S</td>
+	<td>N</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">1</td>
+		<td class="kalendar-neaktivni-dani">2</td>
+		<td class="kalendar-neaktivni-dani">3</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan4"  class="kalendar-aktivni-dani-linkovi">4</a></td>
+		<td class="kalendar-neaktivni-dani">5</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan6"  class="kalendar-aktivni-dani-linkovi">6</a></td>
+		<td class="kalendar-neaktivni-dani">7</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">8</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan9"  class="kalendar-aktivni-dani-linkovi">9</a></td>
+		<td class="kalendar-neaktivni-dani">10</td>
+		<td class="kalendar-neaktivni-dani">11</td>
+		<td class="kalendar-neaktivni-dani">12</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan13"  class="kalendar-aktivni-dani-linkovi">13</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan14"  class="kalendar-aktivni-dani-linkovi">14</a></td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">15</td>
+		<td class="kalendar-neaktivni-dani">16</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan17"  class="kalendar-aktivni-dani-linkovi">17</a></td>
+		<td class="kalendar-neaktivni-dani">18</td>
+		<td class="kalendar-neaktivni-dani">19</td>
+		<td class="kalendar-neaktivni-dani">20</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan21"  class="kalendar-aktivni-dani-linkovi">21</a></td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">22</td>
+		<td class="kalendar-neaktivni-dani">23</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan24"  class="kalendar-aktivni-dani-linkovi">24</a></td>
+		<td class="kalendar-neaktivni-dani">25</td>
+		<td class="kalendar-neaktivni-dani">26</td>
+		<td class="kalendar-aktivni-dani"><a href="http://preveden.blog.hr/2010/03/index.html#dan27"  class="kalendar-aktivni-dani-linkovi">27</a></td>
+		<td class="kalendar-neaktivni-dani">28</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">29</td>
+		<td class="kalendar-neaktivni-dani">30</td>
+		<td class="kalendar-neaktivni-dani">31</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+</tr>
+</table><br/>
+<a href="http://preveden.blog.hr/2010/06/index.html">Lipanj 2010 (1)</a><br/>
+
+<a href="http://preveden.blog.hr/2010/05/index.html">Svibanj 2010 (3)</a><br/>
+
+<a href="http://preveden.blog.hr/2010/04/index.html">Travanj 2010 (4)</a><br/>
+
+<a href="http://preveden.blog.hr/2010/03/index.html">Ožujak 2010 (9)</a><br/>
+
+<a href="http://preveden.blog.hr/2010/02/index.html">Veljaèa 2010 (12)</a><br/>
+<br /><p><a href="http://www.igre.hr" target="_blank">Igre.hr</a><br />Igrajte najbolje igre i igrice</p>
+
+<!-- Kalendar kraj-->
+
+<!-- Link za prikaz komentara -->
+<p><A HREF="http://preveden.blog.hr/2010/03/index.2.html">Komentari da/ne</A><p>
+<!-- Link za prikaz komentara kraj-->
+
+<div class="razmak"></div>
+
+<!-- Prvi box -->
+
+<p>
+<h4>
+Ke?
+</h4>
+Tzv. prevoðenje u Hrvata - tko, kako, zašto, o, zašto...
+</p>
+<div class="razmak"></div>
+
+<!--  Prvi box kraj -->
+
+<!-- Drugi box -->
+
+<p>
+<h4>
+Nu!
+</h4>
+<a href="http://www.google.hr/#hl=hr&source=hp&q=rije%C4%8Dnik&btnG=Google+pretra%C5%BEivanje&meta=&aq=f&oq=rije%C4%8Dnik&fp=2836abd8f1900e1" target="_blank"><font color=#FF0000>Jeste li mislili:</font> <i><font color=#3333FF>rjeènik</font></i></a>
+</p>
+<div class="razmak"></div>
+
+<!--  Drugi box kraj -->
+
+<!-- Treci box -->
+
+<p>
+<h4>
+Tri najbolja bloga
+</h4>
+<a href="http://alexxl.blog.hr/" target="_blank"><font size=3>alexxl</font></a><br />
+Ovom èovjeku Monty Python nije ni do gležnjeva. Usto, ako sam dobro shvatio, nezaposlen je. Pa ti sad budi pametan...<br />
+<br />
+<a href="http://gurwoman.blog.hr/" target="_blank"><font size=3>Avanture u kuhinji i šire</font></a><br />
+Još jedan dokaz da u Hrvatskoj ima i mozga i duha.<br />
+Povrh toga, ako imate ikakve veze s ugostiteljstvom, pamet u glavu i lijepo se javite ovdje: <a href="http://www.gastroprijevod.com" target="_blank">Gastroprijevod</a>. Tako æete izbjeæi moguænost da vas stranci smatraju jeftinim redikulom.<br />
+<br />
+<a href=http://turimtikitu.blog.hr/ target=_blank><font size=3>turimtikitu</font></a><br />
+E, ovaj blog zaslužuje debele kožne korice, pozlaæene rubove listova i mjesto u školskoj lektiri.<br />
+Bonus: žena svugdje sije najjaèe i najiskrenije komentare.<br />
+Eto, sreæom ima još ljudi koji licemjerje, šeæernovatno moraliziranje i prijetvorni privid obzira odmah bacaju u zahodsku školjku i dvaput puštaju vodu.<br />
+<br />
+<b><font size=4>Fluxus blog!</font></b><br />
+<a href="http://telda.blog.hr/" target="_blank"><font size=3>telda</font></a><br />
+Ili – kako napraviti blog u èetiri minute i trideset tri sekunde... Plaèite i uèite!
+</p>
+<div class="razmak"></div>
+
+<!--  Treci box kraj -->
+
+<!-- Cetvrti box -->
+
+<p>
+<h4>
+Fodderstompf
+</h4>
+Be bland<br />
+Be dull<br />
+Be boring<br />
+Be really, really, y’know nothing a void, zilch, zero, nought, nothing, vacuum<br />
+<br />
+Be in love<br />
+We wanted to be loved<br />
+We wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+Oh love<br />
+Love makes the world go round<br />
+We only wanted to finish the album with the minimum amount of effort<br />
+Which we are now doing very suc-cess-fully<br />
+<br />
+We only wanted to be loved<br />
+We only...<br />
+Love<br />
+We wanted to be accepted by society<br />
+We wanted to be accepted<br />
+We wanted to be accepted as people<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+Love<br />
+We wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+I’m just gonna go and get a cigarette do you want one<br />
+Yes please<br />
+Won't be a second<br />
+Okay<br />
+<br />
+Be bland<br />
+Be dull<br />
+Be boring<br />
+Be in love<br />
+<br />
+Only wanted to be loved<br />
+Only wanted to be loved<br />
+Only wanted to be loved<br />
+Only wanted to be loved<br />
+Love<br />
+<br />
+Every time I walk up and down the street<br />
+I look at people and I think why don’t you love me<br />
+Why don’t you love me<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be lovedddd<br />
+<br />
+Oh thank you wrong end<br />
+<br />
+I’m in love<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+We need love<br />
+We need love like the water<br />
+Like the air we breathe, luvvy<br />
+You know what I mean, like where I cum from<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+Only love can satisfy us<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+No one understands us<br />
+Nobody cares<br />
+No one loves us<br />
+Love makes the world go round<br />
+Oh, it does that as well without any mistake whatsoever<br />
+Love does make the world go round<br />
+I don’t know what these punk rockers get up to<br />
+Y’know these punk rockers with their spitting and their antics<br />
+Don’t they realise that love makes the world go roooound<br />
+Realise that love makes the world go roooound<br />
+Don’t they realise that love, that love, that love makes the world go<br />
+roooound<br />
+roooound<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+Fucking hell thirsty work innit being famous<br />
+This track is dragging on<br />
+Do you think it’ll ever end<br />
+<br />
+One more time?<br />
+What did you think of the engineer looking through that glass window?<br />
+I think he's rather suspicious<br />
+He looks very suspicious to me<br />
+Very dubious guy with that long-haired hippy roadie next to him<br />
+I think these long-haired chaps...<br />
+I don't really think much of them, but don't you like their jokes?<br />
+They don’t realise that<br />
+love makes the world go round<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+I will show our frustration at society by picking up that fire extinguisher over there and spraying it at the mic<br />
+<br />
+We only wanted to be loved<br />
+We only wanted to be loved<br />
+<br />
+It’s blue<br />
+Oh no<br />
+Oh yes!<br />
+<br />
+We only wanted to be loved<br />
+<br />
+Go on John tickle the old Joanna<br />
+<br />
+We only wanted to be loved<br />
+Loved, loveddddd<br />
+<br />
+<br />
+<br />
+IF YOU MADE IT THIS FAR, YOU ARE A SAD, SAD CUNT!!<br />
+NEARLY AS SAD AS US… !!
+</p>
+<div class="razmak"></div>
+
+<!-- Cetvrti box kraj -->
+
+<!--  Lijevi stupac kraj-->
+
+</div>
+
+</td>
+
+<!--  Sadrzaj -->
+<td valign="top" width="580">
+
+<div id="sadrzaj">
+
+<!-- Ime bloga -->
+<h1><a href="http://preveden.blog.hr">Muke jednog prevoditelja</a></h1>
+<!-- Ime bloga kraj-->
+
+<!--  Postovi -->
+<a name="1627328746"></a>
+
+<!-- Datum posta -->
+
+<h2>subota, <a name="dan27"></a>27.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Tzv. prevoðenje - primjer trinaesti<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627328746%2Ftzv-prevoenje-primjer-trinaesti.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Welly welly welly welly well…<br />
+<br />
+Svi OK?<br />
+Bit æe bolje…<br />
+<br />
+Svi na broju?<br />
+Možemo poèeti i bez njih…<br />
+<br />
+Malo kasnim s ovom novom recenzijom, jel'da? Žao mi je, ali život mi putem Murphyjevog zakona stalno dijeli nove i nove udarce, a borba za golo preživljavanje i par osobnih tragedija ipak imaju prednost. Nadam se da to možete shvatiti…<br />
+<br />
+Povrh toga, kako je to veæ rekao Štuliæ, Bare ili Elio Pisak, ne sjeæam se više – "ljubav je lepa dok se èeka". Doista jest tako…<br />
+<br />
+…Što potvrðuju i cure i momci iz sastava <a href=http://en.wikipedia.org/wiki/Delta_5 target=_blank>Delta 5</a>, koji kažu: anticipation is so much better!<br />
+<br />
+<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/kjP4NQYB6xs&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/kjP4NQYB6xs&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object><br />
+<br />
+Prisjetih se tako svoje mladosti i lica i glasova i mirisa i smradova i klikne mi – nu, Delta 5 su iz ljevièarskog novovalnog kružoka sa sveuèilišta u Leedsu! Dakle, mogli bismo malo obraditi nekog desnièara – kontrasta, ravnoteže ili bljuvanja radi, kako vam veæ drago.<br />
+<br />
+E, pa vraæamo se primarnom zadatku.<br />
+<br />
+Današnja vrlo znaèajna tema glasi: što napraviti kad vam se u njedrima ugnijezdi guja? Nastala od vaše krvi i mesa, mudra, prepredena, varljiva, sofisticirana. Naoko ne èini štetu. Ne uspijevate joj stati na žulj. Privlaèi druge gujice. Svjesni ste da vas razdire i da bi vas mogla uništiti èim se ukaže prilika…<br />
+<br />
+Još par napomena:<br />
+Standardna – izloženo nije sve.<br />
+Dodatna – vjerojatno ste primijetili da mi je jako iskrvarilo srce zbog vrhunaravnog prijevoda filma Sid & Nancy. Sid je moj heroj iz mladih dana, skrušeno priznajem. Ali, isto tako me peèe i kada prijevod izvitoperi reèeno, odnosno istinu, i onda kada je rijeè o nazadnim snagama. Opasno je to, o da, još kako, if ju ken keè maj drift.<br />
+<br />
+Dakle:<br />
+<br />
+<img src="http://img180.imageshack.us/img180/5179/hidethepornmosleyiscomi.jpg" border="0" align="center"><br />
+<br />
+Viasat History, 15.03.2010.<br />
+<br />
+<font size=4><b>BETRAYAL!</b></font><br />
+<font size=3><b>Oswald Mosley</b></font><br />
+<b>The English Führer</b><br />
+<br />
+Written and Directed by Roger Pyke<br />
+<br />
+<b>Prijevod: Marija Kostoviæ</b><br />
+<br />
+<b>Globalno: </b><i>invasion </i>i sve varijante te imenice zapravo oznaèavaju osvajanje, tj. fizièko kroèenje èizmom na neèiji teritorij i njegovo zauzimanje, a ne puki "napad", kao što je to totalno neprecizno prevedeno u više navrata u dokumentarcu, osim u jednom jedinom sluèaju.<br />
+Tako, primjerice, imamo navode o moguæem njemaèkom "napadu" na Britaniju u vrijeme kad je Engleska zapravo veæ dobrano trpjela atake njemaèke oružane sile.<br />
+<br />
+Dalje redom…<br />
+<br />
+<b>EN: He claims the support of half a million English fascists who oppose war with Nazi Germany.<br />
+HR: Podržava ga pola milijuna engleskih fašista koji se protive ratu.</b><br />
+Nije isto kad netko, kao što je to Mosley, nešto sam tvrdi i kada mu prevoditelj to nešto mrtvo-hladno podari, unatoè tome što je narator jasno naglasio nešto treæe.<br />
+Osim toga, Mosley i njegova klika zapravo nisu bili za rat <i>protiv nacistièke Njemaèke</i>, što ipak ne znaèi da su bili egzemplari pacifizma.<br />
+<br />
+<b>EN: …while German troops are massing across the English Channel.<br />
+HR: …dok njemaèke postrojbe prelaze La Manche.</b><br />
+Tsk tsk tsk! Kakvog li falsifikata!<br />
+<br />
+<b>EN: The Mosley story is a corner of British history swept clean.<br />
+HR: Prièa o Mosleyu je rubna u britanskoj povijesti.</b><br />
+Heh! Što li znaèi ovaj prijevod?!?<br />
+Poanta je da je to <i>dio </i>britanske povijesti koji je <i>retuširan</i>, tj. zataškan.<br />
+<br />
+<b>EN: And, I think it's against that background that Mosley starts to put out his feelers…<br />
+HR: U tom okruženju Mosley poèinje isticati svoje sljedbenike…</b><br />
+Ma nije "isticao svoje sljedbenike", nego je <i>ispipavao teren</i>.<br />
+(Ovo se ponavlja u istom obliku i pred kraj dokumentarca…)<br />
+<br />
+<b>EN: Thousands were moved by his speeches.<br />
+HR: Govorima je dopirao do tisuæa.</b><br />
+U naravi, tisuæe su bile <i>zavedene</i>, a govorima je u biti dopirao do milijuna, samo ih nije baš dirnuo u srce.<br />
+<br />
+<b>EN: He has committed no formal crime…<br />
+HR: Nije poèinio nikakav zloèin…</b><br />
+Komentar u vezi s pritvaranjem Mosleyja 1940.<br />
+Vrlo diskutabilno. S ovim se mnogi ne bi suglasili. Kljuèna rijeè je <i>formal</i>, što znatno mijenja ovdje usamljeno "nikakav".<br />
+<br />
+<b>EN: Well, I think he was finding out the exact position of Mosley.<br />
+HR: Mislim da je pokušao otkriti pravi Mosleyev položaj.</b><br />
+Iz izjave èovjeka èiji su roditelji bili gorljivi štovatelji Mosleyja i njegovog pokreta.<br />
+Ali, ne radi se o "položaju", nego o <i>stajalištu </i>ili <i>stavu</i>, jer je Mosley bio lukav kao leglo lisica.<br />
+<br />
+<b>EN: And, I think that he was convinced that war was futile and it should never be repeated.<br />
+HR: Mislim da je vjerovao kako je rat uzaludan i da se ne smije ponavljati.</b><br />
+"Ponavljati"?!? Pritiskom na tipku "F4", možda?<br />
+<br />
+<b>EN: He was a minister without portfolio by the time he was about twenty-nine or thirty.<br />
+HR: Bio je ministar bez portfelja do svoje 29. ili 30. godine.</b><br />
+Ajoj, pogrešno! Ispada da je tu visoku dužnost obnašao do navedenih godina starosti, a zapravo se želi reæi da je u tim godinama veæ dospio na takav uzvišeni položaj.<br />
+BTW, i inaèe se naši "prevoditelji" preèesto zbune sliènim anglosaksonskim navadama vremenskog odreðivanja.<br />
+<br />
+<b>EN: He was outrageous with women…<br />
+HR: Ludovao je sa ženama…</b><br />
+Joj! Jest "ludovao", ali ovdje se zapravo želi reæi da se <i>ponašao grozno prema</i> njima. Mislim, primjerice, varao je èak i ljubavnice i tako to…<br />
+<br />
+<b>EN: The talk of café society.<br />
+HR: O njoj se prièa u kafiæima.</b><br />
+Radi se o vezi Mosleyja i Diane Guinness. Oboje su, naime, još bili vezani braènim zavjetima…<br />
+Ali, tko zna – zna, a tko ne zna, evo mu <a href=http://en.wikipedia.org/wiki/Caf%C3%A9_society target=_blank>objašnjenje</a>.<br />
+<br />
+<b>EN: He was prepared to use hit squads…<br />
+HR: Bio je spreman koristiti borbene jedinice…</b><br />
+O, ne – ovdje se radi o skupinama ološa spremnog na svakakve, pa èak i najodurnije i najekstremnije gadarije. Ne miješati s regularnim postrojbama…<br />
+<br />
+<b>EN: …and he became rabid on the subject of Jews.<br />
+HR: …i postao [je] lud što se tièe Židova.</b><br />
+Iz opisa Mosleyjeve promjene nakon što se spetljao s Dianom.<br />
+Ali, nije baš "postao lud", o ne, ne Mosley. <i>Zadrt</i>, reklo bi se.<br />
+<br />
+<b>EN: …would have led in the end to persecution of the Jews.<br />
+HR: …[bi] na kraju dovela do izgona Židova.</b><br />
+Što bi bilo kad bi bilo….? Dakle, da je kojim sluèajem ustrojena fašistièka vlada u Britaniji, zasigurno bi došlo do <i>progona</i>. Izgon je ipak nešto drugo…<br />
+<br />
+<b>EN: …with the patriotic cry of Britain First.<br />
+HR: …s rodoljubnim sloganom Britanija prvo.</b><br />
+Joj! Dakle, primjera radi, kaže se "mama/domovina/moral prvo", a ne "mama/domovina/moral (mi je) na prvom mjestu" ili "prije svega" ili "iznad svega"?!?<br />
+<br />
+<b>EN: [It] makes him a very sinister figure.<br />
+HR: Zbog toga je jako zla liènost.</b><br />
+Vrlo dvojbeno. Primjerenije bi bilo reæi da je <i>vrlo mraèan lik</i>.<br />
+<br />
+<b>EN: He had all these men around him, protecting him.<br />
+HR: Bio je okružen zaštitarima.</b><br />
+Tja… Naravno, ne radi se o nikakvim "zaštitarima", veæ o Mosleyjevim najbližim suradnicima koji su bili uz njega za marša Londonom.<br />
+<br />
+<b>EN: The whole of the Broadway was alight with people fighting.<br />
+HR: Cijela je ulica Broadway bila ispunjena tuènjavom ljudi.</b><br />
+Malo, kao, nespretno, brzopleto i nemarno, je li...<br />
+<br />
+<b>EN: …some pretty ignorant people…<br />
+HR: …glupih ljudi…</b><br />
+Preoštro je ovo... "Glup" i <i>neuk </i>ili <i>neupuæen </i>nije baš isto. Bolje da ne ulazim u detalje i paralele, jer to bi netko mogao protumaèiti kao bezobraznost. Ali, mudriji æe shvatiti na što ciljam...<br />
+<br />
+<b>EN: …to the largest venues in England.<br />
+HR: …na najveæa mjesta zbivanja u Engleskoj.</b><br />
+Misli se na <i>dvorane</i>. Prethodno je èak i spomenuto da je Mosley bio prisiljen preseliti svoje skupove u zatvorene prostore, a potom slijedi snimka njegovog govora u nekoj prepunoj dvorani, dakle u èetiri zida s krovom.<br />
+<br />
+<b>EN: …is almost by definition crazy.<br />
+HR: …po definiciji je lud.</b><br />
+E, ovo zvuèi kao brljanje iz brzopletih usta kakvog srednjovjekovnog psihijatra…<br />
+<br />
+<b>EN: They often do refer to Mosley as a godlike figure.<br />
+HR: Èesto govore o Mosleyu kao o Bogu.</b><br />
+Bog i <i>božanski lik</i> nije isto.<br />
+<br />
+<b>EN: Let us make no mistake. Let us have no concealment!<br />
+HR: Nemojmo griješiti. Ne prikrivajmo pogreške.</b><br />
+Iz jednog Mosleyjevog govora.<br />
+Reèenice se meðusobno oksimoroniziraju. Oswald je htio naglasiti da ne želi da naprave bilo kakvu pogrešku niti da išta skrivaju.<br />
+<br />
+<b>EN: The contacts with Nazi Germany were far more extensive…<br />
+HR: Imali su mnogo suradnika u nacistièkoj Njemaèkoj,…</b><br />
+Bez komentara. (Za ovoliko komentiranje treba mi "mnogo suradnika"…)<br />
+<br />
+<b>EN: …if you march, you will be responsible for causing civil unrest, and we do not want you to do that.<br />
+HR: …i da æe biti odgovorni za graðanski neposluh, a to ne žele.</b><br />
+Mosleyjev sin preprièava što je policija kazala njegovom ocu nakon što nije uspjela potisnuti antifašiste koji su se sukobili s Mosleyjevim pristašama u ulici Cable 1936.<br />
+Samo, ovdje se ipak radi o <i>graðanskim nemirima</i>. Pojam <i>civil disobedience </i>nije nijednom spomenut u dokumentarcu.<br />
+<br />
+<b>EN: …and I don't want to cause unrest,…<br />
+HR: …i ne želim uzrokovati neposluh,…</b><br />
+Ibid. Mosleyjev odgovor policiji.<br />
+Ista pogreška.<br />
+<br />
+<b>EN: …that the right of an Englishman to walk the streets of London was being trampled by a foreign rabble.<br />
+HR: …da pravo Engleza da šeæe ulicama Londona ugrožava strani ološ.</b><br />
+Vrlo nezgrapno.<br />
+Zapravo, Mosley je tvrdio da navedeno pravo <i>gazi strana svjetina</i>.<br />
+<br />
+<b>EN: But, in fact, Mosley had backed away from destiny's most tempting offer.<br />
+HR: Zapravo, Mosley je okrenuo leða najizazovnijoj ponudi sudbine.</b><br />
+Nije "okrenuo leða", nego je <i>ustuknuo pred</i>…<br />
+<br />
+<b>EN: Lady Mosley,…<br />
+HR: Gospoða Mosley,…</b><br />
+Diana jest bila gospoða, ali je bogami imala i plemiæki naslov, o èemu se ovdje upravo i radi.<br />
+<br />
+<b>EN: …the BBC exercised a stranglehold over radio.<br />
+HR: …BBC proveo restrikcije nad radiom,...</b><br />
+Radi se o godinama izmeðu dva svjetska rata.<br />
+Najprije, trebao bi nesvršeni glagol, i to ne baš u smislu provoðenja restrikcija, veæ prije <i>èvrste ruke</i>…<br />
+<br />
+<b>EN: …and she spends weeks in a German hospital, with Adolf Hitler at her side.<br />
+HR: …i provodi tjedne u bolnici s Hitlerom.</b><br />
+Posljedice pokušaja samoubojstva Dianine mlaðe sestre Unity, takoðer simpatizerke nacizma.<br />
+Kako sad ovo protumaèiti?!? Da je i Hitler bio hospitaliziran, možda?<br />
+<br />
+<b>EN: …a British infantry officer,…<br />
+HR: …britanski zapovjednik,…</b><br />
+Iz prièe o Mosleyjevom sinu Nicholasu, koji se borio u Italiji kao britanski <i>èasnik pješaštva</i>.<br />
+<br />
+<b>EN: They wanted replacement officers.<br />
+HR: Tražili su zamjenske zapovjednike.</b><br />
+Ibid.<br />
+<br />
+<b>EN: Because, he wants, in fact, to have a position in case the Nazis do in fact come over.<br />
+HR: On želi položaj ako nacisti zaista zavladaju.</b><br />
+Raskrinkavanje Mosleyjevog stvarnog plana iza paravana domoljublja.<br />
+Ali, ovdje se zapravo misli na nacistièko <i>osvajanje Otoka</i>. Tko bi doista bio na vlasti u tom sluèaju?<br />
+<br />
+<b>EN: …I don't think Birkett really gets the better of Mosley at all.<br />
+HR: …Birkett nije ništa izvukao iz Mosleya.</b><br />
+Britanski istražitelj zapravo nije uspio <i>nadmudriti </i>Mosleyja tijekom ekstenzivnih ispitivanja. Istodobno, "izvukao je iz njega" štošta, ali uglavnom benigne i nevažne poluèinjenice.<br />
+<br />
+<b>EN: …they intended to shut it down, the whole thing.<br />
+HR: …da su namjeravali zaustaviti cijelu stvar.</b><br />
+Misli se na to da su Britanci htjeli èim prije <i>zakljuèiti sluèaj</i>, jer istražnim radnjama nikako nisu uspijevali inkriminirati Mosleyja, a htjeli su ga izolirati pošto-poto.<br />
+<br />
+<b>EN: … East Indian and black immigrants…<br />
+HR: …istoènoindijske i crne useljenike.</b><br />
+Ovo "istoèno-" je suvišno, a pogotovo iz naše perspektive, jer ne koristimo iste varijante naziva za toponime èiji je korijen <i>India</i>, kao što to rade Anglosasi.<br />
+<br />
+<b>EN: And again, riots follow in his wake.<br />
+HR: I opet dolazi do pobuna.</b><br />
+Radi se o neredima 1960-ih, kada je Mosley pokušao oživjeti svoju politièku karijeru i time bio <i>povod pobuna</i>.<br />
+<br />
+<b>EN: Would he have become the Führer in a Nazi-occupied England?<br />
+HR: Bi li postao Führer u nacistièkoj Engleskoj?</b><br />
+Opet – što bi bilo kad bi bilo? Iz završnog ogleda o Mosleyju.<br />
+Ali, ne bi Engleska bila "nacistièka", o ne, nikako, veæ <i>pod nacistièkom okupacijom</i>. Velika je to razlika, o da!<br />
+<br />
+<br />
+Za kraj, kao nepopravljivi cerebralni iznereditelj, imam i jednu kratku poruku za sve koji naginju na Mosleyjevu stranu:<br />
+<div class="quoted"><b>JA VOLIM CRNE LJUDE!!! I CRVENE I ŽUTE I SMEÐE I PLAVE I LJUBIÈASTE (dobro, osim Teletubbiesa)!!!</b></div><br />
+Usto – u više sam navrata pomislio da nije nemoguæe da je Bog crnac. <img src="http://www.blog.hr/img/hr/smiles/cool.gif" alt="cool" border="0"/><br />
+Kao maleni dokaz, za vaše oèi i uši prilažem snimku jedne od mojih omiljenih <a href=http://en.wikipedia.org/wiki/Bad_Brains target=_blank>èetvorki</a>, koju èine ponešto mahniti H.R., poprilièno virtuozni Dr. Know, podosta stabilni Darryl i predvidljivo pouzdani Earl, u izvedbi sanjive kantri i vestern balade <i>We Will Not</i>, skoro pa kao skrojene i za vrh naše piramide… <img src="http://www.blog.hr/img/hr/smiles/wink.gif" alt="wink" border="0"/><br />
+<br />
+<object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/aH64nNSivaE&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/aH64nNSivaE&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object><br />
+<br />
+Volšebno, ha! <img src="http://www.blog.hr/img/hr/smiles/yes.gif" alt="yes" border="0"/><br />
+E, da, jedna od najveæih žalidbi u životu mi je to što nisam roðen u obitelji rastafarijanaca. Da nekim sluèajem jesam, vjerojatno bi mi svi ovi "prijevodi" bili superultrakulerski zbog stalne ugandžiranosti...<br />
+(Heh, trebali ste vidjeti skoro pa dadaistièki igrokaz popisivaèa stanovništva<img src="http://www.blog.hr/img/hr/smiles/headbang.gif" alt="headbang" border="0"/>, mene<img src="http://www.blog.hr/img/hr/smiles/pjeva.gif" alt="pjeva" border="0"/> i moje tadašnje djevojke<img src="http://www.blog.hr/img/hr/smiles/rofl.gif" alt="rofl" border="0"/>...)<br />
+<br />
+Sljedeæi post, sljedeæa kritika, dobrotom mojih kolega koji jedu puno ribe i maslinovog ulja. <img src="http://www.blog.hr/img/hr/smiles/thumbup.gif" alt="thumbup" border="0"/> Ups, evo sam ovime odao o èemu je rijeè… <img src="http://www.blog.hr/img/hr/smiles/cry.gif" alt="cry" border="0"/><br />
+<br />
+Pozdrav svima!<br />
+<br />
+<img src="http://img202.imageshack.us/img202/6527/battleofcablestreetplaq.jpg" border="0" align="center"></p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 22:11 - 
+<A HREF="http://www.blog.hr/komentari/post/1627328746/tzv-prevoenje-primjer-trinaesti.html" TARGET="_blank">Reci</A> (2) - 
+<A HREF="http://www.blog.hr/print/id/1627328746/tzv-prevoenje-primjer-trinaesti.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627328746/tzv-prevoenje-primjer-trinaesti.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627328746">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627328746', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627325125"></a>
+
+<!-- Datum posta -->
+
+<h2>srijeda, <a name="dan24"></a>24.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Malo sociologije...<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627325125%2Fmalo-sociologije.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Drago èitateljstvo.<br />
+<br />
+Naporan je ovo posao, prožet mukom i trpljenjem. Ni Pale sam na svijetu katkad nije samiji od mene.<br />
+<br />
+No, ipak evo neèega što sam napravio u èas posla i bez muke.<br />
+Ako smijem, zamolio bih vas da ukucate svoj glas.<br />
+Èisto me zanima kakva je atmosfera tamo vani, a i moj prijatelj A1 sociologija A2 povijest, "kodnog imena" Levištros-W32-L34, žarko želi znati pucam li u prazno. Profi-defo, kažem mu ja, ali on samo vrti okama.<br />
+Pa, daj da vidimo onda…<br />
+<br />
+Evo je!<br />
+<br />
+<form method="post" action="http://poll.pollcode.com/80JG"><table border="0" width="220" style="background-color:#A6EE88;color:#000000;font-family:'Verdana';font-size:13px;" cellspacing="0" cellpadding="2"><tr><td colspan="2" style="padding:2px;"><b>Ocjena bloga:</b></td></tr><tr><td width="5"><input type=radio name="answer" value="1"></td><td style="padding:2px;">Bolji od Harryja Pottera (5)</td></tr><tr><td width="5"><input type=radio name="answer" value="2"></td><td style="padding:2px;">Skoro kao Rocky 1 (4)</td></tr><tr><td width="5"><input type=radio name="answer" value="3"></td><td style="padding:2px;">Negdje kao Avatar (3)</td></tr><tr><td width="5"><input type=radio name="answer" value="4"></td><td style="padding:2px;">Malo slabiji od Ramba 2 (2)</td></tr><tr><td width="5"><input type=radio name="answer" value="5"></td><td style="padding:2px;">Ed Wood! (1)</td></tr><tr><td width="5"><input type=radio name="answer" value="6"></td><td style="padding:2px;">Puno slabiji nego Yentl (0)</td></tr><tr><td colspan="2"><center><input type="submit" value="Glas">  <input type="submit" name="view" value="Pogled"></center></td></tr><tr><td bgcolor="white" colspan="2" align="right"><font size="1" color="black">pollcode.com <a href="http://pollcode.com/">free polls</a></font></td></tr></table></form><br />
+<br />
+Dakle?!?<br />
+<br />
+<img src="http://img200.imageshack.us/img200/2197/neversurrender480.jpg" border="0" align="center"><br />
+<br />
+<font size=4>ILI</font><br />
+<br />
+<img src="http://img230.imageshack.us/img230/5500/jakobsfeld480.jpg" border="0" align="center"><br />
+<br />
+<b>HVALA!</b><br />
+<br />
+Edit! Isprika – opet krah s postom. Moja greška.<br />
+Evo i malo sitnijih slova, kao u nizozemskim ugovorima: <img src="http://www.blog.hr/img/hr/smiles/zubo.gif" alt="zubo" border="0"/><br />
+<font size=1>Eh, da, nehotice sam ubio prvi ili drugi glas, ne sjeæam se više, koji mi je podario nulu. Dakle, uzimamo u obzir i tu najnižu ocjenu, naravno. Žao mi je.</font><br />
+BTW, Levištros-W32-L34 je u stanju perpetualne ejakulacije, kako verbalne, tako i neherbalne. Blitvari... Uvijek nekakve mezalijanse akcije i pauèine. <img src="http://www.blog.hr/img/hr/smiles/rolleyes.gif" alt="rolleyes" border="0"/><br />
+<br />
+Pozdrav svima.</p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 15:41 - 
+<A HREF="http://www.blog.hr/komentari/post/1627325125/malo-sociologije.html" TARGET="_blank">Reci</A> (0) - 
+<A HREF="http://www.blog.hr/print/id/1627325125/malo-sociologije.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627325125/malo-sociologije.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627325125">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627325125', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627321007"></a>
+
+<!-- Datum posta -->
+
+<h2>nedjelja, <a name="dan21"></a>21.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Teorija prevoðenja i zavjere<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627321007%2Fteorija-prevoenja-i-zavjere.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Viddy well, my malenky droogs, viddy well...<br />
+<br />
+Premda nisam kriv, najprije se isprièavam svima koji su siti upozorenja da je u tijeku "kratak 'upgrade'". Na stranu to što nije kratak, a nije bogami ni "upgrade"…<br />
+Sit sam i ja, a i zadnji post mi je ispario, ali, ništa zato, ionako je u pitanju bio samo djeliæ kulture. <img src="http://www.blog.hr/img/hr/smiles/zubo.gif" alt="zubo" border="0"/><br />
+<br />
+No, za danas nudim ono nešto što me puklo u trenutku kad sam konaèno postao prosvijetljen saznanjem da je Jackson Pollock stihoklepac (v. prethodni post). Mislim, to što me puklo tek je kap koja je slomila leða jedne zamisli èija je gestacija u meni trajala veæ duže vrijeme.<br />
+<br />
+Napominjem da nisam neki alternativac i da ne vjerujem baš u teorije zavjere i slièno. Ali – svejedno – držim da to što si paranoièan ne znaèi da ti nisu za petama.<br />
+<br />
+Stoga, moram moram moram iznijeti ovu svoju teoriju na vidjelo.<br />
+<br />
+Dakle, ako netko ima 25 ili više godina, naziva se "prevoditeljem" te naplaæuje svoje "prevoditeljske usluge", a pritom izvaljuje bisere tipa "Montgomery i Rommel – zaljubljeni par", "nova zbirka pjesama Jacksona Pollocka" ili "feldmaršal – što je to?!?", tu nešto grozno smrdi veæ u samim temeljima. Hoæu reæi, lièno i personalno mi je vrlo èudno kad netko kaže "dva plus dva jednako je jogurt", i to još javno… S takvima nema prièe, a ja pak nemam strpljenja razgovarati o nešto višoj matematici nakon podužeg raspredanja oko rješenja za zadatke iz prvog osnovne.<br />
+<br />
+Vratimo se mi na naše "prevoditelje". Tko su oni? Što su oni? Zašto su oni?<br />
+<br />
+<img src="http://img87.imageshack.us/img87/6571/questionmarkey480.jpg" border="0" align="center"><br />
+<br />
+Meni se, eto, èini da se radi o sljedeæem:<br />
+<br />
+1) Tzv. prevoditelji nisu homo sapiensi. Oni su zapravo stigli iz neke daleke galaksije, pa stoga nisu upoznati s temeljnim opæepoznatim èinjenicama ove plavozelene elipsoidne kugle.<br />
+<br />
+2) Tzv. prevoditelji jesu homo sapiensi, ali su zapravo plaæenici ili èlanovi neke supertajne globalne moæne organizacije, èiji je zadatak skrembliranje javne svijesti plasiranjem nebuloza.<br />
+<br />
+3) Tzv. prevoditelji su pripadnici ljudske vrste, ali od one sorte koja oèito previše voli onu staru "ide – ide, ne ide – ne ide", ili APP (ak' proðe, proðe), odnosno koja ne ulaže istinski trud od kolijevke sve do groba, osim kad je u pitanju pumpanje neutemeljene samouvjerenosti i laktarenje, tj. vlastita promocija.<br />
+<br />
+4) Tzv. prevoditelji uopæe ne postoje. Iza paravana niza svih tih izmišljenih imena i prezimena krije se neka manja skupina ljudi koja koristi softver za strojno prevoðenje, malo ispegla izbljuvane "prijevode", mlati novce i gura dokle može. Ionako poslije uvijek mogu zbrisati u neku zemlju s kojom nemamo potpisan ugovor o izruèivanju.<br />
+<br />
+<br />
+Dakle, izaberite sami:<br />
+<br />
+1) "We want to phone hooooome… Hoooooooome…"<br />
+<img src="http://img413.imageshack.us/img413/7007/svemirci480.jpg" border="0" align="center"><br />
+<br />
+2) Oh Oh Seven<br />
+<img src="http://img97.imageshack.us/img97/6674/spija480.jpg" border="0" align="center"><br />
+<br />
+3) "Odgovorni struènjaci"<br />
+<img src="http://img156.imageshack.us/img156/1738/greskamost480.jpg" border="0" align="center"><br />
+<br />
+4) "Prevodimo sa i na više od 100 jezika!"<br />
+<img src="http://img39.imageshack.us/img39/7286/strojniprijevodkrugovi4.jpg" border="0" align="center"><br />
+<br />
+<br />
+Sljedeæi post – nova "kritika".<br />
+Ako ga ne objavim u roku od 5 dana, pametnima dosta... <img src="http://www.blog.hr/img/hr/smiles/dead.gif" alt="dead" border="0"/></p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 01:31 - 
+<A HREF="http://www.blog.hr/komentari/post/1627321007/teorija-prevoenja-i-zavjere.html" TARGET="_blank">Reci</A> (8) - 
+<A HREF="http://www.blog.hr/print/id/1627321007/teorija-prevoenja-i-zavjere.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627321007/teorija-prevoenja-i-zavjere.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627321007">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627321007', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627317815"></a>
+
+<!-- Datum posta -->
+
+<h2>srijeda, <a name="dan17"></a>17.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Ne pokušavajte iskopati ono što Jackson Pollock govori u svojim pjesmama!<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627317815%2Fne-pokuavajte-iskopati-ono-to-jackson-pollock-govori-u-svojim-pjesmama.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Ola Hulija! Ola Æankete! A la mehor!<br />
+<br />
+Sve OK? Naravno da nije, znam. Utjehe radi – uèlanite se u klub itd….<br />
+<br />
+E, neku veèer svratim ja kod starog dobrog pametnog prijatelja, a on k'o pravi domaæin izvadi:<br />
+- domaæi kulen<br />
+- domaæu lozu<br />
+- domaæu bajaderu<br />
+- domaæu inaèicu DVD-a <i>Amazing Journey: The Story Of The Who</i><br />
+- još neke domaæe artikle<br />
+<br />
+Mahao sam repom kao presretni netom roðeni <i>Canis canis</i>, jer domaæe je domaæe i tak' je.<br />
+Sve je bilo kak' spada, ali taj moj prijatelj, nazovimo ga Sanovabiè, najviše mi je sline izmamio reèenim DVD-om. Ni slutio nisam da æe taj komad plastike ostaviti na mene tako duboke impresije, kao lopatom utisnute, i to, naravno, pogodite zbog èega...<br />
+<br />
+Daklem, pusti on meni tako neke dijelove filma, a ja zaneseno umislih da sam u publici (u prvom redu) i uživam i tresem se i usput umirem od straha da me Townshend ne opandrèi gitarom po æelenci i što sve ne, kadli Sanovabiè okrutno probode svojim nekontroliranim cerekom taj astralni megaorgazmièki balon. Trgnuh se ja i pitam šta šta šta koji kurac, šta se kezeæeš sad tu nešto, a on se u èudu okreæe prema meni i pita: "Pa zar nisi vidio?!?"<br />
+Bokte – vidio što?<br />
+I tako, vrati on meni malo izvedbu <i>My Generation</i>. Pjeva Daltrey ovaj stih:<br />
+<b>Don't try to dig what we all say</b><br />
+A tzv. prevoditelj/ica za sobom ostavi ovakav ljigavosluzavi trag:<br />
+<b>Ne pokušavajte iskopati ono što govorimo</b><br />
+E, Sanovabiè je nastavio umirati od smijeha, a ja sam skoro izbljuvao sve gore navedene delicije, i to kroz nos...<br />
+<br />
+Dalje, izvadi on tako film iz ureðaja i stavi drugi DVD s dodatnim sadržajima. Pritom veli k'o Milo Dijete: "Vidi sad ovaj prilog o Keithu Moonu..."<br />
+I tako, gledam ja u ružièastom oblaèiæu sladostrasti, brada do poda, oèi k'o tvornièki pendžeri, kadli – Sanovabiè opet pukne. Ja rekoh, daj vrati, što je bilo i sve.<br />
+E, naime, u opisu halabuke koju je Moon The Loon podizao narator izjavi sljedeæe:<br />
+<b>He was covering all the bases.</b><br />
+Tzv. prevoditelj/ica se nato igra turbonagluhog telefona:<br />
+<b>Pokrivao je sve baseve.</b><br />
+U East Endu bi u oèaju i nevjerici zavapili: Jebena Ada! Ja nisam rekao ništa primjereno za æudoredne uši...<br />
+<br />
+No, nakon par krugova valjanja po podu, Sanovabiè pronaðe dio u kojem neki mladi bubnjar pokušava objasniti Moonovo poimanje i pervertiranje bubnjarske tehnike. I tako, kaže naš mladac:<br />
+<b>It would be like Jackson Pollock practising staying in the lines, or something…</b><br />
+Tzv. prevoditelj/ica izmišlja govno u kocki:<br />
+<b>Kao da Jackson Pollock vježba izgovaranje svojih stihova.</b><br />
+E, tad me obuzelo nešto nešto nešto… Nešto za sljedeæi post.<br />
+<br />
+Mislim – što reæi na ovo?<br />
+<br />
+P.S. Tko li je taj vrsni zanatlija…<br />
+<img src="http://img8.imageshack.us/img8/5310/stench480.jpg" border="0" align="center"></p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 02:36 - 
+<A HREF="http://www.blog.hr/komentari/post/1627317815/ne-pokuavajte-iskopati-ono-to-jackson-pollock-govori-u-svojim-pjesmama.html" TARGET="_blank">Reci</A> (4) - 
+<A HREF="http://www.blog.hr/print/id/1627317815/ne-pokuavajte-iskopati-ono-to-jackson-pollock-govori-u-svojim-pjesmama.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627317815/ne-pokuavajte-iskopati-ono-to-jackson-pollock-govori-u-svojim-pjesmama.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627317815">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627317815', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627315302"></a>
+
+<!-- Datum posta -->
+
+<h2>nedjelja, <a name="dan14"></a>14.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Bratec Martin...<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627315302%2Fbratec-martin.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Eyup, mi duckies!<br />
+<br />
+Još malo mrvica za razmišljanje…<br />
+<br />
+Upravo èitam <i><a href=http://en.wikipedia.org/wiki/The_Pregnant_Widow target=_blank>Gravidnu udovicu</a></i>, novo èudo Martina Amisa.<br />
+To me, naravno, podsjetilo na jedan intervju s njim na koji sam prije par godina naišao u nekim (papirnatim) engleskim novinama, ne sjeæam se više toèno kojim…<br />
+Dakle, strièek Martin je tu lijepo obznanio da pri radu neprestano i dalje poseže za svojim <a href=http://en.wikipedia.org/wiki/Concise_Oxford_Dictionary target=_blank>COD</a>-om i lista, traži, njuška, istražuje… Drugim rijeèima – UÈI èovjek!<br />
+Usput, po mnogima on je vjerojatno najveæi virtuoz engleske pisane rijeèi (lako moguæe – i ne samo engleske).<br />
+<br />
+Ergo, s jedne strane imamo takvu velièinu koja u tim godinama (sorry, Martine, ovo je bez ikakve zle namjere!) i nakon tolikog i takvog opusa i dalje žeða za dodatnom naobrazbom, dok istodobno s druge strane imamo hrpe tzv. prevoditelja kojima je ispod èasti pogledati što im nudi rjeènik! Nevjebenorojatno, kažem ja!!! Kakav je ovo svijet?!?<br />
+<br />
+Za ilustraciju nudim isjeèak iz jednog novijeg intervjua s velikim gosparom Martinom povodom njegovog prvog angažmana na jednoj spisateljskoj radionici negdje u SAD-u:<br />
+<br />
+<div class="quoted"><b>Q: </b>To me, so far, what you seem to be hammering into students is making sure the author always has control. Not leaving anything up to the reader, what you called "the obliteration of any doubt."<br />
+<br />
+<b>A: </b>It’s the bit you can affect. I think everyone in this class will come out a stronger writer because [they’ll be] a more careful writer. Earlier on, I told them the most important book on their shelves is not the collected Shakespeare, it’s the Concise Oxford Dictionary. You should find out what words mean and what their origins are and that will deepen the word for you. For instance, what does obsess come from? Obsidere. To besiege. To lay siege to. You know that, and you know the word better. You’re more intimate with the word.</div><br />
+<br />
+Ha?!?<br />
+<br />
+Za kraj, jedan moj portret:<br />
+<br />
+<img src="http://img687.imageshack.us/img687/8593/teddevil.jpg" border="0" align="center"></p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 16:06 - 
+<A HREF="http://www.blog.hr/komentari/post/1627315302/bratec-martin.html" TARGET="_blank">Reci</A> (0) - 
+<A HREF="http://www.blog.hr/print/id/1627315302/bratec-martin.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627315302/bratec-martin.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627315302">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627315302', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627314329"></a>
+
+<!-- Datum posta -->
+
+<h2>subota, <a name="dan13"></a>13.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Fodderstompf<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627314329%2Ffodderstompf.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Pozdrav svima svima svima, pa èak i onima koji bi me najradije gaðali kamenjem!<br />
+<br />
+Nu, danas imam par pitanja za one kojima nije jasno koja je moja motivacija za ove ekstenzivne pisanije. Premda mi je teško prihvatiti da ima takvih, svejedno moram baciti malo svjetla…<br />
+<br />
+Najprije, ako netko misli da ovaj blog suvišan jest ili paèe štetan, evo mu malo <i>lip music</i>: <b>prrrrrrrrrrrrrrrr!!!!</b> <br />
+<br />
+Nu, takve pitam sljedeæe:<br />
+<br />
+<br />
+<b><font size=4>1. Ima li prevoðenje (i)kakvu važnost?</font></b><br />
+<br />
+E, doista, èemu služi prevoðenje?<br />
+Je li uopæe bitno prenijeti nekakav sadržaj iz jednog jezika u drugi tako da se u transformaciji izgubi što manje?<br />
+Ili je možda jedino važno odraditi svoju šihtu i predati nekakvu nakupinu slova èim prije moguæe, zaboraviti na odraðeno i okrenuti se novom poslu s primislima oèito iskljuèivo usmjerenim ka naknadi za uloženi "rad"?<br />
+<br />
+Svaka radinost koja drži do sebe ima i negdje na koncu svog radnog lanca nešto èemu æemo ovdje dati uopæeni naziv nadzor.<br />
+Nadzor imaju u proizvodnji, graðevinarstvu, raèunovodstvu, medicini, pa èak i u kriminalu...<br />
+Koliko ste samo vidjeli proizvoda izraðenih u Kini? Deset, sto, tisuæu…? Koliko je vas na njima primijetilo malenu naljepnicu na kojoj, izmeðu ostaloga, stoje otiskana slova QC, tj. kratica za kontrolu kvalitete?<br />
+<br />
+Reæi æe neki da i u prevoðenju postoji nekakav sustav provjere kvalitete, barem ponegdje…<br />
+Nu, pitam ja vas – kakav i gdje?<br />
+Mada, znam ja da postoji, kao i gdje ga mogu naæi, ali – ponavljam pitanje koje upuæujem vama – kakav i gdje?<br />
+<br />
+<br />
+<b><font size=4>2. Zamislite da ste vi autor nekog romana, dokumentarnog filma ili pjesme... Bi li vam bilo važno kakav je prijevod vašeg djela ili biste se zadovoljili i nekakvim šitom od prijevoda?</font></b><br />
+<br />
+Nu, zamislite, stvarno, da je neki Irac odluèio prevesti vašu cijenjenu zbirku novela. Super-truper! Sreæi nema konca…<br />
+Ali, proðu tako mjeseci i na stol vam doðe, kao, prijevod koji je napravio reèeni Hibernijanac, nazovimo ga Patrick.<br />
+I tako, èitate vi, èitate i pjenite veæ od drugog retka i lagano vam se para diže sve više i više i više, jer to što je Patrick nažvrljao nema veze s vašim uratkom. To je šit! Ma nije ni šit! To je majka svih šitova!<br />
+"Ma, nije moj lik toliko blesav da je pušio heroin! Kokain je to, jebemu!!!"<br />
+"Pa jebote, Patrièe, mislim, popizdit æu! Pa gdje si ti vidio da sam napisao da je Montgomery bio Rommelov 'stari savjetnik'?!?!?!?!"<br />
+I tako dalje i dalje i dalje urlièete vi u agoniji nemoæi i jada…<br />
+<br />
+E, sad, zamislite kako biste se vi osjeæali nakon takvog iskustva?<br />
+Što biste rekli Patricku?<br />
+<br />
+<br />
+<b><font size=4>3. Smije li se prevoðenjem baviti bilo tko?</font></b><br />
+<br />
+Nu, ilustracije radi, jednoga ljeta dvijetisuæeineke vozi se tako na palubi jednog derutnog trajekta naša malo nuklearnija obitelj, jer konaèno je došao taj prvi dan godišnjeg odmora.<br />
+Sunce i miris Mediterana nemilo napadaju i svi se smiju i sve je lijepo i sve je za pet, kadli – oglasi se moj mobitel.<br />
+E, zove moj stari drugar, inaèe profesionalni student, koji godinama nikako nije mogao odluèiti što bi zapravo studirao i veæ je imao nemalu zbirku razlièitih indeksa raznih sveuèilišta.<br />
+Dakle, zove on i nakon uvodnih laprdanja kojima smo utvrdili naše geolokacije, zdravstvena stanja i slièno, razgovor je tekao otprilike ovako:<br />
+On: "Èuj, treba mi pomoæ…"<br />
+Ja: "Pucaj!"<br />
+On: "Ma prevodim ovdje nešto–"<br />
+Ja [prekidam ga]: "Molim?!?!?! Je li ovo slab signal ili nešto…? Èini mi se da te nisam dobro èuo…"<br />
+On: "Ma, prevodim jednu knjigu pa sam zapeo…"<br />
+Ja: "Prevodiš knjigu?!?"<br />
+On: "…Da, je, kao, eto…"<br />
+Ja: "Zajebavaš?"<br />
+On: "Ma ne, ne…"<br />
+Ja: "I u èemu je problem?!?"<br />
+On: "Ma, evo, proèitat æu ti reèenicu – bla bla bla bla bla bla bla bla bla bla… [išèita on tako jedan odlomak osrednje velièine]."<br />
+Ja šutim.<br />
+On: "Hej, jesi tu? … Kako bih to preveo, dakle?"<br />
+Ja: "Jesi li možda prevodio do sada?"<br />
+On: "…A, nisam…"<br />
+Ja: "Èuj, za to ti se ljudi školuju, i to godinama, i to je vrlo ozbiljno i da sad ne prièam dalje jer bi mi trebalo par dana, moja ti je preporuka da dobro razmisliš u što si se uvalio."<br />
+On: "Kako to misliš?"<br />
+Ja: "Ovako, nu – bi li se inaèe prihvatio lijeènièkoga posla, ili popravljanja automobila ili projektiranja neke tvornice?"<br />
+On: "…Pa, ne bih baš…"<br />
+Ja: "Zašto?"<br />
+On: "…Paaaaa.. Znaš… Ne znam to raditi…"<br />
+Ja: "Tko kaže da ne znaš?"<br />
+On: "Ma daj, ne zajebavaj me…"<br />
+Ja: "Ne, ne, ne zajebavam te. Èinim ti uslugu, ozbiljno."<br />
+On: "Kako to misliš?"<br />
+Ja: "Ovako – ako želiš, ti lijepo uzmi rjeènik u ruke i prevedi što god te volja, samo te molim da razmisliš što te zapravo nagnalo da se prihvatiš takvog posla i kakav æe biti krajnji rezultat. Nu, dogodit æe ti se na koncu da æeš napraviti neko sranje od prijevoda i onda imati sreæe pa æeš i dalje raditi, ali s naruèiteljima kojima sranja ne smetaju jer samo gledaju kako æe pobrati novce i usput guliti kožu s tebe. Meðutim, postoji i velika opasnost da æeš napraviti sranje, ali æe naruèitelj to odmah uoèiti i dobit æeš martu u dupe, ili æe, što je još gore po tebe, to uoèiti netko drugi pa æe te ocrniti u javnosti. Ako tome još pribrojimo i najveæe sranje koje možeš proizvesti svojim prijevodom, a to je da nekome naštetiš, tjelesno, psihièki, materijalno ili ne znam kako još sve ne, ispaštat æeš cijeli život. U svakom sluèaju, budi svjestan da æeš nužno proizvesti govno i da æeš jesti govna. Nije to baš tek posliæ za podebljavanje džeparca, nije to 'tek tako'…"<br />
+I tu je negdje bujica hladne vode zasula našu voštanicu od razgovora.<br />
+I nu, nastavio sam neometano slušati šum mora i brbljarije djeèice, pa mi se tako ubrzo opet vratio osmijeh na lice…<br />
+<br />
+Ako nekome okrutnim ovo se doima, neka zna da ta sporna reèenica nije bila ništa posebno, kao i to da ne bi predstavljala nikakav problem nekome tko je obraæao pozornost na satovima engleskog jezika u osnovnoj školi.<br />
+Neka taj netko zna da kolegama profesionalcima uvijek pomažem. Ma, èak ponekad i poluprofesionalcima, hajde. Neka usput zna da sam pomagao i pomažem i mnogima putem weba. Vjerojatno sam i nekima od vas dao ruku dok ste se znojili izgubljeni u labirintu muke, dok je sat neumoljivo tiktakao po svom.<br />
+<br />
+Ali, pitanje glasi: gdje treba povuæi crtu?<br />
+<br />
+<br />
+<b><font size=4>4. Smije li se prijevod napraviti "lijevom rukom"?</font></b><br />
+<br />
+Nu, da razbistrim još jedan mutež, koji je zapravo takoðer bitan.<br />
+Izabrao sam nadimak <a href=http://en.wikipedia.org/wiki/Fodderstompf target=_blank>Fodderstompf</a>. Za neupuæene, to je naziv skladbe, uvjetno reèeno rock, sastava <a href=http://www.fodderstompf.com/fodhome.html target=_blank>Public Image Ltd.</a><br />
+U èemu je kunst?<br />
+Pa, pjevaè tog sastava je John Lydon, Nekadašnji Johnny Rotten iz "punk" grupe Sex Pistols.<br />
+E, sad, kad su se Pištolji raspali 1978., Rotten je bez puno okolišanja odmah poèeo tražiti ljude za novu skupinu.<br />
+Kako je njegovo ime tada znaèilo puno, ne samo u srcima ljudi, nego i u marketinškom smislu, barba Richard Branson, gazda diskografske kuæe Virgin, s kojom je Lydon bio ugovorno vezan, dao mu je <i>carte blanche</i>, samo da izda novu ploèu èim prije.<br />
+Novi je bend promptno ušao u studio i snimio ono što je imao – ukupno pet skladbi.<br />
+Žurno je odštampana <a href=http://images.google.hr/images?um=1&hl=hr&tbs=isch:1&q=%22public+image%22+%22first+issue%22&sa=N&start=0&ndsp=21 target=_blank>omotnica</a>, na kojoj su otisnuti naslovi tih pet pjesama.<br />
+Da, ali, problem je bio u tome što su prema ugovoru bili obvezni predati 40 minuta glazbe.<br />
+Stoga su snimili još jednu stvar, ali, opet je nedostajalo nešto više od sedam minuta do novaca.<br />
+Kako su inaèe bili poprilièno protuestablišmentski nastrojeni, tako su oni lijepo snimili Fodderstompf – improviziranu oèiglednu zajebanciju od sedam minuta i èetrdeset sekundi, èisto zadovoljavanja reèene ugovorne klauzule radi.<br />
+Kad je striko Branson to èuo, naèisto je popizdio kao nikada prije ili poslije toga. Nije mu se baš svidjelo što je sastav nemali iznos njegovog novca iskoristio za ispuhivanje šmrklji iz nosa.<br />
+<br />
+E, ali zašto je meni važan Fodderstompf?<br />
+Pa zato jer me taj koncept otvorenog zajebavanja i otaljavanja posla samo radi formalnog ispunjavanja obveze jako podsjeæa na rad velikog broja prevoditelja u Hrvatskoj.<br />
+Zato jer silni <a href=http://www.30hertzrecords.com/ target=_blank>Jah Wobble</a> u jednom trenutku u toj našoj skladbi otvoreno i neuvijeno kaže sljedeæe:<br />
+<i>We only wanted to finish the album with the minimum amount of effort<br />
+Which we are now doing very suc-cess-fully</i><br />
+Ili, u mom prijevodu:<br />
+<i>Jedina mi je namjera bila dovršiti prijevod uz što manji napor<br />
+I to upravo sada radim vrlo u-spješ-no</i><br />
+<br />
+Kužite?<br />
+<br />
+Heh, jedina je razlika u tome što je Fodderstompf pravo malo <a href=http://www.youtube.com/results?search_query=fodderstompf&search_type=&aq=f target=_blank>remek-djelo</a>, a pogotovo u svjetlu razvoja glazbe nakon njegove objave, dok fodderstompfovi "prevoditelja" koji se naðu na mom blogu zaslužuju iskljuèivo palac dolje…<br />
+<br />
+Dakle, zakljuèno:<br />
+<div class="quoted"><b>IDU MI NA SISE SVI ONI KOJI NE RADE SVOJ POSAO KAKO VALJA!</b></div><br />
+<br />
+P.S. Ako netko smatra da nije fer biti anoniman, a kritizirati druge, neka razmisli o sljedeæem:<br />
+1. Jesu li ljudi èije "prijevode" kritiziram plaæeni za "svoj posao"?<br />
+2. Jesu li njihova imena objavljena na odjavnim špicama (s razlogom)?<br />
+3. Jesu li ti isti ljudi dobro obavili "svoj posao"?<br />
+4. Jesam li ja plaæen za ovaj blog?<br />
+(5. Je li ja nešto griješim, možda?)<br />
+<br />
+Budite pozdravljeni!</p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 17:11 - 
+<A HREF="http://www.blog.hr/komentari/post/1627314329/fodderstompf.html" TARGET="_blank">Reci</A> (0) - 
+<A HREF="http://www.blog.hr/print/id/1627314329/fodderstompf.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627314329/fodderstompf.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627314329">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627314329', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627307480"></a>
+
+<!-- Datum posta -->
+
+<h2>utorak, <a name="dan9"></a>09.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Tzv. prevoðenje - primjer dvanaesti<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627307480%2Ftzv-prevoenje-primjer-dvanaesti.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Evo nas opet… <i>Prema popularnom demandiranju</i>! <img src="http://www.blog.hr/img/hr/smiles/mah.gif" alt="mah" border="0"/><br />
+<br />
+<img src="http://img31.imageshack.us/img31/3554/spanishinquisition480.jpg" border="0" align="center"><br />
+<br />
+Priznajem da mi je donekle žao što sam još i ja sad tu nešto kao neka nakupina mrtvih piksela isplivao u ovoj sveopæoj turbulentnoj žalobi. A, jebi ga – kad sam bio klinac, svima sam govorio da æu biti zubar kad narastem… <img src="http://www.blog.hr/img/hr/smiles/mouthwash.gif" alt="mouthwash" border="0"/> Ali, eto, nisam, nažalost. Èak niti psihijatar, što mi je bio <i>èart entri namba tu</i>. <img src="http://www.blog.hr/img/hr/smiles/naughty.gif" alt="naughty" border="0"/> Život piše romane i tko zna što sve još ne (kazne, raèune itd….), a u mom je sluèaju oèito naškrabao nešto vrlo slièno <a href=http://en.wikipedia.org/wiki/The_Loneliness_of_the_Long_Distance_Runner target=_blank><i>Usamljenosti dugoprugaša</i></a>, ali 'ajde neka…<br />
+<br />
+Dakle – <b>Gunrush</b>, ili, po naški, nu – < bckgrnd_trash_fanfare ><b>Lov na pravdu</b>< /bckgrnd_trash_fanfare >. <img src="http://www.blog.hr/img/hr/smiles/zubo.gif" alt="zubo" border="0"/><br />
+<br />
+NB opet – nisam baš sve sve sve zapisao (ah, ta moja defenzivnobenigna tipkovnica), ali nije ni toliko toga prevedeno.<br />
+<br />
+Velika je šteta kad prijevod nije na visini zadatka.<br />
+Ergo, ovdje imamo doista znaèajnu temu: bezrazložno ekstremno nasilje, u ovom sluèaju s kobnim posljedicama, konzekvencije koje trpi širi krug ljudi, bolno i šokantno i nevjerojatno saznanje da nitko više nije nigdje siguran, sva ta uzaludna patnja…<br />
+<br />
+Nu, poðimo:<br />
+(Ah, da – ako netko uoèi neku moju pogrešku, nelogiènost ili slièno, neka lijepo uzme crveni marker u ruku, dvaput podcrta i digne dreku, molim. Vrijedi bilo kad i bilo gdje…)<br />
+<br />
+<br />
+HRT 2, 05.03.2010.<br />
+<br />
+<b><font size=4>Gunrush</font></b><br />
+<br />
+Written by Richard Cottan<br />
+Director: Richard Clark<br />
+© ITV Productions Ltd 2008<br />
+<br />
+<b>Preveo i prilagodio: Kristijan Nikoliæ</b><br />
+<br />
+<b>EN: Gunrush<br />
+HR: Lov na pravdu</b><br />
+Veæ sam se u prethodnom postu pitao što li uopæe znaèi ovaj naslov za nas Hrvate, a da ne spominjem i to što zapravo ionako pati od sindroma "lijeva-ruka-desni-džep" (nu, pogledajte sliku u prethodnom postu) i da osim manjka logike promašuje temu itd.…<br />
+<br />
+<b>EN: You know what we said about defensive driving.<br />
+HR: Upamti što smo rekli o sigurnoj vožnji.</b><br />
+Tata Doug, koji je inaèe instruktor u autoškoli, govori kæeri Emmi kako se valja ponašati za upravljaèem automobila.<br />
+Ali, neæe biti "upamti", nego <i>znaš </i>ili <i>sjeæaš li se</i>.<br />
+No, pogotovo ne stoji "sigurnoj", jer to, uostalom, nije isto što i defenzivna vožnja.<br />
+Ovdje nije pogoðena bit – defenzivnost je zapravo Dougova životna filozofija, što mu, kako se kasnije ispostavlja, obitelj itekako zamjera.<br />
+(Za vrijeme jedne kasnije razmirice sa suprugom Jill, Doug èak spominje defenzivnu vožnju kao opis svojeg <i>modusa operandi/vivendi</i>. Ona ga pak upozorava da je upravo to razlog zbog kojega ga obitelj ne poštuje.)<br />
+<br />
+<b>EN: Defensive driving is about safety, consideration and mutual…<br />
+HR: Sigurna vožnja ukljuèuje pozornost i meðusobno…</b><br />
+Doug i dalje smireno objašnjava Emmi osnovne postulate defenzivne vožnje, koji zapravo odreðuju njegov životni nazor.<br />
+<br />
+<b>EN: Uh uh uh-huh! If people didn't rise to that sort of thing, it would not happen in the first place.<br />
+HR: Nemoj se obazirati.</b><br />
+Doug upozorava Emmu da se ne živcira zbog prostaèke opaske koju je dobila zbog svoje vozaèke trapavosti.<br />
+Ali, u originalu se krije jedan daleko razraðeniji pogled na svijet…<br />
+<br />
+[Slijedi podosta toga neprevedenog, što nas zapravo ima upoznati s prirodom odnosa oca i kæeri...]<br />
+<br />
+<b>EN: Tears and fears<br />
+And feeling proud<br />
+To say I love you<br />
+HR: Suze i strah, bojim se reæi da te volim</b><br />
+Doug pjevuši jednu omiljenu skladbu Joni Mitchell. Sada je on za upravljaèem, dok su obje njegove kæeri – Millie i Emma – na stražnjem sjedalu.<br />
+Ali – kakva bojazan? Ponos to ne dopušta...<br />
+<br />
+[Zatim slijedi grozan incident u kojemu mladi huligan ubija Emmu. Nije prevedena nijedna njegova rijeè. (Nije vrag da je razlog u tome što su proste?) Gubimo tu dosta od naravi i dinamike sukoba...]<br />
+<br />
+<b>EN: Like, uh… A cartoon.<br />
+HR: Poput stripa.</b><br />
+Doug prièa policiji što se dogodilo.<br />
+Maglovito se prisjeæa jednog detalja u vezi s ubojicom – nekakvog "osmijeha". Radi se, zapravo, o opekotini u obliku reduciranog stiliziranog Smileyja na licu ubojice, nanesenoj užarenim vrhom upaljaèa, a koju je Doug tek ovlaš i nesvjesno registrirao.<br />
+E, sad, zašto bi taj isjeèak u njegovom sjeæanju bio "poput stripa" (kao dinamiène forme, u pravilu od niza slika), a ne poput karikature (kao statiène forme, u pravilu od jedne slike), ne pitajte mene…<br />
+<br />
+<b>EN: Anything you wanna know, or anything you need to talk about… She'll be there.<br />
+HR: Ako vas bilo što zanima ili želite razgovarati o èemu, ovdje je ona.</b><br />
+I dalje smo u prostorijama londonske policije. Jedan od istražitelja upoznaje obitelj s policajkom Susie Bryson, zaduženom za koordinaciju i pomoæ obitelji.<br />
+"Ovdje je ona"?!? A, ne, èovjek hoæe reæi da æe im stalno biti na raspolaganju, a ne da æe vrtjeti palèeve u zgradi policije. Dapaèe, žena je morala biti konstantno na usluzi i bila je spremna na boravak s obitelji itd. Organizirano to je u državi albionskoj…<br />
+<br />
+<b>EN: Jill: - They're not gonna find 'em.<br />
+Doug: - Someone will come forward. They always do in the end…<br />
+HR: Jill: - Neæe ih naæi.<br />
+Doug: - Na kraju hoæe. Uvijek je tako.</b><br />
+Supruga Jill je totalno deprimirana i pesimistièna, dok je Doug pokušava utješiti.<br />
+No, naglasak je na ne baš velikom povjerenju u policiju. Doug se stoga nada da æe netko od svjedoka ili umiješanih ipak dati kakvu informaciju...<br />
+<br />
+<b>EN: Feels so… Solid.<br />
+HR: Tako je èvrst.</b><br />
+Robbie, inaèe roðak policajke Bryson, koji je kao socijalni radnik stalno u dodiru s delinkventima, a i sam ima par mrlja iz prošlosti, objašnjava Dougu kakav je osjeæaj imati pištolj u rukama. Prije ovoga mu je kazao da se èini težim nego što bi to èovjek pomislio.<br />
+Ali – "èvrst"?!? Što je ovo – nekakav <i>innuendo</i>, možda? <i>Masivan</i>, prije bi se reklo.<br />
+<br />
+<b>EN: I can't begin to know what you're going through at this moment, yeah…<br />
+HR: Mogu zamisliti što proživljavate…</b><br />
+Robbie i dalje razgovara s Dougom i pokušava mu objasniti da bi bilo najbolje da odustane od svoje privatne potrage za pištoljem, tj. ubojicom.<br />
+Prijevod nudi suprotno znaèenje.<br />
+<br />
+<b>EN: Don't get mixed up.<br />
+HR: Nemoj stvarati probleme.</b><br />
+Mama moli Lea (koji je zapravo ubojica, BTW) da se ne uplete u kakav problem.<br />
+Znate kakve su mame – "ne bi moje dijete…" i tako to. Dakle, mama se boji da Leo ne bude uvuèen u neki problem, i nije joj ni na kraj pameti da bi i sâm mogao izazvati kakav metež.<br />
+<br />
+<b>EN: I didn't want to disturb you.<br />
+HR: Nisam te htio uznemiriti.</b><br />
+Millie je upravo zatekla Douga kako nešto radi na raèunalu (tražio je podatke o vrsti pištolja kojim je ubijena Emma i žurno otiskao sliku kad ga je pronašao), a on je nemušto uvjerava da je samo provjeravao e-poštu.<br />
+Na njen upit zašto je na Emminom PC-u, on zapravo odgovara da je nije htio <i>smetati</i>, a ne "uznemiriti".<br />
+<br />
+<b>EN: I ordered you a new case.<br />
+HR: Naruèio sam ti novu kutiju.</b><br />
+Doug opet pokušava malo razbiti groznu atmosferu u koju je zapala obitelj, pa uz usiljen osmijeh mijenja temu i kazuje Millie da joj je kupio novi <i>kofer </i>za njen violonèelo, jer je stari bio okrvavljen i nije ga uspio oèistiti.<br />
+<br />
+<b>EN: Yeah, look, we're gonna be peachy.<br />
+HR: Može.</b><br />
+Roðak Robbie upoznaje Douga s Earlom, lokalnim ðankijem koji bi mu trebao poslužiti kao neka vrsta vodièa po kvartu za koji pretpostavljaju da krije ubojicu.<br />
+Earl je oèito momak živopisnog uliènog rjeènika. U prijevodu to baš i nije.<br />
+<br />
+<b>EN: We'd done a stretch together.<br />
+HR: Zajedno smo odsluživali kaznu.</b><br />
+Earl prièa Dougu kako je upoznao roðaka Robbieja u popravnom domu.<br />
+Ali, zašto se ne bi moglo reæi da su <i>odslužavljavljivavljali</i> kaznu. Zvuèi više seksi, jel' i sve tako to kao…<br />
+<br />
+<b>EN: Take him these rocks.<br />
+HR: Odnesi mu ovaj heroin.</b><br />
+Lokalni <i>gangsta boss </i>Parker daje zadatak Leu.<br />
+Ali, joj – ne ne NE! Ne radi se o heroinu… U pitanju je <i>crack </i>(kokain). Kasnije ga Leo èak pokušava pušiti, uostalom.<br />
+<br />
+<b>EN: You keep low, yeah?<br />
+HR: Pazi da te tko ne skuži.</b><br />
+Zadnja uputa Leu.<br />
+Može proæi, mada je bit u tome da Parker, svjestan Leove impulzivne naravi, želi da Leo ne pravi gluposti, a ne da se pretvori u duha ili tako nešto.<br />
+<br />
+<b>EN: I don't know what you're looking for, so, uh… A sawed-off shotgun, Scorpion…<br />
+HR: Ne znam što tražiš pa sam donio pušku. Scorpion.</b><br />
+Earl dovodi Douga lokalnom sitnom dileru oružja, koji odmah prelazi na stvar i poèinje nabrajati što sve ima u torbi…<br />
+Prvo, rijeè je o saèmarici s otpiljenim cijevima, prilagoðenoj za borbu izbliza, a osim toga, iz prijevoda bi se dalo zakljuèiti da diler ne nabraja i da postoji nekakva puška pod nazivom Scorpion, dok u naravi to ime zapravo nosi popularna èeška laka i kompaktna strojnica.<br />
+<br />
+<b>EN: It's not a good tact, man, you know.<br />
+HR: To nije dobra taktika.</b><br />
+Earl bojažljivo kori Douga nakon što je ovaj razbjesnio i otjerao dilera pokazavši mu sliku pištolja i èahuru metka kojom je ubijena Emma.<br />
+Može proæi, kao, ali Earl zapravo želi reæi da Dougov naèin ponašanja ili ophoðenja nije primjeren situaciji.<br />
+<br />
+<b>EN: Look, man… Don't wanna intrude on your grief or whatever…<br />
+HR: Èuj, žao mi je što si tužan.</b><br />
+Earl se boji da æe Doug otiæi bez da mu udijeli nešto novca.<br />
+I ovo, kao, hajde nekako…<br />
+<br />
+<b>EN: I ain't no errand boy.<br />
+HR: Nisam ja tekliè.</b><br />
+Leo, naravno, ne može bez pravljenja glupih pogrešaka pa zove prijatelja Wesleyja (koji je bio s njim kada je ustrijelio Emmu) da probaju crack koji mora dostaviti.<br />
+Pritom ne mari za Wesleyjeva upozorenja, nego se i dalje pravi važan i pun sebe ustvari tvrdi da nije <i>potrèko</i>, a ne "tekliè".<br />
+<br />
+<b>EN: Back in five. Toot sweet, man.<br />
+HR: Vidimo se. Drži se.</b><br />
+Earl se mora nakratko rastati od Douga i obeæava da æe se opet brzo vidjeti.<br />
+Prvi dio, kao, hajde, može. Drugi je klasièna engleska pogrešna interpretacija francuske fraze <i>tout de suite</i> i nema veze s nekakvim "Drži se". Dakle, Earl je želio naglasiti da hoæe pošteno zaraditi svoj novac od Douga i da doista ima namjeru vratiti se odmah. (BTW, stvarno se vratio brzo. Vjerojatno je samo skoknuo na "cijepljenje".)<br />
+<br />
+<b>EN: We're never gonna find them.<br />
+HR: Nikad ih neæeš naæi.</b><br />
+Earl moli Douga da se pomiri s èinjenicama.<br />
+<br />
+<b>EN: So many things I could have done<br />
+But clouds got in my way<br />
+HR: Toliko toga mogao sam uèiniti<br />
+No smetaju mi oblaci</b><br />
+Doug opet pjeva Joni, ovaj put u karaoke baru.<br />
+Drugi stih treba biti u vremenu prošlom.<br />
+<br />
+<b>EN: Tears and fears and feeling proud<br />
+To say I love you right out loud<br />
+HR: Suze, strah i ponos<br />
+Bojim se reæi da te volim</b><br />
+Ibid.<br />
+Nu! Opet krivo… Nije strah zapreka, nego ponos.<br />
+<br />
+<b>EN: I've looked at love from both sides now<br />
+From win and lose and still somehow<br />
+HR: Ljubav gledam s obje strane<br />
+Pobjeðujem i gubim…</b><br />
+Ibid.<br />
+Drugi stih bi trebao glasiti <i>kao pobjednik i gubitnik, pa ipak nekako</i><br />
+<br />
+<b>EN: If they come for me, I'll get a gun.<br />
+HR: Napadnu li me, uzet æu pištolj.</b><br />
+Doug izlaže Earlu svoj plan.<br />
+Ali, baš me zanima gdje li æe to "uzeti" pištolj? <i>Nabavit æe</i> ga, valjda…<br />
+<br />
+<b>EN: Oh, you are a Girl Guide.<br />
+HR: Ti to znaš.</b><br />
+Millie èisti Dougovu ranu na potiljku koju je zaradio u potjeri za ubojicama. Ona mu kaže da bi trebao na šivanje, a on pak uzvraæa da je prava izviðaèica, jer oèito mu tako spretno sanira ozljedu.<br />
+<br />
+<b>EN: Ah, I couldn't look any more of a prat, could I?<br />
+HR: Ne mogu izgledati gore.</b><br />
+Doug opet okreæe na šalu kæerinu primjedbu da æe mu rana izgledati odvratno. <i>Prat</i> je inaèe slang za budalu, bezveznjaka, seronju…<br />
+<br />
+<b>EN: We have to move beyond our grief.<br />
+HR: Moramo otpustiti tugu.</b><br />
+Millie pokušava utješiti Douga.<br />
+Prijevod ne prati ovaj uvod u <i>new age </i>teoriju o zacjeljivanju u ovakvim sluèajevima, a koju je Millie pronašla na nekoj web stranici.<br />
+<br />
+<b>EN: You, man! You, man! Oooooooohhh!<br />
+HR: Gade!</b><br />
+Lik po imenu "Inhalator" (izvorno – Puffa) urlièe od boli i šoka nakon što ga je Leo ustrijelio u nogu.<br />
+<br />
+<b>EN: I'm on the Merrywell Estate. There's been another shooting...<br />
+HR: U Merrywellu sam. Dogodilo se još jedno ubojstvo.</b><br />
+Susie zove Douga telefonom usred noæi.<br />
+Ali  – "ubojstvo"?!? Ili možda <i>ranjavanje u nogu</i>? Nu, bit æe ipak da je ovo drugo…<br />
+(Uostalom, Jill nešto kasnije gleda TV vijesti na kojima kažu da je ranjen jedan 16-godišnjak te da je u stabilnom stanju…)<br />
+<br />
+<b>EN: He crossed me over the rocks, man.<br />
+HR: Pretjerao je.</b><br />
+Leo objašnjava Wesleyju zašto je upucao "Inhalatora".<br />
+Prijevod ne objašnjava baš ništa.<br />
+<br />
+<b>EN: Wesley: - I'm gonna chuck it!<br />
+Robbie: - If you do that, we're all in the shit!!<br />
+HR: Wesley: [neprevedeno]<br />
+Robbie: - Ako to ne uèiniš, svi smo u govnima!</b><br />
+Robbie ne želi da Leov prijatelj baci pištolj.<br />
+Prijevod manjkav i suprotan…<br />
+<br />
+<b>EN: Doug, this is stupid…<br />
+HR: Ovo je previše.</b><br />
+Jill upozorava Douga da ne poduzima ništa na svoju ruku.<br />
+(I meni je veæ previše…)<br />
+<br />
+<b>EN: We have no chance without that gun!<br />
+HR: Nemamo [šanse] s tim pištoljem!</b><br />
+Leo ljutito urla na Wesleyja koji je upravo predao pištolj Dougu.<br />
+Ali, eto – upravo suprotan prijevod.<br />
+<br />
+<b>EN: I will cut you through that stupid bleeding heart you've got!<br />
+HR: Išèupat æu ti to kretensko srce!</b><br />
+Leo je i dalje ljut i prijeti nožem Wesleyju.<br />
+No, ipak nije baš neki vudu vraè…<br />
+<br />
+<b>EN: There's police everywhere… He'd have given it up by now.<br />
+HR: Policija je posvuda, vjerojatno je veæ sve rekao.</b><br />
+Wesley ovdje ipak misli na to da je Doug veæ predao policiji pištolj. Nelogiènost prijevoda ogleda se i u tome što Leo odmah pita gdje Doug stanuje, a Wesley mu odgovara. Dakle – cilj im je vratiti natrag pištolj... Povrh toga, kasnije upadaju u Dougovu kuæu i držeæi Millie kao taoca traže od Jill da zove Douga da vrati pištolj…<br />
+<br />
+<b>EN: Puffa's been shot by your man Leo.<br />
+HR: Želatinu je nastrijelio tvoj èovjek, Leo.</b><br />
+Hmmm, èudno èudno ÈUDNO! Naime, ove rijeèi izgovara upravo lik s pohrvaæenim nadimkom "Želatina"… Dakle – "Želatina" govori Parkeru da je ustrijeljen "Želatina"!!<br />
+<br />
+<b>EN: Police fear gang reprisals are imminent.<br />
+HR: Policija tvrdi da su osvete banda nedvojbene.</b><br />
+TV vijesti koje gleda Jill.<br />
+Najprije, policija se <i>pribojava </i>ili <i>boji</i>, a tek ovo "nedvojbene"… Ma, ne stoji i bedasto je. Treba biti – <i>neizbježne </i>ili <i>neminovne</i>.<br />
+<br />
+<b>EN: What are you doing, man?! She's seen your bluff! You'll have to kill her!<br />
+HR: Što radiš? Moramo je ubiti!</b><br />
+Leo urla na Wesleyja.<br />
+Ovako: Leo krvari, Wesley ne zna što bi, Millie im kaže da trebaju poviti ranu. Stoga Wesley skida šal kojim mu je bilo pokriveno lice.<br />
+Leo spominje ubojstvo Millie tek i iskljuèivo nakon Wesleyjevog otkrivanja lica. Usto, u stilu iskusnoga lisca govori Wesleyju da æe je on morati ubiti (oèito zato jer je pogreška njegova i Millie je vidjela samo njegovo lice).<br />
+Dakle, nije im izvorni cilj bio da je ubiju, kao što bi se to dalo naslutiti iz prijevoda...<br />
+<br />
+<b>EN: I don't know how to work this thing. But if you hurt my daughter, I swear to God, I'll blow your fucking head off... If it takes me all night.<br />
+HR: Ne znam kako se ovime rukuje. No ozlijediš li moju kæer, kunem se da æu te ubiti. Tako mi svega.</b><br />
+Vrhunac u kojem Leo drži nož pod vratom Millie, a Doug mu prilazi i drži pištolj uperen u njega.<br />
+Ma, gdje je nestala psovka, a samim time i vjerodostojnost?!?<br />
+Ovo "Tako mi svega" ne stoji. Doug želi reæi da æe uspjeti u naumu bez obzira na to što ni ne zna kako bi ga trebao provesti u djelo.<br />
+<br />
+<b>EN: I'm sorry… I'm sorry… Sorry…<br />
+HR: [neprevedeno]</b><br />
+Leo pušta Millie, uzmièe pred Dougom, slama se i jeca...<br />
+Ovo je jedan od primjera bitnijih neprevedenih stvari… Kljuèna scena je ovo i što sve ne: naime, ukazuje da su i nasilnici krvavi ispod kože i na koncu uviðaju svoje grijehe, što im je i najveæa kazna…</p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 00:30 - 
+<A HREF="http://www.blog.hr/komentari/post/1627307480/tzv-prevoenje-primjer-dvanaesti.html" TARGET="_blank">Reci</A> (5) - 
+<A HREF="http://www.blog.hr/print/id/1627307480/tzv-prevoenje-primjer-dvanaesti.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627307480/tzv-prevoenje-primjer-dvanaesti.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627307480">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627307480', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627304644"></a>
+
+<!-- Datum posta -->
+
+<h2>subota, <a name="dan6"></a>06.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>I ja sam izdanak Filozofskog faksa<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627304644%2Fi-ja-sam-izdanak-filozofskog-faksa.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Fit like, me auld muckers? Yer scunnered boaking cawing!<br />
+<br />
+Eto ti ga na – moram auspufirati dvije stvarèice.<br />
+<br />
+<br />
+<font size=4>Prva</font><br />
+<br />
+Nu, u idealnom svijetu ovaj bi blog katkad svojim struènim okom prorešetao i poneki "nadprosjeèan gledatelj", za razliku od nas ostalih plebsovaca, prola i zeroseksualaca, koji smo oh-tako-jebeno-prosjeèni-i-neglamurozni-i-nevažni-i-neupuæeni. Taj Netko bi odmah shvatio što je posrijedi i hiperdilatiranih oèiju arlauknuo: "Nu, jebote!" i "Vidi, stvarno!" i "Pa ja æu naèisto popizdit!!" i "Di su mi tablete za smirenje?!?" i "Ma ne ove, nego one od pesto miligrama, jebemu…" i "Di mi je ona posjetnica od æifa prevoditeljske policije?!?" i tome slièno. Taj Netko bi imao pamet i savjest i volju i hrabrost i utjecaj. Taj Netko bi sve navedeno iskoristio za veliko èišæenje, i to usisivaèem, svjestan da je taj stroj koji se vjeèito žrtvuje puno efikasniji od metle. Taj Netko bi Gordijevim èvorom bez odlaganja svezao vezice svima u ministarstvu smiješnog hoda na prvi pokušaj ubacivanja krutih predmeta u njegov prašinožder. Netko netko… Ne, tko?<br />
+<br />
+Netko, recimo, na primjer primjera, s Filozofskog fakulteta u Zagrebu.<br />
+<br />
+Zašto?<br />
+<br />
+Ma, ne znam jeste li primijetili poveznicu koju sam postavio lijevo u okviru, ali ako niste, evo je ovdje: <a href=http://www.google.hr/#hl=hr&source=hp&q=rije%C4%8Dnik&btnG=Google+pretra%C5%BEivanje&meta=&aq=f&oq=rije%C4%8Dnik&fp=2836abd8f1900e1 target=_blank>Nu!</a>, pa hajde, ne budite lijeni i lijepo je upogonite.<br />
+<br />
+Zašto?<br />
+<br />
+Zato jer je ponajprije nadasve i sveudilj zanimljivo koliko je jedna zemlja znanja iznjedrila "rijeènika". Vjerojatno puno više nego neka tamo zemlja neznanja…<br />
+<br />
+Zato jer je ponajposlije još zanimljivije to što korištenjem navedene poveznice ili upisivanjem pojma <b>"rijeènik"</b> u tražilicu meðu ponuðenim rezultatima u samom vrhu koèoperizira se i <a href=http://jthj.ffzg.hr/rjecnici.htm target=_blank>ovaj</a>. (<a href=http://img684.imageshack.us/img684/3769/jestelimislilirjecnik.jpg target=_blank>Potkrjepljujuæa slika.</a>) Nu, reæi æe neki na prvu loptu da pohvalno to je, da vrlo dobro su savladali tajne koje krije SEO, i vidi vidi vidi ti to, e, naš èouk, dakuæemo. Ali, bit æe i onih koji æe mudrijati u stilu èek' èek' èek' malo, stanider, ma kako se to ta stranica našla meðu ovim rezultatima, nu to je neka greška i tako to.<br />
+<br />
+O, da, jest, u pitanju je greška, i to malo dublje naravi. Tipfeler oèito nije. Dovoljno smo mozgovno obdareni da ne treba naširoko objašnjavati <a href=http://img97.imageshack.us/img97/2183/jestelimisliliportugals.jpg target=_blank>zašto nije</a>.<br />
+<br />
+Dakle: FFZG, na katedri iberistike imate ugodno ugniježðenog upadljivog uljeza. Pronaðite uljeza.<br />
+<br />
+<img src="http://img535.imageshack.us/img535/2183/jestelimisliliportugals.jpg" border="0" align="center"><br />
+<br />
+Nadalje: FFZG, imate i drugih falingi na istoj stranici. Pronaðite ih.<br />
+<br />
+(Ako nekome prestrogim se ovo èini, neka taj netko fino zamisli "ljeænika" kojem bi dopuštao ovakve previde i neka mu onda u mislima stalno leži na operacijskom stolu dok mu ovaj vadièepom obavlja klistir…)<br />
+<br />
+<br />
+<font size=4>Druga</font><br />
+<br />
+Ostanimo još malo kod Filozofskog faksa i njihovih struènjaka. Ergo, sinoæ smo se moja <i>Trouble And Strife </i>i ja namjestili na naš ljubavni multipleksasti nasjedni element radi britanske minikrimiserije <b>Gunrush</b>. Odmah nas je zbunio nu-kako-sam-klasièno-"maštovit", ali u konaènici ipak nejasan, nelogièan i nesuvisao prijevod naslova – ni manje ni više nego <b>Lov na pravdu</b>! Mislim, ono, stvarno – koji kaco to znaèi?!? Je li uopæe išta znaèi?!? Još uvijek ne mogu dokuèiti tko se zapravo bavio lovom NA pravdu…<br />
+<br />
+Svejedno, netko je jednom rekao nešto kao da "mediokriteti posuðuju, a geniji kradu" ili tako neki šit... Nu, ne znam. Prosudite sami:<br />
+<br />
+<img src="http://img651.imageshack.us/img651/1083/lovnapravdu480.jpg" border="0" align="center"><br />
+<br />
+(Kako li se samo snalaze ljudi koji rade u videotekama sa svim tim naslovima koji su redom zapravo u pravilu nijansne varijacije na tri i pol teme, pojma nemam.)<br />
+<br />
+Ali, vratimo se mi natrag.<br />
+Dakle, hajde, dobro, mislimo mi, ono, je li, britanska kuhinja pokretnih slièica i sve. Sigurno neæe biti loše.<br />
+<br />
+Da skratim, doista bilo je neloše, paèe – Timothy Spall je na trenutke briljirao, prièa je bila zanimljiva i, žalibože, aktualna, i tako to, ali…<br />
+<br />
+…Ali, draga moja <i>Vrou </i>i ja smo se previše èesto pogledavali i zaèuðeno komentirali prijevod, zabezeknuti jer nije bio na razini na koju nas je navikla državna televizija. (NB – moj mlaði maslaèak nekidan èuje mene kako komentiram poveæanje pretplate i pita što je to "preplata". Ja njoj: "Misliš – preTplata?" Ona æe: "Da, da – preplata…" Ja: "PreTplata." Ona: "Pa, da, tata – preplata!" Ja: "Reci otpušten." Ona: "Otpušten." Ja: "Reci potpun." Ona: "Potpun." Ja: "Reci pretplata." Ona: "Preplata." A ništa, nakon toga sam nastavio kopati nos i razmišljao kolika li se to opasnost krije u djeèjim ustima, koja nikako da prihvate kvazisofisticirane finese zaobilaženja biti stvari i tako toga. Nema kod njih stilskih figura i inih lingvistièkih alata za stvaranje dimnih zavjesa…)<br />
+<br />
+No, vratimo se mi našoj miniseriji, na èijem je koncu našem èuðenju došao orgazmièki kraj u obliku gromkog smijeha kad smo na odjavnoj špici dobili potvrdu nekih naših <i>educiranih pretpostavki</i> u ponosno istaknutom imenu i prezimenu "prevoditelja".<br />
+<br />
+Mmmmmmhhhhhhh, dakle, još jednom smo imali èast gutati sive i tvrde, ali zato ne baš ukusne plodove pseudosocrealistièke teorije o "prosjeènom gledatelju".<br />
+<br />
+(Ta mi teorija, BTW, zaudara kao muljni kolaè iz Orwellove kuhinje. Po njoj, valjda, ako lik u nekom filmu ima IQ iznad 125, smisao za humor kao najveæi uzori Woodyja Allena, elokvenciju jednog Stephena Fryja i naobrazbu steèenu na "Eatonu", što mu to vrijedi kad naš "prevoditelj" osjeæa dužnost napraviti od njega Gumbyja koji valja gluposti i neistine, srezati mu duhovitost na razinu grafita nekog provincijskog kolodvorskog WC-a, ogranièiti mu rjeèitost po uzoru na Baldricka, svesti mu izvor naobrazbe na ulièni raster neatraktivnijih dijelova urbane zajednice…<br />
+Havers! rekli bi na to iz klana MacKay. Bollocks! pljucnuli bi skinhedi iz Hershama. R-fuckin'-S! dreknuli bi iz Melburnške skvoterske zajednice. Raasclat! promrsili bi rude boys iz zapadnog Kingstona.<br />
+Ali – tko njih što pita…?<br />
+<br />
+Ma, upitajmo zato mi sami sebe – kakav bi to bio život kada bi film, literatura i glazba bili iskljuèivo prilagoðeni "prosjeènim" konzumentima?!?<br />
+<br />
+O, da, i meni je nakon što sam mašti dao voljno zatrebao viski ili dva…<br />
+Meðutim, ipak sam u stilu nepatvorenog prosjeènog frustriranog alkoholièara umjesto toga uzorno trgnuo par domaæih brlji. Kakvo je, uostalom, to piæe kojem ni ime nije prosjeèno, pa ga zato èovjek nije u stanju ni izgovoriti – glendafih, gafendlih, glenfandih, glindefih, gafenflindh – ma goni se u <b>P</b>ersonal <b>M</b>esið!!)<br />
+<br />
+Nu, sada, dakle, valja srediti sljedeæi post…<br />
+<br />
+Pozdrav svima!<br />
+<br />
+Aljkavima i zabludjelima, pak:<br />
+<img src="http://img203.imageshack.us/img203/1173/vsign.jpg" border="0" align="center"></p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 16:33 - 
+<A HREF="http://www.blog.hr/komentari/post/1627304644/i-ja-sam-izdanak-filozofskog-faksa.html" TARGET="_blank">Reci</A> (4) - 
+<A HREF="http://www.blog.hr/print/id/1627304644/i-ja-sam-izdanak-filozofskog-faksa.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627304644/i-ja-sam-izdanak-filozofskog-faksa.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627304644">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627304644', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<a name="1627301937"></a>
+
+<!-- Datum posta -->
+
+<h2>èetvrtak, <a name="dan4"></a>04.03.2010.</h2>
+
+<!-- Datum posta kraj-->
+
+<table>
+<tr>
+<td>
+
+<!-- Naslov posta -->
+
+<h3>Tzv. prevoðenje - primjer jedanaesti<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpreveden.blog.hr%2F2010%2F03%2F1627301937%2Ftzv-prevoenje-primjer-jedanaesti.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h3>
+
+<!-- Naslov posta kraj -->
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<!-- Tekst posta-->
+<div style="padding-right:20px;">
+<p>Eh, ta kabelska… Nepresušan izvor zabave to je, jel'da?<br />
+Mada, u meni se razvija solidna trakavica od dvojbe i stvarno ne znam što bih. Trebam li zahvaliti kolegi što me prije nekih godinu dana upozorio na par programa i "prevoditelja" koje naruèitelji, valjda neupuæeni, tamo nesmiljeno koriste, ili bi možda bilo uputnije da ga prokunem za vijeke vjekova, jer jednostavno nemam vremena registrirati sve što zaslužuje ovakvu vrst izlaganja, ali zato imam par novijih zdravstvenih tegoba.<br />
+Uglavnom, eto, frustriran sam dvojako: eins – keine zeit i dva – doslovce me uhvati neizmjerna tuga za sadomazohistièkih seansi seciranja "prijevoda".<br />
+Za svaki sluèaj, evo privremenog rješenja – dragi moj kolega, koji mi se sad smiješ iz prikrajka – želim ti da ti se djeca èim prije navuku na najveæi moguæi folk trash, jer si postupio kao zadnji diler, svjestan da neæu moæi okrenuti glavu na drugu stranu.<br />
+<br />
+Ali, dosta okolišanja u zadnjoj klupi…<br />
+Nu, za danas imamo još jedan vrstan inozemni uradak i još jednu znaèajnu temu – suludu i tko zna kome potrebnu Bitku na Somi.<br />
+Hajde, nauèit æemo još nešto, dakle…<br />
+<br />
+Kvaliteta je dodatno nabildana, jer naratorica je nitko drugi nego Tilda Swinton!<img src="http://www.blog.hr/img/hr/smiles/sretan.gif" alt="sretan" border="0"/> Kakav glas, oooooo kakav glas, kao da se zvijezde lagano spuštaju niz veliku vatrogasnostriptiznu štangu s neba, a suknjice im vijore negdje oko pazuha…<img src="http://www.blog.hr/img/hr/smiles/cerek.gif" alt="cerek" border="0"/><br />
+<br />
+U naèelu, g. Galoviæ nije tragièan kao neke njegove "kolege" i ne zaslužuje baš gornji standardni naslov, o ne, ali ipak, ima materijala, ima, pa stoga, što ja znam, zadržavam tradiciju, mada uz dozu nevoljkosti.<br />
+Naglašavam da nisam sve pohvatao… Nije ni sve prevedeno, uostalom.<br />
+<br />
+Ali, dopustite da još malkice digresiram.<br />
+A propos naslova – kad malo razmislim, jest, previše je generièki i bezvezan i tako to. Ostaci suhoparnog akademskog drilanja, valjda.<br />
+Ali, nekidan idem ja tako pored jedne graðevine duha i jednog nedavnog poprišta slavnog pokazivanja srednjeg prsta establišmentu i gledam što ima novoga gore na visini od par metara, kad ono, ispod lijeve noge osjetim mekaniju podlogu i oglasi se nemali broj decibela, i to nekako èudno, otprilike kao "fhljrukhhh". Bull's-eye, iliti u prijevodu na hrvatski – bikovo oko! Bez odlaganja sam dreknuo dvije, tri soènije uz skoro pa tabularni popis svih pasmina kojih sam se mogao sjetiti, od patuljastog zelenortskog bernardinca pa sve do pitcairnskog zelenookog ovèara (mada nisu oni krivi, naravno), a kad mi je ponestalo teksta, sinulo mi je – pa ovo je zapravo metafora ovog bloga! O da – "Martama na drek!" Zvuèi mrvicu bolje, zar ne? Kao neki film C produkcije o radioaktivnim ninja skinhedima. Usto ima i dvojako znaèenje:<br />
+-	nu, k'o neki SM frik stalno gazim u izmet<br />
+-	nu, k'o neki superheroj jurišam nogama na feces<br />
+<br />
+E, sad, opet stupa na snagu moæna akademija s podignutom obrvom…<br />
+Razmislit æu još malo. (U prijevodu, par mjeseci ili godina…)<br />
+<br />
+Nu, srežimo sad ove analnoretentivne epistolarne alegorije.<br />
+<br />
+Evo globalne recenzije:<br />
+<br />
+<br />
+Viasat History<br />
+16.02.2010.<br />
+<br />
+<b><font size=4>The Somme</font></b><br />
+<br />
+Written by: Mark Hayhurst & Carl Hindmarch<br />
+Directed by: Carl Hindmarch<br />
+<br />
+<b>Preveo: Mane Galoviæ</b><br />
+<br />
+<b>EN: Suppose one should lose one's head and get other men cut up…<br />
+HR: Što ako se netko pogubi pa ljudi ostanu odsjeèeni?</b><br />
+Isjeèak iz razmišljanja jednog britanskog narednika prije velikog okršaja na Somi.<br />
+Nu, ovo "odsjeèeni" ne stoji. Treba "pobijeni", ili, ako veæ nije lako zatomiti pjesnièke porive, "posjeèeni", jer èovjek želi reæi da svi mogu izginuti kao muhe u sluèaju da on napravi neku kobnu pogrešku. (O, da – misli na sebe!)<br />
+<br />
+<br />
+<b>EN: Suppose one's legs should take fright and refuse to move…<br />
+HR: Što ako se nekome noge odsijeku od straha?</b><br />
+Isti izvor. Nu, i ovdje vrijedi da narednik zapravo govori o sebi. Èovjek je bio opsjednut dvojbama hoæe li biti na visini zadatka kada doðe vrijeme…<br />
+(BTW, ova dva segmenta ponavljaju se i kasnije, uz isti prijevod.)<br />
+<br />
+<b>EN: On the morning of July 1st, 1916…<br />
+HR: Ujutro 1. lipnja 1916….</b><br />
+Previd!<br />
+<br />
+<b>EN: The area they chose was a 26-mile section of the Western Front in Northern France by the River Somme.<br />
+HR: Odabrali su podruèje; Linija duga 42 km na rijeci Somme u sjevernoj Francuskoj. [sic]</b><br />
+<i>Somme </i>– jel' se to rimuje s onim gradom <i>Rome </i>(ili s onom ribom koja je najbolja prijateljica keèige…)?<br />
+E, ovdje moram reagirati, jer g. Galoviæ stalno koristi izvorno ime èuvene rijeke, koje je u našem jeziku ipak veæ odavno pohrvaæeno.<br />
+Ovo me previše podsjeæa na skoro pa permanentno ukazivanje sljedeæih rijeka u "prijevodima" na ovom programu: Elba, Oder i Vistula.<br />
+(Još nekoliko primjera:<br />
+<b>…protezala se od Serrea na sjeveru do rijeke Somme na jugu.<br />
+Na Sommi je vodio ratni dnevnik.<br />
+Godinu i pol dana poslije mnogi su od njih išli za Sommu.</b><br />
+itd….)<br />
+<br />
+<b>EN: This is more like it.<br />
+HR: Ovo mi se sviða.</b><br />
+Opaska generala Rawlinsona prije bitke, a tijekom izviðanja terena.<br />
+Ovo bi još i nekako moglo proæi…<br />
+<br />
+<b>EN: A Christian Socialist, he opposed war.<br />
+HR: Kao kršæanin i socijalist, protivio se ratu.</b><br />
+Iz opisa našeg prije spomenutog narednika…<br />
+Ali, što, zar "kršæanski socijalist" nije OK?<br />
+<br />
+<b>EN: …turning down an officers' commission to serve in the ranks.<br />
+HR: …prethodno odbivši èasnièku službu u stožeru.</b><br />
+Ibid.<br />
+Ma, ne u "stožeru", nego je želio biti meðu vojnicima…<br />
+<br />
+<b>EN: He said he toured through Cornwall once. In a motor.<br />
+HR: Rekao je da je motorom proputovao Cornwall.</b><br />
+Iz pisma jednog vojnika majci i sestrama.<br />
+Ali – ovdje se krije klasièna poèetnièka greška. "Motor" u britanskom engleskom oznaèava automobil, a ne "motor".<br />
+<br />
+<b>EN: Bite and hold, gentlemen. <br />
+HR: Taktika æe nam biti "zauzmi i èekaj".</b><br />
+Rawlinson izlaže svoj plan stožeru…<br />
+No, neæe biti "zauzmi i èekaj". Ma kakvo "èekanje"? Doslovce: "zagrizi i ne puštaj", odnosno "zauzmi i (za)drži (položaj)".<br />
+<br />
+<b>EN: Stick 'im!<br />
+HR: Udri!</b><br />
+Narednik izvikuje zapovijed za vrijeme obuke vojnika u borbi bajunetom.<br />
+I ovo je, kao, oprostivo, ali brkati, beskrupulozni i buèni podoficir ipak želi da vojnici nauèe zabadati bajunete u tijela neprijatelja.<br />
+<br />
+<b>EN: Must feel a bit rummy to run onto one of them in a charge…<br />
+HR: Tko zna kako je u jurišu zabiti bajunetu u nekoga?</b><br />
+Iz drugog pisma gore spomenutog golobradog vojnika, u kojem opisuje svoju pušku i bajunet.<br />
+Ali – prijevod kazuje suprotno od onoga što je mladac htio reæi, odnosno da je vjerojatno malo nezgodno naletjeti na bajunet tijekom juriša.<br />
+<br />
+<b>EN: Anyway, he went off in a good temper, for after a while I gave him a Woodbine.<br />
+HR: No, bio je zadovoljan kad sam mu dao kozju krv.</b><br />
+Momak dalje u pismu opisuje kako je smirio narednika koji je bio iznimno ljut na njega jer je u šali uperio isukani bajunet u suborca.<br />
+Ali – majko mila!! Kakva "kozja krv"?!?!?!?! "Woodbines" je èuvena marka cigareta (i to bez filtera, hej!).<br />
+<br />
+<b>EN: Like many battalions destined for the Big Push, the Manchesters provided the labour for this huge task.<br />
+HR: Poput mnogih bataljuna koji su dovedeni ovamo, i manchesterski je bataljun pripremao teren za ofenzivu.</b><br />
+Eh – ipak, radi se o opsežnim infrastrukturnim radovima koje su Britanci izvodili pripremajuæi se za Veliki juriš, za koje je postrojba sastavljena od ljudi iz manchesterskog kraja osigurala radnu snagu.<br />
+<br />
+<b>EN: I have not got bigger. Damned Jerry took all my fat.<br />
+HR: Nisam ništa ojaèao. Izgubio sam apetit zbog prokletih Švaba.</b><br />
+Iz pisma jednog francuskog vojnika ocu.<br />
+Nije èovjek "izgubio apetit", nego sve masne naslage na tijelu.<br />
+<br />
+<b>EN: At Thiepval, Lieutenant Kassel and his machine-gun crew were in the defences nicknamed the Wonderwork.<br />
+HR: Poruènik Kassel i njegovi mitraljesci služili su na "Njemaèkoj brani" kod Thiepvala.</b><br />
+A ne – <i>Wonderwork </i>i <i>Schwaben Redoubt </i>nisu jedno te isto, ne ne NE!!<br />
+<br />
+<b>EN: One hundred and twenty thousand men, poised for attack, were ordered to wait.<br />
+HR: 120 000 vojnika odreðenih za napad dobilo je zapovijed da èekaju.</b><br />
+E, sad, jesu bili "odreðeni", ali ovdje je poanta u tome da su bili spremni. Ma, bili su napeti kao puške…<br />
+<br />
+<b>EN: …field dressing…<br />
+HR: …toaletni pribor…</b><br />
+Iz popisa opreme britanskih vojnika…<br />
+Ovdje se ipak radi o vojnièkoj opremi za prvu pomoæ, koja se sastoji uglavnom od zavoja.<br />
+<br />
+<b>EN: …fence posts…<br />
+HR: …ježeve…</b><br />
+Što su britanski vojnici imali od dodatne opreme…<br />
+"Fence posts" su ipak stupiæi za ograde, koje su veæinom koristili za razapinjanje bodljikave žice.<br />
+<br />
+<b>EN: …described his feelings…<br />
+HR: …opisao je trenutke…</b><br />
+Bez komentara.<br />
+<br />
+<b>EN: This immense, overwhelming tranquility of sky and down, uniting us millions of enemies and allies in its solemn, unavoidable embrace.<br />
+HR: Ovaj blaženi spoj neba i zemlje ujedinjuje milijune vojnika u svojem magiènom zagrljaju.</b><br />
+Ovdje je kljuèna rijeè "tranquility", odnosno mir ili tišina, i to kao preoèiti snažan kontrast onome što èeka vojnike dok marširaju prema bojišnici uoèi Velikog juriša. Još kad tome dodamo pridjeve…<br />
+<br />
+<b>EN: Is that the new rest home?<br />
+HR: To je novo poèivalište?</b><br />
+Pitanje jednog pješaka za marša kada je vidio da par vojnika nešto kopa u pozadini. Èovjek je bio ironièan, pa stoga i ne ovoliko izravan, jel'te…<br />
+<br />
+<b>EN: …just before standing to arms in the morning.<br />
+HR: …jutros prije odlaska na dužnost.</b><br />
+OK, može, kao, no bilo bi lijepo objasniti èuveni "stand-to-arms" iliti ga "stand-to", jer, kao prvo, odvijao se svaki dan pred zoru, a, kao drugo, sastojao se od toga da su se svi vojnici morali nasaditi s oružjem na grudobrane i otvoriti èetvore oèi, jer, prema opæeprihvaæenoj teoriji, napadi su bili najèešæi baš u to nezahvalno doba dana.<br />
+E, sad, kunst i svojevrsna tragikomedija je u tome što su Nijemci uredno njegovali isti obièaj.<br />
+(BTW, zamislite samo za koliko su sna bili zakinuti ti jadni ljudi u rovovima…)<br />
+<br />
+<b>EN: It may well be that you will have to read these lines as ones of passing interest.<br />
+HR: Možda æeš èitati ove retke. baš kao i svake dosadašnje.</b><br />
+Iz pisma britanskog satnika supruzi.<br />
+Znao je da je velika vjerojatnost da æe poginuti, a ovom je reèenicom zapravo želio naglasiti veæi znaèaj onoga što upravo piše jer se pribojavao da mu je to možda posljednji glas ženi.<br />
+<br />
+<b>EN: It did not move – it hung over us.<br />
+HR: Nije jenjavala nego je lebdjela nad nama.</b><br />
+Britanski narednik opisuje posljednji britanski baražni napad topništva netom prije Velikog juriša.<br />
+Htio je reæi da se èinilo kao da su im granate neprestano nad glavama.<br />
+<br />
+<b>EN: It was as though the air were full of a vast and agonized passion, bursting into groans and sighs… One had only to lift one's eyes to be appalled by the writhing of the tormented elements above.<br />
+HR: Grotesknom pozornicom prolamali su se èudni zvukovi, a lelujanje granata jasno se razabiralo u visinama.</b><br />
+Poezija! Nije loše, ali nije ni prijevod… Ma, ni prepjev…<br />
+<br />
+<b>EN: Seven hundred and fifty yards of no man's land, nicknamed Mash Valley.<br />
+HR: …680 m nièije zemlje kodnog imena "Muljevita dolina".</b><br />
+A, ne, nije "Muljevita"! Toèan prijevod je "Dolina pirea". Zašto? Zato jer je njena susjedna dolina prije prozvana "Dolinom kobasice", buduæi da su Nijemci u njoj stalno podizali svoj izviðaèki balon, koji su britanski vojnici promptno nazvali kobasicom, po èemu je dolina dobila ime. Slijedom toga, kad su veæ imali kobasicu, nedostajao im je samo pire. Geddit? Britanski humor – najbolji na svijetu!<br />
+Usto, nije rijeè o "kodnom imenu"…<br />
+(Ova "Muljevita" dolina kasnije se spominje još jednom.)<br />
+<br />
+<b>EN: Second lieutenant…<br />
+HR: Natporuènik…</b><br />
+Ipak – poruènik…<br />
+<br />
+<b>EN: …do not budge!<br />
+HR: …držite razmak!</b><br />
+Iz satnikove upute vojnicima netom prije Velikog juriša kojim ih upozorava da održavaju formaciju i ne zaostaju.<br />
+<br />
+<b>EN: So, Myrtle's complexion will soon be restored, will it?<br />
+HR: Myrtle æe se onda razvedriti, zar ne?</b><br />
+Iz pisma britanskog vojnika sestri.<br />
+Zapravo ironièno usporeðuje sestrine probleme u vezi s tenom sa svojima.<br />
+<br />
+<b>EN: For God's sake!!!<br />
+HR: Isuse!</b><br />
+Oèajnièki urlik jednog britanskog vojnika koju sekundu prije Velikog juriša. Èovjek više nije mogao stajati na mjestu…<br />
+Sva sreæa da g. Galoviæ ne radi u pošti. Bilo bi krivo uruèenih pisama, èini mi se…<br />
+<br />
+<b>EN: Don't budge on the left!<br />
+HR: Lijevo krilo, drži razmak!</b><br />
+Britanci lagano hodaju nièijom zemljom prema njemaèkim položajima, dok narednik upozorava lijevi bok da ne zaostaje.<br />
+<br />
+<b>EN: Don't budge back there! Keep formation!<br />
+HR: Ne zbijaj se straga, drži se stroja!</b><br />
+Narednik i dalje održava red dok se Britanci polako približavaju prvim njemaèkim rovovima.<br />
+<br />
+<b>EN: My platoon continued to advance in good order…<br />
+HR: Moj je vod napredovao strojevim korakom…</b><br />
+Iz zapisa mladog britanskog poruènika.<br />
+Ma, kakvim "strojevim korakom"?!? Disciplinirano, valjda… Ta ljudi su POLAKO hodali prema neprijatelju, svjesni opasnosti. Nisu bili na nekoj paradi na Crvenom trgu.<br />
+<br />
+<b>EN: Steady, Middlesex!!<br />
+HR: Pozor, vojnici!</b><br />
+Ma kakav "pozor"?!? Poruènik upozorava vojnike da ostanu pribrani i smireni dok se približavaju Nijemcima.<br />
+<br />
+<b>EN: …went over the top.<br />
+HR: …jurnulo je glavom bez obzira.</b><br />
+Ajoj!! Naime, radi se o drugom valu od 60.000 vojnika, koji je izišao iz rovova i krenuo u napad, a ni u kojem sluèaju nije "jurnuo glavom bez obzira".<br />
+"Over the top" je èuvena fraza, BTW.<br />
+<br />
+<b>EN: Rawlinson's only significant breakthrough was in the south.<br />
+HR: Rawlinsonove postrojbe važnije su napredovale tek na jugu.</b><br />
+Bez komentara.<br />
+<br />
+<b>EN: Signaller Henri Fraisse…<br />
+HR: Signalist Henri Fraisse…</b><br />
+Ovaj je èovjek bio vezist, a ne "signalist".<br />
+<br />
+<b>EN: Thank you awfully for the postal order.<br />
+HR: Hvala ti puno na listovima.</b><br />
+Iz pisma veæ spomenutog mladog britanskog vojnika nakon ranjavanja 1. srpnja 1916.<br />
+Ma, kakvi "listovi"?!? Novèana poštanska doznaka je to…</p>
+</div>
+ <!-- Tekst posta -->
+
+</td>
+</tr>
+</table>
+
+<div class="ispodposta">
+
+<!-- Sadrzaji ispod posta -->
+- 09:55 - 
+<A HREF="http://www.blog.hr/komentari/post/1627301937/tzv-prevoenje-primjer-jedanaesti.html" TARGET="_blank">Reci</A> (2) - 
+<A HREF="http://www.blog.hr/print/id/1627301937/tzv-prevoenje-primjer-jedanaesti.html" TARGET="_blank">Ispiši</A> - 
+<A HREF="http://preveden.blog.hr/2010/03/1627301937/tzv-prevoenje-primjer-jedanaesti.html" title="Permalink">#</A>
+<!--  Sadrzaji ispod posta kraj -->
+
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627301937">
+<script type="text/javascript">
+	get_post_comments('http://preveden.blog.hr', '1627301937', '12358707', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</div>
+
+<p><div align="center">
+<A HREF="http://preveden.blog.hr/2010/02/index.html"><< Prethodni mjesec</A> | <A HREF="http://preveden.blog.hr/2010/04/index.html">Sljedeæi mjesec >></A></div>
+</p><p><div align="center"><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/hr/" target="_blank"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/hr/" target="_blank">Ovaj blog je ustupljen pod Creative Commons licencom Imenovanje-Nekomercijalno-Dijeli pod istim uvjetima</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><Work rdf:about=""><license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/hr/" /></Work><License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/hr/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> - --></div></p>
+<!--  Postovi  kraj-->
+
+</div>
+
+<!--  Lijevi stupac kraj-->
+</div>
+
+</td>
+
+</tr>
+</table>
+<!-- Sadrzaj kraj -->
+<a title="Web Statistics" href="http://getclicky.com/202020"><img alt="Web Statistics" src="http://static.getclicky.com/media/links/badge.gi" border="0" /></a>
+<script src="http://static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">clicky.init(202020);</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/202020ns.gif" /></p></noscript>
+
+</body>
+</html>

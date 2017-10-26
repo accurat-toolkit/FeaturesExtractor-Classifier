@@ -1,0 +1,1179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<title>Europa Web kamere</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content=" Web kamere Europa     Web kamere Europa online. Na karti možete vidjeti online web kamera spremna za Europa odredište. Web kamere nalaze se u kombinaciji sa karte za pregled Europa i turističke at.." />	
+ 
+<link rel="stylesheet" href="http://tixik.appspot.com/public/css/main_map.css" media="screen" />
+<script src="http://tixik.appspot.com/js/map/main.js" type="text/javascript" ></script>
+<script 
+type="text/javascript"
+src="http://www.google.com/jsapi?key=ABQIAAAAvKjDJgVpnLplntTcQtLa6xRvTb8-FwTYUga9Vvja3lmpkecZABSS0DJvpPNF14TfpKT_hKld-N7ErQ"></script>
+</head>
+<body onunload="GUnload();">
+<script type="text/javascript">
+google.load("prototype", "1.6.0.3");
+
+</script>
+
+<div id="loader">`
+
+<object type="application/x-shockwave-flash"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0"
+data="http://tixik.appspot.com/public/image/maps/progress.swf" 
+width="256" height="256">
+<param name="movie" value="http://tixik.appspot.com/public/image/maps/progress.swf" />
+<param name="quality" value="high"/>
+<param name="wmode" value="transparent"/>
+</object>
+
+</div>
+ <div id="leader" style="margin:auto;text-align:center;">
+
+</div><div id="body"> 
+<div id="main" class="lang_hr">
+<div id="gmap">
+<div id="gmapmap" >
+</div>
+<div id="mlinks" style="display:none;margin:10px;"><div class="promo promo_yellow" 
+style="font-size:150%;font-weight:bold;"><a class="addplus ico_ubytovani" title="Smještaj" 
+href="/smještaj/">
+Pronađi smještaj &raquo;</a></div><div class="promo promo_green" 
+style="font-size:150%;font-weight:bold;"><a class="addplus ico_pujcovny" title="Rent-a-car" 
+href="/najam-automobila/">
+Rent-a-car &raquo;</a></div><div class="promo promo_purple" 
+style="font-size:150%;font-weight:bold;"><a class="addplus ico_letenky" title="Ulaznice" 
+href="/ulaznice/">
+Ulaznice &raquo;</a></div></div><script>
+window.onload = function() {
+$('mlinks').style.display='';
+}
+</script><script type="text/javascript">
+var sv=false;
+
+</script>
+<div style=""
+class="buttons">
+<a href="/m/" id="svon" 
+class="sv"
+title="Street view"
+onclick="
+	
+	_gaq.push(['_trackEvent', 'Maps', 'Action', 'Street view']);
+if (sv==false) {turnsvon();} else {turnsvoff();};return false;"
+>  
+
+</a>
+<a 
+onclick="
+	_gaq.push(['_trackEvent', 'Maps', 'Action', 'Pocasi']);
+	"
+class="pocasi"
+href="/m/?weather"
+title="Vrijeme"
+>
+</a>
+
+<a 
+onclick="
+	_gaq.push(['_trackEvent', 'Maps', 'Action', 'Webcams']);
+	"
+class="webcams"
+href="/m/webcams/"
+title="Web kamere"
+>
+</a>
+</div>
+</div>
+
+<div id="maininfo" >
+<div style="text-align:right;color:#aaa;font-size:80%;">Sponzorirane veze</div>
+<div style="margin-left:5px;border-bottom:1px solid #eee;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3773179337694314";
+/* 336x280, mapa */
+google_ad_slot = "1529424572";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+<div id="adsense" 
+		style="display:none;">
+</div><script type="text/javascript">
+		var polys=[];
+		function addPoly(maxy,miny,maxx,minx,id) {
+		
+				pls=[];
+        		pls.push(new GLatLng(maxy,minx));
+        		pls.push(new GLatLng(miny,minx));
+        		pls.push(new GLatLng(miny,maxx));
+        		pls.push(new GLatLng(maxy,maxx));        		
+        		pls.push(new GLatLng(maxy,minx));
+        		polyline = new GPolygon(pls,'#000000',1,0.5,'#0F6875',0.5);
+        		map.addOverlay(polyline);
+        		polys[id]=polyline; 
+        		}
+        		</script><div id="infotop"  class="promo noroh"><h1 style="padding:0;margin:0;
+		float:left;padding-right:10px;font-size:100%;"><a href="/m/">&laquo; Natrag</a>&nbsp;|&nbsp;Europa</h1>
+			
+			<select onchange="
+			_gaq.push(['_trackEvent', 'Maps', 'Select', this.value]);
+			window.location='/m/'+this.value+'/webcams/';" id="zeme" name="zeme"><option>--- Odredite mjesto ---</option><option onmouseover="addPoly(42.6632512333,39.6448250353,21.0530400000,19.1134643555,14);"
+					onmouseout="map.removeOverlay(polys[14]);"
+					 value="albanija-14"> Albanija</option><option onmouseover="addPoly(42.6541619303,42.4300454485,1.7859649658,1.4096832275,9);"
+					onmouseout="map.removeOverlay(polys[9]);"
+					 value="andora-9"> Andora</option><option onmouseover="addPoly(49.0209849290,46.3723391231,17.1798900000,9.5404100000,21);"
+					onmouseout="map.removeOverlay(polys[21]);"
+					 value="austrija-21"> Austrija</option><option onmouseover="addPoly(51.5018805040,49.4483724377,6.4033391015,2.5581477942,29);"
+					onmouseout="map.removeOverlay(polys[29]);"
+					 value="belgija-29"> Belgija</option><option onmouseover="addPoly(56.1671900000,51.2527900000,32.7380900000,23.1688800000,44);"
+					onmouseout="map.removeOverlay(polys[44]);"
+					 value="bjelorusija-44"> Bjelorusija</option><option onmouseover="addPoly(45.2758528222,42.5645200000,19.6196900000,15.7228088379,26);"
+					onmouseout="map.removeOverlay(polys[26]);"
+					 value="bosna-i-hercegovina-26"> Bosna i Hercegovi..</option><option onmouseover="addPoly(44.2196154002,41.2544200000,28.6962890625,22.3594300000,31);"
+					onmouseout="map.removeOverlay(polys[31]);"
+					 value="bugarska-31"> Bugarska</option><option onmouseover="addPoly(36.0313317763,34.3797125805,34.9222411774,31.9394530915,62);"
+					onmouseout="map.removeOverlay(polys[62]);"
+					 value="-62"> Cipar</option><option onmouseover="addPoly(43.5515340832,41.8081727748,20.3810119629,18.4364318848,147);"
+					onmouseout="map.removeOverlay(polys[147]);"
+					 value="crna-gora-147"> Crna Gora</option><option onmouseover="addPoly(51.0556389422,48.5755500000,18.8597917557,12.0906257629,63);"
+					onmouseout="map.removeOverlay(polys[63]);"
+					 value="czech-republic-63"> Czech Republic</option><option onmouseover="addPoly(57.9265172854,54.5067318458,15.2668762207,7.0246581361,66);"
+					onmouseout="map.removeOverlay(polys[66]);"
+					 value="danska-66"> Danska</option><option onmouseover="addPoly(59.7660773880,57.5128725509,28.2094573975,21.3299560547,71);"
+					onmouseout="map.removeOverlay(polys[71]);"
+					 value="estonija-71"> Estonija</option><option onmouseover="addPoly(62.4793393392,61.2821125648,-6.1605834961,-7.9046630859,81);"
+					onmouseout="map.removeOverlay(polys[81]);"
+					 value="farski-otoci-81"> Farski Otoci</option><option onmouseover="addPoly(70.0794200000,59.5871944374,31.5872900000,19.1162109375,77);"
+					onmouseout="map.removeOverlay(polys[77]);"
+					 value="finska-77"> Finska</option><option onmouseover="addPoly(51.1707332235,41.3025710943,9.7119140625,-56.4889526367,82);"
+					onmouseout="map.removeOverlay(polys[82]);"
+					 value="francuska-82"> Francuska</option><option onmouseover="addPoly(36.1553406285,36.1029312326,-5.3274421702,-5.3719024669,90);"
+					onmouseout="map.removeOverlay(polys[90]);"
+					 value="gibraltar-90"> Gibraltar</option><option onmouseover="addPoly(41.7139300734,34.4250361302,28.4875488281,19.2150878906,96);"
+					onmouseout="map.removeOverlay(polys[96]);"
+					 value="grcka-96"> Grčka</option><option onmouseover="addPoly(83.8110236564,58.4477328039,-6.9960942864,-74.4082036614,91);"
+					onmouseout="map.removeOverlay(polys[91]);"
+					 value="grenland-91"> Grenland</option><option onmouseover="addPoly(49.7670740737,49.3090081978,-2.0906982757,-2.7611389244,88);"
+					onmouseout="map.removeOverlay(polys[88]);"
+					 value="guernsey-88"> Guernsey</option><option onmouseover="addPoly(46.5407900000,42.3757928745,19.4239000000,13.3044433594,105);"
+					onmouseout="map.removeOverlay(polys[105]);"
+					 value="hrvatska-105"> Hrvatska</option><option onmouseover="addPoly(67.0931045185,62.6438682003,-11.2192384154,-25.5234376341,116);"
+					onmouseout="map.removeOverlay(polys[116]);"
+					 value="island-116"> Island</option><option onmouseover="addPoly(54.5051371291,53.9690123507,-4.1835937835,-5.1339111663,111);"
+					onmouseout="map.removeOverlay(polys[111]);"
+					 value="isle-of-man-111"> Isle of Man</option><option onmouseover="addPoly(47.0916305856,36.0135605852,19.0217284486,6.6307983315,117);"
+					onmouseout="map.removeOverlay(polys[117]);"
+					 value="italija-117"> Italija</option><option onmouseover="addPoly(49.2857234111,49.1367996040,-1.9703979534,-2.3192138714,118);"
+					onmouseout="map.removeOverlay(polys[118]);"
+					 value="jersey-118"> Jersey</option><option onmouseover="addPoly(58.0830900000,55.6760400000,28.2378000000,20.7806396484,142);"
+					onmouseout="map.removeOverlay(polys[142]);"
+					 value="-142"> Letonija</option><option onmouseover="addPoly(47.2706394137,47.0483412039,9.6357607841,9.4717812538,136);"
+					onmouseout="map.removeOverlay(polys[136]);"
+					 value="lihtenstajn-136"> Lihtenštajn</option><option onmouseover="addPoly(56.4442768466,53.8978652225,26.8308105133,20.7663573883,140);"
+					onmouseout="map.removeOverlay(polys[140]);"
+					 value="litva-140"> Litva</option><option onmouseover="addPoly(50.1821747240,49.4489323767,6.5279388428,5.7355499268,141);"
+					onmouseout="map.removeOverlay(polys[141]);"
+					 value="luksemburg-141"> Luksemburg</option><option onmouseover="addPoly(36.2221187604,35.6081849044,14.9765624665,13.7845458649,160);"
+					onmouseout="map.removeOverlay(polys[160]);"
+					 value="-160"> Malta</option><option onmouseover="addPoly(48.5853515942,45.7603400000,22.8948500000,16.1067000000,107);"
+					onmouseout="map.removeOverlay(polys[107]);"
+					 value="mađarska-107"> Mađarska</option><option onmouseover="addPoly(48.4866900000,45.4482000000,30.1341900000,26.6350000000,146);"
+					onmouseout="map.removeOverlay(polys[146]);"
+					 value="moldavija-146"> Moldavija</option><option onmouseover="addPoly(43.7519081974,43.7245603845,7.4408683772,7.4091067313,145);"
+					onmouseout="map.removeOverlay(polys[145]);"
+					 value="monako-145"> Monako</option><option onmouseover="addPoly(53.6316106066,50.7560600000,7.2094400000,3.0377197266,173);"
+					onmouseout="map.removeOverlay(polys[173]);"
+					 value="nizozemska-173"> Nizozemska</option><option onmouseover="addPoly(55.0712912744,47.2811000000,15.0413131714,5.8694400000,64);"
+					onmouseout="map.removeOverlay(polys[64]);"
+					 value="njemacka-64"> Njemačka</option><option onmouseover="addPoly(81.8736412548,57.7745175356,39.7968739271,-11.1796885729,174);"
+					onmouseout="map.removeOverlay(polys[174]);"
+					 value="norveska-174"> Norveška</option><option onmouseover="addPoly(54.9034613817,49.0063500000,24.1447100000,14.1222381592,186);"
+					onmouseout="map.removeOverlay(polys[186]);"
+					 value="poljska-186"> Poljska</option><option onmouseover="addPoly(42.1522100000,36.8092847021,-6.1944500000,-9.7586059570,191);"
+					onmouseout="map.removeOverlay(polys[191]);"
+					 value="portugal-191"> Portugal</option><option onmouseover="addPoly(55.6651931844,50.7086344008,-5.5634768307,-11.4257812500,109);"
+					onmouseout="map.removeOverlay(polys[109]);"
+					 value="republika-irska-109"> Republika Irska</option><option onmouseover="addPoly(42.3614000000,40.8570200000,23.0313800000,20.4624900000,7019);"
+					onmouseout="map.removeOverlay(polys[7019]);"
+					 value="republika-makedonija-7019"> Republika Makedon..</option><option onmouseover="addPoly(48.2533100000,43.6246900000,29.9157714844,20.2611400000,196);"
+					onmouseout="map.removeOverlay(polys[196]);"
+					 value="rumunjska-196"> Rumunjska</option><option onmouseover="addPoly(82.2379940232,41.1931230757,180.0000000000,19.6435546875,198);"
+					onmouseout="map.removeOverlay(polys[198]);"
+					 value="rusija-198"> Rusija</option><option onmouseover="addPoly(43.9919500095,43.8936866068,12.5158309937,12.4035644531,211);"
+					onmouseout="map.removeOverlay(polys[211]);"
+					 value="san-marino-211"> San Marino</option><option onmouseover="addPoly(49.6052500000,47.7408200000,22.5652313232,16.8408200000,209);"
+					onmouseout="map.removeOverlay(polys[209]);"
+					 value="slovacka-209"> Slovačka</option><option onmouseover="addPoly(46.8724700000,45.4255900000,16.6092300000,13.3830400000,207);"
+					onmouseout="map.removeOverlay(polys[207]);"
+					 value="-207"> Slovenija</option><option onmouseover="addPoly(43.7744200000,35.9997100000,3.3172200000,-9.2933400000,75);"
+					onmouseout="map.removeOverlay(polys[75]);"
+					 value="spanjolska-75"> Španjolska</option><option onmouseover="addPoly(46.1950421087,41.8552422154,23.0009765457,18.8379821694,197);"
+					onmouseout="map.removeOverlay(polys[197]);"
+					 value="srbija-197"> Srbija</option><option onmouseover="addPoly(69.0597304467,55.2070878465,24.1682739090,10.6314696930,204);"
+					onmouseout="map.removeOverlay(polys[204]);"
+					 value="svedska-204"> Švedska</option><option onmouseover="addPoly(47.8063600000,45.8238700000,10.4886100000,5.9658300000,51);"
+					onmouseout="map.removeOverlay(polys[51]);"
+					 value="svicarska-51"> Švicarska</option><option onmouseover="addPoly(52.3796900000,44.3952500000,40.1796900000,22.1514400000,235);"
+					onmouseout="map.removeOverlay(polys[235]);"
+					 value="ukrajina-235"> Ukrajina</option><option onmouseover="addPoly(41.9075151906,41.9001688838,12.4585390091,12.4458575249,241);"
+					onmouseout="map.removeOverlay(polys[241]);"
+					 value="vatikan-241"> Vatikan</option><option onmouseover="addPoly(61.1962131408,-40.4385858670,2.6894529909,-42.8906250000,84);"
+					onmouseout="map.removeOverlay(polys[84]);"
+					 value="velika-britanija-84"> Velika Britanija</option></select><span id="forselect"></span><br style="clear:both;" /></div><div id="streetv" style="display:none;">
+
+<div 
+id="streetcamera" style="width:100%;height:100%;">
+
+</div>
+</div>
+<div id="info">
+
+
+</div>
+</div>
+
+ <h1></h1>
+  
+  
+  <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAvKjDJgVpnLplntTcQtLa6xRvTb8-FwTYUga9Vvja3lmpkecZABSS0DJvpPNF14TfpKT_hKld-N7ErQ&amp;hl=hr" type="text/javascript">
+</script>
+<script src="http://tixik.appspot.com/js/map/pdmarker.js" type="text/javascript" ></script>
+<script src="http://tixik.appspot.com/js/map/addon.js" type="text/javascript" ></script>
+<script type="text/javascript">
+var only="";
+var conti="";
+var region="";
+var okres="";
+var conti='3'; var znacka=''; var webcams='a';
+var	urlparse={};
+var overinfo=false;
+var totalover=true;
+var imgload="";
+var canresize=true;
+var map;
+var hashed=false;
+function setupMap() {
+if (GBrowserIsCompatible()) {
+var _mFLags ={"doContinuousZoom":false};
+var mapOptions = {
+googleBarOptions : {
+style : "new",
+adsOptions: {
+client: "pub-3773179337694314",
+channel: "0974476875",
+adsafe: "high",
+language: "hr"
+}
+}
+}
+map = new GMap2(document.getElementById("gmapmap"));
+extractDataFromLocation();
+canbounda=true;
+if (urlparse["sw"]) {
+canbounds=false;
+overinfo=true;
+var beginx=urlparse["sw"];
+} else {
+var beginx=34.307143856288;
+}
+if (urlparse["ne"]) {
+var beginy=urlparse["ne"];
+} else {
+var beginy=-19.6875;
+}
+if (urlparse["zoom"]) {
+var beginzoom=urlparse["zoom"];
+} else {
+var beginzoom=2;
+}
+map.addControl(new GMapTypeControl());
+map.addControl(new GOverviewMapControl());
+map.addControl(new GScaleControl());
+map.addControl(new GLargeMapControl3D());
+map.enableKeyDragZoom(
+{	key: "shift",
+boxStyle: {border: "thick dashed black", backgroundColor: "transparent", opacity: 1},
+paneStyle: { backgroundColor: "gray", opacity: 0.1 }
+}
+);
+map.enableRotation();
+map.disableScrollWheelZoom();
+map.enableDoubleClickZoom();
+map.addMapType(G_PHYSICAL_MAP);
+map.addMapType(G_SATELLITE_3D_MAP);
+map.setCenter(new GLatLng(beginx,beginy ), beginzoom);
+var x= map.getMapTypes();
+map.setMapType(x[2]);
+baseIcon = new GIcon();
+baseIcon.iconSize = new GSize(9, 8);
+baseIcon.shadowSize = new GSize(9, 8);
+baseIcon.iconAnchor = new GPoint(4, 4);
+var adPos = new GControlPosition(G_ANCHOR_TOP_LEFT,
+new GSize(110, 40));
+var publisher_id = 'pub-3773179337694314';
+var adsManagerOptions = {
+maxAdsOnMap : 10,
+minZoomLevel:1,
+style: G_ADSMANAGER_STYLE_ADUNIT,
+channel: '2641521778' ,
+position: adPos
+};
+adsManager = new GAdsManager(map, publisher_id, adsManagerOptions);
+adsManager.enable();
+}
+}
+var odb = [];
+var mrkrCount = 0;
+var gmarkers = [];
+var custommarkers = [];
+var baseIcon;
+var req=false;
+window.onresize = function()
+{
+if (canresize==true) {
+var NS = getWindowSize();
+document.getElementById("gmap").style.height = (NS.height - 35) +
+'px';
+document.getElementById("info").style.height = (NS.height - 25-35) +
+'px';
+document.getElementById("maininfo").style.width = 360 +	'px';
+document.getElementById("gmap").style.width = (NS.width -380) +	'px';
+map.checkResize();
+}
+};
+var NS = getWindowSize();
+document.getElementById("gmap").style.height = (NS.height - 35) +
+'px';
+document.getElementById("info").style.height = (NS.height - 25-35) +
+'px';
+document.getElementById("maininfo").style.width = 360 +	'px';
+document.getElementById("gmap").style.width = (NS.width -380) +	'px';
+var x=getWindowSize();
+cnt=Math.ceil((x.height-100)/110);
+perpage=cnt;
+move=perpage;
+setupMap();
+if (hashed==false) {
+if (canbounda==true) {
+mapBounds = new GLatLngBounds();
+var point = new GLatLng(33.8704155509,-74.7070312500);
+mapBounds.extend(point);
+var point = new GLatLng(83.9792594989,72.0703125000);
+mapBounds.extend(point);
+map.setCenter(mapBounds.getCenter(), map.getBoundsZoomLevel(mapBounds));
+canbounda=false;
+}
+}
+var treefocus=0;
+var geocoder = new GClientGeocoder();
+var baseIcon1 = new GIcon(baseIcon);
+baseIcon1.iconSize = new GSize(14, 13);
+baseIcon1.image = "http://tixik.appspot.com/public/image/maps/new/1.png";
+baseIcon1.iconAnchor = new GPoint(7, 6);
+var baseIcon2 = new GIcon(baseIcon);
+baseIcon2.iconSize = new GSize(14, 13);
+baseIcon2.image = "http://tixik.appspot.com/public/image/maps/new/2.png";
+baseIcon2.iconAnchor = new GPoint(7, 6);
+var baseIcon3 = new GIcon(baseIcon);
+baseIcon3.iconSize = new GSize(14, 13);
+baseIcon3.image = "http://tixik.appspot.com/public/image/maps/new/3.png";
+baseIcon3.iconAnchor = new GPoint(7, 6);
+var baseIcon4 = new GIcon(baseIcon);
+baseIcon4.iconSize = new GSize(14, 13);
+baseIcon4.image = "http://tixik.appspot.com/public/image/maps/new/4.png";
+baseIcon4.iconAnchor = new GPoint(7, 6);
+var baseIcon5 = new GIcon(baseIcon);
+baseIcon5.iconSize = new GSize(14, 13);
+baseIcon5.image = "http://tixik.appspot.com/public/image/maps/new/5.png";
+baseIcon5.iconAnchor = new GPoint(7, 6);
+var baseIcon1b = new GIcon(baseIcon);
+var baseIcon2b = new GIcon(baseIcon);
+var baseIcon3b = new GIcon(baseIcon);
+var baseIcon4b = new GIcon(baseIcon);
+var baseIcon5b = new GIcon(baseIcon);
+baseIcon1b.iconSize = new GSize(19, 18);
+baseIcon1b.image = "http://tixik.appspot.com/public/image/maps/1b.png";
+baseIcon1b.iconAnchor = new GPoint(9, 9);
+baseIcon2b.iconSize = new GSize(19, 18);
+baseIcon2b.image = "http://tixik.appspot.com/public/image/maps/2b.png";
+baseIcon2b.iconAnchor = new GPoint(9, 9);
+baseIcon3b.iconSize = new GSize(19, 18);
+baseIcon3b.image = "http://tixik.appspot.com/public/image/maps/3b.png";
+baseIcon3b.iconAnchor = new GPoint(9, 9);
+baseIcon4b.iconSize = new GSize(19, 18);
+baseIcon4b.image = "http://tixik.appspot.com/public/image/maps/4b.png";
+baseIcon4b.iconAnchor = new GPoint(9, 9);
+baseIcon5b.iconSize = new GSize(19, 18);
+baseIcon5b.image = "http://tixik.appspot.com/public/image/maps/5b.png";
+baseIcon5b.iconAnchor = new GPoint(9, 9);
+function createMarker(point, nazev,popis,id,typ,ic,idx,url,idt,nazevp,direct) {
+if (ic=='') {
+if (typ==1) {
+icon=baseIcon1;
+var iconb=baseIcon1b;
+} else if (typ==2) {
+icon=baseIcon2;
+var iconb=baseIcon2b;
+} else if (typ==3) {
+icon=baseIcon3;
+var iconb=baseIcon3b;
+} else if (typ==4) {
+icon=baseIcon4;
+var iconb=baseIcon4b;
+} else {
+icon=baseIcon5;
+var iconb=baseIcon5b;
+}
+} else {
+var icon = new GIcon(baseIcon);
+icon.iconSize = new GSize(48, 48);
+icon.image = ic;
+if (typ==9998) {
+}
+}
+if (id=='') {
+totalover=false;
+myp = new PdMarker(point,{draggable:true});
+GEvent.addListener(myp, "dragend", function() {
+var point=myp.getPoint();
+$('gpsx').value=point.y;
+$('gpsy').value=point.x;
+$('zoom').value=map.getZoom();
+updater('phototn','phototn',point.x,point.y);
+});
+marker=myp;
+var point=myp.getPoint();
+updater('phototn','phototn',point.x,point.y);
+} else {
+var marker = new PdMarker(point,icon);
+if (ic=='') {
+} else {
+marker.setMouseOutEnabled(true);
+marker.setOpacity(50);
+}
+}
+if (nazev=='') {
+if (ic=='') {
+} else {
+GEvent.addListener(marker, "click", function() {
+nic=ic.replace('square','medium');
+window.open('/pimg/?img='+nic+'&title='+nazevp,'_blank','width=850,height=600');
+marker.topMarkerZIndex();
+});
+GEvent.addListener(marker, "mouseover", function() {
+showhelp(nazevp);
+});
+GEvent.addListener(marker, "mouseout", function() {
+ison=false;
+hidehelp();
+});
+}
+} else {
+GEvent.addListener(marker, "mouseover", function() {
+showhelp(nazev);
+if ($('svizit'+idx)) {
+$('svizit'+idx).className='svizit svizitsel';
+}
+});
+GEvent.addListener(marker, "mouseout", function() {
+ison=false;
+hidehelp();
+if ($('svizit'+idx)) {
+$('svizit'+idx).className='svizit';
+}
+});
+if (direct=='ax') {
+GEvent.addListener(marker, "click", function() {
+window.open(url,'_self');
+});
+} else if (typ==9999) {
+} else {
+GEvent.addListener(marker, "click", function() {
+if (typ==9998) {
+_gaq.push(['_trackEvent', 'Webcams.travel', 'Click', url]);
+win=window.open(url,'outwin');
+win.focus();
+} else {
+showPoint(point.y,point.x,typ);
+openDetail(idt);
+}
+});
+}
+var handle = GEvent.addListener(marker, "dblclick", function() {
+var pnt=new GLatLng(point.y,point.x);
+map.setZoom(10);
+map.panTo(pnt);
+});
+}
+gmarkers[mrkrCount] = new Object();
+gmarkers[mrkrCount].marker = marker;
+gmarkers[mrkrCount].id=id;
+mrkrCount++;
+handle = null;
+return marker;
+}
+var mdb=[];
+var tempid='';
+function importanceOrder (marker,b) {
+return GOverlay.getZIndex(marker.getPoint().lat()) + marker.importance*1000000;
+}
+function loadMarkers () {
+if (gid) {
+gid='';
+}
+$("loader").style.display='';
+try
+{
+$("loader").style.display='';
+odb=mdb;
+str='';
+var center=map.getBounds();
+var sw=center.getSouthWest();
+var ne=center.getNorthEast();
+var str='';
+str=str+'&conti='+conti;str=str+'&znacka='+znacka;str=str+'&webcams='+webcams;
+str=str+'&zoom='+map.getZoom();
+new Ajax.Request("/m/load?tempid="+tempid+"&sw="+sw+"&ne="+ne+str+"&imgload="+imgload, {
+method: 'get',
+requestTimeout: 10,
+onLoaded: function(t) {
+$('loader').style.display='none';
+tempid='';
+},
+onComplete: function(t) {
+mdb=[];
+mapBounds = new GLatLngBounds();
+var xmlDoc = GXml.parse(t.responseText);
+if (xmlDoc == null) {
+} else {
+var redir = xmlDoc.documentElement.getElementsByTagName("redir");
+var rd=redir.length;
+if (rd>0) {
+window.location=redir[0].getAttribute("url");
+}
+var markers = xmlDoc.documentElement.getElementsByTagName("marker");
+var num=markers.length;
+var inf='<div class="hplast"><h2>Što je na kartu?</h2>';
+var ids=[];
+var xc=0;
+var loadimg=[];
+for (var i = 0; i < markers.length; i++) {
+var id = parseFloat(markers[i].getAttribute("id"));
+var idt=markers[i].getAttribute("id");
+ids[i]=id;
+mdb[mdb.length]=id;
+if (markers.length==1) {
+if (totalover==false) {
+} else if (overinfo==false) {
+overinfo=true;
+} else {
+openDetail(idt);
+}
+}
+var typ  = markers[i].getAttribute("type");
+var ic  =  markers[i].getAttribute("icon");
+var image  =  markers[i].getAttribute("image");
+var nazev  = markers[i].getAttribute("nazev");
+var snazev  = markers[i].getAttribute("sname");
+var nazevp  = markers[i].getAttribute("nazevp");
+var text  = markers[i].getAttribute("text");
+var stext  = markers[i].getAttribute("stext");
+var popis  = markers[i].getAttribute("popis");
+var lat  = markers[i].getAttribute("gps_x");
+var lng  = markers[i].getAttribute("gps_y");
+var tn  = markers[i].getAttribute("tnb");
+var url  = markers[i].getAttribute("url");
+var direct  = markers[i].getAttribute("direct");
+go=true;
+if (typ=='9999') {
+go=false;
+}
+if (nazev=='') {
+go=false;
+}
+if (go==true) {
+if (ic=='') {
+xc=xc+1;
+inf=inf+'<div id="svizit'+xc+'" ';
+inf=inf+' class="svizit" >';
+if (tn==null) {
+inf=inf+'<img onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'Image Left\']);" class="nimg" alt="'+snazev+'" src="/public/image/no200.gif" width="120" height="90" />';
+} else {
+if (i<5) {
+inf=inf+'<img onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'Image Left\']);" id="'+id+'-'+i+'" class="nimg" alt="'+snazev+'" src="'+tn+'" width="120" height="90" />';
+} else {
+inf=inf+'<img onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'Image Left Scroll\']);" id="img'+i+'" class="nimg" alt="'+snazev+'" src="http://tixik.appspot.com/public/image/no200.gif" width="120" height="90" />';
+var kus=[];
+kus[0]=i;
+kus[1]=tn;
+loadimg[loadimg.length]=kus;
+}
+}
+inf=inf+'<span class="sname"><a ';
+if (direct=='a') {
+} else {
+inf=inf+' onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'H2 Left\']);openDetail(\''+idt+'\');var pnt=new GLatLng(\''+lat+'\',\''+lng+'\');map.panTo(pnt);return false;" ';
+}inf=inf+' onmouseover="showPoint('+lat+','+lng+','+typ+');" onmouseout="hidePoint();" title="'+snazev+'" href="'+url+'">'+snazev+'</a></span><span class="stext" style="height:70px;overflow:hidden;"><span class="instext">'+text+'<p class="sp">'+stext+'</p></span></span>';
+if (direct=='a') {
+} else {
+if (id>0) {
+inf=inf+'<div class="ss"><a onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'Ubytovani\']);" target="_blank" class="addplus ico_ubytovani" href="'+url+'?redir=u">Smještaj</a>&nbsp;&nbsp;<a onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'Pujcovny\']);" target="_blank" class="addplus ico_pujcovny" href="'+url+'?redir=p">Rent-a-car</a>&nbsp;&nbsp;<a onclick="_gaq.push([\'_trackEvent\', \'Maps\', \'Links\', \'Letenky\']);" target="_blank" class="addplus ico_letenky" href="'+url+'?redir=l">Ulaznice</a></div>';
+}
+}
+inf=inf+'</div>';
+}
+}
+if (in_array(id,odb)) {
+} else {
+lat1=parseFloat(lat);
+lng1=parseFloat(lng);
+var point = new GLatLng(lat1,lng1);
+if (go==true) {
+}
+if (i==0) {
+}
+map.addOverlay(createMarker(point,nazev,popis,id,typ,ic,i,url,idt,nazevp,direct));
+}
+lat = lng =  mrk = point = typ = id = ic= null;
+}
+var loadedimg=false;
+$('info').onscroll= function() {
+if (loadedimg==false) {
+for (var i = 0; i < loadimg.length; i++) {
+var x=loadimg[i];
+$('img'+x[0]).src=x[1];
+}
+loadedimg=true;
+}
+}
+}
+inf=inf+'</div>';
+if (markers.length==1) {
+} else if (totalover==false) {
+} else if (overinfo==false) {
+overinfo=true;
+} else {
+$('info').innerHTML=inf;
+}
+}
+});
+clearOldMarkers();
+markers = null;
+xmlDoc = null;
+}
+finally {
+}
+}
+overinfo=true;
+loadMarkers();
+if (only) { only=''; }
+if (conti) { conti=''; }
+if (region) { region=''; }
+if (okres) { okres=''; }
+GEvent.addListener(map, "dragend", function() {
+hidePoint();
+if ($('helpme')) {$('helpme').style.display='none';}
+loc=getUrl();
+window.location=loc;
+var zm=map.getZoom();
+if (zm>4) {
+loadMarkers();
+}
+});
+GEvent.addListener(map, "zoomend", function() {
+hidePoint();
+loc=getUrl();
+window.location=loc;
+if (imgload=='a') {
+updatePoint();
+}
+if ($('zoom')) {
+$('zoom').value=map.getZoom();
+}
+if ($('helpme')) {$('helpme').style.display='none';}
+loc=getUrl();
+loadMarkers();
+});
+</script>
+   
+  
+ 
+
+
+
+<br style="clear:both;" />
+<div id="infotext" style="border-top:1px solid #ccc;margin:10px 0;padding:10px;font-style:italic;"><h1> Web kamere Europa </h1> 
+ <p style="text-align: justify; "> <b>Web kamere Europa online. Na karti</b> možete vidjeti <b>online web kamera</b> spremna za <b>Europa</b> odredište. Web kamere nalaze se u kombinaciji sa <b>karte</b> za pregled <b>Europa</b> i turističke atrakcije. Ako planirate putovanje u regiju <b>Europa,</b> te dobiti ideja zanimljivih mjesta i vremena preko <b>web kamere. <span class="Apple-style-span" style="font-weight: normal; ">Icons obradio</span> kamera <span class="Apple-style-span" style="font-weight: normal; ">na mjestu</span> Europa <span class="Apple-style-span" style="font-weight: normal; ">se točno na mjestu gdje su.</span></b> <b>Karta</b> pokrivenosti <span class="Apple-style-span" style="font-weight: normal; "><b>izvedena je iz broja web kamere nalazi se u području.</b></span> <b>Web kamere <span class="Apple-style-span" style="font-weight: normal; ">Europa za prijenos video podataka je odgođeno do nekoliko sati.</span></b> <b>Karta web kamere <span class="Apple-style-span" style="font-weight: normal; ">&#160;</span> Europa <span class="Apple-style-span" style="font-weight: normal; ">možete prebaciti na klasični prikaz, satelitski ili preko gumba iznad.</span></b> Ako je potrebno pronaći <b>web kameru <span class="Apple-style-span" style="font-weight: normal; ">&#160;</span> <span class="Apple-style-span" style="font-weight: normal; ">Europa za odredište,</span> on-line karti <span class="Apple-style-span" style="font-weight: normal; ">na Tixik.com dobar izbor.</span></b> </p> 
+ <h2> <span class="Apple-style-span" style="font-weight: normal; "><b><b></b></b></span> Karta web kamere Europa </h2> 
+ <p style="text-align: justify; "> Ako želite pronaći <b>stvarni kamera,</b> prelazite preko <b>Europa.</b> Na mjestima gdje se <b>nalaze kamera</b> ikona će se prikazati pokazuje <b>lokaciju</b> optički <b>web kamere.</b> Ako kliknete mišem na ikonu otvorit će se novi prozor sa podacima detaljnije informacije. Možete pregledati mjesta planinu, kao i morske plaže, velikih gradova i gradskog područja. <b>Web kamere</b> svibanj biti smještena na mjestima s posebnim uvjetima ili geografskoj lokaciji. Računati na činjenicu da je <b>web kamera</b> svibanj biti <b>&#160;</b> ograničenu funkcionalnost zbog drugu vremensku zonu. Primijetite također činjenica da u različitim dijelovima svijeta je drugačiji poklopac i web kamere ne pronađete točno gdje vam je potrebna. Iz tog razloga, količina podataka s obzirom na veličinu područja uvelike razlikuje. Ako ništa drugo, krećete u prostoru uz nedovoljnu pokrivenost, polaze od prikupljene informacije oko orijentacijske. </p> 
+ <p style="text-align: justify; "> Informacije <b>Europa</b> dati jamstvo kako smo preuzeti i na stanje u kojem su. </p><div class="tborder"><h2>Europa - Više karata</h2><ul class="menu">
+			<li style="float:left;width:24%;">
+			<span>
+			<a href="/m/europa-3/turisticki/" 
+			title="Tourist Map Europa">Tourist Map</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span>
+			<a href="/m/europa-3/slijep/" 
+			title="Slijepom kartom Europa">Slijepom kartom</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span>
+			<a href="/m/europa-3/plastika/" 
+			title="Plastični karti Europa">Plastični karti</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span>
+			<a href="/m/europa-3/3d/" 
+			title="3D karta Europa">3D karta</a>
+			</span></li></ul><br style="clear:both;" /></div><div class="tborder"><h2>Karta</h2><ul class="menu">
+			<li style="float:left;width:24%;">
+			<span class="flag fl_al">
+			<a href="/m/albanija-14/webcams/" 
+			title="Web kamere Albanija Karta">Albanija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ad">
+			<a href="/m/andora-9/webcams/" 
+			title="Web kamere Andora Karta">Andora</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_at">
+			<a href="/m/austrija-21/webcams/" 
+			title="Web kamere Austrija Karta">Austrija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_be">
+			<a href="/m/belgija-29/webcams/" 
+			title="Web kamere Belgija Karta">Belgija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_by">
+			<a href="/m/bjelorusija-44/webcams/" 
+			title="Web kamere Bjelorusija Karta">Bjelorusija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ba">
+			<a href="/m/bosna-i-hercegovina-26/webcams/" 
+			title="Web kamere Bosna i Hercegovina Karta">Bosna i Hercegovina</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_bg">
+			<a href="/m/bugarska-31/webcams/" 
+			title="Web kamere Bugarska Karta">Bugarska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_cy">
+			<a href="/m/-62/webcams/" 
+			title="Web kamere Cipar Karta">Cipar</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_me">
+			<a href="/m/crna-gora-147/webcams/" 
+			title="Web kamere Crna Gora Karta">Crna Gora</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_cz">
+			<a href="/m/czech-republic-63/webcams/" 
+			title="Web kamere Czech Republic Karta">Czech Republic</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_dk">
+			<a href="/m/danska-66/webcams/" 
+			title="Web kamere Danska Karta">Danska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ee">
+			<a href="/m/estonija-71/webcams/" 
+			title="Web kamere Estonija Karta">Estonija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_fo">
+			<a href="/m/farski-otoci-81/webcams/" 
+			title="Web kamere Farski Otoci Karta">Farski Otoci</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_fi">
+			<a href="/m/finska-77/webcams/" 
+			title="Web kamere Finska Karta">Finska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_fr">
+			<a href="/m/francuska-82/webcams/" 
+			title="Web kamere Francuska Karta">Francuska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_gi">
+			<a href="/m/gibraltar-90/webcams/" 
+			title="Web kamere Gibraltar Karta">Gibraltar</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_gr">
+			<a href="/m/grcka-96/webcams/" 
+			title="Web kamere Grčka Karta">Grčka</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_gl">
+			<a href="/m/grenland-91/webcams/" 
+			title="Web kamere Grenland Karta">Grenland</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_gg">
+			<a href="/m/guernsey-88/webcams/" 
+			title="Web kamere Guernsey Karta">Guernsey</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_hr">
+			<a href="/m/hrvatska-105/webcams/" 
+			title="Web kamere Hrvatska Karta">Hrvatska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_is">
+			<a href="/m/island-116/webcams/" 
+			title="Web kamere Island Karta">Island</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_im">
+			<a href="/m/isle-of-man-111/webcams/" 
+			title="Web kamere Isle of Man Karta">Isle of Man</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_it">
+			<a href="/m/italija-117/webcams/" 
+			title="Web kamere Italija Karta">Italija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_je">
+			<a href="/m/jersey-118/webcams/" 
+			title="Web kamere Jersey Karta">Jersey</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_lv">
+			<a href="/m/-142/webcams/" 
+			title="Web kamere Letonija Karta">Letonija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_li">
+			<a href="/m/lihtenstajn-136/webcams/" 
+			title="Web kamere Lihtenštajn Karta">Lihtenštajn</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_lt">
+			<a href="/m/litva-140/webcams/" 
+			title="Web kamere Litva Karta">Litva</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_lu">
+			<a href="/m/luksemburg-141/webcams/" 
+			title="Web kamere Luksemburg Karta">Luksemburg</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_mt">
+			<a href="/m/-160/webcams/" 
+			title="Web kamere Malta Karta">Malta</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_hu">
+			<a href="/m/mađarska-107/webcams/" 
+			title="Web kamere Mađarska Karta">Mađarska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_md">
+			<a href="/m/moldavija-146/webcams/" 
+			title="Web kamere Moldavija Karta">Moldavija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_mc">
+			<a href="/m/monako-145/webcams/" 
+			title="Web kamere Monako Karta">Monako</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_nl">
+			<a href="/m/nizozemska-173/webcams/" 
+			title="Web kamere Nizozemska Karta">Nizozemska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_de">
+			<a href="/m/njemacka-64/webcams/" 
+			title="Web kamere Njemačka Karta">Njemačka</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_no">
+			<a href="/m/norveska-174/webcams/" 
+			title="Web kamere Norveška Karta">Norveška</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_pl">
+			<a href="/m/poljska-186/webcams/" 
+			title="Web kamere Poljska Karta">Poljska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_pt">
+			<a href="/m/portugal-191/webcams/" 
+			title="Web kamere Portugal Karta">Portugal</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ie">
+			<a href="/m/republika-irska-109/webcams/" 
+			title="Web kamere Republika Irska Karta">Republika Irska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_mk">
+			<a href="/m/republika-makedonija-7019/webcams/" 
+			title="Web kamere Republika Makedonija Karta">Republika Makedonija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ro">
+			<a href="/m/rumunjska-196/webcams/" 
+			title="Web kamere Rumunjska Karta">Rumunjska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ru">
+			<a href="/m/rusija-198/webcams/" 
+			title="Web kamere Rusija Karta">Rusija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_sm">
+			<a href="/m/san-marino-211/webcams/" 
+			title="Web kamere San Marino Karta">San Marino</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_sk">
+			<a href="/m/slovacka-209/webcams/" 
+			title="Web kamere Slovačka Karta">Slovačka</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_si">
+			<a href="/m/-207/webcams/" 
+			title="Web kamere Slovenija Karta">Slovenija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_es">
+			<a href="/m/spanjolska-75/webcams/" 
+			title="Web kamere Španjolska Karta">Španjolska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_rs">
+			<a href="/m/srbija-197/webcams/" 
+			title="Web kamere Srbija Karta">Srbija</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_se">
+			<a href="/m/svedska-204/webcams/" 
+			title="Web kamere Švedska Karta">Švedska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ch">
+			<a href="/m/svicarska-51/webcams/" 
+			title="Web kamere Švicarska Karta">Švicarska</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_ua">
+			<a href="/m/ukrajina-235/webcams/" 
+			title="Web kamere Ukrajina Karta">Ukrajina</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_va">
+			<a href="/m/vatikan-241/webcams/" 
+			title="Web kamere Vatikan Karta">Vatikan</a>
+			</span></li>
+			<li style="float:left;width:24%;">
+			<span class="flag fl_gb">
+			<a href="/m/velika-britanija-84/webcams/" 
+			title="Web kamere Velika Britanija Karta">Velika Britanija</a>
+			</span></li></ul><br style="clear:both;" /></div><div class="tborder"><h2>Europa Zanimljivi linkovi</h2><a class="addplus ico_webcam" href="/m/europa-3/webcams/" 
+			title="Web kamere Europa">Web kamere Europa</a>&nbsp;<a class="addplus ico_pujcovny" href="/najam-automobila/europa-3/" 
+			title="Najam automobila Europa">Najam automobila Europa</a>&nbsp;<a class="addplus ico_letenky"
+			 href="/ulaznice/europa-3/" 
+			title="Ulaznice Europa">Ulaznice Europa</a>&nbsp;<a class="addplus ico_weather" href="/m/europa-3/?weather" 
+			title="Vrijeme Europa">Vrijeme Europa</a>&nbsp;<br style="clear:both;" /></div></div><br style="clear:both;" /><div id="square" class="bt" style="padding:10px;">
+<div  style="padding:10px;">
+
+			<div id='bmone2n-12045.2.10.6'>
+<noscript><div style='display:inline'><a href='http://go.cz.bbelements.com/please/redirect/12045/2/10/6/'><img src='http://go.cz.bbelements.com/please/showit/12045/2/10/6/?typkodu=img' width='0' height='0' style='border-width:0' alt='' /></a></div></noscript>
+</div>
+</div></div><script src="http://tixik.appspot.com/js/map/street.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+pano = new GStreetviewClient();
+var center=map.getCenter();
+function checkPano(gps) {
+	pano.getNearestPanorama(gps, showPanoData);
+	function showPanoData(panoData) {
+	
+	if (panoData.code != 200) {
+	} else {
+		
+		//turnsvon();	
+			
+	} 
+	}
+}
+checkPano(center);
+</script><br style="clear:both;" />
+</div>
+
+
+<div id="helper"></div>
+<div id="helpme"></div>
+
+<script type="text/javascript">
+document.onmousemove = getMouseXY;
+$('helper').style.display='none';
+urlparse=extractDataFromLocation();
+
+if (urlparse["strv"]==1) {
+	
+	turnsvon();
+	
+}
+</script>
+
+
+<div id="stop">
+<div id="sintop">
+	<a href="/" id="logo" ><img alt="Tixik.com" src="http://tixik.appspot.com/public/image/logo_map.png" /></a>
+
+		<div id="menu">
+			<ul>
+				<li><a href="/c/" title="Katalog">Vodič</a></li>
+				<li><a href="/smještaj/" 
+				title="Smještaj">Smještaj				
+				</a>
+				
+				</li>	
+				
+								
+					<li><a href="/ulaznice/" 
+				title="Ulaznice">Ulaznice				
+				</a>				
+				</li>
+								<li><a href="/m/" title="mapa">Karta</a></li>
+				<li><a href="/p/" title="Ljudi">Ljudi</a></li>
+				
+							
+				
+				
+				<li><a title="Prijava" rel="nofollow" href="/user/ulogin/">Prijava</a></li>			</ul>
+		</div>
+	
+		<div id="search">	
+		<form action="/m/" method="get">
+
+		<input type="text" name="s" id="s" value=""
+ /><input type="submit" class="sbtn" value="" />
+		<input type="hidden" name="t" value="map" />		</form>	
+		
+	
+		
+		</div>
+		
+	<div id="login">
+		</div>
+</div>
+
+</div><div id="bottom"> 
+<div id="inbottom"
+>
+<p> © 2008 - 2010 <a href="http://www. tixik. com">TIXIK. com</a> </p><div class="bt bb" style="padding-right: 10px;"><div style="float:left;width:33%;"><div style=""><strong>Informacije</strong><br /><a rel="nofollow" title="Tixik people" href="/info/about">About</a><br /><a rel="nofollow" title="Advertising" href="/info/reklama_info/">Advertising</a>
+	<br /><a rel="nofollow" title="Kontaktirajte nas" href="/info/contact">Kontaktirajte nas</a><br /><a name="bmenu"  rel="nofollow" href="/info/privacy/">Pravila o privatnosti</a></div></div><div style="float:left;width:33%;"><div style=""><strong>Suradnja</strong><br />
+	<a class="fblink"
+	rel="nofollow"
+	target="_blank"
+	href="http://www.facebook.com/apps/application.php?id=109528125624">
+	Postanite naš fan</a>
+	
+	<br />
+	<a 
+href="/info/tixik-add-new-services/"
+title="Dodajte svoj smještaj"
+>Dodajte svoj smještaj</a><br /><a title="Affiliate program" 
+	rel="nofollow"
+	href="/info/partner_terms/">Affiliate program</a><br />
+<a title="Product Link" href="/partners/">Product Link</a>
+<br />
+<a title="Partneri" href="/info/partners/">Partneri</a>
+</div></div><div style="float:left;width:33%;"><div style=""><strong>Zanimljivi linkovi</strong><br /><a  title="Tools" href="/tools/">Tixik.com Tools</a><br /><a 
+title="Smještaj Liberec"
+href="/smještaj/liberec-1955555/">Smještaj Liberec</a></div></div><br style="clear:both;" /></div>
+
+
+<div id="bottomlinks"></div>
+<div style="float:right;"><a href="/webmap/?pg=1" title="Webmap 1"
+rel="nofollow"
+>Webmap 1</a> | <a href="/world/topstay/?pg=26" 
+	rel="nofollow"
+	title="Top destinacije 26">Top destinacije 26</a> | <a href="/webmap/c/?pg=12" title="Hotels 12"
+rel="nofollow"
+>Hotels 12</a><br style="clear:both;" /></div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3484185-2']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setDomainName', '.tixik.com']);
+  _gaq.push(['_setAllowHash', false]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<img 
+src="http://toplist.cz/dot.asp?id=872142" border="0" alt="TOPlist" width="1" height="1"/>
+
+
+
+
+</div>
+
+
+</div>
+<script>
+var scrolled=false;
+window.onscroll = function (e) {
+	if (scrolled==false) {
+		
+		_gaq.push(['_trackEvent', 'Maps', 'Action', 'Scroll']);
+		scrolled=true;
+	}
+}
+
+</script> 
+
+<!-- (C)2000-2009 Gemius SA - gemiusAudience / tixik.com / Ostatni -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('ba1FNocsNb2ngHK9h43Ii3aIP8JZ2OLUo_TIcuTNOb..97');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://tixik.appspot.com/js/gemius/main.js"></script>
+
+	<script type='text/javascript' charset='windows-1250' src='http://go.cz.bbelements.com/bb/bb_one2n.js?1263238264'></script>
+<script type='text/javascript'>/* <![CDATA[ */ 
+if (typeof bmone2n != "undefined") {
+bmone2n.addPosition('12045.2.10.6','');
+bmone2n.addPosition('12045.2.11.6','');
+bmone2n.addPosition('12045.2.12.6','');
+bmone2n.getAd('go.cz.bbelements.com','',''+(typeof(bburlparam)=='string'?'&'+bburlparam:''),'windows-1250');
+}
+/* ]]> */</script>
+<div id='bmone2t-12045.2.10.6' style='display:none'><script type='text/javascript'>/* <![CDATA[ */ if (typeof bmone2n != "undefined") { bmone2n.makeAd('12045.2.10.6'); }; /* ]]> */</script></div>
+<div id='bmone2t-12045.2.11.6' style='display:none'><script type='text/javascript'>/* <![CDATA[ */ if (typeof bmone2n != "undefined") { bmone2n.makeAd('12045.2.11.6'); }; /* ]]> */</script></div>
+<div id='bmone2t-12045.2.12.6' style='display:none'><script type='text/javascript'>/* <![CDATA[ */ if (typeof bmone2n != "undefined") { bmone2n.makeAd('12045.2.12.6'); }; /* ]]> */</script></div>
+<script type='text/javascript'>/* <![CDATA[ */ if (typeof bmone2n != "undefined") { bmone2n.moveAd(); }; /* ]]> */</script>
+			</body>
+</html>

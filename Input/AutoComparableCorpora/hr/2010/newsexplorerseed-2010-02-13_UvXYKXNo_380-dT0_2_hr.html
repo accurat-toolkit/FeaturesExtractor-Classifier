@@ -1,0 +1,871 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Inter Rail</title>
+
+<link href="/css/modalbox.css" rel="stylesheet" type="text/css">
+<link href="/css/layout.css" rel="stylesheet" type="text/css">
+<link href="/css/pisave.css" rel="stylesheet" type="text/css">
+
+
+
+<script type="text/javascript" src="/jscript/DropMenuX.js"></script>
+
+
+<script type="text/javascript" src="/jscript/skroler.js"></script> 
+<script type="text/javascript" src="/jscript/piskotki.js"></script> 
+<script type="text/javascript" src="/jscript/funkcije.js"></script>
+<script type="text/javascript" src="/jscript/koledar.js"></script>
+
+<script type="text/javascript"> 
+	var JS_DATEFROM = "12.12.2010";
+	var JS_DATETO   = "13.12.2010";
+</script>
+<script type="text/javascript" src="/jscript/prototype.js"></script>
+<script type="text/javascript" src="/jscript/scriptaculous.js?load=builder,effects"></script>
+
+<script type="text/javascript" src="/jscript/calendar.js"></script>
+<script type="text/javascript" src="/jscript/sFsFPSearch.js"></script>
+<script type="text/javascript" src="/jscript/sFsFPSearchLayers.js"></script>
+
+<script type="text/javascript" src="/jscript/modalbox.js"></script>	
+	
+<link rel="alternate" type="application/rss+xml" title="STA Zagreb - Forum" href="/rss/staZagrebForum.rss" />
+<link rel="alternate" type="application/rss+xml" title="STA Zagreb - Zadnje ponude" href="/rss/staZagrebPonude.rss" />
+<link rel="alternate" type="application/rss+xml" title="STA Zagreb - Cool akcije" href="/rss/staZagrebCoolAkcije.rss" />
+<link rel="alternate" type="application/rss+xml" title="STA Zagreb" href="/rss/staZagreb.rss" />
+	
+	<style type="text/css" media="screen">
+		#MB_loading {
+			font-size: 13px;
+		}
+		
+		.pov 
+		{
+			cursor: pointer; 
+			cursor: hand;
+		}
+
+		
+.dmx {
+    font: 11px tahoma;
+}
+.dmx .item1,
+.dmx .item1:hover,
+.dmx .item1-active,
+.dmx .item1-active:hover {
+    padding: 0px; /*3px 10px 3px 10px;*/
+    
+    font: 12px arial;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+}
+.dmx .item2,
+.dmx .item2:hover,
+.dmx .item2-active,
+.dmx .item2-active:hover {
+	font: 12px Arial;
+	color: #ffffff;
+	font-weight: normal;
+	text-decoration: none;
+	display: block;
+	white-space: nowrap;
+	position: relative;
+	z-index: 500;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-top-color: #729cbb;
+	border-right-color: #729cbb;
+	border-bottom-color: #729cbb;
+	border-left-color: #729cbb;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+}
+
+.dmx .item2 {
+    background: #166499;
+}
+.dmx .item2:hover,
+.dmx .item2-active,
+.dmx .item2-active:hover {
+    background: #729cbb;
+}
+.dmx .arrow,
+.dmx .arrow:hover {
+    padding: 3px 16px 4px 8px;
+}
+.dmx .item2 img,
+.dmx .item2-active img{
+    position: absolute;
+    top: 4px;
+    right: 1px;
+    border: 0;
+}
+.dmx .section {
+    border: 1px solid #729cbb;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+}
+
+* html .dmx td { position: relative; } /* ie 5.0 fix */h2 {
+	font-size: 16px;
+	color: #166499;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+}
+		
+		
+		
+	</style>
+	
+</head>
+<body>
+
+
+<div class="centerstrani">
+<!--GLAVA-->
+  <div id="glava">
+   <div id="moj_status">Bok, <b>gost</b>. <a href="/uporabniki/q/d" onclick="Modalbox.show('/uporabniki/q/d?popup', {title: '&nbsp;', width: 400}); return false;" title="Prijavi se!">Prijava</a> | <a href="/uporabniki/q/registracija">Otvorite korisnički račun besplatno</a></div>
+    <div id="logotip"><a href="/" title="Individualna putovanja, avio karte, smještaj STA Zagreb"><img src="/images/logo-stazagreb.png" width="394" height="130" alt="Studentska putnička agencija STA Zagreb"></a></div>
+    <div id="kontakt"><img src="/images/glava-tel.png" width="270" height="89" alt=""><a href="mailto:info@sta-zagreb.com"><img src="/images/glava-email.png" alt="" width="270" height="41" border="0"></a></div>
+    <div id="obvestila">
+      <div id="obvestilavsebina" style="position: relative;">
+<div id="xdiv" style="position: absolute; top: 23px; left: 5px; width: 293px; height: 68px; overflow: hidden; z-index: 100; display: none;">...</div>
+
+<script type="text/javascript">
+
+
+
+		var xrss="<strong>RSS</strong><br>		<a href=\"/rss/staZagrebForum.rss\">STA Zagreb - Forum</a><br>		<a href=\"/rss/staZagrebPonude.rss\">STA Zagreb - Zadnje ponude</a><br>		<a href=\"/rss/staZagrebCoolAkcije.rss\">STA Zagreb - Cool akcije</a>		";
+		var xforum="<strong>Najnovije na forumu</strong><br><a href=\"/forum/q/zapisi/2421?zodg\">Prodajem kartu za Berlin</a><br><a href=\"/forum/q/zapisi/2420?zodg\">Viza njemacka</a><br><a href=\"/forum/q/zapisi/2419?zodg\">Odbijena studentska visa za Ameriku</a>";
+		var xmailer="<strong>Mailing lista</strong><br>Pogledajte arhiv posljednih <a href=\"/mailing-lista-arhiv\">novosti</a>.";
+		var xtwit="<strong>Twitter</strong><br>Tokyo :: 4.942,00 kn <a href=\"http://fb.me/G1n3DSK1\" target=\"_blank\">http://fb.me/G1n3DSK1</a><br>Pratite nas na <a href=\"http://twitter.com/STAZagreb\" target=\"tw\">Twitterju</a>.";
+		var xfb="<strong>Facebook</strong><br>Tokyo :: 4.942,00 kn <a href=\"http://fb.me/G1n3DSK1\" target=\"_blank\">http://fb.me/G1n3DSK1</a><br>STA Zagreb na <a href=\"http://www.facebook.com/STAZagreb\" target=\"fb\">Facebook-u</a>.";
+
+
+function odpri_top(vsebina)
+{
+
+   if(vsebina)
+   {
+   	$("ddd").hide();
+	$("xdiv").innerHTML = vsebina;
+	$("xdiv").show();
+   }
+   else
+   {
+
+   $("xdiv").hide();
+	$("ddd").show();
+	   
+   }
+   
+}
+
+
+</script>
+
+
+<div id="ddd">
+				<script type="text/javascript">
+				
+			   
+var pausecontent=new Array();
+
+pausecontent[0]='<a href="/novice/q/prikazi/152"><b>Lonely Planet</b></a><br><p><strong>Putnički vodiči Lonely Planet od sada i u STA Zagreb! </strong></p>';pausecontent[1]='<a href="/novice/q/prikazi/151"><b>Poklon bon</b></a><br><p>Osoba koju darujete voli putovati, posječivati koncerte i razna drugadogađanja,tada je ovo idealna prilika da <strong>poklonite poklon bon</strong> uvrijednosti od 200,00 ili 500,00 kn.&nbsp; </p>';pausecontent[2]='<a href="/novice/q/prikazi/150"><b>Lonely Planet vodiči</b></a><br><p>Najpovoljniji u gradu s 20% popusta uz ISIC.</p>';
+
+//new pausescroller(name_of_message_array, CSS_ID, CSS_classname, pause_in_miliseconds)
+
+new pausescroller(pausecontent, "obvestilavsebina", "mini", 5000)
+</script>
+</div>
+      
+      
+      </div>
+      <div id="icons"><a href="/forum" onmouseover="odpri_top(xforum);"><img src="/images/ico-forum.png" alt="Putnički forum" title="Putnički forum" width="39" height="41" border="0"></a><a href="/mailing-lista-arhiv" onmouseover="odpri_top(xmailer);"><img src="/images/ico-mail.png" alt="Arhiv posljednih novosti." title="Arhiv posljednih novosti." width="36" height="41" border="0"></a><a href="http://www.facebook.com/stazagreb" onmouseover="odpri_top(xfb);" title="Pratite nas na Facebooku"><img src="/images/ico-fb.png" alt="" width="36" height="41" border="0" alt="Pratite nas na Facebooku"></a><a href="http://twitter.com/STAzagreb" onmouseover="odpri_top(xtwit);" target="_blank" title="Pratite nas na  Twitterju"><img src="/images/ico-twit.png" alt="Pratite nas na  Twitterju" width="40" height="41" border="0"></a><a href="/rss/staZagreb.rss" onmouseover="odpri_top(xrss);" title="Naruči se za putničke RSS obavijesti"><img src="/images/ico-rss.png" alt="Naruči se za putničke RSS obavijesti" width="41" height="41" border="0"></a><img src="/images/ico-unused.png" width="126" height="41" alt=""></div>
+    </div>
+  </div>
+ <!-- KONEC GLAVA-->
+ <div id="menu0"> 
+<!--  GLAVNI MENU-->
+    <table cellspacing="0" cellpadding="0" id="menu1" class="dmx">
+    <tr>
+        <td>
+            <a href="/avio-karte" class="item1"><img src="/images/m0-letalske-karte.png" alt="Avio karte" width="130" height="56" border="0"></a>
+            <div class="section"> <a class="item2" href="/avio-karte/avio-karte-booking">Avio karte - booking pretraživanje</a>
+            		 <a class="item2" href="/avio-karte/avionske-karte-oko-svijeta">Avionske karte oko svijeta</a>
+            		 <a class="item2" href="/avio-karte/uslovi-avio-karte">Pravila i uvjeti za avio karte</a>
+            		 <a class="item2" href="/avio-karte/avio-karte-transferi">Aerodromski transferi</a>
+            		 <a class="item2" href="/avio-karte/jeftine-zrakoplovne-karte">Jeftine avio karte</a>
+            		 <a class="item2" href="/avio-karte/checkmytrip">Check my Trip</a>
+            		 <a class="item2" href="/avio-karte/etix">Elektronska karta</a>
+            		 <a class="item2" href="/avio-karte/savjet-avio-karte">Savjeti za jeftiniju kupnju avionske karte</a>
+            		</div>        </td>
+        <td>
+            <a href="/smjestaj"  class="item1"><img src="/images/m0-prenocisca.png" alt="Smještaj, hoteli, hosteli" width="120" height="56" border="0"></a>
+  			<div class="section"> <a class="item2" href="/smjestaj/avio-karte">Avio karte - pretraživanje</a>
+            		 <a class="item2" href="/smjestaj/xhosteli">Hosteli</a>
+            		 <a class="item2" href="/smjestaj/hoteli">Hoteli</a>
+            		 <a class="item2" href="/smjestaj/smjestaj-geo">Smještaj - GeoMap traženje</a>
+            		</div>        </td>
+        <td>
+            <a href="/putne-iskaznice" class="item1"><img src="/images/m0-izkaznice.png" alt="ISIC izkaznice" width="117" height="56" border="0"></a>
+            <div class="section"> <a class="item2" href="/putne-iskaznice/isic">ISIC</a>
+            		 <a class="item2" href="/putne-iskaznice/iytc">IYTC</a>
+            		 <a class="item2" href="/putne-iskaznice/itic">ITIC</a>
+            		 <a class="item2" href="/putne-iskaznice/london-pass">London Pass</a>
+            		 <a class="item2" href="/putne-iskaznice/new-york">New York City Pass</a>
+            		 <a class="item2" href="/putne-iskaznice/los-angeles">Go Los Angeles Card</a>
+            		</div>        </td>
+        <td>
+           <a href="/putna-osiguranja" class="item1"><img src="/images/m0-potovalna-zavarovanja.png" alt="Potovalna zavarovanja" width="122" height="56" border="0"></a>
+           <div class="section"> <a class="item2" href="/putna-osiguranja/putno-osiguranje-allianz">Allianz putno i zdravstveno osiguranje</a>
+            		 <a class="item2" href="/putna-osiguranja/coris">Coris</a>
+            		</div>        </td>        
+        <td>
+           <a href="/paketi" class="item1"><img src="/images/m0-adventure.png" alt="STAdventures paketi" width="122" height="56" border="0"></a>
+           <div class="section"> <a class="item2" href="/paketi/gap-adventure-paketi">GAP Adventure paketi</a>
+            		 <a class="item2" href="/paketi/gap-adventures">GAP adventures</a>
+            		 <a class="item2" href="/paketi/trekamerica">TrekAmerica</a>
+            		 <a class="item2" href="/paketi/work-study-australia">Work & Study Australia</a>
+            		</div>        </td>
+        <td>
+           <a href="/prijevozi" class="item1"><img src="/images/m0-prevozi.png" alt="Rentacar" width="124" height="56" border="0"></a>
+           <div class="section"> <a class="item2" href="/prijevozi/avio-karte">Avio karte - pretraživanje</a>
+            		 <a class="item2" href="/prijevozi/rent-a-car">Rent-a-car</a>
+            		 <a class="item2" href="/prijevozi/kiwi-experience">Kiwi experience</a>
+            		 <a class="item2" href="/prijevozi/greyhound-australia">Greyhound Australia</a>
+            		 <a class="item2" href="/prijevozi/greyhound-sad-i-kanada">Greyhound SAD i Kanada</a>
+            		 <a class="item2" href="/prijevozi/japan-rail">Japan Rail</a>
+            		 <a class="item2" href="/prijevozi/vlak-europa">Vlakom po Europi</a>
+            		</div>        </td>
+        <td>
+            <a href="/sta-savjet"  class="item1"><img src="/images/m0-delo-v-tujini.png" alt="Delo v tujini" width="121" height="56" border="0"></a>
+            <div class="section"> <a class="item2" href="/sta-savjet/sta-savjet-new-york">STA Savjet New York</a>
+            		 <a class="item2" href="/sta-savjet/sta-savjet-la">STA savjet Los Angeles</a>
+            		 <a class="item2" href="/sta-savjet/sta-savjet-london">STA savjet London</a>
+            		 <a class="item2" href="/sta-savjet/sta-savjet-san-francisco">STA savjet San Francisco</a>
+            		 <a class="item2" href="/sta-savjet/sta-savjet-amsterdam">STA savjet Amsterdam</a>
+            		</div>        </td>
+        <td>
+            <a href="/sta-info" class="item1"><img src="/images/m0-info.png" alt="STA Zagreb informacije" width="126" height="56" border="0"></a></div>
+            <div class="section"> <a class="item2" href="/sta-info/o-nama">O nama</a>
+            		 <a class="item2" href="/sta-info/klima">Klima</a>
+            		 <a class="item2" href="/sta-info/zdravje">Zdravlje</a>
+            		 <a class="item2" href="/sta-info/podzemne-zeljeznice">Mape željeznica</a>
+            		 <a class="item2" href="/sta-info/agencije-sta-travel">Agencije STA Travel po svijetu</a>
+            		 <a class="item2" href="/sta-info/pravila-aerodromi">Sigurnosna pravila na aerodromima EU</a>
+            		 <a class="item2" href="/sta-info/avio-karte">Avio karte - booking</a>
+            		 <a class="item2" href="/sta-info/lonely-planet">Lonely planet vodiči</a>
+            		 <a class="item2" href="/sta-info/informacije_o_zracnim_lukama">Informacije o zračnim lukama</a>
+            		 <a class="item2" href="/sta-info/prava-putnika">Prava putnika zrakoplovom</a>
+            		</div>        </td>
+    </tr>
+    </table>
+    </div>
+    <script type="text/javascript">
+    var dmx = new DropMenuX('menu1');
+    dmx.delay.show = 0;
+    dmx.delay.hide = 400;
+    dmx.position.levelX.left = 2;
+    dmx.init();
+    </script>
+
+<!--TIPSKE STRANI: levi stolpec  642 in desni 340px-->
+  <div id="tipska">
+    <div id="tipska_levo">
+      <!--GLAVNE PODSTRANI IZ CMS SISTEMA-->
+      <div id="tipska_levo_glava">Inter Rail</div>
+      <div id="tipska_levo_vsebina"><div style="width: 595px; overflow: hidden;"><h2>Inter Rail</h2>
+<p><br />
+InterRail karta za putovanje vlakom unutar Europe. Postoje dvije vrste InterRail
+karti - globalna karta ( &quot;Global Pass&quot;), te karta za svaku zemlju ( &quot;One Country
+Pass&quot;). Sve InterRail karte, osim InterRail global &quot;kontinuirana&quot; karta vrijedi&nbsp; 22 dana&nbsp; u jednom mjesecu, &quot;Inflectional&quot; karta dozvoljava slobodno putovanje u određenom
+broju odabranih dana tijekom razdoblja valjanosti karte. Uz prijevoz vlakom,karte
+se&nbsp; mogu iskoristiti za prijevoz po posebnim cijenama i popustima koje nude&nbsp; InterRail&nbsp; suradnici prijevoznih&nbsp; poduzeća i dr. (popusti ili besplatni ulazi u muzeje, noćenje po sniženoj cijeni
+...).<br />
+<br />InterRail Pass karta može biti kupljena od osobe&nbsp; s prebivalištem ili boravištem u europskoj zemlji (kao i osobe s privremenim
+prebivalištem smatra se svatko tko ima dokument kojim se dokazuje&nbsp; da je u Europu došao na više od šest mjeseci).Kupujući karte putnik je dužan
+znati svoj&nbsp; datum rođenja i mjesto prebivališta (stalno ili privremeno), te imati&nbsp; osobnu iskaznicu, putovnicu ili potvrdu o prebivalištu. Karte&nbsp; su registrirane i ne mogu se prenijeti.<br />
+<br />Karte se ne primjenjuje u zemlji iz koje dolazi putnika (npr. Hrvatskom držljavanu
+ne može biti polazna točka Hrvatska nego neki drugi Europski grad). Prilikom kupovine
+možete kupiti dvije karte sa popustom - jednu za polazak&nbsp; i jedna za povratak - (od mjesta stanovanja do granice ili najbliže zračne luke
+u zemlji prebivališta.) Visina odobrenog popusta za navedeno putovanje se razlikuje
+među pojedinačnim željezničkim postajama (među zemljama). Te karte se mogu kupiti
+samo u zemlji prebivališta.InterRail Pass karte se mogu izdati do tri mjeseca
+prije prvog dana polaska.<br />
+<br />Sve InterRail karte su za 1. i 2. klasa za &quot;odrasle&quot; / &quot;djeca&quot; i 2. klasa &quot;mladi&quot;.<br />
+Cijena za &quot;djecu&quot; vrijedi&nbsp; od 4 do 12 godine, &quot;mladi&quot; se smatraju putnici&nbsp; od 12 do 26 godina. Godine se gledaju na način&nbsp; koliko će osoba imati godina na dan polaska.<br />
+<br />Sve InterRail karte osim &quot;kontinuirane&quot; InterRail Global Pass karte se nazivaju
+&quot;flexi&quot; karte. Nositelji &quot;flexi&quot; karte&nbsp; mogu slobodno odabrati dan putovanja u roku valjanosti&nbsp; InterRail karte. Odabrano putovanje mora biti uneseno u kalendar prije prvog
+polaska na vlak / brod . Datum putovanja mora biti upisan sa plavom ili crnom
+kemijskom u odgovarajući kalendar (okvir na karti). Datum mora biti čitko upisan
+(dan, mjesec), na primjer: 27.05. Karta vrijedi od 00:01 h do&nbsp; 24:00 h istog dana. Pri putovanju, započetim s direktnim noćnim vlakom s polaskom
+u 19:00 h , vrijedi&nbsp; kao da je putovanje&nbsp; započeto dan poslije .Kada putujete&nbsp; nočnim pomorskim relacijama ,u InterRail ponudi, nositelj karte lako može upisati
+datum polaska&nbsp; ili povratka .Upozorenje – putnik sa &quot;flexi&quot; kartom, u kojoj&nbsp; nije unesen datum putovanja u odgovarajuće polje u kalendaru na svoju kartu
+prije putovanja, dužan je platiti naknadu&nbsp; od 50 eura!<br />
+<br />InterRail karta ne vrijedi za sve vlakove. U nekim slučajevima će te morati platiti
+dodatak ili dopunu (required) rezervacija mjesta za korištenje od strane globalne
+cijene vlakova s obveznom rezervacijom mjesta.Za korištenje kabine sa&nbsp; ležajem u vlaku, ležajeva na brodu u pomorskim kompanijama imaju sezonski doplatak
+od lipnja do rujna za pomorske rute Superfast Ferries i Blue Star Ferries između
+Italije i Grčke. Naknadu za obroke u kojoj su uključeni u naknadu za pojedinačne
+vlakove i druge usluge koje nude vlakovi (npr. novine, telefon ...). Naknada za
+djelomično korištenje karte nije moguće. U slučaju gubitka ili krađe InterRail
+karte nije moguć povrat&nbsp; novaca,a nije moguće niti izdati novu kartu. Ako putovanje odkažete prije početka
+putovanja i vratite ne iskorištenu kartu dobiti će te 80 % novaca natrag.<br />
+<br /></p>
+<h3>Inter Rail Global Pass</h3>
+<p>Karta&nbsp; Inter Rail Global Pass vrijedi u sljedećih 30 zemalja: Austrija, Belgija, Makedonija,
+Bosna i Hercegovina, Bugarska, Češka, Crna Gora, Danska, Finska, Francuska, Grčka,
+Hrvatska, Italija, Irska, Luksemburg, Mađarska, Njemačka, Nizozemska, Norveška,
+Poljska, Portugal, Rumunjska, Srbija, Slovačka, Slovenija, Španjolska , Švicarska,
+Švedska, Turska, Velika Britanija i pomorska&nbsp; služba Attica Group , koja vozi na relaciji između Italije i Grčke.InterRail
+Global Pass&nbsp; karta &quot;kontinuirano&quot; vrijede pod sljedećim rokovima:</p>
+<ul>
+<li>22 dana </li>
+<li>1 mjesec</li></ul>
+<p><br />
+InterRail Global Pass karte&nbsp; &quot;flexi&quot; vrijede:</p>
+<ul>
+<li>5 dana u roku valjanosti&nbsp; 10 dana </li>
+<li>10 dana u roku valjanosti 22 dana</li></ul><br />
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="243">
+<p><strong>InterRail Global Pass</strong></p></td>
+<td width="120">
+<p align="center"><strong>Odrasli 2. razred</strong></p></td>
+<td width="112">
+<p align="center"><strong>Mladi 2. razred</strong></p></td>
+<td align="center" width="112">
+<p><strong>Umirovljenici</strong> </p></td></tr>
+<tr>
+<td width="243">
+<p>5 dana u 10 dana (Flexi)</p></td>
+<td width="120">
+<p align="center"><strong>€ 249</strong></p></td>
+<td width="112">
+<p align="center"><strong>€ 159</strong></p></td>
+<td align="center" width="112">
+<p><strong>€ 224</strong></p></td></tr>
+<tr>
+<td width="243">
+<p>10 dana u 22 dana (Flexi)</p></td>
+<td width="120">
+<p align="center"><strong>€ 359</strong></p></td>
+<td width="112">
+<p align="center"><strong>€ 239</strong></p></td>
+<td align="center" width="112">
+<p><strong>€ 323</strong></p></td></tr>
+<tr valign="top">
+<td width="243">
+<p>15 dana za redom (kontinuirano) </p></td>
+<td align="center" width="120">
+<p><strong>€ 399</strong></p></td>
+<td align="center" width="112">
+<p><strong>€ 279</strong></p></td>
+<td align="center" width="112">
+<p><strong>€ 359</strong></p></td></tr>
+<tr>
+<td width="243">
+<p>22 dana za redom (kontinuirano)</p></td>
+<td width="120">
+<p align="center"><strong>€ 469</strong></p></td>
+<td width="112">
+<p align="center"><strong>€ 309</strong></p></td>
+<td align="center" width="112">
+<p><strong>€ 422</strong></p></td></tr>
+<tr>
+<td width="243">
+<p>1 mjesec za redom (kontinuirano)</p></td>
+<td width="120">
+<p align="center"><strong>€ 599</strong></p></td>
+<td width="112">
+<p align="center"><strong>€ 399</strong></p></td>
+<td align="center" width="112">
+<p><strong>€ 539</strong></p></td></tr></tbody></table><br />
+<p>Sve cijene su informativne i lako se bez najave mogu promijeniti . Cijene uključuju
+RSF -pristojbu na rezervaciju. </p>
+<h3>Inter Rail One Country Pass</h3>
+<p>Putnik ne može kupiti karte InterRail Pass&nbsp; sa sjedištem u zemlji prebivališta. Postoji karta Inter Rail One Country Pass
+koje se odnose za sljedeće zemlje: Austrija,&nbsp; Belgija, Luksemburg, Nizozemska, Bugarska, Hrvatska, Češka, Danska, Finska,
+Francuska, Srbija , Makedonija, Njemačka, Velika Britanija, Grčka, Mađarska, Republika
+Irska, Italija, Norveška, Poljska, Portugal, Rumunjska, Srbija, Slovačka, Slovenija,
+Španjolska, Švedska, Švicarska, Turskai pomorska&nbsp; služba Attica Group , koja radi na relaciji između Italije i Grčke.</p>
+<p>&nbsp;</p>
+<table style="border-collapse: separate" border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr align="center" valign="middle">
+<td valign="middle" width="125">
+<h4 align="center">One Country Pass – Razina 1</h4></td>
+<td width="108">
+<p align="center"><strong>Odrasli 2. razred</strong></p></td>
+<td width="108">
+<p align="center"><strong>Mladi 2. razred</strong></p></td>
+<td width="241">
+<p align="center"><strong>Vrijedi za države:</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>3 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 194</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 126</strong></p></td>
+<td rowspan="4" width="241">
+<p align="center"><strong>Francuska, Njemačka, Velika Britanija</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>4 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 209</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 136</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>6 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 269</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 175</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>8 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 299</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 194</strong></p></td></tr></tbody></table>
+<p>&nbsp;</p>
+<table style="border-collapse: separate" border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr align="center" valign="middle">
+<td valign="middle" width="125">
+<h4 align="center">One Country Pass – Razina 2</h4></td>
+<td width="108">
+<p align="center"><strong>Odrasli 2. razred</strong></p></td>
+<td width="108">
+<p align="center"><strong>Mladi 2. razred</strong></p></td>
+<td width="241">
+<p align="center"><strong>Vrijedi za države:</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>3 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 172</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 112</strong></p></td>
+<td rowspan="4" align="center" width="241"><strong>Austrija, </strong><strong>Norveška, </strong><strong>Španjolska,</strong><strong> </strong><strong>Švedska</strong></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>4 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 191</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 124</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>6 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 252</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 164</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>8 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 290</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 189</strong></p></td></tr></tbody></table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="125">
+<h4 align="center">One Country Pass – Razina 3</h4></td>
+<td width="108">
+<p align="center"><strong>Odrasli 2. razred</strong></p></td>
+<td width="108">
+<p align="center"><strong>Mladi 2. razred</strong></p></td>
+<td width="241">
+<p align="center"><strong>Vrijedi za države:</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>3 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 112</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 73</strong></p></td>
+<td rowspan="4" width="241">
+<p align="center"><strong>Belgija, Danska, Nizuzemska, Luksemburg, Finska, &quot;Greece Plus&quot; (uključen prijevoz
+s brodom Grčka - Italija), Irska, Italija, Švicarska</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>4 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 139</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 90</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>6 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 189</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 123</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>8 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 229</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 149</strong></p></td></tr></tbody></table>
+<p>&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="125">
+<h4 align="center">One Country Pass – Razina 4</h4></td>
+<td width="108">
+<p align="center"><strong>Odrasli 2. razred</strong></p></td>
+<td width="108">
+<p align="center"><strong>Mladi 2. razred</strong></p></td>
+<td width="241">
+<p align="center"><strong>Vrijedi za države:</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>3 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 71</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 46</strong></p></td>
+<td rowspan="4" width="241">
+<p align="center"><strong>Češka, Grčka, Hrvatska, </strong><strong>Mađarska, Poljska, </strong><strong>Portugal, Romunjska</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>4 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 89</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 58</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>6 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 119</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 77</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>8 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 139</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 90</strong></p></td></tr></tbody></table>
+<p><strong>&nbsp;</strong></p>
+<table border="1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td valign="top" width="125">
+<h4 align="center">One Country Pass – Razina 5</h4></td>
+<td width="108">
+<p align="center"><strong>Odrasli 2. razred</strong></p></td>
+<td width="108">
+<p align="center"><strong>Mladi 2. razred</strong></p></td>
+<td width="241">
+<p align="center"><strong>Vrijedi za države:</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>3 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 50</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 33</strong></p></td>
+<td rowspan="4" width="241">
+<p align="center"><strong>Bugarska,</strong><strong> Makedonija, Slovačka, Slovenija, Srbija, Turska</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>4 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 69</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 45</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>6 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 99</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 64</strong></p></td></tr>
+<tr>
+<td valign="top" width="125">
+<p>8 dana u 1 mjesecu (Flexi)</p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 119</strong></p></td>
+<td valign="top" width="108">
+<p align="center"><strong>€ 77</strong></p></td></tr></tbody></table><br />
+<br />Sve cijene su informativne i lako se bez najave mogu promijeniti. Cijene uključuju
+RSF - pristojbu na rezervaciju .<br />
+<br /><div id="prenesi_si">Dijelite s drugima:  <a href="http://twitter.com/home?status=Inter+Rail http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail" target="social" title="Twitter"><img src="/images/social/ico_tw.png" alt="Twitter"></a> <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;title=Inter+Rail" target="social" title="Delicious"><img src="/images/social/ico_de.png" alt="Delicious"></a> <a href="http://digg.com/submit?url=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;title=Inter+Rail" target="social" title="Digg"><img src="/images/social/ico_di.png" alt="Digg"></a> <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;t=Inter+Rail" target="social" title="Facebook"><img src="/images/social/ico_fb.png" alt="Facebook"></a> <a href="http://www.google.com/bookmarks/mark?op=add&amp;bkmk=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;title=Inter+Rail" target="social" title="Google"><img src="/images/social/ico_go.png" alt="Google"></a> <a href="https://favorites.live.com/quickadd.aspx?marklet=1&amp;mkt=en-us&amp;url=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;title=Inter+Rail&amp;top=1" target="social" title="Live"><img src="/images/social/ico_li.png" alt="Live"></a> <a href="https://favorites.live.com/quickadd.aspx?marklet=1&amp;mkt=en-us&amp;url=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;title=Inter+Rail&amp;top=1" target="social" title="mySpace"><img src="/images/social/ico_my.png" alt="mySpace"></a> <a href="http://www.newsvine.com/_tools/seed?u=http%3A%2F%2Fwww.sta-zagreb.com%2Fprijevozi%2Fvlak-europa%2Finter-rail&amp;title=Inter+Rail" target="social" title="Newsvine"><img src="/images/social/ico_ne.png" alt="Newsvine"></a></div><object width="600" height="100" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" title="">
+<param name="scale" value="showall" />
+<param name="bgcolor" value="" />
+<param name="wmode" value="" />
+<param name="flashvars" value="" />
+<param name="movie" value="/datoteke/media/ortotrip_sta_600x100.swf" />
+<param name="quality" value="high" /><embed width="600" height="100" scale="showall" quality="high" src="/datoteke/media/ortotrip_sta_600x100.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed></object><br /></div>
+      
+      </div>
+    </div>
+    
+    
+   <!-- DESNI DEL TIPSKIH PODSTRANI. Znotraj se, po iskalniku, razdelijo na 2 stolpca-->
+  <div id="tipska_desno">
+	<script type="text/javascript">
+	//sFsPLayer5 = "<div id=\"zavarovanja_frm\"><form action=\"/potovalna-zavarovanja/zavarovanje\" method=\"post\"><input type=\"hidden\" name=\"korak\" value=\"paketi\">  <table>    <tr>      <td>Začetek zavarovanja:</td>      <td><input name=\"datum_zacetek\" type=\"text\" id=\"datum_zacetek\" onclick=\"showCalendar(this, this, \'dd.mm.yyyy\',null,0);\" value=\"\" size=\"12\"></td>    </tr>      <tr>      <td>Trajanje zavarovanja:</td>      <td><input name=\"trajanje_zavarovanja\" type=\"text\" id=\"trajanje_zavarovanja\" value=\"\" size=\"3\" maxlength=\"3\">dni</td>    </tr>    <tr>      <td>Število oseb:</td>      <td><input name=\"zavarovancev\" type=\"text\" id=\"zavarovancev\" value=\"\" size=\"2\" maxlength=\"2\">       <small>* velja le za okvirni preračun ponudb</small></td>    </tr>      <tr>      <td>Območje potovanja:</td>      <td><input type=\"text\" id=\"obmocje_potovanja\" name=\"obmocje_potovanja\" value=\"\"></td>    </tr>      <tr>      <td>Družinsko zavarovanje:</td>      <td><input type=\"checkbox\" id=\"druzinsko_zavarovanje\" name=\"druzinsko_zavarovanje\" value=\"Y\"> <small>*Velja le za družine, za ostale zavarovance se računa po veljavnem ceniku</small></td>    </tr>       <tr>      <td>Način plačila:</td>      <td><select class=\"iskalnik_zav_placila\" name=\"nacin_placila\"><option value=\"trr\">Po položnici</option>  <option value=\"cc\">Plačilne kartice (Visa, MasterCard, Diners)</option>    </select>      <input type=\"submit\" value=\"Nadaljuj\"></td>    </tr>   </table>  </form></div>";
+	</script>
+	
+	<!-- ISKALNIK -->
+    <div id="iskalnik">
+      <div class="napredno">  <form method="get" action="/search"><input name="keywords" id="isKeywords" type="text" onblur="is_pocisti()" onfocus="is_pocisti()" value="[Traži po stranicama/forumu]" class="isH" style="width: 110px;" /><input type="submit" class="najdi" value="Traži" />
+  </form>
+</div>
+<script type="text/javascript">
+
+	var is_osnovni = $("isKeywords").value;
+
+   function is_pocisti()
+   {
+   		if($("isKeywords").value == is_osnovni)
+   		{
+   			$("isKeywords").removeClassName("isH").addClassName("isX");
+   			$("isKeywords").value="";
+   		}
+   		else if($("isKeywords").value == "")
+   		{
+   			$("isKeywords").removeClassName("isX").addClassName("isH");
+   			$("isKeywords").value = is_osnovni;      		 		
+   		}
+   }
+   
+
+
+</script>
+      <div id="iskalnik_opcije">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" id="ikonce">
+          <tr>
+            <td width="50%"><a href="javascript:sFsFPLoadLayer(sFsPLayer1, false);"><img src="/images/ico-letalske-karte.png" width="26" height="18">Avio karte</a></td>
+
+            <td><a href="javascript:sFsFPLoadLayer(sFsPLayer2, true);"><img src="/images/ico-prenocisca.png" width="26" height="18" align="absmiddle">Smještaj</a></td>
+          </tr>
+          <tr>
+            <td><a href="javascript:sFsFPLoadLayer(sFsPLayer3, false);"><img src="/images/ico_rentacar.png" width="24" height="18">Rent a car</a></td>
+            <td><a href="javascript:sFsFPLoadLayer(sFsPLayer4, false);"><img src="/images/ico_adventures.png" width="24" height="18">STAdventures</a></td>
+          </tr>
+          <tr>
+
+            <td><a href="javascript:sFsFPLoadLayer(sFsPLayer5,false);"><img src="/images/ico_potovalna_zavarovanja.png" width="24" height="18">Putna osiguranja</a></td>
+            <td><a href="/eventim" target="vand"><img src="/images/ico_cart.png" width="24" height="18">Ulaznice</a></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div id="seiskalnik"></div>
+      
+    
+
+<script type="text/javascript"> 
+	// ---------------------------------------------------------------------
+	sFsFPLoadLayer(sFsPLayer1,false); // prvi lejer
+	
+	function sFsPLCalendar() {
+		
+		if ($("calendars")) {
+			
+			buildCal(
+			"20101212",
+			"20101213",
+			"20101212",
+			"20111212"
+			);
+			$("calendars").show();
+		}
+	}
+	
+	// ---------------------------------------------------------------------
+</script>
+
+     
+      <p>&nbsp;</p>
+
+    </div>
+     <!-- KONEC ISKALNIK  -->
+    
+     <!-- Desni del, delitev na 2 stolpca-->
+      <div id="tipska_desno_ostalo">
+      
+        <!--LEVI STOLPEC-->
+        <div id="tipska_ostalo_leva">
+          <!--FORUM-->
+          <div id="tipska_forum_podstran">
+          
+          <a href="/forum"><img src="/images/forum-tipska-glava.png" width="161" height="81"></a>
+          <form method="get" action="/search"><input name="keywords" type="text" class="poljefiskanje" value="Traži po forumu" onfocus="this.value=''" /><input type="submit" class="gumbfiskanje" value="Traži" /></form>
+            <div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/325?zodg">Re: Tko bi u Irsku?</a></div>
+			       		<div class="forum_zo_post">Da bravo,ovo za BMW je dobar p</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/729?zodg">Re: SKOPJE</a></div>
+			       		<div class="forum_zo_post">ma jel moguce samo 240 kn?'</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/325?zodg">Re: Tko bi u Irsku?</a></div>
+			       		<div class="forum_zo_post">ma u irskoj ti se recesija oci</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/33?zodg">Re: Irska</a></div>
+			       		<div class="forum_zo_post">nocni zivot je prva liga...pre</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/387?zodg">Re: Posao u Engleskoj/Londonu</a></div>
+			       		<div class="forum_zo_post">Upravo sam saznala da radnici </div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/133?zodg">Re: Irska bez radne dozvole</a></div>
+			       		<div class="forum_zo_post">5000 kn ti nije ni priblizno d</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/387?zodg">Re: Posao u Engleskoj/Londonu</a></div>
+			       		<div class="forum_zo_post">Draga Mila, za manje od 6 mjes</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/216?zodg">Re: kanada ili australija</a></div>
+			       		<div class="forum_zo_post">Bok svima,
+Ja sam novi ovdje </div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/2421?zodg">Prodajem kartu za Berlin</a></div>
+			       		<div class="forum_zo_post">Zbog prekida veze na daljinu p</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/2420?zodg">Viza njemacka</a></div>
+			       		<div class="forum_zo_post">Dakle,zanima me kako,sta i gdj</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/1491?zodg">Re: VIZA ZA AMERIKU</a></div>
+			       		<div class="forum_zo_post">Pozdrav!
+Najbolje Vam je da o</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/1491?zodg">Re: VIZA ZA AMERIKU</a></div>
+			       		<div class="forum_zo_post">mislim da ti putovnica može b</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/216?zodg">Re: kanada ili australija</a></div>
+			       		<div class="forum_zo_post">Za Danijelu ako spadas u grupu</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/1491?zodg">Re: VIZA ZA AMERIKU</a></div>
+			       		<div class="forum_zo_post">Dobra Vecer,
+ja idem kao stud</div>
+			       </div><div class="forum-celica2">
+						 <div class="forum_zo_tema"><a href="/forum/q/zapisi/1074?zodg">Re: vlak ZG-Venezia?</a></div>
+			       		<div class="forum_zo_post">pa nije mi jasno, kako si sazn</div>
+			       </div>            
+            <img src="/images/forum-tipska-nb.png" width="161" height="23">
+             <div class="forum-celica2"><a href="/forum/q/zapisi/1491?braneteme">VIZA ZA AMERIKU (111)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/605?braneteme">stjuardesa (61)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1503?braneteme">agencije za rad u inozemstvu (51)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/2026?braneteme">rad u švicarskoj (120)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/830?braneteme">vlak za Beograd ili bus do Sarajeva.. (18)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1278?braneteme">Alga travel agency (297)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1074?braneteme">vlak ZG-Venezia? (142)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/850?braneteme">turistički pratitelj (120)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1480?braneteme">zagreb budimpešta (10)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1314?braneteme">Viza za Tajland (27)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/308?braneteme">viza za australiju?? (70)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1025?braneteme">Rad u kanadi (80)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/1581?braneteme">Australija i/ili Novi Zeland (79)</a></div> <div class="forum-celica2"><a href="/forum/q/zapisi/190?braneteme">hosteli-Sarajevo (403)</a></div>            
+            <img src="/images/forum-tipska-konta.png" width="161" height="24">
+                      </div>
+          <img src="/images/tipska-forum-noga.png" width="161" height="14">
+          <!--FAQ na tipski-->
+          <img src="/images/tipska-faq-glava.png" width="161" height="56">
+          <div id="faq_vsebina">Kako do ISIC iskaznice?</div>
+          <a href="/faq/q/prikazi/3"><img src="/images/tipska-faq-vec.png" width="161" height="22"></a></div>
+        
+        
+        <!--DESNI STOLPEC-->
+        <div id="tipska_ostalo_desna">
+          <div id="mailer">
+            <form action="/mailer" method="post">
+              <p>
+                <input type="hidden" value="1" name="mailer_rub"/>
+                Budi informiran i prijavi se na mailing listu:<br/>
+                <input class="mailer-field" type="text" onclick="xclear(this, 'tvoj e-mail...');" value="tvoj e-mail..." style="width: 140px;" name="mailer_email"/>
+              </p>
+              <p>
+                <input name="button2" type="submit" id="button2" value="Prijava">
+              </p>
+            </form>
+          </div>
+          
+        <div style="margin-left: 10px;">  
+          <div id="informacije-podstrani">
+<p><strong>STA Zagreb</strong> <br>
+Krvavi most 3 <br>
+I. kat <br>
+10 000 Zagreb <br>
+<a href="mailto:info@sta-zagreb.com">info@sta-zagreb.com</a><br>
+Tel.: 01/488 63 40 <br>
+GSM: 099/ 488 63 40 <br>
+Fax: 01/488 63 45<br>
+<br>
+<strong>Radno vrijeme</strong> <br>
+Od ponedjeljka do petka:<br> 
+09:00-13:00 i 14:00-17:00</p></div> 
+</div>
+                    <div id="tower160">
+            <p align="center">
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://oglasi.oblikovanje.com/www/delivery/ajs.php':'http://oglasi.oblikovanje.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=52");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script>
+<noscript><a href='http://oglasi.oblikovanje.com/www/delivery/ck.php?n=a88f5f81&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://oglasi.oblikovanje.com/www/delivery/avw.php?zoneid=52&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a88f5f81' border='0' alt='' /></a></noscript>            
+   
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+
+	
+	</div>
+
+ 
+ </div><div style="clear: both;">&nbsp;</div>
+<!--  NOGA STRANI-->
+  <div id="noga" style="clear: both;"><img src="/images/noga-crna.png" width="982" height="23" alt="">Cijene se mijenjaju u odnosu na prodajni tečaj Erste & Steiermärkische Bank d.d. <br>&copy; STA Zagreb d.o.o., 2007. Sva prava pridržana. <a href="http://www.oblikovanje.com" target="obl">Oblikovanje.com</a>™
+  </div>
+
+
+    <!--GOOGLE ANALYTICS NOVA KODA-->
+  <script type="text/javascript">
+
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+  <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-273037-3");
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+    
+</body>
+ 
+</html>
+

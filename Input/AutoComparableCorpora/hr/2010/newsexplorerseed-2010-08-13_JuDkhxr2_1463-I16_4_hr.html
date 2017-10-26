@@ -1,0 +1,1191 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Hrvatska je odabrana za domaćina igara 2012. godine &laquo;  2010 New Life</title>
+
+
+<link rel="alternate" type="application/rss+xml" title="2010 New Life RSS Feed" href="http://2010newlife.com/feed/" />
+<link rel="alternate" type="application/atom+xml" title="2010 New Life Atom Feed" href="http://2010newlife.com/feed/atom/" />
+<link rel="pingback" href="http://2010newlife.com/xmlrpc.php" />
+
+
+<script type="text/javascript" src="http://2010newlife.com/wp-content/themes/magazine/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="http://2010newlife.com/wp-content/themes/magazine/js/hoverIntent.js"></script> 
+<script type="text/javascript" src="http://2010newlife.com/wp-content/themes/magazine/js/superfish.js"></script>
+<script type="text/javascript" src="http://2010newlife.com/wp-content/themes/magazine/js/jquery-ui-1.7.2.custom.min.js"></script> 
+<script type="text/javascript" src="http://2010newlife.com/wp-content/themes/magazine/js/custom.js"></script>
+<script type="text/javascript" src="http://2010newlife.com/wp-content/themes/magazine/js/slider-auto.js"></script>
+
+<script type="text/javascript">
+
+
+
+// Tick (countdownId, eventDate)
+function CD_T(id, e) {
+	var n = new Date();
+	CD_D(+n, id, e);
+	setTimeout("if(typeof CD_T=='function'){CD_T('" + id + "'," + e + ")}", 1100-n.getMilliseconds()); // We offset from 1100 so that our clock ticks every second (the millisecond correction each loop sees to that), but updates 0.1s after every whole second so that we don't accidentally read the same Date() twice in the same second
+};
+
+// Calculate time and update display (dateNow, countdownId, eventDate)
+function CD_D(n, id, e) {
+	var ms = e - n;
+	if (ms <= 0) ms *= -1;
+	var d = Math.floor(ms/864E5);
+	ms -= d*864E5;
+	var h = Math.floor(ms/36E5);
+	ms -= h*36E5;
+	var m = Math.floor(ms/6E4);
+	ms -= m*6E4;
+	var s = Math.floor(ms/1E3);
+
+	// If you want to manually customise the counter display, then edit this line:
+	if (CD_OBJS[id]) {
+
+	
+
+
+CD_OBJS[id].innerHTML = 
+
+
+     "<CENTER><TABLE border=0><TR height=10><TD align=center><FONT style=font-size:1.2em face=tahoma color=#ffffff>" + d + " days</TD><TD width=20>" + 
+	"</FONT></TD><TD align=center><FONT style=font-size:1.2em face=tahoma color=#ffffff>" + CD_ZP(h) + " hrs</TD><TD width=20>" + 
+	"</FONT></TD><TD align=center><FONT style=font-size:1.2em face=tahoma color=#ffffff>" + CD_ZP(m) + " min</TD><TD width=20>" + 
+	"</FONT></TD><TD align=center><FONT style=font-size:1.2em face=tahoma color=#ffffff>" + CD_ZP(s) + 
+	" sec</FONT></TD></TR></TABLE></CENTER>";
+
+	}
+};
+
+// Prefix single integers with a zero
+function CD_ZP(i) {
+	return (i<10 ? "0" + i : i);
+};
+
+// Initialisation
+function CD_Init() {
+	var pref = "countdown";
+	var objH = 1; // temp boolean true value
+	if (document.getElementById || document.all) {
+		for (var i=1; objH; ++i) {
+			var id	= pref + i;
+			objH	= document.getElementById ? document.getElementById(id) : document.all[id];
+
+			if (objH && (typeof objH.innerHTML) != 'undefined') {
+				var s	= objH.innerHTML;
+				var dt	= CD_Parse(s);
+				if (!isNaN(dt)) {
+					CD_OBJS[id] = objH; // Store global reference to countdown element object
+					CD_T(id, dt.valueOf());
+					if (objH.style) {
+						objH.style.visibility = "visible";
+					}
+				}
+				else {
+					objH.innerHTML = s + "<a href=\"http://andrewu.co.uk/clj/countdown/\" title=\"Countdown Error: Invalid date format used, check documentation (see link)\">*</a>";
+				}
+			}
+		}
+	}
+};
+
+// Get Date() object from 2006-01-01 00:00:00 GMT+00:00 date format
+function CD_Parse(strDate) {
+	// Pattern match to a countdown date
+	var objReDte = /(\d{4})\-(\d{1,2})\-(\d{1,2})\s+(\d{1,2}):(\d{1,2}):(\d{0,2})\s+GMT([+\-])(\d{1,2}):?(\d{1,2})?/;
+
+	if (strDate.match(objReDte)) {
+		// Start with a default date and build it up into the countdown date through Date setter methods
+		var d = new Date(0);
+
+		d.setUTCFullYear(+RegExp.$1,+RegExp.$2-1,+RegExp.$3); // Set YYYY-MM-DD directly as UTC
+		d.setUTCHours(+RegExp.$4,+RegExp.$5,+RegExp.$6); // Set HH:MM:SS directly as UTC
+
+		// If there is a timezone offset specified then we need to compensate for the offset from UTC
+		var tzs	= (RegExp.$7 == "-" ? -1 : 1); // Timezone sign
+		var tzh = +RegExp.$8; // Get requested timezone offset HH (offset ahead of UTC - may be negative)
+		var tzm = +RegExp.$9; // Get requested timezone offset MM (offset ahead of UTC - always positive)
+		if (tzh) {
+			d.setUTCHours(d.getUTCHours() - tzh*tzs); // Compensate for timezone HH offset from UTC
+		}
+		if (tzm) {
+			d.setUTCMinutes(d.getUTCMinutes() - tzm*tzs); // Compensate for timezone MM offset, depending on whether the requested MM offset is ahead or behind of UTC
+		}
+		return d; // Date now correctly parsed into a Date object correctly offset from UTC internally regardless of users current timezone.
+	}
+	else {
+		return NaN; // Didn't match required date format
+	};
+};
+
+var CD_OBJS = new Object();
+
+// Try not to commandeer the default onload handler if possible
+if (window.attachEvent) {
+	window.attachEvent('onload', CD_Init);
+}
+else if (window.addEventListener) {
+	window.addEventListener("load", CD_Init, false);
+}
+else {
+	window.onload = CD_Init;
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+<!--Main Stylesheet-->
+<link rel="stylesheet" type="text/css" media="screen" href="http://2010newlife.com/wp-content/themes/magazine/white-gold.css" />
+<!--End of Main Stylesheet-->
+<link rel="stylesheet" href="http://2010newlife.com/wp-content/themes/magazine/style.css" type="text/css" media="screen" />
+<!--Favicon-->
+<link rel="shortcut icon" href="http://2010newlife.com/wp-content/themes/magazine/images/favicon.ico"/>
+<!--End of Favicon-->
+
+<style type="text/css">
+	#header #logo { background: url(http://2010newlife.com/wp-content/themes/magazine/logo/logo.gif) no-repeat top left; width: 360px; }
+	#header #logo h1 a { padding: 0 0 0 20px; }
+</style>
+
+
+<!-- Start Of Script Generated By sidebarTabs 3.0 -->
+<link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/sidebartabs/styleSidebar_common.php" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/sidebartabs/styleSidebar_fixed.php" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/sidebartabs/styleSidebar_scrollable.php" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/sidebartabs/styleSidebar_icons.php" type="text/css" media="screen" />
+<!-- End Of Script Generated By sidebarTabs -->
+<link rel="alternate" type="application/rss+xml" title="2010 New Life &raquo; Hrvatska je odabrana za domaćina igara 2012. godine Comments Feed" href="http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/feed/" />
+    <link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/live-countdown-timer/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/live-countdown-timer/css/datepicker.css" type="text/css" />
+<link rel='stylesheet' id='NextGEN-css'  href='http://2010newlife.com/wp-content/plugins/nextgen-gallery/css/ngg_shadow.css?ver=1.0.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='shutter-css'  href='http://2010newlife.com/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.css?ver=1.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='avhec-widget-css'  href='http://2010newlife.com/wp-content/plugins/extended-categories-widget/2.8/css/avh-ec.widget.css?ver=3.2.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shutterSettings = {
+	msgLoading: "L O A D I N G",
+	msgClose: "Click to Close",
+	imageCount: "1"
+};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://2010newlife.com/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.js?ver=1.3.0'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-includes/js/swfobject.js?ver=2.2'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-content/plugins/sidebartabs/js/jquery.tools.min.js?ver=1.1.0'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-content/plugins/sidebartabs/js/jquery.corner.js?ver=2.01'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-content/plugins/sidebartabs/js/sidebartabs.js?ver=2.4'></script>
+<script type='text/javascript' src='http://2010newlife.com/wp-content/plugins/live-countdown-timer/js/script.js?ver=3.0.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://2010newlife.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://2010newlife.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='2010 New Life' href='http://2010newlife.com/' />
+<link rel='start' title='Home' href='http://2010newlife.com/2010/04/home1/' />
+<link rel='prev' title='Swimming Results' href='http://2010newlife.com/2010/08/swimming-results/' />
+<link rel='next' title='Croatia selected as 2012 Games venue' href='http://2010newlife.com/2010/08/the-european-transplant-and-dialysis-games-2012-will-be-held-in-croatia/' />
+<meta name="generator" content="WordPress 3.0.1" />
+<link rel='canonical' href='http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/' />
+<link rel='shortlink' href='http://2010newlife.com/?p=4236' />
+<script type="text/javascript" src="http://2010newlife.com/wp-content/plugins/audio-player/assets/audio-player.js?ver=2.0.4.1"></script>
+<script type="text/javascript">AudioPlayer.setup("http://2010newlife.com/wp-content/plugins/audio-player/assets/player.swf?ver=2.0.4.1", {width:"290",animation:"yes",encode:"yes",initialvolume:"60",remaining:"yes",noinfo:"yes",buffer:"5",checkpolicy:"no",rtl:"no",bg:"E5E5E5",text:"333333",leftbg:"CCCCCC",lefticon:"333333",volslider:"666666",voltrack:"FFFFFF",rightbg:"B4B4B4",rightbghover:"999999",righticon:"333333",righticonhover:"FFFFFF",track:"FFFFFF",loader:"009900",border:"CCCCCC",tracker:"DDDDDD",skip:"666666",pagebg:"FFFFFF",transparentpagebg:"yes"});</script>
+
+	<script type="text/javascript">
+	<!--
+	function MM_jumpMenu(targ,selObj,restore){ //v3.0
+	  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+	  if (restore) selObj.selectedIndex=0;
+	}
+	//-->
+	</script>
+	<meta name="DMSGuestbook" content="1.17.0" />
+<link rel="stylesheet" href="http://2010newlife.com/wp-content/plugins/dmsguestbook/dmsguestbook.css" type="text/css" media="screen" />
+<meta name='NextGEN' content='1.6.2' />
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8862505-20']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+
+</head>
+<body>
+<div class="wrapper">
+	<div id="header" class="trans">
+    	
+        <div class="header-con">
+
+
+
+<div id="timer">
+
+<a href="http://2010newlife.com/category/results-2/"><img src="http://2010newlife.com/wp-content/uploads/2010/08/results.jpg" width="240" height="130" /></a>
+
+
+    	
+
+
+
+</div>
+
+
+        
+        </div>
+        
+        <div id="navigation">
+    		<ul id="nav" class="sf-menu trans">
+					<li class="cat-item cat-item-1"><a href="http://2010newlife.com" title="View all posts filed under Home">Home</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="http://2010newlife.com/2010/04/register-now-for-dublin-2010-2/" title="View all posts filed under Registration">Registration</a>
+<ul class='children'>
+	<li class="cat-item cat-item-183"><a href="http://2010newlife.com/2010/05/accommodation/" title="View all posts filed under Accommodation">Accommodation</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="http://2010newlife.com/2010/05/age-categories/" title="View all posts filed under Age Categories">Age Categories</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="http://2010newlife.com/2010/05/take-part/" title="View all posts filed under Who Can Take Part">Who Can Take Part</a>
+</li>
+	<li class="cat-item cat-item-191"><a href="http://2010newlife.com/2010/05/medical-info/" title="View all posts filed under Medical Info">Medical Info</a>
+</li>
+	<li class="cat-item cat-item-208"><a href="http://2010newlife.com/2010/05/games-rules/" title="View all posts filed under Games Rules">Games Rules</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-28"><a href="http://2010newlife.com/2010/05/volunteers/" title="View all posts filed under Volunteers">Volunteers</a>
+<ul class='children'>
+	<li class="cat-item cat-item-319"><a href="http://2010newlife.com/category/volunteers/companies-individuals/" title="View all posts filed under Companies &amp; Individuals">Companies &amp; Individuals</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://2010newlife.com/category/news1/" title="View all posts filed under News">News</a>
+<ul class='children'>
+	<li class="cat-item cat-item-323"><a href="http://2010newlife.com/category/news1/media-coverage/" title="View all posts filed under Media Coverage">Media Coverage</a>
+</li>
+	<li class="cat-item cat-item-327"><a href="http://2010newlife.com/category/news1/media-cuttings/" title="View all posts filed under Media Cuttings">Media Cuttings</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="http://2010newlife.com/category/news1/news-all-countries-news/" title="View all posts filed under News All Countries">News All Countries</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-95"><a href="http://2010newlife.com/category/news1/news-all-countries-news/austria-countries/" title="View all posts filed under Austria">Austria</a>
+</li>
+	<li class="cat-item cat-item-96"><a href="http://2010newlife.com/category/news1/news-all-countries-news/belgium-countries/" title="View all posts filed under Belgium">Belgium</a>
+</li>
+	<li class="cat-item cat-item-97"><a href="http://2010newlife.com/category/news1/news-all-countries-news/bulgaria-countries/" title="View all posts filed under Bulgaria">Bulgaria</a>
+</li>
+	<li class="cat-item cat-item-98"><a href="http://2010newlife.com/category/news1/news-all-countries-news/croatia-countries/" title="View all posts filed under Croatia">Croatia</a>
+</li>
+	<li class="cat-item cat-item-99"><a href="http://2010newlife.com/category/news1/news-all-countries-news/cyprus-countries/" title="View all posts filed under Cyprus">Cyprus</a>
+</li>
+	<li class="cat-item cat-item-100"><a href="http://2010newlife.com/category/news1/news-all-countries-news/czech-republic-countries/" title="View all posts filed under Czech Republic">Czech Republic</a>
+</li>
+	<li class="cat-item cat-item-101"><a href="http://2010newlife.com/category/news1/news-all-countries-news/denmark-countries/" title="View all posts filed under Denmark">Denmark</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://2010newlife.com/category/news1/news-all-countries-news/finland-countries/" title="View all posts filed under Finland">Finland</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="http://2010newlife.com/category/news1/news-all-countries-news/france-countries/" title="View all posts filed under France">France</a>
+</li>
+	<li class="cat-item cat-item-104"><a href="http://2010newlife.com/category/news1/news-all-countries-news/germany-countries/" title="View all posts filed under Germany">Germany</a>
+</li>
+	<li class="cat-item cat-item-105"><a href="http://2010newlife.com/category/news1/news-all-countries-news/greece-countries/" title="View all posts filed under Greece">Greece</a>
+</li>
+	<li class="cat-item cat-item-106"><a href="http://2010newlife.com/category/news1/news-all-countries-news/hungary-countries/" title="View all posts filed under Hungary">Hungary</a>
+</li>
+	<li class="cat-item cat-item-107"><a href="http://2010newlife.com/category/news1/news-all-countries-news/ireland-countries/" title="View all posts filed under Ireland">Ireland</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="http://2010newlife.com/category/news1/news-all-countries-news/italy-countries/" title="View all posts filed under Italy">Italy</a>
+</li>
+	<li class="cat-item cat-item-109"><a href="http://2010newlife.com/category/news1/news-all-countries-news/luxembourg-countries/" title="View all posts filed under Luxembourg">Luxembourg</a>
+</li>
+	<li class="cat-item cat-item-111"><a href="http://2010newlife.com/category/news1/news-all-countries-news/norway-countries/" title="View all posts filed under Norway">Norway</a>
+</li>
+	<li class="cat-item cat-item-112"><a href="http://2010newlife.com/category/news1/news-all-countries-news/poland-countries/" title="View all posts filed under Poland">Poland</a>
+</li>
+	<li class="cat-item cat-item-316"><a href="http://2010newlife.com/category/news1/news-all-countries-news/portugal/" title="View all posts filed under Portugal">Portugal</a>
+</li>
+	<li class="cat-item cat-item-113"><a href="http://2010newlife.com/category/news1/news-all-countries-news/romania-countries/" title="View all posts filed under Romania">Romania</a>
+</li>
+	<li class="cat-item cat-item-114"><a href="http://2010newlife.com/category/news1/news-all-countries-news/slovakia-countries/" title="View all posts filed under Slovakia">Slovakia</a>
+</li>
+	<li class="cat-item cat-item-115"><a href="http://2010newlife.com/category/news1/news-all-countries-news/slovenia-countries/" title="View all posts filed under Slovenia">Slovenia</a>
+</li>
+	<li class="cat-item cat-item-116"><a href="http://2010newlife.com/category/news1/news-all-countries-news/spain-countries/" title="View all posts filed under Spain">Spain</a>
+</li>
+	<li class="cat-item cat-item-117"><a href="http://2010newlife.com/category/news1/news-all-countries-news/sweden-countries/" title="View all posts filed under Sweden">Sweden</a>
+</li>
+	<li class="cat-item cat-item-120"><a href="http://2010newlife.com/category/news1/news-all-countries-news/united-kingdom-countries/" title="View all posts filed under United Kingdom">United Kingdom</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-212"><a href="http://2010newlife.com/category/news1/news-ireland2/" title="View all posts filed under News Ireland">News Ireland</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-226"><a href="http://2010newlife.com/category/news1/news-ireland2/antrim-athletes/" title="View all posts filed under Antrim athletes">Antrim athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-248"><a href="http://2010newlife.com/category/news1/news-ireland2/antrim-athletes/john-mcaleer/" title="View all posts filed under John McAleer">John McAleer</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-227"><a href="http://2010newlife.com/category/news1/news-ireland2/cavan-athletes/" title="View all posts filed under Cavan athletes">Cavan athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-249"><a href="http://2010newlife.com/category/news1/news-ireland2/cavan-athletes/eamonn-malone/" title="View all posts filed under Eamonn Malone">Eamonn Malone</a>
+</li>
+	<li class="cat-item cat-item-250"><a href="http://2010newlife.com/category/news1/news-ireland2/cavan-athletes/paul-donohoe/" title="View all posts filed under Paul Donohoe">Paul Donohoe</a>
+</li>
+	<li class="cat-item cat-item-251"><a href="http://2010newlife.com/category/news1/news-ireland2/cavan-athletes/rose-dalton/" title="View all posts filed under Rose Dalton">Rose Dalton</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-228"><a href="http://2010newlife.com/category/news1/news-ireland2/clare-athletes/" title="View all posts filed under Clare athletes">Clare athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-252"><a href="http://2010newlife.com/category/news1/news-ireland2/clare-athletes/jennifer-tuohy/" title="View all posts filed under Jennifer Tuohy">Jennifer Tuohy</a>
+</li>
+	<li class="cat-item cat-item-253"><a href="http://2010newlife.com/category/news1/news-ireland2/clare-athletes/marie-o-connor/" title="View all posts filed under Marie O Connor">Marie O Connor</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-229"><a href="http://2010newlife.com/category/news1/news-ireland2/cork-athletes/" title="View all posts filed under Cork athletes">Cork athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-254"><a href="http://2010newlife.com/category/news1/news-ireland2/cork-athletes/anne-marie-lankester/" title="View all posts filed under Anne Marie Lankester">Anne Marie Lankester</a>
+</li>
+	<li class="cat-item cat-item-255"><a href="http://2010newlife.com/category/news1/news-ireland2/cork-athletes/catherine-murphy/" title="View all posts filed under Catherine Murphy">Catherine Murphy</a>
+</li>
+	<li class="cat-item cat-item-256"><a href="http://2010newlife.com/category/news1/news-ireland2/cork-athletes/charlie-ryan/" title="View all posts filed under Charlie Ryan">Charlie Ryan</a>
+</li>
+	<li class="cat-item cat-item-257"><a href="http://2010newlife.com/category/news1/news-ireland2/cork-athletes/mike-keohane/" title="View all posts filed under Mike Keohane">Mike Keohane</a>
+</li>
+	<li class="cat-item cat-item-258"><a href="http://2010newlife.com/category/news1/news-ireland2/cork-athletes/val-twomey/" title="View all posts filed under Val Twomey">Val Twomey</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-214"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/" title="View all posts filed under Dublin athletes">Dublin athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-240"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/angela-sherlock/" title="View all posts filed under Angela Sherlock">Angela Sherlock</a>
+</li>
+	<li class="cat-item cat-item-259"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/anne-smyth/" title="View all posts filed under Anne Smyth">Anne Smyth</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/barry-delves/" title="View all posts filed under Barry Delves">Barry Delves</a>
+</li>
+	<li class="cat-item cat-item-261"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/ben-gaughran/" title="View all posts filed under Ben Gaughran">Ben Gaughran</a>
+</li>
+	<li class="cat-item cat-item-262"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/chikoyo-white/" title="View all posts filed under Chikoyo White">Chikoyo White</a>
+</li>
+	<li class="cat-item cat-item-236"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/deirdre-faul/" title="View all posts filed under Deirdre Faul">Deirdre Faul</a>
+</li>
+	<li class="cat-item cat-item-263"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/harry-ward/" title="View all posts filed under Harry Ward">Harry Ward</a>
+</li>
+	<li class="cat-item cat-item-264"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/james-reynolds/" title="View all posts filed under James Reynolds">James Reynolds</a>
+</li>
+	<li class="cat-item cat-item-265"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/john-moran/" title="View all posts filed under John Moran">John Moran</a>
+</li>
+	<li class="cat-item cat-item-266"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/john-traynor/" title="View all posts filed under John Traynor">John Traynor</a>
+</li>
+	<li class="cat-item cat-item-267"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/leornard-ryan/" title="View all posts filed under Leonard Ryan">Leonard Ryan</a>
+</li>
+	<li class="cat-item cat-item-268"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/liam-dunne/" title="View all posts filed under Liam Dunne">Liam Dunne</a>
+</li>
+	<li class="cat-item cat-item-269"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/mark-fitzsimons/" title="View all posts filed under Mark Fitzsimons">Mark Fitzsimons</a>
+</li>
+	<li class="cat-item cat-item-242"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/mick-dwyer/" title="View all posts filed under Mick Dwyer">Mick Dwyer</a>
+</li>
+	<li class="cat-item cat-item-270"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/owen-kelleher/" title="View all posts filed under Owen Kelleher">Owen Kelleher</a>
+</li>
+	<li class="cat-item cat-item-314"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/paul-bryan/" title="View all posts filed under Paul Bryan">Paul Bryan</a>
+</li>
+	<li class="cat-item cat-item-271"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/paul-prendergast/" title="View all posts filed under Paul Prendergast">Paul Prendergast</a>
+</li>
+	<li class="cat-item cat-item-272"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/peter-heffernan/" title="View all posts filed under Peter Heffernan">Peter Heffernan</a>
+</li>
+	<li class="cat-item cat-item-273"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/philip-martin/" title="View all posts filed under Philip Martin">Philip Martin</a>
+</li>
+	<li class="cat-item cat-item-274"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/sandra-doyle/" title="View all posts filed under Sandra Doyle">Sandra Doyle</a>
+</li>
+	<li class="cat-item cat-item-318"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/terry-mangan/" title="View all posts filed under Terry Mangan">Terry Mangan</a>
+</li>
+	<li class="cat-item cat-item-275"><a href="http://2010newlife.com/category/news1/news-ireland2/dublin-athletes/tom-metcalfe/" title="View all posts filed under Tom Metcalfe">Tom Metcalfe</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-230"><a href="http://2010newlife.com/category/news1/news-ireland2/galway-athletes/" title="View all posts filed under Galway athletes">Galway athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-312"><a href="http://2010newlife.com/category/news1/news-ireland2/galway-athletes/declan-odoherty-galway-athletes/" title="View all posts filed under Declan O&#039;Doherty">Declan O&#039;Doherty</a>
+</li>
+	<li class="cat-item cat-item-310"><a href="http://2010newlife.com/category/news1/news-ireland2/galway-athletes/enda-ansbro/" title="View all posts filed under Enda Ansbro">Enda Ansbro</a>
+</li>
+	<li class="cat-item cat-item-276"><a href="http://2010newlife.com/category/news1/news-ireland2/galway-athletes/eoin-madden/" title="View all posts filed under Eoin Madden">Eoin Madden</a>
+</li>
+	<li class="cat-item cat-item-277"><a href="http://2010newlife.com/category/news1/news-ireland2/galway-athletes/linda-meyler/" title="View all posts filed under Linda Meyler">Linda Meyler</a>
+</li>
+	<li class="cat-item cat-item-278"><a href="http://2010newlife.com/category/news1/news-ireland2/galway-athletes/michael-lydon/" title="View all posts filed under Michael Lydon">Michael Lydon</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-231"><a href="http://2010newlife.com/category/news1/news-ireland2/kerry-athletes/" title="View all posts filed under Kerry athletes">Kerry athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-280"><a href="http://2010newlife.com/category/news1/news-ireland2/kerry-athletes/colm-clifford/" title="View all posts filed under Colm Clifford">Colm Clifford</a>
+</li>
+	<li class="cat-item cat-item-279"><a href="http://2010newlife.com/category/news1/news-ireland2/kerry-athletes/con-brosnan/" title="View all posts filed under Con Brosnan">Con Brosnan</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-232"><a href="http://2010newlife.com/category/news1/news-ireland2/kildare-athletes/" title="View all posts filed under Kildare athletes">Kildare athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-281"><a href="http://2010newlife.com/category/news1/news-ireland2/kildare-athletes/elaine-maguire/" title="View all posts filed under Elaine Maguire">Elaine Maguire</a>
+</li>
+	<li class="cat-item cat-item-239"><a href="http://2010newlife.com/category/news1/news-ireland2/kildare-athletes/james-nolan/" title="View all posts filed under James Nolan">James Nolan</a>
+</li>
+	<li class="cat-item cat-item-282"><a href="http://2010newlife.com/category/news1/news-ireland2/kildare-athletes/sonia-treacy/" title="View all posts filed under Sonia Treacy">Sonia Treacy</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-215"><a href="http://2010newlife.com/category/news1/news-ireland2/kilkenny-athletes/" title="View all posts filed under Kilkenny athletes">Kilkenny athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-238"><a href="http://2010newlife.com/category/news1/news-ireland2/kilkenny-athletes/emma-osullivan-formerly-walsh/" title="View all posts filed under Emma O&#039;Sullivan (formerly Walsh)">Emma O&#039;Sullivan (formerly Walsh)</a>
+</li>
+	<li class="cat-item cat-item-284"><a href="http://2010newlife.com/category/news1/news-ireland2/kilkenny-athletes/john-paul-o-neill/" title="View all posts filed under John Paul O Neill">John Paul O Neill</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="http://2010newlife.com/category/news1/news-ireland2/kilkenny-athletes/laima-chvedukiene/" title="View all posts filed under Laima Chvedukiene">Laima Chvedukiene</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-308"><a href="http://2010newlife.com/category/news1/news-ireland2/leitrim-athletes/" title="View all posts filed under Leitrim athletes">Leitrim athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-309"><a href="http://2010newlife.com/category/news1/news-ireland2/leitrim-athletes/cathriona-charles/" title="View all posts filed under Cathriona Charles">Cathriona Charles</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-216"><a href="http://2010newlife.com/category/news1/news-ireland2/limerick-athletes/" title="View all posts filed under Limerick athletes">Limerick athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-244"><a href="http://2010newlife.com/category/news1/news-ireland2/limerick-athletes/john-loftus/" title="View all posts filed under John Loftus">John Loftus</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-217"><a href="http://2010newlife.com/category/news1/news-ireland2/longford-athletes/" title="View all posts filed under Longford athletes">Longford athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-286"><a href="http://2010newlife.com/category/news1/news-ireland2/longford-athletes/james-hannon/" title="View all posts filed under James Hannon">James Hannon</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-247"><a href="http://2010newlife.com/category/news1/news-ireland2/louth-athletes/" title="View all posts filed under Louth athletes">Louth athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-288"><a href="http://2010newlife.com/category/news1/news-ireland2/louth-athletes/gareth-mcbride/" title="View all posts filed under Gareth McBride">Gareth McBride</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-218"><a href="http://2010newlife.com/category/news1/news-ireland2/mayo-athletes/" title="View all posts filed under Mayo athletes">Mayo athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-237"><a href="http://2010newlife.com/category/news1/news-ireland2/mayo-athletes/darren-cawley/" title="View all posts filed under Darren Cawley">Darren Cawley</a>
+</li>
+	<li class="cat-item cat-item-289"><a href="http://2010newlife.com/category/news1/news-ireland2/mayo-athletes/liam-duffy/" title="View all posts filed under Liam Duffy">Liam Duffy</a>
+</li>
+	<li class="cat-item cat-item-233"><a href="http://2010newlife.com/category/news1/news-ireland2/mayo-athletes/regina-hennelly/" title="View all posts filed under Regina Hennelly">Regina Hennelly</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-219"><a href="http://2010newlife.com/category/news1/news-ireland2/meath-athletes/" title="View all posts filed under Meath athletes">Meath athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-313"><a href="http://2010newlife.com/category/news1/news-ireland2/meath-athletes/john-casey/" title="View all posts filed under John Casey">John Casey</a>
+</li>
+	<li class="cat-item cat-item-291"><a href="http://2010newlife.com/category/news1/news-ireland2/meath-athletes/rachel-eagleton/" title="View all posts filed under Rachel Eagleton">Rachel Eagleton</a>
+</li>
+	<li class="cat-item cat-item-292"><a href="http://2010newlife.com/category/news1/news-ireland2/meath-athletes/tony-gavigan/" title="View all posts filed under Tony Gavigan">Tony Gavigan</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-220"><a href="http://2010newlife.com/category/news1/news-ireland2/monaghan-athletes/" title="View all posts filed under Monaghan athletes">Monaghan athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-293"><a href="http://2010newlife.com/category/news1/news-ireland2/monaghan-athletes/johns-george/" title="View all posts filed under Johns George">Johns George</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-221"><a href="http://2010newlife.com/category/news1/news-ireland2/roscommon-athletes/" title="View all posts filed under Roscommon athletes">Roscommon athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-294"><a href="http://2010newlife.com/category/news1/news-ireland2/roscommon-athletes/john-henry/" title="View all posts filed under John Henry">John Henry</a>
+</li>
+	<li class="cat-item cat-item-243"><a href="http://2010newlife.com/category/news1/news-ireland2/roscommon-athletes/monica-finn/" title="View all posts filed under Monica Finn">Monica Finn</a>
+</li>
+	<li class="cat-item cat-item-295"><a href="http://2010newlife.com/category/news1/news-ireland2/roscommon-athletes/pat-hegarty/" title="View all posts filed under Pat Hegarty">Pat Hegarty</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-222"><a href="http://2010newlife.com/category/news1/news-ireland2/sligo-athletes/" title="View all posts filed under Sligo athletes">Sligo athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-241"><a href="http://2010newlife.com/category/news1/news-ireland2/sligo-athletes/bridie-nicholson/" title="View all posts filed under Bridie Nicholson">Bridie Nicholson</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-321"><a href="http://2010newlife.com/category/news1/news-ireland2/team-management/" title="View all posts filed under Team Management">Team Management</a>
+</li>
+	<li class="cat-item cat-item-223"><a href="http://2010newlife.com/category/news1/news-ireland2/tipperary-athletes/" title="View all posts filed under Tipperary athletes">Tipperary athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-296"><a href="http://2010newlife.com/category/news1/news-ireland2/tipperary-athletes/edward-crowe/" title="View all posts filed under Edward Crowe">Edward Crowe</a>
+</li>
+	<li class="cat-item cat-item-297"><a href="http://2010newlife.com/category/news1/news-ireland2/tipperary-athletes/orla-hogan-ryan/" title="View all posts filed under Orla Hogan Ryan">Orla Hogan Ryan</a>
+</li>
+	<li class="cat-item cat-item-298"><a href="http://2010newlife.com/category/news1/news-ireland2/tipperary-athletes/sheila-gregan/" title="View all posts filed under Sheila Gregan">Sheila Gregan</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-224"><a href="http://2010newlife.com/category/news1/news-ireland2/wexford-athletes/" title="View all posts filed under Wexford athletes">Wexford athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-299"><a href="http://2010newlife.com/category/news1/news-ireland2/wexford-athletes/brenda-cullen/" title="View all posts filed under Brenda Cullen">Brenda Cullen</a>
+</li>
+	<li class="cat-item cat-item-300"><a href="http://2010newlife.com/category/news1/news-ireland2/wexford-athletes/edward-kehoe/" title="View all posts filed under Edward Kehoe">Edward Kehoe</a>
+</li>
+	<li class="cat-item cat-item-311"><a href="http://2010newlife.com/category/news1/news-ireland2/wexford-athletes/joseph-kent/" title="View all posts filed under Joseph Kent">Joseph Kent</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-225"><a href="http://2010newlife.com/category/news1/news-ireland2/wicklow-athletes/" title="View all posts filed under Wicklow athletes">Wicklow athletes</a>
+		<ul class='children'>
+	<li class="cat-item cat-item-235"><a href="http://2010newlife.com/category/news1/news-ireland2/wicklow-athletes/garry-campbell/" title="View all posts filed under Garry Campbell">Garry Campbell</a>
+</li>
+	<li class="cat-item cat-item-301"><a href="http://2010newlife.com/category/news1/news-ireland2/wicklow-athletes/philip-kavanagh/" title="View all posts filed under Philip Kavanagh">Philip Kavanagh</a>
+</li>
+	<li class="cat-item cat-item-302"><a href="http://2010newlife.com/category/news1/news-ireland2/wicklow-athletes/seamus-eager/" title="View all posts filed under Seamus Eager">Seamus Eager</a>
+</li>
+	<li class="cat-item cat-item-303"><a href="http://2010newlife.com/category/news1/news-ireland2/wicklow-athletes/tony-gartland/" title="View all posts filed under Tony Gartland">Tony Gartland</a>
+</li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://2010newlife.com/category/schedule/" title="View all posts filed under Schedule">Schedule</a>
+<ul class='children'>
+	<li class="cat-item cat-item-192"><a href="http://2010newlife.com/category/schedule/games-tours/" title="View all posts filed under Games Tours">Games Tours</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-195"><a href="http://2010newlife.com/category/schedule/games-tours/games-tours-tuesday/" title="View all posts filed under Games Tours 1 &#8211; Tuesday">Games Tours 1 &#8211; Tuesday</a>
+</li>
+	<li class="cat-item cat-item-194"><a href="http://2010newlife.com/category/schedule/games-tours/games-tours-wednesday/" title="View all posts filed under Games Tours 2 &#8211; Wednesday">Games Tours 2 &#8211; Wednesday</a>
+</li>
+	<li class="cat-item cat-item-193"><a href="http://2010newlife.com/category/schedule/games-tours/games-tours-thursday/" title="View all posts filed under Games Tours 3 &#8211; Thursday">Games Tours 3 &#8211; Thursday</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-196"><a href="http://2010newlife.com/2010/05/opening-ceremony-–-sunday-august-8th/" title="View all posts filed under Opening Ceremony">Opening Ceremony</a>
+</li>
+	<li class="cat-item cat-item-197"><a href="http://2010newlife.com/2010/05/closing-ceremony/" title="View all posts filed under Closing Ceremony">Closing Ceremony</a>
+</li>
+	<li class="cat-item cat-item-138"><a href="http://2010newlife.com/2010/05/events-day-by-day/" title="View all posts filed under Events Day-by-Day">Events Day-by-Day</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-198"><a href="http://2010newlife.com/2010/05/sunday/" title="View all posts filed under Sunday">Sunday</a>
+</li>
+	<li class="cat-item cat-item-199"><a href="http://2010newlife.com/2010/05/monday-2/" title="View all posts filed under Monday">Monday</a>
+</li>
+	<li class="cat-item cat-item-200"><a href="http://2010newlife.com/2010/05/tuesday-2/" title="View all posts filed under Tuesday">Tuesday</a>
+</li>
+	<li class="cat-item cat-item-201"><a href="http://2010newlife.com/2010/05/wednesday-2/" title="View all posts filed under Wednesday">Wednesday</a>
+</li>
+	<li class="cat-item cat-item-202"><a href="http://2010newlife.com/2010/05/thursday-2/" title="View all posts filed under Thursday">Thursday</a>
+</li>
+	<li class="cat-item cat-item-203"><a href="http://2010newlife.com/2010/05/friday-2/" title="View all posts filed under Friday">Friday</a>
+</li>
+	<li class="cat-item cat-item-204"><a href="http://2010newlife.com/2010/05/saturday-2/" title="View all posts filed under Saturday">Saturday</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-139"><a href="http://2010newlife.com/category/schedule/social-calendar/" title="View all posts filed under Social Calendar">Social Calendar</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://2010newlife.com/category/sports/" title="View all posts filed under Sports">Sports</a>
+<ul class='children'>
+	<li class="cat-item cat-item-341"><a href="http://2010newlife.com/category/sports/all-event-results/" title="View all posts filed under All Event Results">All Event Results</a>
+</li>
+	<li class="cat-item cat-item-339"><a href="http://2010newlife.com/2010/08/all-athletics-results/" title="View all posts filed under Athletics results">Athletics results</a>
+</li>
+	<li class="cat-item cat-item-134"><a href="http://2010newlife.com/category/sports/badminton/" title="View all posts filed under Badminton">Badminton</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-328"><a href="http://2010newlife.com/wp-content/sports/badminton/Results/badminton.htm" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-131"><a href="http://2010newlife.com/category/sports/cycling/" title="View all posts filed under Cycling">Cycling</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-329"><a href="http://2010newlife.com/wp-content/sports/cycling/Results/cycling_results.htm" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-137"><a href="http://2010newlife.com/category/sports/darts/" title="View all posts filed under Darts">Darts</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-333"><a href="http://2010newlife.com/2010/08/darts-results/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-178"><a href="http://2010newlife.com/category/sports/field/" title="View all posts filed under Field">Field</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-336"><a href="http://2010newlife.com/category/sports/field/results-field/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-135"><a href="http://2010newlife.com/category/sports/golf/" title="View all posts filed under Golf">Golf</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-331"><a href="http://2010newlife.com/wp-content/sports/golf/Results/golf_results.htm" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-133"><a href="http://2010newlife.com/category/sports/mini-marathon/" title="View all posts filed under Mini-Marathon">Mini-Marathon</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-322"><a href="http://2010newlife.com/2010/08/results/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-129"><a href="http://2010newlife.com/category/sports/petanque/" title="View all posts filed under Petanque">Petanque</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-335"><a href="http://2010newlife.com/category/sports/petanque/results-petanque/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-340"><a href="http://2010newlife.com/2010/08/relay-results/" title="View all posts filed under Relay Results">Relay Results</a>
+</li>
+	<li class="cat-item cat-item-127"><a href="http://2010newlife.com/category/sports/swimming/" title="View all posts filed under Swimming">Swimming</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-338"><a href="http://2010newlife.com/category/sports/swimming/results-swimming/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-136"><a href="http://2010newlife.com/category/sports/table-tennis/" title="View all posts filed under Table Tennis">Table Tennis</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-332"><a href="http://2010newlife.com/wp-content/sports/tabletennis/Results/TableTennisResults.htm" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-128"><a href="http://2010newlife.com/category/sports/ten-pin-bowling/" title="View all posts filed under Ten Pin Bowling">Ten Pin Bowling</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-324"><a href="http://2010newlife.com/wp-content/sports/bowling/Results/bowling_results.htm" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-130"><a href="http://2010newlife.com/category/sports/tennis/" title="View all posts filed under Tennis">Tennis</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-334"><a href="http://2010newlife.com/2010/08/tennis-results/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-125"><a href="http://2010newlife.com/category/sports/track/" title="View all posts filed under Track">Track</a>
+	<ul class='children'>
+	<li class="cat-item cat-item-337"><a href="http://2010newlife.com/category/sports/track/results-track/" title="View all posts filed under Results">Results</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-132"><a href="http://2010newlife.com/2010/08/volleyball-cancelled/" title="View all posts filed under Volleyball">Volleyball</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-37"><a href="http://2010newlife.com/category/tourist-info/" title="View all posts filed under Tourist Info">Tourist Info</a>
+<ul class='children'>
+	<li class="cat-item cat-item-38"><a href="http://2010newlife.com/category/tourist-info/day-trips/" title="View all posts filed under Day Trips">Day Trips</a>
+</li>
+	<li class="cat-item cat-item-175"><a href="http://2010newlife.com/2010/05/general-tips/" title="View all posts filed under Tips for visit to Ireland">Tips for visit to Ireland</a>
+</li>
+	<li class="cat-item cat-item-176"><a href="http://2010newlife.com/2010/05/transportation/" title="View all posts filed under Getting Around">Getting Around</a>
+</li>
+	<li class="cat-item cat-item-205"><a href="http://2010newlife.com/2010/05/info-about-dublin/ " title="View all posts filed under Info About Dublin">Info About Dublin</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-40"><a href="http://2010newlife.com/2010/05/our-major-sponsors/" title="View all posts filed under Sponsors">Sponsors</a>
+<ul class='children'>
+	<li class="cat-item cat-item-147"><a href="http://2010newlife.com/2010/05/our-major-sponsors/" title="View all posts filed under Our Major Sponsors">Our Major Sponsors</a>
+</li>
+	<li class="cat-item cat-item-174"><a href="http://2010newlife.com/2010/05/our-partners/" title="View all posts filed under Our Partners">Our Partners</a>
+</li>
+	<li class="cat-item cat-item-148"><a href="http://2010newlife.com/2010/05/sponsorship-opportunities/" title="View all posts filed under Sponsorship Opportunities">Sponsorship Opportunities</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-184"><a href="http://2010newlife.com/guestbook/" title="View all posts filed under Guestbook">Guestbook</a>
+<ul class='children'>
+	<li class="cat-item cat-item-206"><a href="http://2010newlife.com/forum-3/" title="View all posts filed under Forum">Forum</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-44"><a href="http://2010newlife.com/category/contact-us/" title="View all posts filed under Contact">Contact</a>
+<ul class='children'>
+	<li class="cat-item cat-item-180"><a href="http://2010newlife.com/2010/05/country-managers/" title="View all posts filed under Country Managers">Country Managers</a>
+</li>
+	<li class="cat-item cat-item-181"><a href="http://2010newlife.com/2010/05/contact-us/" title="View all posts filed under Local Organising Committee">Local Organising Committee</a>
+</li>
+	<li class="cat-item cat-item-182"><a href="http://2010newlife.com/2010/05/media/" title="View all posts filed under Media Enquiries">Media Enquiries</a>
+</li>
+</ul>
+</li>
+            </ul>
+
+            
+
+
+    	</div>
+        
+    </div><!--header end-->
+<div id="breadcrumb">
+
+<!-- Breadcrumb, generated by 'Breadcrumb Nav XT' - http://sw-guide.de/ -->
+<a href="http://2010newlife.com" title="Browse to: Home">Home</a> &raquo; Hrvatska je odabrana za domaćina igara 2012. godin...
+</div>
+<div id="content"><!--content-->
+<div id="left-col"><!--left col-->
+
+	<div id="single">
+
+	
+		<div id="post-4236" class="single-post">
+        	<!--small>August 14th, 2010 </small-->
+			<h2>Hrvatska je odabrana za domaćina igara 2012. godine</h2>
+
+				<p><img class="aligncenter size-full wp-image-4239" title="zagreb-570" src="http://2010newlife.com/wp-content/uploads/2010/08/zagreb-570.jpg" alt="" width="570" height="285" /></p>
+<p>Ovaj tjedan na  proslavi u Dublinu, Irska, Zagreb je izabran za domaćina sljedećih Europskih igara koje će se održati 2012. godine. Europske igre dijaliziranih i transplantiranih osoba održati će se u Hrvatskoj po prvi puta.<br />
+Očekuje se da će na  igrama u Zagrebu sudjelovati preko 350 sportaša iz 25 zemalja.</p>
+<p>Uvjet za sudjelovanje na ovim igrama je da natjecatelji budu ili osobe sa transplantiranim organima ili osobe na dijalizi u vrijeme održavanja igara u Zagrebu, od 19. do 26. kolovoza 2012. godine.</p>
+<p>Ovaj tjedan u Dublinu su održane 6. Europske igre transplantiranih i osoba na dijalizi, na kojima je hrvatski tim ostvario zapažene rezultate.<br />
+Za više informacija o igrama u Dublinu pogledaje stranice <a href="http://www.2010NewLife.com">www.2010NewLife.com</a>.</p>
+<h3><em>Puno uspjeha Zagrebu 2012 žele svi sudionici Dublina 2010.</em></h3>
+<p><strong>Linkovi</strong></p>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr height="100" align="left" valign="middle">
+<td width="160" align="left"><a href="http://www.transplant.hr" target="_blank"><img src="http://2010newlife.com/wp-content/uploads/2010/08/transplant.jpg" alt="" width="160" height="100" /></a></td>
+<td width="10"></td>
+<td align="left"><a href="http://www.transplant.hr" target="_blank">Hrvatska udruga Tansplant</a></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="100" align="left" valign="middle">
+<td width="160" align="left"><a href="http://www.zagreb-touristinfo.hr" target="_blank"><img src="http://2010newlife.com/wp-content/uploads/2010/08/touristinfo.jpg" alt="" width="160" height="100" /></a></td>
+<td width="10"></td>
+<td align="left"><a href="http://www.zagreb-touristinfo.hr" target="_blank">Turistička zajednica grada Zagreba</a></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="100" align="left" valign="middle">
+<td width="160" align="left"><a href="http://croatia.hr/hr-HR/Naslovna" target="_blank"><img src="http://2010newlife.com/wp-content/uploads/2010/08/croatia.jpg" alt="" width="160" height="100" /></a></td>
+<td width="10"></td>
+<td align="left"><a href="http://croatia.hr/hr-HR/Naslovna" target="_blank">Hrvatska turistička zajednica</a></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="100" align="left" valign="middle">
+<td width="160" align="left"><a href="http://www.slinuacommunications.com" target="_blank"><img src="http://2010newlife.com/wp-content/uploads/2010/08/slinuacommunications.jpg" alt="" width="160" height="100" /></a></td>
+<td width="10"></td>
+<td align="left"><a href="http://www.slinuacommunications.com" target="_blank">Sli Nua Communications</a> &#8211; Agencija za odnose s javnošću koja pruža kompletne usluge klijentima raznih profila, uključujući i sportke klubove i organizacije. Sli Nua Communications je osnovao i vodi Liam Horan, višestruko nagrađivani novinar i publicist. Za potrebe Irskog tima dijaliziranih i transplantiranih osoba osiguravamo medijsku podršku od 2007. godine uključujući igre održane u Bangkoku &#8211; Tajland, Wurzburg &#8211; Njemačka, Gold Coast &#8211; Australija i Dublin &#8211; Irska. Naš strateški partner je Aqua Dizajn d.o.o., hrvatski dizajnerski studio iz Zagreba.</td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="100" align="left" valign="middle">
+<td width="160" align="left"><a href="http://www.aquadesign.hr" target="_blank"><img src="http://2010newlife.com/wp-content/uploads/2010/08/aqua1.jpg" alt="" width="160" height="100" /></a></td>
+<td width="10"></td>
+<td align="left"><a href="http://www.aquadesign.hr" target="_blank">Aqua Dizajn d.o.o.</a> &#8211; Hrvatski dizajnerski studio i strateški partner Sli Nua Communications. Aqua Dizajn d.o.o. pruža multimedijalne usluge klijentima iz širokog spektra djelatnosti.</td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+<tr height="10" valign="middle">
+<td width="160" align="center" valign="middle"></td>
+<td width="10"></td>
+<td valign="middle"></td>
+</tr>
+</tbody>
+</table>
+                <div class="clear"></div>
+			<p class="meta"><!--?php the_category(' . ') ?--></p>
+				
+		</div>
+        
+    <div class="social">
+    <strong>Share this via:</strong>
+<a href="http://del.icio.us/post?url=http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/&amp;title=Hrvatska je odabrana za domaćina igara 2012. godine" id="delicious-button" title="Delicious">Delicious</a>
+<a href="http://www.stumbleupon.com/submit?url=http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/&title=Hrvatska je odabrana za domaćina igara 2012. godine" id="stumble-button" title="Stumble">Stumble</a>
+<a href="http://digg.com/submit?phase=2&url=http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/&title=Hrvatska je odabrana za domaćina igara 2012. godine" id="digg-button" title="Digg">digg</a>
+<a href="http://www.reddit.com/submit?url=http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/&title=Hrvatska je odabrana za domaćina igara 2012. godine" id="redd-button" title="Reddit">Reddit</a>
+<a href="http://www.mixx.com/submit?page_url=http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/" id="mixx-button" title="Mixx">Mixx</a>
+<a href="http://twitter.com/home?status=http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/" id="twitt-button" title="Twitter">Twitter</a>
+<a href="http://2010newlife.com/2010/08/europske-igre-dijaliziranih-i-transplantiranih-osoba-odrzati-ce-se-u-hrvatskoj/feed" id="rss2-button" title="Subscribe">Subscribe</a>
+
+    </div>
+  	
+    
+	<!--?php comments_template('', true); ?-->
+	
+	    
+</div>
+
+
+</div><!--left col end-->
+<div id="right-col"><!--right col-->
+	<!--For Theme Options-->
+    	<!--End of For Theme Options-->
+    
+	    
+        
+    <div id="sidebar">
+    	
+
+		<!--?php include('tab.php'); ?-->
+
+
+        
+
+
+        <div class="box side-search">
+        	<form method="get" id="searchform" action="http://2010newlife.com/" class="left">
+            	<input type="text" id="s" value="" name="s" />
+                <input type="submit" value="Search" id="searchbutton" class="trans link" />
+            </form>
+            <div class="clear"></div>
+		</div>
+
+
+        
+                
+                
+              	 <div class="widget"><!-- AVH Extended Categories version 3.2.1 | http://blog.avirtualhome.com/wordpress-plugins/ --><h3>Galleries</h3><select name="extended-categories-select-4" id="extended-categories-select-4" class="postform" >
+	<option value="-1">Make a Selection</option>
+	<option class="level-0" value="161">Badminton</option>
+	<option class="level-0" value="162">Cycling</option>
+	<option class="level-0" value="163">Darts</option>
+	<option class="level-0" value="179">Field</option>
+	<option class="level-0" value="164">Golf</option>
+	<option class="level-0" value="165">Mini-Marathon</option>
+	<option class="level-0" value="166">Petanque</option>
+	<option class="level-0" value="326">Supporters</option>
+	<option class="level-0" value="167">Swimming</option>
+	<option class="level-0" value="168">Table-Tennis</option>
+	<option class="level-0" value="169">Ten-Pin-Bowling</option>
+	<option class="level-0" value="170">Tennis</option>
+	<option class="level-0" value="171">Track</option>
+	<option class="level-0" value="160">Volleyball</option>
+	<option class="level-0" value="325">Volunteers</option>
+</select>
+<script type='text/javascript'>
+/* <![CDATA[ */
+            var ec_dropdown_4 = document.getElementById("extended-categories-select-4");
+            function ec_onCatChange_4() {
+                if ( ec_dropdown_4.options[ec_dropdown_4.selectedIndex].value > 0 ) {
+                    location.href = "http://2010newlife.com/?cat="+ec_dropdown_4.options[ec_dropdown_4.selectedIndex].value;
+                }
+            }
+            ec_dropdown_4.onchange = ec_onCatChange_4;
+/* ]]> */
+</script>
+</div><div class="widget"><h3>Slideshow</h3>		<div class="ngg_slideshow widget">
+			
+<div class="ngg-widget-slideshow" id="sbsl1_1" style="width:298px; height:240px;">
+<a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see the slideshow.
+</div>
+<script type="text/javascript" defer="defer">
+<!--
+//<![CDATA[
+var sbsl1_1 = {
+	params : {
+		wmode : "opaque",
+		bgcolor : "#000000"},
+	flashvars : {
+		file : "http%3A%2F%2F2010newlife.com%2Findex.php%3Fcallback%3Dimagerotator%26gid%3D1",
+		shownavigation : "false",
+		shuffle : "false",
+		showicons : "false",
+		backcolor : "0x000000",
+		frontcolor : "0xFFFFFF",
+		lightcolor : "0xCC0000",
+		width : "298",
+		height : "240"},
+	attr : {
+		styleclass : "slideshow-widget"},
+	start : function() {
+		swfobject.embedSWF("http://2010newlife.com/wp-content/uploads/2010/05/imagerotator.swf", "sbsl1_1", "298", "240", "7.0.0", false, this.flashvars, this.params , this.attr );
+	}
+}
+sbsl1_1.start();
+//]]>
+-->
+</script>		</div>
+		</div><h3></h3>
+<div class='sb_container sb_container_fwithout_icons'>
+   <a class='prev'></a>
+   <div class='scrollable scrollable1 scrollable_fwithout_icons'>
+      <ul id='sidebarTabs_ul1' class='sidebarTabs sidebarTabs1 sb_fwithout_icons'>
+        <li><a href="#tab1" class="sb1" id="sb1">News All Countries</a></li>
+        <li><a href="#tab2" class="sb2" id="sb2">News Ireland</a></li>
+        <li><a href="#tab3" class="sb3" id="sb3">Twitter</a></li>
+        <li><a href="#tab4" class="sb4" id="sb4">Tags</a></li>
+      </ul>
+   </div>
+   <div class="sidebarTabs_divs sidebarTabs_panes sidebarTabs_divs1">
+      <div class="tb">
+<div id='categoryposts-4' class='sbtw widget_categoryposts'><h2 class='widgettitle widget_title'>News All Countries</h2><ul>
+		<li class="cat-post-item">
+			<a class="post-title" href="http://2010newlife.com/wp-content/uploads/2010/09/6th_ETDG_Dublin_Overall-Results.pdf" rel="bookmark" title="Permanent link to The Final Master Results Document">The Final Master Results Document</a>
+			
+			
+						
+						
+					</li>
+			<li class="cat-post-item">
+			<a class="post-title" href="http://2010newlife.com/wp-content/event_results/table_tennis/default.htm" rel="bookmark" title="Permanent link to Table Tennis &#8211; All Results">Table Tennis &#8211; All Results</a>
+			
+			
+						
+						
+					</li>
+			<li class="cat-post-item">
+			<a class="post-title" href="http://2010newlife.com/wp-content/event_results/athletics/Athletics_website.htm" rel="bookmark" title="Permanent link to Athletics (Track and Field) &#8211; All Results">Athletics (Track and Field) &#8211; All Results</a>
+			
+			
+						
+						
+					</li>
+	</ul>
+</div>      
+</div>
+
+      <div class="tb">
+<div id='categoryposts-5' class='sbtw widget_categoryposts'><h2 class='widgettitle widget_title'>News Ireland</h2><ul>
+		<li class="cat-post-item">
+			<a class="post-title" href="http://2010newlife.com/wp-content/uploads/2010/09/6th_ETDG_Dublin_Overall-Results.pdf" rel="bookmark" title="Permanent link to The Final Master Results Document">The Final Master Results Document</a>
+			
+			
+						
+						
+					</li>
+			<li class="cat-post-item">
+			<a class="post-title" href="http://2010newlife.com/wp-content/event_results/table_tennis/default.htm" rel="bookmark" title="Permanent link to Table Tennis &#8211; All Results">Table Tennis &#8211; All Results</a>
+			
+			
+						
+						
+					</li>
+			<li class="cat-post-item">
+			<a class="post-title" href="http://2010newlife.com/wp-content/event_results/athletics/Athletics_website.htm" rel="bookmark" title="Permanent link to Athletics (Track and Field) &#8211; All Results">Athletics (Track and Field) &#8211; All Results</a>
+			
+			
+						
+						
+					</li>
+	</ul>
+</div>      
+</div>
+
+      <div class="tb">
+<div id='twitter-2' class='sbtw widget_twitter'><div><h2 class='widgettitle widget_title'>Twitter</h2><ul><li><span class='entry-content'>Check the link below to read about the recent European Gaems. There are plenty of photos also! <a href="http://fb.me/FLndPrwc">http://fb.me/FLndPrwc</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/2010Newlife/statuses/26533606862">08:27:33 AM October 06, 2010</a></span> <span class='from-meta'>from <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></span></span></li><li><span class='entry-content'>Hi!
+ Looking for Games photos.  You can use the link below to send them in 
+their original size (use colin@ika.ie)... <a href="http://fb.me/IPPHLObl">http://fb.me/IPPHLObl</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/2010Newlife/statuses/25687241061">01:42:21 PM September 27, 2010</a></span> <span class='from-meta'>from <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></span></span></li><li><span class='entry-content'>Thinking of preparing for athletics for next year's Games? Check the link below for your nearest club. <a href="http://fb.me/FIMEWRE3">http://fb.me/FIMEWRE3</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/2010Newlife/statuses/24372218920">10:53:29 AM September 13, 2010</a></span> <span class='from-meta'>from <a href="http://www.facebook.com/twitter" rel="nofollow">Facebook</a></span></span></li></ul></div></div>      
+</div>
+
+      <div class="tb">
+<div id='tag_cloud-2' class='sbtw widget_tag_cloud'><h2 class='widgettitle widget_title'>Tags</h2><div><a href='http://2010newlife.com/tag/all-countries/' class='tag-link-121' title='13 topics' style='font-size: 20.506666666667pt;'>All countries</a>
+<a href='http://2010newlife.com/tag/austria/' class='tag-link-65' title='7 topics' style='font-size: 15.84pt;'>Austria</a>
+<a href='http://2010newlife.com/tag/belgium/' class='tag-link-66' title='5 topics' style='font-size: 13.6pt;'>Belgium</a>
+<a href='http://2010newlife.com/tag/bulgaria/' class='tag-link-67' title='5 topics' style='font-size: 13.6pt;'>Bulgaria</a>
+<a href='http://2010newlife.com/tag/celebrity-support/' class='tag-link-207' title='3 topics' style='font-size: 10.24pt;'>Celebrity Support</a>
+<a href='http://2010newlife.com/tag/croatia/' class='tag-link-68' title='4 topics' style='font-size: 12.106666666667pt;'>Croatia</a>
+<a href='http://2010newlife.com/tag/cyprus/' class='tag-link-69' title='4 topics' style='font-size: 12.106666666667pt;'>Cyprus</a>
+<a href='http://2010newlife.com/tag/czech-republic/' class='tag-link-93' title='4 topics' style='font-size: 12.106666666667pt;'>Czech Republic</a>
+<a href='http://2010newlife.com/tag/denmark/' class='tag-link-71' title='4 topics' style='font-size: 12.106666666667pt;'>Denmark</a>
+<a href='http://2010newlife.com/tag/finland/' class='tag-link-72' title='4 topics' style='font-size: 12.106666666667pt;'>Finland</a>
+<a href='http://2010newlife.com/tag/france/' class='tag-link-73' title='5 topics' style='font-size: 13.6pt;'>France</a>
+<a href='http://2010newlife.com/tag/germany/' class='tag-link-74' title='5 topics' style='font-size: 13.6pt;'>Germany</a>
+<a href='http://2010newlife.com/tag/greece/' class='tag-link-75' title='7 topics' style='font-size: 15.84pt;'>Greece</a>
+<a href='http://2010newlife.com/tag/hungary/' class='tag-link-76' title='5 topics' style='font-size: 13.6pt;'>Hungary</a>
+<a href='http://2010newlife.com/tag/ireland/' class='tag-link-77' title='16 topics' style='font-size: 22pt;'>Ireland</a>
+<a href='http://2010newlife.com/tag/italy/' class='tag-link-78' title='4 topics' style='font-size: 12.106666666667pt;'>Italy</a>
+<a href='http://2010newlife.com/tag/logos/' class='tag-link-315' title='9 topics' style='font-size: 17.706666666667pt;'>Logos</a>
+<a href='http://2010newlife.com/tag/luxembourg/' class='tag-link-79' title='3 topics' style='font-size: 10.24pt;'>Luxembourg</a>
+<a href='http://2010newlife.com/tag/netherlands/' class='tag-link-80' title='2 topics' style='font-size: 8pt;'>Netherlands</a>
+<a href='http://2010newlife.com/tag/norway/' class='tag-link-81' title='4 topics' style='font-size: 12.106666666667pt;'>Norway</a>
+<a href='http://2010newlife.com/tag/poland/' class='tag-link-82' title='4 topics' style='font-size: 12.106666666667pt;'>Poland</a>
+<a href='http://2010newlife.com/tag/portugal/' class='tag-link-316' title='2 topics' style='font-size: 8pt;'>Portugal</a>
+<a href='http://2010newlife.com/tag/results/' class='tag-link-322' title='6 topics' style='font-size: 14.906666666667pt;'>Results</a>
+<a href='http://2010newlife.com/tag/romania/' class='tag-link-83' title='4 topics' style='font-size: 12.106666666667pt;'>Romania</a>
+<a href='http://2010newlife.com/tag/slovakia/' class='tag-link-84' title='3 topics' style='font-size: 10.24pt;'>Slovakia</a>
+<a href='http://2010newlife.com/tag/slovenia/' class='tag-link-85' title='6 topics' style='font-size: 14.906666666667pt;'>Slovenia</a>
+<a href='http://2010newlife.com/tag/spain/' class='tag-link-86' title='4 topics' style='font-size: 12.106666666667pt;'>Spain</a>
+<a href='http://2010newlife.com/tag/sweden/' class='tag-link-87' title='4 topics' style='font-size: 12.106666666667pt;'>Sweden</a>
+<a href='http://2010newlife.com/tag/turkey/' class='tag-link-88' title='2 topics' style='font-size: 8pt;'>Turkey</a>
+<a href='http://2010newlife.com/tag/ukraine/' class='tag-link-89' title='2 topics' style='font-size: 8pt;'>Ukraine</a>
+<a href='http://2010newlife.com/tag/united-kingdom/' class='tag-link-94' title='3 topics' style='font-size: 10.24pt;'>United Kingdom</a>
+<a href='http://2010newlife.com/tag/volunteer/' class='tag-link-317' title='3 topics' style='font-size: 10.24pt;'>Volunteer</a></div>
+</div>      
+</div>
+
+   </div>
+</div>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+  ind1=0;   jQuery(document).ready(function(){
+      jQuery("ul.sidebarTabs1").tabs("div.sidebarTabs_divs1 > .tb", {
+							    initialIndex: 0
+					   });		
+   });
+/* ]]> */
+</script><div class="widget"><h3>Regina’s blog</h3>			<div class="textwidget"><center><a href="http://2010newlife.com/2010/06/reginas-blog/"><img src="http://2010newlife.com/wp-content/uploads/2010/06/regina-600.jpg" width="290" alt="" /></a></center></div>
+		</div><div class="widget"><h3>Be a Donor</h3>			<div class="textwidget"><center><a href="http://www.ika.ie" target="_blank"><img src="http://2010newlife.com/wp-content/uploads/2010/05/ika_donor_card.jpg" width="190" height="165" alt="" /></a></center></div>
+		</div><div class="widget">			<div class="textwidget"><center><a href="http://www.organdonation.ie"><img src="http://2010newlife.com/wp-content/uploads/2010/08/organdonation.jpg" width="290" alt="" target="_blank"/></a></center></div>
+		</div><div class="widget"><h3>Google News<br>Ireland : All</h3><div><ul><li><a href="http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNEqxIP07lzNNbPvTQnUoUxTZYq0uQ&url=http://www.mlive.com/news/flint/index.ssf/2010/11/flushing_township_woman_believ.html" target="_blank" title="The Flint Journal - MLive.com">Flushing Township woman believed to be one of the state's longest-surviving ... - The Flint Journal - MLive.com<br></a></li></ul></div></div><div class="widget"><h3> </h3>		<ul>
+			<li class="page_item page-item-1155"><a href="http://2010newlife.com/category/you-tube/" title="Video">Video</a></li>
+<li class="page_item page-item-1151"><a href="http://2010newlife.com/category/links/" title="Links">Links</a></li>
+		</ul>
+		</div><div class="widget">			<div class="textwidget"><table width="100%" border="0" cellspacing="0" cellpadding="0" height="70">
+  <tr valign="middle">
+    <td valign="middle" align="center" width="10"><a href="http://www.facebook.com/pages/Dublin-Ireland/Transplant-Team-Ireland/123651141512#!/pages/6th-European-Transplant-Dialysis-Games/138268097419?ref=ts" target="_blank">
+<img src="http://2010newlife.com/wp-content/uploads/2010/05/facebook.jpg"></a></td>
+    <td>&nbsp;</td>
+    <td valign="middle" align="left"><a href="http://www.facebook.com/pages/Dublin-Ireland/Transplant-Team-Ireland/123651141512#!/pages/6th-European-Transplant-Dialysis-Games/138268097419?ref=ts" target="_blank"> Follow us on Facebook</a></td>
+  </tr>
+</table></div>
+		</div><div class="widget">			<div class="textwidget"><table width="100%" border="0" cellspacing="0" cellpadding="0" height="70">
+  <tr valign="middle">
+    <td valign="middle" align="center" width="10"><a href="http://twitter.com/2010Newlife" target="_blank">
+<img src="http://2010newlife.com/wp-content/uploads/2010/05/twitter.png"></a></td>
+    <td>&nbsp;</td>
+    <td valign="middle" align="left"><a href="http://twitter.com/2010Newlife" target="_blank"> Follow us on Twitter</a></td>
+  </tr>
+</table></div>
+		</div><div class="widget"><h3>Recent Forum Posts</h3><ul class='sftagul'><li class='sftagli'>
+<a href="http://2010newlife.com/forum-3/dublin-talk/photos-for-you/#p18">Photos for you!</a>
+</li>
+<li class='sftagli'>
+<a href="http://2010newlife.com/forum-3/dublin-talk/opening-ceremony/#p17">Opening Ceremony ?</a>
+</li>
+<li class='sftagli'>
+<a href="http://2010newlife.com/forum-3/dublin-talk/countdown-is-in-single-figures-what-do-you-want-from-the-games/#p15">Countdown is in Single Figures - What do you want from the Games</a>
+</li>
+</ul></div><div class="widget"><h3>Archives</h3>		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Select Month</option> 	<option value='http://2010newlife.com/2010/09/'> September 2010 </option>
+	<option value='http://2010newlife.com/2010/08/'> August 2010 </option>
+	<option value='http://2010newlife.com/2010/07/'> July 2010 </option>
+	<option value='http://2010newlife.com/2010/06/'> June 2010 </option>
+	<option value='http://2010newlife.com/2010/05/'> May 2010 </option>
+	<option value='http://2010newlife.com/2010/04/'> April 2010 </option>
+	<option value='http://2010newlife.com/2010/02/'> February 2010 </option>
+	<option value='http://2010newlife.com/2010/01/'> January 2010 </option>
+	<option value='http://2010newlife.com/2009/10/'> October 2009 </option>
+	<option value='http://2010newlife.com/2009/05/'> May 2009 </option>
+	<option value='http://2010newlife.com/2007/07/'> July 2007 </option>
+ </select>
+</div>        
+        <p></p>
+                
+    </div>
+
+
+    
+</div><!--right col end--></div><!--content end-->
+</div><!--wrapper end-->
+<div id="full">
+	<div class="wrapper">
+    	<div id="path-container">
+        	<a href="#header" class="top"></a>
+        </div>
+       	<div class="clear"></div>
+        <div class="full-cat">
+        	<ul>
+            <li><!--a href="http://2010newlife.com">home</a--></li>
+			<!--?php wp_list_pages('hierarchical=false&title_li=&depth=1'); ?-->
+            <!--?php wp_list_categories('hierarchical=false&title_li=&depth=-1'); ?-->
+
+
+	<li class="cat-item cat-item-1"><a href="http://2010newlife.com" title="View all posts filed under Home">Home</a>
+</li>
+	<li class="cat-item cat-item-27"><a href="http://2010newlife.com/2010/04/register-now-for-dublin-2010-2/" title="View all posts filed under Registration">Registration</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="http://2010newlife.com/2010/05/volunteers/" title="View all posts filed under Volunteers">Volunteers</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://2010newlife.com/category/news1/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="http://2010newlife.com/category/schedule/" title="View all posts filed under Schedule">Schedule</a>
+</li>
+	<li class="cat-item cat-item-32"><a href="http://2010newlife.com/category/sports/" title="View all posts filed under Sports">Sports</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="http://2010newlife.com/category/tourist-info/" title="View all posts filed under Tourist Info">Tourist Info</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="http://2010newlife.com/2010/05/our-major-sponsors/" title="View all posts filed under Sponsors">Sponsors</a>
+</li>
+	<li class="cat-item cat-item-184"><a href="http://2010newlife.com/guestbook/" title="View all posts filed under Guestbook">Guestbook</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="http://2010newlife.com/category/contact-us/" title="View all posts filed under Contact">Contact</a>
+</li>
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+	<div class="wrapper">
+    	<div class="credit">
+        	<span>© Copyright 2009 DUBLIN Ireland 2010. Some rights reserved. European Transplant &amp; Dialysis Games, Dublin, Ireland</span>
+			<em>Public Relations & Site Design <a href="http://www.slinuacommunications.com" target="_blank">Sli Nua Communications</a></em>
+        </div>
+    </div>
+</div>	
+
+</body>
+</html>

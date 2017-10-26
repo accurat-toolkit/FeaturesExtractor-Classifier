@@ -1,0 +1,559 @@
+
+
+<html>
+
+<head>
+	<title>Algoritam Multimedia Bookshop [novosti]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta http-equiv="Refresh" content="1140">
+<meta http-equiv="Window-target" content="_top">
+<meta http-equiv="ImageToolbar" content="no">
+<link href="ikone/hi-tech/stil.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" src="skripte/izbornik.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+function search_key_F(field,title) {
+	f = document.getElementById(field);
+	if(f.value==title) f.value = '';
+}
+function search_key_B(field,title) {
+	f = document.getElementById(field);
+	if(f.value=='') f.value = title;
+}
+nereidFadeObjects = new Object();
+nereidFadeTimers = new Object();
+function nereidFade (object, destOp, rate, delta) {
+    if (!document.all) return;
+    if (object != "[object]") {
+        setTimeout("nereidFade("+object+","+destOp+","+rate+","+delta+")",0);
+        return;
+    }
+    clearTimeout(nereidFadeTimers[object.sourceIndex]);
+    diff = destOp-object.filters.alpha.opacity;
+    direction = 1;
+    if (object.filters.alpha.opacity > destOp) {
+        direction = -1;
+    }
+    delta=Math.min(direction*diff,delta);
+    object.filters.alpha.opacity+=direction*delta;
+    if (object.filters.alpha.opacity != destOp) {
+        nereidFadeObjects[object.sourceIndex]=object;
+        nereidFadeTimers[object.sourceIndex]=setTimeout("nereidFade(nereidFadeObjects["+object.sourceIndex+"],"+destOp+","+rate+","+delta+")",rate);
+    }
+}
+function preloadImages() {
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+<style type="text/css">
+.box_sadrzaj { padding: 5px; }
+</style>
+</head>
+
+<body bgcolor="#EDEDED" background="ikone/hi-tech/bg.gif" leftmargin="0" topmargin="5" marginwidth="0" marginheight="0">
+<table width="955" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000;">
+  <tr align="right" valign="top"> 
+    <td height="90" align="center" valign="bottom" background="ikone/hi-tech/title1.jpg">&nbsp;</td>
+  </tr>
+  <tr valign="top">
+    <td height="29" align="center" valign="bottom" background="ikone/hi-tech/title2.jpg"><a href="./?m=0"><img src="ikone/hi-tech/kart_0_b.gif" width="80" height="24" border="0"></a><a href="./?m=1"><img src="ikone/hi-tech/kart_1_a.gif" width="80" height="24" border="0"></a><a href="./?m=2"><img src="ikone/hi-tech/kart_2_a.gif" width="80" height="24" border="0"></a><a href="./?m=3"><img src="ikone/hi-tech/kart_3_a.gif" width="80" height="24" border="0"></a><a href="./?m=4"><img src="ikone/hi-tech/kart_4_a.gif" width="80" height="24" border="0"></a><a href="./?m=5"><img src="ikone/hi-tech/kart_5_a.gif" width="80" height="24" border="0"></a><a href="./?m=6"><img src="ikone/hi-tech/kart_6_a.gif" width="80" height="24" border="0"></a><a href="./?m=7"><img src="ikone/hi-tech/kart_7_a.gif" width="80" height="24" border="0"></a><a href="./?m=454"><img src="ikone/hi-tech/kart_454_a.gif" width="80" height="24" border="0"></a></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="24" align="center" valign="middle" background="ikone/hi-tech/traka.gif" bgcolor="#8d96a8"><font size="1" color="#FFFFFF">&nbsp;</font></td>
+  </tr>
+</table>
+<table width="955" border="0" align="center" cellpadding="0" cellspacing="0" style="border-left: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000;">
+  <tr> 
+    <td width="200" align="center" valign="top" bgcolor="#c3c0c7" style="border-right: 1px solid #DDDDDD;">
+            <a href="http://www.algoritam.hr/novosti.asp"><img src="ikone/hi-tech/algo_predlist3.gif" width="200" height="235" border="0"></a><img src="http://www.algoritam.hr/slike/slike/algo_predlistrazmak.jpg" width="200" height="26">
+      
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+    <td><font size="1"><img src="ikone/hi-tech/b_n_citano.jpg" width="200" height="16" border="0"></font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2338">
+      <strong>
+        Originalne, ruèno raðene èestitke!
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2327">
+      <strong>
+        Putevima Pottera i Sumraka
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2324">
+      <strong>
+        Bili ste zloèesti ove godine?
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2321">
+      <strong>
+        KEN FOLLET... STUPOVI ZEMLJE...
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2289">
+      <strong>
+        Intervju s autorom knjige ''Povezani''
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2285">
+      <strong>
+        POVEŽITE SE!
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2284">
+      <strong>
+        Bogovi današnjice su hedonizam, bogatstvo i slava
+        </strong></a></font><br>
+      </font></td>
+    </tr>
+  
+</table>
+      <p>&nbsp;</p>
+      
+      
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+    <td><font size="1"><img src="ikone/hi-tech/b_n_najave.jpg" width="200" height="16" border="0"></font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=1861">
+      <strong>
+        Ujedinjeni u tuzi
+        </strong></a></font><br>
+      Novi roman autora romana "Kako utješiti udovca" topla je ljudska prièa o jednoj "ludoj" obitelji koju æemo uskoro gledati i na velikom ekranu…
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=1787">
+      <strong>
+        Novu bestseler seriju romana…
+        </strong></a></font><br>
+      … o Sookie Stackhouse, èije "pustolovine" u nagraðivanoj TV seriji mogu pratiti i naši gledatelji, uskoro æete èitati i na hrvatskom!
+      </font></td>
+    </tr>
+  
+</table>
+      <p>&nbsp;</p>      
+      
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+    <td><font size="1"><img src="ikone/hi-tech/b_n_intervjui.jpg" width="200" height="16" border="0"></font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2289">
+      <strong>
+        Intervju s autorom knjige ''Povezani''
+        </strong></a></font><br>
+      Algoritam u cijelosti prenosi intervju s autorom knjige Povezani, objavljen na T-portalu.
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2241">
+      <strong>
+        Razgovor: Mirta Stantiæ
+        </strong></a></font><br>
+      Lorna, Filip, Ivan i Juraj društvo su iz centra grada, iz ulice bez kuænih brojeva. Ovo je prièa o njihova dva ljeta i onome izmeðu. Prièa o djetinjstvu, zaljubljivanju, odrastanju.
+      </font></td>
+    </tr>
+  
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2236">
+      <strong>
+        Razgovor: Nada Gašiæ
+        </strong></a></font><br>
+      Zbilja je uvijek fascinantnija i strašnija od literature
+      </font></td>
+    </tr>
+  
+</table>
+      <p>&nbsp;</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+    <td><font size="1"><img src="ikone/hi-tech/b_n_filmknjiga.jpg" width="200" height="16" border="0"></font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2163">
+      <strong>
+      Oskarovac æe raditi na ''Praskozorju''
+      </strong></a></font><br>
+      Summit Enertainment angažirao je Billa Condona kao režisera završnog dijela sage Sumrak, "Praskozorja"…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2066">
+      <strong>
+      Robert Pattinson u ekranizaciji ''Vode za slonove''
+      </strong></a></font><br>
+      Robert Pattinson, poznatiji kao Edward Cullen iz Sumrak sage, zaigrat æe u filmskoj adaptaciji romana "Voda za slonove"…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2065">
+      <strong>
+      ''Praskozorje'' u dva dijela
+      </strong></a></font><br>
+      Filmska ekranizacija posljednje knjige iz sage "Sumrak", "Praskozorje", ipak æe biti snimljena u dva dijela…
+      </font></td>
+  </tr>
+
+</table>
+      
+      <p>&nbsp;</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+    <td><font size="1"><img src="ikone/hi-tech/b_n_mediji.jpg" width="200" height="16" border="0"></font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2179">
+      <strong>
+      Kriza konaèno stigla u Hrvatsku
+      </strong></a></font><br>
+      … i to u obliku najnovijeg romana autorskog dvojca kojeg èine Marko Mihalinec i Velimir Grgiæ…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2162">
+      <strong>
+      Razgovor s Majom Saèer
+      </strong></a></font><br>
+      Na tportalu objavljen je intervju s Majom Saèer, mladom autoricom koja je prošle godine objavila svoju prvu zbirku prièa intrigantna naslova "Božji grijesi"…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=2052">
+      <strong>
+      Zajednièka roðendanska proslava
+      </strong></a></font><br>
+      "Jedanaest je sati. Pred Algoritmovom knjižarom u Gajevoj ulici veæ se satima stvara nepregledan red. Unatoè zimi, kolona duga stotinjak metara ni jednom se rijeèju ne žali na hladnoæu, uporan vjetar i zamorno èekanje"…
+      </font></td>
+  </tr>
+
+</table>
+
+      <p>&nbsp;</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+    <td><font size="1"><img src="ikone/hi-tech/b_n_press.jpg" width="200" height="16" border="0"></font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=1889">
+      <strong>
+      7, 11, 13, 17, 19, 23, 29……
+      </strong></a></font><br>
+      Za roman "Samoæa primarnih brojeva" Giordano je dobio najugledniju talijansku književnu nagradu – Strega…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=1885">
+      <strong>
+      David McWilliams u Hrvatskoj
+      </strong></a></font><br>
+      Jedan od najpoznatijih irskih novinara i autor knjige "Papina djeca" poèetkom listopada dolazi u Hrvatsku…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=1875">
+      <strong>
+      Romani o kojima æete postati ovisni!
+      </strong></a></font><br>
+      Dobrodošli na Upper East Side New Yorka, gdje moji prijatelji i ja živimo, zabavljamo se i spavamo – katkad jedni s drugima…
+      </font></td>
+  </tr>
+
+  <tr align="left" valign="top"> 
+    <td width="300" class="box_sadrzaj"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font color="#1C3C7F"> 
+      <a href="novosti.asp?p=vijest&id=1758">
+      <strong>
+      Najstrašniji autor na svijetu
+      </strong></a></font><br>
+      R. L. Stine, najpopularniji amerièki pisac za mlade, autor više od stotinu naslova u žanru trilera i horrora, sam tvrdi kako ima najbolji posao na svijetu.
+      </font></td>
+  </tr>
+
+</table>
+      <p>&nbsp;</p>
+      <table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><font size="1"><img src="ikone/hi-tech/b_n_trazilica.jpg" width="200" height="16" border="0"></font></td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr>
+          <td bgcolor="#c3c0c7" style="border-bottom: 1px solid #1C3C7F;"><form name="ntrazilica" method="get" action="novosti.asp">
+            <p><font size="1"><img src="ikone/razmak.gif" width="145" height="5" border="0"> <img src="ikone/razmak.gif" width="5" height="30" border="0" align="left">
+              
+              <input type="hidden" name="p" value="trazilica">
+              <input name="trazi" type="text" id="trazi" style="width: 180px;" size="12" title="Unesite jednu ili više rijeèi za pretragu.">
+          </form></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr align="left" valign="top">
+          <td><font size="1"><img src="ikone/hi-tech/b_n_arhiva.jpg" width="200" height="16" border="0"></font></td>
+        </tr>
+        <tr align="left" valign="top">
+          <td width="300" class="box_sadrzaj"><font size="1" color="#1C3C7F">
+            <li style="display: block;" onMouseOver="aGodina_2010.style.display='inline';" onMouseOut="aGodina_2010.style.display='inline';"><a href="novosti.asp?p=arhiva&o=g&godina=2010"><strong>2010</strong></a> &gt; <span id="aGodina_2010" style="display: none;"><a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=1">1</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=2">2</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=3">3</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=4">4</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=5">5</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=6">6</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=7">7</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=8">8</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=9">9</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=10">10</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=11">11</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2010&mjesec=12">12</a> </span></li><li style="display: block;" onMouseOver="aGodina_2009.style.display='inline';" onMouseOut="aGodina_2009.style.display='inline';"><a href="novosti.asp?p=arhiva&o=g&godina=2009"><strong>2009</strong></a> &gt; <span id="aGodina_2009" style="display: none;"><a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=1">1</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=2">2</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=3">3</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=4">4</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=5">5</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=6">6</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=7">7</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=8">8</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=9">9</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=10">10</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=11">11</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2009&mjesec=12">12</a> </span></li><li style="display: block;" onMouseOver="aGodina_2008.style.display='inline';" onMouseOut="aGodina_2008.style.display='inline';"><a href="novosti.asp?p=arhiva&o=g&godina=2008"><strong>2008</strong></a> &gt; <span id="aGodina_2008" style="display: none;"><a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=1">1</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=2">2</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=3">3</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=4">4</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=5">5</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=6">6</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=7">7</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=8">8</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=9">9</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=10">10</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=11">11</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2008&mjesec=12">12</a> </span></li><li style="display: block;" onMouseOver="aGodina_2007.style.display='inline';" onMouseOut="aGodina_2007.style.display='inline';"><a href="novosti.asp?p=arhiva&o=g&godina=2007"><strong>2007</strong></a> &gt; <span id="aGodina_2007" style="display: none;"><a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=1">1</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=2">2</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=3">3</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=4">4</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=5">5</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=6">6</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=7">7</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=8">8</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=9">9</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=10">10</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=11">11</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2007&mjesec=12">12</a> </span></li><li style="display: block;" onMouseOver="aGodina_2006.style.display='inline';" onMouseOut="aGodina_2006.style.display='inline';"><a href="novosti.asp?p=arhiva&o=g&godina=2006"><strong>2006</strong></a> &gt; <span id="aGodina_2006" style="display: none;"><a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=1">1</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=2">2</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=3">3</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=4">4</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=5">5</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=6">6</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=7">7</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=8">8</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=9">9</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=10">10</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=11">11</a> <a href="novosti.asp?p=arhiva&o=gm&godina=2006&mjesec=12">12</a> </span></li>
+          </font></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>Pišite nam na:
+      <br><a href="mailto:predlist@algoritam.hr">predlist@algoritam.hr</a></p>
+        <p>&nbsp;</p>
+    </td>
+    <td width="530" align="center" valign="top" bgcolor="#FFFFFF"><table width="500" height="105" border="0" cellpadding="5" cellspacing="0" style="cursor: hand;" onClick="window.location='novosti.asp';">
+      <tr>
+        <td align="left" valign="top" background="ikone/hi-tech/algo_predlist4.gif">
+		</td>
+      </tr>
+    </table>   
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Arial, Helvetica, sans-serif">subota, &nbsp;
+          11. prosinca 2010 &nbsp;
+          broj: 
+          1532 &nbsp;
+          godina: 5 &nbsp;
+          Ureðuje: Ivana Paveliæ</font></p>
+    <p>      <br>
+    </p>
+      <table width="100%" border="0" align="right" cellspacing="0" cellpadding="5">
+  <tr align="left" valign="top"> 
+    <td>
+		<p><TABLE cellSpacing=0 cellPadding=2 width=470 border=1 bordercolor="#000000">
+<TBODY>
+<TR bgColor=#939393>
+<TD width="470" bgcolor="#000000"><FONT face="Arial Black" color=#ffffff size=4>Hemingway i Dietrich</FONT></TD>
+</TR>
+<TR>
+<TD><p><FONT face="Arial Black" size=5>Platonska ljubav plavog anðela i pisca-avanturista</FONT></p>
+<p><FONT face="Arial, Helvetica, sans-serif" size=3><STRONG>Za njega ona je bila "moje malo zelje" i "kæi", a on je njoj jednostavno bio – "Papa" – i definitivno se radilo o ljubavi na prvi pogled kad su se upoznali daleke 1934. godine, na francuskom prekooceanskom brodu.</STRONG></FONT> </p>
+<p><FONT face="Verdana, Arial, Helvetica, sans-serif" color=#000000>Komplet od trideset neobjavljenih pisama i telegrama legendarnog amerièkog autora <b>Ernesta Hemingwayja</b> njemaèkoj glumici i pjevaèici <b>Marlene Dietrich</b>, koji su prije nekoliko tjedana po prvi puta javno objavljena, otkrivaju dubinu meðusobne strasti – iako je ona za cijelo vrijeme njihova poznanstva bila èisto platonske naravi.<br><br>
+</FONT></p>
+<table border=0 cellspacing=0 cellpadding=0 align=left width=125>
+  <tr>
+    <td width=125>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><img src="http://www.algoritam.hr/slike/slike/Hemingway2.jpg" border=0 width=120 height=162 hspace="6"></font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width=125>
+      <p align="left"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif"><strong>Marlene Dietrich i Ernest Hemingway upoznali su se na prekooceanskom brodu Ile de France, 1934. godine, kada je njoj bilo 47, a njemu 50 godine, i prijateljevali sve do njegovog samoubojstva, 1961.</strong></font></p>
+    </td>
+  </tr>
+</table>
+<p><FONT face="Verdana, Arial, Helvetica, sans-serif" color=#000000>Upoznali
+    su se na prekooceanskom brodu Ile de France, koji je plovio preko Atlantskog
+    oceana, 1934. godine, kada je njoj bilo 47, a njemu 50 godine, i prijateljevali
+    sve do njegovog samoubojstva, 1961. godine. Glumica i autor izmjenjivali
+    su pisma koja dokazuju da je veza meðu njima bila duboka, strastvena i, vrlo
+    vjerojatno, "platonska". Nema dokaza da su bili ljubavnici, upozoravaju poznavaoci njihovih života, iako je u  nemalom broju pisama meðusobna privlaènost jasno opipljiva – Marlene, primjerice, u jednom uratku iz 1951. priznaje da stalno misli na njega. "Neprestano išèitavam tvoja pisma i prièam o tebi sa samo nekoliko muškaraca. Tvoju fotografiju stavila sam u spavaæu sobu i gledam je s obožavanjem",
+    piše. Veæ se spekulira i kako bi se njihova korespondencija mogla naæi u
+    ukorièenom izdanju. <br>
+      <br>
+      U bostonskoj Predsjednièkoj knjižnici u Muzeju Johna Fitzgeralda Kennedyja
+      izložena su tako od kraja ožujka pisma koja je nobelovac pisao legendarnom "plavom anðelu" izmeðu 1949. i 1953. godine. Posjetitelji izložbe mogu pogledati uz tridesetak pisama i dvije Hemingwayjeve prièe napisane na pisaæem stroju te rukopis prve verzije romana "Preko rijeke pa u drveæe" -
+      sve je to knjižnici prije tri godine darovala glumièina kæerka Maria Riva. <br>
+      <br>
+  </FONT></p>
+<table border=0 cellspacing=0 cellpadding=0 align=right width=135>
+  <tr>
+    <td width=135>
+      <p><font face="Verdana, Arial, Helvetica, sans-serif"><img src="http://www.algoritam.hr/slike/slike/MarleneDietrich.jpg" border=0 width=120 height=164 hspace="6"></font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width=135>
+      <p align="right"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif"><strong>Roðena
+            u Berlinu, 1901. godine, Marlene Dietrich jedna je od najpoznatijih
+            njemaèkih glumica, zabavljaèica i pjevaèica.</strong></font></p>
+    </td>
+  </tr>
+</table>
+<p><FONT face="Verdana, Arial, Helvetica, sans-serif" color=#000000>Veliki književnik, dobitnik Pulitzerove nagrade 1953. godine i Nobelove nagrade za književnost koji je sudjelovao u Prvom i Drugom svjetskom ratu kao i Španjolskom graðanskom ratu i senator John Fitzgerald Kennedy upoznali su se inaèe na predstavljanju jedne od pišèevih knjiga. Nakon što je Papa okonèao život samoubojstvom, amerièki predsjednik pomogao je književnikovoj udovici Mary da s Kube, gdje su živjeli, prenese sve dokumente i imetak. </FONT></p>
+<p><FONT face="Verdana, Arial, Helvetica, sans-serif" color=#000000>Marlene Dietrich
+    umrla je tri desetljeæa kasnije u Parizu. Roðena u Berlinu, 1901. godine,
+    jedna je od najpoznatijih njemaèkih glumica, zabavljaèica i pjevaèica. Na
+    velikom je ekranu debitirala 1923. godine, postavši filmskom ikonom i jednom
+    od prvih femme fatale na velikome platnu. Iz domovine je pobjegla pred nacistièkim
+    režimom, javno kritizirajuæi Hitlera i svoje zemljake koji su pristali uz
+    njega. </FONT></p>
+</TD></TR>
+</table></p>	</td>
+  </tr>
+  <tr align="left" valign="top">
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+	</td>
+    <td width="225" align="center" valign="top" bgcolor="#c3c0c7"><table width="100%" border="0" align="right" cellspacing="0" cellpadding="0"><font size="1"><img src="ikone/razmak.gif" width="145" height="5" border="0"> 
+      </font>
+
+	  <tr align="left" valign="top">
+        <td width="300" height="103" class="box_sadrzaj">
+		  <script>
+document.write("<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>");document.write("<html>");document.write("<head>");document.write("<title>Algoritam.hr</title>");document.write("<style type='text/css'>");document.write("a:link.algoritam, a:visited.algoritam, a:hover.algoritam, a:active.algoritam");document.write("{height:1px;margin-top:2px;color: #FFFFFF;font-family:Tahoma;font-size:11px;text-decoration:underline;font-weight:bold;}");document.write("</style>");document.write("</head>");document.write("<body leftmargin='0' topmargin='0'>");
+document.write("<table align='center' width='200' border='0' cellspacing='0' cellpadding='2' bgcolor='#c3c0c7'><tr><td><a href='http://www.algoritam.hr/novosti.asp'><img border='0' src='http://www.algoritam.hr/slike/slike/algo_novosti.jpg'></a></td></tr>");
+document.write("<tr><td><marquee behavior='scroll' id='m1' width='200' height='100' align='left' direction='up' loop='' scrollamount='1' scrolldelay='50' truespeed onMouseOver='this.stop()' onMouseOut='this.start()'>");
+document.write("<table>");
+document.write('<tr><td><a href="http://www.algoritam.hr/?m=0&p=vijesti&opcija=prikaz&id=2281" class="algoritam">Ubacite se u igru uz PlayStation Move!</a><br><br></td></tr>');document.write('<tr><td><a href="http://www.algoritam.hr/?m=0&p=vijesti&opcija=prikaz&id=2220" class="algoritam">Algoritam darovna kartica - Idealan poklon za svakoga!</a><br><br></td></tr>');
+document.write("</table></marquee></td></tr></table>");
+</script>
+
+
+          
+          </td>
+      </tr>
+      
+      <tr align="left" valign="top"><td>&nbsp;</td></tr> 
+
+
+ 
+      
+	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=298"><img src="http://www.algoritam.hr/slike/banneri/298.jpg" width="215" height="115" border="0"></a></td>
+      </tr>
+
+	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=280"><img src="http://www.algoritam.hr/slike/banneri/280.jpg" width="215" height="115" border="0"></a>
+          </td></tr>
+
+   	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+ 	 
+     
+      <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=649"><img src="http://www.algoritam.hr/slike/banneri/649.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+          
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=628"><img src="http://www.algoritam.hr/slike/banneri/628.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+
+      <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=539"><img src="http://www.algoritam.hr/slike/banneri/539.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+
+      <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=476"><img src="http://www.algoritam.hr/slike/banneri/476.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+
+
+   	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=473"><img src="http://www.algoritam.hr/slike/banneri/473.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+
+	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+      <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=306"><img src="http://www.algoritam.hr/slike/banneri/306.jpg" width="215" height="115" border="0"></a>
+        </td></tr>
+	
+   
+	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=407"><img src="http://www.algoritam.hr/slike/banneri/407.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+
+
+	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=333"><img src="http://www.algoritam.hr/slike/banneri/333.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+ 
+   
+      	  <tr align="left" valign="top"><td width="300" class="box_sadrzaj">&nbsp;</td></tr>
+	  <tr align="left" valign="top">
+        <td width="300" class="box_sadrzaj">
+        <a href="algoritam.asp?Opcija=BannerClick&id=376"><img src="http://www.algoritam.hr/slike/banneri/376.jpg" width="215" height="115" border="0"></a>
+          </td>
+      </tr>
+      
+
+        </table>
+      <p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+<div align="center"><font size="1"><br>
+  ©opyright 2003. Algoritam d.o.o., Harambašiæeva 19, 10000 Zagreb, Hrvatska tel: 
+  +385 1 2359 333, fax: +385 1 2335 956, e-mail: <a href="mailto:info@algoritam.hr">info@algoritam.hr</a></font> 
+</div>
+</body>
+
+</html>

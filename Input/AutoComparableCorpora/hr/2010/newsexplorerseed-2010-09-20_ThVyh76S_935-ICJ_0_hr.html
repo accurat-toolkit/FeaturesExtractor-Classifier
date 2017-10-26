@@ -1,0 +1,1058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Novosti Moj Fond"/>
+<meta name="keywords" content="Moj, Fond, Ilirika, Fondovi, JIE, ulaganje, dionice,Novosti" />
+<meta name="distribution" content="Global"/>
+<meta name="rating" content="General"/>
+<meta name="robots" content="INDEX, FOLLOW" />
+<meta name="revisit-after" content="2 days" />
+<meta name="distribution" content="global" />
+
+<title>
+Novosti - Moj Fond - investicijski fondovi
+</title>
+<link href="http://www.moj-fond.hr/template/portal_sadrzaj/css/styles.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if gte IE 5.5]>
+<style type="text/css" media="all">
+	@import url(http://www.moj-fond.hr/template/portal_sadrzaj/css/stylesIE5.css);	
+	@import url(http://www.moj-fond.hr/template/portal_sadrzaj/css/select_free.css);	
+</style>
+<![endif]-->
+<link href="http://www.moj-fond.hr/modules/mod_login/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_burze/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_fond/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_article/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_calculate/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_akcije/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_valuta/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_indeks/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_anketa/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.moj-fond.hr/modules/mod_news/styles.css" rel="stylesheet" type="text/css" media="all" />
+
+<style type="text/css" media="print">
+	#header{display:none}
+	#lijeva_kolona{display:none}
+	#desna_kolona{display:none}
+	#footer{display:none}
+	#mainmenu{display:none}
+	#btns{display:none}
+</style>
+
+<script language="javascript" type="text/javascript">
+	var ukupnoPozicija;
+	ukupnoPozicija=7;
+</script>
+<script type="text/javascript">
+	<!--
+	
+	var selectedTitle=new Array();
+	for (i=1;i<=ukupnoPozicija;i++){
+		selectedTitle[i]='tdm_'+i+'_1';
+	}
+	
+	// ajax request
+	function createAjaxObj(){
+	var httprequest=false
+	
+	if (window.XMLHttpRequest){ // Mozilla, Safari etc
+	httprequest=new XMLHttpRequest()
+	}
+	
+	else if (window.ActiveXObject){ // if IE
+	
+	try {
+	httprequest=new ActiveXObject("Msxml2.XMLHTTP");
+	} 
+	catch (e){
+	try{
+	httprequest=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	catch (e){}
+	}
+	}
+	return httprequest
+	}
+	
+	var ajaxpack=new Object()
+	ajaxpack.basedomain="http://"+window.location.hostname
+	ajaxpack.ajaxobj=createAjaxObj()
+	ajaxpack.filetype="txt"
+	ajaxpack.addrandomnumber=1
+	
+	ajaxpack.getAjaxRequest=function(url, parameters, callbackfunc, filetype)
+	{
+	ajaxpack.ajaxobj=createAjaxObj() 
+	if (ajaxpack.addrandomnumber==1) parameters=parameters+"&ajaxcachebust="+new Date().getTime()
+	if (this.ajaxobj){
+	this.filetype=filetype
+	this.ajaxobj.onreadystatechange=callbackfunc
+	this.ajaxobj.open('GET', url+"?"+parameters, true)
+	this.ajaxobj.send(null)
+	}
+	}
+	
+	ajaxpack.postAjaxRequest=function(url, parameters, callbackfunc, filetype){
+	ajaxpack.ajaxobj=createAjaxObj()
+	if (this.ajaxobj){
+	this.filetype=filetype
+	this.ajaxobj.onreadystatechange = callbackfunc;
+	this.ajaxobj.open('POST', url, true);
+	this.ajaxobj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	this.ajaxobj.setRequestHeader("Content-length", parameters.length);
+	this.ajaxobj.setRequestHeader("Connection", "close");
+	this.ajaxobj.send(parameters);
+	}
+	}
+	// eo ajaxRequest
+	
+	function showModule(sc,action,elem,type,poziva,rbModula,stil,grupa)
+        {
+			if (selectedTitle[rbModula]!=null){
+				document.getElementById(''+selectedTitle[rbModula]+'').className=stil;
+				document.getElementById('a'+selectedTitle[rbModula]+'').className=stil;
+			}
+			document.getElementById(''+poziva+'').className=stil+'Over';
+			document.getElementById('a'+poziva+'').className=stil+'Over';
+			selectedTitle[rbModula]=poziva;
+			if (grupa==0){
+				selectedElement=elem;
+			}
+			else {
+				selectedElement=elem+'_'+grupa;
+			}
+			if (type=='POST'){
+	        	ajaxpack.postAjaxRequest('/box_module/'+sc+'&sid=8f1cbdb4852f4fcdcf2b488e48becca8', 'lang=hr&p=1&action=' + action , processModule, 'txt');
+			}
+			else {
+				ajaxpack.getAjaxRequest(script, 'action=' + action , processModule, 'txt');
+			}
+        }
+        
+	function processModule()
+		{
+            var myajax=ajaxpack.ajaxobj;
+            var myfiletype=ajaxpack.filetype;
+            if (myajax.readyState == 4){
+	            if (myajax.status==200 || window.location.href.indexOf("http")==-1){
+		            if (myfiletype=="txt")
+			            document.getElementById(selectedElement).innerHTML=myajax.responseText;
+						
+						ajaxvars();
+						
+			            
+		        }
+	        }
+		}
+
+	function ajaxvars(){
+		if (document.getElementById("js_prevars")!=null){
+			
+				if (document.getElementById("js_prevars").innerHTML!=""){
+						eval(document.getElementById("js_prevars").innerHTML);
+					}
+				pn=document.getElementById("js_prevars").parentNode;
+				pn.removeChild(document.getElementById("js_prevars"));
+		}
+		if (document.getElementById("js_source")!=null){
+			
+			if (document.getElementById("js_source").innerHTML!=""){
+						var js = document.createElement("script");
+						js.language = "javascript";
+						js.src = document.getElementById("js_source").innerHTML;
+						document.getElementsByTagName("head")[0].appendChild(js);
+			}
+			pn=document.getElementById("js_source").parentNode;
+			pn.removeChild(document.getElementById("js_source"));
+			
+		}		
+		if (document.getElementById("callback_function")!=null){
+				
+				if (document.getElementById("callback_function").innerHTML!=""){
+						eval(document.getElementById("callback_function").innerHTML);
+						
+				}
+				pn=document.getElementById("callback_function").parentNode;
+				pn.removeChild(document.getElementById("callback_function"));
+		}
+	} // eo ajaxvars
+	// navigation
+	var sfHover = function() {
+	var sfEls = document.getElementById("mainmenunav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+	}
+	if (window.attachEvent) window.attachEvent("onload", sfHover);	
+	// eo navigation
+	
+var min=11;
+var max=18;
+function increaseFontSize() {
+   var p = document.getElementsByTagName('div');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+   var p = document.getElementsByTagName('table');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('div');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   } 
+   var p = document.getElementsByTagName('table');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }   
+}
+	function doHighlight(bodyText, searchTerm, highlightStartTag, highlightEndTag) 
+{
+  if ((!highlightStartTag) || (!highlightEndTag)) {
+    highlightStartTag = "<font style='color:blue; background-color:yellow;'>";
+    highlightEndTag = "</font>";
+  }
+  var newText = "";
+  var i = -1;
+  var lcSearchTerm = searchTerm.toLowerCase();
+  var lcBodyText = bodyText.toLowerCase();
+    
+  while (bodyText.length > 0) {
+    i = lcBodyText.indexOf(lcSearchTerm, i+1);
+    if (i < 0) {
+      newText += bodyText;
+      bodyText = "";
+    } else {
+      if (bodyText.lastIndexOf(">", i) >= bodyText.lastIndexOf("<", i)) {
+        if (lcBodyText.lastIndexOf("/script>", i) >= lcBodyText.lastIndexOf("<script", i)) {
+          newText += bodyText.substring(0, i) + highlightStartTag + bodyText.substr(i, searchTerm.length) + highlightEndTag;
+          bodyText = bodyText.substr(i + searchTerm.length);
+          lcBodyText = bodyText.toLowerCase();
+          i = -1;
+        }
+      }
+    }
+  }
+  
+  return newText;
+}
+
+
+function highlightSearchTerms(searchText, treatAsPhrase, warnOnFailure, highlightStartTag, highlightEndTag)
+{
+  if (treatAsPhrase) {
+    searchArray = [searchText];
+  } else {
+    searchArray = searchText.split(" ");
+  }
+  
+  if (!document.body || typeof(document.body.innerHTML) == "undefined") {
+   return false;
+  }
+  
+  var bodyText = document.body.innerHTML;
+  for (var i = 0; i < searchArray.length; i++) {
+    bodyText = doHighlight(bodyText, searchArray[i], highlightStartTag, highlightEndTag);
+  }
+  
+  document.body.innerHTML = bodyText;
+  return true;
+}
+
+
+function searchPrompt(defaultText, treatAsPhrase, textColor, bgColor)
+{
+  if (!defaultText) {
+    defaultText = "";
+  }
+  
+  if ((!textColor) || (!bgColor)) {
+    highlightStartTag = "";
+    highlightEndTag = "";
+  } else {
+    highlightStartTag = "<font style='color:" + textColor + "; background-color:" + bgColor + ";'>";
+    highlightEndTag = "</font>";
+  }
+    searchText = defaultText;
+	if (searchText=='') return false;
+  return highlightSearchTerms(searchText, treatAsPhrase, true, highlightStartTag, highlightEndTag);
+}
+	 -->
+	 
+</script>
+<script language="JavaScript" type="text/javascript" src="http://www.moj-fond.hr/script/swfobject.js"></script>
+
+
+<link type="application/rss+xml" rel="alternate" title="Novosti - aktualno" href="http://www.moj-fond.hr/hr/rss/1/rss.xml" /><link type="application/rss+xml" rel="alternate" title="Knjižnica" href="http://www.moj-fond.hr/hr/rss/2/rss.xml" /><link type="application/rss+xml" rel="alternate" title="Novosti - fondovi" href="http://www.moj-fond.hr/hr/rss/3/rss.xml" />
+
+
+</head>
+<body>
+<h1 id="seNaslov">Novosti - Moj Fond - investicijski fondovi</h1>
+<div id="container">
+  <!-- begin header -->
+   <div id="header">
+   <div id="header_logotip">
+  <a href="http://www.moj-fond.hr/"><img src="http://www.moj-fond.hr/template/portal_sadrzaj/images/ilirika_logo.jpg" alt="mojFond.hr" border="0" style="float:left" title="mojFond" /></a>
+  </div>
+    <div id="top_pretraga">
+      <form id="frmTopPretraga" name="frmTopPretraga" method="post" action="http://www.moj-fond.hr/index.php?lang=hr&amp;option=search">
+        <input name="pretraziButtonHeader" type="image" id="pretraziButtonHeader" src="http://www.moj-fond.hr/template/portal_sadrzaj/images/btnPretraga.jpg" alt="Search" style="float:right"/>
+        <input name="sPojam" type="text" id="sPojam" style="float:right"/>
+        <input id="sPretrazi" name="sPretrazi" type="hidden" value="8f1cbdb4852f4fcdcf2b488e48becca8" />
+        <div style="float:right; display:inline; line-height:22px; font-weight:bold; margin-right:10px">TEL: +385 1 6197 499 | FAX: +385 1 6040 427 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pretraži &gt; &gt; </div>
+      </form>
+    </div>
+    <div id="top_banner"> </div>
+    <script type="text/javascript">
+		// <![CDATA[
+		
+		var so = new SWFObject("http://www.moj-fond.hr/template/portal_sadrzaj/images/banner.swf?dataxml=http://www.moj-fond.hr/template/portal_sadrzaj/images/", "top_banner", "700", "100", "7");
+		so.addParam("scale", "noscale");
+		so.addParam("wmode", "transparent");
+		so.write("top_banner");
+		var so = new SWFObject("/data/170x122.swf", "head_logotip", "170", "122", "7");
+		so.addParam("scale", "noscale");
+		so.addParam("wmode", "transparent");
+		so.write("header_logotip");
+		// ]]>
+	</script>
+  </div>
+  <!-- end header -->
+  <!-- begin navigation -->
+  <div id="mainMenuHolder">
+  <div id="mainmenu"><ul id="mainmenunav"><li><a href="http://www.moj-fond.hr/naslovnica/hr-1.html">Početna</a></li><li><a href="http://www.moj-fond.hr/moj_portfelj/hr-2.html">Moj portfelj</a></li><li><a href="#"  >Alati</a><ul><li><a href="http://www.moj-fond.hr/moj_fond_kalkulatori_valuta/hr-34.html" class="sporedni">Kalkulatori</a></li><li><a href="http://www.moj-fond.hr/filtri/hr-35.html" class="sporedni">Filtri</a></li><li><a href="http://www.moj-fond.hr/usporedba_fondova/hr-36.html" class="sporedni">Usporedba fondova</a></li><li><a href="http://www.moj-fond.hr/statistika_fondova/hr-37.html" class="sporedni">Statistika fondova</a></li><li><a href="http://www.moj-fond.hr/prosirena_tecajnica/hr-64.html" class="sporedni">Proširena tečajnica</a></li></ul></li><li><a href="#"  >Korisno</a><ul><li><a href="http://www.moj-fond.hr/ekonomske_analize/hr-38.html" class="sporedni">Ekonomske analize</a></li><li><a href="http://www.moj-fond.hr/skola_investiranja/hr-39.html" class="sporedni">Škola investiranja</a></li><li><a href="http://www.moj-fond.hr/qa-savjetovanje/hr-40.html" class="sporedni">Q/A Savjetovanje</a></li><li><a href="http://www.moj-fond.hr/knjiznica/hr-42.html" class="sporedni">Knjižnica</a></li><li><a href="http://www.moj-fond.hr/preporuka/hr-50.html" class="sporedni">Preporuka</a></li></ul></li><li><a href="#"  >Info</a><ul><li><a href="http://www.moj-fond.hr/o_nama/hr-70.html" class="sporedni">O nama</a></li><li><a href="http://www.moj-fond.hr/pretrazivanje/hr-43.html" class="sporedni">Pretraga</a></li><li><a href="http://www.moj-fond.hr/moj_fond_novosti/hr-44.html" class="sporedni">Novosti</a></li><li><a href="http://www.moj-fond.hr/rss_kanali/hr-46.html" class="sporedni">RSS</a></li><li><a href="http://www.moj-fond.hr/ankete/hr-62.html" class="sporedni">Ankete</a></li></ul></li><li><a href="#"  >Zabava</a><ul><li><a href="http://www.moj-fond.hr/moj_fond_chat/hr-29.html" class="sporedni">Chat</a></li><li><a href="http://www.moj-fond.hr/moj_fond_elektronska_cestitka/hr-30.html" class="sporedni">E - čestitka</a></li><li><a href="http://www.moj-fond.hr/moj_fond_forum/hr-24.html" class="sporedni">Forum</a></li></ul></li><li><a href="#"  >Kontakt</a><ul><li><a href="http://www.moj-fond.hr/urednistvo/hr-69.html" class="sporedni">Uredništvo</a></li><li><a href="http://www.moj-fond.hr/marketing/hr-71.html" class="sporedni">Marketing</a></li><li><a href="http://www.moj-fond.hr/o-nama/hr-150.html" class="sporedni">O nama</a></li></ul></li><li><a href="http://www.moj-fond.org" target="_blank"   class="odabran">Regija</a><ul><li><a href="http://www.moj-fond.rs" target="_blank"   class="sporedni">Moj-fond.rs</a></li><li><a href="http://www.moj-fond.si" target="_blank"   class="sporedni">Moj-fond.si</a></li></ul></li></ul></div>  </div>
+	<div id="tickerHolder">
+  
+  </div>
+  <script type="text/javascript">
+		// <![CDATA[
+		
+		var so = new SWFObject("http://www.moj-fond.hr/seebiz/ticker.swf", "tickerHolder", "980", "21", "8");
+		so.addParam("scale", "noscale");
+		so.addParam("wmode", "opaque");
+		so.write("tickerHolder");
+		// ]]>
+	</script>
+  <!-- end navigation -->
+  <div id="content">
+    <!-- begin side menu -->
+    <div id="lijeva_kolona">
+      <div id="pozicija1" class="pozicije">
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_1" class="box1Over"><a href="javascript:void(0)" id="atdm_1_1" class="box1Over">Korisnici</a></td>
+    </tr>
+  </table>
+  <div id="content_1_1" class="box">
+    <form id="frmPrijava" name="frmPrijava" method="post" action="http://www.moj-fond.hr/hr.html">
+  Korisničko ime<br />
+  <input name="h20user" type="text" id="h20user" maxlength="50" class="inputLogin" style="width:125px;"/>
+  <br />
+  Zaporka<br />
+  <input name="h20pass" type="password" id="h20pass" maxlength="50" class="inputLogin" style="width:125px;" />
+  <br />
+  <input type="submit" name="Submit" value="Prijava" />
+  <input name="sid" type="hidden" id="sid" value="8f1cbdb4852f4fcdcf2b488e48becca8" />
+  <input name="h20prijava" type="hidden" id="h20prijava" value="8f1cbdb4852f4fcdcf2b488e48becca8" />
+</form>
+<a href="http://www.moj-fond.hr/register/hr.html">Registrirajte se</a><br />
+<a href="http://www.moj-fond.hr/register/hr-renew.html">Zaboravljena zaporka?</a>
+  </div>
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_2" class="box1Over"><a href="javascript:void(0)" id="atdm_1_2" class="box1Over">Burze (live)</a></td>
+    </tr>
+  </table>
+  <div id="content_1_2" class="box">
+    <div id="box_burza">
+<div>
+
+<ul id="popis">
+	
+            <li><a href="http://www.moj-fond.hr/burza/zagrebacka-burza/hr-1.html">Zagrebačka burza</a></li>
+                <li><a href="http://www.moj-fond.hr/burza/ljubljanska-burza/hr-2.html">Ljubljanska burza</a></li>
+                <li><a href="http://www.moj-fond.hr/burza/sarajevska-burza/hr-3.html">Sarajevska burza</a></li>
+                <li><a href="http://www.moj-fond.hr/burza/beogradska-burza/hr-4.html">Beogradska burza</a></li>
+                <li><a href="http://www.moj-fond.hr/burza/montenegro-burza/hr-5.html">Montenegro burza</a></li>
+                <li><a href="http://www.moj-fond.hr/burza/banjalucka-burza/hr-6.html">Banjalučka burza</a></li>
+                <li><a href="http://www.moj-fond.hr/burza/makedonska-burza/hr-8.html">Makedonska burza</a></li>
+        </ul>
+</div>
+</div>  </div>
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_3" class="box1Over"><a href="javascript:void(0)" id="atdm_1_3" class="box1Over">Mjesečni pobjednik</a></td>
+    </tr>
+  </table>
+  <div id="content_1_3" class="box">
+    
+<div class="fNaDan">Na dan 09.12.2010.</div><table width="100%" border="0" cellspacing="0" cellpadding="0" class="thighlights">
+   <tr class="r1">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/NFD_Aureus_US_Algorithm/hr-665.html" class="fond_naslov">NFD Aureus US Algorithm</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/plus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />13,83</td>
+  </tr>
+   <tr class="r2">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_mp-global-hr/hr-96.html" class="fond_naslov">MP-GLOBAL.HR</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/plus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />5,91</td>
+  </tr>
+   <tr class="r1">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_NFD_Aureus_Global_Developed/hr-8.html" class="fond_naslov">NFD Aureus Global Developed</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/plus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />5,58</td>
+  </tr>
+   <tr class="r2">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_Raiffeisen_Emerging_Markets/hr-82.html" class="fond_naslov">Raiffeisen Emerging Markets</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/plus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />5,10</td>
+  </tr>
+   <tr class="r1">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_mp-mena-hr/hr-97.html" class="fond_naslov">MP-MENA.hr</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/plus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />4,95</td>
+  </tr>
+ </table>
+  </div>
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_4" class="box1Over"><a href="javascript:void(0)" id="atdm_1_4" class="box1Over">Mjesečni gubitnik</a></td>
+    </tr>
+  </table>
+  <div id="content_1_4" class="box">
+    
+<div class="fNaDan">Na dan 04.12.2010.</div><table width="100%" border="0" cellspacing="0" cellpadding="0" class="thighlights">
+   <tr class="r1">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_icf_fixed_income/hr-33.html" class="fond_naslov">ICF Fixed Income</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/minus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />-22,47</td>
+  </tr>
+   <tr class="r2">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni-investicijski-fond-s-javnom-ponudom-nfd-Aureus-New-Europe/hr-669.html" class="fond_naslov">NFD Aureus New Europe</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/minus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />-3,38</td>
+  </tr>
+   <tr class="r1">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_fima_equity/hr-11.html" class="fond_naslov">FIMA Equity</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/minus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />-3,00</td>
+  </tr>
+   <tr class="r2">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_kd_victoria/hr-17.html" class="fond_naslov">KD Victoria</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/minus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />-2,65</td>
+  </tr>
+   <tr class="r1">
+    <td align="left" valign="top"><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_otp_uravnotezeni/hr-50.html" class="fond_naslov">OTP uravnoteženi</a></td>
+    <td width="50" align="right" valign="top"><img src="http://www.moj-fond.hr/modules/mod_fond/images/minus.gif" border="0" style="margin-right:3px; margin-top:3px;" align="left" alt="" />-2,15</td>
+  </tr>
+ </table>
+  </div>
+  ﻿  <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_5" class="box1Over"><a href="javascript:void(0)" id="atdm_1_5" class="box1Over">Prinosu u 2008.</a></td>
+    </tr>
+  </table>
+  <div id="content_1_5" class="box">
+    <div class="articlePadder"><div class="articleText">
+<div style="text-align: center;"><span style="font-weight: bold;">Najbolji: <br/><br/>Dionički fond:</span><font size="2"><br/><a href="http://www.moj-fond.hr/fond/Aureus_US_Equity/hr-665.html">Aureus US Equity</a><br/></font><font style="font-weight: bold;" size="2">+6,97 % </font><br/><div><img src="http://www.moj-fond.hr/modules/mod_article/data/9_separator.jpg" alt="" class="" vspace="" align="middle" border="" hspace=""/><br/><br/>Najgori:<br/><br/></div><span style="font-weight: bold;">Dionički fond:</span><br/><a href="http://www.moj-fond.hr/fond/otvoreni_investicijski_fond_s_javnom_ponudom_raiffeisen_c_europe/hr-23.html"><font size="2">Raiffeisen C. Europe</font></a><br/><font style="font-weight: bold;" size="2">-71,98 %</font><br/></div>
+
+
+
+
+
+
+
+
+
+
+</div></div>  </div>
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_6" class="box1Over"><a href="javascript:void(0)" id="atdm_1_6" class="box1Over">Kalkulator valuta</a></td>
+    </tr>
+  </table>
+  <div id="content_1_6" class="box">
+    
+
+<script type="text/javascript" language="javascript1.2">
+// nacionalna valuta
+<!--
+	var nNaziv='';var nJedinica=1;var nVrijednost=1.00000;nNaziv='KN';
+nJedinica=1;
+nVrijednost=1.000000;
+nNaziv='KN';nJedinica=1;nVrijednost=1.000000;function pretvori(){var elem1=document.getElementById('valuta_1');val1=elem1.options[elem1.selectedIndex].value;var elem2=document.getElementById('valuta_2');val2=elem2.options[elem2.selectedIndex].value;tmp1=val1.split(',');tmp2=val2.split(',');vrijednost=document.getElementById('valuta_vrijednost').value;while(vrijednost.indexOf(',')!=-1){vrijednost=vrijednost.replace(',','.');};vrijednost=eval(parseFloat(vrijednost));rezultat=vrijednost*(tmp1[0]/tmp1[1]);if(tmp2[0]==nVrijednost){rezultat=rezultat*(tmp2[0]/tmp2[1]);}else{rezultat=rezultat/(tmp2[0]/tmp2[1]);}rezultat=rezultat.toFixed(2);document.getElementById('valuta_vrijednost2').value=rezultat;};//-->	
+</script>
+<div class="calNaDan">HNB na dan 11.12.2010.</div><form id="frmCalculatorValuta" name="frmCalculatorValuta" action="" method="post" onsubmit="return false;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="vtable">
+  <tr>
+    <td align="left" valign="top"><select name="valuta_1" id="valuta_1" class="vdd">
+      <option value="7.382405,1" >EUR</option>
+<option value="5.565746,1" >USD</option>
+<option value="8.814812,1" >GBP</option>
+<option value="5.678773,1" >CHF</option>
+<option value="1.000000,1" selected="selected">KN</option>
+    </select></td>
+	 <td align="center" valign="top">&nbsp;</td>
+    <td align="right" valign="top"><select name="valuta_2" id="valuta_2" class="vdd">
+      <option value="7.382405,1" >EUR</option>
+<option value="5.565746,1" >USD</option>
+<option value="8.814812,1" >GBP</option>
+<option value="5.678773,1" >CHF</option>
+<option value="1.000000,1" >KN</option>
+    </select></td>
+  </tr>
+
+<tr>
+    <td align="left" valign="top"><input name="valuta_vrijednost" id="valuta_vrijednost" type="text" value="0.00" class="val_box_1" /></td>
+	 <td align="center" valign="top"><input type="submit" name="Submit" value="&gt;&gt;" onclick="pretvori()" class="val_box_2" /></td>
+    <td align="right" valign="top"><input name="valuta_vrijednost2" id="valuta_vrijednost2" type="text" value="0.00" class="val_box_1" /></td>
+  </tr>
+</table>
+
+</form>
+
+  </div>
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_1_7" class="box1Over"><a href="javascript:void(0)" id="atdm_1_7" class="box1Over">Akcije</a></td>
+    </tr>
+  </table>
+  <div id="content_1_7" class="box">
+    <script type="text/javascript" src="http://www.moj-fond.hr/modules/mod_akcije/s.js">
+
+</script>
+<div id="mod_akcije">
+</div>
+<script type="text/javascript">
+</script>
+
+  </div>
+  </div>
+      
+<div id="pozicija2" class="pozicije">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr valign="middle" class="boxTitle"><!-- box header -->
+        
+        <td id="tdm_2_1" class="box1Over" >
+        <a href="javascript:void(0)" id="atdm_2_1" class="box1Over"  onclick="showModule('?modul=valuta&amp;box=box_valuta&amp;option=valuta&amp;valutaid=0&amp;&amp;r=5&amp;langID=1','2,1','content_2','POST','tdm_2_1',2,'box1',0)">Valute</a></td>
+		<!-- eo box header -->
+		<!-- box header -->
+        
+        <td id="tdm_2_2" class="box1" >
+        <a href="javascript:void(0)" id="atdm_2_2" class="box1"  onclick="showModule('?modul=indeks&amp;box=box_indeks&amp;indeksid=0&amp;r=6&amp;langID=1','2,2','content_2','POST','tdm_2_2',2,'box1',0)">Indexi</a></td>
+		<!-- eo box header -->
+		</tr>
+  </table>
+  <div id="content_2" class="box">
+    <div class="valNaDan">Srednji tečaj HNB na dan 11.12.2010.</div><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tBoxValuta">
+  	<tr>
+    <td width="18" align="left">1</td>
+    <td align="left" width="20"><strong>EUR</strong></td>
+	<td align="right">7.382405</td>
+        <td width="36" align="right">+0.05</td>
+  </tr>
+		<tr>
+    <td width="18" align="left">1</td>
+    <td align="left" width="20"><strong>USD</strong></td>
+	<td align="right">5.565746</td>
+        <td width="36" align="right">-0.36</td>
+  </tr>
+		<tr>
+    <td width="18" align="left">1</td>
+    <td align="left" width="20"><strong>GBP</strong></td>
+	<td align="right">8.814812</td>
+        <td width="36" align="right">+0.08</td>
+  </tr>
+		<tr>
+    <td width="18" align="left">1</td>
+    <td align="left" width="20"><strong>CHF</strong></td>
+	<td align="right">5.678773</td>
+        <td width="36" align="right">+0.45</td>
+  </tr>
+	</table>
+
+  </div>
+</div>
+      <div id="pozicija3" class="pozicije">
+    <table width="99%" cellpadding="0" cellspacing="0">
+    <tr  class="boxTitle" valign="middle">
+      <td  id="tdm_3_1" class="box1Over"><a href="javascript:void(0)" id="atdm_3_1" class="box1Over">Anketa</a></td>
+    </tr>
+  </table>
+  <div id="content_3_1" class="box">
+    	<script type="text/javascript">
+	var o=0;
+	var varglasaj=2;
+	var basehref='http://www.moj-fond.hr/';
+	var js_lang='hr';
+	var js_p='1';
+	var js_aid='10';
+	</script>
+<script language="JavaScript" type="text/javascript" src="http://www.moj-fond.hr/modules/mod_anketa/FusionCharts.js"></script>
+								<div class="apitanje">
+			Jeste li tijekom ovogodišnje korekcije burze povukli novac iz fondova i hoćete li i dalje ulagati u fondove?			</div>
+			<div id="anketa_obrazac">
+			<form name="frmGlasanje" id="frmGlasanje" action="" class="aform">
+										<div><img src="http://www.moj-fond.hr/modules/mod_anketa/images/sel.jpg" width="12" height="12" alt="" class="aSlika" onclick="odgovor(1)" id="odgovor_1" name="odgovor_1"/>Jesam i necu vise ulagati</div>
+											<div><img src="http://www.moj-fond.hr/modules/mod_anketa/images/sel.jpg" width="12" height="12" alt="" class="aSlika" onclick="odgovor(2)" id="odgovor_2" name="odgovor_2"/>Jesam i opet cu ulagati</div>
+											<div><img src="http://www.moj-fond.hr/modules/mod_anketa/images/sel.jpg" width="12" height="12" alt="" class="aSlika" onclick="odgovor(3)" id="odgovor_3" name="odgovor_3"/>Nisam i jos cu ulagati</div>
+											<div><img src="http://www.moj-fond.hr/modules/mod_anketa/images/sel.jpg" width="12" height="12" alt="" class="aSlika" onclick="odgovor(4)" id="odgovor_4" name="odgovor_4"/>Nisam i necu vise ulagati</div>
+											<div><img src="http://www.moj-fond.hr/modules/mod_anketa/images/sel.jpg" width="12" height="12" alt="" class="aSlika" onclick="odgovor(5)" id="odgovor_5" name="odgovor_5"/>Ne ulazem u fondove</div>
+								    <input name="odg" type="hidden" id="odg" value="0" />
+			</form>
+			<a href="javascript:void(0)" class="aGlasaj" onclick="glasaj('/box_module/?modul=anketa&amp;box=anketa_glasaj&amp;langID=1&amp;r=7')">Glasaj</a>
+			</div>
+			  </div>
+  </div>
+          </div>
+    <!-- end side menu -->
+    <div id="sadrzajOmotac">
+    <div style="display:block; width:694px;">
+	<div id="banner_box_6" class="banner_box"></div>    </div>
+      <div id="sadrzaj">
+	  	<div id="icons"><a href="javascript:decreaseFontSize();"><img src="http://www.moj-fond.hr/template/portal_sadrzaj/images/btnIncrease.jpg" title="Font (-)" border="0" alt=""/></a> <a href="javascript:increaseFontSize();"><img src="http://www.moj-fond.hr/template/portal_sadrzaj/images/btnDecrease.jpg" title="Font (+)" border="0" alt=""/></a> <a href="javascript:print();"><img src="http://www.moj-fond.hr/template/portal_sadrzaj/images/btnPrint.jpg" title="Print" border="0" alt=""/></a></div>
+	  	<div style="background-color:#FFFFFF; padding:5px;">
+        <div class="news_naslov"> <a href="http://www.moj-fond.hr/index.php?lang=hr&amp;option=news&amp;itemid=1" class="news_naslov">NOVOSTI</a></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="newsHolder">
+  <tr>
+<td class="newsDesnaKolona" valign="top" align="left"><div style="margin:5px;">
+				<script type="text/javascript">
+			function shnews(rb){
+				elem=document.getElementById("newstekst_"+rb);
+				if (elem.style.display=='none'){
+					elem.style.display='block';
+				}
+				else {
+					elem.style.display='none';
+				}
+			}
+			</script>
+			<div class="newsOmotac">
+						<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />19.02.2010 (09:51:15)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(1)" class="lnaslovKatgegorije">Hypo grupi treba 3,5 mlrd. eura za obveznice</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/785586001266569475.jpg" alt="" class="newsSlika"/>
+						Austrijsko ministarstvo financija morat će, čini se, rješavati problem kroz državne kredite Hypu ili izdavanjem novih obveznica za koje bi jamčila država  <a href="javascript:void(0)" onclick="shnews(1)">Opširnije...</a></div>
+			<div id="newstekst_1" class="ltekstKategorije" style="display:none"><br/><br/><b>Državna jamstva</b>
+<br/>U ministarstvu tvrde da Koruška jamči za obveznice, no i da postoji
+mogućnost da banka i ove godine izda nove obveznice s državnim
+jamstvom. Obveznice bi bile dio paketa pomoći bankama koji je Bruxelles
+zbog recesije iznimno odobrio. Lani je Hypo izdao takvu obveznicu u
+visini milijardu eura, s rejtingom Aaa/AAA, jer je bila pokrivena
+jamstvom. Glasnogovornica Hypa Martina Uster rekla je kako je razina
+likvidnosti i kapitalizacije u banci dostatna te kako se ne postavlja
+pitanje isplate obveznica. Hypu do 2017. na naplatu stiže niz
+obveznica, ukupno 18 mlrd. eura. Za sve teoretski jamči Koruška, a
+većina iznosa plasirana je na Hypovim tržištima u jugoistočnoj Europi.
+Hypo je, naime, 2006. i 2007. maksimalno iskoristio mogućnost da
+"usisa" tada jeftin kapital s tržišta. Do 1. travnja 2007. banke su još
+mogle izdavati obveznice s državnom garancijom. Prema direktivama EU
+državne garancije za takve obveznice smiju trajati najdulje do 2017., a
+nakon 1. travnja 2007. banke ne smiju izdavati nove obveznice s
+državnom garancijom (s iznimkom prošlogodišnjeg paketa pomoći). Kako se
+neslužbeno može čuti u Hypo banci, novac koji je 2006. i 2007. primljen
+preko obveznica trebalo je negdje na brzinu uložiti pa je uglavnom bez
+temeljite procjene rizika upumpan u kredite i leasing u jugoistočnoj
+Europi. 
+            
+                <p class="c5">
+<b>Nenaplativi krediti</b>
+<br/>Dio toga već je nenaplativ, kažu insajderi, a do 2017. nastat će
+problem s međufinanciranjem zato što je većina tih kredita dugoročna pa
+će klijenti banci novac vratiti iza 2017. do kada Hypo već treba
+isplatiti ulagače u obveznice. No banka će vjerojatno u bliskoj
+budućnosti biti razdijeljena na segmente i prodana, a kome će pripasti
+obveza jamstva za obveznice, još se ne zna.
+</p>
+            
+                <p class="c14">
+Pronevjere u Hrvatskoj
+</p>
+            
+                <p class="c15">
+<b>Striedinger u sumnjivoj kupnji helikoptera</b>
+<br/>Protiv bivšeg člana Uprave Hypo grupe Güntera Striedingera u
+Austriji je pokrenuta istraga u vezi s nekim leasing poslovima u
+Hrvatskoj. U sklopu kupnje dvaju helikoptera za neimenovanu tvrtku u
+Hrvatskoj sumnja se na pronevjeru. Navodno je za posao bio odgovoran
+Striedinger, a vjeruje se da je banka oštećena za dva mil. eura. To je
+prva istraga pokrenuta nakon što su revizorske kuće i središnja
+austrijska banka počele istraživati nenaplative kreditne i leasing
+poslove Hypa na Balkanu. Striedinger, koji je bio zadužen za Hrvatsku,
+nedavno je osuđen za lažiranje bilance Hypa kojim su 2004. trebali biti
+prikriveni visoki gubici. Kažnjen je novčano sa 88.000 eura.
+</p>
+            
+                
+            
+                <p class="c15">
+Nova istraga -&nbsp;<span style="float: right; width: 200px; display: block;" class="imgParagraphContainer_right"> </span><b>Pozvani Rohatinski i general Zagorec</b>
+<br/>Koruški pokrajinski parlament za 14. travnja najavio je osnivanje
+novoga istražnog povjerenstva o Hypo grupi, koje bi trebalo razjasniti
+kako je banka došla u situaciju da ju je morala spašavati država.
+Posebna važnost bit će posvećena pitanju kako je banka mogla izgubiti
+stotine milijuna eura na kreditnim poslovima u Hrvatskoj. Za svjedoke
+će biti pozvani i Vladimir Zagorec te bivši bavarski poglavar Edmund
+Stoiber, a u sklopu informativnih razgovora i priprema za poslanike
+parlamenta koji će prethoditi povjerenstvu za "informatora" će biti
+pozvan i guverner HNB-a Željko Rohatinski. Njemu će se postavljati
+pitanja o nadzoru HNB-a nad Hypo bankom. To je već drugo parlamentarno
+istražno povjerenstvo o Hypu u Austriji. Prije tri godine Zagorec je
+svjedočio na prvom. <br/></p><p class="c15"><br/></p><p class="c15"><a href="http://www.poslovni.hr">www.poslovni.hr</a><br/></p><br/> <a href="javascript:void(0)" onclick="shnews(1)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />18.02.2010 (12:44:19)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(2)" class="lnaslovKatgegorije">Guardian: Američki dugovi postali kineski problem</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/308901001266493459.jpg" alt="" class="newsSlika"/>
+						LONDON – Ako banci dugujete sto dolara, to je vaš problem, ako joj dugujete sto milijuna dolara, to je njen problem, piše londonski Guardian baveći se američkim dugovima Kini. <a href="javascript:void(0)" onclick="shnews(2)">Opširnije...</a></div>
+			<div id="newstekst_2" class="ltekstKategorije" style="display:none"><br/><br/>Sjedinjene Države i Kina nalaze se u čudnom ekonomskom zagrljaju,
+ocjenjuje list, podsjećajući da je najmnogoljudnija zemlja na svijetu,
+otkako je postala važan globalni ekonomski faktor, zaradu od jeftine
+robe prodane na stranim tržištima koristila za kupovinu obveznica
+stranih vlada, na prvom mjestu američke, preneo je BBC.<br/>
+<br/>
+Tijekom godina ekonomskog buma, Kina je tako pozajmljivala Americi
+novac da može nastaviti trošiti više nego što zarađuje. Kina sada sjedi
+na brdu obveznica, što je zabrinjavajući položaj, s obzirom na ogroman
+američki deficit.<br/>
+<br/>
+Međutim, ona se ne može odjednom da riješiti svojih nagomilanih hartija
+od vrijednosti, jer bi to moglo da poljulja dolar i da izazove gubitak
+povjerenja, što bi moglo nanijeti veliku štetu kineskoj ekonomijii.<br/><br/><a href="http://www.seebiz.eu">www.seebiz.eu</a><br/> <a href="javascript:void(0)" onclick="shnews(2)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />18.02.2010 (11:53:04)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(3)" class="lnaslovKatgegorije">MMF najavio prodaju zlata na tržištu</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/588202001266490384.jpg" alt="" class="newsSlika"/>
+						Međunarodni monetarni fond (MMF) najavio je da će uskoro pokrenuti tržišnu fazu programa prodaje zlata. To je druga faza ukupne prodaje 403,3 metričke tone zlata, osmine ukupnih zaliha Fonda, koju je Izvršni odbor MMF-a odobrio u rujnu 2009., navodi se u priopćenju objavljenom u srijedu u sjedištu Fonda u Washingtonu. <a href="javascript:void(0)" onclick="shnews(3)">Opširnije...</a></div>
+			<div id="newstekst_3" class="ltekstKategorije" style="display:none"><br/><br/><p>Prva je faza bila izdvojena isključivo za izvantržišnu prodaju, za
+tzv. službene nositelje, središnje banke i druge službene sektore
+zemlja članica Sporazuma o zlatu središnjih banaka članica MMF-a, po
+tržišnoj cijeni.U toj je fazi, u listopadu i studenome 2009., prodano
+212 tona zlata, od čega 200 tona središnjoj banci Indije, 10 tona
+središnjoj banci Šri Lanke i dvije tone središnjoj banci
+Mauricijusa.Ukupni preostali iznos za prodaju je 191,3 metričke tone
+zlata.</p>
+<p>U skladu s prioritetom izbjegavanja poremećaja na tržištu zlata,
+odnosno rušenja cijene zbog prevelike ponude, prodaja MMF-ova zlata
+provodit će se u fazama kroz određeno vrijeme, naglašeno je u
+priopćenju. Time se slijedi pristup koji su usvojile središnje
+banke-sudionice Sporazuma o zlatu. One su predvidjele da prodaje Fonda
+mogu iznositi do 400 tona godišnje i 2000 tona ukupno tijekom pet
+godina, počevši od 27. rujna 2009. </p>
+<p>Pokretanje tržišne faze prodaje MMF-ova zlata ne isključuje daljnje
+izvantržišne prodaje izravno zainteresiranim središnjim bankama ili
+drugim službenim nositeljima prava kupnje. Takva bi prodaja smanjila
+količinu zlata na tržištu, navodi MMF u priopćenju, uz najavu redovitih
+izvješća o prodajama.Cijene zlata pale su nakon MMF-ove najave jer
+ulagače zabrinjava rast ponude.</p>
+Cijena zlata za trenutačnu isporuku pala ja za 1,1 posto u srijedu u
+New Yorku nakon objave MMF-a, te za 0,6 posto na 1.100,55 dolara za
+uncu u četvrtak ujutro u Singapuru. Zlato za isporuku u travnju palo je
+u New Yorku za 1,7 posto, na 1.101,20 dolara.Odluku o prodaji zlata
+Izvršni odbor MMF-a opravdao je potrebama dugoročnog financiranja Fonda
+i jačanjem njegovih sposobnosti za povoljno kreditiranje zemalja s
+niskim prihodima. <br/><br/><a href="http://www.liderpress.hr">www.liderpress.hr</a><br/> <a href="javascript:void(0)" onclick="shnews(3)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />18.02.2010 (11:51:39)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(4)" class="lnaslovKatgegorije">TDR gradi tvornicu u Iranu</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/456832001266490299.jpg" alt="" class="newsSlika"/>
+						Proizvođač cigareta tvrtka TDR, iz sastava Adris grupe, započinje gradnju tvornice u Iranu i širi poslovanje na tržište jugozapadne Azije, a investicija je vrijedna 30 milijuna eura, objavljeno je iz Adrisa. <a href="javascript:void(0)" onclick="shnews(4)">Opširnije...</a></div>
+			<div id="newstekst_4" class="ltekstKategorije" style="display:none"><br/><br/><p>Ugovor o suradnji TDR-a i vodećega iranskoga duhanskog proizvođača
+Iranian Tobacco Company u Iranu su danas potpisali predsjednik Uprave
+TDR-a Davor Tomašković i predsjednik Uprave Iranian Tobacco Company S.
+Mahmood Abtahi.TDR i vodeći iranski proizvođač cigareta tvornicu će
+graditi u Sariju, glavnom gradu pokrajine Mazandaran. Tvornica bi s
+radom trebala početi do kraja iduće godine. Planirani kapacitet
+tvornice je proizvodnja 6,5 milijardi cigareta godišnje.</p>
+<p>TDR će u Iran prenijeti i svoju tehnologiju, znanje i iskustvo u
+proizvodnji i obradi duhana, u Iranu planira pokrenuti proizvodnju
+svojih brendova Ronhilla i Respecta, a dogovorena je i suradnja na
+proizvodnji zajedničkog brenda.Suradnja TDR-a s Iranian Tobacco Company
+započela je prije dvije godine i od tada na ovo izazovno tržište
+jugozapadne Azije TDR izvozi najpoznatiju hrvatsku cigaretu Ronhill i
+Avangard.</p>
+Uz Iran, ovom investicijom TDR planira proširiti svoje poslovanje i
+na susjedne zemlje u regiji.Na iranskom cigaretnom tržištu godišnja
+prodaja veća je od 70 milijardi komada cigareta.Predsjednik Uprave
+TDR-a Davor Tomašković ističe kako se ovom investicijom, vrijednom 30
+milijuna eura, TDR još snažnije pozicionira kao jedan od vodećih
+hrvatskih izvoznika, koji više od 50 posto svoje prodaje ostvaruje na
+inozemnim tržištima. Ocijenio je kako je to važan poslovni događaj ne
+samo za TDR nego i za hrvatsko gospodarstvo. <br/><br/><a href="http://www.liderpress.hr">www.liderpress.hr</a><br/> <a href="javascript:void(0)" onclick="shnews(4)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />18.02.2010 (09:12:06)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(5)" class="lnaslovKatgegorije">Wall Street: Dow Jones opet iznad 10.300 bodova</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/165575001266480726.jpg" alt="" class="newsSlika"/>
+						NEW YORK - Američki su indeksi porasli i drugi dan zaredom na krilima dobrih poslovnih rezultata i makroekonomskih podataka koji su dali novo gorivo optimistima. <a href="javascript:void(0)" onclick="shnews(5)">Opširnije...</a></div>
+			<div id="newstekst_5" class="ltekstKategorije" style="display:none"><br/><br/><p>Dow Jones ojačao je 0,39 posto, na 10.309 bodova, S&amp;P 500
+porastao je 0,42 posto, na 1.099,50 bodova dok je najveći dobitnik bio
+Nasdaq s rastom od 0,55 posto, na 2.226,29 bodova.</p>
+<p>Drugi dan zaredom najveći dobitnik u sastavu Dow Jonesa bila je Bank
+of America koja je danas ojačala 3,3 posto dok su dobre brojke s
+tržišta nekretnina podigle Home Depot 2 posto.</p>
+<p>Najveći dobitnici bili su izdanja iz zdravstvenog sektora. Tako je
+Humana ojačala 1,4 posto i to nakon što je priopćila kalko će
+podijeliti 1400 otkaza ove godine. Indeks zdravstvenog sektora ojačao
+je 2,5 posto nakon što je pao u šest od posljednjih sedam tjedana.</p>
+<p>Whole Foods Market uzletio je 12,6 posto nakon što je izvijesio o
+71,1 postotnom rastu kvartalne dobiti, što je nadmašilo očekivanja
+tržišta. Deere je skočoio 5,3 posto nakon što je objavio iznenađujući
+rast dobiti od 19 posto i ohrabrujuće prognoze za ovu godinu. Toyota se
+spustila 2,5 posto nakon što je izvjestila o mogućem povlaćenju s
+tržišta modela Corolla zbog novih mehaničkih problema.</p>
+<p>Na meti prodaje bile su energetske dionice čiji je indeks oslabio
+0,7 posto. Chevron je spušten 0,5 posto dok je pad sirovinskih dionica
+predvodio US Steel koji je srezan 1,8 posto.</p><p><br/></p><p><a href="http://www.seebiz.eu">www.seebiz.eu</a><br/></p><br/> <a href="javascript:void(0)" onclick="shnews(5)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />17.02.2010 (13:11:52)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(6)" class="lnaslovKatgegorije">Puma udvostručila dobit</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/496031001266408712.jpg" alt="" class="newsSlika"/>
+						Njemački proizvođač sportske opreme Puma udvostručio je neto dobit u četvrtom kvartalu 2009., zahvaljujući manjim jednokratnim troškovima u odnosu na isto razdoblje prethodne godine.  <a href="javascript:void(0)" onclick="shnews(6)">Opširnije...</a></div>
+			<div id="newstekst_6" class="ltekstKategorije" style="display:none"><br/><br/>Kompanija iz Herzogenauracha danas je objavila da je u proteklom
+tromjesečju ostvarila dobit od 16,2 milijuna eura ili 1,08 eura po
+dionici, što predstavlja 100-postotni rast na godišnjoj razini.
+Međutim, Bloombergovi analitičari u prosjeku su očekivali veći
+kvartalni profit, i to od 20 milijuna eura. Prihodi od prodaje pali su
+13 posto na 490 milijuna eura. Istovremeno, troškovi restrukturiranja i
+zatvaranja trgovina smanjili su se 28 posto na 18 milijuna eura.
+Dionice Pume skliznule su gotovo 2 posto u prijepodnevnoj trgovini u
+Frankfurtu.
+<br/><br/><a href="http://www.poslovni.hr">www.poslovni.hr</a><br/> <a href="javascript:void(0)" onclick="shnews(6)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />17.02.2010 (12:59:51)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(7)" class="lnaslovKatgegorije">Deloitte: Online oglašavanje rast će po stopi od 17% godišnje</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/903855001266407991.jpg" alt="" class="newsSlika"/>
+						ZAGREB - "Kada je krenuo trend pokretanja online medija previđali smo smrt tradicionalnih televizije i radija, istaknuo je, ali u 2010. možemo tvrditi da oni ostaju u dominantnoj poziciji", najavio je Dejan Ljuština iz konzultantske tvrtke Deloitte predstavljajući istraživanje 'Trendovi u medijima za 2010.' <a href="javascript:void(0)" onclick="shnews(7)">Opširnije...</a></div>
+			<div id="newstekst_7" class="ltekstKategorije" style="display:none"><br/><br/><p>To je naročito bitno za oglašivače, pa se očekuje da će globalno
+tržište televizijskog oglašavanja vrijediti oko 180 milijardi dolara,
+dok će se na online&nbsp; odvojiti 63 milijarde dolara. U Hrvatskoj se
+televizija prosječno gleda 327 minuta dnevno. Ukupni prihodi za
+oglašavanje tijekom 2010. rast će dva posto, od čega će se polovica
+odnositi na televiziju. Online oglašavanje će rasti, a do 2011. mogao
+bi u ukupnom iznosu doseći dvoznamenkasti udio. Taj segment oglašavanja
+u sektoru medija izgubio je najmanje prihoda u 2009., odnosno svega 5
+posto. Na online oglašavanje u Hrvatskoj odnosi se tek 3 posto ukupnog
+iznosa oglašavanja, a lani je sektor imao 10,2 milijuna eura prihoda od
+oglašavanja. Deloitte najavljuje rast ovog segmenta po stopi od 17
+posto godišnje. </p>
+<p>'Online oglašivačima postaje sve zanimljiviji jer su prinosi na
+investiciju bolji nego na drugim medijima', istaknuli su u Deloitteu, a
+bitna stavka je da&nbsp; je vrlo jednostavno izmjeriti utjecaj oglašavanja. </p>
+<p><span class="xclaimempty" style="margin: 0px ! important;">Online <span onclick='window.open("http://engine.xclaimwords.net/click.aspx?tid=951&amp;partnerid=116962&amp;linkOut=http://engine.xclaimwords.net/redir.htm?xclaimurl=QwwZxFER3xclaim.hr/new/tekst.aspxQwwZxFWR3idQwwZxFER214")' name="link0" id="link0" class="XClaimStyle" style="border-bottom: 1px solid rgb(1, 141, 37); margin: 0px ! important; height: auto; padding-top: 0px; padding-right: 0px; padding-left: 0px; text-decoration: underline ! important; cursor: pointer; padding-bottom: 1px ! important; color: rgb(1, 141, 37) ! important;" onmouseover='ShowAd(0);window.status="";return true;' onmouseout="HideAd(0);">oglašavanje</span>
+nudi mogućnost preciznog mjerenja broja konzumenata brojem 'klikova'
+što je oglašivačima jako privlačno. Problem online sektora je nuđenje
+besplatnog sadržaja koji se pokazao neprofitabilan. Teško je, ističe
+Ljuština, ili nemoguće početi naplaćivati sadržaj zbog načina
+konzumiranja informacije. </span></p>
+<p>'Online konzumacija je aktivna, traži se informacija dok čitatelji
+uzimaju print izdanje kada žele potrošiti vrijeme', kaže Ljuština.
+Upozorio je negativnu spiralu u medijima u kojima se, kako naziva,
+događa 'kanibalizacija' gdje ista novinska kuća razvija online servis
+do te mjere da print izdanje više nije relevantno. </p>
+<p>'Ljudi koji konzumiraju medije bez obzira na slobodu programa i
+dalje konzumiraju ono što im se servira', kazao je pa dodao da primarni
+ostaju mediji s rasporedom emitiranja sadržaja. </p>
+<p>Ipak televizija i Internet imaju zajedničku budućnost, tvrde u
+Deloitteu tako očekuju da će se u 2010. intenzivirati konvergencija dva
+medija, gdje će televizije svoje internet servise, odnosno portale,
+unaprijeđivati i odgovarati na zahtjeve korisnika. Digitalizacija je
+iznimno bitna jer u domove potrošača ulaze moderniji uređaji. Problem u
+spajanju medija je kompatibilnost sadržaja kojeg se objavljuje na
+internetu i televiziji, kada govorimo o formatu slike. Potrošači žele
+kombinirati internet i&nbsp;&nbsp; televiziju, pri čemu se otvara potpuno nova
+paradigma oglašavanja.</p>
+<p>Nova tržišna niša sigurno su e-knjige, odnosno e-čitači. U 2010.
+očekuje se da će njihov broj narasti na čak 5 milijuna, kupit će 100
+milijuna e-knjiga i ostvariti 1,5 milijardu dolara prometa.</p><p><br/></p><p>www.seebiz.eu<br/></p><br/> <a href="javascript:void(0)" onclick="shnews(7)">(Zatvori)</a></div>
+			</div>
+							<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />17.02.2010 (12:02:17)</div>
+			<h1 class="lnaslovKategorije"><a href="javascript:void(0)" onclick="shnews(8)" class="lnaslovKatgegorije">BNP Paribas: Kvartalna dobit 1,37 milijardi eura, iznad očekivanja</a></h1>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/197593001266404521.jpg" alt="" class="newsSlika"/>
+						PARIZ - BNP Paribas u prethodnom je tromjesečju ostvarila kvartalu dobit zahvaljujući preuzimanju Fortisa i smanjenim rezervacijama za loše kredite. <a href="javascript:void(0)" onclick="shnews(8)">Opširnije...</a></div>
+			<div id="newstekst_8" class="ltekstKategorije" style="display:none">
+<br/><br/><p>Banka je u četvrtom kvartalu prošle godine ostvarila neto dobit u
+iznosu od 1,37 milijardi eura, dok je u istom razdoblju godinu ranije
+poslovao s gubitkom od 1,37 milijardi eura. Analitičari koje je
+anketirao Bloomberg očekivali su dobit u iznosu od 1,06 milijardi eura.</p>
+Prihodi su se više no udvostručili na 10,06 milijardi eura. Iz
+BNP-a, koji s profitom posluje u zadnja četiri kvartala, su također
+izvijestili da su se u proteklom tromjesečju rezervacije za nenaplative
+kredite smanjile u odnosu na isti period 2008. za 26 posto.<br/>
+<br/><br/><a href="http://www.seebiz.eu">www.seebiz.eu</a><br/>
+ <a href="javascript:void(0)" onclick="shnews(8)">(Zatvori)</a></div>
+			</div>
+							</div>
+			&nbsp;
+	<div id="newsnavigacija">
+	<a href="http://www.moj-fond.hr/news/nav/hr-1-1-3-3.html" class="anewsnavigacija">1</a> | <a href="http://www.moj-fond.hr/news/nav/hr-2-1-3-3.html" class="anewsnavigacija">2</a> | <a href="http://www.moj-fond.hr/news/nav/hr-3-1-3-3.html" class="anewsnavigacija">3</a> | <a href="http://www.moj-fond.hr/news/nav/hr-4-1-3-3.html" class="anewsnavigacija">4</a> | <a href="http://www.moj-fond.hr/news/nav/hr-5-1-3-3.html" class="anewsnavigacija">5</a> | <a href="http://www.moj-fond.hr/news/nav/hr-6-1-3-3.html" class="anewsnavigacija">6</a> | <a href="http://www.moj-fond.hr/news/nav/hr-7-1-3-3.html" class="anewsnavigacija">7</a> | <a href="http://www.moj-fond.hr/news/nav/hr-8-1-3-3.html" class="anewsnavigacija">8</a> | <a href="http://www.moj-fond.hr/news/nav/hr-9-1-3-3.html" class="anewsnavigacija">9</a> | <a href="http://www.moj-fond.hr/news/nav/hr-10-1-3-3.html" class="anewsnavigacija">10</a> | <a href="http://www.moj-fond.hr/news/nav/hr-11-1-3-3.html" class="anewsnavigacija">11</a> | <a href="http://www.moj-fond.hr/news/nav/hr-12-1-3-3.html" class="anewsnavigacija">12</a> | <a href="http://www.moj-fond.hr/news/nav/hr-13-1-3-3.html" class="anewsnavigacija">13</a> | <a href="http://www.moj-fond.hr/news/nav/hr-14-1-3-3.html" class="anewsnavigacija">14</a> | <a href="http://www.moj-fond.hr/news/nav/hr-15-1-3-3.html" class="anewsnavigacija">15</a> | <a href="http://www.moj-fond.hr/news/nav/hr-16-1-3-3.html" class="anewsnavigacija">16</a> | <a href="http://www.moj-fond.hr/news/nav/hr-17-1-3-3.html" class="anewsnavigacija">17</a> | <a href="http://www.moj-fond.hr/news/nav/hr-18-1-3-3.html" class="anewsnavigacija">18</a> | <a href="http://www.moj-fond.hr/news/nav/hr-19-1-3-3.html" class="anewsnavigacija">19</a> | <a href="http://www.moj-fond.hr/news/nav/hr-20-1-3-3.html" class="anewsnavigacija">20</a> | <a href="http://www.moj-fond.hr/news/nav/hr-21-1-3-3.html" class="anewsnavigacija">21</a> | <a href="http://www.moj-fond.hr/news/nav/hr-22-1-3-3.html" class="anewsnavigacija">22</a> | <a href="http://www.moj-fond.hr/news/nav/hr-23-1-3-3.html" class="anewsnavigacija">23</a> | <a href="http://www.moj-fond.hr/news/nav/hr-24-1-3-3.html" class="anewsnavigacija">24</a> | <a href="http://www.moj-fond.hr/news/nav/hr-25-1-3-3.html" class="anewsnavigacija">25</a> | <a href="http://www.moj-fond.hr/news/nav/hr-26-1-3-3.html" class="anewsnavigacija">26</a> | <a href="http://www.moj-fond.hr/news/nav/hr-27-1-3-3.html" class="anewsnavigacija">27</a> | <a href="http://www.moj-fond.hr/news/nav/hr-28-1-3-3.html" class="anewsnavigacija">28</a> | <a href="http://www.moj-fond.hr/news/nav/hr-29-1-3-3.html" class="anewsnavigacija">29</a> | <a href="http://www.moj-fond.hr/news/nav/hr-30-1-3-3.html" class="anewsnavigacija">30</a> | <a href="http://www.moj-fond.hr/news/nav/hr-31-1-3-3.html" class="anewsnavigacija">31</a> | <a href="http://www.moj-fond.hr/news/nav/hr-32-1-3-3.html" class="anewsnavigacija">32</a> | <a href="http://www.moj-fond.hr/news/nav/hr-33-1-3-3.html" class="anewsnavigacija">33</a> | <a href="http://www.moj-fond.hr/news/nav/hr-34-1-3-3.html" class="anewsnavigacija">34</a> | <a href="http://www.moj-fond.hr/news/nav/hr-35-1-3-3.html" class="anewsnavigacija">35</a> | <a href="http://www.moj-fond.hr/news/nav/hr-36-1-3-3.html" class="anewsnavigacija">36</a> | <a href="http://www.moj-fond.hr/news/nav/hr-37-1-3-3.html" class="anewsnavigacija">37</a> | <a href="http://www.moj-fond.hr/news/nav/hr-38-1-3-3.html" class="anewsnavigacija">38</a> | <a href="http://www.moj-fond.hr/news/nav/hr-39-1-3-3.html" class="anewsnavigacija">39</a> | <a href="http://www.moj-fond.hr/news/nav/hr-40-1-3-3.html" class="anewsnavigacija">40</a> | <a href="http://www.moj-fond.hr/news/nav/hr-41-1-3-3.html" class="anewsnavigacija">41</a> | <a href="http://www.moj-fond.hr/news/nav/hr-42-1-3-3.html" class="anewsnavigacija">42</a> | <a href="http://www.moj-fond.hr/news/nav/hr-43-1-3-3.html" class="anewsnavigacija">43</a> | <a href="http://www.moj-fond.hr/news/nav/hr-44-1-3-3.html" class="anewsnavigacija">44</a> | <a href="http://www.moj-fond.hr/news/nav/hr-45-1-3-3.html" class="anewsnavigacija">45</a> | <a href="http://www.moj-fond.hr/news/nav/hr-46-1-3-3.html" class="anewsnavigacija">46</a> | <a href="http://www.moj-fond.hr/news/nav/hr-47-1-3-3.html" class="anewsnavigacija">47</a> | <a href="http://www.moj-fond.hr/news/nav/hr-48-1-3-3.html" class="anewsnavigacija">48</a> | <a href="http://www.moj-fond.hr/news/nav/hr-49-1-3-3.html" class="anewsnavigacija">49</a> | <a href="http://www.moj-fond.hr/news/nav/hr-50-1-3-3.html" class="anewsnavigacija">50</a> | <a href="http://www.moj-fond.hr/news/nav/hr-51-1-3-3.html" class="anewsnavigacija">51</a> | <a href="http://www.moj-fond.hr/news/nav/hr-52-1-3-3.html" class="anewsnavigacija">52</a> | <a href="http://www.moj-fond.hr/news/nav/hr-53-1-3-3.html" class="anewsnavigacija">53</a> | <a href="http://www.moj-fond.hr/news/nav/hr-54-1-3-3.html" class="anewsnavigacija">54</a> | <a href="http://www.moj-fond.hr/news/nav/hr-55-1-3-3.html" class="anewsnavigacija">55</a> | <a href="http://www.moj-fond.hr/news/nav/hr-56-1-3-3.html" class="anewsnavigacija">56</a> | <a href="http://www.moj-fond.hr/news/nav/hr-57-1-3-3.html" class="anewsnavigacija">57</a> | <a href="http://www.moj-fond.hr/news/nav/hr-58-1-3-3.html" class="anewsnavigacija">58</a> | <a href="http://www.moj-fond.hr/news/nav/hr-59-1-3-3.html" class="anewsnavigacija">59</a> | <a href="http://www.moj-fond.hr/news/nav/hr-60-1-3-3.html" class="anewsnavigacija">60</a> | <a href="http://www.moj-fond.hr/news/nav/hr-61-1-3-3.html" class="anewsnavigacija">61</a> | <a href="http://www.moj-fond.hr/news/nav/hr-62-1-3-3.html" class="anewsnavigacija">62</a> | <a href="http://www.moj-fond.hr/news/nav/hr-63-1-3-3.html" class="anewsnavigacija">63</a> | <a href="http://www.moj-fond.hr/news/nav/hr-64-1-3-3.html" class="anewsnavigacija">64</a> | <a href="http://www.moj-fond.hr/news/nav/hr-65-1-3-3.html" class="anewsnavigacija">65</a> | <a href="http://www.moj-fond.hr/news/nav/hr-66-1-3-3.html" class="anewsnavigacija">66</a> | <a href="http://www.moj-fond.hr/news/nav/hr-67-1-3-3.html" class="anewsnavigacija">67</a> | <a href="http://www.moj-fond.hr/news/nav/hr-68-1-3-3.html" class="anewsnavigacija">68</a> | <a href="http://www.moj-fond.hr/news/nav/hr-69-1-3-3.html" class="anewsnavigacija">69</a> | <a href="http://www.moj-fond.hr/news/nav/hr-70-1-3-3.html" class="anewsnavigacija">70</a> | <a href="http://www.moj-fond.hr/news/nav/hr-71-1-3-3.html" class="anewsnavigacija">71</a> | <a href="http://www.moj-fond.hr/news/nav/hr-72-1-3-3.html" class="anewsnavigacija">72</a> | <a href="http://www.moj-fond.hr/news/nav/hr-73-1-3-3.html" class="anewsnavigacija">73</a> | <a href="http://www.moj-fond.hr/news/nav/hr-74-1-3-3.html" class="anewsnavigacija">74</a> | <a href="http://www.moj-fond.hr/news/nav/hr-75-1-3-3.html" class="anewsnavigacija">75</a> | <a href="http://www.moj-fond.hr/news/nav/hr-76-1-3-3.html" class="anewsnavigacija">76</a> | <a href="http://www.moj-fond.hr/news/nav/hr-77-1-3-3.html" class="anewsnavigacija">77</a> | <a href="http://www.moj-fond.hr/news/nav/hr-78-1-3-3.html" class="anewsnavigacija">78</a> | <a href="http://www.moj-fond.hr/news/nav/hr-79-1-3-3.html" class="anewsnavigacija">79</a> | <a href="http://www.moj-fond.hr/news/nav/hr-80-1-3-3.html" class="anewsnavigacija">80</a> | <a href="http://www.moj-fond.hr/news/nav/hr-81-1-3-3.html" class="anewsnavigacija">81</a> | <a href="http://www.moj-fond.hr/news/nav/hr-82-1-3-3.html" class="anewsnavigacija">82</a> | <a href="http://www.moj-fond.hr/news/nav/hr-83-1-3-3.html" class="anewsnavigacija">83</a> | <a href="http://www.moj-fond.hr/news/nav/hr-84-1-3-3.html" class="anewsnavigacija">84</a> | <a href="http://www.moj-fond.hr/news/nav/hr-85-1-3-3.html" class="anewsnavigacija">85</a> | <a href="http://www.moj-fond.hr/news/nav/hr-86-1-3-3.html" class="anewsnavigacija">86</a> | <a href="http://www.moj-fond.hr/news/nav/hr-87-1-3-3.html" class="anewsnavigacija">87</a> | <a href="http://www.moj-fond.hr/news/nav/hr-88-1-3-3.html" class="anewsnavigacija">88</a> | <a href="http://www.moj-fond.hr/news/nav/hr-89-1-3-3.html" class="anewsnavigacija">89</a> | <a href="http://www.moj-fond.hr/news/nav/hr-90-1-3-3.html" class="anewsnavigacija">90</a> | <a href="http://www.moj-fond.hr/news/nav/hr-91-1-3-3.html" class="anewsnavigacija">91</a> | <a href="http://www.moj-fond.hr/news/nav/hr-92-1-3-3.html" class="anewsnavigacija">92</a> | <a href="http://www.moj-fond.hr/news/nav/hr-93-1-3-3.html" class="anewsnavigacija">93</a> | <a href="http://www.moj-fond.hr/news/nav/hr-94-1-3-3.html" class="anewsnavigacija">94</a> | <a href="http://www.moj-fond.hr/news/nav/hr-95-1-3-3.html" class="anewsnavigacija">95</a> | <a href="http://www.moj-fond.hr/news/nav/hr-96-1-3-3.html" class="anewsnavigacija">96</a> | <a href="http://www.moj-fond.hr/news/nav/hr-97-1-3-3.html" class="anewsnavigacija">97</a> | <a href="http://www.moj-fond.hr/news/nav/hr-98-1-3-3.html" class="anewsnavigacija">98</a> | <a href="http://www.moj-fond.hr/news/nav/hr-99-1-3-3.html" class="anewsnavigacija">99</a> | <a href="http://www.moj-fond.hr/news/nav/hr-100-1-3-3.html" class="anewsnavigacija">100</a> | <a href="http://www.moj-fond.hr/news/nav/hr-101-1-3-3.html" class="anewsnavigacija">101</a> | <a href="http://www.moj-fond.hr/news/nav/hr-102-1-3-3.html" class="anewsnavigacija">102</a> | <a href="http://www.moj-fond.hr/news/nav/hr-103-1-3-3.html" class="anewsnavigacija">103</a> | <a href="http://www.moj-fond.hr/news/nav/hr-104-1-3-3.html" class="anewsnavigacija">104</a> | <a href="http://www.moj-fond.hr/news/nav/hr-105-1-3-3.html" class="anewsnavigacija">105</a> | <a href="http://www.moj-fond.hr/news/nav/hr-106-1-3-3.html" class="anewsnavigacija">106</a> | <a href="http://www.moj-fond.hr/news/nav/hr-107-1-3-3.html" class="anewsnavigacija">107</a> | <a href="http://www.moj-fond.hr/news/nav/hr-108-1-3-3.html" class="anewsnavigacija">108</a> | <a href="http://www.moj-fond.hr/news/nav/hr-109-1-3-3.html" class="anewsnavigacija">109</a> | <a href="http://www.moj-fond.hr/news/nav/hr-110-1-3-3.html" class="anewsnavigacija">110</a> | <a href="http://www.moj-fond.hr/news/nav/hr-111-1-3-3.html" class="anewsnavigacija">111</a> | <a href="http://www.moj-fond.hr/news/nav/hr-112-1-3-3.html" class="anewsnavigacija">112</a> | <a href="http://www.moj-fond.hr/news/nav/hr-113-1-3-3.html" class="anewsnavigacija">113</a> | <a href="http://www.moj-fond.hr/news/nav/hr-114-1-3-3.html" class="anewsnavigacija">114</a> | <a href="http://www.moj-fond.hr/news/nav/hr-115-1-3-3.html" class="anewsnavigacija">115</a> | <a href="http://www.moj-fond.hr/news/nav/hr-116-1-3-3.html" class="anewsnavigacija">116</a> | <a href="http://www.moj-fond.hr/news/nav/hr-117-1-3-3.html" class="anewsnavigacija">117</a> | <a href="http://www.moj-fond.hr/news/nav/hr-118-1-3-3.html" class="anewsnavigacija">118</a> | <a href="http://www.moj-fond.hr/news/nav/hr-119-1-3-3.html" class="anewsnavigacija">119</a> | <a href="http://www.moj-fond.hr/news/nav/hr-120-1-3-3.html" class="anewsnavigacija">120</a> | <a href="http://www.moj-fond.hr/news/nav/hr-121-1-3-3.html" class="anewsnavigacija">121</a> | <a href="http://www.moj-fond.hr/news/nav/hr-122-1-3-3.html" class="anewsnavigacija">122</a> | <a href="http://www.moj-fond.hr/news/nav/hr-123-1-3-3.html" class="anewsnavigacija">123</a> | <a href="http://www.moj-fond.hr/news/nav/hr-124-1-3-3.html" class="anewsnavigacija">124</a> | <a href="http://www.moj-fond.hr/news/nav/hr-125-1-3-3.html" class="anewsnavigacija">125</a> | <a href="http://www.moj-fond.hr/news/nav/hr-126-1-3-3.html" class="anewsnavigacija">126</a> | <a href="http://www.moj-fond.hr/news/nav/hr-127-1-3-3.html" class="anewsnavigacija">127</a> | <a href="http://www.moj-fond.hr/news/nav/hr-128-1-3-3.html" class="anewsnavigacija">128</a> | <a href="http://www.moj-fond.hr/news/nav/hr-129-1-3-3.html" class="anewsnavigacija">129</a> | <a href="http://www.moj-fond.hr/news/nav/hr-130-1-3-3.html" class="anewsnavigacija">130</a> | <a href="http://www.moj-fond.hr/news/nav/hr-131-1-3-3.html" class="anewsnavigacija">131</a> | <a href="http://www.moj-fond.hr/news/nav/hr-132-1-3-3.html" class="anewsnavigacija">132</a> | <a href="http://www.moj-fond.hr/news/nav/hr-133-1-3-3.html" class="anewsnavigacija">133</a> | <a href="http://www.moj-fond.hr/news/nav/hr-134-1-3-3.html" class="anewsnavigacija">134</a> | <a href="http://www.moj-fond.hr/news/nav/hr-135-1-3-3.html" class="anewsnavigacija">135</a> | <a href="http://www.moj-fond.hr/news/nav/hr-136-1-3-3.html" class="anewsnavigacija">136</a> | <a href="http://www.moj-fond.hr/news/nav/hr-137-1-3-3.html" class="anewsnavigacija">137</a> | <a href="http://www.moj-fond.hr/news/nav/hr-138-1-3-3.html" class="anewsnavigacija">138</a> | <a href="http://www.moj-fond.hr/news/nav/hr-139-1-3-3.html" class="anewsnavigacija">139</a> | <a href="http://www.moj-fond.hr/news/nav/hr-140-1-3-3.html" class="anewsnavigacija">140</a> | <a href="http://www.moj-fond.hr/news/nav/hr-141-1-3-3.html" class="anewsnavigacija">141</a> | <a href="http://www.moj-fond.hr/news/nav/hr-142-1-3-3.html" class="anewsnavigacija">142</a> | <a href="http://www.moj-fond.hr/news/nav/hr-143-1-3-3.html" class="anewsnavigacija">143</a> | <a href="http://www.moj-fond.hr/news/nav/hr-144-1-3-3.html" class="anewsnavigacija">144</a> | <a href="http://www.moj-fond.hr/news/nav/hr-145-1-3-3.html" class="anewsnavigacija">145</a> | <a href="http://www.moj-fond.hr/news/nav/hr-146-1-3-3.html" class="anewsnavigacija">146</a> | <a href="http://www.moj-fond.hr/news/nav/hr-147-1-3-3.html" class="anewsnavigacija">147</a> | <a href="http://www.moj-fond.hr/news/nav/hr-148-1-3-3.html" class="anewsnavigacija">148</a> | <a href="http://www.moj-fond.hr/news/nav/hr-149-1-3-3.html" class="anewsnavigacija">149</a> | <a href="http://www.moj-fond.hr/news/nav/hr-150-1-3-3.html" class="anewsnavigacija">150</a> | <a href="http://www.moj-fond.hr/news/nav/hr-151-1-3-3.html" class="anewsnavigacija">151</a> | <a href="http://www.moj-fond.hr/news/nav/hr-152-1-3-3.html" class="anewsnavigacija">152</a> | <a href="http://www.moj-fond.hr/news/nav/hr-153-1-3-3.html" class="anewsnavigacija">153</a> | <a href="http://www.moj-fond.hr/news/nav/hr-154-1-3-3.html" class="anewsnavigacija">154</a> | <a href="http://www.moj-fond.hr/news/nav/hr-155-1-3-3.html" class="anewsnavigacija">155</a> | <a href="http://www.moj-fond.hr/news/nav/hr-156-1-3-3.html" class="anewsnavigacija">156</a> | <a href="http://www.moj-fond.hr/news/nav/hr-157-1-3-3.html" class="anewsnavigacija">157</a> | <a href="http://www.moj-fond.hr/news/nav/hr-158-1-3-3.html" class="anewsnavigacija">158</a> | <a href="http://www.moj-fond.hr/news/nav/hr-159-1-3-3.html" class="anewsnavigacija">159</a> | <a href="http://www.moj-fond.hr/news/nav/hr-160-1-3-3.html" class="anewsnavigacija">160</a> | <a href="http://www.moj-fond.hr/news/nav/hr-161-1-3-3.html" class="anewsnavigacija">161</a> | <a href="http://www.moj-fond.hr/news/nav/hr-162-1-3-3.html" class="anewsnavigacija">162</a> | <a href="http://www.moj-fond.hr/news/nav/hr-163-1-3-3.html" class="anewsnavigacija">163</a> | <a href="http://www.moj-fond.hr/news/nav/hr-164-1-3-3.html" class="anewsnavigacija">164</a> | <a href="http://www.moj-fond.hr/news/nav/hr-165-1-3-3.html" class="anewsnavigacija">165</a> | <a href="http://www.moj-fond.hr/news/nav/hr-166-1-3-3.html" class="anewsnavigacija">166</a> | <a href="http://www.moj-fond.hr/news/nav/hr-167-1-3-3.html" class="anewsnavigacija">167</a> | <a href="http://www.moj-fond.hr/news/nav/hr-168-1-3-3.html" class="anewsnavigacija">168</a> | <a href="http://www.moj-fond.hr/news/nav/hr-169-1-3-3.html" class="anewsnavigacija">169</a> | <a href="http://www.moj-fond.hr/news/nav/hr-170-1-3-3.html" class="anewsnavigacija">170</a> | <a href="http://www.moj-fond.hr/news/nav/hr-171-1-3-3.html" class="anewsnavigacija">171</a> | <a href="http://www.moj-fond.hr/news/nav/hr-172-1-3-3.html" class="anewsnavigacija">172</a> | <a href="http://www.moj-fond.hr/news/nav/hr-173-1-3-3.html" class="anewsnavigacija">173</a> | <a href="http://www.moj-fond.hr/news/nav/hr-174-1-3-3.html" class="anewsnavigacija">174</a> | <a href="http://www.moj-fond.hr/news/nav/hr-175-1-3-3.html" class="anewsnavigacija">175</a> | <a href="http://www.moj-fond.hr/news/nav/hr-176-1-3-3.html" class="anewsnavigacija">176</a> | <a href="http://www.moj-fond.hr/news/nav/hr-177-1-3-3.html" class="anewsnavigacija">177</a> | <a href="http://www.moj-fond.hr/news/nav/hr-178-1-3-3.html" class="anewsnavigacija">178</a> | <a href="http://www.moj-fond.hr/news/nav/hr-179-1-3-3.html" class="anewsnavigacija">179</a> | <a href="http://www.moj-fond.hr/news/nav/hr-180-1-3-3.html" class="anewsnavigacija">180</a> | <a href="http://www.moj-fond.hr/news/nav/hr-181-1-3-3.html" class="anewsnavigacija">181</a> | <a href="http://www.moj-fond.hr/news/nav/hr-182-1-3-3.html" class="anewsnavigacija">182</a> | <a href="http://www.moj-fond.hr/news/nav/hr-183-1-3-3.html" class="anewsnavigacija">183</a> | <a href="http://www.moj-fond.hr/news/nav/hr-184-1-3-3.html" class="anewsnavigacija">184</a> | <a href="http://www.moj-fond.hr/news/nav/hr-185-1-3-3.html" class="anewsnavigacija">185</a> | <a href="http://www.moj-fond.hr/news/nav/hr-186-1-3-3.html" class="anewsnavigacija">186</a> | <a href="http://www.moj-fond.hr/news/nav/hr-187-1-3-3.html" class="anewsnavigacija">187</a> | <a href="http://www.moj-fond.hr/news/nav/hr-188-1-3-3.html" class="anewsnavigacija">188</a> | <a href="http://www.moj-fond.hr/news/nav/hr-189-1-3-3.html" class="anewsnavigacija">189</a> | <a href="http://www.moj-fond.hr/news/nav/hr-190-1-3-3.html" class="anewsnavigacija">190</a> | <a href="http://www.moj-fond.hr/news/nav/hr-191-1-3-3.html" class="anewsnavigacija">191</a> | <a href="http://www.moj-fond.hr/news/nav/hr-192-1-3-3.html" class="anewsnavigacija">192</a> | <a href="http://www.moj-fond.hr/news/nav/hr-193-1-3-3.html" class="anewsnavigacija">193</a> | <a href="http://www.moj-fond.hr/news/nav/hr-194-1-3-3.html" class="anewsnavigacija">194</a> | <a href="http://www.moj-fond.hr/news/nav/hr-195-1-3-3.html" class="anewsnavigacija">195</a> | <a href="http://www.moj-fond.hr/news/nav/hr-196-1-3-3.html" class="anewsnavigacija">196</a> | <a href="http://www.moj-fond.hr/news/nav/hr-197-1-3-3.html" class="anewsnavigacija">197</a> | <a href="http://www.moj-fond.hr/news/nav/hr-198-1-3-3.html" class="anewsnavigacija">198</a> | <a href="http://www.moj-fond.hr/news/nav/hr-199-1-3-3.html" class="anewsnavigacija">199</a> | <a href="http://www.moj-fond.hr/news/nav/hr-200-1-3-3.html" class="anewsnavigacija">200</a> | <a href="http://www.moj-fond.hr/news/nav/hr-201-1-3-3.html" class="anewsnavigacija">201</a> | <a href="http://www.moj-fond.hr/news/nav/hr-202-1-3-3.html" class="anewsnavigacija">202</a> | <a href="http://www.moj-fond.hr/news/nav/hr-203-1-3-3.html" class="anewsnavigacija">203</a> | <a href="http://www.moj-fond.hr/news/nav/hr-204-1-3-3.html" class="anewsnavigacija">204</a> | <a href="http://www.moj-fond.hr/news/nav/hr-205-1-3-3.html" class="anewsnavigacija">205</a> | <a href="http://www.moj-fond.hr/news/nav/hr-206-1-3-3.html" class="anewsnavigacija">206</a> | <a href="http://www.moj-fond.hr/news/nav/hr-207-1-3-3.html" class="anewsnavigacija">207</a> | <a href="http://www.moj-fond.hr/news/nav/hr-208-1-3-3.html" class="anewsnavigacija">208</a> | <a href="http://www.moj-fond.hr/news/nav/hr-209-1-3-3.html" class="anewsnavigacija">209</a> | <a href="http://www.moj-fond.hr/news/nav/hr-210-1-3-3.html" class="anewsnavigacija">210</a> | <a href="http://www.moj-fond.hr/news/nav/hr-211-1-3-3.html" class="anewsnavigacija">211</a> | <a href="http://www.moj-fond.hr/news/nav/hr-212-1-3-3.html" class="anewsnavigacija">212</a> | <a href="http://www.moj-fond.hr/news/nav/hr-213-1-3-3.html" class="anewsnavigacija">213</a> | <a href="http://www.moj-fond.hr/news/nav/hr-214-1-3-3.html" class="anewsnavigacija">214</a> | <a href="http://www.moj-fond.hr/news/nav/hr-215-1-3-3.html" class="anewsnavigacija">215</a> | <a href="http://www.moj-fond.hr/news/nav/hr-216-1-3-3.html" class="anewsnavigacija">216</a> | <a href="http://www.moj-fond.hr/news/nav/hr-217-1-3-3.html" class="anewsnavigacija">217</a> | <a href="http://www.moj-fond.hr/news/nav/hr-218-1-3-3.html" class="anewsnavigacija">218</a> | <a href="http://www.moj-fond.hr/news/nav/hr-219-1-3-3.html" class="anewsnavigacija">219</a> | <a href="http://www.moj-fond.hr/news/nav/hr-220-1-3-3.html" class="anewsnavigacija">220</a> | <a href="http://www.moj-fond.hr/news/nav/hr-221-1-3-3.html" class="anewsnavigacija">221</a> | <a href="http://www.moj-fond.hr/news/nav/hr-222-1-3-3.html" class="anewsnavigacija">222</a> | <a href="http://www.moj-fond.hr/news/nav/hr-223-1-3-3.html" class="anewsnavigacija">223</a> | <a href="http://www.moj-fond.hr/news/nav/hr-224-1-3-3.html" class="anewsnavigacija">224</a> | <a href="http://www.moj-fond.hr/news/nav/hr-225-1-3-3.html" class="anewsnavigacija">225</a> | <a href="http://www.moj-fond.hr/news/nav/hr-226-1-3-3.html" class="anewsnavigacija">226</a> | <a href="http://www.moj-fond.hr/news/nav/hr-227-1-3-3.html" class="anewsnavigacija">227</a> | <a href="http://www.moj-fond.hr/news/nav/hr-228-1-3-3.html" class="anewsnavigacija">228</a> | <a href="http://www.moj-fond.hr/news/nav/hr-229-1-3-3.html" class="anewsnavigacija">229</a> | <a href="http://www.moj-fond.hr/news/nav/hr-230-1-3-3.html" class="anewsnavigacija">230</a> | <a href="http://www.moj-fond.hr/news/nav/hr-231-1-3-3.html" class="anewsnavigacija">231</a> | <a href="http://www.moj-fond.hr/news/nav/hr-232-1-3-3.html" class="anewsnavigacija">232</a> | <a href="http://www.moj-fond.hr/news/nav/hr-233-1-3-3.html" class="anewsnavigacija">233</a> | <a href="http://www.moj-fond.hr/news/nav/hr-234-1-3-3.html" class="anewsnavigacija">234</a> | <a href="http://www.moj-fond.hr/news/nav/hr-235-1-3-3.html" class="anewsnavigacija">235</a> | <a href="http://www.moj-fond.hr/news/nav/hr-236-1-3-3.html" class="anewsnavigacija">236</a> | <a href="http://www.moj-fond.hr/news/nav/hr-237-1-3-3.html" class="anewsnavigacija">237</a> | <a href="http://www.moj-fond.hr/news/nav/hr-238-1-3-3.html" class="anewsnavigacija">238</a> | <a href="http://www.moj-fond.hr/news/nav/hr-239-1-3-3.html" class="anewsnavigacija">239</a> | <a href="http://www.moj-fond.hr/news/nav/hr-240-1-3-3.html" class="anewsnavigacija">240</a> | <a href="http://www.moj-fond.hr/news/nav/hr-241-1-3-3.html" class="anewsnavigacija">241</a> | <a href="http://www.moj-fond.hr/news/nav/hr-242-1-3-3.html" class="anewsnavigacija">242</a> | <a href="http://www.moj-fond.hr/news/nav/hr-243-1-3-3.html" class="anewsnavigacija">243</a> | <a href="http://www.moj-fond.hr/news/nav/hr-244-1-3-3.html" class="anewsnavigacija">244</a> | <a href="http://www.moj-fond.hr/news/nav/hr-245-1-3-3.html" class="anewsnavigacija">245</a> | <a href="http://www.moj-fond.hr/news/nav/hr-246-1-3-3.html" class="anewsnavigacija">246</a> | <a href="http://www.moj-fond.hr/news/nav/hr-247-1-3-3.html" class="anewsnavigacija">247</a> | <a href="http://www.moj-fond.hr/news/nav/hr-248-1-3-3.html" class="anewsnavigacija">248</a> | <a href="http://www.moj-fond.hr/news/nav/hr-249-1-3-3.html" class="anewsnavigacija">249</a> | <a href="http://www.moj-fond.hr/news/nav/hr-250-1-3-3.html" class="anewsnavigacija">250</a> | <a href="http://www.moj-fond.hr/news/nav/hr-251-1-3-3.html" class="anewsnavigacija">251</a> | <a href="http://www.moj-fond.hr/news/nav/hr-252-1-3-3.html" class="anewsnavigacija">252</a> | <a href="http://www.moj-fond.hr/news/nav/hr-253-1-3-3.html" class="anewsnavigacija">253</a> | <a href="http://www.moj-fond.hr/news/nav/hr-254-1-3-3.html" class="anewsnavigacija">254</a> | <a href="http://www.moj-fond.hr/news/nav/hr-255-1-3-3.html" class="anewsnavigacija">255</a> | <a href="http://www.moj-fond.hr/news/nav/hr-256-1-3-3.html" class="anewsnavigacija">256</a> | <a href="http://www.moj-fond.hr/news/nav/hr-257-1-3-3.html" class="anewsnavigacija">257</a> | <a href="http://www.moj-fond.hr/news/nav/hr-258-1-3-3.html" class="anewsnavigacija">258</a> | <a href="http://www.moj-fond.hr/news/nav/hr-259-1-3-3.html" class="anewsnavigacija">259</a> | <a href="http://www.moj-fond.hr/news/nav/hr-260-1-3-3.html" class="anewsnavigacija">260</a> | <a href="http://www.moj-fond.hr/news/nav/hr-261-1-3-3.html" class="anewsnavigacija">261</a> | <a href="http://www.moj-fond.hr/news/nav/hr-262-1-3-3.html" class="anewsnavigacija">262</a> | <a href="http://www.moj-fond.hr/news/nav/hr-263-1-3-3.html" class="anewsnavigacija">263</a> | <a href="http://www.moj-fond.hr/news/nav/hr-264-1-3-3.html" class="anewsnavigacija">264</a> | <a href="http://www.moj-fond.hr/news/nav/hr-265-1-3-3.html" class="anewsnavigacija">265</a> | <a href="http://www.moj-fond.hr/news/nav/hr-266-1-3-3.html" class="anewsnavigacija">266</a> | <a href="http://www.moj-fond.hr/news/nav/hr-267-1-3-3.html" class="anewsnavigacija">267</a> | <a href="http://www.moj-fond.hr/news/nav/hr-268-1-3-3.html" class="anewsnavigacija">268</a> | <a href="http://www.moj-fond.hr/news/nav/hr-269-1-3-3.html" class="anewsnavigacija">269</a> | <a href="http://www.moj-fond.hr/news/nav/hr-270-1-3-3.html" class="anewsnavigacija">270</a> | <a href="http://www.moj-fond.hr/news/nav/hr-271-1-3-3.html" class="anewsnavigacija">271</a> | <a href="http://www.moj-fond.hr/news/nav/hr-272-1-3-3.html" class="anewsnavigacija">272</a> | <a href="http://www.moj-fond.hr/news/nav/hr-273-1-3-3.html" class="anewsnavigacija">273</a> | <a href="http://www.moj-fond.hr/news/nav/hr-274-1-3-3.html" class="anewsnavigacija">274</a> | <a href="http://www.moj-fond.hr/news/nav/hr-275-1-3-3.html" class="anewsnavigacija">275</a> | <a href="http://www.moj-fond.hr/news/nav/hr-276-1-3-3.html" class="anewsnavigacija">276</a> | <a href="http://www.moj-fond.hr/news/nav/hr-277-1-3-3.html" class="anewsnavigacija">277</a> | <a href="http://www.moj-fond.hr/news/nav/hr-278-1-3-3.html" class="anewsnavigacija">278</a> | <a href="http://www.moj-fond.hr/news/nav/hr-279-1-3-3.html" class="anewsnavigacija">279</a> | <a href="http://www.moj-fond.hr/news/nav/hr-280-1-3-3.html" class="anewsnavigacija">280</a> | <a href="http://www.moj-fond.hr/news/nav/hr-281-1-3-3.html" class="anewsnavigacija">281</a> | <a href="http://www.moj-fond.hr/news/nav/hr-282-1-3-3.html" class="anewsnavigacija">282</a> | <a href="http://www.moj-fond.hr/news/nav/hr-283-1-3-3.html" class="anewsnavigacija">283</a> | <a href="http://www.moj-fond.hr/news/nav/hr-284-1-3-3.html" class="anewsnavigacija">284</a> | <a href="http://www.moj-fond.hr/news/nav/hr-285-1-3-3.html" class="anewsnavigacija">285</a> | <a href="http://www.moj-fond.hr/news/nav/hr-286-1-3-3.html" class="anewsnavigacija">286</a> | <a href="http://www.moj-fond.hr/news/nav/hr-287-1-3-3.html" class="anewsnavigacija">287</a> | <a href="http://www.moj-fond.hr/news/nav/hr-288-1-3-3.html" class="anewsnavigacija">288</a> | <a href="http://www.moj-fond.hr/news/nav/hr-289-1-3-3.html" class="anewsnavigacija">289</a> | <a href="http://www.moj-fond.hr/news/nav/hr-290-1-3-3.html" class="anewsnavigacija">290</a> | <a href="http://www.moj-fond.hr/news/nav/hr-291-1-3-3.html" class="anewsnavigacija">291</a> | <a href="http://www.moj-fond.hr/news/nav/hr-292-1-3-3.html" class="anewsnavigacija">292</a> | <a href="http://www.moj-fond.hr/news/nav/hr-293-1-3-3.html" class="anewsnavigacija">293</a> | <a href="http://www.moj-fond.hr/news/nav/hr-294-1-3-3.html" class="anewsnavigacija">294</a> | <a href="http://www.moj-fond.hr/news/nav/hr-295-1-3-3.html" class="anewsnavigacija">295</a> | <a href="http://www.moj-fond.hr/news/nav/hr-296-1-3-3.html" class="anewsnavigacija">296</a> | <a href="http://www.moj-fond.hr/news/nav/hr-297-1-3-3.html" class="anewsnavigacija">297</a> | <a href="http://www.moj-fond.hr/news/nav/hr-298-1-3-3.html" class="anewsnavigacija">298</a> | <a href="http://www.moj-fond.hr/news/nav/hr-299-1-3-3.html" class="anewsnavigacija">299</a> | <a href="http://www.moj-fond.hr/news/nav/hr-300-1-3-3.html" class="anewsnavigacija">300</a> | <a href="http://www.moj-fond.hr/news/nav/hr-301-1-3-3.html" class="anewsnavigacija">301</a> | <a href="http://www.moj-fond.hr/news/nav/hr-302-1-3-3.html" class="anewsnavigacija">302</a> | <a href="http://www.moj-fond.hr/news/nav/hr-303-1-3-3.html" class="anewsnavigacija">303</a> | <a href="http://www.moj-fond.hr/news/nav/hr-304-1-3-3.html" class="anewsnavigacija">304</a> | <a href="http://www.moj-fond.hr/news/nav/hr-305-1-3-3.html" class="anewsnavigacija">305</a> | <a href="http://www.moj-fond.hr/news/nav/hr-306-1-3-3.html" class="anewsnavigacija">306</a> | <a href="http://www.moj-fond.hr/news/nav/hr-307-1-3-3.html" class="anewsnavigacija">307</a> | <a href="http://www.moj-fond.hr/news/nav/hr-308-1-3-3.html" class="anewsnavigacija">308</a> | <a href="http://www.moj-fond.hr/news/nav/hr-309-1-3-3.html" class="anewsnavigacija">309</a> | <a href="http://www.moj-fond.hr/news/nav/hr-310-1-3-3.html" class="anewsnavigacija">310</a> | <a href="http://www.moj-fond.hr/news/nav/hr-311-1-3-3.html" class="anewsnavigacija">311</a> | <a href="http://www.moj-fond.hr/news/nav/hr-312-1-3-3.html" class="anewsnavigacija">312</a> | <a href="http://www.moj-fond.hr/news/nav/hr-313-1-3-3.html" class="anewsnavigacija">313</a> | <a href="http://www.moj-fond.hr/news/nav/hr-314-1-3-3.html" class="anewsnavigacija">314</a> | <a href="http://www.moj-fond.hr/news/nav/hr-315-1-3-3.html" class="anewsnavigacija">315</a> | <a href="http://www.moj-fond.hr/news/nav/hr-316-1-3-3.html" class="anewsnavigacija">316</a> | <a href="http://www.moj-fond.hr/news/nav/hr-317-1-3-3.html" class="anewsnavigacija">317</a> | <a href="http://www.moj-fond.hr/news/nav/hr-318-1-3-3.html" class="anewsnavigacija">318</a> | <a href="http://www.moj-fond.hr/news/nav/hr-319-1-3-3.html" class="anewsnavigacija">319</a> | <a href="http://www.moj-fond.hr/news/nav/hr-320-1-3-3.html" class="anewsnavigacija">320</a> | <a href="http://www.moj-fond.hr/news/nav/hr-321-1-3-3.html" class="anewsnavigacija">321</a> | <a href="http://www.moj-fond.hr/news/nav/hr-322-1-3-3.html" class="anewsnavigacija">322</a> | <a href="http://www.moj-fond.hr/news/nav/hr-323-1-3-3.html" class="anewsnavigacija">323</a> | <a href="http://www.moj-fond.hr/news/nav/hr-324-1-3-3.html" class="anewsnavigacija">324</a> | <a href="http://www.moj-fond.hr/news/nav/hr-325-1-3-3.html" class="anewsnavigacija">325</a> | <a href="http://www.moj-fond.hr/news/nav/hr-326-1-3-3.html" class="anewsnavigacija">326</a> | <a href="http://www.moj-fond.hr/news/nav/hr-327-1-3-3.html" class="anewsnavigacija">327</a> | <a href="http://www.moj-fond.hr/news/nav/hr-328-1-3-3.html" class="anewsnavigacija">328</a> | <a href="http://www.moj-fond.hr/news/nav/hr-329-1-3-3.html" class="anewsnavigacija">329</a> | <a href="http://www.moj-fond.hr/news/nav/hr-330-1-3-3.html" class="anewsnavigacija">330</a> | <a href="http://www.moj-fond.hr/news/nav/hr-331-1-3-3.html" class="anewsnavigacija">331</a> | <a href="http://www.moj-fond.hr/news/nav/hr-332-1-3-3.html" class="anewsnavigacija">332</a> | <a href="http://www.moj-fond.hr/news/nav/hr-333-1-3-3.html" class="anewsnavigacija">333</a> | <a href="http://www.moj-fond.hr/news/nav/hr-334-1-3-3.html" class="anewsnavigacija">334</a> | <a href="http://www.moj-fond.hr/news/nav/hr-335-1-3-3.html" class="anewsnavigacija">335</a>	</div>
+	</div></td>
+
+    <td class="newsLijevaKolona" valign="top" align="left" width="210"><div style="margin:5px;">
+	<div class="news_kategorije"><a href="http://www.moj-fond.hr/news/nav/hr-1-1-5-5.html" class="news_podkategorije">&gt;&gt; Fondovi</a></div><div class="news_kategorije"><a href="http://www.moj-fond.hr/news/nav/hr-1-1-1-1.html" class="news_podkategorije">&gt;&gt; Aktualno</a></div><div class="news_kategorije"><a href="http://www.moj-fond.hr/news/nav/hr-1-1-2-2.html" class="news_podkategorije">&gt;&gt; Hrvatska</a></div><div class="news_kategorije"><a href="http://www.moj-fond.hr/news/nav/hr-1-1-3-3.html" class="news_podkategorije">&gt;&gt; Svijet</a><div class="podkategorije"><a href="http://www.moj-fond.hr/news/nav/hr-1-1-7-3.html" class="news_podkategorije">&gt;&gt; Burze u svijetu</a></div></div><div class="news_kategorije"><a href="http://www.moj-fond.hr/news/nav/hr-1-1-16-16.html" class="news_podkategorije">&gt;&gt; Regija</a></div>	<div class="news_ostale">
+			<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />20.10.2010 (09:07:38)</div>
+			<h2 class="lnaslovKategorije"><a href="http://www.moj-fond.hr/clanak/eduardo-zabio-za-sahtar-u-londonu-i-iznudio-ovacije-emiratesa/hr-1-3-22272.html" class="lnaslovKatgegorije">Eduardo zabio za Šahtar u Londonu i iznudio ovacije Emiratesa</a></h2>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/tn_577677001287558458.jpg" alt="" class="newsSlika"/>
+						<div style="clear:both">
+			ZAGREB - Eduardo da Silva zaradio je pljesak Arsenalovih navijača za pogodak koji je zabio svome donedavnom klubu. Ipak, bio je to gol tek za ublažavanje debakla svoga Šahtara koji je na Emiratesu poražen s 5-1.			</div>
+			</div>
+		</div>
+				<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />29.09.2010 (14:13:24)</div>
+			<h2 class="lnaslovKategorije"><a href="http://www.moj-fond.hr/clanak/financial-times-ugrozeno-nacelo-slobodnog-kretanja-ljudi-kamen-temeljac-eu/hr-1-3-22183.html" class="lnaslovKatgegorije">Financial Times: Ugroženo načelo slobodnog kretanja ljudi, kamen temeljac EU</a></h2>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/tn_051217001285762404.jpg" alt="" class="newsSlika"/>
+						<div style="clear:both">
+			LONDON - The Financial Times u srijedu piše da je u Evropskoj uniji (EU) ugroženo načelo slobodnog kretanja ljudi, "jedan od kamena temeljaca" bloka u kojem živi pola milijarde ljudi. 			</div>
+			</div>
+		</div>
+				<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />28.09.2010 (09:18:20)</div>
+			<h2 class="lnaslovKategorije"><a href="http://www.moj-fond.hr/clanak/andrew-keen-ljudi-na-internetu-kradu-zato-sto-mogu/hr-1-3-22166.html" class="lnaslovKatgegorije">Andrew Keen: Ljudi na internetu kradu zato što mogu</a></h2>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/tn_257144001285658300.jpg" alt="" class="newsSlika"/>
+						<div style="clear:both">
+			ROVINJ - Čitajući knjigu 'Kult amatera', u kojoj pisac i broadcaster Andrew Keen provocira sljedbenike kulture Weba 2.0 nazivajući ih majmunima ili pingvinima, očekivali biste da će i razgovor s njim proći u provokativnom tonu, osobito ako živite od interneta. No u intervjuu za tportal u rovinjskom hotelu Eden Keen se ispostavio kao ugodan i elokventan sugovornik, dovoljno fleksibilan da prizna i da je u nekim stvarima u knjizi bio u krivu			</div>
+			</div>
+		</div>
+				<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />27.09.2010 (11:59:31)</div>
+			<h2 class="lnaslovKategorije"><a href="http://www.moj-fond.hr/clanak/der-spiegel-eu-zabrinut-za-odrzivost-westlb-bayernlb-i-hsh-nordbank/hr-1-3-22161.html" class="lnaslovKatgegorije">Der Spiegel: EU zabrinut za održivost WestLB, BayernLB i HSH Nordbank</a></h2>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/tn_831329001285581571.jpg" alt="" class="newsSlika"/>
+						<div style="clear:both">
+			BERLIN - Dužnosnici Europske komisije zabrinuti su zbog krhkosti triju njemačkih regionalnih banaka i prijetnje koju one predstavljaju za stabilnost financijskog sustava najvećeg europskog gospodarstva, prenosi njemački tjednik Der Spiegel.			</div>
+			</div>
+		</div>
+				<div class="newsitem_holder">
+			<div class="lnaslovnews"><img src="http://www.moj-fond.hr/modules/mod_news/images/bullet.jpg" alt=" " width="16" height="11" align="left" style="margin-right:3px;" />24.09.2010 (08:51:08)</div>
+			<h2 class="lnaslovKategorije"><a href="http://www.moj-fond.hr/clanak/talijanska-mafija-pere-prljavi-novac-preko-dobitnih-listica-lota/hr-1-3-22137.html" class="lnaslovKatgegorije">Talijanska mafija pere "prljavi novac" preko dobitnih listića lota</a></h2>
+			<div class="lukratko">
+						<img src="http://www.moj-fond.hr/modules/mod_news/data/tn_264325001285311068.jpg" alt="" class="newsSlika"/>
+						<div style="clear:both">
+			RIM - Talijanski mafijaši kupuju dobitne listiće lota kako bi oprali milione eura profita od trgovine kokainom, priopćila je policija.			</div>
+			</div>
+		</div>
+			</div>
+	</div>
+	
+</td>
+  </tr>
+</table>		</div>
+      </div>
+      
+    </div>
+    <!-- begin banner -->
+    <div id="desna_kolona">
+      <a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="http://www.moj-fond.hr/template/portal_sadrzaj/images/flash.jpg" alt="Get Flash Player" border="0" style="margin-bottom:5px"/></a>
+	<div class="banner_box"><a href="http://www.moj-fond.hr/redirect/12/index.html" target="_blank"><img src="http://www.moj-fond.hr/data/banner/widget_banner_120x200px.jpg" alt="Ilirika" border="0" /></a></div><div id="banner_box_3" class="banner_box"></div><script type="text/javascript">// <![CDATA[
+		
+				var so = new SWFObject("http://www.moj-fond.hr/data/banner/ilirika_bric_120x240px_mf.swf", "banner_3", "120", "240", "8");
+				so.addParam("scale", "noscale");
+				so.addParam("wmode", "opaque");
+				so.addVariable("clickTAG", "http://www.moj-fond.hr/redirect/58/index.html");
+				so.write("banner_box_3");
+		
+				// ]]></script><div id="banner_box_4" class="banner_box"></div><script type="text/javascript">// <![CDATA[
+		
+				var so = new SWFObject("http://www.moj-fond.hr/data/banner/ilirika_atg_120x240px_mf.swf", "banner_4", "120", "240", "8");
+				so.addParam("scale", "noscale");
+				so.addParam("wmode", "opaque");
+				so.addVariable("clickTAG", "http://www.moj-fond.hr/redirect/73/index.html");
+				so.write("banner_box_4");
+		
+				// ]]></script><div id="banner_box_5" class="banner_box"></div><script type="text/javascript">// <![CDATA[
+		
+				var so = new SWFObject("http://www.moj-fond.hr/data/banner/ilirika_gold_120x240px_mf.swf", "banner_5", "120", "240", "8");
+				so.addParam("scale", "noscale");
+				so.addParam("wmode", "opaque");
+				so.addVariable("clickTAG", "http://www.moj-fond.hr/redirect/72/index.html");
+				so.write("banner_box_5");
+		
+				// ]]></script><div id="banner_box_8" class="banner_box"></div><div id="banner_box_9" class="banner_box"></div><script type="text/javascript">// <![CDATA[
+		
+				var so = new SWFObject("http://www.moj-fond.hr/data/banner/razmak.swf", "banner_9", "120", "20", "8");
+				so.addParam("scale", "noscale");
+				so.addParam("wmode", "opaque");
+				so.addVariable("clickTAG", "http://www.moj-fond.hr/redirect/17/index.html");
+				so.write("banner_box_9");
+		
+				// ]]></script><div id="banner_box_10" class="banner_box"></div><div id="banner_box_11" class="banner_box"></div><div id="banner_box_12" class="banner_box"></div><div id="banner_box_13" class="banner_box"></div><div id="banner_box_14" class="banner_box"></div><div id="banner_box_15" class="banner_box"></div>	</div>
+    <!-- end banner -->
+  </div>
+  <!-- begin fotoer menu -->
+  <div id="footer"><div id="footermenu">
+<ul id="footermenunav">
+<li><a href="http://www.moj-fond.hr/impressum/hr-61.html">Impressum</a></li><li><a href="http://www.moj-fond.hr/uvjeti_koristenja/hr-56.html">Uvjeti korištenja</a></li><li><a href="http://www.moj-fond.hr/mapa_weba/hr-63.html">Sitemap</a></li><li><a href="http://www.moj-fond.hr/marketing/hr-72.html">Marketing</a></li><li><a href="http://www.moj-fond.hr/rss_kanali/hr-57.html">RSS</a></li></ul>
+</div>
+   <div id="footerImpressum">
+    Copyright © 2008, www.moj-fond.net.Sva prava pridržana. Kontakt: <a href="mailto:info@moj-fond.hr">info@moj-fond.hr</a><br/>
+Telefon: +385 1 6197 499 | Fax: +385 1 6040 427 | <a href="http://moj-fond.hr/uvjeti_koristenja/hr-56.html">Pravni uvjeti korištenja</a> portala www.moj-fond.net
+    </div>
+  </div>
+  <!-- end footer menu -->
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18029054-2']);
+  _gaq.push(['_setDomainName', '.moj-fond.hr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PAPINO PASTIRSKO PISMO IRSKIM KATOLICIMA - KTA</title>
+
+<link href="/css/default.css" rel="stylesheet" type="text/css" />
+<link href="/css/info.css" rel="stylesheet" type="text/css" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="description" content="Papino pastirsko pismo irskim katolicima u kojem progovara o spolnom zlostavljanju maloljetnika od strane nekih svećenika objavljeno je 20. ožujka. Pa..." />
+
+<link rel="alternate" type="application/rss+xml" title="Naslovna" href="/rss/default.asp" />
+<link rel="alternate" type="application/rss+xml" title="Top vijesti" href="/rss/topvijest.asp" />
+<link rel="alternate" type="application/rss+xml" title="Najave" href="/rss/najave.asp" />
+<link rel="alternate" type="application/rss+xml" title="Izdvajamo" href="/rss/izdvajamo.asp" />
+<link rel="alternate" type="application/rss+xml" title="Vijesti" href="/rss/vijesti.asp" />
+<link rel="alternate" type="application/rss+xml" title="Izdvajamo" href="/rss/izdvajamo.asp" />
+<link rel="alternate" type="application/rss+xml" title="Poruke i poslanice" href="/rss/poruke.asp" />
+<link rel="alternate" type="application/rss+xml" title="Iz katoličkog riska" href="/rss/tisak.asp" />
+<link rel="alternate" type="application/rss+xml" title="Nova izdanja" href="/rss/novaizdanja.asp" />
+<link rel="alternate" type="application/rss+xml" title="Meditacija" href="/rss/meditacija.asp" />
+<link rel="alternate" type="application/rss+xml" title="Intevju" href="/rss/intervju.asp" />
+
+
+
+<script type="text/javascript" src="js/jquery-1.2.3.pack.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript">
+/* MEDITACIJA */
+
+var Medit = function() {
+	// get offset from link
+	offset = $(this).attr('href').slice($(this).attr('href').lastIndexOf("?"));	
+	divid = $(this).parent().parent().parent().attr("id") 
+	// ajax load
+	$(this).parent().parent().load('box/'+divid+'.asp'+offset, function(){
+	// li style & img src
+	li()
+	})
+	return false;
+};
+
+
+// li style & img src
+function li () {
+  $("#meditacija li:first").addClass("selected");
+  
+  $("#meditacija li a").hover(function(){
+  			$("#meditacija li").removeClass("selected")
+			$(this).parent().addClass("selected");
+ 			$("#meditacijaSlika").attr("src", $(this).children().attr("src"))
+ 	},function(){
+			$("#meditacija li").removeClass("selected")
+			 $(this).parent().addClass("selected");
+	});
+};
+
+	// fire livequery
+$('#meditacija .boxnav a').livequery('click', Medit);
+
+$(document).ready(function() {
+   li()
+ });
+
+/* postavi sirinu paragrafa ispod slike */
+function komentarSlike() {
+   $("div.slika").width(  $(".slika img").width())
+ };
+ 
+
+
+
+// *** LINKS SCREENSHOTS SCRIPT  *** 
+$(document).ready(function() {
+	if ( $("ul.websnapr").length > 0 ) { 
+		$("ul.websnapr li a").each(function(){
+		$(this).append("<img src=http://images.websnapr.com/?url=" + $(this).attr("href") + "/>").parent().append("<span>"+ $(this).attr("href")+"</span>")
+		});
+	}
+});
+
+/* Link ikone */
+$(document).ready(function() {
+	$("div#vijesti div.tekst li a[@href*='.pdf']").parent().addClass("pdf");
+	$("div#vijesti div.tekst li a[@href*='.doc']").parent().addClass("doc");
+	$("div#vijesti div.tekst li a[@href*='.xls']").parent().addClass("xls");
+	$("div#vijesti div.tekst li a[@href*='.ppt']").parent().addClass("ppt");
+	$("div#vijesti div.tekst li a[@href*='mailto:']").parent().addClass("email");
+	$("div#vijesti div.tekst li a[@href*='http://']").parent().addClass("link");
+});
+
+</script>
+</head>
+<body>
+<div id="glavni">
+  <div id="zaglavlje">
+    <h1><a href="default.asp"><strong>K</strong>atoli&#269;ka <strong>T</strong>iskovna <strong>A</strong>gencija<br/>
+      <span>Biskupske konferencije Bosne i Hercegovine</span></a></h1>
+    <ul>
+      <li><a href="/default.asp">NASLOVNA</a></li>
+      <li><a href="info.asp?id=756">O NAMA</a></li>
+      <li><a onclick="location.href='mailto:'+String.fromCharCode(107,116,97,98,105,104,64,98,105,104,46,110,101,116,46,98,97)+'?'">KONTAKT</a></li>
+      <li><a href="info.asp?id=760">RSS KANALI</a></li>
+      <li><a href="info.asp?id=757">LINKOVI</a></li>
+    </ul>
+     <div style="float:right; margin:-20px 15px 0 0; color:#d9ada7; font:normal 10px Verdana, Arial, Helvetica, sans-serif">12. prosinac 2010. <span id="datumsat"></span></div>
+    <form action="pretraga.asp" method="get" name="frmTrazi" id="frmTrazi" />
+  
+  
+    
+  <button type="submit" name="btnTrazi" id="btnTrazi">Traži</button>
+    <input type="text" name="txtTrazi" id="txtTrazi" onkeyup="lookup(this.value);" onblur="fill();"/>
+    </form>
+    <div class="suggestionsBox" id="suggestions" style="display: none;">
+				<img src="../images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+				<div class="suggestionList" id="autoSuggestionsList">
+					&nbsp;
+				</div>
+	</div>
+  </div>
+  
+  <div id="veliki">
+    
+    <div id="vijesti">
+    <div class="alati">
+        <a href="#preporuka"><img src="images/ico/mail_back.gif" alt="Pošalji" /> Preporuči</a>
+        <a href="box/tiskaj.asp?id=23363" target="_blank"><img src="images/ico/printer.gif" alt="Tiskaj" /> Tiskaj</a>
+        <a href="box/word.asp?id=23363" target="_blank"><img src="images/ico/document.gif" alt="Word" /> Word</a>
+       <a href="#"><img src="images/ico/social.gif" alt="Pohrani" class="socializer"/> Pohrani</a>	</div>
+
+
+      <h2>Vijesti </h2>
+
+     <div class="slika"> <img src="thumb/img.php?src=/files/image/Vijesti_2010/06_2010/papa_jj.jpg&w=201&h=136" alt="Papa Benedikt XVI." onload="komentarSlike()"><p>Papa Benedikt XVI.</p></div>
+      
+     
+      <span class="datum">
+      Vatikan,
+        21. ožujak 2010. </span>
+ 
+       
+      <h3>PAPINO PASTIRSKO PISMO IRSKIM KATOLICIMA</h3>
+      
+      
+          <h4>Sveti Otac je pismo potpisao na blagdan svetog Josipa i moli da se cijelo pomno čita</h4>
+          
+ 
+     <div class="tekst">  
+     
+       <p style="text-align: justify">Papino pastirsko pismo irskim katolicima u kojem progovara o spolnom zlostavljanju maloljetnika od strane nekih svećenika objavljeno je 20. ožujka. Papa je pismo potpisao na blagdan svetog Josipa i moli da se cijelo pomno čita.<br />
+Draga braćo i sestre Crkve u Irskoj, s velikom zabrinuto&scaron;ću pi&scaron;em vam kao pastir opće Crkve, tim riječima papa Benedikt XVI. započinje pismo, izražavajući duboku uznemirenost i zgražanje nad slučajevima zlostavljanja, kriminalnim činima, kao i zbog često neprikladnog odgovora Crkve u Irskoj. Benedikt XVI. dijeli s vjernicima osjećaj izdaje a predlaže &bdquo;put ozdravljenja, obnove i zadovolj&scaron;tine&quot;. S problemom, koji nije specifičan, tvrdi Papa, za Irsku ni za Crkvu, treba se odvažno i odlučno sučeliti. Neka se nitko ne zavarava, istaknuo je Benedikt XVI., da će se ta mučna situacija rije&scaron;iti u kratko vrijeme. Učinjeni su pozitivni koraci naprijed, ali je ostalo puno vi&scaron;e toga &scaron;to valja učiniti. Potrebna je ustrajnost u molitvi, s velikim pouzdanjem u iscjeljujuću snagu Božje milosti, potiče Sveti Otac. <br />
+Crkva u Irskoj prije svega mora pred Gospodinom i pred drugima priznati te&scaron;ke grijehe počinjene protiv nebranjenje mladeži. Papa moli sve da se sjete brojnih Iraca koji su po Europi i u svijetu &scaron;irili evanđelje sve do žrtve vlastita života kako bi Kristu ostali vjerni u velikodu&scaron;nome zauzimanju za najsiroma&scaron;nije. Podsjeća na opći kontekst sekularizacije u koji valja smjestiti tu pojavu, tvrdeći da je bila težnja, vođena dobrom ali pogre&scaron;nom nakanom, da se izbjegne kaznene postupke u slučaju neregularnih kanonskih situacija. Papa navodi niz čimbenika koji su u pozadini tog problema: neprikladne procedure za određivanje podobnosti kandidata za svećeni&scaron;tvo i redovni&scaron;tvo; nedovoljna ljudska, moralna, intelektualna i duhovna izobrazba u sjemeni&scaron;tima i novicijatima; težnja u dru&scaron;tvu da se povla&scaron;ćuje kler i druge osobe na vlasti te prekomjerna zabrinutost za dobar glas Crkve, da se izbjegnu sablazni, &scaron;to je dovelo do neprimjenjivanja važećih kanonskih kazni i za&scaron;tite dostojanstva svake osobe. Treba hitno preispitati čimbenike, pi&scaron;e Papa, koji su prouzročili vrlo tragične posljedice za život žrtava i njihovih obitelji a do te su mjere zatamnili svjetlo evanđelje &scaron;to nisu stigla učiniti ni stoljeća progona, primijetio je Benedikt XVI.<br />
+Podsjećajući kako se već u raznim prigodama susreo sa žrtvama zlostavljanja te da je spreman to i ubuduće činiti, njima se ponovno obraća otvorena srca. Užasno ste trpjeli, pi&scaron;e Papa, zbog toga sam jako žalostan. Znam da ni&scaron;ta ne može izbrisati zlo koje ste podnijeli. Iznevjereno je va&scaron;e pouzdanje, ucviljeno va&scaron;e dostojanstvo. Mnogi su od vas iskusili, kad ste se dovoljno odvažili da govorite o tome &scaron;to vam se dogodilo, da vas nitko nije slu&scaron;ao. Vi koji su pretrpjeli zlostavljanja u ustanovama, morali ste doživjeti kako nije bilo načina da izbjegnete svoje patnje. Razumljivo je da s mukom opra&scaron;tate ili da se mirite s Crkvom. Otvoreno priznajem u ime Crkve da svi osjećamo sram i grižnju savjesti, ujedno vas molim da ne gubite nadu. U zajedni&scaron;tvu Crkve srećemo osobu Isusa Krista, koji je i sam bio žrtva nepravde i grijeha. Poput vas i On jo&scaron; nosi rane svoje nepravedne patnje. On shvaća dubinu va&scaron;e patnje i trajanje njezina učinka u va&scaron;im životima i odnosima s drugima, uključujući odnos s Crkvom. Znam da je nekima od vas nakon svega &scaron;to se zbilo te&scaron;ko ući u crkvu. Ipak, iste Kristove rane, preobražene njegovom otkupiteljskom patnjom, su oruđe kojim je skr&scaron;ena moć zla a mi se rađamo na novi život i nadu, ustvrdio je Sveti Otac. Čvrsto vjerujem u ozdravljujuću moć njegove žrtvene ljubavi &ndash; i u najmračnijim i beznadnim situacijama &ndash; koja donosi oslobođenje i obećava novi početak. Obraćajući se vama kao pastir, zabrinut za dobro sve djece Božje, ponizno vas molim da razmislite o svemu &scaron;to sam vam rekao. Molim se da uzmognete, približavajući se Kristu i sudjelujući u životu Crkve, ponovno otkriti beskrajnu ljubav Kristovu prema svima vama. Nadam se da ćete tako moći pronaći pomirenje, posvema&scaron;nje ozdravljenje i mir, pi&scaron;e Sveti Otac. <br />
+Papa se također obraća svećenicima i redovnicima koji su spolno zlostavljali mlade. Iznevjerili ste povjerenje koje su nevini mladi i njihovi roditelji stavili u vas. Poradi toga morate odgovarati pred svemogućim Bogom, kao i pred sudovima koji su za to ustanovljeni. Izgubili ste po&scaron;tovanje irskoga naroda, a osramotili ste i obe&scaron;častili svoju braću. Svećenici su prekr&scaron;ili svetost sakramenta svetoga reda, po kojemu je Krist nazočan među nama i u na&scaron;em djelovanju. Zajedno s ogromnom &scaron;tetom nanesenom žrtvama, velika je &scaron;teta učinjena Crkvi i javnom poimanju svećeni&scaron;tva i redovničkoga života, pi&scaron;e Papa pozivajući ih da se pokaju jer otkupiteljska Kristova žrtva ima moć oprostiti čak i najveći grijeh, a izvući dobro i iz najvećega od zala. Božja pravednost ujedno zahtijeva da odgovaramo za svoja djela, ne tajeći ni&scaron;ta. Otvoreno priznajte svoju krivicu, dodaje Papa, stavite se na raspolaganje pravdi, ali ne gubite nadu u milosrđe Božje, istaknuo je Benedikt XVI.<br />
+Obraćajući se pak roditeljima, Papa s njima dijeli zaprepa&scaron;tenje &bdquo;u spoznaji užasnih stvari koje su se zbile u mjestu koje je moralo biti sigurna sredina za sve, te potvrđuje činjenicu da Crkva primjenjuje u posljednjim godinama usvojene mjere za za&scaron;titu mladih u župskim i odgojnim sredinama. Vi ćete u Crkvi naći Isusa Krista&quot;, ustvrdio je Benedikt XVI. Obraćajući se pak svećenicima i redovnicima u Irskoj, od koji su brojni razočarani, izbezumljeni i srditi zbog načina kako su se poglavari sučelili s problemom, primijetio je kako se brojni osobno osjećaju obeshrabreni, čak napu&scaron;teni, &bdquo;u očima nekih krivi ste jer ste svećenici, gledaju vas kao da ste na neki način odgovorni za tuđa zlodjela&quot;. U ovo vrijeme patnje&hellip; pozivam vas da potvrdite svoju vjeru u Krista i ljubav prema Crkvi. Tako ćete svima pokazati da je milost u izobilju tamo gdje obiluje grijeh, istaknuo je Benedikt XVI. <br />
+Sveti se Otac u pismu također obraća i biskupima. Ne može se zanijekati, pi&scaron;e Papa, da su neki od vas i va&scaron;ih prethodnika učinili veliki propust, katkada jako velik, u primjeni odavno usvojenih propisa kanonskoga prava koji se odnose na zlodjela zlostavljanja mladih. Počinjene su ozbiljne grje&scaron;ke u pristupu optužbama. Shvaćam da je bilo te&scaron;ko shvatiti opsežnost i složenost problema, pribaviti pouzdane informacije i donijeti pravedne odluke na temelju oprečnih savjeta stručnjaka. Međutim, treba priznati da su počinjenje te&scaron;ke grje&scaron;ke u prosuđivanju i da je bilo propusta vlasti. Sve je to ozbiljno ugrozilo va&scaron;u vjerodostojnost i učinkovitost. Cijenim va&scaron;e uložene napore da nađete lijek za pro&scaron;le grje&scaron;ke i da se zajamči kako se one ne bi ponovile. Jedino odlučno, transparentno i po&scaron;teno djelovanje može vratiti po&scaron;tovanje i dobrohotnost Iraca prema Crkvi, istaknuo je Sveti Otac.<br />
+Papa moli sve katolike u Irskoj da nađu nove putove &ndash; u sve vi&scaron;e sekulariziranome dru&scaron;tvu &ndash; za preno&scaron;enje mladima ljepote i bogatstva prijateljstva s Isusom Kristom u zajedni&scaron;tvu s njegovom Crkvom. Sveti Otac predlaže stvarne pothvate za suočavanje sa situacijom: poziva sve da u sve petke kroz godinu čine pokoru za grijehe zlostavljanja, da ponovno otkriju sakrament ispovijedi i euharistijsko klanjanje. Najavljuje skori apostolski posjet nekim biskupijama, sjemeni&scaron;tima i redovničkim družbama u Irskoj, a predlaže na nacionalnoj razini misije za sve biskupe, svećenike i redovnike. Sve podsjeća na riječi Ar&scaron;koga župnika, svetoga Ivana Marije Vianneya, kojemu je posvećena ova svećenička godina: Dobar pastir, pastir po srcu Božjem, najdragocjenije je blago koje dobri Bog maže dati nekoj župi i jedan je od najdragocjenijih darova božanskoga milosrđa. Papa zaključuje pismo s posebnom molitvom za Crkvu u Irskoj: &scaron;aljem vam pismo, pi&scaron;e, s ljubavlju jednoga kr&scaron;ćanina kao i vi, užasnut i ranjen svime &scaron;to se dogodilo u na&scaron;oj ljubljenoj Crkvi. (kta/ika)</p>
+     </div>
+     
+     <div class="preporuci">
+       <a name="preporuka"></a>
+     <form action="box/mailpreporuci.asp" method="post" name="preporuciFrm" id="preporuciFrm">
+       <fieldset>
+       <legend>PREPORUČI</legend>
+       <label style="float:right; width:210px; "> Kratka poruka
+       <textarea name="poruka" id="poruka"></textarea>
+       </label>
+       <label>Vaša e-mail adresa
+       <input name="from" id="from" type="text" size="30" maxlength="50" />
+       </label>
+       <label>E-mail adresa primaoca
+       <input name="to" id="to" type="text" size="30" maxlength="50" />
+       </label>
+       <button type="submit" name="btnTrazi" id="btnTrazi2" >Pošalji</button>
+       <input name="id" type="hidden" value="23363" style="display:none;" />
+       </fieldset>
+     
+     </form>
+     </div>
+    </div>
+    
+    
+    
+    
+    
+    
+  
+  
+  
+    
+  </div>
+  
+  
+  
+  <div id="lijevi">
+      <div id="ostale" class="box sivi">
+      
+      
+        <h2><a href="#">VIJESTI</a></h2>
+        
+        <div class="sredina">
+          
+
+
+
+<ul>
+   
+ <li><a href="info.asp?id=26654">
+   
+      
+    <img src="thumb/img.php?src=/files/image/Vijesti_2010/23_2010/kenija.jpg&w=70&h=70" />
+      
+    
+    <div class="nadnaslov">
+    Rotterdam, 12.12.2010.
+    
+    </div>
+    
+    <h3>MLADI HRVATI U NIZOZEMSKOJ ZA DJECU U KENIJI</h3></a>
+    </li>
+
+ <li><a href="info.asp?id=26653">
+   
+      
+    <img src="thumb/img.php?src=/files/image/Vijesti_2010/23_2010/guida_m_confortia.jpg&w=70&h=70" />
+      
+    
+    <div class="nadnaslov">
+    Vatikan, 12.12.2010.
+    
+    </div>
+    
+    <h3>PAPA ODOBRIO DEKRET ZA NOVE BLAŽENIKE I SVECE</h3></a>
+    </li>
+
+ <li><a href="info.asp?id=26652">
+   
+      
+    <img src="thumb/img.php?src=/files/image/Vijesti_2010/23_2010/lombardi(1).jpg&w=70&h=70" />
+      
+    
+    <div class="nadnaslov">
+    Vatikan, 12.12.2010.
+    
+    </div>
+    
+    <h3>IZVJEŠĆE O NESNOŠLJIVOSTI I DISKRIMINACIJI KRŠĆANA</h3></a>
+    </li>
+
+ <li><a href="info.asp?id=26651">
+   
+      
+    <img src="thumb/img.php?src=/files/image/Vijesti_2010/23_2010/nichols.jpg&w=70&h=70" />
+      
+    
+    <div class="nadnaslov">
+    London, 12.12.2010.
+    
+    </div>
+    
+    <h3>ENGLESKI ĆE I VELŠKI BISKUPI PROGLASITI GODINU KATOLIČKOG ODGOJA</h3></a>
+    </li>
+
+ <li><a href="info.asp?id=26650">
+   
+      
+    <img src="thumb/img.php?src=/files/image/Vijesti_2010/23_2010/eu_parlament.jpg&w=70&h=70" />
+      
+    
+    <div class="nadnaslov">
+    Vatikan, 12.12.2010.
+    
+    </div>
+    
+    <h3>IZ CRKVE U SVIJETU</h3></a>
+    </li>
+
+ <li><a href="info.asp?id=26649">
+   
+      
+    <img src="thumb/img.php?src=/files/image/Vijesti_2010/23_2010/ruma.jpg&w=70&h=70" />
+      
+    
+    <div class="nadnaslov">
+    Ruma, 12.12.2010.
+    
+    </div>
+    
+    <h3>NOVI NAPAD NA KATOLIČKU CRKVU U RUMI</h3></a>
+    </li>
+
+</ul>
+ 
+ <div class="boxnav">
+ 
+ 
+   
+     <a href="/info.asp?id=23363&offset=6"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+        </div>
+        <div class="dole">&nbsp;</div>
+      </div>
+      <div class="baner"><a href="http://nasa-ognjista.com/" target='_blank'><img src='/files/image/baneri/nasa_ognjista.jpg' title='Naša ognjišta' alt='Hrvatski katolički mjesečnik - Naša ognjišta'/></a></div>
+      
+      <div id="rubrike" class="box sivi">
+        <h2><a href="#">RUBRIKE</a></h2>
+        <div class="sredina">
+          
+		  <ul>
+           <li><a href="/">NASLOVNA</a></li>
+            <li><a href="info.asp?rubrika=2">NAJAVE</a></li>
+	        <li> <a href="info.asp?rubrika=3">IZDVAJAMO</a> </li>
+			<li><a href="info.asp?rubrika=4">VIJESTI</a></li>
+		    <li> <a href="info.asp?rubrika=5">PORUKE I POSLANICE</a></li>
+		    <li> <a href="info.asp?rubrika=8">SVETAC DANA I PATRON ŽUPE</a></li>
+		    <li> <a href="info.asp?rubrika=7">POD POVEČALOM</a></li>
+		    <li> <a href="info.asp?rubrika=6">PREDSTAVLJAMO</a></li>
+		    <li> <a href="info.asp?rubrika=9">IZ KATOLIČKOG TISKA</a></li>
+		    <li> <a href="info.asp?rubrika=12">INTERVJU</a></li>
+		    <li> <a href="info.asp?rubrika=10">NOVA IZDANJA</a></li>
+		    <li> <a href="info.asp?rubrika=11">MEDITACIJA</a></li>
+		    <li> <a href="info.asp?id=112">KOMENTARI</a> </li>
+            <li> <a href="foto.asp">FOTOGALERIJA</a> </li>
+	      </ul>
+        </div>
+        <div class="dole">&nbsp;</div>
+      </div>
+  </div>
+
+  
+  <div id="desni">
+<div id="multimedia" class="box sivi">
+  <h2  style=" float:left;padding:0 5px 5px 10px; position: relative; z-index:3; "> <a id="LinkVideo" href="box/multimedia.asp?Kategorija=2">VIDEO</a></h2>
+  <h2 style=" float:left;padding:0 0px 5px 10px; position: relative; margin-left:-20px; z-index:2;  background:url(images/sivi/top.png) top left  no-repeat;"> <a id="LinkFoto" href="box/multimedia.asp?Kategorija=1">FOTO</a></h2>
+  <h2 style=" float:left;padding:0 5px 5px 10px; position: relative; margin-left:-15px; z-index:1; background:url(images/sivi/top.png) top left  no-repeat;"> <a id="LinkAudio" href="box/multimedia.asp?Kategorija=3">AUDIO</a></h2>
+
+  <div class="sredina" >
+    
+
+
+
+
+
+<ul>
+
+ <li> <div class="brdr"> <embed src='/js/mediaplayer.swf' width='220' height='165' allowscriptaccess='always' allowfullscreen='true' wmode='transparent' flashvars='height=165&width=220&file=http://media01.vatiradio.va/podcast/00001694.flv&image=http://www.radiovaticana.org/flv/ctv_frame001694.jpg&wmode=transparent'></embed></div>
+  <div class="tekst">
+    <strong>10. prosinac 2010.</strong>
+    <h3>Benedetto XVI riceve la presidente della Lituania</h3>
+    </div>
+  </li>
+   
+</ul>
+
+
+<div class="boxnav">
+   
+     <a href="/info.asp?id=23363&index=1"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+  </div>
+  <div class="dole">&nbsp;</div>
+</div>
+
+    <div class="baner"><a href="http://www.ks.hr/" target='_blank'><img src='/files/image/baneri/krscanska_sadasnjost.jpg' title='Kršćanska sadašnjost' alt='Nakladnička kuća Kršćanska sadašnjost'/></a></div>
+    <div id="novaizdanja" class="box sivi">
+      <h2><a href="info.asp?rubrika=10">NOVA IZDANJA</a></h2>
+      <div class="sredina">
+        
+
+
+
+<ul>
+   
+    <li><a href="info.asp?id=26427">
+    <img src="thumb/img.php?src=/files/image/Nova%20izdanja/Svjetlo_svijeta.jpg&w=70&h=95" alt="Svjetlo svijeta" />
+    <div class="nadnaslov">Benedikt XVI. - Joseph Ratzinger, Peter Seewald</div>
+             <h3>SVJETLO SVIJETA</h3>
+             <div class="ukratko"> Papa, Crkva i znakovi vremena. Razgovor s Peterom Seewaldom</div>
+             
+          
+            
+            
+     </a></li>
+    
+    <li><a href="info.asp?id=26634">
+    <img src="thumb/img.php?src=/files/image/Nova%20izdanja/Crkvena_godina.jpg&w=70&h=95" alt="Crkvena godina" />
+    <div class="nadnaslov">Karl-Heinrich Bieritz</div>
+             <h3>CRKVENA GODINA</h3>
+             <div class="ukratko"> Svetkovine, blagdani i spomendani u povijesti i danas</div>
+             
+          
+            
+            
+     </a></li>
+    
+    <li><a href="info.asp?id=26623">
+    <img src="thumb/img.php?src=/files/image/Nova%20izdanja/Rabin_razgovara_Isusom.jpg&w=70&h=95" alt="Rabin razgovara s Isusom" />
+    <div class="nadnaslov">Jacob Neusner</div>
+             <h3>RABIN RAZGOVARA S ISUSOM</h3>
+             <div class="ukratko"> "Najvažnija knjiga za židovsko-kršćanski dijalog u zadnjem desetljeću"</div>
+             
+          
+            
+            
+     </a></li>
+    
+ </ul>
+ 
+ <div class="boxnav">
+   
+     <a href="/info.asp?id=23363&offset=3"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+      </div>
+      <div class="dole"> </div>
+    </div>
+    <div id="meditacija" class="box sivi">
+      <h2><a href="info.asp?rubrika=11">MEDITACIJA</a></h2>
+      <div class="sredina">
+        
+
+
+<img src="thumb/img.php?src=/files/image/Meditacija/misije.jpg&w=100&h=140" id="meditacijaSlika"/>
+<ul>
+   
+    <li><a href="info.asp?id=18152">
+    <img src="thumb/img.php?src=/files/image/Meditacija/misije.jpg&w=100&h=140" />
+    <div class="datum">Ivanka Brađašević</div>
+            <h3>Misionar</h3>
+            </a></li>
+    
+    <li><a href="info.asp?id=18341">
+    <img src="thumb/img.php?src=/files/image/Meditacija/poniznost(1).jpg&w=100&h=140" />
+    <div class="datum">Winfried Wermter</div>
+            <h3>Poniznost</h3>
+            </a></li>
+    
+ </ul>
+ 
+ <div class="boxnav">
+   
+     <a href="/info.asp?id=23363&offset=2"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+      </div>
+      <div class="dole">&nbsp;</div>
+    </div>
+  </div>
+  
+  
+  
+  <div  id="donji">
+    
+  </div>
+</div>
+  <div id="podnozje">
+<div>
+<p style="float:right; text-align:right">Copyright © 1996-2010 KTA BK BiH. Sva prava pridržana. <br />
+Sadržaji s ovih stranica se mogu prenositi bez posebne dozvole uz navođenje izvora.</p>
+
+<p style="float:left;">Katolička tiskovna agncija Biskupske konferencije Bosne i Hercegovine<br />
+Kaptol 32, 71000 Sarajevo, Bosna i Hercegovina<br />
+tel/fax: + 387 33 666 865<br />
+e-mail: <a onclick="javascript:location.href='mailto:'+String.fromCharCode(107,116,97,98,105,104,64,98,105,104,46,110,101,116,46,98,97)+'?'"><script>document.write (String.fromCharCode(107,116,97,98,105,104,64,98,105,104,46,110,101,116,46,98,97))</script></a>
+</p>
+</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5872611-1");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

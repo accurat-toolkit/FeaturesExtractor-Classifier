@@ -1,0 +1,294 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+		<title>GISKO - Gradska i sveuèilišna knjižnica Osijek</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link href="style.css" rel="stylesheet" type="text/css" /> 
+		<link href="thickbox.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-personalized-1.5b3.packed"></script>
+		<script type="text/javascript" src="js/thickbox-compressed.js"></script>
+		<script type="text/javascript" src="js/print.js"></script>
+
+		<!-- javaskript: navigacija -->
+        <script type="text/javascript">
+			$(document).ready(function(){
+				$('#box_top5 ul li').hover(function() {
+				$(this).addClass('box_top5_hover');
+				},
+				function() {
+				$(this).removeClass('box_top5_hover');
+				});
+				
+				$("#navigacija ul.navigacija").tabs();
+			});
+			
+			function load_cont(url, cont)
+			{
+				$.get(url, function(data) { document.getElementById(cont).innerHTML=data; } );
+			}
+			$(document).ready(function()
+			{
+							});
+        </script>
+</head>
+<body>
+<div id="header">
+	<div id="headercont">
+		<div id="headerlijevo">
+			<ul>
+				<li><a href="?upit=sadrzaj&id=105" title="English">English</a></li>
+				<li><a href="?upit=sadrzaj&id=106" title="Deutsch">Deutsch</a></li>
+				<li><a href="?upit=sadrzaj&id=107" title="Magyar">Magyar</a></li>
+			</ul>
+		</div>
+		<div id="headerdesno">
+			<a href="?upit=sadrzaj&id=88" title="Djeèji web">Djeèji web</a>
+			<a href="?upit=sadrzaj&id=87" title="Teen web">Teen web</a>
+		</div>
+		<div class="cb"></div>
+	</div>
+</div>
+
+
+<div id="header1">
+	<h1>Gradska i sveuèilišna knjižnica Osijek</h1>
+	<div id="logo">
+		<a href="?" title="GISKO"><img src="img/logo.jpg" alt="GISKO" /></a>
+	</div>
+	<div id="slika">
+		<img src="img/rotacija/1.jpg" alt="1.jpg" />
+	</div>
+	<span id="60godina"><a href="?upit=sadrzaj&id=177"><img src="/img/pecat.png" alt="60 godina GISKO" style="position:absolute; margin:120px 0 0 670px;" /></a></span>
+	<div class="cb"></div>
+</div>
+
+<div id="navigacija">
+	<ul class="navigacija">
+		<li><a href="#podnavigacija_1" title="Osobna iskaznica GISKO"><span>Osobna iskaznica GISKO</span></a></li>
+		<li><a href="#podnavigacija_2" title="Katalog"><span>Katalog</span></a></li>
+		<li><a href="#podnavigacija_3" title="Odjeli i službe"><span>Odjeli i službe</span></a></li>
+		<li><a href="#podnavigacija_4" title="Usluge za korisnike"><span>Usluge za korisnike</span></a></li>
+		<li><a href="#podnavigacija_5" title="Usluge za knjižnièare"><span>Usluge za knjižnièare</span></a></li>
+		<li><a href="#podnavigacija_6" title="Usluge za nakladnike"><span>Usluge za nakladnike</span></a></li>
+		<li><a href="#podnavigacija_7" title="O knjižnici"><span>O knjižnici</span></a></li>
+		<li><a href="#podnavigacija_8" title="Projekti i programi"><span>Projekti i programi</span></a></li>
+	</ul>
+	<div class="cb"></div>
+</div><!-- kraj navigacije gornje -->
+
+<div id="podnavigacija">
+	<div class="podnavigacija" id="podnavigacija_1">
+    		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=49' title="Radno vrijeme: rad s korisnicima i poslovnim suradnicima">Radno vrijeme: rad s korisnicima i poslovnim suradnicima</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=50' title="Uvjeti upisa">Uvjeti upisa</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=51' title="Uvjeti posudbe">Uvjeti posudbe</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=52' title="Cjenik usluga">Cjenik usluga</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=53' title="Gdje smo">Gdje smo</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=54' title="Imenik">Imenik</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=45' title="Kontakt">Kontakt</a></li>
+				</ul>
+	</div>
+	
+	<div class="podnavigacija" id="podnavigacija_2">
+    		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=90' title="Katalozi GISKO">Katalozi GISKO</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=56' title="Katalozi knjižnica Osjeèko-baranjske županije">Katalozi knjižnica Osjeèko-baranjske županije</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=57' title="Katalozi i ostali bibliografski izvori u Hrvatskoj">Katalozi i ostali bibliografski izvori u Hrvatskoj</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=180' title="Katalozi i ostali bibliografski izvori u svijetu">Katalozi i ostali bibliografski izvori u svijetu</a></li>
+					
+		</ul>
+	</div>
+	
+	<div class="podnavigacija" id="podnavigacija_3">
+			<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=75' title="Središnja knjižnica">Središnja knjižnica</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=76' title="Ogranci">Ogranci</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=89' title="Bibliobusna služba">Bibliobusna služba</a></li>
+				</ul>
+	</div>
+	
+	<div class="podnavigacija" id="podnavigacija_4">
+    		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=59' title="Posudba">Posudba</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=173' title="Rezervacije">Rezervacije</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=60' title="Informacijsko-referalne usluge">Informacijsko-referalne usluge</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=168' title="Usluge za korisnike s posebnim potrebama">Usluge za korisnike s posebnim potrebama</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=61' title="Rad na raèunalima">Rad na raèunalima</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=62' title="Reprografske i ostale usluge">Reprografske i ostale usluge</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=63' title="Kulturno-promotivne aktivnosti">Kulturno-promotivne aktivnosti</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=64' title="Pedagoško-animacijske aktivnosti">Pedagoško-animacijske aktivnosti</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=65' title="Edukacija korisnika">Edukacija korisnika</a></li>
+				</ul>
+	</div>	
+	
+	
+	<div class="podnavigacija" id="podnavigacija_5">
+	
+		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=66' title="Razvojna matièna služba ">Razvojna matièna služba </a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=68' title="Struèni skupovi, predavanja, radionice,.....">Struèni skupovi, predavanja, radionice,.....</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=192' title="Struèna literatura: elektronièki izvori">Struèna literatura: elektronièki izvori</a></li>
+				</ul>
+	</div>
+	
+	<div class="podnavigacija" id="podnavigacija_6">
+    		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=70' title="CIP ured">CIP ured</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=71' title="Obvezni  primjerak">Obvezni  primjerak</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=72' title="ISBN">ISBN</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=73' title="ISSN">ISSN</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=74' title="ISMN">ISMN</a></li>
+				</ul>
+	</div>
+	
+	
+	<div class="podnavigacija" id="podnavigacija_7">
+    		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=78' title="Povijest, sadašnjost, buduænost">Povijest, sadašnjost, buduænost</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=79' title="Misija i djelatnost">Misija i djelatnost</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=80' title="Organizacijska struktura">Organizacijska struktura</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=81' title="Službeni dokumenti">Službeni dokumenti</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=77' title="Zgrada Knjižnice">Zgrada Knjižnice</a></li>
+				</ul>
+	</div>
+	
+	
+	<div class="podnavigacija" id="podnavigacija_8">
+    		<ul>
+        		<li class="prvi"><a href='?upit=sadrzaj&amp;id=185' title="Projekti">Projekti</a></li>
+				<li ><a href='?upit=sadrzaj&amp;id=186' title="Programi">Programi</a></li>
+				</ul>
+	</div>
+	
+	
+	<div class="cb"></div>
+</div>
+
+<div id="wrapper">
+
+	<div id="sidebar">
+		<div id="sadrzaj_lijevo">	
+			<!-- RUÈNA NAVIGACIJA!!! -->	
+<div id="pretraga">
+	<style type="text/css">
+	@import url(http://www.google.com/cse/api/branding.css);
+	</style>
+	<div class="cse-branding-bottom">
+	  <div class="cse-branding-form">
+	    <form action="http://www.google.com/cse" id="cse-search-box">
+	      <div>
+	        <input type="hidden" name="cx" value="000000430818716084309:xu0sprw9tte" />
+	        <input type="hidden" name="ie" value="UTF-8" />
+	        <input type="text" name="q" size="31" id="pretraga_tekst"/>
+	        <input type="submit" name="sa" value="Traži" />
+	      </div>
+	    </form>
+	  </div>
+	</div>
+</div>
+<div id="panel">
+	<ul>
+		<li><img src="img/bullet_pocetna.png" /><a href="/" title="Povratak na poèetnu"><span>Povratak na poèetnu</span></a></li>
+		<li><img src="img/bullet_struktura.png" /><a href="?upit=sadrzaj&id=165" title="Struktura stranica"><span>Struktura stranica</span></a></li>
+		<li id="ispis"><img src="img/bullet_ispis.png" /></li>
+	</ul>
+
+	<div class="cb"></div>
+</div>
+<div id="glavnilinkovi">
+
+	<ul class="istaknuto">
+		<li><a href="?upit=sadrzaj&id=85" title="Pitajte knjižnièare"><span>Pitajte knjižnièare</span></a></li>
+		<li><a href="?upit=sadrzaj&id=160" title="Referati, seminari, diplomski radovi..."><span>Referati, seminari, diplomski radovi,...</span></a></li>
+		<li><a href="?upit=sadrzaj&id=86" title="Online baze podataka"><span>Online baze podataka</span></a></li>
+	</ul>
+
+	<ul>
+		<li><a href="?upit=sadrzaj&id=158" title="Knjižnièni sustav Sveuèilišta"><span>Knjižnièni sustav Sveuèilišta</span></a></li>
+		<li><a href="?upit=sadrzaj&id=159" title="Knjižnièni sustav Županije"><span>Knjižnièni sustav Županije</span></a></li>
+	</ul>	
+	
+	<ul>
+		<li><a href="?upit=top5" title="Top5"><span>Top5</span></a></li>
+		<li><a href="?nk=2" title="Preporuke i prikazi"><span>Preporuke i prikazi</span></a></li>
+                <li><a href="?upit=sadrzaj&id=170" title="Prijedlog za nabavu"><span>Prijedlog za nabavu</span></a></li>
+	</ul>
+	
+	<ul>
+		<li><h3>Dogaðanja</h3></li>
+		<li><a href="?nk=3" title="Predavanja, radionice, okrugli stolovi"><span>Predavanja, radionice, okrugli stolovi</span></a></li>
+		<li><a href="?nk=4" title="Izlo¾be, promocije"><span>Izlozbe, promocije</span></a></li>
+		<li><a href="?nk=5" title="Struèni skupovi"><span>Struèni skupovi</span></a></li>
+	</ul>
+</div>
+
+<div class="box">
+	<div class="slikovna">
+		<a href="?upit=galerije" title="Fotogalerija"><img src="img/rubrike/galerija.jpg" alt="Fotogalerija"/></a>
+	</div>
+</div>
+
+<div class="box linkovi">
+			<p>&nbsp;</p>
+<ul>
+    <li><a target="_blank" href="http://www.unios.hr/"><b>Sveuèili&scaron;te J. J. Strossmayera u Osijeku</b> </a></li>
+    <li><a target="_blank" href="http://www.obz.hr/"><b>Osjeèko-baranjska županija</b></a></li>
+    <li><a target="_blank" href="http://www.osijek.hr/"><b>Grad Osijek</b></a></li>
+    <li><a target="_blank" href="http://www.kultura-osijek.com/"><b>Kultura u Osijeku</b></a></li>
+</ul>			<ul>
+    <li><a target="_blank" href="http://www.carnet.hr"><b>CARNet</b> </a></li>
+    <li><a title="Zajednica knjižnica sveuèili&scaron;ta Hrvatske" target="_blank" href="http://www.gskos.hr/%7Edescape/?upit=sadrzaj&amp;id=151"><b>Zajednica knjižnica sveuèili&scaron;ta Hrvatske</b></a></li>
+    <li><a title="Konzorcij CROLIST" target="_blank" href="http://www.gskos.hr/%7Edescape/?upit=sadrzaj&amp;id=151"><b>Konzorcij CROLIST</b></a></li>
+    <li><a target="_blank" href="http://knjiznica.hr/home.php"><b>Portal narodnih knjižnica</b></a></li>
+</ul>			<ul>
+    <li><a target="_blank" href="http://www.dksb.hr/home.php" title="DKSB"><b>DKSB</b></a></li>
+    <li><a target="_blank" href="http://hkdrustvo.hr/hr" title="HKD"><b>HKD</b></a></li>
+    <li><a target="_blank" href="http://www.ifla.org/" title="IFLA"><b>IFLA</b></a></li>
+    <li><a target="_blank" href="http://www.eblida.org/" title="EBLIDA"><b>EBLIDA</b></a></li>
+    <li><a target="_blank" href="http://www.libereurope.eu/" title="LIBER"><b>LIBER</b></a></li>
+    <li><a target="_blank" href="http://www.hcd.hr/"><b>Hrvatsko èitateljsko dru&scaron;tvo</b></a></li>
+</ul>			<p>&nbsp;</p>
+<ul>
+    <li><a target="_blank" href="https://www.gskos.hr/webmail/src/login.php" title="Hrvatsko èitateljsko dru&scaron;tvo"><b>GISKO webmail<br>
+    </b></a></li>
+    <li><a target="_blank" href="http://www.gskos.hr/%7Edescape/?upit=sadrzaj&amp;id=69"><b>Moodle GISKO</b></a></li>
+</ul>			<p>&nbsp;</p>
+<ul>
+    <li><a target="_blank" href="http://hrcak.srce.hr/"><b>HRÈAK</b></a></li>
+    <li><a target="_blank" href="http://scholar.google.hr/" title="Google znalac"><b>Google znalac</b></a><a target="_blank" href="https://www.gskos.hr/webmail/src/login.php"><b><br>
+    </b></a></li>
+</ul>	</div>
+		</div>
+	</div>
+	
+	
+	<div id="sadrzaj_centar">
+		 
+    	<div class="fullvijest">
+    <h2>Predavanje o amerièkim Indijancima i kulturnom suverenitetu</h2>
+    <p style="text-align: justify;">U okviru projekta Festivala hrvatsko-indijanskog prijateljstva, koji je u organizaciji Hrvatsko-amerièkog dru&scaron;tva, Odsjek za engleski jezik i književnost Filozofskoga fakulteta u Osijeku i American Cornera Gradske i sveuèili&scaron;ne knjižnice Osijek organiziraju predavanja o amerièkim Indijancima i kulturnom suverenitetu.<br>
+Pozivamo vas u èetvrtak <b>28. listopada 2010. godine u 15 sati</b> u sveèanoj dvorani <b>Filozofskog fakulteta Osijek </b>na predavanje <b>The People of the Big Voice Toma Jonesa</b>, projekciju njegovog dokumentarnog filma <b>Choka</b> i predavanje <b>Patsy Phillips</b>. Predavanja æe se održati na engleskome jeziku.<br>
+Tom prigodom u predvorju Posudbenog odjela Gradske i sveuèili&scaron;ne knjižnice Osijek možete pogledati&nbsp; izložbu knjiga American Indians.<br>
+Tom Jones docent je na Odsjeku za umjetnost sa Sveuèili&scaron;ta u Wisconsinu iz Madisona u Wisconsinu. U svom predavanju The People of the Big Voice Tom Jones pružit æe povijesni pregled fotografija Ho-Chunk naroda od 19. st. do danas i predstaviti svoj fotografski rad. Kao èlan naroda Ho-Chunk, on je jedan iz skupine novoga vala indijanskih fotografa koji prikazima Indijanaca daju novu dimenziju. Jones svoj narod prikazuje &quot;iznutra&quot;, onako kako oni sami sebe vide kroz svoje obiteljske i dru&scaron;tvene veze.<br>
+Predavanje æe biti popraæeno prikazivanjem dokumentarnog filma Toma Jonesa pod naslovom Choka o njegovom djedu i tradiciji starje&scaron;ina Ho-Chunk naroda.<br>
+Patsy Phillips, ravnateljica Muzeja pri Institutu za amerièku indijansku umjetnost iz Santa Fea u Novom Meksiku, govorit æe o znaèenju (ili umnogome podcjenjivanju) indijanske umjetnosti u suvremenom svijetu. Ona æe takoðer predstaviti svoju matiènu ustanovu, Muzej suvremene umjetnosti, centar pri Institutu za amerièku indijansku umjetnost, instituciju koja potièe obrazovanje i razvoj amerièke indijanske umjetnosti. Isticanjem nekih najvažnijih odrednica suvremene amerièke indijanske umjetnosti, govorit æe o odnosu Muzeja i kulturnog suvereniteta i umjetnosti te o marginalizaciji suvremene indijanske umjetnosti u suvremenom umjetnièkom svijetu.</p>
+<p style="text-align: justify;">Dodatne informacije možete dobiti:</p>
+<p>&bull;&nbsp; <a href="http://www.gskos.hr/%7Edescape/?upit=sadrzaj&amp;id=121">American Corner Osijek</a><br>
+&nbsp;</p>
+<p>&nbsp;<img alt="" src="http://www.gskos.hr/%7Edescape/files/DSC02311.jpg" align="right" border="2" vspace="10" width="300" height="225" hspace="10"><img alt="" src="http://www.gskos.hr/%7Edescape/files/DSC02312.jpg" align="left" border="2" vspace="10" width="300" height="225" hspace="10"><img alt="" src="http://www.gskos.hr/%7Edescape/files/DSC02316.jpg" align="right" border="2" vspace="10" width="300" height="225" hspace="10"><img alt="" src="http://www.gskos.hr/%7Edescape/files/indijanciffax.jpg" align="left" border="2" vspace="10" width="300" height="225" hspace="10"></p>    <span class="datum">26.10.2010.</span>
+</div>			</div>
+
+	
+	<div>
+				</div>
+	
+</div><!-- /wrapper -->
+<div id="footer">
+	<p>Gradska i sveuèilišna knjižnica Osijek. <br/> Sva prava pridržana. <br/> <a href="?upit=sadrzaj&amp;id=45" title="Kontakt">Kontakt</a>   
+        <br/><a href="?upit=sadrzaj&amp;id=176" title="Impressum">Impressum</a></p>
+</div>
+</body>
+</html>

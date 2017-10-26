@@ -1,0 +1,1794 @@
+
+
+<html>
+
+<!-- ######################################################################## -->
+<!-- This site is created with: Epsilon EasyWeb 2.5 -->
+<!-- Licence type: single site" -->
+
+<!-- (c) 2001, 2000 EPSILON Internet Technologies (www.epsilon.hr)-->
+<!-- ######################################################################## -->
+
+
+
+
+<HEAD>
+	<META NAME="GENERATOR" Content="Epsilon EasyWeb 2.5">
+	<meta http-equiv="Content-Language" content="hr">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+	<meta name="description" content="EasyWeb 2.5">
+	<meta name="keywords" content="Epsilon, Internet, Development, XML, XSL, WAP, Mobile Internet">
+
+	<link rev="Made" href="mailto:info@epsilon.hr">
+	
+	<title>MVPEI</title>
+	
+	<link rel="stylesheet" type="text/css" href="Design/skins/mvp/css/">
+</HEAD>
+<link href="Design/skins/mvp/css/linkovi-lijeva-traka.css" rel="stylesheet" type="text/css">
+<link href="Design/skins/mvp/css/mvpstilovi.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="Design/skins/mvp/css/scroll.css"><script language="JavaScript">
+<!--
+var cCurrent="default";
+var bNeMicati=false;
+var bHideMe=false;
+function MM_swapImgRestore() { //v3.0
+//cCurrent='';
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script language="JavaScript">
+<!--
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+function MM_showHideLayers() { //v3.0
+if(MM_showHideLayers.arguments[2]=="show")
+cCurrent=MM_showHideLayers.arguments[0];
+				
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+document.onmousemove=new Function("hidePopup()");
+function hidePopup()
+{
+	var iCounter;
+	var oPopup, oPopupOne;
+				
+	if(document.all) // usually Microsoft Internet Explorer
+		oPopup=document.all.tags('div');
+	else if(document.getElementsByTagName) // usually Netscape 6
+		oPopup=document.getElementsByTagName('div');
+	//window.status=bHideMe + " " + cCurrent;
+	if(!bHideMe)
+	{
+		cCurrent="";
+		bHideMe=true;
+				
+		//window.status="ne mici";
+	}
+	else
+	{
+		if(!bNeMicati)
+			MM_swapImgRestore();
+		else
+			bNeMicati=false;
+			
+		for(iCounter=0;iCounter<oPopup.length;iCounter++)
+		{
+						
+			// sets object for current browser
+			if(document.all) // usually Microsoft Internet Explorer
+				oPopupOne=oPopup(iCounter)
+			else if(document.getElementsByTagName) // usually Netscape 6
+				oPopupOne=oPopup.item(iCounter)
+						
+			// checks whether display CSS attribute is empty
+			//alert(oPopupOne.id.substring(0,4))
+						
+			if(cCurrent!=oPopupOne.id)
+			{
+				if(oPopupOne.id.substring(0,4)=="meni" && oPopupOne.style.visibility!="")
+				{
+					showHideSelects('visible');
+					oPopupOne.style.visibility="hidden";
+				}
+			}
+						
+		}
+					
+			//window.status="mici";
+	}
+}
+function showHideSelects(sParAction)
+{
+	var oSelect,oSelectOne;
+
+	if(document.all) // usually Microsoft Internet Explorer
+		oSelect=document.all.tags('select');
+	else if(document.getElementsByTagName) // usually Netscape 6
+		oSelect=document.getElementsByTagName('select');
+	
+	for(iCounter=0; iCounter<oSelect.length; iCounter++)
+	{
+		
+		// sets object for current browser
+		if(document.all) // usually Microsoft Internet Explorer
+			oSelectOne=oSelect(iCounter)
+		else if(document.getElementsByTagName) // usually Netscape 6
+			oSelectOne=oSelect.item(iCounter)
+		
+
+		if(sParAction=="visible")
+			oSelectOne.style.visibility="visible";
+		else
+			oSelectOne.style.visibility="hidden";
+
+	}
+	
+	// za flash
+	if(document.all) // usually Microsoft Internet Explorer
+		oSelect=document.all.tags('object');
+	else if(document.getElementsByTagName) // usually Netscape 6
+		oSelect=document.getElementsByTagName('object');
+	
+	for(iCounter=0; iCounter<oSelect.length; iCounter++)
+	{
+		
+		// sets object for current browser
+		if(document.all) // usually Microsoft Internet Explorer
+			oSelectOne=oSelect(iCounter)
+		else if(document.getElementsByTagName) // usually Netscape 6
+			oSelectOne=oSelect.item(iCounter)
+		
+
+		if(sParAction=="visible")
+			oSelectOne.style.visibility="visible";
+		else
+			oSelectOne.style.visibility="hidden";
+
+	}
+}
+//-->
+var oOpenWindow;
+function OpenBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+ oOpenWindow=  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+ 
+ oOpenWindow.focus();
+}
+function getValue(form, iID) {
+	form.ID.value = iID;
+}//-->
+
+
+function showBlock(blockList)
+                        {                        
+                                var num=0;
+                                var lists = document.getElementsByTagName("ul");
+                                while (num < lists.length)
+                                {
+									if(lists[num].attributes["class"].value != "L-meni-bijeli-1")
+                                    { 
+                                        lists[num].style.display = "none";
+                                    }
+                                   num+=1;
+                                }
+                                
+                                num=0;
+                                lists = document.getElementsByTagName("a");
+                                while (num < lists.length)
+                                {
+                                        try { 
+                                                if(lists[num].attributes["class"].value == "info")
+                                                {                                        
+                                                lists[num].style.visibility  = "hidden";
+                                                }
+                                        }
+                                        catch (error) {}
+                                        num+=1;
+                                }
+                                
+                                if(blockList == "0")
+                                {
+                                        num=0;
+                                        while (num < lists.length)
+                                        {
+                                                lists[num].style.display = "block";
+                                                num+=1;
+                                        }
+                                }
+                                else
+                                {                                       
+                                        b0.style.display = "block";
+                                        
+                                        var temp = new Array();
+                                        temp = blockList.split('');
+                                        
+                                        var ids = "";
+                                        num=0;
+                                        while (num < temp.length)
+                                        {
+                                                ids = ids + temp[num];
+                                                if(temp[num] == ".")
+                                                {
+                                                        try { document.getElementById("b" + ids).style.display = "block"; }
+                                                        catch(error) {} 
+                                                                                                                                                  
+                                                        
+                                                        try { document.getElementById("i" + ids).style.visibility = "visible"; }
+                                                                                                                                                   catch (error) {}
+                                                }
+                                                num+=1;
+                                        }
+                                }
+
+                        }       
+
+
+
+</script>
+
+<body bgcolor="#FFFFFF" text="#666666" link="#CC0000" vlink="#CC0000" alink="#CC0000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_01a.gif','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_02a.gif','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_03a.gif','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_04a.gif','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_05a.gif','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_06a.gif','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_07a.gif')">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+		<tr>
+			<td width="149" height="89"><a href="MVP.asp?pcpid=2"><img src="Design/skins/mvp/HRV/images/mvp-naslov.gif" width="149" height="89" border="0" alt="homepage"></a></td>
+			<td width="1"><img src="Design/skins/mvp/HRV/images/sivi-pix.gif" width="1" height="89"></td>
+			<td height="89" valign="bottom"> 
+				<table width="630" border="0" cellspacing="0" cellpadding="0" height="89">
+					<tr>
+						<td width="450" valign="bottom"><img src="Design/skins/mvp/HRV/images/%7Ezaglavlja/gore-brezuljci.jpg" width="435" height="89" border="0"></td>
+						<td>
+							<table width="140" height="89" border="0" align="right" cellpadding="0" cellspacing="0"
+	id="Table1">
+	<tr>
+		<td valign="bottom" height="3">
+			<div align="right"><a href="http://www.mfa.hr/MVP.asp?pcpid=1612" class="novosti-text"><b>ENGLISH</b></a></div>
+		</td>
+	</tr>
+	<tr>
+		<td height="40" align="right" valign="bottom">
+			<form action="MVP.asp" method="get" class="forma-margine" id="form1" name="form1">
+				<input type="hidden" name="pcpid" value="1639" id="Hidden1">
+				<table width="140" border="0" cellspacing="0" cellpadding="0" height="30" id="Table2">
+					<tr>
+						<td valign="middle"><input name="tr" type="text" class="forma-pretrazivanje" id="tr"></td>
+						<td align="right" width="50"><input name="submit" type="submit" class="gumb-pretrazivanje" value="Traži" id="Submit1"></td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>
+
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="149" height="1"><img src="Design/skins/mvp/HRV/images/sivi-pix.gif" width="149" height="1"></td>
+			<td width="1"><img src="Design/skins/mvp/HRV/images/sivi-pix.gif" width="1" height="1"></td>
+			<td height="1" bgcolor="#666666"><img src="Design/skins/mvp/HRV/images/sivi-pix.gif" width="630" height="1"></td>
+		</tr>
+		<tr>
+			<td width="149" valign="top" bgcolor="#FF6666"><img src="Design/skins/mvp/HRV/images/%7Enavigacija/lijevi-naslov-3.gif" width="149" height="29"><img src="Design/skins/mvp/HRV/images/03-info-servis/3-lijeva-traka.jpg" width="149" height="149" border="0"><br>
+				<table width="149" border="0" cellspacing="0" cellpadding="0" background="Design/skins/mvp/HRV/images/03-info-servis/3-iza-lijeva-traka.gif" height="360">
+					<tr>
+						<td valign="top"> 
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td height="10"></td>
+								</tr>
+								<tr>
+									<td>
+<ul class="L-meni-bijeli-1">
+<li class="L-meni-razmak1"><a class="textbijeli" href="http://www.mvpei.hr/MVP.asp?pcpid=1382">Priopæenja za javnost</a></li>
+<li class="L-meni-razmak1"><a class="textbijeli" href="http://www.mvpei.hr/MVP.asp?pcpid=1466">Govori i intervjui</a></li>
+<li class="L-meni-razmak1"><a class="textbijeli" href="http://www.mvpei.hr/MVP.asp?pcpid=1387">Informacije o putovanjima</a></li>
+<li class="L-meni-razmak1"><a class="textbijeliunderline" href="http://www.mvpei.hr/MVP.asp?pcpid=1385">Bilteni MVPEI-a</a></li>
+<li class="L-meni-razmak1"><a class="textbijeli" href="http://www.mvpei.hr/MVP.asp?pcpid=2213">Godišnjak MVPEI-a</a></li>
+<li class="L-meni-razmak1"><a class="textbijeli" href="http://www.mvpei.hr/MVP.asp?pcpid=267">Akreditacija stranih novinara</a></li>
+<li class="L-meni-razmak1"><a class="textbijeli" href="http://www.mvpei.hr/MVP.asp?pcpid=1460">Foto galerija</a></li>
+</ul></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td width="1" valign="top" bgcolor="#666666"><img src="Design/skins/mvp/HRV/images/sivi-pix.gif" width="1" height="1"></td>
+			<td valign="top"> 
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+<div id="meni1" style="position:absolute; left:157px; top:111px; width:200; height:177px; z-index:1; visibility: hidden" onMouseMove="bHideMe=false;">
+	<table width="190" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="12" bgcolor="#FFE79D" height="9"></td>
+			<td height="9"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#FFE79D" height="4"></td>
+			<td bgcolor="#FFF4D2" valign="top" height="4"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#FFE79D"></td>
+			<td valign="top" bgcolor="#FFF4D2"> 
+				<table width="100%" border="0" cellspacing="0" cellpadding="3" class="textmeni1">
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=4" class="textmeni1">Odrednice vanjske politike</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1167" class="textmeni1">Bilateralni odnosi</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=28" class="textmeni1">Multilateralni odnosi</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=2547" class="textmeni1">Meðunarodne mjere ogranièavanja</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=2253" class="textmeni1">Meðunarodni ugovori i ostali dokumenti</a></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#FFE79D" height="10"></td>
+			<td valign="top" bgcolor="#FFF4D2" height="10"></td>
+		</tr>
+	</table>
+</div>
+<div id="meni2" style="position:absolute; left:263px; top:111px; width:180; height:176px; z-index:2; visibility: hidden" onMouseMove="bHideMe=false;"> 
+	<table width="190" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="12" bgcolor="#FFB380" height="9"></td>
+			<td height="9"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#FFB380" height="4"></td>
+			<td bgcolor="#FFE4D2" valign="top" height="4"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#FFB380"></td>
+			<td valign="top" bgcolor="#FFE4D2"> 
+				<table width="100%" border="0" cellspacing="0" cellpadding="3" class="textmeni2">
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1388" class="textmeni2">Ministar</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=51" class="textmeni2">Pitajte ministra</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=52" class="textmeni2">Najèešæa pitanja i odgovori</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1628" class="textmeni2">Ustrojstvo MVPEI-a</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=81" class="textmeni2">Diplomatska akademija</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=2144" class="textmeni2">Zapošljavanje u MVPEI</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1124" class="textmeni2">Virtualna šetnja</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1125" class="textmeni2">Svi hrvatski ministri vanjskih poslova</a></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#FFB380" height="10"></td>
+			<td height="10" bgcolor="#FFE4D2"></td>
+		</tr>
+	</table>
+</div>
+<div id="meni3" style="position:absolute; left:355px; top:111px; width:200; height:176px; z-index:3; visibility: hidden" onMouseMove="bHideMe=false;"> 
+	<table width="190" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="12" bgcolor="#F4A6A6" height="9"></td>
+			<td height="9"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#F4A6A6" height="4"></td>
+			<td bgcolor="#FFD9D9" valign="top" height="4"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#F4A6A6"></td>
+			<td bgcolor="#FFD9D9" valign="top"> 
+				<table width="100%" border="0" cellspacing="0" cellpadding="3" class="textmeni3">
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1382" class="textmeni3">Priopæenja za javnost</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1466" class="textmeni3">Govori i intervjui</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1387" class="textmeni3">Informacije o putovanjima</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1385" class="textmeni3">Bilteni MVPEI-a</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=2213" class="textmeni3">Godišnjak MVPEI-a</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=267" class="textmeni3">Akreditacija stranih novinara</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1460" class="textmeni3">Foto galerija</a></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#F4A6A6" height="10"></td>
+			<td height="10" bgcolor="#FFD9D9"></td>
+		</tr>
+	</table>
+</div>
+<div id="meni4" style="position:absolute; left:437px; top:111px; width:200px; height:176px; z-index:4; visibility: hidden" onMouseMove="bHideMe=false;"> 
+	<table width="190" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="12" bgcolor="#CA8DCD" height="9"></td>
+			<td height="9"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#CA8DCD" height="4"></td>
+			<td bgcolor="#EEDEEF" valign="top" height="4"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#CA8DCD"></td>
+			<td bgcolor="#EEDEEF" valign="top"> 
+				<table width="100%" border="0" cellspacing="0" cellpadding="3" class="textmeni4">
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=13" class="textmeni4">Diplomatske misije i konzularni uredi RH u svijetu</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1160" class="textmeni4">Diplomatske misije i konzularni uredi u RH</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1161" class="textmeni4">Pregled viznog sustava</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=2022" class="textmeni4">Informacije o putovanjima</a></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#CA8DCD" height="10"></td>
+			<td height="10" bgcolor="#EEDEEF"></td>
+		</tr>
+	</table>
+</div>
+<div id="meni5" style="position:absolute; left:543px; top:111px; width:194px; height:176px; z-index:5; visibility: hidden" onMouseMove="bHideMe=false;"> 
+	<table width="190" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="12" bgcolor="#9DCEFF" height="9"></td>
+			<td height="9"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#9DCEFF" height="4"></td>
+			<td bgcolor="#E6F1FF" valign="top" height="4"></td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#9DCEFF"></td>
+			<td bgcolor="#E6F1FF" valign="top"> 
+				<table width="100%" border="0" cellspacing="0" cellpadding="3" class="textmeni5">
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=50" class="textmeni5">Osnovni podaci</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=54" class="textmeni5">Geografska obilježja i karte</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=56" class="textmeni5">Županije</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=57" class="textmeni5">Veæi gradovi</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=58" class="textmeni5">Nacionalni parkovi</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=59" class="textmeni5">Prometni pravci</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=60" class="textmeni5">Državna obilježja</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=65" class="textmeni5">Politièko ureðenje</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=815" class="textmeni5">Gospodarstvo</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=18" class="textmeni5">Turizam</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=74" class="textmeni5">Kulturna baština</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=68" class="textmeni5">Literatura o Hrvatskoj</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=67" class="textmeni5">Foto-galerija</a></td>
+					</tr>
+
+					<tr>
+						<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=66" class="textmeni5">Linkovi</a></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="12" bgcolor="#9DCEFF" height="10"></td>
+			<td height="10" bgcolor="#E6F1FF"></td>
+		</tr>
+	</table>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><a href="#" onMouseOut="cCurrent='';" onMouseMove="bHideMe=false;" onMouseOver="hidePopup();showHideSelects('hidden');MM_swapImage('nav1','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_01a.gif',1);MM_showHideLayers('meni1','','show')"><img name="nav1" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_01.gif" width="108" height="30"></a></td>
+		<td><a href="#" onMouseOut="cCurrent='';" onMouseMove="bHideMe=false;" onMouseOver="hidePopup();showHideSelects('hidden');MM_swapImage('nav2','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_02a.gif',1);MM_showHideLayers('meni2','','show')"><img name="nav2" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_02.gif" width="92" height="30"></a></td>
+		<td><a href="#" onMouseOut="cCurrent='';" onMouseMove="bHideMe=false;" onMouseOver="hidePopup();showHideSelects('hidden');MM_swapImage('nav3','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_03a.gif',1);MM_showHideLayers('meni3','','show')"><img name="nav3" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_03.gif" width="82" height="30"></a></td>
+		<td><a href="#" onMouseOut="cCurrent='';" onMouseMove="bHideMe=false;" onMouseOver="hidePopup();showHideSelects('hidden');MM_swapImage('nav4','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_04a.gif',1);MM_showHideLayers('meni4','','show')"><img name="nav4" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_04.gif" width="106" height="30"></a></td>
+		<td><a href="#" onMouseOut="cCurrent='';" onMouseMove="bHideMe=false;" onMouseOver="hidePopup();showHideSelects('hidden');MM_swapImage('nav5','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_05a.gif',1);MM_showHideLayers('meni5','','show')"><img name="nav5" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_05.gif" width="91" height="30"></a></td>
+		<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=16" onMouseOut="MM_swapImgRestore()" onMouseMove="bNeMicati=true;" onMouseOver="MM_swapImgRestore(); MM_swapImage('nav6','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_06a.gif',1)"><img name="nav6" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_06.gif" width="78" height="30"></a></td>
+			
+		<td><a href="http://www.mvpei.hr/MVP.asp?pcpid=1682" onMouseOut="MM_swapImgRestore();" onMouseMove="bNeMicati=true;" onMouseOver="MM_swapImgRestore(); MM_swapImage('nav7','','Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_07a.gif',1)"><img name="nav7" border="0" src="Design/skins/mvp/HRV/images/%7Enavigacija/navigacija_07.gif" width="73" height="30"></a></td>
+	</tr>
+</table>
+</td>
+								</tr>
+								<tr>
+									<td><table width="630" border="0" cellspacing="0" cellpadding="8" class="pathlinkovi1" bgcolor="#F3F3F3">
+				<tr>
+					<td><span><a href="http://www.mvpei.hr/MVP.asp?pcpid=2" class="pathlinkovi1">HOME</a></span>
+							<span class="pathlinkovi1">&nbsp;&gt;&nbsp;</span><a class="pathlinkovi1" href="http://www.mvpei.hr/MVP.asp?pcpid=9">Info servis</a>
+
+							<span class="pathlinkovi1">&nbsp;-&nbsp;Bilteni MVPEI-a</span>
+			</td>
+				</tr>
+			</table>
+
+<!--table width="630" border="0" cellspacing="0" cellpadding="8" class="pathlinkovi1" bgcolor="#F3F3F3">
+	<tr>
+		<td><a href="index.htm" class="pathlinkovi1">HOME</a> &gt; Vanjska politika - Odrednice vanjske politike </td>
+	</tr>
+</table-->
+</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td height="60" valign="bottom" colspan="3"> 
+							<table width="630" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="60" align="right" valign="bottom"> 
+										<table width="17" border="0" cellspacing="0" cellpadding="0" height="16" bgcolor="#CC0000">
+											<tr>
+												<td class="pathlinkovi1" width="12">&nbsp;</td>
+												<td class="pathlinkovi1" bgcolor="#FFFFFF" width="5">&nbsp;</td>
+											</tr>
+											<tr>
+												<td height="4" class="pathlinkovi1" bgcolor="#FFFFFF"></td>
+												<td height="4" class="pathlinkovi1" bgcolor="#FFFFFF" width="5"></td>
+											</tr>
+										</table>
+									</td>
+									<td valign="bottom"><span class="naslov20">Bilteni MVPEI</span></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td height="20">&nbsp;</td>
+					</tr>
+					<tr>
+						<td><link href="design/skins/mvp/css/3-4-bilteni.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+
+function MM_jumpMenu(targ,selObj,restore){ 
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+</script>
+	
+	<script type="text/javascript">
+	function doIt(_l) { document.location=_l; }
+	</script>
+	<form name="form" id="form">
+		<table width="630" border="0" cellspacing="0" cellpadding="0" id="Table1">
+			<tr>
+				<td width="60"></td>
+				<td width="510" valign="top">
+					<table width="570" border="0" cellspacing="0" cellpadding="0" id="Table2">
+						<tr>
+							<td width="285">
+								<!--
+								<table width="285" border="0" cellpadding="0" cellspacing="0"  bgcolor="#F8F8F8" id="Table3">
+									<tr>
+										<td width="30"><img src="images/bijeli-gornji-lijevi-ugao.gif" width="23" height="26"></td>
+										<td class="naslov12">Gospodarski pregled</td>
+										<td width="22"><img src="images/bijeli-gornji-desni-ugao.gif" width="23" height="26"></td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="naslov12">
+											<select style="width:200px;" name="sel2" class="izbornik-drzava" id="Select1" onchange="doIt(this.form.sel2.options[this.form.sel2.selectedIndex].value)">
+												<option value='?pcpid=1385'>--------------- Odaberite 
+													---------------</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=105'>Pregled
+													2/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=78'>Pregled
+													1/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=19'>Pregled
+													1/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=20'>Pregled
+													4/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=21'>Pregled
+													3/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=22'>Pregled
+													2/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=1&BID=23'>Pregled
+													1/2002
+												</option>
+												
+											</select></td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td height="10" colspan="3">
+										</td>
+									</tr>
+								</table>
+								-->
+							</td>
+							<td width="285">
+								<table width="285" border="0" cellpadding="0" cellspacing="0" background="images/iza-svijetlo-siva.gif"   bgcolor="#F8F8F8" id="Table4">
+									<tr>
+										<td width="30"><img src="images/bijeli-gornji-lijevi-ugao.gif" width="23" height="26"></td>
+										<td class="naslov12">Javna diplomacija i promocija RH</td>
+										<td width="22"><img src="images/bijeli-gornji-desni-ugao.gif" width="23" height="26"></td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td class="naslov12">
+											<select name="sel1" style="width:200px;" class="izbornik-drzava" id="Select2" onchange="doIt(this.form.sel1.options[this.form.sel1.selectedIndex].value)">
+												<option value='?pcpid=1385'>--------------- Odaberite 
+													---------------</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=196'>Pregled
+													8/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=195'>Pregled
+													7/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=194'>Pregled
+													6/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=193'>Pregled
+													5/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=192'>Pregled
+													4/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=191'>Pregled
+													3/2010 
+												</option>
+												
+												<option  selected  value='?pcpid=1385&BV=2&BID=190'>Pregled
+													2/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=189'>Pregled
+													1/2010
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=188'>Pregled
+													12/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=187'>Pregled
+													11/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=186'>Pregled
+													10/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=185'>Pregled
+													9/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=184'>Pregled
+													8/2009
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=183'>Pregled
+													7/2009
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=182'>Pregled
+													6/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=181'>Pregled
+													5/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=180'>Pregled
+													4/2009 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=179'>Pregled
+													3/2009
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=178'>Pregled
+													2/2009
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=177'>Pregled
+													1/2009
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=176'>Pregled
+													12/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=175'>Pregled
+													11/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=174'>Pregled
+													10/208
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=173'>Pregled
+													9/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=172'>Pregled
+													8/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=171'>Pregled
+													7/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=170'>Pregled
+													6/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=169'>Pregled
+													5/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=168'>Pregled
+													4/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=167'>Pregled
+													3/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=166'>Pregled
+													2/2008 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=165'>Pregled
+													1/2008
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=164'>Pregled
+													12/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=163'>Pregled
+													11/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=162'>Pregled
+													10/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=161'>Pregled
+													9/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=160'>Pregled
+													8/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=159'>Pregled
+													7/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=158'>Pregled
+													6/2007 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=157'>Pregled
+													5/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=156'>Pregled
+													4/2007 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=155'>Pregled
+													3/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=154'>Pregled
+													2/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=153'>Pregled
+													1/2007
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=152'>Pregled
+													12/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=151'>Pregled
+													11/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=150'>Pregled
+													10/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=149'>Pregled
+													9/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=148'>Pregled
+													8/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=147'>Pregled
+													07/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=146'>Pregled
+													06/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=145'>Pregled
+													05/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=144'>Pregled
+													04/2006 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=143'>Pregled
+													03/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=141'>Pregled
+													2/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=140'>Pregled
+													1/2006
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=142'>Pregled
+													12/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=138'>Pregled
+													11/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=137'>Pregled
+													10/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=136'>Pregled
+													9/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=131'>Pregled
+													8/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=128'>Pregled
+													7/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=125'>Pregled
+													6/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=124'>Pregled
+													5/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=123'>Pregled
+													4/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=122'>Pregled
+													3/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=120'>Pregled
+													2/2005  
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=119'>Pregled
+													1/2005
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=118'>Pregled
+													18/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=117'>Pregled
+													17/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=116'>Pregled
+													16/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=115'>Pregled
+													15/2004 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=114'>Pregled
+													14/2004 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=113'>Pregled
+													13/2004 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=111'>Pregled
+													12/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=109'>Pregled
+													11/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=108'>Pregled
+													10/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=106'>Pregled
+													9/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=100'>Pregled
+													8/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=98'>Pregled
+													7/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=104'>Pregled
+													6/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=103'>Pregled
+													5/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=102'>Pregled
+													4/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=101'>Pregled
+													3/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=80'>Pregled
+													2/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=79'>Pregled
+													1/2004
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=24'>Pregled
+													15/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=25'>Pregled
+													14/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=26'>Pregled
+													13/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=29'>Pregled
+													povodom Dana državnosti 2003. 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=27'>Pregled
+													12/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=28'>Pregled
+													11/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=30'>Pregled
+													10/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=31'>Pregled
+													9/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=32'>Pregled
+													8/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=33'>Pregled
+													7/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=34'>Pregled
+													6/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=47'>Pregled
+													5/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=48'>Pregled
+													4/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=49'>Pregled
+													3/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=50'>Pregled
+													2/2003
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=51'>Pregled
+													1/2003 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=52'>Pregled
+													22/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=53'>Pregled
+													21/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=54'>Pregled
+													20/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=55'>Pregled
+													19/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=56'>Pregled
+													18/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=57'>Pregled
+													17/2002 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=58'>Pregled
+													16/2002 
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=59'>Pregled
+													15/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=60'>Pregled
+													14/2002
+												</option>
+												
+												<option   value='?pcpid=1385&BV=2&BID=61'>Pregled
+													13/2002
+												</option>
+												
+											</select></td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td height="10" colspan="3"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					
+					<table width="570" border="0" cellpadding="0" cellspacing="0">
+						<tr align="center">
+							<td height="60" valign="middle" background="images/iza-svijetlo-siva.gif" bgcolor="#F3F3F3">
+								<p class="tekst9"><span class="naslov">Javna diplomacija i promocija Hrvatske<br>
+                        </span><span class="podnaslov">2/2010</span>
+							</td>
+						</tr>
+						<tr align="center">
+							<td height="30" valign="top">
+								<span class="tekst11sivi">
+									
+									<b>
+										1. do 26. veljaèe 2010.
+									</b>
+								</span>
+							</td>
+						</tr>
+						<tr align="center">
+							<td valign="middle">
+								<table width="570" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC"
+									class="tekst-biltena">
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>KRAKOW,<br>1. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Warszawa
+										</td>
+										<td valign="TOP" width="75%"><b>OSNOVANA POLJSKO-HRVATSKA INDUSTRIJSKA I TRGOVINSKA KOMORA (PHITK)</b>
+											<p align="justify">
+												U nazoènosti 80-tak predstavnika drž. institucija, lokalnih vlasti i zainteresiranih tvrtki, u Krakowu je 1. veljaèe 2010. osnovana Poljsko-hrvatska industrijska i trgovinska komora (PHITK). Pawel Wlodarczyk, predsjednik PHITK-a istaknuo je kako se radi o inicijativi koja dolazi u pravom trenutku: "Poljska je rastuæe gospodarstvo, Hrvatska se nalazi na pragu ulaska u EU i sada treba pokrenuti gospodarske potencijale s obje strane". Veleposlanik mr.sc. Ivan Del Vechio je u svome govoru iskazao da "odliène politièke odnose ne prati i adekvatna razina i intenzitet gospodarskih odnosa te da æe osnivanje Komore predstavljati izvrstan poticaj u tome smjeru", zahvalio je na dobivenoj podršci za ovu inicijativu nadležnim drž. tijelima i tvrtkama koje su iskazale poduzetnièki duh, prepoznale moguænosti i interes u osnivanju Komore. Osnaženje gospodarskih odnosa predstavlja prioritet u djelovanju VRH koje je spremno i sposobno za zainteresirane poslovne subjekte koji namjeravaju realizirati svoje poslovne planove u RP, organizirati sve potrebne sastanke i poslovne susrete. U veleposlanikovoj pratnji bio je mr.sc Hrvoje Èikoviæ, I. tajnik. Osnovne smjernice gospodarskog razvoja i moguænosti investiranja u RH prezentirali su: D. Horvat, ravnatelj Uprave za obrt u MINGORP-u i S. Ljubunèiæ, ravnatelj APIU, te M. Korowajczyk, dir. Uprave za EU u MG RP i Z. Cyndrowski, dir. Odjela za með. suradnju u Generalnoj direkciji za izgradnju cesta i autocesta (GDDKiA). U ime Sejma RP, skupu se obratio i inicijativu podržao zastupnik Tomasz Glogowski, predsj. Poljsko-hrvatske skupine prijateljstva. PHITK-u pristupilo je 30 tvrtki (11 hrv. - Dalekovod, Limex, Exportdrvo, Geneza, Aluflexpack, Plamen, Luje, Konèar, LK Graditeljstvo, Spin Valis, Zorman), usvojeni su temeljni akti i ustrojeni su organi Komore. Planom rada se, nakon registracije, predviða izrada internetske stranice koja bi ponudila burzu projekata i razmjenu informacija. Ovom znaèajnom projektu iskazana je podrška tijekom osnivaèke skupštine razinom i znaèajem gostiju, te atmosferom srdaènosti i elana.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>OTTAWA,<br>1. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Ottawa
+										</td>
+										<td valign="TOP" width="75%"><b>Hrvatski jezik kao dio redovnog školskog programa</b>
+											<p align="justify">
+												Ministarstvo obrazovanja kanadske provincije British Columbije je prihvatilo hrvatski jezik kao dio redovnog školskog programa od 5 do 12 razreda, o èemu je VRH zaprimilo službenu dokumentaciju 1. veljaèe 2010. U kategoriji izbornih predmeta hrvatski jezik jednakopravno æe s drugim jezicima i predmetima utjecati na uspjeh uèenika. Buduæi je obrazovanje u Kanadi u nadležnosti provincija, moguæi status hrv. jezika se rješava pojedinaèno u svakoj od njih. Nakon što je provincija Ontario odobrila hrv. jezik u svom redovnom šk. programu, Kanadsko-hrvatski kongres je zapoèeo proceduru u British Columbiji još 2005. Ustrajnim radom Kanadsko-hrvatskog kongresa, koordinatorice projekta Helene Prliæ i uz potporu VRH, provincijsko nadležno ministarstvo je prihvatilo hrv. jezik kao dio redovne nastave u osnovnim i srednjim školama. Hrv. nastavnici su pozvani do sljedeæeg semestra pripremiti provincijski curriculum, za koji postoji veliki interes brojne hrv. zajednice od 18 815 èlanova, ali i ostalih stanovnika British Columbije. Dobivanje statusa u redovnom šk. programu u još jednoj kanadskoj provinciji je novo priznanje hrv. jeziku i identitetu, hrv. zajednici u Kanadi i novom partnerskom hrvatsko-kanadskom politièkom okviru.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>PRIŠTINA,<br>3. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Priština
+										</td>
+										<td valign="TOP" width="75%"><b>VELEPOSLANIKU PROF. DR.SC. Z. KRAMARIÆU DODIJELJENA PLAKETA ZA PROMICANJE GOSPODARSTVA</b>
+											<p align="justify">
+												Dana 3. veljaèe o.g. veleposlanik prof. dr.sc. Zlatko Kramariæ posjetio je kosovsku Gospodarsku Komoru, na poziv predsjednika KGK, g. Besima Beqaja i dir. Odjela za meðunarodno tržište, investicije i marketing, g. Safeta Gërxhaliu. Uz veleposlanika, sastanku su prisustvovali Siniša Ivanec, konzul RH i Maja Domišljanoviæ, attaché. Predsjednik GKK, g. Beqaj pozvao je vlp Kramariæa kako bi mu uruèio plaketu i pismeno priznanje za promicanje gospodarstva izmeðu R. Hrvatske i R. Kosova. Prof.dr.sc. Zlatko Kramariæ jedini je akreditirani veleposlanik kojemu je uruèeno navedeno priznanje za promicanje gospodarstva od strane Gospodarske komore Kosova. Kratkom sastanku je prisustvovalo i nekoliko najjaèih gospodarstvenika Kosova. B. Beqaj istaknuo je potrebu za potpisivanjem meðunarodnih ugovora kao što je npr. izbjegavanje dvostrukog oporezivanja. T. Humolli, direktor Albi Comerca koji je zastupnik Kraša, Dukata i Martmexa požalio se na uvozne carine za poljoprivredne proizvode, tj. Mlijeène proizvode iz Ugovora o CEFTA-i. Besim Beqaj izrazio je želju i potrebu da se sastanu predstavnici hrvatske i kosovske Gospodarske komore te da hrv. gospodarstvenici posjete Kosovo.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>ZAGREB,<br>3. veljaèe 2010.</b><br>
+											DA MVPEI RH Zagreb
+										</td>
+										<td valign="TOP" width="75%"><b>DONACIJA PUBLIKACIJA DA MVPEI I MVPEI NACIONALNOJ KNJIŽNICI ÈR</b>
+											<p align="justify">
+												Na zamolbu HAZU-a, 3. veljaèe 2010. DA MVPEI RH donirala je Odjelu za slavistiku Nacionalne knjižnice Èeške Republike (Národní knihovna Èeské republiky) u Pragu desetak zbornika DA MVPEI te nekoliko relevantnih publikacija koje je objavila DA MVPEI i MVPEI. Navedena donacija proistekla je slijedom zamolbe voditeljice Odjela za slavistiku Nacionalne knjižnice ÈR, gðe. Klare Truchle, gradišæanske Hrvatice iz Maðarske, koja je svoj upit proslijedila u HAZU s kojom Knjižnica u Pragu veæ dugi niz godina ostvaruje razmjenu publikacija. Prema rijeèima g. Mirka Kratofila iz HAZU-a, prijašnji je voditelj Odjela za slavistiku Nacionalne knjižnice u Pragu, inaèe srpske nacionalnosti, sve do svog odlaska u mirovinu (2004.) sve hrv. naslove u Knjižnici, bacao u smeæe. Njegova nasljednica, gða. Truchla, poduzela je sve mjere kako bi nadoknadila gubitak navedenoga knjižnog fonda, te je stupila u kontakt i s Boženom Leš, savjetnicom u VRH u Pragu, koja joj je pružila informacije o izdanjima DA MVPEI RH i MVPEI RH. Spomenuto darovanje obogatit æe ne samo fond Nacionalne knjižnice ÈR relevantnim hrv. naslovima, nego i doprinijeti i með. meðuknjižniènoj suradnji MVPEI RH.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>PRAG,<br>4. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Prag
+										</td>
+										<td valign="TOP" width="75%"><b>PRIJEVOD NA ÈEŠKI JEZIK ZBIRKE POEZIJE GRADONAÈELNIKA NOVALJE I. DABE</b>
+											<p align="justify">
+												Pod pokroviteljstvom VRH u suradnji s uredom HTZ-a u Pragu u hotelu Olympik u Pragu, 4. veljaèe 2010. održana je promocija prijevoda na èeški jezik zbirke poezije „Odlazimo u sjene“ gradonaèelnika Novalje Ivana Dabe. Uz nazoènost gradonaèelnika Dabe i veleposlanika mr. Frane Krniæa, pred 80-tak uzvanika iz èeških kulturnih, znanstvenih, poslovnih i politièkih krugova promociju je vodio autor prijevoda knjige g. Dušan Karpatsky, ugledni i aktivni prevoditelj s hrvatskog na èeški jezik. Veleposlanik Krniæ se pozdravnim govorom obratio nazoènima istaknuvši znaèaj izdavanja prijevoda knjige gradonaèelnika Dabe koje kao kulturna promocija ima višestruki utjecaj na jaèanje hrvatsko-èeških veza.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>CANBERRA,<br>6. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Canberra
+										</td>
+										<td valign="TOP" width="75%"><b>SUDJELOVANJE VRH I HRVATSKE ZAJEDNICE NA "MULTICULTURAL FESTIVALU"</b>
+											<p align="justify">
+												Veliki "Multicultural festival", koji se redovito od 1994. prireðuje u gl. gradu Australije, uspješno je održan i ove godine. Priredbe su održane od 6.-8. veljaèe, a na glavni dan u subotu 7. veljaèe, na mjestu zbivanja bilo je izmeðu 70 i 100 tisuæa posjetitelja. Ovogodišnji festival je bio sveden samo na središte grada. Unatoè tako velikoj koncentraciji ljudi na ogranièenom prostoru, zahvaljujuæi dobroj organizaciji i primjerenom ponašanju sudionika, nisu zabilježene teškoæe niti prekršaji reda. Prema unaprijed odreðenom rasporedu VRH je dodijeljena povoljna lokacija, odmah do tzv. europske ulice, u kojoj su bili postavljeni štandovi zemalja èlanica EU. Prigodno ureðen i opremljen štand veleposlanstva, na kojemu je bio dostupan hrv. informativni te turistièko-promidžbeni materijal i stalna video prezentacija, bio je dosta dobro posjeæen. Posjetitelji su uz brošure rado uzimali i ponuðene suvenire - lavandu i licitarska srca. Najveæi broj meðu njima izrazili su želju da u prvoj prigodi osobno upoznaju RH, a nezanemariv broj posjetitelja štanda je izjavio kako bi rado takav posjet ponovio. Osim djelatnika VRH s obiteljima, na štandu su bili aktivno prisutni i pojedinci iz hrv. zajednice, meðu kojima i oni najmlaðeg naraštaja.
+<br>Na ovogodišnjem festivalu hrv. iseljenici s podruèja Canberre i Teritorija australskoga gl. grada (ACT) sudjelovali su uspješnim nastupom folklorne skupine, kao i s dva štanda na razlièitim lokacijama, a na kojima se po pristupaènim cijenama nudilo nekoliko karakteristiènih hrv. jela i piæa. VRH je i te štandove opskrbilo turistièkim materijalima, tako da je hrv. promidžba bila na primjerenoj razini.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>EHINGEN,<br>6. veljaèe 2010.</b><br>
+											Generalni konzulat RH Stuttgart
+										</td>
+										<td valign="TOP" width="75%"><b>MALONOGOMETNI TURNIR POD POKROVITELJSTVOM GK RH</b>
+											<p align="justify">
+												Nogometni klub KSC-Ehingen iz Ehingena i Udruga hrvatskih nogometnih klubova Baden-Württemberga pod pokroviteljstvom GK RH organizirali su 6. veljaèe 2010. malonogometni turnir u Ehingenu. Od prijavljenih 16 ekipa, nastupilo je 15 ekipa hrv. zajednice B-W, a pobjednik turnira postala je Marsonije -Frickenhausen iz Frickenbausen koja je u finalnom susretu pred prepunim tribinama pobijedila s 1:0 prošlogodišnji pobjednik Croatia-Zagreb iz Stuttgarta. U Sporthalle –Ehnigen nastupilo je 15 ekipa hrv. zajednice B-W. U pauzi turnira nastupila je folklorna skupina Hrvatske katolièke misije iz Ehingena i odigrana je revijalna utakmica izmeðu veterana Udruge hrvatskih nogometnih klubova B-W i domaæina KSC-Ehingen. GK RH nagradio je prijelaznim peharima prvoplasiranu momèad. Peharima u trajno vlasništvo nagraðene su èetiri prvoplasirane momèadi, a nagrade su još uruèene ekipi KSC-Ehingen za fair play, R. Jeliæu (Zrinski iz Calwe) najboljem vrataru turnira; M. Vukoji (Croatia/Sindelfingen) najboljem strijelcu i D. Schwindu (Marsonija/Frickenhausen) najboljem igraèu turnira. Veèernji list kao medijski pokrovitelj isto tako je peharom nagradio A. Maganjiæa (Croatia/Sinttelftngen) kao najmlaðeg igraèa turnira. Ove uspješne sportske priredbe njeguju kako sportsko-natjecateljski duh tako i hrvatsko podrijetlo i identitet.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>CHICAGO,<br>6. veljaèe 2010.</b><br>
+											Generalni konzulat RH Chicago
+										</td>
+										<td valign="TOP" width="75%"><b>PROSLAVA HRVATSKOG DRUŠTVA KARLOVÈANA U CHICAGU</b>
+											<p align="justify">
+												Dana 6. veljaèe 2010. u Hrvatskom kulturnom centru u Chicagu sveèano je proslavljeno godišnje druženje Hrvatskog društva Karlovèana u Chicagu. Sveèanost je zapoèela himnama dvjema domovinama, nakon èega je sve nazoène pozdravio predsjednik društva g. Branko Vardijan. Hrvatsko porijeklo i pripadnost hrv. narodu Karlovèani su pokazali osnivanjem društva Croatian Society Karlovac of Chicago. Poèetkom svake godine održava se godišnja skupština te se gastronomskim specijalitetima te hrv. regije, uz gostovanje žive glazbe dugo u noæ pjeva, pleše i veseli. Prodavala se i tombola, te su podijeljene i vrijedne nagrade. Ove godine tema priredbe bila je Valentinovo pa su svi stolovi i velika dvorana bili okiæeni prigodnim crvenim srcima. Veèeri je nazoèilo 500-tinjak nazoènih èlanova društva, èlanova obitelji i njihovih gostiju, kao i predstavnici GK na èelu s konzulicom geranticom Renee Pea.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>KOTOR,<br>7. veljaèe 2010.</b><br>
+											Generalni konzulat RH Kotor
+										</td>
+										<td valign="TOP" width="75%"><b>PROSLAVA BLAGDANA SV. TRIPUNA I DODJELA ODLIÈJA BOKELJSKOJ MORNARICI</b>
+											<p align="justify">
+												Središnja vanjska proslava blagdana sv. Tripuna zaštitnika grada i Kotorske biskupije, održana je u nedjelju, 7. veljaèe 2010. u nazoènosti velikog broja vjernika i hodoèasnika iz Kotora, Bara, Šibenika, Hercegovine, Omiša te Dubrovnika, i ostalih gradova Dubrovaèko-neretvanske županije. Sveèanost je uvelièana je ceremonijom ispred katedrale, na kojoj je predsjednik CG Filip Vujanoviæ, u nazoènosti veleposlanika dr.sc. Petra Turèinoviæa, gk Boža Vodopije i gradonaèelnice Kotora Marije Maje Æatoviæ, uruèio Bokeljskoj mornarici visoko državno odlièje - Orden crnogorske zastave drugog stupnja. Predsjednik Vujanoviæ je istaknuo kako ovo odlièje dodjeljuje na prijedlog Hrvatskog graðanskog društva, za naroèite zasluge Bokeljske mornarice za CG, za uzoran hod kroz vrijeme koje prolazi veæ 12 st. prerastajuæi od srednjovjekovne bratovštine pomoraca u uzornu društvenu organizaciju koja èuva tradicije od zaborava. Nakon zahvale predsjednika Upravnog odbora Bokeljske mornarice N. Kondanarija, biskup kotorski I. Janjiæ blagoslovio je Bokeljsku mornaricu, èije kolo su pratile limene glazbe iz Kotora, Tivta i Šibenika. Pontifikalnu sv. misu u katedrali - bazilici Sv. Tripuna, predvodio je msgr. Josip Mrzljak, biskup varaždinski, uz koncelebraciju biskupa dubrovaèkog Ž. Puljiæa i kotorskog I. Janjiæa. Potom je uslijedila procesija ulicama grada Kotora, a moæi sveca ispred svojih hramova pozdravili su i sveæenici Srpske pravoslavne crkve i Crnogorske pravoslavne crkve.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>PRAG,<br>8. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Prag
+										</td>
+										<td valign="TOP" width="75%"><b>ÈEŠKE NOVINE NAGRADILE URED HTZ-a U PRAGU</b>
+											<p align="justify">
+												Èeško izdanje uglednih novina u podruèju turizma "Travel Trade Gazette", koje veæ tradicionalno ocjenjuje djelovanje i uspjeh turistièkih subjekata na podruèju ÈR, 8. veljaèe 2010. dodijelilo je 3. nagradu Uredu HTZ-a sa sjedištem u Pragu u kategoriji "Najbolja strana nacionalna turistièka centrala na podruèju Èeške".
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>BRATISLAVA,<br>8. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Bratislava
+										</td>
+										<td valign="TOP" width="75%"><b>„HRVATSKI KULTURNI TJEDAN“ TRGOVAÈKOG CENTRA 'POLUS' U BRATISLAVI </b>
+											<p align="justify">
+												U okviru Mjeseca nacija u organizaciji trgovaèkog centra Polus u Bratislavi od 8.-14. veljaèe 2010. održan je Hrvatski kulturni tjedan. Suorganizatori promocije hrv. kulture i turizma bili su VRH i predstavništvo HTZ-a u Bratislavi. U programu su sudjelovala hrv. manjinska kulturno-umjetnièka društva iz Jandorfa (Muški zbor) i Devinske nove vesi (folklorno društvo Grbarèijeta, mješoviti vokalno-instrumentalni sastav Rosica te tamburaški sastav udruge Èrip) kao i modna dizajnerica A. Subotiæ Pjajèik, vlasnica dizajnerskog studija 'Etna Maar' iz Zagreba. Poseban doprinos dale su studentice Privatne slavenske gimnazije i studentice sveuèilišta Komenski koje su nosile modele zagrebaèke dizajnerice. Akcija je realizirana je uz pomoæ SSHIK-a, odnosno Odjela za kulturu i poduzeæa Potomak, d.o.o. - Academia Cravatica. Hrvatski kulturni tjedan i instalacija 2 m dugaèke kravate pobudili su veliko zanimanje brojnih posjetilaca Polusa, a jedan od najgledanijih tv programa TV Markiza hrv. kravati posvetio je poseban prilog. Tijekom Tjedna podijeljeni su tisuæe brošura, promidžbenih letaka i suvenira te je prikazano više video filmova o našoj kulturnoj baštini, o povijesti kravate i o hrv. prirodnim ljepotama.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>TEL AVIV,<br>8. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Tel Aviv
+										</td>
+										<td valign="TOP" width="75%"><b>PROMOCIJA HRVATSKOG TURIZMA U IZRAELU</b>
+											<p align="justify">
+												Hrvatska turistièka ponuda iznimno je uspješno predstavljena zahtjevnom izraelskom tržištu, nastupom HTZ na sajmu IMTM (The 16th International Mediterranean Tourism Market) u Tel Avivu, kao i bogatim kulturno-zabavnim programom u sklopu manifestacije “Hrvatski turistièki dan“. U poznatom Hotelu David Intercontinental, 8. veljaèe 2010. organizirana je poslovna radionica u sklopu koje je 15 predstavnika hrv. turistièkih tvrtki i zajednica, Udruge hrv. putnièkih agencija-UHPA te predstavnik Zraène luke Dubrovnik, odgovaralo na brojne upite više od 100 predstavnika izraelskih turistièkih agencija, tour-operatera, tvrtki i novinara. Izraelski turistièki agenti pokazali su iznimno zanimanje za proširenje poslovne suradnje s hrv. partnerima. U organizaciji HTZ te u suradnji s VRH potom je održana manifestacija „Hrvatska veèer“ kojoj je prisustvovalo 230 gostiju. Poseban gost veèeri bio je izraelski min. turizma Stas Misezhnikov. Veèeri su takoðer nazoèili poè. konzuli RH u Izraelu, predstavnici Vlade i Knesseta, Ureda gradonaèelnika Jeruzalema i Tel Aviva, novinari i predstavnici izraelskih medija. Izaslanstvo Grada Dubrovnika predvodio je gradonaèelnik Andro Vlahušiæ. Uzvanike je uvodno pozdravila vlpa Zorica Matkoviæ, nakon èega se sudionicima obratio Niko Buliæ, dir. HTZ, te predstavnice TZ Zagreba, Amalija Tomaševiæ i TZ Grada Dubrovnika, Jelka Tepšiæ. Specifièan scenski nastup dubrovaèkog ansambla “Ragusa“ pobudio je oduševljenje publike. Atraktivnosti cijelog dogaðaja doprinijela je i mlada èelistica Ana Rucner Kalmeber svojim nastupom. Kroz program je vodila B. Kolar, a nastupili su i N. Križan te Z. Barzilay, koji su govorili o svojim dugogodišnjim iskustvima u Izraelu, odnosno u Hrvatskoj. Tijekom veèeri prikazivani su filmovi „Mediteran kakav je nekad bio“, „Èarobna Hrvatska“ te slide-show postera i promocijski filmovi TZ. Gradonaèelnik Dubrovnika i TZ Grada Dubrovnika organizirali su 9. veljaèe veèeru u hotelu Dan Tel Aviv za 20-ak poslovnih ljudi - predstavnika izraelskih tvrtki iz podruèja turizma, zdravstva te avio-prijevoza. Gradonaèelnik Vlahušiæ održao je prezentaciju o poslovnoj ponudi Dubrovnika a razgovaralo se i o moguæoj uspostavi charter letova na relaciji Tel Aviv-Dbk, suradnji dubrovaèke s bolnicom Ichilov iz Tel Aviva, kao i brojni izgledi ulaganja u dubrovaèki turizam i hotelijerstvo.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>ŠIROKI BRIJEG,<br>9. veljaèe 2010.</b><br>
+											Generalni konzulat RH Mostar
+										</td>
+										<td valign="TOP" width="75%"><b>PREDSTAVLJENA GLAZBENO-LIKOVNA MAPA „MISA“</b>
+											<p align="justify">
+												U organizaciji Matice hrvatske, ogranka Široki Brijeg, i Franjevaèke galerije u Širokom Brijegu, 9. veljaèe 2010. u Franjevaèkoj galeriji održano je predstavljanje Glazbeno-likovne mape „Misa“, po motivima puèkoga i glagoljaškoga pjevanja, autora prof. Živka Kljuèe i akad. slikarice Silve Radiæ Markotiæ. O Mapi i autorima govorili su fra V. Karaèiæ, voditelj Franjevaèke galerije i jedan od njezinih utemeljitelja, te P. Kožul, predsj. MH, ogranka Š. Brijeg, koji je i otvorio ovu glazbeno-likovnu izložbu. Gosp. Kožul je ujedno predstavio i druge najvažnije projekte MH u Š. Brijegu. Nazoènim gostima, meðu kojima je bila i Evica Milanoviæ, konzulica II. razr., prigodnim su se rijeèima obratili i autori. Istaknuto je znaèenje jedinstvenog spajanja glazbene i likovne umjetnosti u djelu koje ima za cilj oèuvati hrv. glagoljsku baštinu. U glazbenom dijelu programa sudjelovale su klape „Dobrkoviæi“ i „Diva“, iz Š. Brijega.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>MÜNCHEN,<br>9. veljaèe 2010.</b><br>
+											Generalni konzulat RH München
+										</td>
+										<td valign="TOP" width="75%"><b>SASTANAK S NASTAVNICIMA HRVATSKOG JEZIKA I KULTURE KOJI RADE U SLOBODNOJ DRŽAVI BAVARSKOJ</b>
+											<p align="justify">
+												U organizaciji GK RH 9. veljaèe 2010. održan je redoviti godišnji sastanak s nastavnicima hrvatskoga jezika i kulture koji rade u Slobodnoj državi Bavarskoj. Razgovaralo se o aktualnom stanju u nastavi hrvatskoga jezika i kulture nakon 1. polugodišta šk. god. 2009./10. te o buduæim planovima i projektima. Sastanku je nazoèilo svih 7 nastavnika HN koji rade na podruèju Bavarske u mjerodavnosti hrv. MZOŠ. Gk Vladimir Duvnjak iznio je mišljenje da je hrv. nastava izuzetno važna za oèuvanje nacionalnog identiteta i izrazio nadu da æe se broj uèenika koji pohaðaju nastavu u Bavarskoj u buduænosti poveæati, kao što je sluèaj u Baden-Württembergu. Konzulica Sanja Süto istaknula je kako je ovaj sastanak puno ugodniji od prethodnih, na kojima je bilo dilema u pogledu preuzimanja nastave u hrv. mjerodavnost. Koordinatorica Marija Krstulja iznijela je ukupne podatke o HN u Bavarskoj; nastava se izvodi na 31 nastavnom mjestu i pohaða je oko 600 uèenika. Nastavnici su iznijeli podatke o specifiènostima rada na pojedinim nastavnim mjestima, osvrnuli se na vrlo dobru suradnju s ravnateljima škola, roditeljima, hrv. katolièkim misijama i hrv. udrugama. Broj uèenika i dalje lagano raste. Konzulica Süto upoznala je nastavnike s projektom “Bez pauze, molim” koji organizira Platform3 uz potporu GK, a obuhvaæa radionicu animiranog filma, projekcije hrvatskih i njemaèkih anim. filmova te nastup hrv. sastava Cinkuši, a traje od 15.-20. veljaèe. Dogovoreno je da se u GK RH u Münchenu o.g. postavi izložba uèenièkih radova vezanih uz proces izrade anim. filma. Nastavnici su naveli brojne aktivnosti koje planiraju ostvariti tijekom o.g., od susreta s uèenicima HN iz Švicarske u Münchenu, izdavanja šk. lista, ureðivanja vlastite web-stranice, do obilježavanja hrv. blagdana prigodnim glazbeno-scenskim programima uèenika, najèešæe u suradnji s hrv. katolièkim misijama u Bavarskoj. Izvoðenje HN u Bavarskoj ocijenjeno je vrlo dobrim, kao i suradnja nastavnika s roditeljima, GK RH, katolièkim misijama i hrv. udrugama.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>VATIKAN,<br>10. veljaèe 2010.</b><br>
+											Veleposlanstvo RH pri Sv. Stolici
+										</td>
+										<td valign="TOP" width="75%"><b>OBRAÆANJE SV. OCA HODOÈASNICIMA GOSPIÆKO-SENJSKE BISKUPIJE</b>
+											<p align="justify">
+												U povodu 10. obljetnice uspostave Gospiæko-senjske biskupije naši su vjernici 10. veljaèe 2010., sa željom zahvale Sv. Ocu na uspostavi nove biskupije, nazoèili generalnoj audijenciji. Dogaðaju je nazoèio i vlp RH pri Sv. Stolici Emilio Marin. Sveti se Otac u okviru audijencije referirao na 50. obljetnicu smrti kard. Alojzija Stepinca, za kojeg je rekao da je bio “biskup i muèenik, koji je prije 50 godina dao svoj život za svjedoèanstvo vjere“, te pozvao na èuvanje uspomena na naše muèenike. Sveti je Otac, srdaèno pozdravljajuæi i obraæajuæi se na hrvatskom jeziku hodoèasnicima predvoðenim biskupom Gospiæko-senjske biskupije Milom Bogoviæem, pozvao na molitvu za prijeko potrebna duhovna zvanja, a završno im udijelio poseban apostolski blagoslov.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>HAMBURG,<br>10. veljaèe 2010.</b><br>
+											Generalni konzulat RH Hamburg
+										</td>
+										<td valign="TOP" width="75%"><b>HRVATSKA TURISTIÈKA PONUDA NA SAJMU "REISEN HAMBURG 2010"</b>
+											<p align="justify">
+												Na sajmu „Reisen Hamburg 2010", koji se održava od 10.-14. veljaèe u Hamburgu, izlaže više od 900 izlagaèa iz 70-tak zemalja svijeta. Težište ovogodišnjeg sajma usmjereno je na aktivni odmor s naglaskom na biciklizam. Nositelj hrvatskog nastupa je HTZ. Sajam je 10. veljaèe otvorio A. Gedaschko, hamburški senator gospodarstva i rada, a pozdravne rijeèi uputili su i B. Aufderheide, dir. sajma te A. Sakkas, predsj. Corps Touristique. Sveèanom otvorenju prisustvovali su i gk Žarko Plevnik i Dubravka Tarodi, konzulica III. razr. U svim pozdravnim govorima iskazano je uvjerenje u skori financijski i gospodarski oporavak te optimizam glede nadolazeæe turistièke sezone. Hrvatski štand je veæ prvog dana sajma zabiljcžio veliko zanimanje posjetitelja što je još jedan dokaz tomu kako je RH sve æešæa destinacija za odmor njemaèkih turista. Podruèje Hamburga znaèajno je emitivno i receptivno turistièko središte, a sjeverni Nijemci poznati su kao ljubitelji putovanja na koje su spremni potrošiti i znatno više od svojih sunarodnjaka te je šteta što se na podruèju sj. Njemaèke ne provodi jaèa turistièka promocija RH.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>SACRAMENTO,<br>10. veljaèe 2010.</b><br>
+											Generalni konzulat RH Los Angeles
+										</td>
+										<td valign="TOP" width="75%"><b>PREZENTACIJA HRVATSKOG GOSPODARSTVA U SENATU KALIFORNIJE</b>
+											<p align="justify">
+												Na poziv senatora g. Lou Coreea, predsjednika odbora zaduženog za razvoj vanjsko-trgovinskih odnosa Kalifornije sa zemljama EU-a, održan je 10. veljaèe 2010. u Sacramentu, sastanak na kojem su bili pozvani gen. konzuli iz europskih zemalja èije tvrtke najviše doprinose zapošljavanju amerièke radne snage. RH pridaje interes jaèanju gospodarskih veza sa SAD, poglavito s Kalifornijom gdje živi veliki broj Hrvata, koji su izmeðu ostalog doprinijeli znaèajnijem zapošljavanju Amerikanaca. Senator Correa je želio iz izlaganja gen. konzula iz RH saznati nešto više o gospodarskim i drugim potencijalima koje RH može eventualno ponuditi Kaliforniji, što bi zaintrigiralo i nazoène predstavnike središnje gospodarske komore iz San Franciska. Tijekom svojeg izlaganja gk Ilija Želaliæ je spomenuo primjere uspješnih Hrvata (gg. Maglica, Bubalo, Grgiæ), nadaleko poznatih u SAD, potom proizvodnju specijaliziranih baterijskih lampica koje koristi amerièka policija kao i vrhunska vina koja se nude u svim prestižnim restoranima diljem SAD-a. G. Coreei je ukazano kako je RH malena zemlja ali s nadarenim i školovanim ljudima, koji svojim idejama i projektima mogu ponuditi konkretne prijedloge relevantnim amerièkim poduzetnicima. Istaknuo je interes prve hrv. tvrtke „Doking“ koja uspješno suraðuje s NATO-m. Ovu je prigodu gk Želaliæ iskoristio i za sastanak s èelnicima hrv. zajednice u Sacramentu, gdje ga je g. M. Matoševiæ, predsjednik hrv. zajednice upoznao sa svojim najbližim suradnicima tijekom veèere u novoj i velièanstvenoj zgradi u kojoj se nalazi hrv. klub.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>BEÈ,<br>11. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Beè
+										</td>
+										<td valign="TOP" width="75%"><b>KONCERT HKO S MEZZOSOPRANISTICOM M. ORES POD RAVNANJEM N. MATOŠEVIÆ I IZLOŽBA „VARAŽDIN …"</b>
+											<p align="justify">
+												Nade Matoševiæ nastupio je u Staroj gradskoj vijeænici u Beèu. Na programu koncertu bila su djela: „Mediteranska svita“ M. Brajkoviæa, „Èetiri meditacije“ J. Hatzea, te svita „Idila“ L. Janaèeka. U predvorju Stare gradske vijeænice posjetitelji su mogli razgledati izložbu pod naslovom "Varaždin u starim razglednicama", koje su nastale od 1900.-1940., a svjedoèe o povijesnom i kulturnom razvitku Varaždina. Nazoène su pozdravili dogradonaèelnik Varaždina Slobodan Mikac i zamjenik vlp Josip Špoljariæ. Koncert je održan u organizaciji Grada Varaždina, Koncertnog ureda Grada Varaždina, MK RH i VRH. Hrvatski komorni orkestar osnovan je 1989. sa svrhom uvoðenja mladih glazbenika u vrhunsko komorno glazbeno muziciranje. Uz standardni klasièni repertoar za komorne orkestre njegova posebnost je izvoðenje djela domaæih skladatelja. Hrvatski komorni orkestar je 12. veljaèe održao koncert u OeRF centru u Željeznom u Gradišæu.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>HAAG,<br>11. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Haag
+										</td>
+										<td valign="TOP" width="75%"><b>Hrvatska književnica Daša Drndiæ</b>
+											<p align="justify">
+												Hrvatska književnica Daša Drndiæ predstavila je 11. veljaèe 2010. u knjižari „Selexyz Verwijs“ u Haagu nizozemski prijevod svojeg romana „Sonnenschein“ (Zagreb 2007), nagraðenog u Hrvatskoj nagradama „Kiklop“ i „Fran Galoviæ“. Roman govori o stradanjima židovske obitelji Tedeschi iz pograniènog grada Gorici/Goriziji na slovensko/talijanskoj granici. Objavila ga je izdavaèka kuæa „De Geus“ iz Brede, u prijevodu slavista Guida Snela. O autorici i knjizi govorile su Ilonka Reintjes, urednica u „De Geusu“, i Mirjana Stanèiæ, savjetnica. Daša Drndiæ, koja veæ 30-tak god. objavljuje drame, prozu i prijevode iz engleske i amerièke književnosti, èitala je odlomke iz romana na engleskom i hrv. jeziku. Kao gošæa Nizozemske zaklade za književnost književnica boravi mjesec dana u Nizozemskoj kao „writer in residence“.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>VATIKAN,<br>12. veljaèe 2010.</b><br>
+											Veleposlanstvo RH pri Sv. Stolici
+										</td>
+										<td valign="TOP" width="75%"><b>PORUKE IZ VATIKANSKOG DNEVNIKA U POVODU OBILJEŽAVANJA 50. OBLJETNICE SMRTI KARD. STEPINCA</b>
+											<p align="justify">
+												Vatikanski dnevnik „L'Osservatore Romano“ od 12. veljaèe 2010. objavljuje èlanak „Pogled Boga mijenja ljudsku perspektivu“. Èlanak prenosi najvažnije poruke s mise održane 10. veljaèe 2010. u povodu obilježavanja 50. obljetnice smrti kard. Stepinca održane u crkvi sv. Jeronima u Rimu. Na misi su bili prisutni vlp Emilio Marin, vlpa BiH Jasna Krivošiæ Prpiæ, vlp CG Antun Sbutega i vlp Austrije Marin Bolldorf, te drugi èlanovi dipl. zbora, ugledni Hrvati koji žive u Rimu i brojni hodoèasnici; prije svega iz Gospiæko-senjske biskupije. Misu je predvodio kard. William Joseph Levada, prefekt Kongregacije za nauk vjere, a koncelebrirali su, izmeðu ostalih, nadbiskupi N. Eteroviæ, P. Rajiæ i L. De Magistris, te biskup Gospiæko-senjski mgr. M. Begoviæ, koji je bio na hodoèašæu u Rimu s 400 mladih. „Stepinac“, rekao je u svojoj propovijedi kard. Levada „nije nikada mogao nositi kardinalska obilježja, ali je zato u zatvoru živio ono što ona znaèe i oznaèavaju, ostajuæi vjeran sve do istjecanja svoje krvi i žrtvovanja vlastitog života za jedinstvo crkve u Hrvatskoj sa sljedbenikom Petra“. „Bio je èovjek koji je volio pravdu“, nastavio je kardinal Levada:“..ne pokleknuvši… Tajna za Stepinca je kao i za svakog kršæanina u sposobnosti mijenjanja perspektive, oslobaðajuæi se kratkovidnih ljudskih prosudbi i stjeèuæi pogled Boga.“ Kard. Levada je naveo bl. Stepinca i kao primjer u Godini sveæenika, prisjeæajuæi se tisuæa pisama potpore napisanih Stepincu i poslanih u tajnosti. „Mogao se spasiti odabiruæi život u inozemstvu, ali nije htio ostaviti svoj narod. Njegovo prisustvo, pa makar i kao zatoèenika, bilo je znak nade i istine za sve. Znak, koji takoðer i 50 godina nakon njegove smrti nastavlja živjeti u Hrvatskoj i ne samo kao svjedoèanstvo, veæ i dalje imajuæi utjecaj na sve koje mu dolaze odati poèast i mole na njegovu grobu“, zakljuèio je kard. Levada.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>LJUBLJANA,<br>12. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Ljubljana
+										</td>
+										<td valign="TOP" width="75%"><b>PREDSTAVLJEN TEMATSKI ÈASOPIS „PILAR“ O HRVATSKO-SLOVENSKIM ODNOSIMA NA PRIJELOMU 19. I 20 ST.</b>
+											<p align="justify">
+												U Slovenskoj akademiji znanosti i umjetnosti u Ljubljani, 12. veljaèe 2010. predstavljen je zajednièki slovensko-hrvatski broj èasopisa „Pilar“, posveæen istraživanju bilateralnih odnosa na prijelomu 19. i 20 st. Tematski broj predstavili su direktor Znanstveno-istraživaèkog centra SAZU dr. O. Luthar, ravnatelj Instituta Ivo Pilar dr. V. Šakiæ te urednici broja dr. Z. Matijeviæ i dr. A. Rahten. Osim brojnih slovenskih znanstvenika, predstavljanju je prisustvovao i veleposlanik dr. Svjetlan Berkoviæ. Kako je istaknuto na promociji, posljednjih godina je pojaèano zanimanje povjesnièara za slovensko-hrvatske odnose te je ovaj tematski broj pokušaj da se rezultati istraživanja prezentiraju u jednoj znanstvenoj publikaciji. Tematski broj je rezultat suradnje Znanstveno-istraživaèkog centra SAZU, Instituta društvenih znanosti Ivo Pilar, te Hrvatskog instituta za povijest u Zagrebu, tako da je veæina autora tematskog èasopisa iz spomenutih znanstvenih institucija. Predmet istraživanja je zajednièka prošlost u doba Austro-Ugarske Monarhije i Kraljevine SHS. Posebna dinamika u razvoju slovensko-hrvatskih odnosa postojala je od „doba zdravica“, u kojima je Ivan Tavèar Slovence proglašavao „planinskim Hrvatima“, preko zbližavanja na katolièkoj osnovi i razvoja Hrvatskog katolièkog pokreta, pa sve do utemeljenja Hrvatsko-slovenske stranke prava. Nepovoljan položaj u monarhiji približavao je hrvatske i slovenske politièare koji su savezništvom nastojali ostvariti pojedinaène, ali i zajednièke interese dvaju naroda. Proturjeènosti hrvatsko-slovenskih odnosa u Kraljevini SHS, teme su nekih objavljenih rasprava. Kako je istaknuo dr. Rahten, veze izmeðu Slovenaca i Hrvata bile su na prijelomu 19. i 20. st. „jaèe nego što si danas možemo zamisliti“.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>ST. GALLEN,<br>12. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Bern
+										</td>
+										<td valign="TOP" width="75%"><b>NASTUP HTZ-a NA 21. MEÐ. TURISTIÈKOM SAJMU U ST. GALLENU</b>
+											<p align="justify">
+												U St. Gallenu, od 12.-14. veljaèe o.g. na 21. með. turistièkom sajmu brojnim posjetiteljima iz Švicarske i iz obližnje Njemaèke predstavilo se oko 450 izlagaèa, koji su jednoglasno izrazili zanimanje za poveæanim rezervacijama u odnosu na prethodnu godinu. Hrvatski štand je, kao i na sajmovima u Bernu, Ženevi i Zürichu, bio izuzetno dobro posjeæen, a u subotu 13. veljaèe održana je i posebna prezentacija hrv. turistièke ponude èemu su pribivali vlp Jakša Muljaèiæ i Tamara Tafra, II. tajnica. Brojnim posjetiteljima sajma gða. Nevenka Fuchs, dir. Ureda HTZ-a u Zürichu predstavila je vrlo detaljno Hrvatsku, upoznavši ih sa svim regijama. Osim turistièke ponude i prometne infrastrukture, gða Fuchs pokazala je i strukturu ulaganja u turizam gdje se investiralo proteklih godina unatoè krizi. Na kraju je prikazan i nagraðivani promotivni film Z. Ogreste „Hrvatska - Mediteran kakav je nekad bio“. Ovaj sajam bio je posljednji u nizu turistièkih sajmova ove sezone u Švicarskoj.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>LONDON,<br>12. veljaèe 2010.</b><br>
+											Veleposlanstvo RH London
+										</td>
+										<td valign="TOP" width="75%"><b>PREDSTAVLJANJE OTOKA KRKA U LONDONU</b>
+											<p align="justify">
+												Baština, suvremeni dizajn i prirodne ljepote otoka Krka bile su teme kulturne veèeri koju je 12. veljaèe 2010. u galeriji VRH predstavio veleposlanik dr. Ivica Tomiæ. Otvorena je izložba "Gold and Silver Dots-Zlatne i srebrne toèke - vizualizacija puèke glazbe otoka Krka". Kritièar Maroje Mrduljaš iz Zagreba govorio je o konceptu izložbe i o autorima S. Barbiš i M. Depicolzuaneu, apsolventima na Arhitektonskom i Grafièkom fakultetu u Zagrebu. Koristeæi fotografije karakteristiènih motiva otoka Krka uz transkripciju glazbenih motiva i tekstove napjeva, mladi grafièki dizajneri postigli su sklad izmeðu tradicije i suvremenog oblikovanja. Puèku glazbu otoka Krka, koja je zaštiæena kao nematerijalna kulturna baština na popisu UNESCO-a predstavili su sviraèi sopela, a u vokalnoj izvedbi djevojke u narodnoj nošnji. Predstavnici turistièke zajednice otoka Krka održali su predavanje ilustrirano projekcijama o osnovnim obilježjima otoka, o turistièkoj ponudi Krka kao otoka bogate kulturne tradicije i prirodnih ljepota. Brojnim posjetiteljima meðu kojima su bili povjesnièari umjetnosti, kustosi muzeja, sveuè. profesori i predstavnici hrvatskih i britanskih tvrtki i turistièkih udruga, podijeljeni su katalozi izložbe i promotivni materijali turistièke zajednice. Posjetitelji su se dugo zadržali u razgovoru s gostima iz Krka koji su pripremili domjenak. Uz VRH, organizatori su bili TZ Krk i Centar za kulturu Grada Krka. Sponzori izložbe i glazbenog dijela veèeri bili su MK RH i brojne turistièke i kulturne institucije. Informacije o izložbi i katalog nalaze se na web stranici: http://goldandsilverdots.studio8585.com
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>TOKYO,<br>12. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Tokyo
+										</td>
+										<td valign="TOP" width="75%"><b>VELEPOSLANIK DR. D. ŠTAMBUK UGOSTIO J. ISHIGAMIJA, PROGLAŠENOG NAJBOLJIM ARHITEKTOM JAPANA 2009.</b>
+											<p align="justify">
+												<img src="/images/03-info-servis/bilteni/3619.jpg" align="right">Veleposlanik dr. Drago Štambuk ugostio je 12. veljaèe 2010. Junyu Ishigamija, proglašenog najboljim arhitektom Japana prošle godine. Veleposlanik ga je zainteresirao za ruševine u Selcima na otoku Braèu koje je Ishigami razgledao prošle godine za vrijeme svojega boravka u RH na danima Orisa. Istaknuti japanski arhitekt trenutno priprema knjigu za uglednog londonskoga izdavaèa u kojoj æe fotografije i nacrti braèkih ruševina imati zasebno mjesto, a s idejom o izdvojenoj poziciji ruina izmeðu arhitekture i krajobraza, te poimanja ruševina kao valjanoga i društveno korisnoga resursa. Raspravili su i moguænost održavanja ljetne radionice, na temu ruševina, japanskih i hrvatskih arhitekata /studenata u Hrvatskoj u dogledno vrijeme.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>PEÈUH,<br>12. veljaèe 2010.</b><br>
+											Generalni konzulat RH Peèuh
+										</td>
+										<td valign="TOP" width="75%"><b>MATURANTI GIMNAZIJE „MIROSLAV KRLEŽA“ U PEÈUHU</b>
+											<p align="justify">
+												Tradicionalno, u veljaèi, HOC „Miroslav Krleža“ organizira sveèanost predaje maturalnih vrpci generaciji maturanata koji æe te šk. godine polagati ispit zrelosti. U nazoènosti profesora, roditelja, prijatelja, predstavnika hrv. manjinskih samouprava i institucija, predstavnika hrv. medija, predsjednika Hrvatske državne samouprave Miše Heppa, te djelatnica GK RH, gk Ljiljane Pancirov i konzulice za kulturu, znanost i obrazovanje Katje Bakija, uèenici 11. razr. gimnazije „Miroslav Krleža“ izveli su 12. veljaèe 2010. u èast svojih kolega, 22 maturanata, prigodan program uz kazivanje poezije hrv. pjesnika A. Šenoe i uz prigodne plesne koreografije koje je s njima uvježbao plesni pedagog A. Tarnóczi. Uèenicima i svim gostima u prepunoj auli peèuške gimn. obratio se ravnatelj Hrvatsko-maðarskog obrazovnog centra prof. Gabor Györvári istaknuvši da od svojih uèenika oèekuje kako æe svojim znanjem u buduænosti doprinijeti životu i dobrobiti hrv. zajednice u Peèuhu i RM: “Vi ste danas postali uzorom svih ostalih gimnazijalaca, i obvezali se da æete ovu zadnju dionicu iskoristiti za ozbiljnu pripremu, za svjesno planiranje svoga životnog puta.“ Po ustaljenoj višedesetljetnoj tradiciji, gk Lj. Pancirov svakom maturantu uruèila je poklon knjigu i rekla: „Vjerujem da prepoznajete da vaš život u jednoj domovini i svijest o drugoj, onoj u vašim stoljetnim genima, predstavlja nenaplativu prednost. Budite istovremeno aktivni i vrijedni èlanovi hrv. zajednice na ovim prostorima. Ona je opstala kroz stoljeæa, vi ste njena buduænost. .. Uskoro æete svojim znanjem najmanje dva jezika -.. imati moguænost pohvaliti se da govorite najmanje dva jezika europske zajednice… Krleža, èije ime nosi vaša škola, maturirao je upravo u Peèuhu prije 100 godina.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>MISSSISSAUGA,<br>12. veljaèe 2010.</b><br>
+											Generalni konzulat RH Misssissauga
+										</td>
+										<td valign="TOP" width="75%"><b>POSJET ZAGREBAÈKOG NADBISKUPA KARDINALA J. BOZANIÆA MISSISSAUGI</b>
+											<p align="justify">
+												U povodu 30. obljetnice gradnje i blagoslova crkve Hrvatskih muèenika, te blagdana Bl. Alojzija Stepinca, hrv. muèenika i jednog od zaštitnika ove župe, uzoriti kard. Josip Bozaniæ posjetio je Mississaugu. Tisuæe vjernika, èlanova hrv. zajednice, poè. kanadskih uzvanika, kao i posebnih gostiju iz RH prisustvovalo brojnim dogaðanjima. Veèer 12. veljaèe 2010. u prepunoj dvorani "Living Arts Centrea" preko 1200 posjetitelja uživalo je u sveèanom koncertu jedinstvenog Tamburaškog orkestra HRT pod vodstvom Siniše Leopolda, u glasu jednog od najboljih hrv. solista, Ðanija Stipanièeva. Slavlje župe nastavljeno je u subotu 13. veljaèe sveèanom veèerom i posebnim programom u "Pearson Convention Centreu", koje je svojim prisustvom uvelièao zagrebaèki nadbiskup kard. J. Bozaniæ, predstavnici Torontske nadbiskupije, predstavnici kanadske Vlade, kao i dipl. predstavnici RH. Nakon molitve i veèere govore su održali: župnik I. Reparinac kao domaæin, uzoriti kardinal, vlè. I. Kecerin, vlè. I. Vukšiæ, te s. A. Radan. Goste su zatim zabavili Tamburaši i solist Ð. Stipanièev, a potom je uslijedio i drugi dio govora. Veselje i èast bilo je èuti gradonaèelnicu grada Mississauge gðu. Hazel McCallion koja je sve nadahnula svojim govorom, èime je posvjedoèila koliko dobro poznaje Hrvate svoga kraja. Prisutne su pozdravili i B. Dechert, predstavnik kanadske Vlade, ministar rada P. Fonseca, a naposljetku prigodne su govore održali vlp u Vesela Mrðen Koraæ i gk Ljubinko Matešiæ. 
+<br>Sv. misu u župi Hrvatskih muèenika u Mississaugi, 14. veljaèe 2010. i to u èast našeg Bl. A. Stepinca predvodio je kard. J. Bozaniæ. GK RH organizirao je oproštajni ruèak za kard. Bozaniæa u srijedu 17. veljaèe, na kojem su prisustvovali sveæenici svih naših župa i djelatnici konzulata. Prigodnim rijeèima zahvale za ovaj znaèajan susret gostima se obratio domaæin skupa, gk Matešiæ koji je kardinalu Bozaniæu uruèio skroman dar na sjeæanje na posjet Kanadi. Na ruèku su nazoèili svi sveæenici hrv. župa južnoga Ontaria, gk Lj. Matešiæ i supruga Roberta i svi djelatnici konzulata.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>LJUBUŠKI,<br>13. veljaèe 2010.</b><br>
+											Generalni konzulat RH Mostar
+										</td>
+										<td valign="TOP" width="75%"><b>PREDSTAVLJAN ZBORNIK ZNANSTVENOG SKUPA „ULOGA HRVATA U HERCEGOVAÈKOM USTANKU“</b>
+											<p align="justify">
+												U Ljubuškom je 13. veljaèe 2010. u organizaciji udruge „Vojvoda don Ivan Musiæ“ održano predstavljanje zbornika radova sa znanstvenog skupa „Uloga Hrvata u Hercegovaèkom ustanku (1875-1878)“. Taj je znanstveni skup održan u prosincu 2008. Zbornik sadrži radove 14 znanstvenika iz Hrvatske, BiH, Crne Gore i Japana. Zbornik bi trebao pridonijeti rasvjetljavanju uloge Hrvata u Hercegovaèkom ustanku, kao i ulogu njihovog voðe u tom ustanku don Ivana Musiæa. Dogaðaju, koji je privukao veliku pozornost uz ostale bio je nazoèan i gk Velimir Pleša, kojem je opetovano izražena zahvalnost i zamolba da istu prenese Vladi RH za pomoæ pri organizaciji znanstvenoga skupa, kojeg se rezultati i radovi u ovom zborniku objavljuju.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>VATIKAN,<br>14. veljaèe 2010.</b><br>
+											Veleposlanstvo RH pri Sv. Stolici
+										</td>
+										<td valign="TOP" width="75%"><b>NADBISKUP N. ETEROVIÆ PREDVODIO SVEÈANU MISU U ÈAST SV. ÆIRILU I METODIJI</b>
+											<p align="justify">
+												Dana 14. veljaèe na blagdan solunske braæe svetih Æirila i Metodija, slavenskih apostola i zaštitnika Europe, slavljena je sveèana veèernja misa u bazilici Sv. Klementa u Rimu, u kojoj se nalaze i posmrtni ostatci sv. Æirila. Svake godine o tom blagdanu Papinski rimski zavodi (hrvatski, èeški, slovaèki, slovenski) zajednièki slave misu; o.g. pripreme i samo slavlje organizirao je Papinski hrvatski zavod sv. Jeronima. Misu je predvodio gl. tajnik Biskupske sinode u Rimu nadbiskup Nikola Eteroviæ, a koncelebrirali su, izmeðu ostalih, novoimenovani apostolski nuncij u Kuvajtu, Bahreinu i Kataru te apostolski delegat na Arapskom poluotoku nadbiskup P. Rajiæ, mons. H. Mieczyslaw Jagodzinski iz Državnog tajništva Sv. Stolice, zadužen za države bivše Jugoslavije i Albaniju, rektor Papinskog hrvatskog zavoda sv. Jeronima mons. J. Bogdan, te 70-tak sveæenika. Meðu brojnim èlanovima dipl. zbora misi su prisustvovali i vlp Emilio Marin i gen. konzul RH u Milanu Ðani Maršan. Dnevnik „L'Osservatore Romano“ izvješæuje o misi u broju od 16. veljaèe 2010. u èlanku „Nadbiskup Eteroviæ se prisjeæa svjedoèanstva Æirila i Metodija“. U èlanku se navodi da su slavenske države naèete procesom sekularizacije koji može biti zaustavljen samo novom misijom, istog stila i sadržaja poput one koju su prije 1200 g. predvodili Æiril i Metodije u Istoènoj i Centralnoj Europi. Nadb. Eteroviæ je u svojoj propovijedi posebno pozdravio postavljanje nadbiskupa Rajiæa za apostolskog nuncija u Kuvajtu, Bahreinu i Kataru te apost. delegata na Arapskom poluotoku, koji „sljedeæi primjer sv Æirila ide na misiju na arapski poluotok“. Nadb. Eteroviæ se u svojoj propovijedi obratio i brojnim slavenskim sveæenicima koji studiraju u Rimu i pozvao ih „da postanu, što je prije moguæe, misionari u zemljama iz kojih dolaze i širitelji nove evangelizacije ..“. Glede Æirila i Metodija nadb. Eteroviæ je ustvrdio kako je njihovo djelovanje znaèajno na našim slavenskim prostorima zbog pokrštavanja te uvoðenja slavenskog jezika u liturgiju, tiskanja knjiga i bogaæenja kulturne baštine. Misa je završila procesijom sa svijeæama i molitvom na grobu sv. Æirila, nakon èega je uslijedio zajednièki domjenak u atriju dominikanskog samostana.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>MOSTAR,<br>14. veljaèe 2010.</b><br>
+											Generalni konzulat RH Mostar
+										</td>
+										<td valign="TOP" width="75%"><b>OBILJEŽENA 65. OBLJETNICA UBOJSTVA SEDMORICE MOSTARSKIH FRANJEVACA</b>
+											<p align="justify">
+												U prepunoj franjevaèkoj crkvi sv. Petra i Pavla u Mostaru misnim je slavljem, u nedjelju 14. veljaèe 2010. obilježena 65 obljetnica stradavanja sedmorice mostarskih franjevaca. Znaèaj obilježavanja ovih obljetnica u Hercegovini je naroèito velik, pa je tako sa strane provincije pokrenut postupak kauze muèenika „Fra Leo Petroviæ i 65 subraæe“ (jer je tijekom i na samom kraju II svj. rata ovaj kraj ostao bez 66 ubijenih franjevaca) koji ima za cilj prikupiti što više èvrstih dokaza o muèenièkoj smrti sveæenika kako bi se mogao pokrenuti postupak proglašenja sveæenika blaženima i svetima. Misno je slavlje uz koncelebraciju brojnih sveæenika predvodio provincijal Hercegovaèke franjevaèke provincije dr. fra Ivan Sesar. Misi i kasnije promociji knjige nakladnièkog niza Recipe, Franjevaèke knjižnice Mostar, nazoèio je i gk Velimir Pleša.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>PEÈUH,<br>15. veljaèe 2010.</b><br>
+											Generalni konzulat RH Peèuh
+										</td>
+										<td valign="TOP" width="75%"><b>PROMOCIJA KNJIGE „POD MASKOM“ ETNOGRAFKINJE T. MINORICS</b>
+											<p align="justify">
+												<img src="/images/03-info-servis/bilteni/3625.jpg" align="right">U organizaciji Grada Peèuha, Kulturne udruge i HK „August Šenoa“ u Peèuhu je 15. veljaèe 2010. u prostorijama kluba održana promocija knjige „Pod maskom“ etnografkinje Tünde Minorics. Bogato ilustrirano trojezièno izdanje (mað.-engl.-hrv.) rezultat je preciznog znanstvenog istraživanja i terenskog rada s fotoaparatom u ruci. Mohaèanka T. Minorics u svoju je knjigu uložila 8 god. predanog rada, a rezultat je vrijedna i atraktivnim fotografijama opremljena knjiga koja svjedoèi o bogatoj riznici kulturne baštine jedne etnièke skupine Hrvata koji žive u Maðarskoj - Šokaca, a koje je etnièki raznoliko stanovništvo Mohaèa prihvatilo kao svoju. Drevni obièaj mohaèkih Hrvata Šokaca opstao je stoljeæima kroz sve povijesne mijene i zabrane i postao zaštitni znakom Mohaèa. Knjiga T. Minorics nudi uvid u tradiciju opisujuæi snagu pokladnog narodnog obièaja koji je stoljeæima oblikovao zajednicu. Knjiga se bavi temom ritualne uloge buša, uz htijenje da se razumije ritualni svijet ophoda buša. Maska i odjeæa koju nose buše ima arhaièna znaèenja, simboliziraju strah od onoga što je èovjeka stoljeæima zaokupljalo i plašilo - strah od smrti, a i kolektivni strah od zime. Sva dogaðanja vezana uz „mohaèki pohod buša“ o. g. prate se s velikom pozornosti jer je 30. rujnu 2009. na svojoj sjednici u Abu Dabiu UNESCO ovaj drevni pokladni obièaj stavio na Reprezentativni popis nematerijalne kulturne baštine èovjeèanstva èime je na svjetskoj razini dana podrška važnosti oèuvanja kulture manjina i jaèanju uloge tradicijskih kultura te je još jedan poticaj RM da svoju maðarsku kulturu, ali i kulturu manjinskih zajednica na odgovarajuæi naèin priznaje i èuva. Promociji koja se odvijala na hrvatskom i maðarskom jeziku nazoèila je i dr. Katalin Szili, bivša premijerka i predsjednica Foruma nacionalnih i etnièkih manjina u RM, predsj. Hrvatske državne samouprave Mišo Hepp, gk Ljiljana Pancirov i mr. sc. Katja Bakija, konzulica za kulturu, znanost i obrazovanje.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>STUTTGART,<br>15. veljaèe 2010.</b><br>
+											Generalni konzulat RH Stuttgart
+										</td>
+										<td valign="TOP" width="75%"><b>8. GODIŠNJI SASTANAK S VODITELJIMA HRVATSKIH KATOLIÈKIH ZAJEDNICA I HRVATSKIM SVEÆENICIMA</b>
+											<p align="justify">
+												Na poziv gk Ante Cicvariæa 15. veljaèe 2010. u prostorijama Konzulata održan je 8. sastanak s voditeljima Hrvatskih katolièkih zajednica i hrvatskim sveæenicima na njemaèkim katolièkim župama u saveznoj pokrajini Baden-Wiirttemberg, kojom prigodom je rezimirana zajednièka prošlogodišnja suradnja GK RH i HKZ-a na promicanju kulture i jezika te oèuvanju nacionalnog i vjerskog identiteta Hrvata u ovoj saveznoj državi. Najavljene su i brojne aktivnosti i za ovu godinu. Pozdravljajuæi nazoène, g. Cicvariæ je izrazio zahvalnost u nedavnoj pomoæi vezano za održavanje predsjednièkih izbora u GK RH. Kazao je da se GK RH rado odaziva svim misijskim aktivnostima. G. Cicvariæ je izvijestio i o prošlogodišnjem radu Konzulata, ilustrirajuæi to podatkom da je Konzulat imao oko 16 tisuæa stranaka. Istaknuo je i brojna kulturna dogaðanja koja organizira Konzulat ili na njima sudjeluje. GK RH Stuttgart jedan je od najveæih DKP-a u dipl. mreži RH; na podruèju koje Konzulat pokriva trajno boravi 100 tisuæa hrv. državljana. Osvrnuo se na rad mješovite komisije BW-RH koja promièe gospodarske, kulturne i znanstvene interese te veliku potporu vlade BW u tim nastojanjima. Mirjana Božiæ, konzulica savjetnica je istaknula nekoliko projekata na kojem Konzulat trenutaèno radi, izdvajajuæi predstojeæe kulturno ljeto u Fellbachu, na kojem uz RH, sudjeluje i Austrija, kao zemlja domaæin. Naglasila je i potporu Konzulata u održavanju hrv. dopunske nastave, kao i prošlogodišnje otvaranje Centra hrvatske nastave u Stuttgartu. Konzulat se brine za osiguravanje školskih prostorija, za oko 2500 tisuæe djece polaznika hrv. nastave, što èini gotovo 70% svih polaznika u SRNJ. Takoðer, zamolila je sveæenike da meðu našim ljudima promièu potrebu održavanja hrv. nastave medu djecom. U diskusiji sveæenici su ukazivali na pojedine probleme s kojima se susreæu naši ljudi u iseljeništvu, ali i oni osobno. Susret je završen blagoslovom prostorija i djelatnika GK RH kojeg je obavio fra Jure Zebiæ te prigodnim domjenkom.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>MÜNCHEN,<br>15. veljaèe 2010.</b><br>
+											Generalni konzulat RH München
+										</td>
+										<td valign="TOP" width="75%"><b>INTERDISCIPLINARNI MEÐ. PROJEKT "PAUSE MACHEN GILT NICHT" („BEZ PAUZE, MOLIM!“)</b>
+											<p align="justify">
+												Interdisciplinarni með. projekt „Pause machen gilt nicht“(„Bez pauze, molim!“), koji je od 15.-20. veljaèe 2010. održan u prostorima Galerije za suvremenu umjetnost Platform3 u Münchenu osmislila je Petra Vidoviæ, stipendistica Zaklade Robert Bosch, u suradnji s Platform3 i GK RH. Program je obuhvatio radionicu crtanoga filma za djecu i mladež, izbor animiranih filmova iz 35-godišnje produkcije filmova Škole animiranog filma (ŠAF) iz Èakovca, izbor með. animiranih filmova s festivala 25 FPS iz Zagreba, te glazbu zagrebaèkih Cinkuša koja je zabavila oko stotinu posjetitelja, uglavnom njemaèkih gostiju. Radionica crtanoga filma koja je trajala tjedan dana pobudila je veliko zanimanje djece i mladih pa organizatori nisu mogli primiti sve zainteresirane. Pod vodstvom Ede Lukmana i Jasminke Bijeliæ Ljubiæ, predstavnika ŠAF iz Èakovca, polaznici ateljea upoznali su se s osnovama animacije i izradili vlastite filmove. Polaznike i voditelje radionice 18. veljaèe 2010. posjetila je Sanja Süto, konzulica. Završnu veèer 20. veljaèe otvorio je gk Vladimir Duvnjak, naglasivši kako je rijeè o projektu koji na najbolji naèin, kroz stvaranje i prezentaciju anim. filma povezuje hrvatske i njemaèke autore. Posebice likovna umjetnost, koja je najprisutnija u mediju animiranoga filma, najlakše nadilazi granice država i jezika i izravno povezuje i stvaratelje i promatraèe toga umjetnièkog èina. Stvaranje anim. filma kroz radionicu bilo je ponuðeno djeci i mladima, koji su tako bili u prilici svoje školske praznike provesti uz kvalitetan sadržaj. Nakon dodjele diploma polaznicima radionice, prikazani su njihovi crtani filmovi, a potom izbor iz produkcije ŠAF-a Èakovec. Po izboru selektorice með. festivala animiranog filma 25 FPS iz Zagreba, Sanje Grbin, prikazano je 9 anim. filmova autora iz cijeloga svijeta. U predvorju su tijekom cijeloga tjedna, kao i završne veèeri, projicirani filmovi hrv. autora N. Dragiæa te animatora A. Determayera, W. Stehlea i S. Unruh.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>BAJA,<br>17. veljaèe 2010.</b><br>
+											Generalni konzulat RH Peèuh
+										</td>
+										<td valign="TOP" width="75%"><b>IZLOŽBA „SUVREMENI HRVATSKI NAKIT“</b>
+											<p align="justify">
+												<img src="/images/03-info-servis/bilteni/3628.jpg" align="right">U organizaciji Grada Baja, Hrvatske manjinske samouprave i GK RH, u Baji je od 17.-27. veljaèe o.g. u Gradskom muzeju Istvána Türra otvorena izložba „Suvremeni hrvatski nakit“. Voditeljica Muzeja Z. Merk pozdravila je izrazivši zadovoljstvo velikim brojem uzvanika i vrlo dobrom suradnjom koja otvara nove moguænosti zajednièkih projekata. Otvorenje izložbe svojim nastupom obilježile su èlanice Kulturne udruge „Bunjevaèka zlatna grana“ uz pratnju Orkestra „Èabar“ iz Baje. Gostima na hrv. jeziku obratio se gradonaèelnik Baje Zoltán Révfy koji je pozdravio sve okupljene, a posebno gk Ljiljanu Pancirov i predsj. Hrvatske državne samouprave Mišu Heppa te naglasio kako je ovo prigoda u kojoj se u jednom izložbenom prostoru susreæu stari bunjevaèki nakit i nakit suvremenih hrv. autora što svjedoèi o neprolaznoj ljepoti vrijednog nakita. Istaknuo je kako je ova izložba most koji u vremenu i prostoru povezuje višestoljetnu djedovinu bunjevaèkih Hrvata na ovim prostorima s matiènom domovinom Hrvatskom, a ujedno ona povezuje i kulture dvaju naroda unutar Maðarske jer dolazi iz Peèuha koji je europska prijestolnica kulture 2010. Izložbu je otvorila gk Lj. Pancirov koja je zahvalila domaæinima, gradonaèelniku, gradu Baji i Gradskom muzeju, MK RH, kao i A. Šokac Markoviæ, predsj. Baèkog ogranka Saveza Hrvata i Katji Bakija, konzulici za kulturu. Gða. Pancirov je rekla: „Suvremeni hrvatski nakit je zapravo moderni izrièaj vrhunskih autora, prepoznatih u zemlji i inozemstvu, temeljen na dugoj i bogatoj umjetnièkoj tradiciji izrade nakita u Hrvatskoj. Svaki od 16 autora izlagao je i zasebno. Okupljanjem u jedan izložbeni sadržaj i zajednièki nastup, željelo se pokazati da je i izrada nakita umjetnièka djelatnost koja udovoljava svim traženim kriterijima umjetnièkog djela...“ Nakon zatvaranja izložba seli u Békéscabu gdje 26. veljaèe poèinje Tjedan hrvatske kulture, a potom u Suboticu.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>DONJA LASTVA,<br>18. veljaèe 2010.</b><br>
+											Generalni konzulat RH Kotor
+										</td>
+										<td valign="TOP" width="75%"><b>PROMOCIJA UMJETNIÈKOG KALENDARA</b>
+											<p align="justify">
+												U sklopu obilježavanja 600. godišnjice posveæenja crkve Roðenja Bl. Djevice Marije u Gornjoj Lastvi, župni ured Donja Lastva i Kulturno-zavièajno društvo „Napredak“ promovirali su 18. veljaèe 2010. umjetnièki kalendar i pokrenuli akciju prikupljana dobrovoljnih priloga za obnovu crkve i Župnog doma u G. Lastvi kod Tivta. Župna crkva u G. Lastvi, jedna je od najljepših seoskih crkava u Boki s glavnim oltarom od raznobojnog mramora koji je sredinom 19. st. kupljen od Peraštana i sa svetišta Gospe od Škrpjela prenesen u G. Lastvu. Crkva veæ desetljeæima nije obnavljana, èak ni nakon velikog potresa 1979. Pozdravljajuæi okupljene na promociji kalendara u galeriji „MarMar“ u D. Lastvi, župnik don Dejan Turza je istaknuo: „.. nekih 24-25 generacija predaka ovih ljudi je prošlo od trenutka kada je crkva u Gornjoj Lastvi posveæena. Crkva je u središtu sela, zavjetni je križ u centru crkve, što svjedoèi da je tim ljudima crkva bila na prvom mjestu. Upravo zato što im je Bog bio na prvom mjestu, ti su ljudi mogli preživjeti i stvoriti veliku duhovnu, kulturnu i materijalnu baštinu“. Proslava 600. godišnjice crkve Roðenja Bl. Djevice Marije u G. Lastvi, nastavit æe brojnim vjerskim, znanstvenim i kulturnim skupovima tijekom èitave godine, a završna svetkovina bit æe na blagdan Male Gospe, 8.rujnu u G. Lastvi. Promociji kalendara bili su nazoèni i dopredsjednik opæine Tivat Ilija Janoviæ, predsjednik KZD „Napredak“ Zoran Nikoliæš, te gk Božo Vodopija i konzul I. razr. Radojko Nižiæ.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>BRUXELLES,<br>19. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Bruxelles
+										</td>
+										<td valign="TOP" width="75%"><b>U VELEPOSLANSTVU KNJIŽEVNA VEÈER S V. KRMPOTIÆ</b>
+											<p align="justify">
+												Književna veèer na kojoj se predstavila Vesna Krmpotiæ organizirana je 19. veljaèe 2010. u veleposlanstvu. Dogaðaju su prisustvovali Hrvati koji žive u Belgiji, èlanovi dipl. misija RH, dipl. zbor zemalja iz regije i hrv. novinari akreditirani u Belgiji. Vesna Krmpotiæ, jedna je od naših najnagraðivanijih suvremenih književnica (nagrada HAZU 2006 za životno djelo, prije dva dana predložena za Nobelovu nagradu) koju karakterizira iznimna lakoæa pisanja. Sama za sebe kaže da ona „ne piše“, nego da „zapisuje“ i sebe doživljava samo kao „olovku“. Okušala se i bila uspješna u svim književnim žanrovima, od poezije do proze i drame, a njena posljednja zbirka poezije 108X108, najveæa je zbirka poezije na svijetu. Roman „Brdo iznad oblaka“, vjerojatno je jedan od najèudesnijih i najtužnijih romana hrv. suvremene proze, za koju veæina èitatelja misli da je fikcija. Autorica je potvrdila da „sve u romanu jest istina“ i da ju èesto pitaju radi li se uistinu o autobiografiji. V. Krmpotiæ je èitala svoje stihove, prièala o svom bogatom stvaralaèkom životu i odgovarala na pitanja publike, a druženje s književnicom se nastavilo uz prigodni domjenak.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>BEÈ,<br>23. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Beè
+										</td>
+										<td valign="TOP" width="75%"><b>VIOLINIST A. KRPAN I PIJANISTICA N. MAJNARIÆ PREDSTAVILI ZAJEDNIÈKI CD „DOZIVI“</b>
+											<p align="justify">
+												U utorak, 23. veljaèe 2010. violinist Anðelko Krpan i pijanistica Nada Majnariæ uspješno su nastupili u sveèanoj dvorani Akademske gimnazije u Beèu i predstavili novi zajednièki CD pod nazivom „Dozivi“. Na programu su bila djela hrvatskih skladatelja koja se nalaze na novom CD-u: Prva sonata za violinu i klavir u D-duru op. 26 Dore Pejaèeviæ, Tri skladbe za violinu i glasovir, op. 28 Božidara Kunca, Fantazija za violinu i glasovir Borisa Papandopula i Narodna suita za violinu i glasovir Josipa Štolcera Slavenskog. Publika je glazbenike nagradila dugotrajnim pljeskom, a oni su izveli dodatak "Valcer" Jana Sibeliusa. CD „Dozivi“ je drugi zajednièki uradak Anðelka Krpana i Nade Majnariæ, a za prvi CD „Hrvatske sonate“ umjetnici su 2002. nagraðeni s dva „Porina“. Koncert je održan u organizaciji Matice hrvatske u Beèu i VRH, a koncertu je prisustvovala treæa tajnica Barbar Majer.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>LONDON,<br>23. veljaèe 2010.</b><br>
+											Veleposlanstvo RH London
+										</td>
+										<td valign="TOP" width="75%"><b>PREDAVANJE B. VUJÈIÆA, ZAMJENIKA GUVERNERA HNB-a U LONDONSKOM CITYJU</b>
+											<p align="justify">
+												U organizaciji Britansko-hrvatske gospodarske komore, Boris Vujèiæ, zamjenik guvernera HNB-a je 23. veljaèe 2010. u prostorima odvjetnièke kuæe INCE & Co u londonskom Cityju održao predavanje na temu „Hrvatska - kriza i posljedice“. Predavanju su nazoèili èlanovi komore i poslovni ljudi Cityja, veleposlanik dr.sc. Ivica Tomiæ i Darija Sinjeri, gospodarska savjetnica. Zamj. guvernera Vujèiæ je govorio o utjecaju financijske krize na RH i usporedbi sa zemljama EU, te obrazložio mjere koje je HNB poduzimala i još uvijek poduzima kako bi saèuvala stabilnost financijskog sustava. Sudionici skupa su se interesirali za mjere koje vlada namjerava poduzeti da bi ostvarila gospodarski rast, tehniku otvaranja poduzeæa u Hrvatskoj, moguænosti investiranja (problemi velikih investitora s lokalnom upravom) kao i mišljenja g. Vujèiæa o promjenama u fiskalnom sustavu koje bi rasteretile gospodarske subjekte i privukle ulagaèe. Kako je trenutaèno jedna od aktualnih tema u V. Britaniji euro i njegova ovisnost o stanju financija nekih èlanica EU, neka pitanja su bila vezana uz ulazak RH u Europsku monetarnu uniju i korist koju bi Hrvatska od uvoðenja eura mogla imati.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>WÜRZBURG,<br>23. veljaèe 2010.</b><br>
+											Generalni konzulat RH München
+										</td>
+										<td valign="TOP" width="75%"><b>SASTANAK GEN. KONZULA V. DUVNJAKA S GRADONAÈELNIKOM WÜRZBURGA G ROSENTHALOM I LIJEÈNIKOM PROF.DR. J. BILLOM</b>
+											<p align="justify">
+												Gen. konzul Vladimir Duvnjak i konzulica Sanja Süto sastali su se 23. veljaèe 2010. s gradonaèelnikom grada Würzburga, Georgom Rosenthalom u Starogradskoj vijeænici. Teme razgovora bile su hrv. zajednica u Würzburgu, hrv. nastava i moguænosti suradnje. Grad Würzburg je po prosjeènoj životnoj dobi stanovništva (41 g), jedan je od najmlaðih gradova u SRNJ, a prosjeku doprinosi i više od 23000 studenata. Grad u kojemu se nalazi mala hrv. zajednica, velike prihode ostvaruje u turizmu Würzburg je zahvaljujuæi dobrom smještaju i umjerenoj klimi vrlo ugodno mjesto za život. Sveuè. klinika je dobar poslodavac, na Sveuèilištu i klinici zaposleno je oko 10 000 ljudi, meðu kojima ima i Hrvata. Grad živi europski, od 1970. nosi titulu europskog grada koju mu je dodijelilo Vijeæe Europe. Gk Duvnjak zahvalio je g. Rosenthalu za veliku pomoæ koja je stizala u Hrvatsku za vrijeme Domovinskog rata. Posebno nesebièna u pomoæi bila je Barbara Stamm, predsj. Bavarskog parlamenta, koja je tada u svoj dom u Würzburgu primila izbjeglice iz RH. Gk Duvnjak predložio je suradnju sa Splitom i Splitskim sveuè. buduæi da bi prof.dr.sc. Josip Bill, koji živi i radi u W., rado bi proširio tu suradnju. Gradonaèelnik Rosenthal je napomenuo da je odluka o suradnji izmeðu sveuèilišta autonomna, ali je grad Würzburg kao jaki sveuè. centar vrlo otvoren za með. suradnju. G. Rosenthal je izrazio nadu da æe se vrlo brzo ostvariti ulazak RH u EU. Gk Duvnjak i konzulica Süto posjetili su ul. Kroatengasse u staroj gradskoj jezgri, u kojoj se nalazi zgrada s crtežom konjanika na proèelju i natpisom da su “u vrijeme tridesetogodišnjega rata ovdje bile rasporeðene hrvatske carske postrojbe”. Istoga dana sastali su se s prof.dr. J. Billom, kao i fra Paškom Manduriæem, koji veæ 26 g. vodi HKM u Würzburgu. (Dr.Bill jedan je od najuglednijih europskih struènjaka za èeljusnu kirurgiju. Aktivno suraðuje s europskim, ali i hrv. kolegama i institucijama, kao gost predavaè posjeæuje Sveuèilište u Zagrebu, a odnedavno i u Splitu.)
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>WARSAW,<br>25. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Warsaw
+										</td>
+										<td valign="TOP" width="75%"><b>PREZENTACIJU KONCERNA "AGROKOR VINA" U VELEPOSLANSTVU</b>
+											<p align="justify">
+												Dana 25. veljaèe 2010. veleposlanstvo u Varšavi organiziralo je u svojim prostorijama prezentaciju dijela koncerna "Agrokor Vina", koje objedinjuje 7-8 hrv. vinogradarskih i vinarskih tvrtki i drži oko 1/3 tržišta vina u RH. Predstavljanje je pripremljeno za ciljanu skupinu poslovnih ljudi, novinara i sajamskih djelatnika, sve istaknutih predstavnika poljske vinske scene. Osnovna svrha susreta bila je, kako je naglasio veleposlanik mr.sc. Ivan Del Vechio, razmijeniti poglede i iskustva vezano za moguænosti i naèina plasmana hrv. vina, osobito u kontekstu specifiènosti kako proizvoda tako i tržišta te èinjenice da su hrv. vina, bar zasad, iznimno skromno zastupljena u RP. Poneki vinar može se pronaæi na vinskoj listi boljih restorana i renomiranih varšavskih hotela, no, to opet više zaslugom VRH. K. Tancabel, direktorica izvoza za EU države "Agrokor Vina", predstavila je osnovnu strategiju razvoja kompanije, planove i posebne projekte (Akademije vina), a uslijedila je diskusija i komentari predstavnika iz slijedeæih tvrtki: Rabwin, MTC Plus, CEDC, M&M, Wimtec, Magazin Wino, Wine&Spirit Fair Warsaw. Takoðer, sastanku je nazoèio H. Æikoviæ, I. tajnik. U sklopu posjeta Poljskoj, a takoðer u organizaciji VLP RH, održani su sastanci sa znaèajnim tvrtkama, potencijalnim partnerima "Alma" (Krakow) i "Makro" (Varšava). Sudionici su sastanke ocijenili iznimno uspješnima, pa je s tim u vezi dogovoren plasman poèetnih, probnih kolièina u nekoliko poljskih prodavaonica i nastup na vinskom i vinogradarskom sajmu krajem svibnja u Varšavi. VRH je spremno iskoristiti mrežu kontakata te organizirati sliène susrete za sve ostale poslovne subjekte zainteresirane za prodor na poljsko tržište.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>SYDNEY,<br>25. veljaèe 2010.</b><br>
+											Generalni konzulat RH Sydney
+										</td>
+										<td valign="TOP" width="75%"><b>VEÈERA U ÈAST BRAÆE FRANOVIÆA IZ SYDNEYA</b>
+											<p align="justify">
+												Dana 25. veljaèe 2010. u klubu „Kralj Tomislav“ u Sydneyu održana je sveèana veèera u èast braæe Bože, Ivana i Marka Franoviæa, a nazoèilo joj je oko 250 ljudi. Braæa Franoviæi su uspješni poslovni poduzetnici, vlasnici i poduzeæa „BOKA-Windows“ koji su prošle godine osvojili Ethnic Business Award, nagradu koja se dodjeljuje poslovnim pojedincima, pripadnicima etnièkih skupina u Australiji koji potpomažu i svoju etnièku zajednicu.Veèera je bila povod da im hrv. zajednica iz Sydneya ali i šire èestita na toj prestižnoj nagradi i zahvali na velikim dobroèinstvima koja su napravili za zajednicu, posebice u pomoæi u izgradnji i održavanju Umirovljenièkog naselja Kardinal Alojzije Stepinac, izgradnji VRH u Canberri kao i obnovi GK RH u Sydneyu, o pomoæi hrv. katolièkim misijama u Sydneyu, o sudjelovanju u mnoštvo dobroèinstava u domovini i dr. Veèeri je nazoèio i vlp Vicencije Biuk koji je došao iz Canberre s trojicom èlanova ondašnjeg odbora za izgradnju veleposlanstva i rezidencije kao i gk Mirjana Piskuliæ.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>JAKARTA,<br>25. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Jakarta
+										</td>
+										<td valign="TOP" width="75%"><b>O LJEPOTAMA HRVATSKE U ŽENSKOM MODNOM ÈASOPISU</b>
+											<p align="justify">
+												Veleposlanstvo je 25. veljaèe 2010. zaprimilo dopis Ramide Khon Khong, direktorice tajlandske tvrtke Travel Technology Services Co. Ltd. (jedne od vodeæih putnih agencija u Tajlandu) kojim se dostavlja primjerak vodeæeg ženskog modnog èasopisa „Dichan" (366 str.) gdje je objavljen èlanak o Republici Hrvatskoj kao i njenim „aktualnim" turistièkim destinacijama zanimljivim za tajlandsko tržište (Dalmacija). Èlanak je naslovljen „Secretive Beauty of Croatia“.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>IZMIR,<br>26. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Ankara
+										</td>
+										<td valign="TOP" width="75%"><b>POÈASNA KONZULICA RH C. CORBACIOGLU PRIMILA ODLIÈJE PRH</b>
+											<p align="justify">
+												U Izmiru je 26. veljaèe 2010. poè. konzulica RH Candan Corbacioglu organizirala prijem u èast odlièja kojeg je primila od predsjednika RH. Na prijemu su sudjelovali predstavnici lokalnih vlasti - zamjenik guvernera, zamj. gradonaèelnika, novinari iz svih relevantnijih izmirskih medija, èlanovi konz. zbora, vlp Gordan Bakota, te gk Damir Perinièiæ, a meðu 300-tinjak uzvanika bili su prisutni takoðer istaknuti izmirski gospodarstvenici. Sam prijem je bio odlièna prigoda za promociju RH u treæem najveæem turskom gradu (3.5 mil. stanovnika). Gostima je na kvalitetan naèin predstavljena gospodarska, kulturna i turistièka ponuda RH. Uz poè. konzulicu, pozdravni govor održao je vlp Bakota, posebno istaknuvši znaèajne moguænosti uspješne suradnje Izmira i naših gradova, naroèito na planu gospodarstva, prometa i turizma. I ovo primanje dokaz je uspješnosti rada gðe. Corbacioglu, koja ima izniman ugled u Izmiru, te na izvanredan naèin promièe interese RH u ovome dijelu Turske.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>VILNIUS,<br>26. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Stockholm
+										</td>
+										<td valign="TOP" width="75%"><b>HRVATSKA JE PROGLAŠENA NAJPERSPEKTIVNIJOM DESTINACIJOM U 2010.</b>
+											<p align="justify">
+												Hrvatski turizam bio je u organizaciji Ureda HTZ iz Stockholma zastupljen i na sajmu turizma VIVATOUR koji je od 26. veljaèe do 1. ožujka održan u glavnom gradu Litve Vilniusu. Na otvaranju sajma, kojem je nazoèio i veæi broj èlanova litavske Vlade, od kojih su neki posjetili i naš štand te iskazali zanimanje za moguænosti obiteljskog odmora na Jadranu, Hrvatska je proglašena najperspektivnijom destinacijom u 2010. godini te je g. Dariju Matoševiæu, šefu Ureda HTZ za Skandinaviju, uruèena i posebno priznanje za tu laskavu titulu.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>LONDON,<br>26. veljaèe 2010.</b><br>
+											Veleposlanstvo RH London
+										</td>
+										<td valign="TOP" width="75%"><b>PREDAVANJE I PROMOCIJA KNJIGE O DIJAMANTIMA M. DUNDEKA U VELEPOSLANSTVU</b>
+											<p align="justify">
+												U petak, 26. veljaèe 2010. u veleposlanstvu RH Marijan Dundek održao je predavanje "The Magic World of Diamonds" i promociju svoje knjige o dijamantima. Govorio je o vrstama dijamanta, njihovoj obradi, s posebnim osvrtom na rijetke dijamante u boji. Predavanje je popratio ilustracijama svih zanimljivih primjeraka. Bili su nazoèni ravnatelji i predstavnici najznaèajnijih tvrtki i instituta koji se bave dijamantima (Gemological Institute of America, British Jewellery Association, National Association of Goldsmiths, Gemmological Association of Great Britain, Graff, De Beers), kustosi muzeja, specijalizirani novinari iz raznih publikacija i odjela za odnose s javnošæu tvrtke Graff u kojoj je zaposlen g. Dundek. Internetski magazin Jewellery Outlook www.jewelleryoutlook.com objavio je opširan tekst o predavanju. Gosp. Dundek je Hrvat koji veæ dugo živi u Londonu. On je svjetski poznat struènjak za dijamante, a njegova knjiga "Diamonds", doživjela je veæ 3. izdanje i odliène recenzije struènjaka. Posjetitelji predavanja imali su prilike razgledati izložbu o grafièkom prikazu tradicionalne glazbe otoka Krka "Gold and Silver Dots". Za veæinu je ovo bio prvi posjet VRH i prilika da se putem kataloga i brošura upoznaju s hrv. baštinom i turistièkom ponudom.
+												<br>
+										</td>
+									</tr>
+									
+									<tr  bordercolor='#F9F9F9' bgcolor='#F9F9F9' >
+										<td valign="TOP" width="25%"><b>KAWASAKI,<br>26. veljaèe 2010.</b><br>
+											Veleposlanstvo RH Tokyo
+										</td>
+										<td valign="TOP" width="75%"><b>13. DODJELA NAGRADA "TARO OKAMOTO" ZA SUVREMENU UMJETNOST</b>
+											<p align="justify">
+												<img src="/images/03-info-servis/bilteni/3640.jpg" align="right">Veleposlanik dr. Drago Štambuk boravio je 26. veljaèe 2010. na 13. dodjeli nagrada "Taro Okamoto" za suvremenu umjetnost u Muzeju koji nosi ime velikog japanskog avangardnog umjetnika, (zovu ga i ocem japanske moderne) i pritom održao prigodno slovo. Hrv. veleposlanik kazao je kako je Taro Okamoto prvenstveno spiritualno nadahnuti umjetnik, èija kreativnost proizlazi iz najtananijih sfera primordijalne ljudskosti, te stoga zaslužuje najvišu razinu pažnje i bavljenja japanske i svjetske umjetnièke javnosti. U nazoènosti gradonaèelnika grada Kawasakija, dulje od 30 god. grada prijatelja Rijeke, veleposlanik je istaknuo sestrinsku vezu navedenih gradova, te izjavio kako bi sljedeæe godine povodom obilježavanja 100. obljetnice roðenja velikog japanskog umjetnika njegova retrospektivna izložba u novootvorenom velebnom Muzeju suvremene umjetnosti u Zagrebu bila više nego dobrodošla. Izložbu koja se za sada planira u Parizu osim u Zagreb bilo bi poželjno dovesti i u Rijeku. Dr. Štambuk èestitao je nagraðenim japanskim umjetnicima i potom je s gradonaèelnikom T. Abeom i direktorom muzeja K. Murataom razgledao izložbu nagraðenih radova.
+												<br>
+										</td>
+									</tr>
+									
+									<tr   bgcolor='#FFFFFF' >
+										<td valign="TOP" width="25%"><b>MOSTAR,<br>26. veljaèe 2010.</b><br>
+											Generalni konzulat RH Mostar
+										</td>
+										<td valign="TOP" width="75%"><b>NAGRADA 'VEÈERNJAKOV PEÈAT' DODIJELJENA PREDSJEDNICI VLADE RH J. KOSOR</b>
+											<p align="justify">
+												Predsjednica Vlade RH Jadranka Kosor sudjelovala je 26. veljaèe 2010. na sveèanosti dodjele nagrada 'Veèernjakov peèat' koja je održana u Mostaru u organizaciji Veèernjeg lista BiH. Hrvatskoj predsjednici Vlade uruèena je nagrada za regionalnog lidera 2009. zbog njezinih izjava i djela, kojima uporno dokazuje da BiH ima mjesta u obitelji europskih zemalja, a da Hrvati u BiH jesu most koji spaja dvije države. Predsjednica Kosor poruèila je Hrvatima u BiH da hrv. Vlada snažno poštuje ustavnu obvezu o potpori i brizi za hrv. narod izvan domovine. „Reæi æu samo jednu reèenicu. Imajte vjere u nas, neæemo vas iznevjeriti.“ Video linkom publici u Hrvatskom domu Herceg Stjepana Kosaèe obratio se i PRH Ivo Josipoviæ, poruèivši kako u ustavnim promjenama Hrvati u BiH moraju biti jednakopravni, te najavivši svoj skori posjet BiH i Mostaru. Nakon takve nazoènosti Predsjednice Vlade RH i video poruke Predsjednika RH opravdano je oduševljenje BiH Hrvata koji u tome vide poèetak nove ere u odnosima sa Zagrebom. Na priredbi je puštena i videoporuka šefa vatikanske diplomacije D. Mambertija, koji je pozvao katolike da ostanu u svojoj zemlji i državi BiH. Nazoènost i visokog predstavnika V. Inzka, te mnogih visokih dužnosnika iz með. organizacija, FBiH, RS - pretvorila je nakratko Mostar ponovno središtem BiH U hrv. izaslanstvu bili su i potpredsj. Vlade i min. financija I. Šuker, min. kulture B. Biškupiæ, dt u MVPEI D, Božinoviæ, dt, predstojnik Ureda predsjednice Vlade K. Mesariæ, D. Stier, savjetnik predsj. Vlade RH za vp, kao i Tonèi Stanièiæ veleposlanik RH u Sarajevu i Velimir Pleša, gen. konzul RH u Mostaru.
+												<br>
+										</td>
+									</tr>
+									
+								</table>
+							</td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	
+	<p></p>
+</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="149" height="1" bgcolor="#FF6666"></td>
+			<td width="1" valign="top" bgcolor="000066" height="1"><img src="Design/skins/mvp/HRV/images/sivi-pix.gif" width="1" height="1"></td>
+			<td valign="top" height="1"><img src="Design/skins/mvp/HRV/images/sivi-pix2.gif" width="630" height="1"></td>
+		</tr>
+		<tr>
+			<td width="149" height="30" bgcolor="#FF6666">&nbsp;</td>
+			<td width="1" valign="top" bgcolor="#666666" height="30"></td>
+			<td valign="middle" height="30">
+				<table width="630" border="0" cellspacing="0" cellpadding="0" height="30" id="Table11">
+	<tr>
+		<td valign="middle" class="tekst-copyright"> 
+			<div align="center">Copyright (c) 1997.- 2010. Ministarstvo vanjskih 
+        poslova i europskih integracija RH Sva prava pridržana</div>
+		</td>
+		<td valign="middle" align="center" class="tekst-copyright" width="1"><img src="images/sivi-pix2.gif" width="1" height="30"></td>
+	</tr>
+</table>
+
+			</td>
+		</tr>
+	</table>
+</body>
+
+
+
+</html>

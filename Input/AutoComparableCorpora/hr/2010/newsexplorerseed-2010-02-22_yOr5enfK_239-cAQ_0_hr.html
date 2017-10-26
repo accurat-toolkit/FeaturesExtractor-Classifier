@@ -1,0 +1,1411 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="Sun, 12 Dec 2010 11:53:27 GMT" http-equiv="expires">
+<meta content="Public" http-equiv="Cache-Control">
+<meta content="INDEX,FOLLOW,NOARCHIVE" http-equiv="Robots">
+<meta CONTENT="en" http-equiv="Content-Language">
+<meta content="European news,European newspaper,European media,television,tv,radio,newspaper,magazine,archive,Today,media monitoring,clipping service,digest" name="Keywords">
+<meta content="World news clustered, updated every day. Explore the news, following stories by time, place or person." name="Description">
+<title>EMM News Explorer</title>
+<link rel="stylesheet" href="../../newsbrief.css">
+<link rel="stylesheet" href="../../tigra_calendar/calendar.css">
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+					HM_PL_Language='en';
+					HM_PL_EMMLocale='en';
+					HM_PL_ImageDir='../../';
+					if(window.event + "" == "undefined") event = null;
+				</SCRIPT><script type="text/javascript" src="../../newsbrief.js" language="Javascript"></script><script type="text/javascript" src="../../windows_popups.js" language="Javascript"></script><SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript">
+					function SWFworkarround(){
+					
+					};
+				</SCRIPT>
+</head>
+<body onload="initNewsExplorerPage();" topmargin="0" marginwidth="0" marginheight="0" leftmargin="0">
+<table height="30" class="pagewidth banner_tabs" cellspacing="0" cellpadding="0" border="0">
+<form name="formSearch" enctype="text/plain; charset=utf-8" ACCEPT-CHARSET="utf-8" method="get" action="../../search/en/entities">
+<input maxlength="512" name="query" type="hidden">
+</form>
+<tr>
+<td align="center" valign="middle" width="35">
+<map name="map2">
+<area alt="CEC" target="_blank" href="http://europa.eu.int/comm/index_en.htm" coords="2,2,33,24" shape="rect">
+</map>
+<img border="none" usemap="#map2" alt="banner" height="22" width="31" src="../../images/euflag.gif"></td><td width="145"></td><td align="center" valign="middle" style="background: url(../../images/tab_newsbrief.gif) no-repeat;" width="120"><a href="HTTP://emm.jrc.it/NewsBrief" class="banner_link">EMM NewsBrief</a></td><td align="center" valign="middle" style="background: url(../../images/tab_newsexplorer.gif) no-repeat;" width="120"><a href="/NewsExplorer" class="banner_link">EMM NewsExplorer</a></td><td width="215"></td><td height="30" align="center" valign="middle" style="background: url(../../images/tab_newsexplorer_search.gif) no-repeat;" width="355"><input style="width:115px" onkeypress="if (event.keyCode==13) dosearch();" maxlength="512" type="text" name="search"><input onclick="dosearch();" value="Name Search" type="button"><input onclick="window.location.href='http://emm.newsbrief.eu/NewsBrief/search/en/advanced.html';" value="Text Search" id="advancedsearch" name="advancedsearch" type="button"></td>
+</tr>
+</table>
+<table style="background: url(../../images/banner_newsexplorer.gif) no-repeat;" class="banner pagewidth" height="57" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td rowspan="3" height="54" width="227"></td><td rowspan="3" height="54" width="76"></td><td align="center" class="banner_version banner_edition" height="20" width="410">News Cluster<span class="printonly">English</span></td><td rowspan="2" height="37" width="32"></td><td rowspan="3" class="new_features" height="54" width="245"></td>
+</tr>
+<tr>
+<td height="17" width="410"></td>
+</tr>
+<tr>
+<td colspan="2" class="banner_slogan" height="17" width="442">Daily News Analysis, across languages and over time</td>
+</tr>
+<tr>
+<td colspan="5" class="banner_line" height="3" width="pagewidth"></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" class="pagewidth">
+<form name="formPage">
+<input value="clusteredition" name="edition" type="hidden"><input value="en" name="language" type="hidden"><input value="20100214" name="page" type="hidden"><input value="aljazeera-en-185a5e971936f4894ed334dc8615ab16" name="option" type="hidden">
+</form>
+<tr>
+<td class="leftcolumnwidth" valign="top"><table cellspacing="0" border="0" class="menu_container">
+<tr>
+<td class="block_explorer menu_block">
+<p class="left_heading">Main Menu</p>
+<div id="menu_explorer" class="section">
+<table class="menu_item_container" cellspacing="0" border="0">
+<tr>
+<td onclick="window.location.href=HM_PL_ImageDir + 'home/'+HM_PL_EMMLocale+'/latest.html'" onmouseout="this.className='menuitem';" onmouseover="this.className='menuitemhighlight';" class="menuitem">News Summary</td>
+</tr>
+<tr>
+<td onclick="OnShowHelp('readme.html')" onmouseout="this.className='menuitem';" onmouseover="this.className='menuitemhighlight';" class="menuitem">About EMM NewsExplorer</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="block_menu_lang_and_date menu_block">
+<p class="left_heading">News language and date</p>
+<div id="menu_menu_lang_and_date" class="section">
+<table class="menu_item_container" cellspacing="0" border="0">
+<tr>
+<td class="menuitem">
+<p>Language or country:</p>
+</td>
+</tr>
+<tr>
+<td class="menuitem">
+<form name="langSelect">
+<select name="select_lang" id="select_lang" class="screenonly" onchange="javascript:gotolanguage(this.value);"><optgroup label="Languages"><option value="ar">ar - Arabic</option><option value="bg">bg - български</option><option value="es">es - Espa&ntilde;ol</option><option value="de">de -  Deutsch</option><option value="da">da - Dansk</option><option value="en">en - English</option><option value="et">et - Eesti keel</option><option value="fa">fa - Farsi</option><option value="fr">fr - Fran&ccedil;ais</option><option value="it">it -  Italiano</option><option value="nl">nl - Nederlands</option><option value="no">no - Norsk</option><option value="pl">pl - Polski</option><option value="pt">pt - Portugu&ecirc;s</option><option value="ro">ro - Rom&acirc;nă</option><option value="ru">ru - Russian</option><option value="sl">sl - Slovenščina</option><option value="sv">sv - Svenska</option><option value="tr">tr - T&uuml;rk&ccedil;e</option><option value="sw">sw - Kiswahili</option></optgroup><optgroup label="Countries"><option value="AT">AT - Austria</option><option value="BE">BE - Belgium</option><option value="DE">DE - Germany</option><option value="ES">ES - Spain</option><option value="FR">FR - France</option><option value="GB">GB - United Kingdom</option><option value="IT">IT - Italy</option><option value="NL">NL - Netherlands</option><option value="US">US - United States</option><option value="AC">AC - </option></optgroup></select>
+</form>
+</td>
+</tr>
+<tr>
+<td class="menuitem">
+<menuinsert>
+					
+<p>Date:</p>
+					
+<script language="JavaScript" src="../../tigra_calendar/cal_strings.js"></script>
+					<!--Calendar Scope Settings Structure file. It should be exist.-->
+					<script language="JavaScript" src="../../tigra_calendar/cal_acal.js"></script>
+					<script language="JavaScript" src="../../tigra_calendar/cal_tpl.js"></script>
+					<script language="JavaScript" src="../../tigra_calendar/calendar.js"></script>
+					
+<form name="a_form">
+						
+<input name="page" type="hidden">
+						<script language="JavaScript">
+							var form =document.forms['formPage'];
+							var page = form.elements["page"];
+							function OnClickMe()
+							{
+							   var page = document.forms['a_form'].elements["page"].value;
+							   page = page.slice(1);
+							   window.location.href=HM_PL_ImageDir + 'dayedition/'+HM_PL_EMMLocale+'/'+page+'.html';
+							}
+							var CAL_INIT = {
+								// Control Set Appearance structure. No meaning in this example.
+								'nocontrols' : {
+								'nohour'			: true,
+								'nominute'			: true,
+								'nosecond'			: true,
+								'notoday'			: true,
+								'noothermonthday'	: true,
+								'noampm'			: true
+								},	
+								'controlname'		: 'page', // assigns 'page' control to receive date from calendar
+								'formname'			: 'a_form',
+								'dataformat'		: ' Ymd',
+								'mindate': ' 20040401',
+								//'maxdate': -1,
+								'selected' : ' '+page.value,
+								'onclickdayall' : OnClickMe
+							};
+						  new calendar(CAL_INIT, CAL_TPL);
+					</script>
+					
+</form>
+				
+</menuinsert>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="block_menu_period menu_block">
+<p class="left_heading">Analysis over time</p>
+<div id="menu_menu_period" class="section">
+<table class="menu_item_container" cellspacing="0" border="0">
+<tr>
+<td onclick="window.location.href=HM_PL_ImageDir + 'timelineedition/'+HM_PL_EMMLocale+'/timeline.html'" onmouseout="this.className='menuitem';" onmouseover="this.className='menuitemhighlight';" class="menuitem">Timeline</td>
+</tr>
+<tr>
+<td class="menuitem">
+<menuinsert>
+					
+<div onclick="window.location.href=HM_PL_ImageDir + 'timelineedition/'+HM_PL_EMMLocale+'/timeline.html'">
+						
+<img alt="Timeline" border="0" height="300" id="timeline_img" src="../../images/timeline.png" width="170">
+					</div>
+				
+</menuinsert>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td><td class="textpadding" valign="top">
+<p class="center_group_main">Sunday, February 14, 2010</p>
+<table border="0" cellspacing="0" cellpadding="0" width="800">
+<tr>
+<td colspan="0" width="600">
+<table border="0" cellspacing="0" cellpadding="2" width="600">
+<tr>
+<td class="center_story" colspan="2" width="600">
+<p class="cluster_title">
+<a target="EMMARTICLE" href="http://english.aljazeera.net//news/asia/2010/02/2010213155016855188.html" class="cluster_title cluster_title_link">Many dead in India bomb attack</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_de">de</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_es">es</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_fr">fr</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_it">it</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_nl">nl</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_ar">ar</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_bg">bg</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_da">da</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_pl">pl</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_pt">pt</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_ro">ro</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_ru">ru</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_sl">sl</a>
+											&nbsp;<a class="headline_link" style="font-size:0.6em" href="#related_sv">sv</a>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom:solid silver 1px;" valign="top" width="600">
+<p class="center_leadin">Nation put on alert after blast hits restaurant in Pune popular with foreigners.</p>
+<p class="center_headline_source">aljazeera-en&nbsp;5:49:00 AM CET</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom:solid silver 1px;" valign="top" width="600">
+<div class="related_articles_scrollable">
+<table border="0" cellspacing="0" cellpadding="2"><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://news.rediff.com/report/2010/feb/14/german-bakery-when-terror-threatens-not-talking-is-an-option-bjp.htm" class="headline_link">'When terror threatens, not talking is an option'</a>
+</p>
+<p class="center_headline_source">rediff&nbsp;12:02:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.nst.com.my/Current_News/NST/articles/l_mdj_owqkp/Article/index_html" class="headline_link">Smith a doubt for India-SA Test</a>
+</p>
+<p class="center_headline_source">nst&nbsp;1:02:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.dailytimes.com.pk/default.asp?page=2010/02/14/story_14-2-2010_pg2_1" class="headline_link">Smith set to defy pain as key India Test starts today</a>
+</p>
+<p class="center_headline_source">dailytimesPK&nbsp;4:55:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.expressindia.com/latest-news/IndoPak-Foreign-Secretaries-talks-likely-to-go-ahead/579587/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed:%20expressindia/iKgY%20%28Expressindia%29" class="headline_link">Indo-Pak Foreign Secretaries talks likely to go ahead</a>
+</p>
+<p class="center_headline_source">expressindia&nbsp;8:47:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/india/No-comment-on-fate-of-Indo-Pak-talks-Krishna/Article1-508732.aspx" class="headline_link">No comment on fate of Indo-Pak talks: Krishna</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;12:11:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.expressindia.com/latest-news/Terror-alert-in-Delhi-Kanpur-Indore/579582/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed:%20expressindia/iKgY%20%28Expressindia%29" class="headline_link">Terror alert in Delhi, Kanpur, Indore</a>
+</p>
+<p class="center_headline_source">financialexpress&nbsp;11:37:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.thehindu.com/2010/02/15/stories/2010021560211300.htm" class="headline_link">Left: help Maharashtra identify culprits</a>
+</p>
+<p class="center_headline_source">Hindu&nbsp;11:12:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/ahmedabad/Security-tightened-in-Ahmedabad-after-Pune-blast/Article1-508791.aspx" class="headline_link">Security tightened in Ahmedabad after Pune blast</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;3:56:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://timesofindia.indiatimes.com/city/pune/2-foreigners-among-9-killed-in-Pune-blast-Police/articleshow/5572996.cms" class="headline_link">2 foreigners among 9 killed in Pune blast: Police</a>
+</p>
+<p class="center_headline_source">indiatimes&nbsp;1:31:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/newdelhi/Security-stepped-up-in-Delhi-following-Pune-blast/Article1-508722.aspx" class="headline_link">Security stepped up in Delhi following Pune blast</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;11:26:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://timesofindia.indiatimes.com/city/pune/RDX-ammonium-nitrate-used-in-Pune-blast-Govt/articleshow/5572766.cms" class="headline_link">RDX, ammonium nitrate used in Pune blast: Govt</a>
+</p>
+<p class="center_headline_source">indiatimes&nbsp;12:43:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/maharashtra/Families-of-Pune-blast-victims-will-receive-Rs-500-000-compensation-Chavan/Article1-508819.aspx" class="headline_link">Families of Pune blast victims will receive Rs 500,000 compensation: Chavan</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;6:11:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.ynetnews.com/articles/0,7340,L-3848450,00.html" class="headline_link">At least 9 killed in India blast; Israelis safe</a>
+</p>
+<p class="center_headline_source">yediotaharonot&nbsp;8:15:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://economictimes.indiatimes.com/news/politics/nation/Pune-blast-significant-terror-act-Chidambaram/articleshow/5571037.cms" class="headline_link">Pune blast "significant terror" act: Chidambaram</a>
+</p>
+<p class="center_headline_source">economictimes&nbsp;1:04:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/india/No-intelligence-lapse-in-Pune-blast-Chidambaram/Article1-508660.aspx" class="headline_link">No intelligence lapse in Pune blast: Chidambaram</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;5:24:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://timesofindia.indiatimes.com/city/pune/Pune-blast-Chidambaram-denies-intelligence-failure-Maharashtra-ATS-takes-over-probe-/articleshow/5571797.cms" class="headline_link">No intellience failure in Pune blast: Chidambaram</a>
+</p>
+<p class="center_headline_source">timesofindia&nbsp;6:21:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.thehindu.com/2010/02/15/stories/2010021555191000.htm" class="headline_link">Unwise to jump to conclusions: Congress</a>
+</p>
+<p class="center_headline_source">Hindu&nbsp;9:02:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.thehindu.com/2010/02/15/stories/2010021557070100.htm" class="headline_link">Three blast victims from Kolkata</a>
+</p>
+<p class="center_headline_source">Hindu&nbsp;11:12:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/newdelhi/US-condemns-Pune-blast-will-assist-as-needed-in-probe/Article1-508705.aspx" class="headline_link">US condemns Pune blast, will 'assist as needed' in probe</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;9:55:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.dailytimes.com.pk/default.asp?page=2010/02/14/story_14-2-2010_pg7_6" class="headline_link">Good Indo-Pak ties must to fight militancy: Zardari</a>
+</p>
+<p class="center_headline_source">dailytimesPK&nbsp;4:10:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.financialexpress.com/news/FE-Editorial-After-Pune/579596/" class="headline_link">FE Editorial: After Pune</a>
+</p>
+<p class="center_headline_source">financialexpress&nbsp;10:11:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.timesonline.co.uk/tol/news/world/asia/article7026599.ece" class="headline_link">After Pune attack Indians ask again: was David Headley involved?</a>
+</p>
+<p class="center_headline_source">thetimes&nbsp;4:18:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.news24.com/Content/World/News/1073/a51e41a48c9747ee86a03fca8236d2f2/14-02-2010-07-31/Indians_stunned_by_bomb_attack" class="headline_link">Indians stunned by bomb attack</a>
+</p>
+<p class="center_headline_source">news24&nbsp;7:38:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.khaleejtimes.com/darticlen.asp?xfile=data/international/2010/February/international_February709.xml&amp;amp;section=international" class="headline_link">Move to Resume Talks with Pakistan Faces Opposition</a>
+</p>
+<p class="center_headline_source">khaleejtimes&nbsp;9:15:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/india/Pune-blast-Lashkar-hand-suspected/Article1-508898.aspx" class="headline_link">Pune blast: Lashkar hand suspected</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;8:34:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://timesofindia.indiatimes.com/india/US-had-warned-of-attack-in-Pune-Mumbai/articleshow/5573845.cms" class="headline_link">US had warned of attack in Pune, Mumbai</a>
+</p>
+<p class="center_headline_source">indiatimes&nbsp;9:36:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.khaleejtimes.com/darticlen.asp?xfile=data/international/2010/February/international_February717.xml&amp;amp;section=international" class="headline_link">Red Alert in India as Eight Killed in Pune Terror Attack</a>
+</p>
+<p class="center_headline_source">khaleejtimes&nbsp;9:15:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://rss.cnn.com/~r/rss/cnn_latest/~3/PYvpd4xqztM/index.html" class="headline_link">Iranian, Italian among Indian bakery blast dead</a>
+</p>
+<p class="center_headline_source">cnn&nbsp;5:40:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.nytimes.com/2010/02/15/world/asia/15india.html" class="headline_link">India Pursues Terror Link After Bomb Blast</a>
+</p>
+<p class="center_headline_source">nytimes&nbsp;5:39:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.qnaol.net/QNAEn/Foreign_News/Politics1/Pages/NineKilled,45InjuredinWestIndiaTerroristAttack.aspx" class="headline_link">Nine Killed, 45 Injured in West India Terrorist Attack</a>
+</p>
+<p class="center_headline_source">qnaol&nbsp;9:57:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.nytimes.com/2010/02/14/world/asia/14india.html?partner=rss&amp;amp;emc=rss" class="headline_link">India on Alert After Bomb Kills 9</a>
+</p>
+<p class="center_headline_source">IHT&nbsp;6:49:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://news.rediff.com/report/2010/feb/14/german-bakery-attack-lashkars-attempt-to-scuttle-talks.htm" class="headline_link">Pune attack LeT's move to scuttle India-Pak talks?</a>
+</p>
+<p class="center_headline_source">rediff&nbsp;10:31:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.globalsecurity.org/security/library/news/2010/02/sec-100213-voa01.htm" class="headline_link">Terror Bombing Hits Popular Bakery in Pune, India</a>
+</p>
+<p class="center_headline_source">globalsecurity&nbsp;4:35:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://article.wn.com/view/2010/02/14/Petersen_eyes_Test_spot/" class="headline_link">Petersen eyes Test spot</a>
+</p>
+<p class="center_headline_source">africaFM&nbsp;6:13:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.independent.co.uk/news/world/asia/andrew-buncombe-profiling-the-people-of-delhi-one-by-one-1897529.html" class="headline_link">Andrew Buncombe: Profiling the people of Delhi one by one</a>
+</p>
+<p class="center_headline_source">independent&nbsp;11:39:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.mg.co.za/article/2010-02-14-nine-die-in-indias-first-big-attack-since-mumbai" class="headline_link">Nine die in India's first big attack since Mumbai</a>
+</p>
+<p class="center_headline_source">MailGuardian&nbsp;7:05:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.dawn.com/wps/wcm/connect/dawn-content-library/dawn/news/world/03-pune-blast-exposes-india-u-turn-on-pakistan-talks-bjp-ss-05" class="headline_link">Pune blast exposes India 'U-turn' on Pakistan talks: BJP</a>
+</p>
+<p class="center_headline_source">dawn&nbsp;10:54:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.nzherald.co.nz/world/news/article.cfm?c_id=2&amp;amp;objectid=10626197&amp;amp;ref=rss" class="headline_link">Foreigners targeted as nine die in bomb blast</a>
+</p>
+<p class="center_headline_source">nzherald&nbsp;5:18:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.japantoday.com/category/world/view/apparent-bomb-kills-8-in-indian-bakery" class="headline_link">World &rsaquo; Apparent bomb kills 8 in Indian bakery</a>
+</p>
+<p class="center_headline_source">japantoday&nbsp;12:52:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://hosted.ap.org/dynamic/stories/A/AS_INDIA_EXPLOSION?SITE=CACHI&amp;amp;SECTION=HOME&amp;amp;TEMPLATE=DEFAULT" class="headline_link">Bomb kills 9, wounds 57 at western India bakery</a>
+</p>
+<p class="center_headline_source">AP&nbsp;4:53:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://hosted.ap.org/dynamic/stories/A/AS_INDIA_EXPLOSION?SITE=CACHI&amp;amp;SECTION=HOME&amp;amp;TEMPLATE=DEFAULT" class="headline_link">Bomb kills 9 in India, threatening Pakistan talks</a>
+</p>
+<p class="center_headline_source">AP&nbsp;8:54:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://news.sky.com/skynews/Home/World-News/India-Security-Increased-After-Nine-People-Killed-In-Bombing-At-Bakery/Article/201002215548784?f=rss" class="headline_link">India On Alert After Deadly Bakery Bomb</a>
+</p>
+<p class="center_headline_source">skynews&nbsp;2:35:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.gulf-daily-news.com/NewsDetails.aspx?storyid=270784" class="headline_link">Pakistan-India talks 'essential'</a>
+</p>
+<p class="center_headline_source">GulfDailyNews&nbsp;6:43:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.ynetnews.com/articles/0,7340,L-3848757,00.html" class="headline_link">Nationalists blame Pakistan for bombing in India</a>
+</p>
+<p class="center_headline_source">yediotaharonot&nbsp;11:55:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.irishtimes.com/newspaper/breaking/2010/0214/breaking3.htm" class="headline_link">9 dead in Indian bomb attack</a>
+</p>
+<p class="center_headline_source">irishtimes&nbsp;11:26:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://uk.reuters.com/article/idUKSGE61D00V20100214?feedType=RSS&amp;amp;feedName=worldNews&amp;amp;utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed:%20Reuters/UKWorldNews%20%28News%20/%20UK%20/%20World%20News%29" class="headline_link">India says investigating blast, Pakistan talks on</a>
+</p>
+<p class="center_headline_source">reuters&nbsp;4:33:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.alertnet.org/thenews/newsdesk/SGE61D00V.htm" class="headline_link">India says investigating blast, Pakistan talks on</a>
+</p>
+<p class="center_headline_source">alertnet&nbsp;4:08:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.gulf-daily-news.com/NewsDetails.aspx?storyid=270779" class="headline_link">Pune terror horror</a>
+</p>
+<p class="center_headline_source">GulfDailyNews&nbsp;6:43:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.channelnewsasia.com/stories/afp_asiapacific/view/1037468/1/.html" class="headline_link">India bomb blast clouds renewal of Pakistan talks</a>
+</p>
+<p class="center_headline_source">channelnewsasia&nbsp;10:55:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.haveeru.com.mv/english/details/29123/Restaurant_bomb_kills_nine_in_Indian_city_of_Pune" class="headline_link">Restaurant bomb kills nine in Indian city of Pune</a>
+</p>
+<p class="center_headline_source">haveeru&nbsp;9:33:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.iol.co.za/index.php?from=rss_World&amp;amp;set_id=1&amp;amp;click_id=3&amp;amp;art_id=nw20100214084540650C552531" class="headline_link">Restaurant bomb kills nine</a>
+</p>
+<p class="center_headline_source">Star&nbsp;10:50:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="" class="headline_link">Will India and Pakistan talks survive Pune bombing?</a>
+</p>
+<p class="center_headline_source">csmonitor&nbsp;4:48:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.dawn.com/wps/wcm/connect/dawn-content-library/dawn/news/pakistan/03-pm-gilani-condemns-india-bomb-blast-ss-08" class="headline_link">PM Gilani condemns India bomb blast</a>
+</p>
+<p class="center_headline_source">dawn&nbsp;11:55:00 AM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.rte.ie/news/2010/0214/india.html" class="headline_link">Pakistan condemns India bombing</a>
+</p>
+<p class="center_headline_source">RTERadio&nbsp;11:40:00 AM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.thehindu.com/2010/02/15/stories/2010021550030100.htm" class="headline_link">No rethinking on talks with Pakistan</a>
+</p>
+<p class="center_headline_source">hinduonnet&nbsp;10:45:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://timesofindia.indiatimes.com/india/No-rethink-on-talks-with-Pak-Govt/articleshow/5573931.cms" class="headline_link">Indo-Pak foreign secy level talks to go ahead: Govt</a>
+</p>
+<p class="center_headline_source">indiatimes&nbsp;8:47:00 PM CET</p>
+</td></tr><tr><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.thehindu.com/2010/02/15/stories/2010021555201000.htm" class="headline_link">For some, celebrations at the bakery were short-lived</a>
+</p>
+<p class="center_headline_source">Hindu&nbsp;9:02:00 PM CET</p>
+</td><td valign="top" width="290">
+<p class="center_headline center_story">
+<a target="EMMARTICLE" href="http://www.hindustantimes.com/rssfeed/mumbai/It-was-dark-and-the-next-thing-I-knew-was-that-I-was-in-hospital/Article1-508943.aspx" class="headline_link">&lsquo;It was dark, and the next thing I knew was that I was in hospital&rsquo;</a>
+</p>
+<p class="center_headline_source">HindustanTimes&nbsp;10:14:00 PM CET</p>
+</td></tr></table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top" width="600">
+<p class="cluster_related_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_story')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Story information</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top" width="600">
+<p class="edition_info">
+<b>This cluster belong to the following story:</b>&nbsp;<a href="../../storyedition/en/guardian-cc9a9cae2eab496b6b6d89be76dd70bb.html" class="headline_link_bold">Many dead in India bomb attack</a>
+</p>
+<p class="edition_info_additional">Keywords:&nbsp;India, Pakistan / The Hindu, Al Qaeda / indian, delhi, security, kashmir, mumbai, terror, attacks</p>
+<p class="edition_info_additional">Start date:&nbsp;Wednesday, January 13, 2010</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">7 days before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100207,Hindu-dd97d2c50b8a1765cba18b0b8e38b3b8.html" class="headline_link">Hostile groups operating from across the border: Manmohan</a>&nbsp;<span class="center_headline_source">Similarity: 0.77</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100207,hinduonnet-a7a14b77dd949b944e3ba02d2e987e19.html" class="headline_link">Decision on taxi licence dangerous: Lalu</a>&nbsp;<span class="center_headline_source">Similarity: 0.36</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100207,expressindia-b0e02cc33c974f761b512687c89a621c.html" class="headline_link">Modi, BJP CMs hail Centres steps on internal security</a>&nbsp;<span class="center_headline_source">Similarity: 0.31</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">6 days before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100208,bbc-d76b3ffcaac703acd6bb13ce4bbee4cf.html" class="headline_link">Avalanche kills troops in Kashmir</a>&nbsp;<span class="center_headline_source">Similarity: 0.82</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="5" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">5 days before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100209,bbc-b2c815559a51cb5e3ba175384966f133.html" class="headline_link">South Africa complete India rout</a>&nbsp;<span class="center_headline_source">Similarity: 0.79</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100209,Hindu-d80a7ecf64ba9309d4b0208ad8e78e25.html" class="headline_link">Sena vandalises multiplexes</a>&nbsp;<span class="center_headline_source">Similarity: 0.53</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100209,HindustanTimes-508cdf77ab24c2d5a17a396bc814c68e.html" class="headline_link">Chidambaram plays down Nitish, Soren's absence at meet</a>&nbsp;<span class="center_headline_source">Similarity: 0.43</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100209,expressindia-7c154589c73de03679ef1a1e1b517557.html" class="headline_link">Race motive clear in some attacks, admits Oz FM</a>&nbsp;<span class="center_headline_source">Similarity: 0.40</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100209,Hindu-414ecfe59af01c4ee5480ada782a7618.html" class="headline_link">Moratorium on Bt brinjal</a>&nbsp;<span class="center_headline_source">Similarity: 0.34</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">4 days before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100210,bbc-cc475968b1f566e828c39994cafa83d9.html" class="headline_link">England admit India safety fears</a>&nbsp;<span class="center_headline_source">Similarity: 0.82</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100210,dailytimesPK-ffde1af96107f1a5ec518a800e8acb80.html" class="headline_link">India&rsquo;s software exports face protectionism</a>&nbsp;<span class="center_headline_source">Similarity: 0.43</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100210,news24-eb6983de97dfba3e3ba6cd844a0bbc11.html" class="headline_link">Bollywood star angers party</a>&nbsp;<span class="center_headline_source">Similarity: 0.31</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">3 days before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100211,NPRnews-52375c40148e40c17e34aa22d7ea7951.html" class="headline_link">Artists Try To Break Down Barriers Between India, Pakistan</a>&nbsp;<span class="center_headline_source">Similarity: 0.76</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100211,channel4news-503fc18ae967368d8dda775cde5eb5c3.html" class="headline_link">10 children burn to death in India</a>&nbsp;<span class="center_headline_source">Similarity: 0.32</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="4" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">2 days before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100212,cnn-9b4ffba2a965ac9570c3b8e8254b794d.html" class="headline_link">India's inventors seek market in innovation decade</a>&nbsp;<span class="center_headline_source">Similarity: 0.72</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100212,bbc-70755f0412d3dcf925daacb5aac5c5fc.html" class="headline_link">Khan movie hits Mumbai amid row</a>&nbsp;<span class="center_headline_source">Similarity: 0.51</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100212,ptvworldnews-f1347c050b13016b8f6e579d97517e48.html" class="headline_link">Foreign secretary-level talks between Pakistan and India would be held on the 25th of this month in New Delhi.</a>&nbsp;<span class="center_headline_source">Similarity: 0.48</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100212,economictimes-84c0e27409965e22a02b0f41aa5884a9.html" class="headline_link">Pak keen to play cricket matches in US</a>&nbsp;<span class="center_headline_source">Similarity: 0.33</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="100" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">1 day before.</p>
+</td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100213,RTERadio-11d65a0ca4556ed55ee18ecba118aec4.html" class="headline_link">Eight killed in India bomb blast</a>&nbsp;<span class="center_headline_source">Similarity: 0.88</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100213,cnn-7323286d4af5518c1f54c02e9668ea38.html" class="headline_link">Taliban attack boys' school in Pakistan</a>&nbsp;<span class="center_headline_source">Similarity: 0.54</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100213,NewsJang-en-a49264fca9aae6de22f860fe4a23a1b6.html" class="headline_link">SRKs film scaled back over row</a>&nbsp;<span class="center_headline_source">Similarity: 0.46</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">1 day after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100215,thetimes-b2aa850ecdf6156fa683a1af242f43de.html" class="headline_link">India fears terror campaign after new bomb attack in tourist area</a>&nbsp;<span class="center_headline_source">Similarity: 0.94</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100215,cnn-c17945cd702899dc5b3921673a1540c6.html" class="headline_link">Sehwag and Tendulkar tons lift India</a>&nbsp;<span class="center_headline_source">Similarity: 0.38</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">2 days after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100216,channel4news-f68fd28e3455e00711de701946e66068.html" class="headline_link">24 police die in Maoist rebel raid</a>&nbsp;<span class="center_headline_source">Similarity: 0.83</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100216,news-yahoo-f5357329978dc8c0b6e486afef31e03a.html" class="headline_link">India dominate South Africa in final cricket Test (AFP)</a>&nbsp;<span class="center_headline_source">Similarity: 0.35</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100216,indiatimes-7fb6ac8d2f4876b7d7d0fd7926fc620d.html" class="headline_link">Pakistan failing miserably in controlling terrorism, says India</a>&nbsp;<span class="center_headline_source">Similarity: 0.50</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">3 days after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100217,thetimes-0ce7307d614dc58945958a6eab645049.html" class="headline_link">Pakistani militants threaten Commonwealth Games</a>&nbsp;<span class="center_headline_source">Similarity: 0.85</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100217,news-yahoo-509e139c39e2567200b59a5e003e310c.html" class="headline_link">Second India-SouthAfrica test resumes after lengthy delay (Reuters)</a>&nbsp;<span class="center_headline_source">Similarity: 0.38</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">4 days after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100218,Hindu-2c792e7ecaf7865adbfb14742e6cc923.html" class="headline_link">India levels series, remains No.1</a>&nbsp;<span class="center_headline_source">Similarity: 0.78</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100218,CBSnews-e97d47d65ffc194c7f1093422b98c6ed.html" class="headline_link">Blast in NW Pakistan Kills at least 29</a>&nbsp;<span class="center_headline_source">Similarity: 0.40</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100218,economictimes-156ba8c58af3d592cc4612d975a353ce.html" class="headline_link">Govt approves Rs 800 cr equity infusion into Air India</a>&nbsp;<span class="center_headline_source">Similarity: 0.35</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">5 days after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100219,aljazeera-en-89ad19887b56d8b46b1fe580792a5281.html" class="headline_link">Blast as Holbrooke visits Pakistan</a>&nbsp;<span class="center_headline_source">Similarity: 0.44</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100219,Hindu-a0a3e91dac0ab3b56a8b2da290f6acbf.html" class="headline_link">Demanding their due</a>&nbsp;<span class="center_headline_source">Similarity: 0.31</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100219,Triniad-guardian-bade7b541b7ae56b662af716e46716de.html" class="headline_link">Awesome Amla hits two centuries in same Test</a>&nbsp;<span class="center_headline_source">Similarity: 0.31</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">6 days after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100220,dawn-8aa8422bdd853d77027000981665b1ab.html" class="headline_link">Pakistan-based group claims India bombing: report</a>&nbsp;<span class="center_headline_source">Similarity: 0.82</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100220,HindustanTimes-54916d130085fe26c3b23239fb3bd074.html" class="headline_link">Sibal to build consensus for right to education</a>&nbsp;<span class="center_headline_source">Similarity: 0.31</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px">
+<p class="cluster_group_item">7 days after.</p>
+</td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100221,Hindu-309504c6724344b2c5ddb06f8a197a5d.html" class="headline_link">Death toll in Pune blast goes up to 15</a>&nbsp;<span class="center_headline_source">Similarity: 0.67</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100221,Hindu-40bb9dc784e4311c439324fe74b2c402.html" class="headline_link">India clinches a thriller to go one up</a>&nbsp;<span class="center_headline_source">Similarity: 0.41</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="200" valign="top" style="border-bottom:solid silver 1px"></td><td width="400" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/en/20100221,Hindu-cb403e90918d4f93e49bfc43c89c12aa.html" class="headline_link">15 injured in Kashmir violence</a>&nbsp;<span class="center_headline_source">Similarity: 0.73</span>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p class="cluster_related_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_related')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Related Clusters - across languages
+									</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_ar">
+<p class="cluster_group_item">ar</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/ar/20100214,masrawy-fd345a666d291ad83d65c9de134570e3.html" class="headline_link">الهند تقول ان ليس لديها فكرة تذكر عن المسؤول عن هجوم بيون</a>&nbsp;<span class="center_headline_source">Similarity: 0.44</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/ar/20100214,algomhuria-e72f9082f1a81624819b1e645f9e992e.html" class="headline_link">ارهاب هندوسي لنجوم السينما والسياسة المسلمين</a>&nbsp;<span class="center_headline_source">Similarity: 0.31</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_bg">
+<p class="cluster_group_item">bg</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/bg/20100214,netinfo-fcc80274e4062140b14402236f76108d.html" class="headline_link">Индия в шок след терористичен атентат</a>&nbsp;<span class="center_headline_source">Similarity: 0.40</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_da">
+<p class="cluster_group_item">da</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/da/20100214,DRNyheder-fc58c5943c2be92d99f64371014b57f3.html" class="headline_link">Otte dr&aelig;bt af bombe i Indien</a>&nbsp;<span class="center_headline_source">Similarity: 0.54</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/da/20100214,jp-79960214d27fe2ac56ca0b47f583d5c0.html" class="headline_link">Huldahl sluttede i top 10</a>&nbsp;<span class="center_headline_source">Similarity: 0.40</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_de">
+<p class="cluster_group_item">de</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/de/20100214,Heute-ed8e4a4fdf50b4094d2ac8863d8046eb.html" class="headline_link">Neun Tote bei Anschlag auf &amp;quot;Deutsche B&auml;ckerei&amp;quot;</a>&nbsp;<span class="center_headline_source">Similarity: 0.55</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_es">
+<p class="cluster_group_item">es</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/es/20100214,cope-d5b5888723ccf33cae5fbf972be281bf.html" class="headline_link">Nueve muertos tras una explosi&oacute;n en una panader&iacute;a de la India</a>&nbsp;<span class="center_headline_source">Similarity: 0.54</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_fr">
+<p class="cluster_group_item">fr</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/fr/20100214,france2-b06ddecb909f6d1e5e0e410c27e95ff1.html" class="headline_link">Sud-est de Bombay: un attentat fait 9 morts</a>&nbsp;<span class="center_headline_source">Similarity: 0.71</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_it">
+<p class="cluster_group_item">it</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/it/20100214,ilmessaggero-1d42d2c160a0946fb8c56a6b57b56b97.html" class="headline_link">India, forse una vittima italiana nella bomba di Pune</a>&nbsp;<span class="center_headline_source">Similarity: 0.60</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_nl">
+<p class="cluster_group_item">nl</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/nl/20100214,nrc-79275e77f77abee3e78d875e2933cfd8.html" class="headline_link">Aanslag India op druk restaurant</a>&nbsp;<span class="center_headline_source">Similarity: 0.64</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_pl">
+<p class="cluster_group_item">pl</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/pl/20100214,rzeczpospolita-fbaf017d688d2e0c27019139d8c34c73.html" class="headline_link">Indie: wybuch w cukierni. Są ofiary</a>&nbsp;<span class="center_headline_source">Similarity: 0.44</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_pt">
+<p class="cluster_group_item">pt</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/pt/20100214,visao-0a90a6fd49478fcce7609b506b98018a.html" class="headline_link">&Iacute;ndia: Dois estrangeiros entre os nove mortos no atentado de s&aacute;bado em Pune, pol&iacute;cia</a>&nbsp;<span class="center_headline_source">Similarity: 0.68</span>
+</p>
+</td>
+</tr>
+<tr>
+<td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/pt/20100214,estadao-03ff82924884d59e1a911e5289684d19.html" class="headline_link">Triciclo-bomba deixa 2 mortos e 12 feridos no Paquist&atilde;o</a>&nbsp;<span class="center_headline_source">Similarity: 0.35</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_ro">
+<p class="cluster_group_item">ro</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/ro/20100214,evenimentulzilei-8f103e0dbae7f19765242e22871faf8d.html" class="headline_link">Atentat &icirc;ntr-un restaurant din India</a>&nbsp;<span class="center_headline_source">Similarity: 0.46</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_ru">
+<p class="cluster_group_item">ru</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/ru/20100214,izvestia-ru-59134e7a1d821ba0d55fae389806b42b.html" class="headline_link">При теракте в Индии погибли два иностранца</a>&nbsp;<span class="center_headline_source">Similarity: 0.36</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_sl">
+<p class="cluster_group_item">sl</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/sl/20100214,Dnevnik-af2f48adc0cd45b379a6c2ca1f3bbb0b.html" class="headline_link">Indija: Število žrtev terorističnega napada na priljubljeno pekarno narašča</a>&nbsp;<span class="center_headline_source">Similarity: 0.53</span>
+</p>
+</td>
+</tr>
+<tr>
+<td rowspan="1" width="100" valign="top" style="border-bottom:solid silver 1px"><a name="related_sv">
+<p class="cluster_group_item">sv</p>
+</a></td><td width="500" valign="top">
+<p class="center_headline center_story">
+<a href="../../clusteredition/sv/20100214,SvenskaDagbladet-55b84d5e1c7eed3d71e4f0128f5dbaa6.html" class="headline_link">Bombd&aring;det i Indien hotar...</a>&nbsp;<span class="center_headline_source">Similarity: 0.55</span>
+</p>
+</td>
+</tr>
+</table>
+</td><td valign="top" width="200">
+<table border="0" cellspacing="0" cellpadding="2" width="200">
+<tr>
+<td>
+<p class="cluster_rightmenu_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_countries')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Countries</p>
+<div class="right_block_scrollable">
+<p>
+<a href="http://emm.newsbrief.eu/NewsBrief/countryedition/en/IN.htm" class="headline_link">
+<div class="flag_small">
+<img border="0" height="10pt" alt="Flag" src="../../flags/IN.gif"></div>
+<div class="country_link cluster_group_item">India (38)</div>
+</a>
+</p>
+<p>
+<a href="http://emm.newsbrief.eu/NewsBrief/countryedition/en/PK.htm" class="headline_link">
+<div class="flag_small">
+<img border="0" height="10pt" alt="Flag" src="../../flags/PK.gif"></div>
+<div class="country_link cluster_group_item">Pakistan (11)</div>
+</a>
+</p>
+<p>
+<a href="http://emm.newsbrief.eu/NewsBrief/countryedition/en/ZA.htm" class="headline_link">
+<div class="flag_small">
+<img border="0" height="10pt" alt="Flag" src="../../flags/ZA.gif"></div>
+<div class="country_link cluster_group_item">South Africa (9)</div>
+</a>
+</p>
+</div>
+<p class="cluster_rightmenu_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_places')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Places</p>
+<div class="right_block_scrollable">
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=18.5357&amp;longitude=73.8523" class="headline_link">Pune(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=21.1558&amp;longitude=79.0891" class="headline_link">Nagpur(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=28.5687&amp;longitude=77.2168" class="headline_link">New Delhi(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=22.5435&amp;longitude=88.3342" class="headline_link">Kolkata(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=13.0615&amp;longitude=80.2478" class="headline_link">Chennai(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=26.4578&amp;longitude=80.3179" class="headline_link">Kanpur(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=22.72707&amp;longitude=75.866524" class="headline_link">Indore(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=28.5687&amp;longitude=77.2168" class="headline_link">Delhi(IN)</a>
+</p>
+<p class="cluster_group_item">
+<a target="_blank" href="http://www.mapquest.com/maps/map.adp?searchtype=address&amp;formtype=latlong&amp;latlongtype=decimal&amp;latitude=23.0398&amp;longitude=72.5669" class="headline_link">Ahmadabad(IN)</a>
+</p>
+</div>
+<p class="cluster_rightmenu_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_people')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Related People</p>
+<div class="right_block_scrollable">
+<p class="cluster_group_item">
+<a href="../../entities/en/3171.html" class="headline_link">Palaniappan Chidambaram</a> (15)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/6253.html" class="headline_link">Arun Jaitley</a> (6)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/1176.html" class="headline_link">Graeme Smith</a> (3)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/41093.html" class="headline_link">Gopinath Munde</a> (3)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/38068.html" class="headline_link">Asif Ali Zardari</a> (3)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/836211.html" class="headline_link">Yousaf Raza Gillani</a> (3)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/149.html" class="headline_link">Manmohan Singh</a> (3)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/75622.html" class="headline_link">Hashim Amla</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/556769.html" class="headline_link">Mahendra Singh Dhoni</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/524194.html" class="headline_link">Shiv Shankar Menon</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/98463.html" class="headline_link">David Cole</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/78202.html" class="headline_link">Dinesh Karthick</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/13683.html" class="headline_link">Robert Gates</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/415080.html" class="headline_link">Dale Steyn</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/74307.html" class="headline_link">Johan Botha</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/772626.html" class="headline_link">Janet Lawrence</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/128585.html" class="headline_link">Abdel Ghani</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/990571.html" class="headline_link">Amir Kasab</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/28.html" class="headline_link">Osama bin Laden</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/78205.html" class="headline_link">Gautam Gambhir</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/556772.html" class="headline_link">Zaheer Khan</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/623173.html" class="headline_link">Subramaniam Badrinath</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/64436.html" class="headline_link">Harbhajan Singh</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/2149.html" class="headline_link">Abu Zubaydah</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/247362.html" class="headline_link">Abdur Rahman</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/23543.html" class="headline_link">Ghulam Nabi Azad</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/31.html" class="headline_link">Pervez Musharraf</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/149436.html" class="headline_link">Shahid Malik</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/1236.html" class="headline_link">Michael Owen</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/1847.html" class="headline_link">Pranab Mukherjee</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/138130.html" class="headline_link">Sachin Tendulkar</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/22728.html" class="headline_link">Abhishek Singhvi</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/25145.html" class="headline_link">Mark Boucher</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/56241.html" class="headline_link">Paul Harris</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/31152.html" class="headline_link">Jacques Kallis</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/134782.html" class="headline_link">Prophet Muhammad</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/37472.html" class="headline_link">Abou Moustafa</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/1764.html" class="headline_link">Rahul Dravid</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/278513.html" class="headline_link">Yuvraj Singh</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/177204.html" class="headline_link">Virender Sehwag</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/623175.html" class="headline_link">Ishant Sharma</a> (1)</p>
+<p class="cluster_group_item">
+<i>David Headley (21)</i>
+</p>
+<p class="cluster_group_item">
+<i>Chabad House (13)</i>
+</p>
+<p class="cluster_group_item">
+<i>Prakash Jawdekar (4)</i>
+</p>
+<p class="cluster_group_item">
+<i>Eden Gardens (4)</i>
+</p>
+<p class="cluster_group_item">
+<i>India-South Africa (3)</i>
+</p>
+<p class="cluster_group_item">
+<i>Ashok Chavan (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Nadia Materinia (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Chen Amiel (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Bhagwan Shree Rajneesh (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Vinod Dhale (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Betzalel Kupchik (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Gokul Nepali (2)</i>
+</p>
+<p class="cluster_group_item">
+<i>Vivek Bendre (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Satyapal Singh (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Alviro Petersen (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Nirupama Rao (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Rajendra Sonawne (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Harsh Vardhan Patil (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Amos Barzilai (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Osho Ashram (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Riyaz Bhatkal (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Pravin Kumar (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Manish Tewari (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Sadhana Amrit (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Suresh Raina (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Rushabh Agarwal (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Saied Abdulkhani (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Dilip Band (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Chandra Iyengar (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Anandi Dhar (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Tahawwur Hussain Rana (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Shantakumran Sreesanth (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Ankit Dhar (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Gopal Krishna Pillai (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Siddhesh Inamdar (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Gopal Pillai (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Syed Abdul Khali (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Chhagan Bhujbal (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Santosh Bhosale (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>India Timothy (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Rashmi Shukla (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Gopal Manipuri (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Paras Rimal (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Badhani Sagr Sadh (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Ryan McLaren (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Ram Kharose (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Jean-Paul Duminy (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Improvised Explosive Device (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Sheikh Abdul Khwaja (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Steve Herrmann (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Murali Vijay (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Adam Arnold (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Rajeev Mathur (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Wayne Parnell (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Nadia Macerini (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Prabir Mukherjee (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Besides Chidambaram (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Irfan Hussain (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Nigel Lawson (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Rehman Makki (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Shankar Nathu Pansare (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Lake Town (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Prerna Suri (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Bekkay Harrach (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Mohammed Ajmal (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Shilpa Goenka (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Shakeel Ahmed (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Lonwabo Tsotsobe (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Gokul Parihar (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Ruby Hall Clinic (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Tom Watkins (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Amit Mishra (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Pragyan Ozha (1)</i>
+</p>
+<p class="cluster_group_item">
+<i>Rina Chandran (1)</i>
+</p>
+</div>
+<p class="cluster_rightmenu_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_other')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Other Names</p>
+<div class="right_block_scrollable">
+<p class="cluster_group_item">
+<a href="../../entities/en/3789.html" class="headline_link">Bharatiya Janata Party</a> (15)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/139843.html" class="headline_link">The Hindu</a> (7)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/29114.html" class="headline_link">CIA</a> (4)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/5084.html" class="headline_link">Al Qaeda</a> (3)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/189471.html" class="headline_link">Communist Party of India</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/1527.html" class="headline_link">Al-Jazira</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/33195.html" class="headline_link">Shiv Sena</a> (2)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/42249.html" class="headline_link">Drug Enforcement Agency</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/52657.html" class="headline_link">Khaleej Times</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/252030.html" class="headline_link">Premier League</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/26874.html" class="headline_link">Sky News</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/19396.html" class="headline_link">Congress Party</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/73044.html" class="headline_link">The Telegraph</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/525113.html" class="headline_link">Mumbai Police</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/1020651.html" class="headline_link">Jama'at-ud-Da'wah</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/106896.html" class="headline_link">Jyllands-Posten</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/86933.html" class="headline_link">Rajya Sabha</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/13037.html" class="headline_link">High Commission</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/28276.html" class="headline_link">Centraal Bureau</a> (1)</p>
+<p class="cluster_group_item">
+<a href="../../entities/en/197070.html" class="headline_link">FBI</a> (1)</p>
+</div>
+<p class="cluster_rightmenu_title">
+<span class="help_icon"><a href="javascript:OnShowHelp('readme.html#cluster_page_alerts')"><img src="/NewsExplorer/icons/help.png" alt="Help about this topic" class="screenonly" height="12" width="13" border="0"></a></span>Alerts</p>
+<div class="right_block_scrollable"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" colspan="3">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="middle"><a href="http://ec.europa.eu/dgs/jrc/index.cfm"><img rel="nofollow" border="0" height="31" width="178" alt="Joint Research Center" src="../../images/jrclogo180.gif" align="middle"></a></td><td align="center">
+<p class="footer">The selection and placement of stories are determined automatically by a computer program.</p>
+<p class="footer">This site is a joint project of DG-JRC and DG-Press.</p>
+<p class="footer">THIS SITE IS STILL WORK IN PROGRESS. THEREFORE PLEASE EXCUSE ANY PROBLEMS!</p>
+<p class="footer">Please send any comments or suggestions to <img alt="Email address as image." src="../../icons/email.gif" align="top"></p>
+<p class="footer">This site is a project of the SES Unit of the IPSC, DG-JRC.</p>
+<p class="footer">The information on this site is subject to a&nbsp;<a href="http://ec.europa.eu/dgs/jrc/index.cfm?id=2130&amp;lang=en#disclaimer">disclaimer.</a>
+</p>
+</td><td valign="middle"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

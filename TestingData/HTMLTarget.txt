@@ -1,0 +1,5 @@
+H:\Work\ACCURAT\FeaturesExtractor-Classifier\Input\EnglishCroatianTimesSeedCorpora\2010\crotiatimesseed-2010-11-03_ApcdJiLD_849_en.html
+H:\Work\ACCURAT\FeaturesExtractor-Classifier\Input\EnglishCroatianTimesSeedCorpora\2010\crotiatimesseed-2010-07-30_FgyvdWgs_723_en.html
+H:\Work\ACCURAT\FeaturesExtractor-Classifier\Input\EnglishCroatianTimesSeedCorpora\2010\crotiatimesseed-2010-07-13_fWiO0yNL_680_en.html
+H:\Work\ACCURAT\FeaturesExtractor-Classifier\Input\EnglishCroatianTimesSeedCorpora\2010\crotiatimesseed-2010-05-27_P8SNFfM2_607_en.html
+H:\Work\ACCURAT\FeaturesExtractor-Classifier\Input\EnglishCroatianTimesSeedCorpora\2010\crotiatimesseed-2010-05-05_WUmB2Xjc_585_en.html

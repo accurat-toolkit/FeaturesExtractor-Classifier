@@ -1,0 +1,602 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+<style type="text/css">
+* {margin: 0; padding: 0; border: none; text-decoration: none}
+html {
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg2.gif) #fff 0% 0% repeat-y;
+	color: #999;
+	padding-left: 39px;
+}
+body {
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg1.gif) 0% 0% repeat-x;
+	font: small "verdana", "tahoma", sans-serif;
+	padding-top: 40px;
+}
+#container {
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg4.gif) 69% 0% repeat-y;
+	width: 100%;
+}
+body div div {
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg5.gif) 69% 0% no-repeat;
+}
+body div div div {background: none;}
+div#sadrzaj {
+	width: 56%;
+	float: left;
+	padding: 4% 6% 4% 4%;
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg3.gif) 0% 0% no-repeat;
+	line-height: 150%;
+}
+
+div#stupac {
+	width: 23%;
+	float: left;
+	padding: 5% 3% 5% 7%;
+	background: none;
+}
+
+div#footer {
+	clear: both;
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg6.gif) 0% 0% repeat-x;
+}
+#footer div {background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg7.gif) 0% 0% no-repeat;}
+#footer div div {
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-bg8.gif)  69% 0% no-repeat;
+	height: 54px;
+}
+h1 
+{
+	font: italic bold 300% "Georgia", "Times New Roman", "Garamond" sans-serif;
+	color: #a5bdc1;
+	height: 1.5em;
+	position: relative;
+}
+#sadrzaj h1 a:link, #sadrzaj h1 a:visited {
+	color: #a5bdc1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	text-decoration: none;
+}
+h1 span {
+	position: absolute;
+	left: 10%;
+	top: 20%;
+	color: #E9EEEF;
+	z-index: 1;
+	font-size: 90%;
+}
+h2 {
+	font: italic bold 160% "Georgia", "Times New Roman", "Garamond" sans-serif;
+	color: #6C888D;
+	padding-bottom: .5em;
+}
+h3 {
+	font: italic bold 130% "Georgia", "Times New Roman", "Garamond" sans-serif;
+	padding-top: 1em;
+	color: #ADC5C9;
+}
+
+h4 {
+	text-align: right;
+	font: italic normal 130% "Georgia", "Times New Roman", "Garamond" sans-serif;
+	color: #ccc;
+	padding-top: 2em;
+}
+p {
+	margin-bottom: 5px;
+	text-align: justify;
+}
+a:link, a:visited {color: #006600; text-decoration: underline;}
+a:visited {text-decoration: none;}
+a:hover {color: #006600;}
+ul, ol {margin: 0 0 5px 2em; text-align: justify;}
+.quoted {
+	margin: 1em 2em;
+	padding: .2em .3em .2em 40px;
+	background: url(http://www.blog.hr/img/hr/design_pics/001/notes-quot.gif) #eee 1% 5% no-repeat;
+	border: solid #ddd;
+	border-width: 0 1px 1px 0;
+	text-align: justify;
+	color: #999;
+}
+.ispodposta {
+	text-align: right;
+	clear: both;
+	width: 100%;
+	background: #dce2e3;
+	padding: .1em .3em;
+	color: #999;
+	margin-top: 1em;
+}
+.ispodposta a {font-weight: bold;}
+.slika {
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-right: 1em;
+	border: 5px solid #eee;
+}
+.komentari {margin: 0;}
+.komentari li {
+	margin: 1em 0 0 2em;
+	padding: .1em .3em;
+	font-size: 86%;
+	color: #999;
+}
+.komentari li:hover {color: #666;}
+.sig {text-align: right;}
+.kalendar {
+	width: 190px;
+	text-align: center;
+}
+.kalendar td, .kalendar td a {line-height: 150%;}
+.kalendar td a {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	width: 100%;
+}
+.kalendar-aktivni-dani a {
+	background: #eef1f1;
+	border: solid #e6ebec;
+	border-width: 0 1px 1px 0;
+}
+.kalendar-aktivni-dani a:hover {
+	background: #e6ebec;
+	border: solid #a5bdc1;
+	border-width: 1px 0 0 1px;
+}
+.kalendar-neaktivni-dani {
+	background: #eee;
+	border: solid #ddd;
+	border-width: 0 1px 1px 0;
+	color: #999;
+}
+.kalendar-prazni-dani {
+	border: solid #efefef;
+	border-width: 0 1px 1px 0;
+}
+.kalendar-nazivi-dana td, .kalendar-mjesec-godina, .kalendar-strelica-natrag, .kalendar-strelica-naprijed {
+	color: #6c888d;
+	font-weight: bold;
+	border: solid #efefef;
+	border-width: 0 1px 1px 0;
+}
+</style>
+<!--[if lte IE 6]>
+	<style type="text/css">
+		#sadrzaj, #stupac {overflow-x: hidden;}
+		.kalendar-aktivni-dani {position: relative;}
+		.kalendar-aktivni-dani a {position: absolute; top: 0; left: 0;}
+	</style>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Backpack" href="http://backpack.blog.hr/rss.xml" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.blog.hr/wlw/rsd.php?12279" />
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+<meta name="keywords" content="backpack,Napokon na Krimu (Dan 8, 18.09.2010. - Jalta),blog,hrvatska,film,fotografija,gastronomija,ljubav,glazba,humor,internet,karijera,književnost,novac,obitelj,obrazovanje,osobno,poezija,politika,prièe,putopisi,raèunala,religija,seks,sex,sport,televizija,umjetnost,zdravlje,znanost,rasprave,diskusije,korisnik,politika,www" />
+<meta name="description" content="Napokon na Krimu (Dan 8, 18.09.2010. - Jalta),backpack.blog.hr" />
+<!-- (C)2000-2008 Gemius SA - gemiusAudience / blog.hr / Almost Cool -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('11Llb2M2CYWADltIr19DBqRvfZsiUbsTejmpwsF_HHT.Z7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.blog.hr/xgemius.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8213121-28']);
+  _gaq.push(['_setDomainName', '.blog.hr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="http://www.blog.hr/js/hr/prototype.lite.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/moo.ajax.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/frontend.js?=1"></script>
+
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+</head>
+<body>
+<div id="container"><div>
+<div id="sadrzaj">
+<a name="1628250816"></a>
+	
+<h2>Napokon na Krimu (Dan 8, 18.09.2010. - Jalta)<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbackpack.blog.hr%2F2010%2F09%2F1628250816%2Fnapokon-na-krimu-dan-8-18092010-jalta.2.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h2>
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+<p>Puno je ljudi èulo za Krim, manje ih zna da je Krim zapravo poluotok, a još manje ih zna da je s kontinentom povezan tek s par “niti” tj. uskih nasipa. Ako netko od glavešina jednog dana doðe na suludu ideju da od Krima napravi otok, mogao bi to uèiniti bez previše problema.<br />
+Nažalost, propustio sam sam ulaz na Krim. Uspio sam lijepo zaspati u autobusu, naroèito nakon što je èovjek do mene, zbog malo prostora za noge, upitao me negdje oko dva ujutro da li bih imao što protiv da se zamijenimo za mjesta. Naravno da ne. Naprotiv, iako uz prozor ima manje mjesta, bolje je za spavanje jer se možeš nasloniti na prozorsko staklo. Doduše, toliko je zmazano s vanjske strane (oèito nisu na ovom autobusu oprali stakla od trenutka kada su ga ponosno doveli iz Španjolske) da se jedva vidi pejzaž, ali èovjek nekada ne može birati.<br />
+Budim se s prvim ozbiljnim zrakama sunca. Negdje oko sedam. Oko mene nepregledne ravnice žute, suncem opaljene trave. Malo sam dezorijentiran. Ovo nisam oèekivao. Oèekivao sam brežuljke i planine i drveæe. A oko mene je samo ravnica dokle pogled seže i, da ne znam, rekao bih da sam negdje visoko u Andama, a ne na Krimu. Žutu idilu tek povremeno prekida poneko jezerce ili potok. Sve se doima mirno i nestvarno. <br />
+Prvo mjesto na Krimu doima se kao tipièan eksperiment komunizma: sivi stambeni blokovi, loše ceste, Lade... <br />
+“Koji je ovo grad?”, pitam suputnicu koja zaèudo govori engleski.<br />
+“Nije grad. Samo stop.”, odgovara mi.<br />
+Kasnije saznajem da je to bila Yevpatoriya, nekada vrlo važno središte krimskih Tatara s vrlo važnim derviškim samostanom, nekoliko džamija, armenskom crkvom. Sve dok Staljin ovo mjesto na samom ulazu u Krim nije odluèio pretvoriti u jedno od ljeèilišta i sagradio razne sanatorije u obliku masivnih sivih blokova.<br />
+Nastavljamo cestom prema Simferopolu, službenom glavnom gradu Krima. S jedne strane i dalje se pružaju nepregledne žute ravnice, ali s druge sada imam Crno more. Takoðer nepregledno jer nema otoka kao kod nas. U jednom trenutku prolazimo preko još jednog nasipa, širine naše ceste, koji dijeli nekakvo jezero (po svemu sudeæi slano zbog blizine mora) od otvorenog Crnog mora.<br />
+Krim je sa svojih 26,100 km2 najveæi polutok Ukrajine i na strateškom je položaju izmeðu Istoka i Zapada, dijeli Azovsko od Crnog mora, i nije ni èudo da je èesto mijenjao gospodare, od starih Grka koji su se tu naselili u prapovijesti do Tatara i Rusa pa do Nijemaca i Sovjeta u najnovije doba. Danas ima oko 2 milijuna stanovnika od kojih je èak 60% etnièkih Rusa, 28% Ukrajinaca, a 12% èine i dan danas Tatari, iako deportirani u vrijeme Staljina u Uzbekistan, Kazahstan i Sibir, pred dvadesetak godina dopušten im je povratak u domovinu. Stanovništvo Krima je veoma polarizirano kao uostalom i cijela Ukrajina. Tijekom ovog proputovanja Ukrajinom to nisam mogao ne zapaziti – istok i jug Ukrajine su proruski orijentirani i tu se ruski prièa više od ukrajinskog; zapad je ukrajinski nacionalizam na dijelu i ovdje se ruski pokušava istisnuti iz pamæenja; centar Ukrajine s Kijevom pokušava pomiriti ove toliko sliène, a istovremeno toliko razlièite polove.<br />
+Krim je dakle proruski orijentiran. Od 1954. godine službeno pripada Ukrajini, kada je Nikita Hrušèov ustanovio Autonomnu Republiku Krim sa svojim vlastitim parlamentom u Simferopolu, ali podreðen parlamentu u Kijevu, i ta Autonomna Republika Krim i dan danas postoji. <br />
+A Simferopol, danas grad od 345,000 stanovnika, zaista izgleda kao glavni grad jedne sovjetske tvorevine. Široke ulice, ne baš posve ispeglane. Sivi komunistièki blokovi na sve strane. Gradski autobusi i trolejbusi kojima je istekao rok trajanja još prije 40-tak godina. Nije ni èudo da se nitko ne zadržava duže u Simferopolu. Ovo je samo polazna toèka za daljnja putovanja po Krimu. Može se u Simferopol doæi vlakom, busom ili avionom, a onda dalje prema Jalti, Sevastopolju ili nekom od brojnih mjestašca na krimskoj crnomorskoj obali. I velika veæina ljudi to tako i èini.<br />
+“Dobro jutro, molim dokumente.”, odmah me zaustavlja policajac po izlasku iz autobusa na glavnom autobusnom kolodvoru u Simferopolu. Oèito je da pikira strance jer kako je inaèe upravo mene izabrao meðu desecima koji su se iskrcali u Simferopolu.<br />
+Dajem mu putovnicu s imigracijskim listiæem koji sam dobio na ulazu u zemlju.<br />
+“Nije dobro. Gornji dio listiæa su vam trebali uzeti na aerodromu u Kijevu i samo vam je trebao ostati donji.”, kažem mi. Osjeæam da na scenu polako stupa korumpiranost ukrajinskih policajaca. Ja samo sliježem ramenima i ponavljam na engleskom da ne razumijem iako perfektno kužim što mi krelac govori na ruskom. Slijedim ga u mali sobièak dva sa dva, s još dva policajca.<br />
+“No good.”, ponavljaju i oni. I poèeli nešto o narkoticima u Ukrajini. Tu sam ih izgubio. Ja sliježem ramenima. Tko vas jebe. Pasivnost je najbolja obrana. Od mene bakšiš, korumpirani krelci ukrajinski, neæete dobiti. Znam da glume snagu i da bih lako mogao pozvati njihovog šefa ili zaprijetiti im hrvatskim veleposlanstvom i odmah bi okrenuli prièu. A u najgorem sluèaju spreman sam i za malo pritvora ako baš bude potrebno. Tek toliko da imam o èemu pisati. Ali bakšiš zaboravite!<br />
+Nastavljam slijegati ramenima i tupo ih gledati. Nakon 15-minuta, pasiva je urodila plodom i ovi, izmoreni od stranca koji ništa ne kuži, samo mi pokazuju prstom prema vratima: <br />
+“Ok. Go.”<br />
+<br />
+Iako je moj bus iz Odese zapravo bio direktni bus za Jaltu, odluèio sam se iskrcati u Simferopolu. Možda je to malo èudno jer sam do Jalte mogao i brže i komotnije stiæi. Ali kad èovjek putuje, nije sve u komoditetu. Važno je uživanje, istraživanje neèeg novog i raznolikog, neèeg posebnog. A bome je poseban trolejbus broj 52. Ovaj oldtimer cijeli dan svakih 20-tak minuta kreæe sa stajališta ispred željeznièkog kolodvora u Simferopolu na 85 kilometara dugaèak put do Jalte. Da, dobro ste proèitali. 85 kilometara! Najduža je to linija trolejbusa na svijetu i najbolji naèin, iako istovremeno i najsporiji, da se upozna Krim, od pejzaža do njegovih ljudi koji redovito koriste ovaj trolejbus zbog njegove ekonomiène cijene. Samo 12 hrivnji ili 8,40 kuna za put od 85 kilometara!<br />
+Po izlasku iz Simferopola, pejzaž se poèinje mijenjati. One prvotne žute ravnice sada su zamijenili mali brežuljci s drveæem, a potom sve viši i viši, ne bi li se oni na kraju pretvorili u prave planine, uglavnom prekrivene borovima. Visoke planine odvajaju jug Krima od ostatka poluotoka i promatrajuæi njihove padine sa sjeverne strane, ima tu nešto poznatog. Podsjeæaju me na kontinentalne padine naših Velebita ili Biokova, takoðer obrasli u guste šume. I trolejbus se polako penje pa spušta, ponekad toliko sporo da bi èovjek mogao uz njega i brže iæi hodajuæi. Ali ne zamaram se. Vremena imam napretek.<br />
+Nakon posljednjeg prijevoja ukazuje se ponovno Crno more, ali duboko dolje, na dnu strmih litica. Južne litice krimskih planina, one okrenutu moru, su jako stjenovite i strme, a raslinje se uglavnom svodi na travu i ono što bismo mi nazvali makijom. Nevjerovatno koliko krimska crnomorska obala slièi našoj jadranskoj! Jedina je razlika da uz Krim nema otoka.<br />
+Moj smještaj u Jalti još jedan je komunistièki eksperiment. Na vrhu jednog od brežuljka, a Jalta je veoma brežuljkast grad, smješten je Pansionat Parkovy. Izgraðen je 1951. godine u obliku ogromnog kompleksa (naravno, jedina boja koja ovdje postoji je siva boja betona) koji je u vrijeme SSSR-a bio sanatorij tj. ljeèilište za široke sovjetske radnièke mase. Bila je tu bolnica, pa hotel i još nekoliko drugih zgrada, ali danas sve to leži potpuno devastirano. Maèke i psi lutalice hodaju okolo. Posvuda su ostavljene prazne boce i drugo smeæe. A zrak zaudara na urin. Od kompleksa danas je u funkciji samo hotel, uvjeren sam najjeftinija smještajna opcija u Jalti.<br />
+Ispuštam dušu ne bih li našao hotel i posebice glavni ulaz. Malo se gubim. Nakon sat vremena ulazim kroz jedina otvorena vrata u glomaznu sovjetsku zgradurinu i pitam Lenjinku na vratima:<br />
+“Recepcija?”<br />
+“Tu.”, pokaže mi na mali stoliæ i stolicu neposredno uz ulaz. Jadniju recepciju u životu nisam vidio. Ako se ovo može uopæe i nazvati recepcijom.<br />
+Moja rezervacija je tek za sutrašnji dan, a kako sam u Odesi proveo samo jedan, umjesto dva, dana, odluèio sam u Jalti dodati još jedno noæenje. Ne zato jer me Jalta nešto posebno zanima. Po svemu sudeæi rijeè je o turistièkoj meki Ukrajine, a takva mjesta pokušavam izbjegavati na svojim putovanjima. Dobra strana Jalte je da je odlièna odskoèna daska za istraživanje okolice u kojoj se nalaze mala ribarska mjesta, vinogradi, luksuzne palaèe...<br />
+Lenjinki uspjevam objasniti situaciju s rezervacijom. Doslovno joj trebam crtati na papir. Zove ona preko mobitela nekoga, ali taj netko se ne javlja. Pa zove s fiksnog, ali ni taj se ne javlja. Pa opet s mobitela... Igra telefonskih poziva s mobitela i fiksnog telefona traje dobrih 15 minuta sve dok napokon na drugom kraju netko nije digao slušalicu i dao Lenjinki dopuštenje da me primi, umjesto jednu noæ, na dvije noæi. Nevjerovatno kako i 20 godina od pada komunizma, stare navike ostaju.<br />
+Dok èekam kartonèiæ hotelskog gosta (kojeg prema uputama Lenjinke trebam obavezno cijelo vrijeme imati sa sobom) i kupone za doruèak, na recepciju dolazi jedina osoba za mog boravka u Ukrajini koja s ponosom može reæi da zna engleski. Vicevi o priglupim plavušama ovdje padaju u vodu jer ova zgodna plavuša, s prodornim tamnoplavim oèima, vjerovatno najljepšima koje sam vidio u životu, teèno se služi engleskim.<br />
+A onda je iza nje uslijedio desfile Lenjinki, Staljinki, Hrušèovki i Brežnjevki s brkovima i probudio me iz sna. Jednu od njih konstantno æu viðati sljedeæih dana na doruèku i bio sam korak od toga da joj posudim svoju britvicu da se obrije jer što je previše, previše je. Zar se “žena” nikada nije vidjela u ogledalu?!<br />
+Poslijepodne provodim najprije u ruènom pranju robe jer sam ostao bez majica kratkih rukava, a zatim i piskaranju. Negdje malo prije pet ponovno sam se susreo s Jurjem koji je preko Donjecka, gdje je imao uspješan susret sa Srnom, došao u Jaltu. Ovu noæ æemo biti cimeri u ovom bivšem sovjetskom sanatoriju.<br />
+Naveèer se spuštamo u Jaltu. Subota je i oèekujem zabavu. No, Jalta nije Kijev i oèito su moja oèekivanja bila nerealna. Sam grad od oko 80,000 stanovnika posve živi za turizam. Ali za masivni turizam kojeg nije briga za ekologiju, dugoroènu održivost, veæ samo iskljuèivo kako sada i odmah izmusti iz turista što više para. Pa znaèilo to i izgraditi èitav niz blješteæih barova, otvoriti èitav niz trgovina i postaviti hrpetinu štandova na kojima se može kupiti daleko više kineskih suvenira, nego autentiènih krimskih. Onda su tu i cijele pozornice na kojima se gosti mogu slikati obuèeni u raznorazne povijesne kostime. Pa slikanje sa starim motorima. Pa slikanje s raznim životinjama. I to ide u nedogled. A sve ne bi li se zaradilo 5 ili 10 hrivnji. Tu su i hoteli, nakrcani jedan do drugog, od starih sovjetskih sivih grdosija (na koje ne bi škodilo malo nabaciti boje) do ultra modernih takoðer grdosija koje opet strše u vizuri grada. Uništava se cijela obala ne bi li se privuklo što više gostiju. A kako nema nikakvog plani, svi grade kako žele i gdje žele. Jalta je jedan šuæ-muæ svega i svaèega. Ono što je Benidorm za Španjolsku ili Budva za Crnu Goru, to je Jalta za Ukrajinu. Da nema okolice koju vrijedi posjetiti, veæ bih sutra bio na prvom busu iz Jalte.<br />
+I turisti... Ah, turisti... Rusa, Ukrajinaca, Bjelorusa... Ovo je Ukrajina u svom najgorem ruhu.<br />
+<br />
+<div class="quoted"><br />
+TROLEJBUS 52 Simferopol-Jalta UAH 12,00<br />
+Smještaj u Hotel Parkovy (Sverdlova 34, Jalta) UAH 135,00 po osobi za noæenje s doruèkom u dvokrevetnoj sobi; UAH 170,00 za noæenje s doruèkom u jednokrevetnoj sobi (preko www.expedia.com)<br />
+</div><br />
+<br />
+<img src="http://img831.imageshack.us/img831/6999/001cal.jpg" alt="Trolejbus br 52 Simferopol-Jalta"/><br />
+<br />
+<img src="http://img28.imageshack.us/img28/9148/002mmf.jpg" alt="U trolejbusu br 52 Simferopol-Jalta"/><br />
+<br />
+<img src="http://img96.imageshack.us/img96/7766/003pr.jpg" alt="Moj hotel u Jalti - Pansionat Parkovy"/><br />
+<br />
+</p>
+<div class="ispodposta">
+11.09.2010. u 19:37 &bull;
+<a href="http://www.blog.hr/komentari/post/1628250816/napokon-na-krimu-dan-8-18092010-jalta.html" title="Ostavi komentar" target="_blank">0 Komentara</a> &bull;
+<a href="http://www.blog.hr/print/id/1628250816/napokon-na-krimu-dan-8-18092010-jalta.html" title="Isprintaj ovaj post" target="_blank">Print</a> &bull;
+<a href="http://backpack.blog.hr/2010/09/1628250816/napokon-na-krimu-dan-8-18092010-jalta.2.html" title="Link do ovog posta">#</a> &bull;
+<a href="#" title="Natrag na vrh">^</a>
+</div>
+<!-- Komentari ispod posta -->  
+
+<!-- Komentari ispod posta kraj -->
+
+</div>
+<div id="stupac">
+
+<p><a href="http://backpack.blog.hr"><img src="http://backpack.blog.hr/slike/logo.jpg" alt="" class="logo"></a></p>
+
+<!-- Logo kraj -->
+
+<!-- Molimo da ne micete ovu varijablu jer
+ce se koristi za eventualne obavijesti. Hvala! -->
+<br><br><a href="http://www.igre.hr" target="_blank">Igre.hr</a><br>
+Igrajte najbolje online igre i igrice<br><br>
+<!-- Kraj -->
+
+<!-- Prvi box -->
+
+<h3>Dostupni putopisi</h3>
+<p><a href="http://backpack.blog.hr/2004/11/index.html" target="_blank">Dvije Afrike (Maroko & Mali) </a><br />
+<br />
+<a href="http://backpack.blog.hr/2005/09/index.html" target="_blank">Izmeðu neba i zemlje (Peru, Bolivija, Èile & Argentina)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2006/10/index.html" target="_blank">Azija (Japan, Hong Kong, Makao, Kina)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2007/01/index.html" target="_blank">Ne! Vijetnam, Kambodža i Laos nisu ratovi! (Vijetnam, Kambodža, Tajland, Malezija)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2007/12/index.html" target="_blank">Kod strica Busha (SAD)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2008/10/index.html" target="_blank">Moja Afrika (Egipat, Južna Afrika, Lesoto, Svaziland, Mozambik, Malavi, Zambija, Tanzanija)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2009/02/index.html" target="_blank">Gram i pol curryja (Indija & Nepal)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2009/10/index.html" target="_blank">U zagrljaju pernate zmije (Gvatemala, El Salvador, Honduras, Meksiko)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2010/06/index.html" target="_blank">Bijeg u talijansku potpeticu (Bari, Ostuni, Polignano a Mare, Taranto)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2010/09/index.html" target="_blank">Istok Ukrajina (Ukrajina)</a><br />
+<br />
+<a href="http://backpack.blog.hr/2010/10/index.html" target="_blank">Na èajanki s Hezbolahom (Libanon, Sirija)</a><br />
+</p>
+
+<!-- Prvi box kraj -->
+
+<!-- Drugi box -->
+
+<h3>O autoru</h3>
+<p>"Backpacking? Što je to?", upitao sam se pred nekoliko godina kada sam jednog dana sluèajno ušao na jednu backpacking stranicu. To je bila terra incognita, ne samo meni, veæ i ljudima koji me okružuju. Poèeo sam èitati tu stranicu, potom još jednu, i još jednu nakon nje... I tako je zapoèela moja velika romansa s backpacking putovanjima...<br />
+<br />
+Ime mi je Vedran Aneliæ. Imam «tek» 29 godina, ali i ja osjeæam da me godine nemilosrdno gaze (<img src="http://www.blog.hr/img/hr/smiles/rofl.gif" alt="rofl" border="0"/>) pa stvari koje sam bez puno problema mogao napraviti prije desetak godina, sada me bolovi u križima, slab vid, senilnost i sliène stvari sprjeèavaju. Zvuèim sam sebi ko stari noniæ... Šala mala... Roðeni sam Rjeèanin, ali sam kao crna ovca svoje obitelji otišao na studij u Zagreb (i NAPOKON ga privodim kraju) i ostao. Ipak, Zagreb je Zagreb i u ovom trenutku grad baš po mojoj mjeri. Što æe biti za 10-20 godina, ne znam. Nisam Nostradamus. <br />
+I da, ovisnik sam! Otvoreno priznajem. Drogiram se! A moja droga su putovanja. Kada sam zapoèeo s backpackingom sada veæ daaaaavneeee 2001. godine, bilo je to jedno kratko i organizacijski lagano putovanje u Maðarsku, Slovaèku i Èešku, a nakon toga put me odveo u gotovo sve krajeve svijeta: Maroko, Mali, Peru, Bolivija, Èile, Japan, Kina, Vijetnam, Kambodža, SAD itd itd itd... Moja droga je skuplja od hašiša i heroina, ali s puno više vitamina <img src="http://www.blog.hr/img/hr/smiles/zujo.gif" alt="zujo" border="0"/> I ne pokušavajte! Ne želim na odvikavanje!<br />
+A gdje je bilo najljepše? Doma! Doma je uvijek najljepše! I nije to samo isprazna fraza. Svaka zemlja koju sam posjetio je drugaèija od one prethodne i svaka je zanimljiva na svoj naèin. I ne postoje dvije iste zemlje. Ali istina je i da se nakon svakog puta uvijek najradije vraæam svojoj garsonjerici od 25 kvadrata. S novim uspomenama koje su moj «fiks» do nekog sljedeæeg putovanja u neki novi neistraženi kutak našeg treæeg kamenèiæa od sunca.<br />
+<br />
+Trenutna visina letvice: 67 zemalja. Nije da se hvalim... <img src="http://www.blog.hr/img/hr/smiles/wave.gif" alt="wave" border="0"/><br />
+<br />
+<br />
+<b>Posjeæene zemlje/teritoriji</b><br />
+01. Albanija<br />
+02. Argentina<br />
+03. Austrija<br />
+04. Belgija<br />
+05. Bolivija<br />
+06. Bosna i Hercegovina<br />
+07. Bugarska<br />
+08. Burma (Mijanmar)<br />
+09. Crna Gora<br />
+10. Èeška<br />
+11. Èile<br />
+12. Danska<br />
+13. Egipat<br />
+14. El Salvador<br />
+15. Estonija<br />
+16. Finska<br />
+17. Francuska<br />
+18. Grèka<br />
+19. Gvatemala<br />
+20. Honduras<br />
+21. Hong Kong<br />
+22. Hrvatska<br />
+23. Indija<br />
+24. Irska<br />
+25. Italija<br />
+26. Japan<br />
+27. Južna Afrika<br />
+28. Južna Koreja<br />
+29. Kambodža<br />
+30. Kina<br />
+31. Kosovo<br />
+32. Lesoto<br />
+33. Libanon<br />
+34. Lihtenštajn<br />
+35. Maðarska<br />
+36. Makao<br />
+37. Makedonija<br />
+38. Malavi<br />
+39. Malezija<br />
+40. Mali<br />
+41. Maroko<br />
+42. Meksiko<br />
+43. Monako<br />
+44. Mozambik<br />
+45. Nepal<br />
+46. Nizozemska<br />
+47. Njemaèka<br />
+48. Peru<br />
+49. Portugal<br />
+50. Rumunjska<br />
+51. Sirija<br />
+52. Sjedinjene Amerièke Države<br />
+53. Slovaèka<br />
+54. Slovenija<br />
+55. Srbija<br />
+56. Svaziland<br />
+57. Španjolska<br />
+58. Švedska<br />
+59. Švicarska<br />
+60. Tajland<br />
+61. Tanzanija<br />
+62. Turska<br />
+63. Ukrajina<br />
+64. Vatikan<br />
+65. Velika Britanija<br />
+66. Vijetnam<br />
+67. Zambija<br />
+<br />
+<br />
+<b>Putovao preko zraènih luka</b><br />
+01. Amsterdam Schiphol (NED)<br />
+02. Balaton (HUN)<br />
+03. Baltimore (USA)<br />
+04. Bamako (MLI)<br />
+05. Bangkok Suvarnabhumi (THA)<br />
+06. Barcelona El Prat (ESP)<br />
+07. Bari (ITA)<br />
+08. Beijing Capital (CHN)<br />
+09. Beirut Rafik Hariri (LEB)<br />
+10. Berlin Schonefeld (GER)<br />
+11. Bilbao (ESP)<br />
+12. Birmingham (GBR)<br />
+13. Boston Logan (USA)<br />
+14. Bruxelles Charleroi (BEL)<br />
+15. Bruxelles National (BEL)<br />
+16. Budapest Ferihegy (HUN)<br />
+17. Buffalo (USA)<br />
+18. Cairo (EGY)<br />
+19. Cape Town (RSA)<br />
+20. Caracas Maiquetia Simon Bolivar (VEN)<br />
+21. Casablanca Mohammed V (MRC)<br />
+22. Chicago O'Hare (USA)<br />
+23. Copenhagen Kastrup (DEN)<br />
+24. Cork (IRL)<br />
+25. Danang (VIE)<br />
+26. Doha (QAT)<br />
+27. Dortmund (GER)<br />
+28. Dubai (UAE)<br />
+29. Dublin (IRL)<br />
+30. Dubrovnik Èilipi (CRO)<br />
+31. Dusseldorf (GER)<br />
+32. Frankfurt (GER)<br />
+33. Girona Costa Brava (ESP)<br />
+34. Graz Thalerhof (AUT)<br />
+35. Hahn (GER)<br />
+36. Hanoi Noi Bai (VIE)<br />
+37. Ho Chi Minh City (VIE)<br />
+38. Hong Kong (HKG)<br />
+39. Istanbul Ataturk (TUR)<br />
+40. Johannesburg O Tambo (RSA)<br />
+41. Kathmandu Tribhuvan (NEP)<br />
+42. Kerry (IRL)<br />
+43. Kijev Boryspil (UKR)<br />
+44. Koln/Bonn (GER)<br />
+45. Krabi (THA)<br />
+46. Kuala Lumpur (MAL)<br />
+47. Lima Jorge Chavez (PER)<br />
+48. Lisbon (POR)<br />
+49. Liverpool John Lennon (GBR)<br />
+50. London Gatwick (GBR)<br />
+51. London Heathrow (GBR)<br />
+52. London Luton (GBR)<br />
+53, London Stansted (GBR)<br />
+54. Ljubljana Brnik (SLO)<br />
+55. Madrid Barajas (ESP)<br />
+56. Marakesh Menara (MRC)<br />
+57. Mexico City Benito Juarez (MEX)<br />
+58. Mumbai Chatrapati Shivaji (IND)<br />
+59. Munchen (GER)<br />
+60. New Delhi Indira Gandhi (IND)<br />
+61. Osaka Kansai (JPN)<br />
+62. Phu Quoc (VIE)<br />
+63. Priština (KOS)<br />
+64. Rijeka (CRO)<br />
+65. Santander (ESP)<br />
+66. Santiago de Chile (CHI)<br />
+67. Sao Paulo Guarulhos (BRA)<br />
+68. Sarajevo Butmir (BIH)<br />
+69. Seoul Incheon (KOR)<br />
+70. Shannon (IRL)<br />
+71. Simferopol (UKR)<br />
+72. Sofia (BUL)<br />
+73. Tallinn (EST)<br />
+74. Tapachula (MEX)<br />
+75. Tokyo Narita (JPN)<br />
+76. Trieste Ronchi dei Legionari (ITA)<br />
+77. Udon Thani (THA)<br />
+78. Venezia Marco Polo (ITA)<br />
+79. Venezia Treviso (ITA)<br />
+80. Wien Schwechat (AUT)<br />
+81. Yangon (MYN)<br />
+82. Zadar (CRO)<br />
+83. Zagreb Pleso (CRO)<br />
+84. Zanzibar (TAN)<br />
+85. Zurich (SWI)<br />
+<br />
+<b>Letio s avioprijevoznicima</b><br />
+01. Adria Airways<br />
+02. Aer Lingus<br />
+03. Aeromexico<br />
+04. Air Asia<br />
+05. All Nippon Airlines (ANA)<br />
+06. Austrian<br />
+07. Brussels Airlines<br />
+08. Clickair<br />
+09. Condor<br />
+10. Croatia Airlines<br />
+11. Easyjet<br />
+12. Egyptair<br />
+13. Emirates<br />
+14. Germanwings<br />
+15. Go Air<br />
+16. Iberia<br />
+17. Jet Airways<br />
+18. Lufthansa<br />
+19. Malev<br />
+20. Myair<br />
+21. Nok Air<br />
+22. Qatar Airways<br />
+23. Royal Air Maroc<br />
+24. Ryanair<br />
+25. South African Airways<br />
+26. Southwest<br />
+27. Sterling<br />
+28. Swiss<br />
+29. Taca Airlines<br />
+30. TAP Air Portugal<br />
+31. TUI Fly<br />
+32. Turkish Airlines<br />
+33. Vietnam Airlines<br />
+34. Volare<br />
+35. Wizzair<br />
+<br />
+<b>Posjeæena skijališta</b><br />
+01. Bansko (BUL)<br />
+02. Bormio (ITA)<br />
+03. Borovets (BUL)<br />
+04. Cortina d'Ampezzo (ITA)<br />
+05. Gerlitzen (AUT)<br />
+06. Golte (SLO)<br />
+07. Gulmarg (IND)<br />
+08. Hintertux (AUT)<br />
+09. Jahorina (BIH)<br />
+10. Kobla (SLO)<br />
+11. Kopaonik (SRB)<br />
+12. Kranjska Gora (SLO)<br />
+13. Krvavec (SLO)<br />
+14. Lake Placid (USA)<br />
+15. Lenzerheide (SWI)<br />
+16. Livigno (ITA)<br />
+17. Malbun (LIE)<br />
+18. Mariborsko Pohorje (SLO)<br />
+19. Mölltaler (AUT)<br />
+20. Nassfeld (AUT)<br />
+21. Obertauern (AUT)<br />
+22. Phoenix Park (KOR)<br />
+23. Piancavallo (ITA)<br />
+24. Popova Šapka (MKD)<br />
+25. Santa Caterina (ITA)<br />
+26. Seoul Woongjin Snowdoci (KOR)<br />
+27. Sljeme (CRO)<br />
+28. St Anton am Arlberg (AUT)<br />
+29. St Moritz (SWI)<br />
+30. Tarvisio (ITA)<br />
+31. Vogel (SLO)<br />
+32. Yongpyong (KOR)<br />
+</p>
+
+<!-- Drugi box kraj -->
+
+<!-- Treci box -->
+
+<h3>Kontakt</h3>
+<p><a href="mailto:backpack@post.t-com.hr">Vedran Aneliæ<br />
+</p>
+
+<!-- Treci box kraj -->
+
+<!-- Cetvrti box -->
+
+<h3>Linkovi</h3>
+<p><a href="http://www.puturist.com" target="_blank"><img src="http://img139.imageshack.us/img139/2308/mailmg1ea9.jpg" alt="Puturist"/></a><br />
+<a href="http://www.forum.hr/forumdisplay.php?f=43" target="_blank"><img src="http://img407.imageshack.us/img407/4664/vbulletin3logowhiteij8ko9.gif" alt="Forum.hr"/></a><br />
+<a href="http://members.virtualtourist.com/m/6116a/" target="_blank"><img src="http://img170.imageshack.us/img170/535/virtualtouristap0.gif" alt="Virtualtourist"/></a><br />
+<a href="http://www.lonelyplanet.com/thorntree/index.jspa" target="_blank"><img src="http://img90.imageshack.us/img90/4828/logolpaf8.gif" alt="Lonely Planet Thorntree travel forum"/></a><br />
+<a href="http://www.skijanje.hr" target="_blank"><img src="http://img228.imageshack.us/img228/4559/x20161121004706413.jpg" alt="Hrvatski ski magazin"/></a><br />
+<a href="http://www.punto-zagreb.hr" target="_blank"><img src="http://img341.imageshack.us/img341/6197/puntoza1eng.jpg" alt="Punto Zagreb, tourism with a smile. Zagreb and Croatia sightseeing tours."/></a><br />
+<a href="http://www.adriatictravel.eu" target="_blank"><img src="http://img223.imageshack.us/img223/7636/adriaticlogojpego.jpg" alt="Adriatic Trade & Travel"/></a><br />
+<br />
+<br />
+<a href="http://www.ryanair.com" target="_blank">Ryanair</a><br />
+<a href="http://www.easyjet.com" target="_blank">Easyjet</a><br />
+<a href="http://www.germanwings.com" target="_blank">Germanwings</a><br />
+<a href="http://www.tuifly.com" target="_blank">TuiFly</a><br />
+<a href="http://www.wizzair.com" target="_blank">Wizzair</a><br />
+<a href="http://www.aerlingus.com" target="_blank">Aer Lingus</a><br />
+<a href="http://www.vueling.com" target="_blank">Vueling</a><br />
+<a href="http://www.airasia.com" target="_blank">Air Asia</a><br />
+<a href="http://www.airarabia.com" target="_blank">Air Arabia</a><br />
+<br />
+<table width="83" border="0" cellspacing="0" cellpadding="0"><tr><td width="83" height="19"><a href="http://www.groundfighter.com" target="_blank"><img src="http://free-counter-plus.com/counter/?id=555474440&style=10" width="83" height="19" border="0" alt="mixed martial arts"></a></td></tr><tr><td height="13"><a href="http://free-counter-plus.com" target="_blank"><img src="http://free-counter-plus.com/counter/images/v10/sponsor.gif" width="49" alt="Free Web Counter" height="13" border="0"></a><a href="http://free-counter-plus.com/counter/stats/stats.asp?id=555474440" target="_blank"><img src="http://free-counter-plus.com/counter/images/v10/stats.gif" width="34" height="13" border="0"></a></td></tr></table><table width="83" border="0" cellpadding="0" cellspacing="0"><tr align="center"><td height="15" colspan="2"><font size="1" face="Arial"><a href="http://www.groundfighter.com" target="_blank">mixed martial arts</a></font></td></tr></table></p>
+
+<!-- Cetvrti box kraj -->
+
+</div>
+<div id="footer"><div><div>
+ 
+</div></div></div></div></div>
+</body>
+</html>

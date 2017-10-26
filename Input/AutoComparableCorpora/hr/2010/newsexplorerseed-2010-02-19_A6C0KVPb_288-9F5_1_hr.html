@@ -1,0 +1,860 @@
+
+ <script type='text/javascript'>
+  var sirx = screen.width;
+  var visy = screen.height;
+  var dubb = screen.colorDepth;
+  var dogodine = new Date();
+  dogodine.setDate(dogodine.getDate() + 365);
+  var the_cookie = 'rezolucija=' + sirx + ' x ' + visy + ' (' + dubb + ')';
+  var the_cookie = the_cookie + ';expires=' + dogodine.toGMTString();
+  document.cookie = the_cookie;
+ </script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='pragma' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='imagetoolbar' content='no'>
+<meta http-equiv='content-type' content='text/html; charset=iso-8859-2'>
+<title>Dnevnik : Bo¾ica Europa</title>
+<style type="text/css">
+ body { 
+  margin: 30px;
+  background-color: #f3f5f9;
+ }
+ a:link {
+  color: #333377; 
+  text-decoration: none;
+ }
+ a:visited {
+  color: #7777dd; 
+  text-decoration: none;
+ }
+ a:hover {
+  color: #337733; 
+  text-decoration: underline;
+ }
+ a:active {
+  color: #ff0000; 
+  background-color: transparent;
+  text-decoration: underline;
+ }
+ div { 
+  font: 100% Verdana, Tahoma, Arial; 
+  cursor: default; 
+ }
+ a { 
+  cursor: pointer; 
+ }
+ p.slik_p {
+  margin-left: 0px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  text-align: center; 
+ }
+ hr.crta {
+  background-color: #abcdef;
+  align: right;
+  height: 1px;
+  border-width: 0px;
+  width: 100%;
+  margin-top: 7px;
+  margin-right: 0px;
+  margin-bottom: 7px;
+ }
+ hr.c_kom {
+  background-color: #abcdef;
+  align: right;
+  height: 1px;
+  border-width: 0px;
+  width: 92%;
+  margin-top: 7px;
+  margin-right: 0px;
+  margin-bottom: 7px;
+ }
+ img.slik_a {
+  margin: 0px;
+  border: 1px solid #ddddef;
+  padding: 7px;
+  background: white;
+ }
+ img.fotk_a {
+  border: 1px solid #7893d1; 
+  padding: 5px; 
+ }
+ img.sl_li {
+  margin-right: 5px;
+  margin-bottom: 2px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  background: white;
+ }
+ img.sl_de {
+  margin-left: 5px;
+  margin-bottom: 2px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  background: white;
+ }
+ #d_slik {
+  margin-left: 0px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+  /* -webkit-transition: -webkit-transform 0.5s ease-in; */
+ }
+ .t_nas {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 20px; 
+  font-weight: bolder; 
+  color: #dd0303; 
+  background-color: transparent;
+  cursor: default; 
+ }
+ .tekst {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  /* text-indent: 7px; */
+  text-align: justify;
+  cursor: default;
+ }
+ .slik_d {
+  margin-left: 0px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+ }
+ .navod {
+  padding: 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  text-indent: 7px; 
+  text-align: justify; 
+  border: #fedcba 1px solid; 
+  background: #eeeeee; 
+  cursor: default; 
+ }
+ .navod_kom {
+  padding: 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 10px; 
+  text-indent: 0px; 
+  text-align: justify; 
+  border: #abcdef 1px solid; 
+  background: #eeeeee; 
+  cursor: default; 
+  -moz-border-radius: 1%; 
+ }
+ .koma {
+  margin-top: 5px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 11px; 
+  color: #1277d3; 
+  cursor: default; 
+ } 
+ .rub_kom {
+  padding: 7px;
+  border: 1px solid #238cff;
+  background-color: #f3f3f3;
+  text-align: justify; 
+ }
+ .rub_koment {
+  padding: 7px;
+  border: 1px solid #1e77d3;
+  background-color: #efefef;
+  text-align: justify; 
+ }
+ .blok {
+  margin: 3px 10px 3px 30px; 
+  padding: 17px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  text-indent: 0px; 
+  text-align: justify; 
+  border: #abcdef 1px solid; 
+  background-color: #eeeeff; 
+  -moz-border-radius: 2%; 
+  -moz-outline-radius: 2%; 
+  cursor: default; 
+ }
+ .mali { 
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  color: #ffffff; 
+  cursor: default; 
+ }
+ .izbor {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  color: #7893d1; 
+  cursor: default;
+ } 
+ .njiva {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  font-weight: normal; 
+  font-style: normal; 
+  text-indent: 0px; 
+  color: #000033; 
+  border: 1px solid #7893d1;
+  background-color: #fefeff;
+  cursor: default;
+ } 
+ .njivica {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  font-weight: normal; 
+  font-style: normal; 
+  text-indent: 0px; 
+  color: #000033; 
+  border: 1px solid #abcdef;
+  background-color: #fefeff;
+ } 
+ .osoba {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 11px; 
+  color: #1e77d3; 
+  cursor: default; 
+ }
+ .brojac {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 9px; 
+  color: #1e77d3; 
+  cursor: default; 
+ }
+ .spomen {
+  font-family: Arial, "Times New Roman", Times, serif; 
+  font-size: 12px; 
+  font-weight: bold; 
+  color: #ffff99; 
+  background-color: transparent;
+  cursor: default; 
+ }
+ .ankica { 
+  /* width: 99%; */
+  /* padding-left: 23px; */
+  border: 2px solid #abcdef; 
+  /* background-color: #abcdef; */
+  /* background: #1e77d3; */
+  font-family: Tahoma, Verdana, Arial; 
+  font-size: 12px; 
+  color: #012345; 
+  }
+ .okolo {
+  border: 2px solid #abcdef;
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  color: #012377;
+  -moz-border-radius: 1%;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#f3f5f9, endColorStr=#7894fb);
+ }
+ .staklar {
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  -ms-filter: 'alpha (opacity=70)';
+  filter: alpha (opacity=70);
+ }
+ .anketar {
+  margin: 0px 0px 0px 0px;
+  border: 2px solid #d7d7f7;
+  padding: 0px;
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  color: #373773;
+  -moz-border-radius: 1%;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#f3f5f9, endColorStr=#7894fb);
+ }
+ .stup {
+  text-indent: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20%;
+  text-align: justify;
+  font-size: 0.8em;
+ }
+ .kura {
+  font-family: 'Courier New';
+  font-size: 11px;
+ }
+ .content .pre {
+  font-family: 'Courier New';
+  font-size: 11px;
+ }
+ .gumbic {
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: #012345;
+  border: 2px outset #cdefff;
+  background-color: #abcdef;
+  cursor: hand;
+  width: 77px;
+  height: 24px;
+ }
+ .srez {
+  /* width: 100%; */
+  border: 1px solid #abcdef;
+  padding: 3px;
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: #1e77d3;
+  text-align: center;
+  cursor: pointer;
+ }
+ .nasank { 
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #0777d3; 
+  cursor: default; 
+ }
+ .header {
+  font-size: 100%;
+  font-weight: bold;
+ }
+ .b_nas {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #ad0303; 
+  cursor: default; 
+ }
+ .k_nad {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 10px; 
+  font-weight: normal; 
+  color: #0777d3; 
+  text-transform: uppercase;
+  cursor: default; 
+ }
+ .k_nas {
+  font-family: 'Arial Black', Verdana, Arial, Helvetica; 
+  font-size: 15px; 
+  font-weight: 900; 
+  color: #033777; 
+  cursor: default; 
+ }
+ .k_pod {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: bold; 
+  color: #0777d3; 
+  cursor: default; 
+ }
+ .k_uvo {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: bold; 
+  color: #0777d3; 
+  cursor: default; 
+ }
+ .k_vez {
+  font-family: Arial, Tahoma, Helvetica; 
+  font-size: 11px; 
+  font-weight: normal; 
+  color: #7999d3; 
+  cursor: default; 
+ }
+ .k_kom {
+  font-family: Tahoma, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: normal; 
+  color: #030777; 
+  cursor: default; 
+ } 
+ .k_dod {
+  font-family: Tahoma, Verdana, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: normal; 
+  color: #cd0303; 
+  cursor: default; 
+ }
+ .p_nas {
+  font-family: 'Arial Black', Verdana, Arial, Helvetica; 
+  font-size: 12px; 
+  font-weight: bold; 
+  color: #033777; 
+  cursor: default; 
+ }
+ .ruka {
+  cursor: pointer;
+ }
+ .tx_li {
+  text-align: left;
+ }
+ .tx_sr {
+  text-align: center;
+ }
+ .tx_de {
+  text-align: right;
+ }
+ .raz_li {
+  padding-left: 40px;;
+ }
+ .ram0 {
+  margin: 0px;
+ }
+ .rowEven {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: top;
+  padding: 3px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #aa9c92;
+  height: 30px;
+ }
+ .rowOdd {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fffafa;
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: top; 
+  padding: 3px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #aa9c92;
+ }
+ .strila {
+  margin: 0px;
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 0px;
+ }
+ .veznik {
+  float: left; 
+  margin: 0px 5px 3px 0px;
+  padding: 3px;
+  /* border: 1px dotted #7893d1; */
+  /* background-color: #ffffff; */
+  text-indent: 0px;
+  font-size: 11px;
+  color: 7893d1;
+ }
+ .redPar {
+  background-color: #d3d3d3;
+  color: #000077;
+ }
+ .redNepar {
+  background-color: #f7f7f7;
+  color: #000033;
+ }
+ .redOznA {
+  background-color: #97dd97;
+  color: #ffffff;
+  cursor: crosshair;
+ }
+ .redTaK {
+  background-color: #f7f700;
+  color: #000033;
+ }
+</style>
+<script type="text/javascript">
+ //
+ var ipl = new Image(38,38);
+ ipl.src = "slike/design/palac-g.png";
+ var iplx = new Image(38,38);
+ iplx.src = "slike/design/palac-gx.png";
+ var ida = new Image(16,16);
+ ida.src = "slike/design/koment-da.png";
+ var idax = new Image(16,16);
+ idax.src = "slike/design/koment-dax.png";
+ var ine = new Image(16,16);
+ ine.src = "slike/design/koment-ne.png";
+ var inex = new Image(16,16);
+ inex.src = "slike/design/koment-nex.png";
+ //
+ if (window.XMLHttpRequest)
+ { // IE7+, Firefox, Chrome, Opera, Safari
+  var xmlhttp = new XMLHttpRequest();
+ }
+ else
+ { // IE5, IE6
+  var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+ }
+ //
+ var redAngel = 0;
+ //
+// -----
+function angelRedak(kaj, farba)
+{
+ iznad = kaj.rowIndex;
+ if (iznad != redAngel) kaj.className = farba;
+}
+// -----
+function dajVrimE()
+{
+ elPor = document.getElementById('poruka');
+ elUra = document.getElementById('urar');
+ today = new Date();
+ h = today.getHours();
+ m = today.getMinutes();
+ s = today.getSeconds();
+ // nula ispred broja <10
+ h = nulaIspreD(h);
+ m = nulaIspreD(m);
+ s = nulaIspreD(s);
+ //
+ du = elPor.value.length;
+ pozz = 63777 - du; // 65535
+ //
+ elUra.innerHTML = h + ':' + m + ':' + s + ' &nbsp; ( '+ pozz + ' )';
+ //
+ if (pozz < 0) 
+ {
+  vis = du - 63777;
+  tit = " UPOZORENJE: " + vis + " ZNAKOVA PREVI©E! ";
+  elUra.style.color = '#ff0000';
+ }
+ else
+ {
+  tit = " Sat i broj preostalih znakova ";
+  elUra.style.color = '#7893d1';
+ }
+ elUra.setAttribute('title', tit)
+ //
+ t = setTimeout('dajVrimE()', 500);
+}
+//
+function nulaIspreD(i)
+{
+ if (i < 10) { i = '0' + i; }
+ return i;
+}
+// -----
+function divSlikNov(koja, koliko)
+{
+ diva = document.getElementById(koja);
+ diva.style.MozTransform = 'scale(' + koliko + ')';
+ diva.style.webkitTransform = 'scale(' + koliko + ')';
+}
+// -----
+function divSlikSta(koja)
+{
+ diva = document.getElementById(koja);
+ // diva.MozTransformOrigin;
+ // diva.webkitTransformOrigin;
+ diva.style.MozTransform = 'scale(1)';
+ diva.style.webkitTransform = 'scale(1)';
+}
+// -----
+function miNjaj(imgDocID, imgObjName)
+{
+ document.images[imgDocID].src = eval(imgObjName + ".src");
+ return true;
+}
+// -----
+function misStO(sto)
+{
+ otvor = window.open('dodaci/kliker.php?redar='+sto,'_blank','width=397,height=197,resizable=no');
+ // otvor.close();
+}
+// -----
+function naVrH()
+{
+ window.scroll(0, 0);
+}
+// -----
+function noviLisT(url, width, height)
+{
+ ostal = "width=" + parseInt(width + 47) + ",height=" + parseInt(height + 47) + ",status=no,toolbar=no,menubar=no,location=no";
+ otvor = window.open(url, '', ostal);
+ otvor.focus();
+}
+// -----
+function noviProzoR(uri, width, height, sto)
+{
+ if (sto == 'img')
+ {
+  ostal = "width=" + width + ",height=" + height + ",status=no,toolbar=no,menubar=no,location=no,scrollbars=no,resizable=no";
+ }
+ else
+ {
+  ostal = "width=" + width + ",height=" + height + ",status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+ }
+ otvor = window.open(uri, '', ostal);
+ otvor.focus();
+}
+// -----
+function zaTvoR()
+{
+ window.close();
+ return false;
+}
+// -----
+function cistiPoljE()
+{
+ document.forms.prikaz.reset();
+}
+// -----
+function poSaljI(puce)
+{
+ var xva = document.getElementById('vaznox');
+
+ if (document.forms.prikaz.faca.value == '' || document.forms.prikaz.poruka.value == '')
+ {
+  // alert('Ime i komentar moraju biti upisani!   ');
+  xva.style.color = '#ff7373';
+  xva.style.fontWeight = '900';
+  xva.innerHTML = 'Ime i komentar moraju biti upisani!   ';
+  return false;
+ }
+ else 
+ {
+  // document.forms.prikaz.submit();
+  puce.value = ' Gotovo ';
+  puce.disabled = true;
+  puce.form.submit();
+ }
+}
+// -----
+function iMejL(ajn, cvaj, draj)
+{
+ document.write(ajn + cvaj + '&#64;' + draj);
+}
+// -----
+function imaIme(lokva, skj)
+{
+ frk = document.forms['prikaz']; 
+ xis = document.getElementById('faca').value;
+ grr = document.getElementById('grsk');
+ //
+ if ((skj == 0) && (xis == 'Gost'))
+ {
+  // document.getElementById('faca').value = '';
+  lokva.value = '';
+ }
+ //
+ if (skj == 3)
+ {
+  if ((xis == '') || (xis.length) < 2)
+  {
+   grr.style.color = '#ffa3a3';
+   grr.innerHTML = ' najmanje 2 slova'
+   frk.faca.focus();
+   frk.faca.style.backgroundColor = '#ffa3a3';
+   // document.prikaz.faca.focus();
+  }
+  else
+  {
+   grr.innerHTML = ''
+   frk.faca.style.backgroundColor = '#ffffff';
+  }
+ }
+}
+// -----
+function poTrazZi()
+{
+ pitaj = document.forms.dnevba.qb.value;
+ if (pitaj.length < 2)
+ {
+  alert('Unesite rijeè s najmanje dva slova!   ');
+  return false;
+ }
+}
+// -----
+function pozTrg(lokva)
+{
+ grr = document.getElementById('upDST');
+ if (lokva.value.length < 2)
+ {
+  grr.style.backgroundColor = '#ff0303';
+  grr.disabled = true;
+ }
+ else
+ {
+  grr.style.backgroundColor = '#03ff03';
+  grr.disabled = false;
+ }
+}
+// -----
+function dneLajkiT(kaj)
+{
+ xmlhttp.onreadystatechange = function()
+ {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+  {
+   document.getElementById("lajkas").innerHTML = xmlhttp.responseText;
+  }
+ }
+ //
+ xmlhttp.open('GET', './dodaci/lajkit.php?ky=dnevnik&dx=' + kaj, true);
+ xmlhttp.send();
+}
+// -----
+function komLajkiT(kaj, tam, kul)
+{
+ za_pKP = "pkom_" + kaj;
+ p_kome = document.getElementById(za_pKP);
+ //
+ if (tam == 'p_doli') {
+  skup = (parseInt(kul) - 1); }
+ else {
+  skup = (parseInt(kul) + 1); }
+ //
+ if (skup < 0) {
+  p_kome.style.color = '#da3030'; }
+ else if (skup == 0) {
+  p_kome.style.color = '#d7d7d7'; }
+ else if (skup > 0) {
+  p_kome.style.color = '#30da30';
+  skup = '+' + skup; }
+ za_sDA = "kom_da_" + kaj;
+ za_sNE = "kom_ne_" + kaj;
+ sp_kDA = document.getElementById(za_sDA);
+ sp_kNE = document.getElementById(za_sNE);
+ //
+ xmlhttp.onreadystatechange = function()
+ {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+  {
+   sp_kDA.disabled = true;
+   sp_kDA.style.visibility = 'hidden';
+   sp_kNE.disabled = true;
+   sp_kNE.style.visibility = 'hidden';
+   p_kome.innerHTML = skup;
+  }
+ }
+ //
+ xmlhttp.open('GET', './dodaci/lajkit.php?ky=komentari&dx=' + kaj + '&tz=' + tam, true);
+ xmlhttp.send();
+}
+</script>
+<script type="text/javascript" src="dodaci/klik.dst"></script>
+</head>
+<body onload="dajVrimE()">
+<div class='mali' style='text-align: left; width:100%; padding-top:3px; padding-bottom:3px; background: #1e77d3; background: -moz-linear-gradient(left, #1e77d3 17%, #f3f5f9 100%); background: -webkit-gradient(linear, left top, right top, from(#1e77d3), to(#f3f5f9));'>&nbsp; <a href='http://www.dragotadic.net/' style='color:#abcdef; text-decoration:none'>&copy; Drago TADIÆ</a></div>
+<div class='brojac' align='right'> &nbsp; </div>
+<div class='tekst' style='padding: 7px; border: #1e77d3 1px solid' align='justify'><fieldset class='anketar'><legend class='nasank'>ANKETA</legend>
+<form name='frmGlas' method='post' action='/dragotadic/list.php?ploca=Dnevnik&redar=2010-02-24&kreda=vadi&lekcia=Bo%BEica%20Europa&promatrac=16'>
+<p class='tekst' style='margin:12px; text-align:left'>Jeste li za ulazak Hrvatske u Europsku Uniju?</p>
+ &nbsp; &nbsp; &nbsp; <input name='izbor' type='radio' value='Ne!' style='vertical-align:top'> Ne!<br>
+ &nbsp; &nbsp; &nbsp; <input name='izbor' type='radio' value='Da!' style='vertical-align:top'> Da!<br>
+ &nbsp; &nbsp; &nbsp; <input name='izbor' type='radio' value='Suzdr¾an/a' style='vertical-align:top'> Suzdr¾an/a<br>
+<div class='tekst' align='center'>
+ <input name='stage' type='hidden' value='16'><input name='poll' type='hidden' value='16'>
+ <p align='center' style='margin: 7px'><input name='btnGlas' type='submit' value=' OK ' title=' klikni 1 put ' class='gumbic'></p>
+</div>
+</form>
+</fieldset><br>
+<span style='float:left'>Dubrovnik, 24. 02. 2010.</span> <span style='float:right'><a href='#' onclick='noviProzoR("ispis.php?ploca=dnevnik&amp;redar=2010-02-24&amp;kreda=Bo¾ica Europa", 777, 500, 0)'><img border='0' src='slike/design/print-sd.png'></a>&nbsp;</span><br><script type='text/javascript'>document.title = 'Dnevnik : Bo¾ica Europa';</script><span class='t_nas'>Bo¾ica Europa</span><br><br>
+&nbsp;&nbsp; <img style='float:left; margin: 0px 7px 1px 0px' src='slike/dnevnik/2-euro.png'><br>&nbsp;&nbsp; <div class='blok'><span class='b_nas'>David Icke</span> u tv emisiji '<b>Na rubu znanosti</b>', 21.09.2009.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Veæ dugo istra¾ujem Europsku Uniju. Mi u Britaniji znamo ¹to je Europska Unija jer se dugo raspravljalo treba li Velika Britanija uæi u EU. Tada¹nji predsjednik Francuske de Gaulle bio je protiv toga. Zatim se pojavio Ted Heath, koji je bio premijer Velike Britanije od 1970. do 1974. godine. On je dugo inzistirao da Velika Britanija postane èlanicom EU-a. Kad je postao premijer, ukljuèio nas je u tada¹nju EEZ.Od poèetka 1970-ih mi smo u¹li 1973., promatram razvoj stvari u Velikoj Britaniji. Uèinak je bio razarajuæi, sa stajali¹ta kontrole, diktature, zakona i odredaba.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Kad sam poèetkom 1990-ih poèeo istra¾ivati urotu, kao britanac usredotoèio sam se na to ¹to je EU, ¹to se iza nje krije. Temelj globalne zavjere koju godinama razotkrivam jest centralizacija moæi. Razlog tome jest vrlo jednostavan: ako postoji mnogo ljudi koji donose odluke, ona nekolicina koja su u sredi¹tu neæe imati moæi nad svima. Morali bi kontrolirati previ¹e toèaka da bi se donosile odluke koje njima odgovaraju. Ako ste diktator, treba vam, pogledajte komunizam, fa¹izam, bilo koji oblik diktature.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; ©to oni ¾ele? Sredi¹nju vlast koja svima diktira ¹to trebaju raditi. Jedino tako mo¾ete imati sredi¹nju vlast èije odluke utjeèu na sve ljude. Kad sam shvatio da centralizacija vlasti ... danas imamo i ime za to, globalizacija. To je plan i urota koju godinama razotkrivam, samo ¹to danas ima i svoje ime. Kad shvatite da je centralizacija vlasti kljuè, morate pogledati EU.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; ©to je ona zapravo? Nekoæ davno ljudi su ¾ivjeli u plemenima. O sudbini plemena odluèivalo se unutar samog plemena. Ako to usporedimo sa dana¹njim svijetom, nekoliko je ljudi odluèivalo o vlastitoj sudbini. Zatim se pojavi pokret da se plemena okupe pod sredi¹njom vlasti. Tako su nastale dr¾ave. Dr¾ave su samo skupine razlièitih plemena. Sredi¹nja vlast dr¾ave njezina vlada, odluèuje ¹to æe se dogaðati sa svakim plemenom koja su nekoæ sama odluèivala o svojoj sudbini.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Buduæi da je ta urota samo korak na putu do globalne diktature, neprestano kretanje ka sve veæoj centralizaciji vlasti nu¾no je kako bi se to ostvarilo. Tada smo vidjeli da Europska Unija sakuplja dr¾ave kako bi potpadala pod centralnu vlast, odnosno, diktaturu.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Nakon Drugog svjetskog rata u kojem su deseci milijuna ljudi poginuli kako bi zaustavili uvoðenje centralizacije diktature nacista, da su u toj situaciji ljudi koji su htjeli centraliziranu europsku dr¾avu kakva postoji danas, nakon rata ili u 1950-ima otvoreno rekli da ¾ele reformirati vlast u Europi, da ¾ele centraliziranu kontrolu, birokraciju u Bruxellesu koja æe upravljati Europom i èije æe odluke imati veæu te¾inu od zakona koje donese parlamenti dr¾ava èlanica, da ¾ele predsjednika Europe koji æe biti sredi¹nja figura vlasti, ministra vanjskih poslova koji æe odreðivati vanjsku politiku Europe, europsku vojsku, ¹to bi ljudi tada rekli? Èekaj malo! Upravo smo ratovali kako bismo tako ne¹to sprijeèili!! Hitler je htio ne¹to slièno; Sjedinjene Europske Dr¾ave.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Zato nam to nisu rekli. Kao ¹to sam detaljno pokazao u svojim istra¾ivanjima, to je bio njihov plan od samog poèetka. ©to su uèinili? Upotrijebili su takozvano "totalitaristièko ¹uljanje". Vi ste ovdje, ali ¾elite doæi tamo. No, znate da ako to prebrzo uèinite, ljudi æe biti uznemireni jer æe to biti prevelika promjena. Onda prvo ka¾ete: Osnovat æemo zonu slobodne trgovine. Time neæemo zadirkivati u suverenitet dr¾ava. To æe biti odlièno za posao,sru¹it æemo zapreke trgovini.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; I ljudi pristanu na to. Zatim ka¾ete: Ta zona slobodne trgovine bila bi mnogo bolja i uèinkovitija kad bismo imali neka pravila koja bi svi morali po¹tovati. Tako kreæete naprijed, naprijed, naprijed... Rijekom tog razdoblja, od 1950-ih godina do danas, mo¾ete pratiti korake ka sve veæoj centralizaciji u Europi.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Lisabonski sporazum, koji su Irci bar odgodili referendumom, uvelike æe poveæati centralizaciju vlasti. Neko je vrijeme postojao veto kojim je zemlja èlanica mogla sprijeèiti uvoðenje europskog zakona ako se s njime nije slagala. Proces vetoizacije naglo nestaje zato ¹to ga sasvim ¾ele ukinuti. Ako nema veto, ako ste u EU-u ono ¹to birokracija odredi, kao i politbiro u biv¹em Sovjetskom Savezu, postaje zakon.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Ne mo¾ete to sprijeèiti,ne mo¾ete èak ni ulo¾iti veto kako se to ne bi odnosilo na va¹u dr¾avu. To se jasno vidi i odlièno se uklapa u Europsku Uniju, odnosno centraliziranu globalnu diktaturu koju razotkrivam. Kad sam poèeo kopati dublje, otkrio sam da se iste organizacije i obitelji koje stoje iza brojnih stvari, ukljuèujuæi i manipulaciju Drugim svjetskim ratom, stoje i iza Europske Unije.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Kljuè za razumijevanje pozadine Eu-a jest Paneuropski pokret. Ta organizacija potjeèe bar od 1939-ih godina. paneuropski pokret kontrolira dinastija Habsburg. Oni postoje i danas, a na njegovu èelu jest Otto van Habsburg. Ta je organizacija iz sjene potakla stvaranje zone slobodne trgovine, a zatim i stvaranje centralizirane superdr¾ave. I evo nas sad u Hrvatskoj koja je mislila da se rije¹ila Habsburgovaca, njihove diktature. Hrvatska vlada, a èujem da isto misle i voðe oporbe, neka ih bude sram, forsiraju èlanstvo u EU-u, a da nisu istra¾ili ¹to to zapravo znaèi.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Èlanstvom u Europskoj Uniji zapravo bi prepisali kontrolu dr¾ave dinastije Habsburg te obiteljima i skupinama s njom povezanima, a koje stoje iza EU. Ista se metoda koristi u cijelome svijetu. Danas postoji i Afrièka Unija, kojom se cijela Afrika ¾eli staviti pod jednu diktaturu. Postoji vojska Afrièke Unije, donosi se sve vi¹e zakona koji se odnose na sve Afrièke zemlje. U Americi takoðer postoji zona slobodne trgovine, NAFTA, izmeðu Kanade,SAD-a i Meksika. Oni su vrlo blizu formiranja Sjevernoamerièke Unije, njihove inaèice Europske Unije.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Kanadski i amerièki dolar te meksièki peso zamijenit æe nova valuta koja veæ ima i radno ime, amero.To ¹to rade u Europi, Africi i Americi ¾ele uèiniti i na Tihom oceanu, gdje takoðer postoji zona slobodne trgovine - APEC. ®ele stvoriti azijsku, istoènjaèku, australsku inaèicu EU-a. ®ele sve dr¾ave svijeta prikljuèiti u takve unije koje æe odgovarati svjetskoj vladi. Proizveli su i karte. Europska Unija je to uèinila. ®ele razbiti dr¾ave na regije i tako opravdati podjelu vlasti. No zapravo razbijaju svaki ujedinjeni otpor superdr¾ava i svjetskoj vlasti tako ¹to razbijaju postojeæe dr¾ave na regije. Na karti koju je EU proizvela za sjevernu Europu, ¹to je i objavljeno u britanskim novinama, uzeli su podruèja Velike Britanije i stvorili su regionalnu podjelu u kojoj su podruèja Engleske i Velike Britanije spojili s podruèjima u Skandinaviji i Francuskoj.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Time ¾ele izbrisati dr¾ave! Hrvatska nema pojma ¹to je èeka i u ¹to ulazi. Vlada i oporba Hrvatske sramote svoju zemlju jer dopu¹taju slijepi ulazak u EU. Hrvatska kultura, suverenitet i sposobnost odluèivanja zbog toga jure prema ponoru.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; <b>Semiramida, bo¾ica Europe</b><br>&nbsp;&nbsp; <br>&nbsp;&nbsp; To se uklapa strukturu koju razotkrivam. Prije mnogo godina, u povijesti sam otkrio trag babilonskog bo¾anskog trojstva: bo¾ice Mjeseca Semiramide, boga Sunca Nimroda, koji se u davno doba zvao Bel ili Baal, i njihova sina Tamuza, roðenog bezgre¹nim zaèeæem. To je sve bilo tisuæama godina prije Krista, mnogo godina prije kr¹æanstva. Babilonsko trojstvo se preselilo, premjestilo iz Babilona u Rim u vrijeme Rimskoga Carstva. Tako su nastali Svemoguæi Bog, Sin i Duh Sveti. Tako je nastalo kr¹æanstvo. Sin je postao Isus, umjesto Tamuza. Duh Sveti simbolizira golubica, ¹to je simbol babilonske bo¾ice iz babilonskog trojstva. Sve znaèajke koje su Babilonci pripisivali svojoj bo¾ici Semiramidi, majka djevica, kraljica nebesa, dodijeljeni su Djevici Mariji kad su rimljani preuzeli babilonska bo¾anstva i vjeru i preimenovali ih.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Zbog toga su sveti dani u kr¹æanstvu jednaki svetim danima iz Babilona prije nekoliko tisuæa godina, samo ¹to ih nazivamo drugim imenima, koriste se drugim junacima i smje¹teni su u druge kontekste. Obitelji koje stoje iza Europske Unije i centralizacije svjetske vlasti, orwellovske dr¾ave, zapravo potjeèu iz dana¹njeg Iraka, nekada¹njeg Babilona, odnosno, Sume u Mezopotamiji, zemlje izmeðu dviju rijeka. Kako su se te obitelji preselile iz Mezopotamije u sjevernu Europu i postale ugledne i vladajuæe europske obitelji, u¹le u politiku i bankarstvo, institucije koje vladaju svijetom, sa sobom su ponijeli svoju vjeru i svoje obrede.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; U srcu toga je babilonsko trojstvo, a Semiramida je kljuèna. Dat æu vam primjer. Kad su  te obitelji oti¹le u sjevernu Europu, u Francusku, ponijele su te stvari sa sobom. Kad su obitelji do¹le u Ameriku u vrijeme ¹irenje Francuskog i Britanskog Carstva, sa sobom su povele svoje obitelji te jo¹ i danas upravljaju Amerikom. No doveli su i svoje obrede i bo¾anstva. Ako pogledate kako su babilonsku bo¾ici Semiramidu prikazivali na novèanicama antike, vidjet æete da izgleda potpuno isto kao Kip slobode. Za¹to? Kip slobode u New Yorku bio je dar francuskih masona, a oni èine dio mre¾e tajnih dru¹tva s pomoæu koje te obitelji upravljaju svijetom.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Francuski masoni iz Pariza darovali su Kip slobode New Yorku jer su znali ¹to predstavlja. Ne predstavlja slobodu veæ babilonsku bo¾icu. U ruci dr¾i baklju, a to je u Babilonu bio simbol Nimroda, boga Sunca. U Parizu na jednom otoku na rijeci Seini stoji kopija Kipa slobode. Simbol bo¾ice sa ¹iljcima oko glave javlja se diljem svijeta: bo¾ica Francuske Republike je Semiramida, bo¾ica okruga Columbija, gdje je Washington takoðer je Semiramida. Ako istra¾ite antiku, vidjet æete da postoji nevjerojatno mnogo bo¾anstva za sve i sva¹ta. To æe vam se uèiniti vrlo slo¾enim. No kad vidite kako se to babilonsko trojstvo kretalo Europom, otkrit æete da su za ista bo¾anstva koristili razlièita imena. Diljem Europe i svijeta pojavljuju se bogovi i bo¾ice razlièitih imena, no to su sve babilonski bogovi, samo imaju drukèija imena. Jedna od njih je bo¾ica Europa. Po njoj je kontinent dobio ime. <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Veæ sam govorio kako su te obitelji opsjednute simbolima. Jedan od kljuènih simbola te babilonske bo¾ice bio je krug od dvanaest zvijezda. A to je, vidi vraga, i simbol Europske Unije. Tko je odluèio da æe to biti simbol Europske Unije? Isti oni koji su prvo osnovali Europsku ekonomsku zajednicu koja je postala Europska Unija. To je simbol njihove bo¾ice, u ovom sluèaju Europe, i zato su taj simbol stavili u logo Europske Unije.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; To je veoma va¾no! Time poruèuju da je ovo Unija babilonske bo¾ice koja simbolizira kontrolu tih obitelji. U drevnim prièama o Europi, odnosno Semiramidi, èesto je motiv u kojem ona ja¹e na biku, a bik je simbol Nimroda. Tako imate Europu, odnosno Semiramidu, koja ja¹e na Nimrodu. Godine 2005. EU je izdala prigodni novèiæ na kojem je prikazana Europa kako ja¹e na biku. Ljudi koji su to osmislili dobro su znali ¹to to simbolizira. Danas imamo situaciju u kojoj organizacija koju su stvorile te obitelji, prije svega Habsburgovci, koji su dalje povezani s obitelji Rothschild, itd., baca svoju ribarsku mre¾u ili paukovu mre¾u, kako hoæete, i samo èeka. I kad neka zemlja doðe, uhvati se u mre¾u. Kad se jednom uhvati u mre¾u, zakoni, odredbe i propisi te dr¾ave istog se trena poèinju dramatièno mijenjati i potpadaju pod ovlasti europskog prava.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Sve je toliko povezano sa svime ostalim u Europi da èak i kad bi htjeli izaæi ne bi mogli jer su toliko povezani s Unijom u financijskom i poslovnom smislu. Hrvatskom narodu poruèujem da je pristupanje Uniji zauvijek, bar s na¹eg stajali¹ta. Kad jednom uðete i ako ka¾ete da vam se to ne sviða, neæete moæi izaæi jer æete biti toliko zapetljani u mre¾u zakona. Bit æete ovisni o Uniji i neæete moæi izaæi. Kad sve to poslo¾ite, vidite da se to u Hrvatskoj na politièkoj razini dogaða bez ikakve rasprave. Umjesto da se odvagnu dobre i lo¹e strane ulaska u EU, vi ulazite naslijepo i past æete u ponor.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Meni je vrlo neobièno... Ne, nije mi neobièno jer znam kako sve to funkcionira, ali bio bih zaprepa¹ten da ne znam kako sustav funkcionira, kad u ¹etnji Zagrebom na zgradama ministarstva i Sabora, uz zastave Hrvatske, vidim i zastavu Europske Unije. Hrvatska jo¹ nije èlanica Europske Unije! Rekli su mi da je veæ dugo tako. To simbolizira svr¹enu stvar. Postoji plan da se kroz Uniju porobe sve zemlje Europe, a i ¹ire, jer se ¾ele pro¹iriti ¹to dalje mogu. No to ne rade tako da uvjere dr¾avu kako bi bilo dobro da uðe u EU, veæ im govore: Postat æete èlanicom Unije! <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Neæemo vas nagovarati da pristanete na centralizaciju vlasti, veæ æemo to uèiniti. To se dogaða i Irskoj. U poèecima, kako bi stvar napredovala, postojale su klauzule koje su omoguæavale èlanicama da se izvuku, kako bi ih se umirilo pri ulasku u Uniju. Veæ sam govorio o vetu. kad uðete u savez dr¾ava, znate da imate moguænost veta koji mo¾ete ulo¾iti ako savez donese odluku koja æe negativno utjecati na va¹u zemlju ili se vama ne sviða. Imate moguænost blokirati tu odluku. Na taj su naèin mamili èlanice. danas rade na uklanjanju veta. Naposljetku æe birokracija u Bruxellesu postati diktatura i neæe biti naèina da joj se suprotstavimo, postat æe svemoæna. Jedan od sustava ravnote¾e vlasti koji sad ¾ele ukinuti bila je odluka da sve èlanice moraju biti suglasne u dono¹enju ustavnih promjena. Ionako kontroliraju sve vladajuæe ljude u dr¾avama pa taj sustav nisu smatrali problemom. Dopustili su postojanje tog sustava ravnote¾e jer su mislili da æe vlade dr¾ava uèiniti ¹to tra¾e od njih. No u nekoliko sluèajeva, u Nizozemskoj, Francuskoj i Irskoj, zemlje su odr¾ale referendume. Dale su ljudima moguænost da glasaju ¾ele li dati jo¹ vi¹e moæi EU. Htjeli su uvesti ono ¹to se danas zove Lisabonski sporazum, no to je izvorno bio Europski ustav. Nizozemci i Francuzi su na referendumu glasovali protiv Ustava. Nisu ga htjeli! Prema tom zakonu koji sad ¾ele ukinuti, nije bilo moguæe uvesti Ustav. I ¹to su onda uèinili? Uzeli su 98% ustava, a to su potvrdili ljudi iz Unije, i prozvali ga Lisabonski sporazum. dr¾ave koje su stanovnicima obeæale referendum o ustavu, poput Velike Britanije, èija vlada zna da ustav ni bi pro¹ao, sad ka¾u da vi¹e nema potrebe da odr¾e obeæanje o referendumu jer ustav vi¹e ne postoji. sad postoji samo sporazum, a za to nisu obeæali referendum.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Tako su zaobi¹li tu zapreku. Sad ka¾u: Nizozemci i Francuzi su glasali protiv Ustava, ovo je sporazum. Iako se sporazum sastoji od 98% Ustava. Sad dolazimo do Irske. Jedan je irski bogata¹ financirao kampanju kako bi Irce bolje upoznao s pravom pozadinom EU-a. Irci su glasali protiv sporazuma. U demokraciji, a EU nije demokracija, to je farsa, rekli biste: Poku¹ali smo, ali irci su ulo¾ili veto. Unija sada radi pritisak na vladu Irske da odr¾e jo¹ jedan referendum o sporazumu. Uèinit æe isto ¹to i u Danskoj, tra¾it æe podruèja u kojima mogu dovoljno poljuljati protivnike sporazuma kako bi pre¹li na drugu stranu. kad prijeðu na drugu stranu, kad dobiju rezultat koji su ¾eljeli, nitko neæe reæi: Odr¾imo i treæi referendum. Do sada smo imali dva, svaki sa razlièitim rezultatom. Ne! Imaju rezultat koji su htjeli. Mogu poveæati centralizaciju i vi¹e nema potrebe za referendumom. Veæ sam rekao, ¹to je vlast centraliziranija, to imate vi¹e vlasti koju treba ¹to br¾e centralizirati.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Kako centraliziraju vi¹e vlasti u Europi, imaju sve vi¹e moæi da ukinu veto i pravo na referendum na kojem se mo¾e glasovati o ustavnim promjenama. Toga vi¹e nema. oni vladaju. Na predavanju u Hrvatskoj spomenuo sam kako ljudi znaju reæi da se na granici dr¾ave gomila vojska koja èeka da krene u invaziju. Na granici Hrvatske ne¹to se doista gomila, ali ne vojska i tenkovi, veæ zakonodavstvo. To je plimni val Europe s 500 milijuna stanovnika koji æe preplaviti ovu dr¾avicu od samo 4,5 milijuna stanovnika. Hrvati æe biti zaprepa¹teni koliko æe se njihova dr¾ava promijeniti kad vlada, ako joj to Hrvati dopuste, uèlani Hrvatsku u Europsku Uniju.<br>&nbsp;&nbsp; <p align='center'><img class='slik_a' src='slike/mreza/eu-swastika.gif' alt='EU swastika' title=' Zastava Europske unije, prema onome kakva je vlast '></p><br>&nbsp;&nbsp; <b>Nepoznavanje zakona!?</b><br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Kad pogledate institucije i strukture obitelji koje stoje iza tih urota, to doista izgleda poput paukove mre¾e. Hvataju ljude u gomilu zakona, propisa i odredba, podklauzula i sitnih detalja. Veæina zakona, oko 99% zakona koje politièari donose, nisu ih ni proèitali. Ljudi koji pi¹u zakone odluèuju ¹to æe biti u njima. ©to se zatim dogaða? Politièari èitaju sa¾etke ili samo naslove prijedloga zakona jer ih ionako nikad ne èitaju i raspravljaju o tim sa¾ecima. No duboko u zakonu krije se nevjerojatno detaljno opisani sve ¹to se smije i ne smije. takav se zakon donese, no o tome nitko nema pojma. Ljudi se odjednom zapitaju: Kako to da ne mogu ovo uèiniti? Pa sve pi¹e u podklauzuli 7B-457. Nitko mi to nije rekao. Pa sami ste glasali za taj zakon. Od kad je Velika Britanija 1973. u¹la u tada¹nju EEZ, promatrao sam kako se zakoni EU-a samo gomilaju. Do¹lo je do toga da europski zakoni Britancima odreðuju ¾ivot,do samog detalja. Èak 75% zakona, a taj se broj sve vi¹e poveæava, koji se danas donosi u Velikoj Britaniji potjeèu od birokrata iz Bruxellesa koji se ne biraju na izborima.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Mi, koji smo veæ dugo u Uniji, bar smo polako prolazili sve to. To se gomila na granicama Hrvatske. Ta planina, plimni val zakonodavstva koji se stvara jo¹ od doba nastanka EEZ-a, gomila se na va¹oj granici. Èim va¹i politièari odluèe da ulazite u Europsku Uniju tad æe gomila zakona upasti u ovu dr¾avicu od 4.5 milijuna stanovnika. Nemate pojma ¹to to znaèi?! Ljudi æe se zaprepastiti koliko æe se njihovi ¾ivoti i  sposobnosti odluèivanja promijeniti kad do toga doðe. Bit æe to kraj Hrvatske. Nas Britanaca ima gotovo 70 milijuna, no ti su nas birokrati svejedno porazili i diktiraju nam ¾ivote. Hrvatska ima 4,5 milijuna; progutat æe je u jednom zalogaju. Ako ljudi ne poènu razmi¹ljati o tome, nemaju se pravo ¾aliti kad ih plimni val potopi, a hoæe.</div><br>&nbsp;&nbsp; I tako, Icke je opet bio u pravu jer je Irska ponovila referendum. Naravno - ovaj put s onim rezultatom koji je odgovarao Iluminatima. <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Bo¾ica starog kontinenta je u biti babilonska bo¾ica Semiramida i kakve veze ima kruna s dvanaest zvijezda oko glave Djevice Marije s europskom zastavom, koja isto ima dvanaest zvijezda poredanih u krug? To sve zbilja nema veze s kr¹æanstvom, a jo¹ manje s katolièanstvom; kako su nas neki htjeli 'preveslat'?! Pa svejedno vi¹e, hoæemo u Semiramidsku ili Europsku Uniju, jer se radi o istom "bo¾anstvu". I stoga u europski ustav nisu u¹li kr¹æanski temelji, kako je sugerirao Vatikan. I kako se èovjek neæe zapitati: Tko tu koga ... hm? Zar nije Svevi¹nji jednoj i jedinoj Bogorodici mogao podariti originalnije simbole i slavu na Zemlji od svih tih silnih kopija prastarih bo¾anstava? Zar nije Isus zaslu¾io mrvicu jedinstvenosti vi¹e od tih "poganstava" predkr¹æanskog doba? Ma, neæu sad o tome ...<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Pogledajmo malo sad tu simboliku o kojoj govore brojni tragovi. <p align='center'><br><img class='slik_a' src='slike/mreza/toranj-babilonski.jpg'><br>Pieter Brueghel - Kula Babilonska (1563.)<br><br><img class='slik_a' src='slike/mreza/european-parliament-building.jpg'><br>Europski parlament (izgraðen prema gornjoj slici)<br><br><img class='slik_a' src='slike/mreza/babilon-bik.jpg'><br>Bik iz Babilona<br><br><img class='slik_a' src='slike/mreza/europa-na-biku.jpg'><br>Europa na biku<br><br><img class='slik_a' src='slike/mreza/zeus-na-biku.jpg'><br>grèki bog Zeus<br><br><img class='slik_a' src='slike/mreza/kriz-semiramida.jpg'><br><br><img class='slik_a' src='slike/mreza/kip-slobode.jpg'><br>Kip 'slobode'<br><br><img class='slik_a' src='slike/mreza/columbia-pic.jpg'><br>Columbia Pictures<br><br><img class='slik_a' src='slike/mreza/eu-zastava.png'><br>Zastava Europske Unije<br><br><img src='slike/mreza/2euro-bull.png'><br>Novac Europske Unije<br><br><img class='slik_a' src='slike/mreza/europa-markica.jpg'><br>Po¹tanska markica<br><br><img class='slik_a' src='slike/mreza/europe-one-voice-poster.jpg'><br>Plakat (poster) EU-a<br><br><img class='slik_a' src='slike/mreza/wallstreet.jpg'><br>Bik na Wall Streetu<br><br><img class='slik_a' src='slike/mreza/semiramida-europe.jpg'><br>Semiramida u EU<br><br><img class='slik_a' src='slike/mreza/europe-strasbourg-beast-sculpture.jpg'><br>Bik se pretvara u zvijer (skulptura u Strasbourgu)</p><br>&nbsp;&nbsp; Kako god ovo zvali, bilo to Novi svjetski poredak, Kraljevstvo Kazara, Imperij Iluminata ili èak najobiènije Europska Unija, znam da se tu doista odigrava ne¹to o èemu aktualni svjetski du¾nosnici ne ¾ele govoriti. Koliko su sami duboko u tom blatu la¾i i osvajaèke bujice, te¹ko je nagaðati, ali postoje brojni vidljivi i nevidljivi putokazi, kao i dokazi o ovome ¹to se odigrava iza ekrana jo¹ jednog imperija. Ta, nije sv. Ivan bez veze spominjao veliku Bludnicu - Babilon ...<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; p.s.<br>Evo i <i>YouTube</i> video pa sami usporeðujte tekst ;)<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; &bull;   <a href="http://www.youtube.com/watch?v=E-uo07FiuHY" target="_blank">Na rubu znanosti (21.09.2009) : David Icke - EU 1. dio</a><br>&nbsp;&nbsp; &bull;   <a href="http://www.youtube.com/watch?v=ZRAatk_p5bM" target="_blank">Na rubu znanosti (21.09.2009) : David Icke - EU 2. dio</a><br>&nbsp;&nbsp; &bull;   <a href="http://www.youtube.com/watch?v=q72kRvbXyh4" target="_blank">Na rubu znanosti (21.09.2009) : David Icke - EU 3. dio</a><br>&nbsp;&nbsp; &bull;   <a href="http://www.youtube.com/watch?v=vk40gUtsWT0" target="_blank">Na rubu znanosti (21.09.2009) : David Icke - EU 4. dio</a><p class='tx_sr' style='margin:17px 0px 0px 0px'><span id='lajkas' style='color:#30ad30'>7</span> &times; <span id='sl_s' onMouseOver='miNjaj("sl_g", "iplx")' onMouseOut='miNjaj("sl_g", "ipl")'><img name='sl_g' class='staklar ruka' src='./slike/design/palac-g.png' onclick='dneLajkiT("2010-02-24")' style='vertical-align:middle;' alt=' Sviða mi se (Like it) ' title=' Sviða mi se (I Like It) '></span> <span style='color:#f3f5f9'> &times; 7</span><br><img src='./slike/design/ornament-p.png'></p></div>
+<div class='brojac' align='right' style='padding: 2px'><span><a href='dnevnik.php' title=' dnevnik '>[ dnevnik ]</a></span> &nbsp; &nbsp; <span><a href='kontakt.php?ploca=Kontakt&redar=upis&kreda=poruke' title=' kontakt obrazac '>[ kontakt ]</a></span></div><br>
+<span class='izbor'>KOMENTARI ( 24 )</span><div id='kom_enteri'><a name='2010-02-25-23-32-01'></a><a name='1'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 1. komentar '><b>Veèernji list</b>, 2010-02-25 u 23:32:01</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'><a href='http://www.vecernji.hr/vijesti/floridski-mini-madoff-priznao-krivnju-clanak-102323' target='_blank'>Floridski "mini-Madoff" priznao krivnju</a></span><br><br><span class='k_pod'>Menad¾er Arthur Nadel (77) od naivnih je investitora svojom piramidalnom shemom izvukao skoro 400 milijuna dolara. Uhiæen je u sijeènju 2009. a nakon ¹to je priznao krivnju po svih 15 toèaka optu¾nice, newyor¹ki sud treba mu odrediti kaznu.</span><br><br>25.02.2010 17:02<br><br>Nadel je uhiæen na Floridi nakon ¹to je "nestao" i dva se tjedna krio od FBI-ja, a sudi mu se u New Yorku iako je najveæi broj ¾rtava koje je "oderao" s Floride, jer je brokerske aktivnosti obavljao preko newyor¹kog Shoreline Tradinga.<br><br>Time ¹to je priznao punu krivnju Nadel se unaprijed odrekao 162 milijuna dolara od iznosa koji je pokupio svojim klijentima, a za koji se procjenjuje da je izmeðu 360 i 397 milijuna dolara. Nije mogao platiti jamèevinu i ostat æe u zatvoru do izricanja presude 11. lipnja, a zbog poodmaklih godina vjerojatno æe iza re¹etaka biti do kraja ¾ivota.<br><br>Nadelovi biv¹i partneri, otac i sin Neil i Chriostopher Moody, u sijeènju su se nagodili s US Securities and Exchange Comissionom i nisu kazneno gonjeni. Na sudu je "floridski mini-Madoff" izjavio:<br><br>- I ja i Moodyji prigrabili smo desetke milijuna dolara u posrednièkim naknadama. Nismo zaslu¾ili te naknade.<br><br><br>- - - <br><span class='k_dod'><b>Dodatak:</b><br>Niti ovo ne objavljuje Kazarska TV, a pogledajte tko je dotièni gospar Arthur Nadel: </span><p class='navod_kom'><b>Wikipedia</b><br><br>... Nadel, a Jewish tailor's son, worked his way through New York University, and in 1957, graduated from New York University Law School, playing piano in Manhattan. He never actively practiced law, but was disbarred in 1982, citing "dishonesty, fraud, deceit and misrepresentation". ...<br><br>- - - <br>http://en.wikipedia.org/wiki/Arthur_Nadel</p><br><span class='k_dod'>Ne znam kako se ovo provuklo kroz masonsko-udba¹ki 'Veèernjak', ali je èinjenica da ovakvi haraèe Europom i cijelim svijetom? Valjda znate tko je Bernard Lawrence "Bernie" Madoff?</span><p id='pkom_7305' class='tx_de ram0'><span id='kom_da_7305' onMouseOver='miNjaj("sl_d7305", "idax")' onMouseOut='miNjaj("sl_d7305", "ida")'><img name='sl_d7305' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Veèernji list. ' title=' Veèernji list ima dobar komentar ' onclick='komLajkiT(7305, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7305' onMouseOver='miNjaj("sl_n7305", "inex")' onMouseOut='miNjaj("sl_n7305", "ine")'><img name='sl_n7305' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Veèernji list. ' title=' Veèernji list ima lo¹ komentar ' onclick='komLajkiT(7305, "p_doli", 0)'></span></p></div>
+<a name='2010-03-03-13-44-44'></a><a name='2'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 2. komentar '><b>Predrag Darabo¹</b>, 2010-03-03 u 13:44:44</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>SIMBOLI EUROPSKOG IMPERIJA</span><br><br>
+Strpljivo, jo¹ od vremena Rimskog carstva, stvara se zajednièka europska dr¾ava. Stoljetni san europskih vizionara, politièara i mislilaca posljednjih desetljeæa ubrzano poprima konkretna obilje¾ja. Europska unija konstituira se u moænu naddr¾avu s kompetencijama koje su u novovjekoj povijesti dosad nezabilje¾ene.<br><br>"<i>Prvi put u poznatoj povijesti stvara se nenametnut imperij</i>" - Jose Manuel Barroso, predsjednik EU komisije<br><br>Strpljivo, jo¹ od vremena Rimskog carstva, stvara se zajednièka europska dr¾ava. Stoljetni san europskih vizionara, politièara i mislilaca posljednjih desetljeæa ubrzano poprima konkretna obilje¾ja. Europska unija konstituira se u moænu naddr¾avu s kompetencijama koje su u novovjekoj povijesti dosad nezabilje¾ene. Moæ koju postupno i gotovo neprimjetno stjeèe bruxellska uprava na èelu s Europskom komisijom (EK) postaje sve veæa prijetnja stvarnom suverenitetu dr¾ava i individualnoj slobodi njihovih graðana. Kao ¹to su kroz povijest iz pozadine manipulirani pokreti proklamirani idealima prosvjetiteljstva i vladavine prava, tako i nad vi¹estoljetnim projektom za jedinstvenu Europu bludi duh iste financijske i intelektualne elite èiji su istinski ciljevi suprotni onima koje javno proklamiraju.<br><br>Jedinstvena europska a potom i svjetska dr¾ava nu¾an je instrument u operacionalizaciji projekta Novog svjetskog poretka. Karakter i politièka obilje¾ja planirane svjetske superdr¾ave dobro su opisani u antiutopijskim romanima ali i ozbiljnim analizama socijalnih teoretièara i istra¾ivaèa zakulisne povijesti. Zakljuèak veæine njihovih analiza bio bi jasan i jednoznaèan: veæina dru¹tvenih pokreta i politièkih zbivanja pokrenuta su sa svrhom uspostave totalitarnog nadzora malobrojne elite nad ogromnim ostatkom èovjeèanstva. Ta elita koja predstavlja svjetsku vladu u sjeni predstavlja vrh takozvane piramide moæi a svoju moæ razgranala je kroz mre¾u globalnih organizacija kao ¹to su UN, NATO, EU te raznih organizacija poput Trilaterne komisije, Bilderber¹ke skupine, masonskih lo¾a itd. Sama vrhu¹ka najèe¹æe je nazivana Iluminatima a svoje duhovne korijene pronalazi u drevnoj misterijskoj religiji Babilona. Svome cilju, obnovi hijerarhijskog i totalitarnog dru¹tva graðenog na idealu centralizma i oligarhije, idu postupno i daleko od radoznalih oèiju javnosti. Ono ¹to ipak ostaje javno i dostupno jest simbolika i znakovlje koje elita rabi i koje je za nju mnogo vi¹e od pukog predstavljanja moæi: ono je dio identiteta i vjere. Znakovi i simboli su odrednice kultnih statusa i obilje¾ja njihovih rituala. Oni na neukoga projiciraju svoje autoritarne subliminalne poruke, ali upuæenom odaju tajne namjere svojih tvoraca.<br><br>[ <i>Foto: Europski parlament</i> ]<br><br>Teoretièari zavjera, meðu kojima se istièe David Icke, smatraju da je drevna babilonska religija izvor duhovnog backgrounda vodeæe tajne elite svijeta zvane "Babilonsko Bratstvo". Bratstvo se kroz vjekove oèuvalo selekcioniranim kri¾anjem unutar "loze" i odr¾avalo svoju moæ kroz pozicije plemstva plave krvi i èelni¹tva u najutjecajnijim svjetskim bankama, korporacijama i instutucijama. Drugi, diskretniji naèin dominacije postignut je na tzv. duhovnoj razini infiltracijom u krugove moæi velikih religijskih organizacija kao i osnivanjem tajnih kultova i ¹kola misterija. Stvaranje EU samo je dio globalnog vjekovnog napora Bratstva za ustanovljavanjem jedne svjetske vjere, jedne dr¾ave i jednog zakona. Simbolika EU zastave slu¾i kao demonstracija konaènog ostvarenja tih ideala. Zvijezde u krugu predstavljaju znak univerzalne bo¾anske majke, krunu besmrtnosti ¾ene iz Apokalipse. Plava boja simbolizira djevièanstvo, a pentakl magijski ¾enski element Zemlje. Zlatna zvijezda sugerira sunèevo mesijansko porijeklo. Broj dvanaest u astroteolo¹kom tumaèenju oznaèava 12 kuæa zodijaka kojima putuje bog sunce, a u ezoterijskom to je broj savr¹ene materijalizacije duha. U svojim Eklogijama (37. pr. K.) Vergilije je opisao povratak Djevice koja æe poslati novu rasu na Zemlju i koja æe joj darovati zlatnog djeèaka ili sina Sunca. Ovo proroèanstvo, koje se u raznim varijantama pojavljuje u mnogim poznatim i tajnim spiritualnim organizacijama, predstavlja duhovni fundament Babilonskog Bratstva. Pripremanje èovjeèanstva za dolazak sunèevog Mesije u punom je jeku.<br><br>[ <i>Foto: Slu¾beni plakat Europske unije</i> ]<br><br>Simbolièka veza izmeðu Babilona i EU najvidljivija je u izgledu zgrade parlamenta EU u Strasbourgu. Dovr¹ena 1992. stajala je 500 milijuna &#8364;, a u punoj funkciji je samo èetiri dana u mjesecu kada parlament zasjeda. Konstruirana je po uzoru na sliku "Kula babilonska" renesansnog majstora Pietera Brueghela. Prema biblijskoj verziji kula je ostala nedovr¹ena, a takvom ju je i Brueghel naslikao: lo¹ih temelja i presmione spiralne konstrukcije, kula izgleda vrlo nestabilno s vidljivim elementima uru¹avanja. Kada je upitan za¹to je parlament izgraðen kao preslika Babilonske kule jedan du¾nosnik je odgovorio kako æe EU ostvariti ono ¹to graditelji kule nisu uspjeli - "Mnogo jezika, jedan glas". To je i slogan koji je Europska komisija stavila na izborni plakat iz 1992. g. Uz Brueghelovu kulu postavljen je kran, a ljudi Europe predstavljeni su kao ugradbeni blokovi.<br><br>Posebnu zanimljivost predstavlja 12 naopakih zvijezda tzv. Luciferovih pentagrama koji se koriste u crnomagijskim obredima. Sumerski naziv za babilonsku kulu je Etemenanki (kuæa neba na zemlji) i navodno je podignuta na sredi¹njoj osi koja povezuje vi¹e i ni¾e planetarne sustave. Na samom vrhu sto metara visokog tornja - zigurata bio je hram posveæen Marduku, onda¹njem vrhovnom babilonskom bogu. Marduk je èesto bio prikazivan kao zmaj i zmija, a sjedinjavao je u sebi trojstvo bo¾anstava koje smo veæ spominjali: mu¹ki bog neba Baal ili Bel, ¾ensko mjeseèevo bo¾anstvo Astarte (I¹tar - Isis) i dijete - sunce Tammuz (Horus) koje je zapravo uskrsli Baal. Babilonska kula je bio projekt koji se, navodno, nije svidio Jahvi pa je on posvaðao graditelje unijev¹i razdor kroz razlièite jezike. Mo¾da je razlog gnjevu bio taj ¹to je hram bio posveæen Marduku ili Baalu koji u biblijskoj deskripciji u¾iva status konkurentskog vrhovnika Sotone. Komentator Tore iz 15. st. Menachem Tsioni tvrdio je da je kula zapravo leteæa naprava opremljena moænom tehnologijom baziranom na magiji. I drugi kabalisti bili su uvjereni da su tada¹nji ljudi posjedovali magijsko znanje Nefilima (palih anðela) koje im je omoguæilo izradu takvih letjelica koje po opisu ne zaostaju za vimanama ili leteæim tvrðavama drevnih Indijaca. Suvremeni istra¾itelj Zacharias Sitchin pridru¾uje se svojim spekulacijama takvim tvrdnjama. Bez obzira tko ili ¹to stoji u pozadini legende o Babilonskom tornju, njegova simbolika je vi¹estruko znaèajna. Ona prije svega navodi na ideju o zajedni¹tvu svih naroda koji ujedinjeni pod jednim vodstvom i zahvaljujuæi visokoj tehnologiji mogu sagraditi stepenice do neba i postiæi besmrtnost - privilegiju bogova.<br><br><b>Europa i Zeus</b><br><br>Jo¹ jedan simbol, ovaj u vidu spomenika, ujedinio je teoretièare zavjera i fundamentalne kr¹æane. Otmica Europe spektakularan je kip ispred zgrade Europskog parlamenta u Strasbourgu. Zeus preobra¾en u bika odnosi prekrasnu boginju po kojoj je prozvan na¹ kontinent. Etimologija grèkog imena Europa ('¹iroke glave' i 'velikih oèiju') navodi na zakljuèak da Europa predstavlja lunarnu kravu. Zanimljivo etimolo¹ko tumaèenje nudi Ernest Klein kada tvrdi da ime Europa potjeèe iz Sumera i da na akadskom oznaèava zvijezdu Danicu. Nakon ¹to je udovoljio svojoj ljubavnoj ¾udnji, Zeus se pretvorio u sazvije¾ðe Bika ¹to pridonosi jo¹ jednom astroteolo¹kom tumaèenju mita. Europa je zapravo fenièkog porijekla. U Sidonu je postojao hram Astarte u kojem se obo¾avala i Europa. Astarta je ¾enski aspekt plodnosti, a Zeus mu¹ki oplaðajuæi i kao takav pandan je Baalu - Enlilu - Jahvi. Europa se udala za Asteriona ('vladar zvijezda') a od Zeusa je dobila tri sina vladara podzemnog svijeta. U jednom od moguæih ezoterijskih èitanja mita, Europa je rodna kolijevka nove civilizacije koja æe iznjedriti bo¾anskog vladara sa sunèevom aureolom oko glave.<br><br><b>Nebeska himna</b><br><br>Kada je 1972. g. u Strasbourgu Bethovenona 'Oda radosti' progla¹ena slu¾benom himnom EU zacijelo je malo tko od uzvanika razmi¹ljao o èinjenici da su zavr¹ni stavak 9. simfonije koristili i nacisti prigodom proslave roðendana führera. Svirala se i u koncentracijskim logorima, koristio ju je francuski predsjednik, mason visoka ranga Francoise Mitterand prilikom svog ustolièenja 1981. Koristili su je u raznim prigodama nacionalisti i republikanci, komunisti i katolici. Himna se izvodi bez pjevanja ¹to znaèi da su izostavljeni Schillerovi stihovi. U rijetkim prilikama izvodi se neslu¾bena verzija s latinskim stihovima Austrijanca Petera Rolanda. "Zlatne zvijezde na nebu simboli su koji æe nas ujediniti" glasi dvostih himne.<br><br>Prije nego li u Njemaèkoj kult Bethovena promoviran je od francuskih masona koji su <i>Odu</i> slavili kao izraz vlastitih duhovnih ideala. "To je crkvena glazba, ali glazba nebeske crkve" - ushiæeno je komentirao Chrétien Urban. Njemaèka liberalna bur¾oazija Odu je do¾ivljavala kao programsku pjesmu, a inteligencija kao primjer povezanosti nacionalne kulture i duhovne univerzalnosti. Iako ne postoji zapis koji bi dokazivao Bethovenovu pripadnost masonima, on je zacijelo bio povezan s nekim lo¾ama poput one u rodnom Bonnu za koju je 1806. skladao adagio naslovljen '®alosna vrba nad grobom moga brata'. Buduæi da Bethoven nije imao braæe rijeè je o duhovnom bratu. Mnogi skladateljevi prijatelji i suradnici bili su masoni, a njihov utjecaj uoèljiv je i u nekim drugim kompozitorovim skladbama kao i u njegovim pismima i izjavama. Sahrana glazbenoga genija 1827. bila je velièanstvena ceremonija obilje¾ena masonskim dekorom. Utjecaj masona na gradnju europske konstrukcije nije nimalo prikriven. Predsjednik EK sastaje se s predstavnicima znaèajnih europskih lo¾a i s njima diskutira o doprinosu slobodnih zidara duhu ujedinjene Europe, a mnogi visoki du¾nosnici èlanovi su lo¾a.<br><br><b>Milom ili silom</b><br><br>EU nije samo ekonomski ili politièki projekt. To je i ideolo¹ki projekt koji veæ vi¹e od 6.000 godina stremi cilju kojemu je sada gotovo nadomak. Tajanstveni upravljaèi koji stoje iza EU i paralelnih projekata na ostalim kontinentima voðeni su sna¾nom idejom o mesijanskoj pojavi vladara bo¾anskog porijekla - zlatnog boga sunca koji je æe pod svojim ¾ezlom politièki i duhovno ujediniti svijet. Strategija elite Babilonskog Bratstva sastoji su u stvaranju preduvjeta za njegovu pojavu: totalitarnu dr¾avu kao svjetovni instrument njegove i njihove moæi, podr¾avanje mita o njegovoj pojavi kroz uèenja okultnih i vjerskih organizacija i eliminacija svih onih koji bi se tome mogli suprotstaviti. To se prije svega odnosi na predskazanu pojavu Antikrista i "osovine zla" koja bi ga podr¾avala. Politièke malverzacije, ekonomski pritsci, zaglupljivanje masa i nametnuti ratovi neke su od metoda kojima se Bratstvo sve slobodnije slu¾i.<br><br>Stoga vi¹e nego upozoravajuæe zvuèi izjava Paula Warburga, prvog predsjednika utjecajnog Vijeæa za meðunarodne odnose i negda¹njeg ravnatelja Federalnih rezervi i Manhattan banke: "<i>Imat æemo jednu svjetsku dr¾avu, htjeli to ili ne. Jedino pitanje je hoæe li ona biti ostvarena milom ili silom</i>.<p id='pkom_7361' class='tx_de ram0'><span id='kom_da_7361' onMouseOver='miNjaj("sl_d7361", "idax")' onMouseOut='miNjaj("sl_d7361", "ida")'><img name='sl_d7361' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Predrag Darabo¹. ' title=' Predrag Darabo¹ ima dobar komentar ' onclick='komLajkiT(7361, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7361' onMouseOver='miNjaj("sl_n7361", "inex")' onMouseOut='miNjaj("sl_n7361", "ine")'><img name='sl_n7361' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Predrag Darabo¹. ' title=' Predrag Darabo¹ ima lo¹ komentar ' onclick='komLajkiT(7361, "p_doli", 0)'></span></p></div>
+<a name='2010-03-03-16-47-17'></a><a name='3'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 3. komentar '><b>dst</b>, 2010-03-03 u 16:47:17</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Ako æemo analizirati skulpturu '®ena ja¹e zvijer' (<i>A Woman Riding the Beast</i>) i tumaèiti njenu simboliku, tada se Semiramidin bik, koji se ovdje pretvara u zvijer, ipak demontira (tj. raspada), a i bo¾ice Europa s njim ...<p id='pkom_7366' class='tx_de ram0'><span id='kom_da_7366' onMouseOver='miNjaj("sl_d7366", "idax")' onMouseOut='miNjaj("sl_d7366", "ida")'><img name='sl_d7366' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e dst. ' title=' dst ima dobar komentar ' onclick='komLajkiT(7366, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7366' onMouseOver='miNjaj("sl_n7366", "inex")' onMouseOut='miNjaj("sl_n7366", "ine")'><img name='sl_n7366' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e dst. ' title=' dst ima lo¹ komentar ' onclick='komLajkiT(7366, "p_doli", 0)'></span></p></div>
+<a name='2010-03-09-14-53-20'></a><a name='4'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 4. komentar '><b>Hrvatska radiotelevizija</b>, 2010-03-09 u 14:53:20</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+08.03.10.  <br><span class='k_nas'><a href='http://www.hrt.hr/index.php?id=48&tx_ttnews[tt_news]=65334&tx_ttnews[backPid]=23&cHash=476932178f' target='_blank'>Europi treba monetarni fond</a></span><br><br>Europi je potrebna institucija slièna Meðunarodnom monetarnom fondu (MMF) kako bi uspje¹nije rje¹avala situacije poput grèke fiskalne krize, izjavio je njemaèki ministar financija Wolfgang Schaeuble  u intervjuu za njemaèki list Welt am Sonntag.<br><br>Trebali bismo smireno razmotriti posljedice grèke krize, ne iskljuèujuæi niti jednu moguænost, èak ni uspostavu Europskog monetarnog fonda, kazao je. Uz to, naglasio je nadalje, 16 èlanica eurozone ¾eli rje¹avati grèku krizu bez pomoæi MMF-a. Ne smijemo dopustiti da na¹a zajednièka europska valuta postane loptica kojom æe se nabacivati meðunarodni ¹pekulatori, kazao je Schaeuble.<br><br>I Europska komisija razmi¹lja o osnivanju novog fonda za pomoæ zemljama eurozone, koji bi slu¾io kao za¹tita od buduæih financijskih kriza nalik onoj koja je zahvatila Grèku, izjavio je Komisijin glasnogovornik Amadeu Altafaj u redovitom kratkom obraæanju novinarima.<br><br>Pritisnuta manjkom èetiri puta veæim od maksimalne dopu¹tene razine u EU-u, Grèka je pokrenula niz mjera ¹tednje, ukljuèujuæi poveæanje poreza i velika smanjenja javne potro¹nje. Kriza te zemlje sna¾no je pritisnula vrijednost zajednièke valute eura na meðunarodnim financijskim tr¾i¹tima.<br><br>Ipak, guverner grèke sredi¹nje banke Georgi Provopoulos je optimistièan. Grèka neæe trebati inozemnu pomoæ da bi rije¹ila du¾nièke probleme, kazao je u razgovoru za njemaèki financijski dnevnik Financial Times Deutschland (FTD).<br><br>Provopoulos je izjavio kako je pro¹lotjedna sna¾na potra¾nja za pet milijardi eura vrijedno izdanje grèkih obveznica s rokom otplate od 10 godina pokazala da Atena mo¾e pribaviti sredstva na financijskim tr¾i¹tima. <br><br><br>- - - <br><span class='k_dod'><b>Dodatak:</b><br>Mic po mic; tako to rade "izabrani" u 'Novom svjetskom poretku'. Nije valjda da se ne sjeæate tko je ono na èelu MMF-a?</span><p id='pkom_7434' class='tx_de ram0'><span id='kom_da_7434' onMouseOver='miNjaj("sl_d7434", "idax")' onMouseOut='miNjaj("sl_d7434", "ida")'><img name='sl_d7434' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Hrvatska radiotelevizija. ' title=' Hrvatska radiotelevizija ima dobar komentar ' onclick='komLajkiT(7434, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7434' onMouseOver='miNjaj("sl_n7434", "inex")' onMouseOut='miNjaj("sl_n7434", "ine")'><img name='sl_n7434' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Hrvatska radiotelevizija. ' title=' Hrvatska radiotelevizija ima lo¹ komentar ' onclick='komLajkiT(7434, "p_doli", 0)'></span></p></div>
+<a name='2010-03-25-23-45-16'></a><a name='5'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 5. komentar '><b>Kruno Pavloviæ</b>, 2010-03-25 u 23:45:16</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>ISTINA O KOJOJ SE U HRVATSKOJ ©UTI</span><br><br>
+  Vozaè kamiona iz Slovenije je negdje na TV-u rekao kako radi dnevno po 16-18 sati za golu plaæu, bez plaæenih prekovremenih sati, bez plaæenog toplog obroka. Kad bi se pobunio, ka¾e, to njegov gazda jedva èeka, jer bi ga poslao na burzu i uzeo Rumunja koji bi mu vozio u pola cijene, ali gazda istovremeno prièa kako je u EU super, jer svaki mjesec kupi novi kamion.<br><br>  Bugarin (poslovni partner) prièa kako je Bugarska ¾ivjela od izvoza voæa i povræa, a sada sve uvoze iz EU, dok  se dr¾ava sve vi¹e zadu¾uje.<br><br>  Maðari prièaju kako su postali najamni radnici u (do juèer svojim) vinogradima, jer su ih Francuzi najprije  uni¹tili s niskim (dampin¹kim) cijenama, da bi, kada Maðari nisu vi¹e mogli vraæati banci kredite, od banaka kupili za sitan novac gotovo sve vinograde. Tako se sada najpoznatiji Maðarski vinogradi (Tokajac) nalaze u vlasni¹tvu Engleza.<br><br>  U Èe¹koj je EU prisilila vlasnike ¹eæerana da zatvore tvornice, dok su radnici zavr¹ili na burzi, a sve zato jer EU ima previ¹e ¹eæera, a previ¹e ¹eæera ima zato jer ga EU uvozi iz Kube i na njemu je puno veæa zarada.<br><br>  Njemaèka je zbog prekoraæenja kvote dozvoljenog zagaðivanja, prema sporazumu iz Kjota, veliki dio prljave industrije prebacila u Èe¹ku.<br><br>  Jedini èovjek koji je zbrojio dva i dva je èe¹ki predsjednik Klaus koji tvrdi da je ulazak Republike Èe¹ke u EU èisti proma¹aj i u znak protesta ne dozvoljava da se zastava EU izvjesi na njegovu rezidenciju.<br><br>  Pro¹le godine u veljaèi sam jedne nedjelje u vijestima na radiju u osam sati èuo u ¹pici krajnje uznemirujuæu vijest - U Maðarskoj graðani nezadovoljni s EU izi¹li su na ulice i krenuli prema parlamentu, policija napravila barikade, oèekuje se ono najgore. Ukljuèio sam radio da èujem vijesti, meðutim Maðarska se nije vi¹e spominjala. Naveèer sam s nestrpljenjem èekao dnevnik na TV, o spomenutom dogaðaju ni rijeèi.<br><br>  Znaèi da je saborska komisija za informiranje veæ reagirala. Nakon par dana stjecajem okolnosti sreo sam se s nekim Maðarima pa sam upitao ¹to je to bilo. Najprije nisu shvaæali na ¹to mislim, a kada sam im objasnio ¹to je bilo na vijestima, odmahnuli su rukom i rekli 'Ma kod nas su stalno neke demonstracije protiv EU'. E pa sada se pitam gdje je demokracija, gdje je sloboda ¹tampe, kojom se toliko busamo u prsa.<br><br>  Tvrdim da je to zato jer bi protiv EU bilo ne 50% graðana RH, veæ 90%da ovakve vijesti prika¾u na na¹oj televiziji. Bojim se da na kraju graðani neæe niti glasovati o ulasku u EU, veæ æe do tog vremena Sabor promijeniti Ustav, pa æe Sabor mjesto nas donijeti najbolje rje¹enje, a to je ulazak u EU, jer znaju da su im izgledi da narod glasa za EU veoma mali.<br><br>  Tako je bilo u Nizozemskoj i Sloveniji, kada su kroz ispitivanje javnog mijenja shvatili da æe narod biti protiv ulaska u  EU. Kada se puk pobunio ¹to se nije izi¹lo na referendum, odgovor je bio: "Vi ste glasali za na¹u stranku, koja je u svom programu imala ulazak u EU i mi sada samo izvr¹avamo ono ¹to smo vam u predizbornoj kampanji obeæavali".<br><br>  Nadalje, za¹to Ustav EU nije pro¹ao u Francuskoj i Nizozemskoj, za¹to su pribjegli Lisabonskom sporazumu, za¹to Lisabonski sporazum prihvaæaju parlamenti, za¹to ga ne daju na referendum?<br><br>  Zato jer bi pro¹li kao u Irskoj, a u Irskoj znamo nisu pro¹li. Da li su na¹i politièari svjesni toga ¹to èine ovom narodu? Da li su svjesni toga da æe ulaskom u EU u vrlo kratkom roku sva dobra prijeæi u vlasni¹tvo bjelosvjetske mafije i da æe na¹ narod biti najamna radna snaga, bolje reèeno robovi. Oni nisu svjesni da kada vlasnik plati porez na dobit, ostatak dobiti zavr¹ava van granica RH Samo ako je vlasnik Hrvat ta dobit se opet investira u RH.<br><br>  Znam dobro o èemu prièam, jer sam donedavno radio u stranoj tvrtci i znam koliko novca je svake godine vlasnik odnosio iz RH.<br><br>  ©to je to potaklo sve na¹e stranke da u svojim programima gotovo svi (osim nekih malih stranaka) imaju ulazak u EU. Kao jedini logièni odgovor nameæe mi se misao da su kupljeni, jer bogatoj EU (s velikim osjeæajem za pronala¾enje zlatnog rudnika) nije problem podijeliti na¹im politièarima stotinjak milijuna eura da bi ovi napravili sve ¹to se od njih tra¾i. Njima investirati taj novac je kao meni dati prosjaku 5 kuna.<br><br>  Zar nitko ne vidi da su vodeæe èlanice EU (Engleska, Francuska, Nizozemska, Portugal, ©panjolska i Njemaèka), sve od reda bile kolonijalne sile, da su kolonije osvojili ratom, da su u tim ratovima poubijali milijune ljudi i opljaèkali sve ¹to se opljaèkati moglo. Ali sve ¹to su oru¾jem dobili, oru¾jem su i izgubili. Sada imaju muzeje pune umjetnina, zlata, bjelokosti i dragulja, ali imaju i izdajnike (one koji su za njih ratovali u vlastitoj domovini protiv vlastitog naroda), koji su im sada problem (U Francuskoj: Marokanci, Tuni¾ani, Al¾irci, Mauri i.t.d.<br><br>  London ima preko 50% obojenog stanovni¹tva, a da ne prièamo o tome na ¹to slièi Nizozemska) i izvor su kriminala. Sada imaju i jedno veliko iskustvo, pa su pouèeni Aljaskom, koju su SAD kupile od Ruskoga cara do¹le do zakljuèka: ¹to se otme oru¾jem, oru¾jem se mo¾e vratiti, ali ¹to se kupi, mo¾e se samo kupnjom vratiti, pa su sada krenuli osvojiti svijet na novi naèin: globalizacijom.<br><br>  Proèitajte malu plavu knji¾icu  EU-a, koja se zove Ustav EU-a, u kojoj sve pi¹e...<br><br>  I sada su te zemlje lansirale prièu o globalizaciji. ©to se to krije iza globalizacije? Globalizacija je kolonizacija bez ispaljenog metka.<br><br>  I mi nasjedamo tim hoh¹taperima, koji nas uèe ¹to je to demokracija, ¹to je dobro, a ¹to je zlo, a do juèer su sijali smrt ¹irom svijeta.<br><br>  Istrijebili su cijele civilizacije. Najveæi demokrati na ovome svijetu, SAD, donedavno su imali robove, a do juèer se nisu vozili u istim autobusima sa crncima, dok je Dubrovaèka republika 1642. Godine donijela zakon o ukidanju ropstva, dakle u vrijeme kada je Sjeverna Amerika jo¹ bila engleska kolonija i nije postojala kao dr¾ava (SAD su oformljene kao dr¾ava 1776. godine).<br><br>  I sada im je taktika da ¾rtvu najprije bace na koljena (najèe¹æe kroz financijska zadu¾enja), a onda dolaze s kovèezima novca, odvjetnicima i ugovorima, pa sve vrijedno kroz kratko vrijeme promijeni vlasnika, naravno za sitan novac, jer i kralj u pustinji, kada umire od ¾eði, daje kraljevstvo za kap vode.<br><br>  Ja jesam za EU, ali ne EU s ovakvom politikom, politikom koju vode kapitalisti, a ne politièari.<br><br>  Kakva je to politika kada su kapitalisti  zbog svoje gramzivosti, pohlepe i nepresu¹ne ¾elje za ¹to veæim  bogatstvom svoj kapital radi veæe zarade prebacili u Kinu (gdje radnik  radi za 1$ dnevno), a radnike uz èiju pomoæ su stekli taj isti  kapital ¹alju na burzu, da bi robu proizvedenu u njihovim tvornicama u Kini dopremili u EU da je prodaju svojim dojuèera¹njim radnicima, koji sada ¾ive od socijalne pomoæi.<br><br>  Tako su do sada uni¹tili tekstilnu industriju u EU, obuæarsku industriju, naèeli drvno-preraðivaèku industriju, automobilsku industriju i.t.d.<br><br>  Tvrdim da ovakva politika EU nije dobra, da se bazira samo na kapitalu, a za èovjeka vi¹e nitko ne brine. Sada vi¹e nije dovoljno raditi radnim danom ¹to bi rekli Zagorci od ve do ve, veæ je potrebno raditi i subotom i nedjeljom, ali to samo kod nas, dok ti isti centri u svojim matiènim dr¾avama nedjeljom ne rade (Austrija i Njemaèka).<br><br>  No, ta politika je politika rezanje grane na kojoj se sjedi, jer kada 50% radnika u EU zavr¹i na burzi, a druga polovica vi¹e ne bude mogla plaæati socijalu radnicima na burzi, ponovo æe poteæi krv potocima. Da li æe se to krvoproliæe zvati Oktobarska ili Francuska  revolucija nije bitno, ali to je s ovakvom politikom EU neminovno.<br><br>  Bogata¹e u EU kod nas najvi¹e zanima Slavonska ravnica, izvori pitke vode i na¹a obala zajedno s otocima. Industrija ih ne zanima, to imaju kod sebe u Koreji, Kini, Vijetnamu, Turskoj i Indiji.<br><br>  Njih na¹a industrija koja im konkurira smeta. Nju treba uni¹titi. Pogledajte samo kakav pritisak rade na na¹u vladu u vezi brodogradili¹ta. Na¹a brodogradili¹ta im smetaju jer konkuriraju Korejskima, koja su u njihovom vlasni¹tvu. To opravdavaju slobodnim tr¾i¹tem i za¹titom tr¾i¹nog natjecanja.<br><br>  Kad smo veæ kod slobodnog tr¾i¹ta, da ka¾em i to da je njihova teorija da sve ¹to nije profitabilno, dakle ¹to ne mo¾e na tr¾i¹tu opstati, treba propasti.<br><br>  Ali to pravilo va¾i samo za neke, iako tvrde da smo svi jednaki (sve svinje su jednake, samo su neke jednakije, Orwell), pa pitam se za¹to onda sada u ovoj krizi nisu pustili da propadnu sve banke u EU i SAD-u, jer su po toj logici trebale propasti, za¹to su automobilskoj industriji dali financijsku  injekciju, za¹to je samo Amerika, da spasi svoje gospodarstvo, ¾rtvovala preko tisuæupetsto milijardi USD?<br><br>  Zar mi dotacijama ne spa¹avamo svoje gospodarstvo? Zar nije bolje da im pomognemo sa dva tri milijuna USD, nego da ti radnici zavr¹e na burzi, gdje æe ko¹tati  proraèun desetak puta vi¹e?<br><br>  Dakle mi sve slijepo vjerujemo tim bjelosvjetskim la¾ovima. Mo¾da æete reæi da sam pregrub u izno¹enju svojih ocjena. Ne nisam pregrub, ja sam oèajan, mogu ovo pismo poslati i u novine ali one ga neæe objaviti.<br><br>  Goebbels, Hitlerov ¹ef propagande je za ove dana¹nje managere propagande bio djeèji vrtiæ. Ovi danas su uèenici Amerièkog agresivnog marketinga roðenog u potro¹aèkom dru¹tvu. <br><br>  Marketing, ¹to je to ustvari? <br><br>  Jedna definicija ka¾e da je potro¹aèko dru¹tvo izgradilo marketing, koji je sposoban èovjeka uvjeriti da kupi ne¹to ¹to mu ne treba, za novac koji nema-karticu). To pak znaèi da èovjeka treba nagovoriti da se ¹to vi¹e zadu¾i, jer je onda s njime lak¹e vladati.<br><br>  Ako èovjek nikome ni¹ta ne duguje, tada si mo¾e puno toga dopustiti, ali ako duguje, za auto, za kuæu ili stan, dovoljno mu je priprijetiti otkazom i èovjek ¹uti, jer ako ostane bez posla, ostat æe bez svega, a nitko ne ¾eli ostati bez egzistencije i dobara koja je stjecao mukotrpnim radom, pogotovo kada iza sebe ima obitelj, koja je svakom radniku svetinja.<br><br>  Koliko su la¾ljivi, sjetit æete se i sami, kada Vas podsjetim na obeæanja stranih banaka. Dok nisu imali pristup u RH, onda su nas uvjeravali da ako im otvorimo vrata, da æemo imati kamatu istu kao I u njihovim matiènim dr¾avama (kod njih je sada kamata 3%, a kod nas 13%). Kada su u¹li obeæavali su tvrtkama, koje preðu k njima iz  tada¹njeg SDK, da æe im platni promet raditi besplatno. No na¹e tvrtke na to nisu nasjedale, pa su onda dr. ©o¹iæ i dr. Ðodan javno popljuvali SDK, nazvav¹i SDK komunistièkim mastodontom, koji treba ukinuti (jer takvo ¹to ne postoji nigdje u svijetu), a poslovne subjekte prebaciti u poslovne banke. Napokon su donijeli zakon koji je tvrtke prisilio da raèune i novac prebace u poslovne banke, ali tog èasa vi¹e nijednoj banci nije palo na pamet odr¾ati obeæanje o besplatnom platnom prometu, ¹tovi¹e cijena platnog prometa je poskupjela otprilike pet puta.<br><br>  U tim istim bankama danas mo¾ete dobiti kredit za auto, kamion ili bilo ¹to drugo proizvedeno na zapadu u roku par sati do par dana, dok za recimo farmu krava kredit æe na¹ seljak ganjati par godina.<br><br>  Na¹a vlast je po meni uèinila najveæi propust 1992. godine, kada je u pretpristupnim ugovorima s EU potpisala da æe otvoriti na¹e tr¾i¹te europskim proizvodima i da æe prodati banke. Tim potezom smo uni¹tili domaæu industriju, poljoprivredu i tr¾i¹te novca - ili reèeno ¹ahovskom terminologijom, poklonili smo protivniku kraljicu i topove.<br><br>  Da nastavim sa ¹ahovskom terminologijom: na¹a vlada igra ¹ah s EU, a ima znanje poèetnika, koji zna samo kako se vuku figure, dok protivnik zna desetak poteza unaprijed i unaprijed zna gdje æe nas navuæi na tanki led i matirati, odnosno postiæi sve ono ¹to su naumili.<br><br>  Za ulazak u EU najprije su nam uvjetovali suradnju s Ha¹kim sudom. Zatim smo morali izruèiti generala Gotovinu, pa smo morali prihvatiti ZERP, sada æemo morati dati Slovencima 90% onoga ¹to tra¾e i tako malo po malo, najednom æemo se naæi na koljenima bez hlaèa.<br><br>  Ako se samo malo suprotstavimo, izvuæi æe asa iz rukava, a to je da æe preko noæi zatra¾iti povrat svih dugova, ¹to je ovoga èasa oko 50 milijardi USD.<br><br>  I ¹to mislite; ¹to nas onda èeka?<br><br>  Èeka nas jedino moguæe, a to je uvoðenje maksimalnih poreza na sve moguæe i nemoguæe, od poreza na rogatu stoku za seljake, porez na vi¹ak stambenog prostora, porez na vikendice, aute (neke od tih poreza veæ imamo, ali æe sada biti nekoliko puta veæi), porez na porez - i do èega æe to dovesti?<br><br>  Dovest æe do drastiènog pada cijena nekretnina i do opæeg kolapsa u zdravstvu, ¹kolstvu i trgovini.<br><br>  I sada je jasno za¹to EU inzistira na brzom sreðivanju zemlji¹nih knjiga.<br><br>  Pro¹le godine, na¹ biv¹i premijer je rekao da je Hrvatska jedna velika obitelj, s èime se ja u potpunosti sla¾em, samo se pitam da li je u njegovu malu obitelj dolazila policija i centar za socijalni rad raditi reda ili je taj red radio sam, pa se pitam za¹to mu u velikoj obitelji EU treba raditi reda?<br><br>  Nadalje, mnogi besplatni programi EU su izmi¹ljeni za to da pripreme teren za "dan D". Npr. program po kojem emisari EU uèe na¹e lumene kako gospodariti dru¹tvenom imovinom, a za to im trebamo dati popis dru¹tvene imovine s procjenom vrijednosti. Da li Vam to ¹to govori?<br><br>( <i>tekst hrvatskog struènjaka za gospodarstvo N.N. odbijen u hrvatskim  medijima</i> )<br><br>  POTPISUJEM OVO TE PROSLIJEÐUJEM DOBRONAMJERNIM PRIJATELJIMA I LJUDIMA KOJI MISLE.<p id='pkom_7548' class='tx_de ram0'><span id='kom_da_7548' onMouseOver='miNjaj("sl_d7548", "idax")' onMouseOut='miNjaj("sl_d7548", "ida")'><img name='sl_d7548' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Kruno Pavloviæ. ' title=' Kruno Pavloviæ ima dobar komentar ' onclick='komLajkiT(7548, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7548' onMouseOver='miNjaj("sl_n7548", "inex")' onMouseOut='miNjaj("sl_n7548", "ine")'><img name='sl_n7548' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Kruno Pavloviæ. ' title=' Kruno Pavloviæ ima lo¹ komentar ' onclick='komLajkiT(7548, "p_doli", 0)'></span></p></div>
+<a name='2010-03-30-18-41-33'></a><a name='6'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 6. komentar '><b>HINA</b>, 2010-03-30 u 18:41:33</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'><a href='http://www.business.hr/hr/Naslovnica/Svijet/Britanci-se-zale-na-goleme-troskove-uskladivanja-s-propisima-EU' target='_blank'>Britanci se ¾ale na goleme tro¹kove usklaðivanja s propisima EU</a></span><br><br><span class='k_pod'>Usklaðivanje s propisima Europske unije u proteklih je 11 godina britanska kuæanstva u prosjeku stajalo 4912 funta (7342 dolara), pokazala je u utorak studija britanskog istra¾ivaèkog instituta Open Europe.</span> <br><br>Pozivajuæi se na procjene same vlade, taj euroskeptièni britanski istra¾ivaèki institut ustvrdio je takoðer da su tro¹kovi domaæih propisa dva i pol puta ni¾i od onih Europske unije.<br><br>"To je jasan argument u prilog tvrdnji da gdje god je to moguæe regulativu valja usvajati na lokalnoj i nacionalnoj razini. Ujedno naznaèuje da bi nastojanja prema kresanju regulative trebala biti ciljana na razini EU", navodi se u izvje¹æu Open Europea.<br><br>"Europska komisija provodi neke hvalevrijedne inicijative za smanjenje regulative. Pa ipak, u Bruxellesu prevladava ozraèje da <i>vi¹e propisa znaèi vi¹e Europe</i>", dodaje se u izvje¹æu.<br><br>Pritom vladine tvrdnje o u¹tedama nisu u skladu s podacima koje iznosi u procjenama njihova utjecaja, upozoravaju u Open Europeu.<br><br>Istra¾ivaèki institut navodi da je bruxelleska legislativa u razdoblju od 1998. do 2009. stajala britansko gospodarstvo ukupno 124 milijarde funta, uz udio u ukupnim tro¹kovima regulative od 71 posto. Samo u 2009. ukupni tro¹kovi regulative uvedene u razdoblju od 1998. iznosili su 32,8 milijardi funta, uz udio onih povezanih s regulativom EU-a od 59 posto, odnosno 19,3 milijarde funta.<br><br>Usporedbe radi, u 2008. udio tro¹kova povezanih s europskom regulativom iznosio je 65 posto. U razdoblju od 1998. do 2009. njegov je prosjeèan udio u ukupnim tro¹kovima regulative iznosio 72 posto.<br><br>Mnogi propisi uvedeni u Britaniji i ostalim EU zemljama, poput onih na podruèju financijskih usluga, za¹tite okoli¹a, telekoma i tr¾i¹ne utakmice, potekli su iz Bruxellesa u sklopu upravljanja golemim jedinstvenim tr¾i¹tem EU-a koje je najveæi britanski klijent.<br><br><br>- - - <br><span class='k_dod'><b>Dodatak:</b><br>A Hrvati misle da tamo m&#225;n&#225; pada s neba te teèe med i mlijeko ...</span><p id='pkom_7594' class='tx_de ram0'><span id='kom_da_7594' onMouseOver='miNjaj("sl_d7594", "idax")' onMouseOut='miNjaj("sl_d7594", "ida")'><img name='sl_d7594' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e HINA. ' title=' HINA ima dobar komentar ' onclick='komLajkiT(7594, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7594' onMouseOver='miNjaj("sl_n7594", "inex")' onMouseOut='miNjaj("sl_n7594", "ine")'><img name='sl_n7594' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e HINA. ' title=' HINA ima lo¹ komentar ' onclick='komLajkiT(7594, "p_doli", 0)'></span></p></div>
+<a name='2010-04-11-18-12-51'></a><a name='7'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 7. komentar '><b>sims</b>, 2010-04-11 u 18:12:51</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+crkva i masoni imaju isti plan = VLAST !<p id='pkom_7663' class='tx_de ram0'><span id='kom_da_7663' onMouseOver='miNjaj("sl_d7663", "idax")' onMouseOut='miNjaj("sl_d7663", "ida")'><img name='sl_d7663' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e sims. ' title=' sims ima dobar komentar ' onclick='komLajkiT(7663, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7663' onMouseOver='miNjaj("sl_n7663", "inex")' onMouseOut='miNjaj("sl_n7663", "ine")'><img name='sl_n7663' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e sims. ' title=' sims ima lo¹ komentar ' onclick='komLajkiT(7663, "p_doli", 0)'></span></p></div>
+<a name='2010-04-15-21-53-19'></a><a name='8'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 8. komentar '><b>Duric Aljosa</b>, 2010-04-15 u 21:53:19</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Stoljeæima duga evolucija koja je dovela do ubrzanog razvoja nauke i tehnike, danas na poèetku 21 vijeka nam je otvorila moguænost realizacije najveæeg sna cijelog èovjeèanastva, konaèno smo u stanju ispuniti potrebe svih ljudi svijeta, a najveæi i najte¾i dio tog posla prepustiti strojevima i ma¹inama koje smo i stvorili upravo iz tog razloga. Umjesto toga meðutim, upali smo u globalnu financijsku krizu bez presedana èiji su glavni uzroci sustavne naravi. Suprotno svakoj logici, za povijesni korak ljudske civilizacije nam nedostaje novca iako ga na svijetu nikad nije bilo u veæim kolièinama. <br><br>Evo jednog alternativnog rje¹enja za sve one koji su svjesni strukturnih problema na¹e civilizacije: <br><br>Video: Nova TV - Sustav Alternativne Valute Crom, Poziv Na Izgradnju Odr¾ivog Dru¹tva<br><br>http://cromalternativemoney.org/index.php/en/media/news/ekonomija-nova-tv-sustav-alternativne-valute-crom.html<p id='pkom_7699' class='tx_de ram0'><span id='kom_da_7699' onMouseOver='miNjaj("sl_d7699", "idax")' onMouseOut='miNjaj("sl_d7699", "ida")'><img name='sl_d7699' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Duric Aljosa. ' title=' Duric Aljosa ima dobar komentar ' onclick='komLajkiT(7699, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7699' onMouseOver='miNjaj("sl_n7699", "inex")' onMouseOut='miNjaj("sl_n7699", "ine")'><img name='sl_n7699' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Duric Aljosa. ' title=' Duric Aljosa ima lo¹ komentar ' onclick='komLajkiT(7699, "p_doli", 0)'></span></p></div>
+<a name='2010-04-25-15-37-15'></a><a name='9'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 9. komentar '><b>CowboyBebop2012</b>, 2010-04-25 u 15:37:15</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Istina o Europskoj uniji</span><br><br>
+<b>YouTube:</b><br><br><b><a href='http://www.youtube.com/watch?v=4OivEcnZ_mE' target='_blank'>1 / 6 - Temeljna ideja</a></b> &nbsp; &#8730;<br><b><a href='http://www.youtube.com/watch?v=vLlqQXQCxyc' target='_blank'>2 / 6 - Majstori korupcije</a></b><br><b><a href='http://www.youtube.com/watch?v=VquL6shPr4E' target='_blank'>3 / 6 - Natruhe fasizma</a></b><br><b><a href='http://www.youtube.com/watch?v=nP2FkJ5byUE' target='_blank'>4 / 6 - Kraljevska elita</a></b><br><b><a href='http://www.youtube.com/watch?v=9hWsXP9elJ8' target='_blank'>5 / 6 - Marsiranje Carstva</a></b><br><b><a href='http://www.youtube.com/watch?v=KGTG4BjF3xQ' target='_blank'>6 / 6 - Prava vlada EU</a></b> &nbsp; &#8730;<p id='pkom_7744' class='tx_de ram0'><span id='kom_da_7744' onMouseOver='miNjaj("sl_d7744", "idax")' onMouseOut='miNjaj("sl_d7744", "ida")'><img name='sl_d7744' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e CowboyBebop2012. ' title=' CowboyBebop2012 ima dobar komentar ' onclick='komLajkiT(7744, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7744' onMouseOver='miNjaj("sl_n7744", "inex")' onMouseOut='miNjaj("sl_n7744", "ine")'><img name='sl_n7744' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e CowboyBebop2012. ' title=' CowboyBebop2012 ima lo¹ komentar ' onclick='komLajkiT(7744, "p_doli", 0)'></span></p></div>
+<a name='2010-05-23-20-50-17'></a><a name='10'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 10. komentar '><b>Eco</b>, 2010-05-23 u 20:50:17</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Angela Merkel: Ako propadne euro, propada i Europa</span><br><br>
+... Europski ministri financija spremaju se za jo¹ jedan hitan sastanak, na kojem bi glavna tema trebla biti promjena europskog ustava. Pred njima bi se sutra trebao naæi novi problem: pritisak Njemaèke da se izmijeni Lisabonski ugovor i Bruxellesu da veæa moæ da koordinira nacionalne proraèune.<br><br>Nastojeæi saèuvati stabilnost eura i unijeti novu praksu u funkcioniranju eurozone, njemaèka kancelarka Angela Merkel  proteklih je dana podigla mnogo pra¹ine, kako meðu ulagaèima na tr¾i¹tu tako i meðu europskim polièarima. Zabranom financijskih transakcija koje imaju ¹pekulativan karakter (tzv. naked short selling) najprije je odluèila uvesti èvr¹æu regulaciju financijskih manipulacija.<br><br>- Ako se ne obaèunamo s ovom opasno¹æu, posljedice za Europu bit æe nesagledive... <b>Ako padne euro, past æe i Europa</b> - gotovo apokaliptièno upozorila je Merkel ovih dana. Istodbno, u izjavi za Financial Times, njemaèki ministar financija Wolfgang Schäuble pozvao je na izmjenu europskog ustava.<br><br>- Uvjeren sam da su tr¾i¹ta izvan kontrole. <b>Stoga trebamo zaista uèinkovitu regulaciju, u smislu stvaranja tr¾i¹nih mehanizama koji æe funkcionirati na pravi naèin</b> - rekao je. Nacrt promjene europskog ustava, koji je objavio njemaèki poslovni list Handelsblatt, izradili su upravo Merkel i njeni ministri financija i ekonomije, a ukljuèuje brojne promjene koje se odnose na zajedièku valutu.<br><br>Prije svega, Nijemci ¾ele vidjeti <b>pojaèan nadzor prijedloga proraèuna svake zemlje èlanice eurozone, zatim uvoðenje o¹trih sankcija za zemlje koje kr¹e pravila o visini javnog duga, oduzimanje prava glasa u Vijeæu Europe te uvoðenje procedure za bankrot onih zemalja koje postanu nesolventne</b>.<br><br>No, svojim najavama njemaèki su politièari ujedno otvorili nove napukline u odnosima èelnika EU jer taj jednostrani potez Njemaèke nije nai¹ao na veliko razumijevanje drugih, osobito ne u Britaniji, koja ima najaèu financijsku industriju. Novi britanski premijer David Cameron odluèno se protivi otvaranju Lisabonskog ugovora i davanja veæe moæi Europskoj komisiji.<br><br>Vrijednost europske zajednièke valute pala je na najni¾u razinu u èetiri godine. Mnogi analitièari upozoravaju da je Njemaèka svojim potezom unijela vi¹e nesigurnosti nego ¹to je uvjerila tr¾i¹ta da æe nova regulacija dati rezultate.<p id='pkom_7866' class='tx_de ram0'><span id='kom_da_7866' onMouseOver='miNjaj("sl_d7866", "idax")' onMouseOut='miNjaj("sl_d7866", "ida")'><img name='sl_d7866' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Eco. ' title=' Eco ima dobar komentar ' onclick='komLajkiT(7866, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7866' onMouseOver='miNjaj("sl_n7866", "inex")' onMouseOut='miNjaj("sl_n7866", "ine")'><img name='sl_n7866' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Eco. ' title=' Eco ima lo¹ komentar ' onclick='komLajkiT(7866, "p_doli", 0)'></span></p></div>
+<a name='2010-05-24-14-15-53'></a><a name='11'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 11. komentar '><b>HRT</b>, 2010-05-24 u 14:15:53</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Pad eura dobra vijest za Europu</span><br><br>
+23.05.10.<br><br>Iako èlanice eurozone svim silama nastoje ogranièiti ¹tetu proizi¹lu iz grèke du¾nièke krize, euro i dalje sna¾no slabi prema dolaru na deviznim tr¾i¹tima diljem svijeta. Meðutim, analitièari upozoravaju da ne treba previ¹e strahovati jer to ima i svoje dobre strane.<br><br>Vlasnici hotela i restorana diljem Europe zadovoljno trljaju ruke u oèekivanju navale turista iz zemalja koje nisu u eurozoni, poput SAD-a i Kine, koji æe se prepustiti potro¹nji buduæi da æe im ojaèati kupovna moæ. Pad eura pomoæi æe i drugim sektorima europskog gospodarstva jer æe im poveæati konkurentnost na svjetskim tr¾i¹tima, kazao je ekonomist Societe Generalea Olivier Gasnier. Slab euro pogodovat æe i posrnuloj Grèkoj u nastojanjima da se izvuèe iz du¾nièke krize, poglavito s obzirom na slabljenje eura u odnosu na tursku liru. Turska je inaèe najva¾niji trgovaèki partner te zemlje, ali i najveæi konkurent u njezinu najva¾nijem proizvodu, turizmu. Slab euro odvratit æe turiste od Turske.<p id='pkom_7873' class='tx_de ram0'><span id='kom_da_7873' onMouseOver='miNjaj("sl_d7873", "idax")' onMouseOut='miNjaj("sl_d7873", "ida")'><img name='sl_d7873' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e HRT. ' title=' HRT ima dobar komentar ' onclick='komLajkiT(7873, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7873' onMouseOver='miNjaj("sl_n7873", "inex")' onMouseOut='miNjaj("sl_n7873", "ine")'><img name='sl_n7873' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e HRT. ' title=' HRT ima lo¹ komentar ' onclick='komLajkiT(7873, "p_doli", 0)'></span></p></div>
+<a name='2010-05-24-23-20-03'></a><a name='12'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 12. komentar '><b>Christopher Booker</b>, 2010-05-24 u 23:20:03</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'><a href='http://www.telegraph.co.uk/comment/columnists/christopherbooker/7754100/The-euro-crisis-is-a-judgment-on-the-great-lie-of-Europe.html' target='_blank'>The euro crisis is a judgment on the great lie of 'Europe'</a></span><br><br>7:00PM BST 22 May 2010<br><br>Easily the most telling statement by any politician last week was that from an anguished Angela Merkel, in pronouncing that "the current crisis facing the euro is the biggest test Europe has faced for decades, even since the Treaty of Rome was signed in 1957". "If the euro fails," she went on, "Europe fails," warning that the consequences for the whole of Europe would be "incalculable".<br><br>We have still scarcely begun to wake up to the gravity of the crisis now upon us, not just for the eurozone but also for us here in Britain and for the entire global economy. The measures so far taken to prop up the collapsing euro, such as that famous "$1 trillion package", are no more than gestures.<br><br>Greece was just the antipasto: Italy, Spain, Portugal and others are now hanging over an abyss of debt which scarcely all the money in Europe could fill - created by countries living way beyond their means, thanks not least to the euro's low interest rates. The only possible consequence of the collapse of one of the world's leading currencies, leaving Europe with no money to trade in, would be utter chaos.<br><br>What we are witnessing here is a judgment on the entire deceitful and self-deceiving way in which the "European project" has been assembled over the past 53 years. One of the most important things to understand about that project is that it has only ever had one real agenda. Everything it has done has been directed to one ultimate goal, full political and economic integration. The headline labels put on the various stages of that process may have changed over the years, such as building first a "common market", then a "single market", finally a "constitution". But by far the most important project of all was locking the member states into a single currency.<br><br>This was always above all a political not an economic project, to be driven through at any cost, which was why all those "Maastricht criteria" laid down to bring it about were repeatedly breached. But as expert voices were warning as long ago as the 1970s, when it was first put on the agenda, there was no way economic and monetary union could work unless it was run by a single all-powerful economic government, with the power to raise taxes.<br><br>As was advised by Sir Donald MacDougall's report to Brussels in 1978, it could only work if, following the US model, between 20 and 25 per cent of Europe's GDP was available to such a government, to enable a huge transfer of wealth from richer countries such as Germany to the poorer, more backward countries of southern Europe - and how ironically has that come about!<br><br>When the 10-year-long construction of the euro began in the 1990s, all these warnings were ignored. The cart was put before the horse. So fixated were the Eurocrats on the need to get their grand project in place that the "rules" were treated as mere window dressing. The member states were locked together willy-nilly in a one-size-fits-all system, with a single low interest rate, enabling countries such as Italy, Spain, Portugal and Greece to live on a seemingly limitless sea of borrowed money. And now, entirely predictably, judgment day has come.<br><br>If the euro does disintegrate, as Mrs Merkel warns, the consequences would be incalculable. Replacing all the national currencies was a gargantuan task, by far the most ambitious ever attempted in the name of European integration, and there is no Plan B. Without a currency, trade would collapse - leaving Britain, dependent on Europe for 50 per cent of its trade, just as seriously affected as everyone else. A system failure on this scale would make the 1930s pale into insignficance.<br><br>Inevitably, cries went up last week for the EU to be transformed into a proper economic government with control over national budgets and the power to raise taxes - exactly what MacDougall and others were talking about in the 1970s. But it is too late, and all that remains are desperate gestures.<br><br>As reported by the think tank Open Europe, Mrs Merkel was even calling last week for a "global" tax on financial transactions to raise 321 billion euros a year Europe-wide - 204 billion euros of which would come from Britain, still the world's leading financial centre, with 43 billion euros from Germany and just 17 billion euros from France.<br><br>As alarming as anything, with this tsunami roaring down on us, has been the sight of our new leaders preening themselves with their list of irrelevant little "coalition policies" and babyish boasts about the "greatest democratic shake-up since the 1832 Reform Act", as if none of this was happening. As one analyst put it: "They are like children let loose in the sweet shop, seemingly oblivious to the horrendous reality unfolding before us."<br><br>A well-known economist said wryly to me last week: "Bring back the days of Alistair Darling and Gordon Brown. At least they had some grasp of what is going on. This lot are just totally out of their depth." <p id='pkom_7877' class='tx_de ram0'><span id='kom_da_7877' onMouseOver='miNjaj("sl_d7877", "idax")' onMouseOut='miNjaj("sl_d7877", "ida")'><img name='sl_d7877' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Christopher Booker. ' title=' Christopher Booker ima dobar komentar ' onclick='komLajkiT(7877, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7877' onMouseOver='miNjaj("sl_n7877", "inex")' onMouseOut='miNjaj("sl_n7877", "ine")'><img name='sl_n7877' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Christopher Booker. ' title=' Christopher Booker ima lo¹ komentar ' onclick='komLajkiT(7877, "p_doli", 0)'></span></p></div>
+<a name='2010-05-28-15-21-37'></a><a name='13'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 13. komentar '><b>Daniel Estulin</b>, 2010-05-28 u 15:21:37</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Moj savjet Hrvatskoj, a nadam se da æe me poslu¹ati, NE ulazite u EU. Ostanite slobodni i neovisni. Zadr¾ite svoj monetarni sustav. Budite zamlja koja hrani svoje ljude, i koja sama odluèuje o svojoj sudbini. Èlanstvo u EU vodi ka uni¹tenju. To znam po primjerima Francuske, ©panjolske, Portugala. Grèka je pred raspadom i postaje zemlja èetvrtog svijeta. Zar to Hrvatska ¾eli?<p id='pkom_7901' class='tx_de ram0'><span id='kom_da_7901' onMouseOver='miNjaj("sl_d7901", "idax")' onMouseOut='miNjaj("sl_d7901", "ida")'><img name='sl_d7901' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Daniel Estulin. ' title=' Daniel Estulin ima dobar komentar ' onclick='komLajkiT(7901, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7901' onMouseOver='miNjaj("sl_n7901", "inex")' onMouseOut='miNjaj("sl_n7901", "ine")'><img name='sl_n7901' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Daniel Estulin. ' title=' Daniel Estulin ima lo¹ komentar ' onclick='komLajkiT(7901, "p_doli", 0)'></span></p></div>
+<a name='2010-05-28-22-27-13'></a><a name='14'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 14. komentar '><b>jedan prijatelj</b>, 2010-05-28 u 22:27:13</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Sto Hrvati zele to i imaju. Taj narod nije spreman boriti se za interese svoje djece jer ih nema na ulicama. Vlast vode strani centri moci, a ne Sabor niti Vlada - oni samo izvrsavaju volje bankarskih mocnika. Sve ovisi o vama, ali sta kad nema nacionalne strategije.<p id='pkom_7905' class='tx_de ram0'><span id='kom_da_7905' onMouseOver='miNjaj("sl_d7905", "idax")' onMouseOut='miNjaj("sl_d7905", "ida")'><img name='sl_d7905' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e jedan prijatelj. ' title=' jedan prijatelj ima dobar komentar ' onclick='komLajkiT(7905, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7905' onMouseOver='miNjaj("sl_n7905", "inex")' onMouseOut='miNjaj("sl_n7905", "ine")'><img name='sl_n7905' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e jedan prijatelj. ' title=' jedan prijatelj ima lo¹ komentar ' onclick='komLajkiT(7905, "p_doli", 0)'></span></p></div>
+<a name='2010-05-28-22-53-35'></a><a name='15'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 15. komentar '><b>dst</b>, 2010-05-28 u 22:53:35</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+@prijatelju, u pravu si - na ¾alost.<p id='pkom_7906' class='tx_de ram0'><span id='kom_da_7906' onMouseOver='miNjaj("sl_d7906", "idax")' onMouseOut='miNjaj("sl_d7906", "ida")'><img name='sl_d7906' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e dst. ' title=' dst ima dobar komentar ' onclick='komLajkiT(7906, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7906' onMouseOver='miNjaj("sl_n7906", "inex")' onMouseOut='miNjaj("sl_n7906", "ine")'><img name='sl_n7906' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e dst. ' title=' dst ima lo¹ komentar ' onclick='komLajkiT(7906, "p_doli", 0)'></span></p></div>
+<a name='2010-06-04-18-30-07'></a><a name='16'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 16. komentar '><b>Keith Thompson</b>, 2010-06-04 u 18:30:07</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+David Icke, kao i mnogi drugi zalutali "New ageri", tvrdi da je imao jedno spiritualno iskustvo gdje mu je nekakva èudna sila rekla da je on Sin bo¾iji. Poslije toga je oti¹ao na jedan engleski TV-kanal, toènije u "Wogan Show". Kad su ga u emisiji pitali ¹to on o sebi misli, sebe je bez imalo srama ispred kamere proglasio "Bo¾jim sinom". Upravo na taj naèin kako je to sam Isus Krist rekao o sebi i u tom smislu. David Icke zasigurno nije Sin bo¾iji, to je samo Isus Krist!<br><br>David Icke nadalje tvrdi, kako su elite Novog svjetskog poretka reptili iz svemira i da je mjesec ogromna letjelica puna svemiraca koji kontroliraju  èovjeèanstvo. To je ta vrsta "kvaziznanstvenog smeæa", koja diskreditira prave intelektualce i istra¾ivaèe pojma i znaèenja Novog svjetskog poretka. Ako ljudi misle da je Ickeova nauka "pokret prema istini", onda mogu reæi da se nikad neæe probuditi, bit æe potpuno iskljuèeni od istine, a samo zato ¹to je Icke upetljao i neke istine o korumpiranoj vladi i EU, pa su mu kroz to i sve ostalo povjerovali. Icke u svojim predavanjima sustavno promovira "New age ideje", koje se naslanjaju na jednu univerzalnu spiritualnu svijest èovjeèanstva, a korijeni takvih vjerovanja se¾u do Teozofskog dru¹tva 19. Stoljeæa. To je ista ta "vjera" koju zastupaju, i u koju vjeruju, moderni New age predstavnici kao i elite Novog svjetskog poretka (npr. Barbara Marx Hubbard, Robert Muller, David Spangerl, Deepak Chopra itd).<br><br>Nabrojat æu samo ljude poput Jordan Maxwella, Michaela Tsariona, Petera Josepha, Archarya S. i Davida Ickea koji navodno predvode tu prièu "razotkrivanja", a u biti nas vode sve dublje unutra. Zato ja tvrdim da je istinski pokret infiltriran. Naravno, nije uvijek tako bilo. U pro¹losti je istinski pokret bio voðen od genijalnih anti-new age Kr¹æana poput Fritza Springmeiera, Williama Coopera, Randall N Baera, Kenta Hovinda ili Johna Todda. Svi oni su, ako ne ubijeni - strpani u zatvore, a na njihovo mjesto su sada postavljeni "New age uèitelji" koji nas la¾no poduèavaju o Novom svjetskom poretku. Njima je dozvoljeno ¾ivjeti, jer ustvari poma¾u toj zloèinaèkoj ideologiji, uvodeæi ljude jo¹ dublje u "novu religiju". Ako velika masa ljudi na svijetu prihvati njihova uèenja, dogodit æe se paradoks da æe ti svi ljudi prihvatiti Novi svjetski poredak - misleæi da su ga sprijeèili.<br><br>Za potrebe filma  'Aquarius - Doba zla' preletio sam dosta kilometara kako bih intevjuirao jednog od najveæih struènjaka po pitanju "New Age-a", Constance Cumbeya te istra¾itelje Chrisa Whitea i Dr. Scotta Johnsona. Film traje èak dva i pola sata i donosi mnogo manje poznatih detalja o povijesti Teozofskog dru¹tva, Slobodnom zidarstvu i Iluminatima. Glavna intencija filma je dokazati uvjetovanost uspostave Novog svjetskog poretka, stvaranjem jedne nove svjetske religije. Dokazujemo da je "Zeitgeist pokret" u korijenu motiviran New ageom, teozofijom, masonstvom i komunizmom. Istra¾ujemo i prièe o dogaðajima u godini 2012., te dokazujemo da je èitava panika koja se stvara oko tog datuma - jedna velika obmana stanovni¹tva. Razotkrivamo i lik "Maitreye" te pripremamo ljude na nadolazeæe progone Kr¹æana, koje planira Novi svjetski poredak. Dokazujemo na kraju da je dolazak tog novog totalitarizma - toèno predviðen u Bibliji ...<p id='pkom_7959' class='tx_de ram0'><span id='kom_da_7959' onMouseOver='miNjaj("sl_d7959", "idax")' onMouseOut='miNjaj("sl_d7959", "ida")'><img name='sl_d7959' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Keith Thompson. ' title=' Keith Thompson ima dobar komentar ' onclick='komLajkiT(7959, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7959' onMouseOver='miNjaj("sl_n7959", "inex")' onMouseOut='miNjaj("sl_n7959", "ine")'><img name='sl_n7959' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Keith Thompson. ' title=' Keith Thompson ima lo¹ komentar ' onclick='komLajkiT(7959, "p_doli", 0)'></span></p></div>
+<a name='2010-07-22-20-10-00'></a><a name='17'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 17. komentar '><b>Kre¹imir Mi¹ak</b>, 2010-07-22 u 20:10:00</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>CRTICE IZ EUROPSKOG PARLAMENTA</span><br><br>
+Mislim da sam veæ spominjao to da je Daniel Estulin, autor knjige 'Istinita prièa o dru¾bi Bilderberg' bio pozvan da u Europskom parlamentu u Bruxelesusselsu 1. lipnja odr¾i konferenciju za novinare na temu Dru¾be Bilderberg i njihovih zakulisnih igara sa svjetskom ekonomijom i Europskom unijom. Ako i nisam, bilo je toga po netu, a ima i u novom Nexusu iz tipkovnice Giuliana Marinkoviæa. Da se podsjetimo, sve je poèelo kada je talijanski politièar i zastupnik u Europskom parlamentu Mario Borghezio proèitao talijansko izdanje Estulinove knjige i saznao za sastanke Bilderberga. Frajer je popizdio i 11. studenoga 2009. godine u Europskom parlamentu optu¾io Dru¾bu i Trilateralnu komisiju da utjeèu na imenovanje politièkih funkcija u Europskoj uniji. To je uèinio ovim rijeèima: "Spomenut æu nominacije Balkenenda, Milibanda i Van Rompuya (predsjednika Europskog vijeæa). Je li moguæe da nitko nije primijetio da ovi kandidati posjeæuju sastanke Dru¾be Bilderberg i Trilateralne komisije? Moramo utvrditi jesu li ovi kandidati zaista predstavnici politièkih snaga iz svojih zemalja ili je jednostavno rijeè o predstavnicima tajnih skupina koji se sastaju iza zatvorenih vrata kako bi donosili odluke."<br><br>Ovo sve zapravo pi¹em zbog fenomenalne izjave zastupnika Nigela Faragea iz Stranke za neovisnost Velike Britanije, koji je 24. veljaèe 2010. godine imenovanje Hermana Van Rompuya na mjesto predsjednika Europskog vijeæa, ovako popratio u Europskom parlamentu: "Reèeno nam je da æe predsjednik (Europskog vijeæa) biti golema politièka figura koja æe voditi 500 milijuna ljudi. Nakon svega, bojim se da smo dobili vas. Ne ¾elim biti grub, ali vi imate karizmu krpe za èi¹æenje i pojavnost obiènog bankarskog èinovnika. Tko ste vi uopæe? Nikada prije nisam èuo za vas. Nitko u Europi nije za vas èuo. Tko je uopæe glasao za vas i s pomoæu kakvih mehanizama? Je li ovo europska demokracija? Ne sumnjam da æete upravo vi biti tihi ubojica europske demokracije i europskih dr¾ava. Od kada ste do¹li na poziciju, Grèka je postala obièan protektorat. Mogu sigurno reæi u ime veæine britanskog naroda da<br>vas mi ne poznamo i ne ¾elimo".<br><br>Kao ¹to je nekima vi¹e, a nekima manje poznato, prema Estulinu, dru¾ba Bilderberg ¾eli stvoriti tehnokratsko carstvo, svijet s jednom korporacijom koja djeluje na ¹tetu porobljenih dr¾ava i graðana pa se zato u Europi odvija proces uni¹tenja nacija. Ustav, granice i zastave jednostavno æe progutati takav sustav. Grèka je, tvrdi Estulin, veæ postala protektorat nakon ¹to je Europska unija odobrila pomoæ od 750 milijardi eura jer Grèka taj dug nikada vi¹e neæe moæi otplatiti. Sljedeæe bi na redu trebale biti ©panjolska, Portugal i Irska, a tim procesom upravljaju du¾nosnici iz Bruxelesa koje nije izabrao narod. Izmeðu ostalog, ¾ele uni¹titi koncept dru¹tvene skrbi koji je bio u slu¾bi dobrobiti èovjeèanstva.<br><br>Ta prezentacija u Europskom parlamentu bila je dobar (mada ne¾eljeni) marketing za sastanak Bilderberga od 3. do 6. lipnja 2010. u hotelu Dolce u Sitgesu u Kataloniji 35 kilometara jugozapadno od Barcelone. Tamo su britanske novine The Guardian poslale novinara Charlija Skeltona koji je u jednoj od prvih reporta¾a, u i¹èekivanju poèetka konferencije, napisao i ovo: "Na pro¹logodi¹njem sastanku Bilderberga u Grèkoj prisustvovali su grèki ministar financija, ministar vanjskih poslova i guverner Nacionalne banke Grèke. Nekoliko mjeseci poslije, Grèka je bankrotirala. Ovaj put Madridu mo¾emo po¾eljeti samo sreæu."<br><br>Skelton je iz dana u dan opisivao situaciju na ulicama, a imalo se ¹to za vidjeti jer su stotine policajaca nadzirale ulice Sitgesa, a policijski helikopteri kru¾ili su iznad grada. Bilderberzi su se na¹li u èlancima u novinama Independent i Times, a Skelton se javljao I za BBC World Service. Giuliano Marinkoviæ izdvojio je zanimljive djeliæe razgovora izmeðu Skeltona i novinar BBC-a Evana Davisa koji je usporedio konferenciju Bilderberga s godi¹njim sastancima svjetskog ekonomskog foruma u Davosu. Skelton mu je skrenuo pa¾nju da su na sastanke u Davosu pozvani novinari dok tijekom sastanaka Dru¾be Bilderberg ne postoje odnosi s javno¹æu.<br><br>"Mo¾da se ti ljudi ¾ele privatno sastati kako bi mogli slobodnije razgovarati", ponovio je svoju primjedbu Davis.<br><br>"Vjerojatno kako bi odigrali i koju partiju stolnog tenisa", dopunio ga je Skelton.<br><br>Za razliku od pro¹logodi¹njeg sastanka u Grèkoj, pi¹e Marinkoviæ, policajci Katalonije pokazali su drukèiji senzibilitet. Citirao je psihosociologa Daniela Turona koji je rekao da "policajci ovdje razmi¹ljaju nezavisno". Novine El Publico objavile su protest policijskog sindikata jer tro¹kovi èetverodnevnog osiguranja konferencije iznose - 600.000 eura! Sindikat je podnio formalnu primjedbu zbog zloupotrebe policijskih resursa u osiguranju delegata dru¾be Bilderberg. Pa logièno, ako je to njihov privatni sastanak, neka se ne osiguravaju na teret poreznih obveznika, zar ne? (kojima ionako ne smjeraju ni¹ta dobro).<br><br>U Sitges su nahrupili i aktivisti, a jedan od njih, Rafa Palacios obratio se policijskoj blokadi s megafonom - ¹to mo¾ete vidjeti na netu, vrijedi poslu¹ati jer je èovjek bio nadahnut. Dovoljno nadahnut da takne ljude u osiguranju, barem prema vlastitom opisu da je vidio jednog policijskog inspektora kojem su potekle suze na oèi. Dan poslije aktivisti Ivan Torres i Rafa Palacios uhiæeni su i odvedeni u policijsku postaju jer su probali fotografirati hotel s obli¾njeg brda. Privedeni su istom onom policijskom inspektoru kojem se Rafa obratio dan ranije preko megafona. Koji mu je sad, ka¾e Rafa, rekao: "Mi vam se divimo. Veoma smo tu¾ni, ali ne ¾elimo ovdje sukobe. Jedino ¹to ¾elim je da cijela operacija u Sitgesu proðe bez incidenata. No, zaista mi se ne sviðaju ti ljudi".<br><br>Novinar Charlie Skelton diskretno je razgovarao s osobljem hotela u Sitgesu gdje se odr¾avala ovogodi¹nja konferencija Dru¾be Bilderberg i objavio dio popisa delegata koji su prisustvovali sastancima. Evo nekih, da se podsjetimo dokle to ide:<br><br>- Marcus Agius: direktor izvr¹nog odbora BBC-a i predsjednik Barclaysa, britanske financijske tvrtke koja djeluje diljem svijeta<br>- Josef Ackermann: predsjednik Deutsche Banke i direktor Shella<br>- General Jack Keane: biv¹i zamjenik naèelnika sto¾era amerièke vojske i èlan odbora u General Dynamicsu<br>- Juan Luis Cebrián Echarri: direktor medijske korporacije Grupo Prisa<br>- Richard Holbrooke: diplomat za pitanja Afganistana i Pakistana u administraciji Baracka Obame, èlan Vijeæa za meðunarodne odnose<br>- Gustavo A Cisneros Rendiles: medijski mogul iz Venezuele<br>- Victor Halberstadt: profesor ekonomije na Sveuèili¹tu Leiden i meðunarodni savjetnik financijske korporacije Goldman Sachs, predsjednik Meðunarodnog instituta za javne financije<br>- Roger Atlman: osnivaè i predsjednik meðunarodne investicijske korporacije Evercore Partners.<br>- Joaquin Almunia: ¹panjolski èlan Europske komisije<br>- W. Edmund Clark: predsjednik TD Bank Financial Group<br>- Jyrki Katainen: ministar financija Finske<br><br>( ... )<p id='pkom_8029' class='tx_de ram0'><span id='kom_da_8029' onMouseOver='miNjaj("sl_d8029", "idax")' onMouseOut='miNjaj("sl_d8029", "ida")'><img name='sl_d8029' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Kre¹imir Mi¹ak. ' title=' Kre¹imir Mi¹ak ima dobar komentar ' onclick='komLajkiT(8029, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8029' onMouseOver='miNjaj("sl_n8029", "inex")' onMouseOut='miNjaj("sl_n8029", "ine")'><img name='sl_n8029' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Kre¹imir Mi¹ak. ' title=' Kre¹imir Mi¹ak ima lo¹ komentar ' onclick='komLajkiT(8029, "p_doli", 0)'></span></p></div>
+<a name='2010-10-30-22-17-52'></a><a name='18'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 18. komentar '><b>Spectator</b>, 2010-10-30 u 22:17:52</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Legalno ali ne i legitimno</span><br><br>
+... Odr¾avanje referenduma nakon potpisivanja Ugovora da je na znanje toj istoj 'raji' (tj nama) da nade nema; budemo li glasovali protiv pridru¾ivanja Uniji izlazit æemo na referendume sve dok rezultat ne bude kakav mora biti. Zar je moguæe i zamisliti da se Vlada muèila od 2004. s tim pregovorima a da bismo mi (svi mi tj biraèko tijelo) mogli sav taj trud i muku upropastiti?<br><br>Ovakvo manipuliranje zakonskim propisima, legalistièko ali istovremeno duboko nemoralno u samim je temeljima EU i sastavni je dio cjelokupne pravne prakse Unije. O tome postoje napisane knjige pa oni koji imaju zanimanja za bli¾e upoznavanje s detaljima EU-pravne prakse mogu vidjeti o èemu se radi u npr 'The Secret History of the European Union' Christophera Bookera i Richarda Northa. U toj se knjizi posebno obraðuju manipulacije javno¹æu u V. Britaniji kad je rijeè u pristupanju Uniji a u usporedbi s time, ova najnovija hrvatska 'obrada na temu' je gotovo zanemariva sitnica iako je i savr¹en primjer tipiène EU-podvale. U Hrvatskoj ima i daleko boljih primjera. Na primjer, odredbe o referendumu za pristupanje Uniji izmijenjene su pa je broj potrebnih glasaèa iza¹lih na referendum sa 75% od upisanih, od kojih je veæina trebala glasovati 'za', smanjen na obiènu veæinu èime bi i u sluèaju da na glasovanje izaðu tri glasaèa i dva pozitivna glasa bila dovoljna da ishod referenduma bude pozitivan. O tome smo veæ pisali pa znamo da je ovakav za Vladu pozitivan ishod plaæen izmjenama Ustava, srpskim Vijeæem opæina u Slavoniji i jo¹ kojeèime. No pravi apsurd tek izviruje iza ugla... Nakon ¹to je za ulazak u neku politièku zajednicu postao dovoljan jedan glas vi¹e 'za' od onih 'protiv', kao da se glasuje o otvaranju nove tramvajske linije, Vlada je u proceduru poslala i Zakon o referendumu u opæenitom smislu, dakle o referendumu koji se pokreæe na zahtjev javnosti. I tu stoje nove odredbe pa se sada za takav od 'raje' pokrenut referendum postavljaju uvjeti stro¾i od onih kakvi su bili postavljeni za referendum o pridru¾ivanju (EU)! To je posljedica izglasovanog a neodr¾anog referenduma o izmjenama Zakona o radu; svakoj pa i ovoj Vladi i politici posve nepotrebnog.<br><br>Ovakvo igranje demokracije vi¹e nije anegdota veæ je princip djelovanja politike, jednako europske koliko i ove domaæe. Odluèivanje je naprosto premje¹teno nekamo drugamo iako se i dalje poku¹ava odr¾ati privid da je sve posve obrnuto. Biraèko tijelo ne postoji da bi donosilo bilo kakve odluke, propitivalo politiku ili je usmjeravalo. Upravo obrnuto, ono slu¾i iskljuèivo za davanje legitimiteta 'vlasti' ¹to se obavlja na redovitim izborima koji su zapravo izjednaèeni s potpisivanjem bjanko mjenice ili èeka. I to je sve. Odnosno, kako je to lijepo jednom sroèio Milan Bandiæ rekav¹i da je izabran na redovnim izborima i on vi¹e nema kome i za¹to polagati raèune. <br><br>I zbog svega toga ponovit æemo i sada a ponavljat æemo sve dok veæini ne postane jasnije èime se igramo kad je o èlanstvu o EU rijeè. Cijeli razvoj EU temelji se veæ desetljeæima na zatajivanju prave istine o potezima koji se vuku. Radi se jednostavno reèeno o prijevari. Europski parlament uopæe nije parlament jer ne mo¾e inicirati ili zaustaviti dono¹enje bilo kakvog zakona! Radi se dakle o prijevari u kojoj ni najosnovniji pojmovi nemaju sadr¾aj na koji smo navikli, toliko je to temeljita prijevara! Europska komisija, jer ona je ta od koje sve poèinje dosad je donijela more odluka i pokrenula bezbroj politika koje su zavr¹ile katastrofalno; prisjetimo se samo poljoprivrede, ribarstva, financijskih mjera ili energetike. Oblaci se gomilaju a problemi s odr¾avanjem ove neprirodne i nasilne dr¾avne konstrukcije sve su te¾i i slo¾eniji i naravno, sve su skuplji. Euro koji je trebao biti ljepilo koje æe izjednaèiti razlike izmeðu èlanica Unije postao je agent razdora jer su se razlike poveæale do apsurda. Samo zahvaljujuæi snazi briselske birokracije ova se varka i dalje odr¾ava iako je na sve klimavijim nogama.<br><br>Kakva je to dakle Unija u koju se Hrvatska sprema uæi? La¾na je kao i ova dr¾ava u kojoj ¾ivimo. Legalna ali ne i legitimna... <p id='pkom_8472' class='tx_de ram0'><span id='kom_da_8472' onMouseOver='miNjaj("sl_d8472", "idax")' onMouseOut='miNjaj("sl_d8472", "ida")'><img name='sl_d8472' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Spectator. ' title=' Spectator ima dobar komentar ' onclick='komLajkiT(8472, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8472' onMouseOver='miNjaj("sl_n8472", "inex")' onMouseOut='miNjaj("sl_n8472", "ine")'><img name='sl_n8472' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Spectator. ' title=' Spectator ima lo¹ komentar ' onclick='komLajkiT(8472, "p_doli", 0)'></span></p></div>
+<a name='2010-10-30-22-25-09'></a><a name='19'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 19. komentar '><b>dst</b>, 2010-10-30 u 22:25:09</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Zanimljiva knjiga</span><br><br>
+Christopher Booker & Richard North <br><b>The Great Deception: The Secret History of the European Union</b><p id='pkom_8473' class='tx_de ram0'><span id='kom_da_8473' onMouseOver='miNjaj("sl_d8473", "idax")' onMouseOut='miNjaj("sl_d8473", "ida")'><img name='sl_d8473' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e dst. ' title=' dst ima dobar komentar ' onclick='komLajkiT(8473, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8473' onMouseOver='miNjaj("sl_n8473", "inex")' onMouseOut='miNjaj("sl_n8473", "ine")'><img name='sl_n8473' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e dst. ' title=' dst ima lo¹ komentar ' onclick='komLajkiT(8473, "p_doli", 0)'></span></p></div>
+<a name='2010-11-13-00-37-17'></a><a name='20'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 20. komentar '><b>Gost_963</b>, 2010-11-13 u 00:37:17</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Dragi Hrvati nikada niste znali u¾ivati u slobodi. ®ivjela hrvatska glupost i prokletstvo kurvinih politièara za koje glasa jo¹ gluplji narod. Sam sebi najveæi neprijatelj je svaki hrvat koji voli tuðe a ne po¹tuje svoje. Kakvi ljudi takvu vlast i zaslu¾uju. Dabogda vam se Sanader vratio sa svojim Iluminatima i zavr¹i ¹to je zapoæeo. Bog nam sigurno neæe pomoæi. I on je digao ruke od nas. <p id='pkom_8671' class='tx_de ram0'><span id='kom_da_8671' onMouseOver='miNjaj("sl_d8671", "idax")' onMouseOut='miNjaj("sl_d8671", "ida")'><img name='sl_d8671' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Gost_963. ' title=' Gost_963 ima dobar komentar ' onclick='komLajkiT(8671, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8671' onMouseOver='miNjaj("sl_n8671", "inex")' onMouseOut='miNjaj("sl_n8671", "ine")'><img name='sl_n8671' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Gost_963. ' title=' Gost_963 ima lo¹ komentar ' onclick='komLajkiT(8671, "p_doli", 0)'></span></p></div>
+<a name='2010-11-21-15-59-53'></a><a name='21'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 21. komentar '><b>Spectator</b>, 2010-11-21 u 15:59:53</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Hrvatska i Irska: vremena bosih nogu</span><br><br>
+U èemu se razlikuju Hrvatska i Irska? U nas, malo je onih koji æe, tra¾eæi razlike, znati reæi ne¹to vi¹e od toga da Hrvati piju 'O¾ujsko', a Irci 'Kilkenny' i da je irski svetac za¹titnik Sveti Patrick dok bi se o hrvatskom svecu za¹titniku tek trebalo dogovoriti... Irska je bankrotirana dr¾ava u Europskoj Uniji, a Hrvatska je bankrotirana dr¾ava izvan EU, u vjeènom èekanju svoje europske sudbine. A sliènosti? Èetiri i pol milijuna stanovnika u zemlji te ogromna dijaspora èine Irsku i Hrvatsku u demografskom smislu gotovo blizancima. Irci su nacija koja je do¹la do svoje dr¾ave 1922. godine, nakon trogodi¹njeg rata s Engleskom. I Hrvati su svoju dr¾avu platili ratom; petogodi¹njim. Nacionalna dr¾ava i za Irce i za Hrvate stoljetni je san kojeg su i jedni i drugi uspjeli ostvariti tek nakon stoljeæa borbe i bezbrojnih ¾rtava. S time se iscrpljuje lista sliènosti i poèinje se odmotavati lista gotovo nepremostivih razlika. U èemu? Prije svega razlika je u odnosu prema vlastitoj dr¾avi koja je, kad je rijeè o Irskoj i Hrvatskoj, nemjerljiva. Buduæi svi manje-vi¹e znamo ¹to se zbiva u Hrvatskoj, no ¹to se dogaða sa Irskom, i zbog èega smo uopæe postavili poèetno pitanje? <br><br>Do 1919. i za poèetnih godina nezavinosti Irska je bila jedna od najzaostalijih dr¾ava u Europi. U tim vremenima, kad su na hrpama posljedica I svjetskog rata burno rasle klice sljedeæeg europskog mega-sukoba Irska je unatoè krajnjem siroma¹tvu uspjela ostati solventna ekonomija i demokratska dr¾ava. S dana¹njeg motri¹ta irska ekonomija bila je veoma protekcionistièka - Irci su dobro znali da bi bez takve za¹tite unatoè nezavisnosti dovijeka ostali ¾rtvom britanske politièke i industrijske imperije. Ekonomiju su postepeno poèeli otvarati tek ¹ezdesetih godina XX. stoljeæa i 1973. pridru¾ili su se onome ¹to je danas Europska Unija. U osamdesetima Irska je opet postala ¾rtvom ekonomske krize a kao posljedica toga i ¾rtvom masovna iseljavanja. No, liberalne ekonomske reforme nakon 1980. pretvorile su je u 'Keltskog tigra' odnosno uzor-dr¾avu fenomenalnog rasta, ukras teorije ultraliberalnog kapitalizma i jedan od njezinih najveæih uspjeha. Sve do financijske krize koja je poèela 2007. godine... Kao i u Japanu prije dvadeset godina, potom u SAD-u, te ©panjolskoj i Portugalu u novije vrijeme ekonomski 'razvoj' tj rast urodio je ogromnim priljevom novca u irske banke kojeg su ove investirale u nekretnine. Samo britanske banke su kroz banke u Irskoj ulo¾ile su u irsku ekonomiju i financije oko 200 milijardi dolara. U jednom trenutku (2006. godine) èetiri i pol milijuna Iraca imalo je u vlasni¹tvu, osim svega ostalog,  i preko 250.000 praznih nekretnina. Ovima je naime rasla cijena toliko brzo da je bilo lak¹e i unosnije imati praznu nekretninu kojoj je rasla cijena nego li brinuti se o iznajmljenoj i na tome zaraðivati 'sitni¹'.  Kao i u ©panjolskoj, niska kamatna stopa u Euro zoni stimulirala je investiranje u nekretnine kroz bezbrojne 'povoljne' kredite...<br><br>Danas su irske financije u ru¹evinama. Dr¾ava je du¾na 13 bruto-nacionalnih dohodaka odnosno 1.350 milijardi dolara i nakon V. Britanje (450 milijardi dolara) najzadu¾enija je dr¾ava na svijetu.<br><br><b>Sti¾e pomoæ...</b><br><br>Europski financijski krugovi u¾asnuti su moguæno¹æu novog 'sluèaja' kakav je bio onaj grèki i nastoje Irsku natjerati na prihvaæanje 'pomoæi' koja se sastoji od svote od blizu 100 milijardi dolara uz vrlo striktne mjere ¹tednje u domaæem proraèunu. Dakle, uobièajeno 'kresanje' svega i svaèega ali prije svega kresanje irskog suvereniteta o èemu se kad je rijeè o dolasku MMF-a u Hrvatsku uopæe ne govori... Jedna od najozbiljnijih izmeðu preostalih europskih 'ozbiljnih' novina, 'The Irish Times', poznat po svojem pro-europskom stavu objavio je nedavno uvodnik iz kojeg prenosimo one dijelove koji najbolje pokazuju kako se u Irskoj gleda na vlastitu dr¾avu i pomoæ koja im se nameæe od strane Europske centralne banke i MMF-a:<br><br><i>Moglo bi izgledati èudno da ba¹ The Irish Times postavlja pitanje je li ovo ¹to se dogaða ono za ¹to su 1916. gubili ¾ivote na¹i borci (to je poèetak irskog rata za nezavisnost): njemaèki kancelar izvlaèi Irsku iz nevolje uz poneki ¹iling koji sa strane dobacuje njegov britanski kolega. U tome je sva sramota sada¹njih dogaðaja. Nakon ¹to smo izborili politièku nezavisnost od Britanije kako bi postali gospodari vlastite sudbine, tu na¹u skupo plaæenu nezavisnost sada predajemo u ruke Europske komisije, europske Centralne banke i Meðunarodnog monetarnog fonda. Njihovi su ljudi danas u¹li u na¹e Ministarstvo financija.<br><br>Fianna Fail (stranka na vlasti; op prev.) ponekad je dr¾avu slu¾ila dobro a ponekad veoma lo¹e. No  èak i u najgorim vremenima imala je obzira prema onome ¹to je u pozadini cjelokupne irske politike a to je odanost principima prema kojima su Irci gospodari vlastite sudbine. U svojem statutu stranka ima i odanost 'odr¾avanju statusa Irske kao suverene dr¾ave. Njezin osnivaè Eamon de Valera u svojem je inauguralnom govoru novoj stranci 1926. godine spomenuo 'neotuðivost nacionalnog suvereniteta' kao temeljni princip njezina djelovanja. Ovaj je princip Republikanske stranke sada samo ru¹evina.<br><br>Irskom narodu ne treba obja¹njavati da nema apsolutbog suverenitetat kad se radi o malim nacijama. Mi vrlo dobro znamo da smo na¹u nezavisnost uèinili sadr¾ajnijom dijeleæi je sa svojim europskim susjedima i nismo dovoljno naivni da bismo mislili kako smo u stanju donositi velike odluke posve odvojeno od ostatka svijeta. Ali, ono ¹to oèekujemo jest da odluka koju donosimo bude na¹a odluka a ne odluka nekog drugog. Nezavisnost nacije odreðena je sudbinom koju ova mo¾e izabrati sama za sebe.<br><br>Irska povijest èini gubitak ove slobode izbora tim sramotnijom. Te¾nje prema nezavisnosti poput konca provlaèi se kroz dvije stotine proteklih godina.<br><br>Prava sramota sada¹nje situacije ne le¾i u èinjenici da nam je oduzet suverenitet. Ona se nalazi u èinjenici da smo taj suverenitet uni¹tili mi sami. Ne trebamo tra¾iti utjehu u iluziji da su se europske sile udru¾ile nastojeæi zagospodariti nama. Uostalom, kakav bismo mi to bili plijen? Nema racionalnog Europljanina koji bi se sam od sebe prihvatio ra¹èi¹æavanja nevolja u koje smo se upetljali. Nesposobnost na¹e vlade, one koju smo sami izabrali, ono je zbog èega smo ostali bez moguænosti za dono¹enje samostalnih odluka.<br><br>U sada¹njem polo¾aju na¹li smo se nakon razdoblja u kojem je irski suverenitet bio najveæi u povijesti a na¹ nacionalni dug nikad manji; zapravo  zanemariv. Masovna emigracija koja je èinila smije¹nom tvrdnju da vladamo svojom sudbinom potpuno je stala. Dovuæi ovu dr¾avu iz takve situacije u polo¾aj u kojem je ona opet postala objektom tuðih odluka postignuæe je koje dugo neæe biti moguæe zaboraviti.</i><br><br>Tako govori 'The Irish Times' o sada¹njoj situaciji u kojoj se na¹la suverena Irska; èlanica Europske Unije. Mo¾emo li zamisliti da o predavanju domaæe socijalne politike, proraèuna ili odabira prioriteta u opstanku Republike kroz odr¾anje populacije u Hrvatskoj tako pi¹e neka domaæa novina (jedina zamisliva u takvoj ulozi je 'Vjesnik')? U Hrvatskoj, dolazak MMF-a posve je tehnièko pitanje; trebat æe nam MMF ili pak suprotno od toga mi sve ¹to je potrebno mo¾emo napraviti i sami. U Hrvatskoj MMF je najvi¹e predizborni adut; stranka na vlasti ga 'ne treba' jer bi mjere koje bi bile nametnute dovele do sigurnog gubitka vlasti na izborima; treba stoga prièekati i prepustiti MMF dana¹njoj opoziciji bez obzira koliko bi to u meðuvremenu financijsku ili ekonomsku situaciju u dr¾avi uèinilo jo¹ beznadnijom...<br><br>Odakle ova razlika izmeðu odnosa prema dr¾avnom suverenitetu izmeðu Irske i Hrvatske? Dok Irska svoj suverenitet ljubomorno èuva Hrvatska se svojim razbacuje na sve strane otkidajuæi sama sebi sve veæe njegove dijelove gotovo nutkajuæi svakoga da uzme komad teritorija ili ¹to je mnogo gore, moguænosti da sami o sebi donosimo odluke. Gotovo mazohistièki Hrvatska pokazuje da joj nije stalo do nje same. Iako su Irci vodili aktivnu borbu sa nezavisnost oko dvije stotine godina Hrvati ih u svojoj prièi sedam stotina godina borbe za vlastitu dr¾avu daleko nadma¹uju. Znamo li ¹to govorimo i govorimo li sebi istinu  ako smo samo nakon deset godina samostalnosti poèeli svoj suverenitet prenositi na nekog drugog u toj mjeri da nam moguæi dolazak MMF-a predstavlja samo tehnièko pitanje?<br><br>U vezi sa sada¹njom situacijom predsjednik Europske Komisije Van Rompuy odr¾ao je govor koji je jo¹ zanimljiviji od usporeðivanja Hrvatske i Irske u odnosu prema dr¾avnom suverenitetu. Van Rompuy je izjednaèio neprijateljstvo prema EU i ideju o moguæem izlasku iz Unije s o¾ivljavanjem agresivnog nacionalizma. Njegove rijeèi prema kojima se trebamo zajedno boriti protiv novog euroskepticizma koji nije monopol malog broja dr¾ava. U svakoj dr¾avi èlanici postoje ljudi koji vjeruju da njihova dr¾ava mo¾e pre¾ivjeti sama u globaliziranom svijetu. To je vi¹e od iluzije - to je la¾! Ove je rijeèi Van Rompuy izgovorio nakon dugaèke i zamorne bitke u Bruxellesu koja se vodila oko znaèajnog poveæanja europskog proraèuna u vrijeme kad sve èlanice uvode sve o¹trije mjere ¹tednje... I tako, gotovo se nameæe pitanje da ako je protekcionizam bio uzrok ekonomske tragedije iz tridesetih godina XX stoljeæa jesmo li ba¹ sigurni da je trio EU-MMF-G20 ono ¹to nam je potrebno danas?<br><br>Van Rompuy, biv¹i belgijski predsjednik vlade imenovan na polo¾aj (ne izabran!) Europskog koncila tvrdi da se novi nacionalizam u Europi temelji na - strahu. Najveæi europski neprijatelj danas je strah. Strah vodi prema egoizmu, egoizam prema nacionalizmu a ovaj pak vodi prema ratu. Ovo amatersko pshihologiziranje s najvi¹eg europskog polo¾aja ne ostavlja nikoga ravnodu¹nim. Voða britanske politièke formacije koja je za izlazak V. Britanije iz EU ka¾e za Van Rompuya  da je on preplaæena katastrofa koja ¾eli ukinuti na¹u naciju. Nacionalne dr¾ave ne mogu nestati jer su izraz nacionalne volje. EU pliva protiv povijesti. Ima li tko u Hrvatskoj komentar na ovakve diskusije unutar krugova same EU..?<br>Od globaliziranog svijeta koji tra¾i sve jaèu globalnu vladu (rijeèi su Van Rompuya) do globalizacije koja je stotine milijuna ljudi izdigla iz bijede retorika predsjednika Europske komisije potvrðuju da obmana 'ide dalje'. Globalna vlada koja se i kao primisao nijeèe kao jedna od teorija zavjere iz istih onih krugova koji je ovdje kroz usta Van Rompuya potvrðuju do la¾i o globalizaciji koja nas je 'obogatila' a u stvari je samo do nepodno¹ljivosti podigla razlike svugdje gdje je imala prostora razmahati se krilima; sve to potvrðuje koje su prave namjere Europskoh ujedinjavanja. Oduzimanje suvereniteta nacionalnim dr¾avama; 'potajnim' kroz europski Ustav ili nasrtljivim kao sada u sluèaju Irske  èija napuhana pa raspukla ekonomija sada prijeti europskoj moneti kao 'europskom ljepilu' najva¾niji je detalj sada¹njeg 'euro-vremena'. Dok se u Europi odvija pravi rat ideja i dok se razmahuje otpor euro-integralizmu, ukidanju nacionalnih dr¾ava i de facto ukidanju samih nacija, hrvatska javnost o tome ne èuje niti za to zna.<br><br>Nadajmo se da se negdje u pozadini pojavljuju pojedinci koji æe na vrijeme shvatiti da jo¹ nije kasno i da dr¾avu koju jo¹ uvijek imamo ne treba dati u ruke europske birokracije veæ oduzeti iz ruku onih koji je ne zaslu¾uju.<p id='pkom_8817' class='tx_de ram0'><span id='kom_da_8817' onMouseOver='miNjaj("sl_d8817", "idax")' onMouseOut='miNjaj("sl_d8817", "ida")'><img name='sl_d8817' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Spectator. ' title=' Spectator ima dobar komentar ' onclick='komLajkiT(8817, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8817' onMouseOver='miNjaj("sl_n8817", "inex")' onMouseOut='miNjaj("sl_n8817", "ine")'><img name='sl_n8817' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Spectator. ' title=' Spectator ima lo¹ komentar ' onclick='komLajkiT(8817, "p_doli", 0)'></span></p></div>
+<a name='2010-11-21-19-55-09'></a><a name='22'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 22. komentar '><b>abC</b>, 2010-11-21 u 19:55:09</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Èiji su 'desnièari'?</span><br><br>Na jednom portalu koji nasljeduje ostav¹tinu Titinog generala Tuðmana te se poziva se na "domoljublje", "èovjekoljublje" i "bogoljublje", nalazim i ovo: <p class='navod_kom'><b>Karika koja nedostaje</b><br><br>... Balkanske integracije odvijaju se pred na¹im oèima veæ godinama a da nitko nije ni¹ta ozbiljno osmislio ili napravio da ih zaustavi. Upravo suprotno ...<br>... Kada se govori protiv ulaska Hrvatske u Europsku uniju onda sigurno nije dovoljno samo reæi ¹to sve ne valjda u Europskoj uniji. Treba odgovoriti i na neka druga kljuèna pitanja od kojih je ovdje bilo rijeèi samo o jednom - ¹to i tko æe sprijeèiti daljnju balkanizaciju Hrvatske jednom kada se odbije ulazak u Europsku uniju i ostane u istom dru¹tvu sa Srbijom, Bosnom i Hercegovinom, Crnom Gorom, Kosovom, Makedonijom i Albanijom?<br><br>Oni koji su za jaku, ponosnu, suverenu i nezavisnu Hrvatsku neka prvo osvoje vlast, i naprave Hrvatsku jakom, ponosnom, suverenom i nezavisnom. A onda æe takva Hrvatska moæi samostalno odluèivati i o tome ¾eli li biti u Europskoj uniji ili æe za izlazak iz Unije raspisati isti onaj referendum s kojim je i u¹la. Danas kad Hrvatska praktièki ni o èemu vi¹e samostalno ne odluèuje tvrditi da bi joj bilo bolje imati isti status kao i biv¹e jugoslavenske republike, nego biti u dru¹tvu Njemaèke, Austrije, Francuske, ©vedske, Maðarske, Irske i Danske vrlo je riskantna i potencijalno vrlo opasna politièka platforma, za koju je te¹ko pronaæi i jedan argument da ne æe biti zlouporabljena od strane najveæih hrvatskih neprijatelja.</p><br>Dakle, hm? Osim pla¹enja balkanskom zajednicom, autor priloga nam ne donosi apsolutno ni¹ta o brojnim oblicima kolonijalizma, ¹to ih uvodi superkontinentalna dr¾ava. Malo Hrvata æe - izmeðu Zapadnog balkana i EU-a, izabrati "Bliski istok" - pa se sve ono ¹to rade na¹i politièari svodi na bacanje pra¹ine u oèi, lov u mutnom i prodaju magle. Ne bi nas toliko brinulo da oni stvarno prodaju maglu; oni preko Pantovèaka i Banskih dvora prodaju maglu, a u stvarnosti prodaju narod i dr¾avu.<br><br>U ovom odlomku je sadr¾ana cijala geneza "demokratske" vlasti u Hrvatskoj: <p class='navod_kom'>... Iako bi po mnogim mi¹ljenjima za Hrvatsku bilo najpo¾eljnije kao u ¹vicarskom primjeru stajati dalje i od europskih i od regionalnih integracija, ostvarivog scenarija o tome kako izvesti tako ne¹to nema ni pribli¾no na vidiku. Koja æe to relevantna politièka snaga u Hrvatskoj sprijeèiti da Republika Hrvatska kada odbije èlanstvo u Europskoj uniji ne bude u sljedeæem koraku potpuno usisana u balkanske integracije? Ako niste htjeli s nama, onda budite s njima, dragi Hrvati! Sloveniji je bilo dopu¹teno napustiti Jugoslaviju, ali Hrvatska je morala izdr¾ati cijeli jedan rat za takav luksuz. Slovenija je lako u¹la u Europsku uniju, ali ne i Hrvatska, nju se ucjenjivalo do besvijesti. Zato nitko ne bi smio podcjenjivati ozbiljnost sada¹nje situacije i neodgovorno zagovarati jedno, a da nema odgovor na drugo ...</p><br>Znaèi: <br>1. HDZ je tu jer je Hrvatsku trebalo uni¹titi kako ne bismo bili ©vicarska,<br>2. Nismo se mogli izvuæi od rata jer je Tuðman s Milo¹eviæem dogovorio rat i s udba¹ima otvorio fronte diljem Juge,<br>3. Na¹i generali u Haagu, ZERP i Savudrijska vala su strategija ucjenjivanja koju su opet predvodili HDZ-ovci<br><br>Ovo je samo dio niske koju desnièari i "domoljubi" realiziraju kroz "demokraciju. Dok narod dave do besvjesti, HDZ se jedino na spomen Titinog generala Tuðmana trza i vri¹ti sve do Haaga kako korumpirani narod dira "dno dna" ...<p id='pkom_8821' class='tx_de ram0'><span id='kom_da_8821' onMouseOver='miNjaj("sl_d8821", "idax")' onMouseOut='miNjaj("sl_d8821", "ida")'><img name='sl_d8821' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e abC. ' title=' abC ima dobar komentar ' onclick='komLajkiT(8821, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8821' onMouseOver='miNjaj("sl_n8821", "inex")' onMouseOut='miNjaj("sl_n8821", "ine")'><img name='sl_n8821' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e abC. ' title=' abC ima lo¹ komentar ' onclick='komLajkiT(8821, "p_doli", 0)'></span></p></div>
+<a name='2010-11-25-20-37-07'></a><a name='23'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 23. komentar '><b>¹okre</b>, 2010-11-25 u 20:37:07</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Ulazak Hrvatske u EU bio bi tek korak prema prihvaæanju Novog svjetskog poretka, koji se polako pretvara u najveæu diktaturu suvremene povijesti. Stavljanje sve energije, vlasni¹tva i bogatsva ove predivne zemlje u slu¾bu megakorporacija je apsolutno nedopustivo i treba se boriti protiv toga svim srcem. Gotovo svi hrvatski mediji o ulasku Hrvatske u EU izvje¹tavaju tendencizno, pristrano i neobjektivno, a èesto puta i potpuno la¾no. Time su se na¹i mediji otvoreno stavili na stranu globalne elite, koja strpljivo provodi svoj pokvareni plan stjecanja apsolutne kontrole nad resursima i ljudima ovog planeta, nad njihovim ¾ivotima i financijama, kao i nad njihovim mislima i uvjerenjima. Jer totalitarizam upravo to i jest, sustav u kojem se pomoæu programiranja i straha, potpuno vlada ljudskim ¾ivotima i, po moguænosti - ljudskim mislima. Svaki totalitaristièki sustav tijekom povijesti bio je takav. Ili se barem trudio biti. A ovo ¹to nam europska birokracija u suradnji s na¹im politièarima i potkupljenim medijima radi - poprima sve izvjesnije naznake novog totalitarizma. Stoga osobno u potpunosti podr¾avam ovu inicijativu koja se bori protiv ulaska Hrvatske u Europsku uniju, jer je sasvim jasno da se tu stvara jedna megadr¾ava, koja æe ljude poku¹ati robotizirati te im oduzeti osjeæaj ponosa i pravo na dono¹ene vlastitih sudova, kao i izno¹enje istih u javnosti.<p id='pkom_8842' class='tx_de ram0'><span id='kom_da_8842' onMouseOver='miNjaj("sl_d8842", "idax")' onMouseOut='miNjaj("sl_d8842", "ida")'><img name='sl_d8842' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e ¹okre. ' title=' ¹okre ima dobar komentar ' onclick='komLajkiT(8842, "p_gori", 2)'></span> &nbsp; <span id='kom_ne_8842' onMouseOver='miNjaj("sl_n8842", "inex")' onMouseOut='miNjaj("sl_n8842", "ine")'><img name='sl_n8842' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e ¹okre. ' title=' ¹okre ima lo¹ komentar ' onclick='komLajkiT(8842, "p_doli", 2)'></span></p></div>
+<a name='2010-12-04-03-00-07'></a><a name='24'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 24. komentar '><b>Mladen Schwartz</b>, 2010-12-04 u 03:00:07</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Teze o Europi</span><br><br>
+<b>Nastanak dana¹nje Europe.</b><br>Povijesno je europska ujedinitba nastajala uvijek kao posljedak velike povijesti, kao djelo velike politike, kao èin velikih mu¾eva. Tako je bilo s Rimskim Carstvom, tako i s tisuæljetnim  Svetim Reichom Karla Velikoga, tako, napokon, s mu¾evnim, ratnièkim pothvatima jednoga Napoleona i jednoga Hitlera. Dana¹nja je pak integracija zapoèela trivijalno, s ugljenom i èelikom (po kojemu je, usput, i angloamerièki saveznik Staljin dobio svoj nadimak)...<br><br><b>Judeo-masonski temelji.</b><br>U dana¹njoj Europi, uoblièenoj kao EU, za vrhovne zakone vrijede ¾idovski zakoni, koji obvezuju ne¾idovske dr¾ave da njeguju ¾idovske svetinje i slu¾e ¾idovskom probitku: pomislimo na beskrajne reparacije ¹to se isplaæuju ¾idovima, na diskriminirajuæe pro¾idovsko zakonodavstvo u slu¾bi religije holokausta, ili na glavni njemaèki grad Berlin unaka¾en ogavnim holomal-om, spomenikom mrtvim ¾idovima. Masonski pak element zrcali se u agnostièko-ireligioznom (svakako i nekr¹æanskom), ali navlastito antinacionalnom, globokratskom temeljnom stavu sa skrajnjim ciljem u svjetskoj dr¾avi kojoj æe EU biti provincija, u amalgamu bez rasa, naroda i bilo kakvih razlika meðu ljudima.<p id='pkom_8974' class='tx_de ram0'><span id='kom_da_8974' onMouseOver='miNjaj("sl_d8974", "idax")' onMouseOut='miNjaj("sl_d8974", "ida")'><img name='sl_d8974' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Mladen Schwartz. ' title=' Mladen Schwartz ima dobar komentar ' onclick='komLajkiT(8974, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8974' onMouseOver='miNjaj("sl_n8974", "inex")' onMouseOut='miNjaj("sl_n8974", "ine")'><img name='sl_n8974' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Mladen Schwartz. ' title=' Mladen Schwartz ima lo¹ komentar ' onclick='komLajkiT(8974, "p_doli", 0)'></span></p></div>
+</div>
+<br><script type='text/javascript'>document.title = 'Dnevnik : Teze o Europi';</script><br><span class='izbor'>NOVI KOMENTAR</span><div class='njiva'>
+ <form name='prikaz' method='post' action='list.php?ploca=Komentari&amp;redar=2010-02-24&amp;kreda=vadi' style='margin: 0px'>
+  <table width='100%' border=0 cellpadding=0 cellspacing=7 align='center'>
+   <tr>
+    <td class='izbor'>ime (i prezime) <br><input id='faca' name='faca' type='text' class='njivica' value='Gost' onclick='imaIme(this, 0)' onblur='imaIme(this, 3)' style='width: 277px; padding: 2px' title=' Ime (i prezime) '> <span id='grsk' style='color:#ffd3d3'></span></td>
+   </tr>
+   <tr>
+    <td class='izbor'>e-mail (nije nu¾no)<br><input name='mejl' type='text' class='njivica' value='' style='width: 277px; padding: 2px' title=' E-mail adresa (ne mora biti) '></td>
+   </tr>
+   <tr> 
+    <td class='izbor'><span style='float:left;'>komentar na tekst od  24. 02. 2010.</span><span id='urar' style='float:right;' title=' Sat i broj preostalih znakova '></span><br><textarea id='poruka' name='poruka' rows='7' class='njivica' style='width: 99%; padding: 2px' title=' Komentar '></textarea></td>
+   </tr>
+   <tr>
+    <td align='center'><br><input name='gumb' type='submit' value='    OK    ' title=' Potvrdi ' onclick='poSaljI(this);'></td>
+   </tr>
+  </table>
+</form><p class='izbor' align='center' style='margin: 5px'><span id='vaznox'>Unesite tekst za komentar !</span></p></div><br>
+<table width="100%" border=0 cellspacing=0 cellpadding=2 align="center">
+ <tr>
+  <td class="mali" style="width:59px; padding-bottom:4px; background:#f3f5f9; color:#1e77d3;" title=" 2181 ">&nbsp; <a OnClick='zaTvoR()' style="cursor: pointer">zatvori</a></td><td class="mali" align="right" style="background: #1e77d3; background: -moz-linear-gradient(left, #f3f5f9 17%, #1e77d3 100%); background: -webkit-gradient(linear, left top, right top, from(#f3f5f9), to(#1e77d3));"><a href='http://www.dragotadic.net/' title=" 2181 " style='color:#abcdef; text-decoration:none'>&copy; Drago TADIÆ</a> &nbsp;</td>
+ </tr>
+</table>
+</body>
+</html>

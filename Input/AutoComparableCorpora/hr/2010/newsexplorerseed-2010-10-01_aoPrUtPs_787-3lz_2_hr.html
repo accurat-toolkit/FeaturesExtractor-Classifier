@@ -1,0 +1,1094 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<base href="https://www.bonbon.com.hr/portal/cms/" />
+<link href="/portal/cms/css/www.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="js/cookie.class.js"></script>
+
+<!--
+
+<script type="text/javascript" src="http://forum.lab.aduro.hr/T4Um_/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="http://forum.lab.aduro.hr/T4Um_/js/ext-base.js"></script>
+<script type="text/javascript" src="http://forum.lab.aduro.hr/T4Um_/js/ext-all.js"></script>
+
+-->
+
+<!-- <script type="text/javascript" src="http://forum.lab.aduro.hr/T4Um_/js/forum_search.js"></script> -->
+
+
+<script language="javascript" type="text/javascript">
+    DHTMLApi = {
+    
+    CSS : {
+        getStyle: function (element, name) {
+            var styleObj;
+            if (element.style[name]) return element.style[name];
+            if (element.currentStyle) { 
+                name=name.replace(/-([a-z])/g, function (matched) {
+                    return matched.toUpperCase().slice(1, matched.length);
+                });
+                return element.currentStyle[name];
+            }
+            if (document.defaultView && document.defaultView.getComputedStyle) {
+                name=name.replace(/([A-Z])/g,"-$1");
+                name=name.toLowerCase();
+                styleObj=document.defaultView.getComputedStyle(element,"");
+                return styleObj && styleObj.getPropertyValue(name);
+            } else {
+                return null;
+            }
+        },
+        
+        setProperties: function (element, properties) {
+            var oldProperties={};
+            for (var i in properties) {
+                oldProperties[i]=element.style[i];
+                element.style[i]=properties[i];
+            }
+            return oldProperties;
+        },
+        
+        setClass:function (element,addClassesArray,removeClassesArray) {
+            var currentClasses=new Array();
+            var newClasses=new Array();
+            var removedClasses=new Array();
+            findWordsExp=new RegExp("\\w+", "g");
+            var result;
+            while ((result= findWordsExp.exec(element.className))!= null) currentClasses.push(result[0]); 
+            for (var i=0; i<addClassesArray.length; i++) {
+                var classExists=false;
+                for (var j=0; j<currentClasses.length; j++) {
+                    if (currentClasses[j]==addClassesArray[i]) {
+                        classExists=true;
+                        break;
+                    }                   
+                }
+                if (!classExists) newClasses.push(addClassesArray[i]);
+            }
+            currentClasses=currentClasses.concat(newClasses);
+            if (removeClassesArray==null) return removedClasses;
+            for (var i=0; i<removeClassesArray.length; i++) {
+                for (var j=0; j<currentClasses.length; j++) {
+                    if (currentClasses[j]==removeClassesArray[i]) {
+                        removedClasses=removedClasses.concat(currentClasses.splice(j,1));
+                        break;
+                    }                   
+                }
+            }
+            element.className=currentClasses.join(" ");
+            return removedClasses;
+        }
+    },
+    
+    Position : {
+        getXPosOnPage: function (element) {
+            return element.offsetParent?element.offsetLeft+DHTMLApi.Position.getXPosOnPage(element.offsetParent):element.offsetLeft;
+        },
+        
+        getYPosOnPage: function (element) {
+            return element.offsetParent?element.offsetTop+DHTMLApi.Position.getYPosOnPage(element.offsetParent):element.offsetTop;
+        },
+        
+        getXPosInElement: function (element,container) {
+            return DHTMLApi.Position.getXPosOnPage(element)-DHTMLApi.Position.getXPosOnPage(container);
+        },
+        
+        getYPosInElement: function (element,container) {
+            return DHTMLApi.Position.getYPosOnPage(element)-DHTMLApi.Position.getYPosOnPage(container);
+        },
+        
+        setXPosOnPage: function (element,posX) {
+            var propertiesArray={};
+            if (element.parentNode!=document.body) {
+                element=element.parentNode.removeChild(element);
+                document.body.appendChild(element);
+            }
+            if (DHTMLApi.CSS.getStyle(element,"position")!="absolute") {
+                propertiesArray={position: "absolute"};
+            }
+            propertiesArray.left=posX+"px";
+            DHTMLApi.CSS.setProperties(element,propertiesArray);
+        },
+        
+        setYPosOnPage: function (element,posY) {
+            var propertiesArray={};
+            if (element.parentNode!=document.body) {
+                element=element.parentNode.removeChild(element);
+                document.body.appendChild(element);
+            }
+            if (DHTMLApi.CSS.getStyle(element,"position")!="absolute") {
+                propertiesArray={position: "absolute"};
+            }
+            propertiesArray.top=posY+"px";
+            DHTMLApi.CSS.setProperties(element,propertiesArray);
+        },
+        
+        setXPos: function (element, posX, relativeToElement) {
+            if (relativeToElement==undefined) {
+                element.style.left=posX+"px";
+            } else {
+                if(DHTMLApi.CSS.getStyle(element.parentNode,"position")=="static"){
+                    element.parentNode.style.position="relative";
+                }
+                element.style.position="absolute";
+                element.style.left=(posX-DHTMLApi.Position.getXPosInElement(element.parentNode,relativeToElement))+"px";
+            }
+        },
+        
+        setYPos: function (element, posY, relativeToElement) {
+            if (relativeToElement==undefined) {
+                element.style.top=posY+"px";
+            } else {
+                if(DHTMLApi.CSS.getStyle(element.parentNode,"position")=="static"){
+                    element.parentNode.style.position="relative";
+                }
+                element.style.position="absolute";
+                element.style.top=(posY-DHTMLApi.Position.getYPosInElement(element.parentNode,relativeToElement))+"px";
+            }
+        }
+        
+    },
+    
+    Size : { 
+        
+        getElementWidth : function (element) {
+            var tempProperties, width;
+            if (DHTMLApi.CSS.getStyle(element, "display" ) != "none") {
+                return element.offsetWidth || parseInt(DHTMLApi.CSS.getStyle(element, "width"));
+            }
+            tempProperties=DHTMLApi.CSS.setProperties(element, {display: "block", visibility: "hidden", position: "absolute"});
+            width=element.clientWidth || parseInt(DHTMLApi.CSS.getStyle(element, "width"));
+            DHTMLApi.CSS.setProperties(element, {display: "", visibility: "", position: ""});
+            DHTMLApi.CSS.setProperties(element,tempProperties);
+            return width;       
+        },
+        
+        getElementHeight : function (element) {
+            var tempProperties, height;
+            if (DHTMLApi.CSS.getStyle(element, "display" ) != "none") {
+                return element.offsetHeight || parseInt(DHTMLApi.CSS.getStyle(element, "height"));
+            }
+            tempProperties=DHTMLApi.CSS.setProperties(element, {display: "block", visibility: "hidden", position: "absolute"});
+            height=element.clientHeight || parseInt(DHTMLApi.CSS.getStyle(element, "height"));
+            DHTMLApi.CSS.setProperties(element, {display: "", visibility: "", position: ""});
+            DHTMLApi.CSS.setProperties(element,tempProperties);
+            return height;
+        },
+        
+        getPageWidth: function () {
+            //return Math.max(document.body.scrollWidth,document.body.offsetWidth);
+            return (document.documentElement && document.documentElement.scrollWidth) ? document.documentElement.scrollWidth : (document.body.scrollWidth > document.body.offsetWidth) ? document.body.scrollWidth : document.body.offsetWidth;
+        },
+        
+        getPageHeight: function () {
+            var height=(document.documentElement && document.documentElement.scrollHeight) ? document.documentElement.scrollHeight : (document.body.scrollHeight > document.body.offsetHeight) ? document.body.scrollHeight : document.body.offsetHeight;
+            return Math.max(height,DHTMLApi.Browser.getViewportHeight());
+            
+        }
+    
+    },
+    
+    Visibility: {
+        
+        show: function (element) {
+            element.style.display=element.__display__ || 'block';
+        },
+        
+        hide: function (element) {
+            var currentDisplay=DHTMLApi.CSS.getStyle(element,"display");
+            if (currentDisplay != 'none') element.__display__=currentDisplay;
+            element.style.display='none';
+        },
+        
+        setOpacity: function (element,percent) {
+            if (element.filters) {  
+                element.style.filter='alpha(opacity='+percent+')';
+            } else {
+                element.style.opacity=percent/100;
+            }
+        }
+        
+    },
+    
+    Browser : {
+        
+        getViewportWidth: function () {
+            return self.innerWidth || (document.documentElement && document.documentElement.clientWidth) || document.body.clientWidth;
+        },
+        
+        getViewportHeight: function () {
+            return self.innerHeight || (document.documentElement && document.documentElement.clientHeight) || document.body.clientHeight;
+        },
+        
+        getScrollX: function () {
+            return self.pageXOffset || (document.documentElement && document.documentElement.scrollLeft) || document.body.scrollLeft;
+        },
+        
+        getScrollY: function () {
+            return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        }
+        
+    }
+};
+
+    function fixColumns(mainColumnElement,otherColumns) {
+        for (var i=0;i<otherColumns.length;i++) {
+            otherColumn=otherColumns[i];
+            if (DHTMLApi.Size.getElementHeight(mainColumnElement)>DHTMLApi.Size.getElementHeight(otherColumn)) {
+                DHTMLApi.CSS.setProperties(otherColumn, {height: DHTMLApi.Size.getElementHeight(mainColumnElement)+"px"});
+            }
+        }
+    }
+
+    window.onload=function () {
+        fixColumns(document.getElementById("div_main"),[document.getElementById("div_side")]);
+    }
+</script>    
+
+
+<title>bonbon : ponuda : cjenik</title>
+<meta name="generator" content="bonbon" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<meta name="author" content="Systemadministrator" />
+<meta name="date" content="2010-12-09 21:08:16" />
+<meta name="keywords" content="cijene, prema, zona, usluga, bonbon, poziva, jedinica, cijena, broj, usluge, zonu, pozive, putem" />
+
+</head>
+<body>
+
+
+    <link rel="stylesheet" type="text/css" href="https://www.bonbon.com.hr/ext/resources/css/ext-all.css"/>
+<link type="text/css" rel="stylesheet" href="https://www.bonbon.com.hr//ext/resources/css/xtheme-gray.css"/>
+<link type="text/css" rel="stylesheet" href="https://www.bonbon.com.hr/portal/cms/css/carousel.css"/>
+<script type="text/javascript" src="https://www.bonbon.com.hr/ext/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="https://www.bonbon.com.hr/ext/ext-all.js"></script>
+<script type="text/javascript" src="/js/carousel.js"></script>
+<script type="text/javascript" src="/js/sms.php"></script>
+<script type="text/javascript" src="/js/login_sve.php"></script>
+
+
+
+
+<div class="masthead_wrapper">
+    <div class="white_liner">
+        <div class="masthead">
+            <div class="masthead_top">
+                <ul class="masthead_tab_navigation_menu">
+                <li><a class="bonbon_concept" href="front_content.php?idcat=60"></a></li>
+                <li><a class="bonbon_home_selected" href="front_content.php?idcat=61"></a></li>
+                </ul>
+                <div class="masthead_search_box">
+<input type="text" size="41" style="background:transparent;height:28px;border:0px;padding-top:7px;padding-left:10px;" name="search" id="search" /><div style="padding-top:4px;"></div>
+                    <!--<div class="masthead_search_btn"></div>-->
+                </div>
+            </div>
+            <br class="clearing" />
+            <div class="login_social_box">
+                <ul class="masthead_social_box">
+                    <li><a class="masthead_facebook" href="http://www.facebook.com/mojbonbon">facebook</a></li>
+                    <li><a class="masthead_twitter" href="http://www.twitter.com/mojbonbon">twitter</a></li>
+      <li><a class="masthead_forum" href="https://community.bonbon.com.hr">forum</a></li>
+
+                </ul>
+
+            <ul class="login_register_box">
+            <ul class="login_register_box">                 
+                    <li><span><a href="https://community.bonbon.com.hr/T4Um_/ucp.php?mode=register">Registriraj se</a></span></li>
+                    <li><span><a href="javascript:l();">Prijavi se</a></span></li>
+                    <!-- li><span class="fb_connect" oncick="javascript:lfb()"></span></li -->
+
+
+
+            </ul>
+            </div>
+      
+    
+
+          <ul class="main_menu">
+          <li><a class="orange 0 " href="/zajednica">zajednica</a></li>
+          <li><a class="dark_blue 0 " href="/podrska">podrška</a></li>
+           
+                <li><a class="blue 0" href="javascript:l()">moj bonbon</a></li>
+                <li><a class="purple 0" href="/ponuda">ponuda</a></li>
+                <li><a class="green 0" href="/bonovi">bonovi</a></li>
+ 
+            
+            
+            </ul>
+
+
+
+            </ul>
+<div class="submenu_container">
+    <ul>
+
+       
+        <li><a href="/ponuda/cjenik-usluga">Cjenik usluga</a></li>
+        <li><a href="/ponuda/nacini-placanja">Načini plaćanja</a></li>
+        <li><a href="/ponuda/dostava">Dostava</a></li>
+    
+
+
+
+
+    </ul>
+</div>
+<a class="home_link" href="/portal/cms/front_content.php?idcat=61"></a>
+        </div>
+    </div>
+</div>
+<div class="main_container">
+    <div class="main_content_container">
+        <div class="left_column" id="div_side">
+
+<div class="left_column_padding_box">
+ 
+ 
+     <h1 class="left_column_title">cjenik</h1>
+<h2 class="left_column_subtitle_half">1. Tarifni model bonbon bez mjesečne pretplate (prepaid)</h2>
+<h3 class="left_column_subsubtitle_half">1.1 Cijene usluga u tarifnom modelu bonbon bez mjesečne pretplate</h3>
+<table class="full_width_table_pricelist">
+<tbody>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px;">CIJENE USLUGA U PREPAID TARIFNOM MODELU BONBON<sup>1</sup></th>
+	
+</tr>
+<tr>
+<td style="width: 520px;">Pozivi prema svim mobilnim i fiksnim mrežama u Hrvatskoj</td>
+<td style="width: 120px; text-align: right;">0,70 (0,57)</td>
+</tr>
+<tr>
+<td style="width: 520px;">SMS (prema svim mobilnim i fiksnim mrežama)</td>
+<td style="width: 120px; text-align: right;">0,20 (0,16)</td>
+</tr>
+<tr>
+<td style="width: 520px;">MMS (prema svim mobilnim i fiksnim mrežama)</td>
+<td style="width: 120px; text-align: right;">0,70 (0,57)</td>
+</tr>
+<tr>
+<td style="width: 520px;">GPRS - prijenos podataka (1 MB)<sup>2</sup></td>
+<td style="width: 120px; text-align: right;">0,70 (0,57)</td>
+</tr>
+</tbody>
+</table>
+<p class="note_paragraph">
+	* Sve cijene uključuju PDV. Cijene bez PDV-a definirane su unutar zagrada.<br /> 
+	** Obračunska jedinica za nacionalne glasovne pozive je 60 + 60<br />
+	*** Obračunska jedinica: za GPRS je 100 KB i naplaćivat će se 0,068 (0,055) kn, a poslije promotivnoga razdoblja 0,097 (0,079).
+</p>
+<h3 class="left_column_subsubtitle_half">1.2. Cijene promotivnog Dnevnog paketa dostupnog u tarifnom modelu bonbon
+bez mjesečne pretplate (prepaid)</h3>
+<table class="full_width_table_pricelist">
+<tbody>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px;">CIJENE PROMOTIVNOG DNEVNOG PAKETA<sup>3</sup> U PREPAID TARIFNOM MODELU BONBON</th>
+	
+</tr>
+<tr>
+<td style="width: 520px;">Dnevna naknada</td>
+<td style="width: 120px; text-align: right;">7,00 (5,69)</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Uključeno u dnevnu naknadu</th>
+	
+</tr>
+<tr>
+<td style="width: 520px;">Minute prema bonbon korisnicima</td>
+<td style="width: 120px; text-align: right;">300</td>
+</tr>
+<tr>
+<td style="width: 520px;">SMS prema bonbon korisnicima</td>
+<td style="width: 120px; text-align: right;">300</td>
+</tr>
+<tr>
+<td style="width: 520px;">GPRS - prijenos podataka (MB)</td>
+<td style="width: 120px; text-align: right;">300</td>
+</tr>
+<tr>
+<td style="width: 520px;">Minute prema drugim mrežama</td>
+<td style="width: 120px; text-align: right;">10</td>
+</tr>
+<tr>
+<td style="width: 520px;">SMS prema drugim mrežama</td>
+<td style="width: 120px; text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<p class="note_paragraph">
+	* Sve cijene uključuju PDV. Cijene bez PDV-a definirane su unutar zagrada.
+</p>
+<h3 class="left_column_subsubtitle_half">1.3 Cijene usluga za pozive i SMS prema međunarodnim destinacijama za tarifni model bonbon bez mjesečne pretplate (prepaid)<sup>4</sup></h3>
+<table class="full_width_table_pricelist">
+<tbody>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px;">Cijene poziva</th>
+	
+</tr>
+<tr>
+<th colspan="2" style="width: 650px;">Zona</th>
+	
+</tr>
+<tr>
+<td style="width: 520px;">1A</td>
+<td style="width: 120px; text-align: right;">1,50 (1,22)</td>
+</tr>
+<tr>
+<td style="width: 520px;">1</td>
+<td style="width: 120px; text-align: right;">2,70 (2,20)</td>
+</tr>
+<tr>
+<td style="width: 520px;">2</td>
+<td style="width: 120px; text-align: right;">5,00 (4,07)</td>
+</tr>
+<tr>
+<td style="width: 520px;">3</td>
+<td style="width: 120px; text-align: right;">6,00 (4,88)</td>
+</tr>
+<tr>
+<td style="width: 520px;">4</td>
+<td style="width: 120px; text-align: right;">10,00 (8,13)</td>
+</tr>
+<tr>
+<td style="width: 520px;">5</td>
+<td style="width: 120px; text-align: right;">13,00 (10,57)</td>
+</tr>
+<tr>
+<td style="width: 520px;">6</td>
+<td style="width: 120px; text-align: right;">17,00 (13,82)</td>
+</tr>
+<tr>
+<th colspan="2" style="width: 650px;">Cijena SMS-a</th>
+	
+</tr>
+<tr>
+<td style="width: 520px;">Cijena slanja SMS-a prema svim zonama</td>
+<td style="width: 120px; text-align: right;">0,50 (0,41)</td>
+</tr>
+</tbody>
+</table>
+<p class="note_paragraph">
+	* Sve cijene uključuju PDV. Cijene bez PDV-a definirane su unutar zagrada. 
+	** Obračunska jedinica za međunarodne glasovne pozive je 60 + 60
+	*** Popis zemalja po zonama pod &ldquo;Usluge prema međunarodnim destinacijama &ndash; zone&rdquo; ovog cjenika.
+</p>
+<h3 class="left_column_subsubtitle_half">1.4 Cijene usluga pri gostovanja u mrežama stranih operatera za tarifni model bonbon bez mjesečne pretplate (prepaid) &ndash; osnovne cijene</h3>
+<table class="full_width_table_pricelist">
+<tbody>
+<tr style="border-bottom: 1px solid black;">
+<th style="width: 100px;">Usluga</th>
+		<th colspan="5" style="width: 540px;">Korisnik se nalazi u:<sup>5</sup></th>
+	
+</tr>
+<tr>
+<td style="width: 100px; border: medium none;"><br /></td>
+<td style="width: 100px;">Zona A1</td>
+<td style="width: 100px;">Zona A</td>
+<td style="width: 100px;">Zona B</td>
+<td style="width: 100px;">Zona C</td>
+<td style="width: 100px;">Zona D<sup>**</sup></td>
+</tr>
+<tr>
+<th colspan="6" style="width: 650px;">Odlazni pozivi s roaming kodom, korisnik zove u:</th>
+	
+</tr>
+<tr>
+<td style="width: 100px;">- Hrvatsku</td>
+<td style="width: 100px;">5,59 (4,54)</td>
+<td style="width: 100px;">7,91 (6,43)</td>
+<td style="width: 100px;">9,74 (7,92)</td>
+<td style="width: 100px;">12,18 (9,90)</td>
+<td style="width: 100px;">13,40 (10,89)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu 1A</td>
+<td style="width: 100px;">5,59 (4,54)</td>
+<td style="width: 100px;">7,91 (6,43)</td>
+<td style="width: 100px;">10,96 (8,91)</td>
+<td style="width: 100px;">13,40 (10,89)</td>
+<td style="width: 100px;">15,23 (12,38)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu A</td>
+<td style="width: 100px;">7,91 (6,43)</td>
+<td style="width: 100px;">9,13 (7,42)</td>
+<td style="width: 100px;">10,96 (8,91)</td>
+<td style="width: 100px;">13,40 (10,98)</td>
+<td style="width: 100px;">15,23 (12,38)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu B</td>
+<td style="width: 100px;">10,35 (8,41)</td>
+<td style="width: 100px;">10,35 (8,41)</td>
+<td style="width: 100px;">12,18 (9,90)</td>
+<td style="width: 100px;">14,62 (11,89)</td>
+<td style="width: 100px;">16,45 (13,37)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu C</td>
+<td style="width: 100px;">11,57 (9,41)</td>
+<td style="width: 100px;">11,57 (9,41)</td>
+<td style="width: 100px;">13,40 (10,89)</td>
+<td style="width: 100px;">15,84 (12,88)</td>
+<td style="width: 100px;">17,67 (14,36)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu D</td>
+<td style="width: 100px;">13,40 (10,89)</td>
+<td style="width: 100px;">13,40 (10,89)</td>
+<td style="width: 100px;">15,84 (12,88)</td>
+<td style="width: 100px;">17,06 (13,87)</td>
+<td style="width: 100px;">18,28 (14,86)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Ostatak svijeta</td>
+<td style="width: 100px;">17,06 (13,87)</td>
+<td style="width: 100px;">17,06 (13,87)</td>
+<td style="width: 100px;">18,28 (14,86)</td>
+<td style="width: 100px;">19,50 (15,85)</td>
+<td style="width: 100px;">20,72 (16,84)</td>
+</tr>
+<tr>
+<th colspan="6" style="width: 650px;">Odlazni pozivi bez roaming koda, korisnik zove u:</th>
+	
+</tr>
+<tr>
+<td style="width: 100px;">- Hrvatsku</td>
+<td style="width: 100px;">6,99 (5,68)</td>
+<td style="width: 100px;">9,88 (8,03)</td>
+<td style="width: 100px;">12,18 (9,90)</td>
+<td style="width: 100px;">15,23 (12,38)</td>
+<td style="width: 100px;">16,75 (13,62)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu 1A</td>
+<td style="width: 100px;">6,99 (5,68)</td>
+<td style="width: 100px;">9,88 (8,03)</td>
+<td style="width: 100px;">13,70 (11,14)</td>
+<td style="width: 100px;">16,75 (13,62)</td>
+<td style="width: 100px;">19,03 (15,47)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu A</td>
+<td style="width: 100px;">9,88 (8,03)</td>
+<td style="width: 100px;">11,41 (9,28)</td>
+<td style="width: 100px;">13,70 (11,14)</td>
+<td style="width: 100px;">16,75 (13,62)</td>
+<td style="width: 100px;">19,03 (15,47)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu B</td>
+<td style="width: 100px;">12,93 (10,51)</td>
+<td style="width: 100px;">12,93 (10,51)</td>
+<td style="width: 100px;">15,23 (12,38)</td>
+<td style="width: 100px;">18,28 (14,86)</td>
+<td style="width: 100px;">20,56 (16,71)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu C</td>
+<td style="width: 100px;">14,46 (11,76)</td>
+<td style="width: 100px;">14,46 (11,76)</td>
+<td style="width: 100px;">16,75 (13,62)</td>
+<td style="width: 100px;">19,80 (16,10)</td>
+<td style="width: 100px;">22,08 (17,95)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Zonu D</td>
+<td style="width: 100px;">16,75 (13,62)</td>
+<td style="width: 100px;">16,75 (13,62)</td>
+<td style="width: 100px;">19,80 (16,10)</td>
+<td style="width: 100px;">21,33 (17,34)</td>
+<td style="width: 100px;">22,85 (18,58)</td>
+</tr>
+<tr>
+<td style="width: 100px;">- Ostatak svijeta</td>
+<td style="width: 100px;">21,33 (17,34)</td>
+<td style="width: 100px;">21,33 (17,34)</td>
+<td style="width: 100px;">22,85 (18,58)</td>
+<td style="width: 100px;">24,38 (19,82)</td>
+<td style="width: 100px;">25,90 (21,06)</td>
+</tr>
+<tr>
+<td style="width: 100px;">Dolazni pozivi</td>
+<td style="width: 100px;">3,03 (2,46)</td>
+<td style="width: 100px;">3,64 (2,96)</td>
+<td style="width: 100px;">4,86 (3,95)</td>
+<td style="width: 100px;">6,08 (4,94)</td>
+<td style="width: 100px;">8,52 (6,93)<sup>**</sup></td>
+</tr>
+<tr>
+<td style="width: 100px;">SMS</td>
+<td style="width: 100px;">2,42 (1,97)</td>
+<td style="width: 100px;">3,03 (2,46)</td>
+<td style="width: 100px;">3,64 (2,96)</td>
+<td style="width: 100px;">4,25 (3,45)</td>
+<td style="width: 100px;">4,86 (3,95)</td>
+</tr>
+<tr>
+<td style="width: 100px;">MMS</td>
+<td colspan="5" style="width: 540px;">7,00 (5,69)</td>
+</tr>
+<tr>
+<td style="width: 100px;">Paketni prijenos podataka/100kB</td>
+<td colspan="5" style="width: 540px;">9,00 (7,32)</td>
+</tr>
+</tbody>
+</table>
+<p class="note_paragraph">
+<sup>*</sup> Obračunska jedinica za prijenos podataka pri gostovanju u mreži stranog operatera je 100kB.<br /> 
+<sup>**</sup> U Zoni D pojedini operatori naplaćuju dodatne tro&scaron;kove dolaznih poziva te će cijena primljenih poziva biti vi&scaron;a za 6,10 (4,96)<br />
+<sup>***</sup> Standardna obračunska jedinica za glasovne pozive pri gostovanju  u mreži stranog operatora  je 60 sekundi za odlazne pozive, 15 sekundi za dolazne pozive i 15 sekundi za odlazne pozive s roaming kodom.
+</p>
+<h2 class="left_column_subtitle_half">2. Bilje&scaron;ke i poja&scaron;njenja uz cijene</h2>
+<h3 class="left_column_subsubtitle_half">2.1 Usluge prema međunarodnim destinacijama &ndash; zone</h3>
+<p>
+<br class="clearing" /></p>
+<h4>I. zone (regija)</h4>
+<p class="pricelist_paragraph">Austrija, Če&scaron;ka Republika, Mađarska, Italija, Slovačka, Slovenija, Srbija, Crna Gora, Makedonija, Kosovo, Monaco</p>
+<p>
+<br class="clearing" /></p>
+<h4>I. A zona</h4>
+<p class="pricelist_paragraph">Bosna i Hercegovina</p>
+<p>
+<br class="clearing" /></p>
+<h4>II. zona</h4>
+<p class="pricelist_paragraph">Belgija, Bugarska, Francuska, Lihten&scaron;tajn, Luksemburg, Madeira, Nizozemska, Njemačka, Poljska, Portugal, Vatikan, Rumunjska, San Marino, &Scaron;panjolska, &Scaron;vicarska</p>
+<p>
+<br class="clearing" /></p>
+<h4>III. zona</h4>
+<p class="pricelist_paragraph">Albanija, Alžir, Andora, Australija, Bjelorusija, Danska, Estonija, Farski Otoci, Finska, Gibraltar, Grčka, Havaji, Island, Irska, Kanada, Latvija, Litva, Malta, Moldavija, Norve&scaron;ka, SAD, &Scaron;vedska, Tunis, Turska, Ukrajina, Velika Britanija</p>
+<p>
+<br class="clearing" /></p>
+<h4>IV. zona</h4>
+<p class="pricelist_paragraph">Argentina, Bahrein, Barbados, Bolivija, Brazil, Cipar, Čile, Djevičansko otočje (UK), Djevičansko otočje (USA), Dominika, El Salvador, Filipini, Francuska Guiana, Gana, Guadalupa, Haiti, Honduras, Hong Kong, Indija, Izrael, Južna Koreja, Kina, Kolumbija, Kostarika, Kuba, Libija, Makao, Malavi, Maroko, Martinik, Meksiko, Montserrat, Nikaragva, Panama, Paragvaj, Portoriko, Ruska Federacija, Sjeverna Koreja, Sveti Pierre i Miquelon, Singapur, Sveta Lucija, Tajland, Tajvan, Trinidad i Tobago, Turks i Caicos, Ujedinjeni Arapski Emirati, Urugvaj, Zambija, Zelenortski Otoci</p>
+<p>
+<br class="clearing" /></p>
+<h4>V. zona</h4>
+<p class="pricelist_paragraph">Afganistan, Angila, Angola, Antigva i Barbuda, Armenija, Belize, Benin, Brunej, Burkina Faso, Butan, Demokratska Republika Kongo, Diego Garcia, Ekvador, Ekvatorska Gvineja, Gabon, Gambija, Grenland, Gruzija, Guyana, Indonezija, Iran, Jordan, Južnoafrička Republika, Kambodža, Kamerun, Katar, Kongo, Kiribati, Kuvajt, Lesoto, Mali, Mauritanija, Mikronezija, Namibija, Nigerija, Novi Zeland, Obala Bjelokosti, Oman, Palau, Peru, Reunion, Saudijska Arabija, Sej&scaron;eli, Sirija, Sudan, Svaziland, Sveti Vincent i Grenadini, Tanzanija, Tonga, Uganda, Venecuela</p>
+<p>
+<br class="clearing" /></p>
+<h4>VI. zona</h4>
+<p class="pricelist_paragraph">Američka Samoa, Aruba, Ascension, Australski Antarktički Teritorij, Azerbejdžan, Bahama, Banglade&scaron;, Bermudski otoci, Bocvana, Burma, Burundi, Kajmanski otoci, Cookovo otočje, Čad, Dominikanska Republika, Džibuti, Egipat, Eritreja, Etiopija, Falklandsko otočje, Fidži, Francuska Polinezija, Grenada, Guam, Gvatemala, Gvineja, Gvineja Bisau, Irak, Istočni Timor, Jamajka, Japan, Jemen, Kazahstan, Kenija, Kirgistan, Komori, Laos, Libanon, Liberija, Madagaskar, Malezija, Maldivi, Marijansko otočje, Mar&scaron;alovo otočje, Mauricijus, Mayotte, Mongolija, Mozambik, Nauru, Nepal, Nizozemski Antili, Niger, Niue, Otok Norfolk, Nova Kaledonija, Pakistan, Palestina, Papua Nova Gvineja, Ruanda, San Tome i Prinsipe, Senegal, Sijera Leone, Solomonsko otočje, Somalija, Srednjoafrička republika, Surinam, Sveti Kristofer i Nevis, Sveta Helena, &Scaron;ri Lanka, Tadžikistan, Togo, Tokelausko otočje, Turkmenistan, Tuvalu, Uzbekistan, Vanuatu, Vijetnam, Wallis i Futuna, Samoa, Zimbabve</p>
+<h3>2.2. Usluge kod gostovanja u mrežama stranih operatera - zone</h3>
+<p>
+<br class="clearing" /></p>
+<h4>1A zona</h4>
+<p class="pricelist_paragraph">Bosna i Hercegovina</p>
+<p>
+<br class="clearing" /></p>
+<h4>A zona</h4>
+<p class="pricelist_paragraph">Austrija, Italija, Mađarska, San Marino, Slovenija, Vatikan</p>
+<p>
+<br class="clearing" /></p>
+<h4>B zona</h4>
+<p class="pricelist_paragraph">Andora, Cipar, Če&scaron;ka, Francuska, Gibraltar, Grčka, Monako, Njemačka, Poljska, Portugal, Slovačka, &Scaron;panjolska</p>
+<p>
+<br class="clearing" /></p>
+<h4>C zona</h4>
+<p class="pricelist_paragraph">Belgija, Bugarska, Danska, Estonija, Finska, Irska, Island, Lihten&scaron;tajn, Luksemburg, Makedonija, Nizozemska, Norve&scaron;ka, &Scaron;vedska, &Scaron;vicarska, Turska, Velika Britanija</p>
+<p>
+<br class="clearing" /></p>
+<h4>D zona</h4>
+<p class="pricelist_paragraph">Sve ostale zemlje</p>
+<h3 class="left_column_subsubtitle_half">2.3 Cijene posebnih službi i usluga</h3>
+<p>
+<br class="clearing" /></p>
+<h4>A. Besplatni pozivi brojeva hitnih službi</h4>
+<ul class="pricelist_ul">
+<li>jedinstveni europski broj za hitne službe (poziv na 112)</li>
+<li>policija (92, 192)</li>
+<li>vatrogasci (93)</li>
+<li>hitna pomoć (94)</li>
+<li>pomoć na cestama (987, 1987)</li>
+<li>nacionalna sredi&scaron;njica za usklađivanje traganja i spa&scaron;avanja na moru (9155)</li>
+</ul>
+<p>
+<br class="clearing" /></p>
+<h4>B. Cijene posebnih nekomercijalnih usluga od javnog interesa</h4>
+<ul class="pricelist_ul">
+<li>Informacije, cijene po minuti:
+<ul class="pricelist_ul_ul">
+<li>opće informacije putem poziva na broj 981/18981: 6,00 (4,88) 
+		(obračunska jedinica je 1 minuta)</li>
+<li>T-Mobile imenik putem poziva na broj 1588: 1,50 (1,22) 
+		(obračunska jedinica je 15 sekundi)</li>
+</ul>
+</li>
+<li>T-Com imenik putem poziva na broj 988/11888, cijene po pozivu:
+<ul class="pricelist_ul_ul">
+<li>prema 988/11888: 4,31 (3,50)</li>
+<li>uspostavljen poziv: 2,00 (1,63), cijena po minuti.</li>
+</ul>
+</li>
+<li>VIP imenik putem poziva na broj 0917744, po minuti: 2,00 (1,63) 
+	(obračunska jedinica je 15 sekundi)</li>
+<li>Točno vrijeme putem poziva na broj 95/18095: 4,00 (3,25) po pozivu 
+	(obračunska jedinica je 15 sekundi)</li>
+<li>Sportske informacije putem poziva na broj 9841/18841, po minuti: 4,00 (3,25) 
+	(obračunska jedinica je 1 minuta)</li>
+<li>HEP informacije putem poziva na broj 9820, po minuti: 3,16 (2,57) 
+	(obračunska jedinica je 1 minuta)</li>
+<li>Taksi putem poziva na broj 970/1777, po minuti: 3,16 (2,57) 
+	(obračunska jedinica je 1 minuta)</li>
+<li>Izvije&scaron;će o vremenu putem poziva na broj 9166/18166: po minuti: 4,00 (3,25) 
+	(obračunska jedinica je 15 sekundi)</li>
+</ul>
+<p>
+<br class="clearing" /></p>
+<h4>C. Cijene u poluautomatskom međunarodnom prometu</h4>
+<table class="full_width_table_pricelist">
+<tbody>
+<tr style="border-bottom: 1px solid black;">
+<th style="width: 320px;">Usluga</th>
+		<th style="width: 320px;">Cijene</th>
+	
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px;">Pozivi prema brojevima u inozemstvu</th>
+	
+</tr>
+<tr>
+<td style="width: 320px;">- Europa I</td>
+<td style="width: 320px;">2,26 (1,84)</td>
+</tr>
+<tr>
+<td style="width: 320px;">- Europa II</td>
+<td style="width: 320px;">2,75 (2,23)</td>
+</tr>
+<tr>
+<td style="width: 320px;">- Svijet I</td>
+<td style="width: 320px;">4,27 (3,47)</td>
+</tr>
+<tr>
+<td style="width: 320px;">- Svijet II</td>
+<td style="width: 320px;">8,54 (6,94)</td>
+</tr>
+<tr>
+<td style="width: 320px;">- Inmarsat</td>
+<td style="width: 320px;">53,68 (43,64)</td>
+</tr>
+<tr>
+<td style="width: 320px;">Posredovanje operatora<sup>*</sup></td>
+<td style="width: 320px;">12,79 (10,40)</td>
+</tr>
+</tbody>
+</table>
+<p class="note_paragraph"><sup>*</sup>za posebne usluge preko operatora naplaćuje se dopunska cijena u iznosu 2 minute razgovora s pozvanom zemljom, prema Cijeniku</p>
+<h3 class="left_column_subsubtitle_half">2.4. Cijene ostalih usluga</h3>
+<p>
+<br class="clearing" /></p>
+<h4>A. usluge s dodanom i niskom vrijednosti</h4>
+<ul class="pricelist_ul">
+<li>Cijene usluga s dodanom vrijednosti (060, 061, 064, 065, 069) određuje operator s kojim je povezan</li>
+davatelj usluga s dodanom vrijednosti
+<li>Jedinstveni pristupni broj 062: prema cijeni prometa u tuzemstvu prema nepokretnim mrežama</li>
+<li>0800, 0801: besplatan poziv</li>
+<li>CSD pristup prema cijeni i uvjetima za pozive u tuzemstvu</li>
+</ul>
+<p>
+<br class="clearing" /></p>
+<h4>B. Ostale usluge</h4>
+<table class="full_width_table_pricelist">
+<tbody>
+<tr style="border-bottom: 1px solid black;">
+<th style="width: 320px;">USLUGE</th>
+		<th style="width: 320px;">KORISNICI BONBON TARIFNOG MODELA</th>
+	
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Pristupni brojevi pozivnog centra</th>
+	
+</tr>
+<tr>
+<td style="width: 320px;">Broj korisničke podr&scaron;ke 097/0266266</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Posebna bonbon usluga</th>
+	
+</tr>
+<tr>
+<td style="width: 320px;">Zamjenska SIM kartica</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Narudžba postavki</th>
+	
+</tr>
+<tr>
+<td style="width: 320px;">Za vrijeme boravka u Republici Hrvatskoj</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr>
+<td style="width: 320px;">Za vrijeme boravka u roamingu</td>
+<td style="width: 320px;">Cijena SMS-a poslana u Hrvatsku</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Ostale besplatne usluge za korisnike bonbon tarifnog modela</th>
+	
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">Blokiranje poziva</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">Prikaz broja koji zove (CLIP)</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">Zabrana slanja vlastitog broja (CLIR)</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">Tko je zvao</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">Konferencijska veza</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Preusmjeravanje poziva (svih poziva, ili kad je korisnik zauzet, ili kad korisnik ne odgovara, ili kad je korisnik izvan dohvata)</th>
+	
+</tr>
+<tr>
+<td style="width: 320px;">Dodjela usluge i preusmjeravanje veze prema govornoj po&scaron;ti</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr>
+<td>Veza preusmjerena prema brojevima u nacionalnim mrežama</td>
+<td>Cijena prometa za odgovarajući tarifni model</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">Govorna po&scaron;ta</th>
+	
+</tr>
+<tr>
+<td style="width: 320px;">Preslu&scaron;avanje poruka s područja Republike Hrvatske</td>
+<td style="width: 320px;">0,70 (0,57)</td>
+</tr>
+<tr>
+<td style="width: 320px;">Isporučeni SMS s informacijom o propu&scaron;tenim pozivima</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr>
+<td style="width: 320px;">Snimanje ili promjena pozdravne poruke s područja Republike Hrvatske</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr>
+<td style="width: 320px;">Promjena lozinke i snimanje glasovnog potpisa</td>
+<td style="width: 320px;">0,00</td>
+</tr>
+<tr>
+<td style="width: 320px;">Pozivi prema govornoj po&scaron;ti za vrijeme boravka u roamingu</td>
+<td style="width: 320px;">Cijena poziva u Hrvatsku (ovisno o zoni u kojoj se korisnik nalazi)</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+<th colspan="2" style="width: 650px; padding-top: 20px;">SMS usluge</th>
+	
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">m-parking<sup>6</sup></td>
+</tr>
+<tr>
+<td style="width: 320px;">Poslani SMS</td>
+<td style="width: 320px;">0,20(0,16)</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">m-parking u garaži<sup>7</sup></td>
+</tr>
+<tr>
+<td style="width: 320px;">Poslani SMS (zahtjev za parkirnu kartu)</td>
+<td style="width: 320px;">1,22 (0,99)</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">m-prijevoz<sup>8</sup></td>
+</tr>
+<tr>
+<td style="width: 320px;">Poslani SMS</td>
+<td style="width: 320px;">0,61 (0,49)</td>
+</tr>
+<tr>
+<td colspan="2" style="width: 650px;">Premium SMS<sup>9</sup></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p class="note_paragraph" style="margin-top: 20px;"><sup>1</sup> U promotivnom razdoblju povodom lansiranja usluge od 1. listopada 2010. do 31. prosinca 2010. godine svi korisnici koji nadoplate svoj bonbon prepaid račun s bonom od minimalno 40,00 kn sudjelovati će u promociji u kojoj neće plaćati pozive prema bonbon tarifi. Korisnici će u svakom kalendarskom mjesecu u kojem nadoplate račun s bonom od minimalno 40 kn dobiti 1000 minuta za razgovore prema bonbon tarifi u trajanju 31 dan od nadoplate. Nakon potro&scaron;enih 1000 minuta pozivi unutar mreže će se naplaćivati po standardnoj cijeni bonbon tarife. Zadnji datum do kada će korisnici primati minute unutar promocije je za sve korisnike 31. prosinac 2020. godine.</p>
+<p class="note_paragraph"><sup>2</sup> Cijena internetskog prometa je promotivnog karaktera do 1. veljače 2011. godine, standardna cijena za jedan MB je 1,00 (0,81).</p>
+<p class="note_paragraph"><sup>3</sup> U promotivnom razdoblju od 1. listopada 2010. do 14. veljače 2011. moguće je aktivirati Dnevni paket. Trajanje paketa je od trenutka aktivacije do kraja dana (00:00 sati). Paket je samo reaktivirajući ukoliko je korisnik aktivan, ima dovoljno novaca na računu te ukoliko nije zatražio deaktivaciju. Paket se odnosi na internetski promet, pozive i poruke upućene s područja Republike Hrvatske.</p>
+<p class="note_paragraph"><sup>4</sup> Cijena u promotivnom razdoblju od 1. listopada 2010. do 1. veljače 2011.</p>
+<p class="note_paragraph"><sup>5</sup> Popis zemalja po zonama pod &bdquo;Usluge prema međunarodnim destinacijama &ndash; zone&ldquo; ovog cjenika.</p>
+<p class="note_paragraph"><sup>6</sup> Cijene parkirnih karata, zone, radno vrijeme i vremenska ograničenja utvrđena su od strane gradskih poglavarstava pojedinih gradova, a za naplatu su odgovorne gradske parking tvrtke.</p>
+<p class="note_paragraph"><sup>7</sup> Cijene parkirnih karata u garaži naplaćuju se prema važećem cjeniku garaže, a za naplatu su odgovorne gradske parking tvrtke.</p>
+<p class="note_paragraph"><sup>8</sup> Cijene karata javnoga gradskog prijevoza, zone, radno vrijeme i vremenska ograničenja utvrđena su od strane davatelja usluga javnoga gradskog prijevoza.
+</p>
+<p class="note_paragraph"><sup>9</sup> SMS s dodanom vrijednosti (prema brojevima 6xxxx, 060xxxxxx te 061xxxx). Za cijenu ili objavu cijena SMS usluga s dodanom vrijednosti koje se naplaćuju odgovoran je operator usluga s dodanom vrijednosti.</p>
+
+ 
+ 
+</div>
+        
+
+
+
+
+        </div>
+        <div class="right_column" id="div_main">
+
+
+<div class="right_column_unit_container"> 
+                <div class="right_column_title"> 
+                    novo u ponudi
+                </div> 
+                <div class="sim_card_right_column"> 
+                    <div class="phone_box_right"> 
+                        <img style="float: left;" src="upload/static/images/wildfire_small.jpg" /> 
+                        <div class="phone_box_info_right"> 
+                            <h2>HTC Wildfire</h2>
+                            <ul>
+                              <li>bonbon broj</li>
+                              <li>20 kn na računu</li>
+                            </ul>                        
+                            <a class="sim_buy_btn" href="/shop/?bundle_id=4886"></a> 
+                            <br class="clearing" /> 
+                            <a style="margin-bottom: 6px;" class="sim_gift_btn" 
+                            href="/shop/?bundle_id=4886&present=1"></a> 
+                            <br class="clearing" /> 
+                            <a class="offer_more" href="/ponuda/htc-wildfire"></a> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+            
+            <div class="right_column_unit_container">
+                <div class="right_column_title">
+                    bonbon broj
+                </div>
+                <div class="sim_card_right_column">
+                    <div class="sim_card_pic_links_box">
+                        <a class="sim_buy_btn" href="/shop/?bundle_id=4879"></a>
+                        <br class="clearing" />
+                        <a class="sim_gift_btn" href="/shop/?bundle_id=4879&present=1"></a>
+                    </div>
+                    <div class="sim_buy_text">
+                    Za početak kupi bonbon broj i pridruži se ostatku ekipe.
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="right_column_unit_container">
+                <div class="right_column_title">
+                    bonbon bon
+                </div>
+                <div class="coupons_box">
+                    <a class="kn10" href="/shop/?bundle_id=4880"></a>
+                    <a class="kn20" href="/shop/?bundle_id=4882"></a>
+                    <a class="kn40" href="/shop/?bundle_id=4883"></a>
+                    <a class="kn80" href="/shop/?bundle_id=4884"></a>
+                    <a class="kn160" href="/shop/?bundle_id=4881"></a>
+                </div>
+                <span class="note">Klikni na željeni iznos i kupi bonbon bon </span>
+            </div>
+
+
+
+<div class="right_column_unit_container">
+    <div class="right_column_title">
+        pošalji SMS
+    </div>
+    <div class="sms_form_box">
+        <div style="margin: 0px 0px 3px 0px;" class="web_sms_characters" >Preostalo znakova: <strong><span id="sms_s_char">457</span></strong></div>
+        <div style="margin: 0px 0px 3px 0px;" class="web_sms_number" >Broj SMS poruka: <strong><span id="sms_s_mess">0</span></strong></div>
+        <input type="text" value="upi&#353;i poruku" id="sms_s_text" onBlur="replaceDefaultText('sms_s_text')" onFocus="focusSmsText('sms_s_text')" onkeyup="scl('sms_s_text')"></input>
+        <br class="clearing" />
+        <input class="sms_number_field" type="text" value="broj s 385 predbrojem" id="sms_s_num" onBlur="replaceDefaultText('sms_s_num')" onFocus="focusSmsNum('sms_s_num')"></input>
+        <a class="send_sms_btn" href="javascript:sss()"></a>
+    </div>
+    <span class="note" id="sms_s_free">Preostalo ti je još 20 besplatnih SMS poruka.</span>
+</div>
+
+
+
+
+
+
+            <div class="right_column_unit_container">
+                <div class="right_column_title">
+                    forum
+                </div>
+                <span class="note"></span>
+                <div class="forum_entries">
+
+<a href="https://community.bonbon.com.hr/T4Um_/viewtopic.php?f=13&t=75">kutak za se x8</a>
+
+<a href="https://community.bonbon.com.hr/T4Um_/viewtopic.php?f=9&t=141">KUTAK ZA RELAKSACIJU</a>
+
+<a href="https://community.bonbon.com.hr/T4Um_/viewtopic.php?f=14&t=42">Pogodi ponudu :)</a>
+
+
+                </div>
+                </div>
+        <div class="right_column_unit_container">
+                <div class="right_column_title">
+                    možda te zanima
+                </div>
+                <div class="forum_entries">
+                            <a href="front_content.php?idart=164">ponuda</a>
+                            <a href="front_content.php?idart=166">bonbon bonovi</a>
+                            <a href="front_content.php?idart=168">korisnička podrška</a>
+                            <a href="front_content.php?idart=169">prodajna mjesta</a>
+                            <a href="front_content.php?idart=167">bonbon mreža</a>
+                            <a href="front_content.php?idart=163">facebook zero</a>
+                            <a href="front_content.php?idart=174">prijenos broja</a>
+                            <a href="front_content.php?idart=173">registracija</a>
+                </div>
+                <span class="note">Nije ono što tražiš?</span><br />
+                <div style="margin-top: 0px;" class="forum_entries">    
+                    <a href="front_content.php?idcat=70">čudotvorni link sa svim odgovorima</a>
+                </div>
+            </div>
+
+
+
+ 
+
+        </div>
+ </div>
+
+
+    <div class="footer">
+        <div class="footer_copy">
+            &copy;&nbsp;2010&nbsp;Hrvatski Telekom d.d.
+        </div>
+        <ul class="footer_menu">
+                    <li><a href="front_content.php?idart=197">Press</a></li>
+
+            <li><span class="footer_menu_separator green_separator"></span></li>
+            <li><a href="front_content.php?idcat=70">FAQ</a></li>
+            <li><span class="footer_menu_separator purple_separator"></span></li>
+            <li><a href="front_content.php?idart=160">Uvjeti korištenja i pravne napomene</a></li>
+            <li><span class="footer_menu_separator red_separator"></span></li>
+            <li><a href="/">Naslovnica</a></li>
+        </ul>
+    </div>
+<br class="clearing" />
+</div>
+</div>
+
+<script type="text/javascript"> 
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18676069-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Ministarstvo kulture Republike Hrvatske - Novosti&nbsp;&nbsp;-&nbsp;&nbsp;Klovićevi dvori: otvorena izložba "Ruske ikone 15. - 20. stoljeća" </title>
+	
+	<base href='http://www.min-kulture.hr/default.aspx?id=5936' />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link media="print" href="style_print1.css" type="text/css" rel="stylesheet" />
+	<link rel="SHORTCUT ICON" href="http://www.min-kulture.hr/favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="Ministarstvo kulture Republike Hrvatske - Novosti" href="rss.aspx" />
+	<link rel="alternate" type="application/rss+xml" title="Ministarstvo kulture Republike Hrvatske - Najave" href="rss.aspx?id=90" />
+	<script type="text/javascript" src="js/mootools.v1.11.js"></script>
+	<script type="text/javascript" src="js/moomarquee.js"></script>
+	
+	<script type="text/javascript" src="knjiznice/admin/js/ajax.js"></script>
+	<script type="text/javascript" src="knjiznice/admin/js/gdCompleterClass.js"></script>
+	
+	<script language="Javascript" type="text/javascript">
+	//<![CDATA[
+	function toggleExpand(section){
+	
+		if(document.getElementById([section]).style.display=='block'){
+			document.getElementById([section]).style.display='none';
+			document.getElementById([section]).style.height='0';
+			document.body.clientHeight='100%';
+		}
+		else{
+			document.getElementById([section]).style.display='block';
+			
+			 for(var i=1;i<=100;i++)
+			  {
+			    if (section!='layer'+i){
+					if (document.getElementById('layer'+i)){
+						document.getElementById('layer'+i).style.display='none';
+					}
+					
+				}
+			  }
+			  
+			document.getElementById([section]).style.height='auto';
+		}
+	}
+	
+	function MM_findObj(n, d) { //v4.0
+	  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+	    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+	  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+	  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+	  if(!x && document.getElementById) x=document.getElementById(n); return x;
+	}
+	
+	function show_hide(obj,action)
+	{
+	  obj=MM_findObj(obj);
+	  action=(action=='show')?"visible":"hidden";
+	  if(obj){obj.style.visibility=action};
+	}
+	
+	function hide_all()
+	{
+	  for(var i=1;i<=100;i++)
+	  {
+	    show_hide("layersub"+i,"hide");
+	  }
+	}
+	function otvori(slika,folder) {
+	  window.open('vecaslika.aspx?slika='+slika+'&folder='+folder, 'SLIKA', 'width=600,height=400,resizable=1,scrollbars=1');
+	}
+	
+	function hideGoto(koga) {
+		var elmkoga = document.getElementById(koga);
+		elmkoga.style.zIndex = 1;
+		elmkoga.style.display = "none";
+	}
+	
+	function showGoto(koga) {
+		var elmkoga = document.getElementById(koga);
+		elmkoga.style.zIndex = 200;
+		elmkoga.style.display = "block";
+	}
+	function setLyr(obj,lyr)
+	{
+		var newX = findPosX(obj);
+		var newY = findPosY(obj);
+		newY += 13;
+		newX -=150;
+		var x = new getObj(lyr);
+		x.style.top = newY + 'px';
+		x.style.left = newX + 'px';
+	}
+	
+	function findPosX(obj)
+	{
+		var curleft = 0;
+		if (obj.offsetParent)
+		{
+			while (obj.offsetParent)
+			{
+				curleft += obj.offsetLeft
+				obj = obj.offsetParent;
+			}
+		}
+		else if (obj.x)
+			curleft += obj.x;
+		return curleft;
+	}
+	
+	function findPosY(obj)
+	{
+		var curtop = 0;
+		var printstring = '';
+		if (obj.offsetParent)
+		{
+			while (obj.offsetParent)
+			{
+				printstring += ' element ' + obj.tagName + ' has ' + obj.offsetTop;
+				curtop += obj.offsetTop
+				obj = obj.offsetParent;
+			}
+		}
+		else if (obj.y)
+			curtop += obj.y;
+		window.status = printstring;
+		return curtop;
+	}
+	
+	
+	function getObj(name)
+	{
+	 if (document.getElementById)
+	 {
+		   this.obj = document.getElementById(name);
+		   this.style = document.getElementById(name).style;
+	 }
+	 else if (document.all)
+	 {
+		   this.obj = document.all[name];
+		   this.style = document.all[name].style;
+	 }
+	 else if (document.layers)
+	 {
+		   if (document.layers[name])
+		   {
+		   	this.obj = document.layers[name];
+		   	this.style = document.layers[name];
+		   }
+		   else
+		   {
+		    this.obj = document.layers.testP.layers[name];
+		    this.style = document.layers.testP.layers[name];
+		   }
+	 }
+	}
+	
+	
+	function kontaktforma() {
+	  window.open('kontakt.aspx', 'kontakt', 'width=470,height=420,resizable=1,scrollbars=1');
+	}
+	//]]>
+	</script>
+	
+	<style type="text/css">
+	.bullet {background-image: url(http://www.min-kulture.hr/img/bullet_kockica.gif);background-position : 0 5px;background-repeat: no-repeat;display: block;padding-left: 8px;}
+	</style>
+
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" id="master" align="center">
+    <tr>
+        <td class="header"><a href='default.aspx'><img src="img/header_hr.gif" alt="Ministarstvo kulture" width="900" height="175" border="0" /></a></td>
+    </tr>
+    <tr>
+        <td class="row2">
+			<div align="center">
+			<table cellspacing="0" cellpadding="0" id="sublinks">
+				<tr>
+					<td>
+						<ul class="inline">
+							
+							<li><a href="default.aspx" class="link12pxBlue">NASLOVNA</a></li>
+							<li><img src="img/spacer.gif" alt="" width="67" height="1" /></li>
+							<li><a href="/natjecaji" class="link12pxBlue">NATJEČAJI</a></li>
+							<li><img src="img/spacer.gif" alt="" width="67" height="1" /></li>
+							<li><a href="/financiranje" class="link12pxBlue">FINANCIRANJE</a></li>
+							<li><img src="img/spacer.gif" alt="" width="67" height="1" /></li>
+							<li><a href="/propisi" class="link12pxBlue">PROPISI</a></li>
+							<li><img src="img/spacer.gif" alt="" width="67" height="1" /></li>
+							<li><a href="default.aspx?id=86" class="link12pxBlue">ČESTA PITANJA</a></li>
+							<li><img src="img/spacer.gif" alt="" width="67" height="1" /></li>
+							<li><a href="/kontakt" class="link12pxBlue">KONTAKT</a></li>
+							<li><img src="img/spacer.gif" alt="" width="67" height="1" /></li>
+							<li><a href="default.aspx?id=4616" class="link12pxBlue">ENGLISH</a></li>
+							
+						</ul>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+    </tr>
+	<tr>
+		<td><img src="img/spacer.gif" alt="" width="1" height="25" /></td>
+	</tr>
+    <tr>
+        <td>
+			<table cellspacing="0" cellpadding="0" id="main">
+				<tr>
+					<td class="left" valign="top">
+						<!-- LEFT COL -->
+						<table border="0" cellspacing="0" cellpadding="0" id="leftContainer">
+							<tr>
+								<td class="search" align="center">
+									<form name="form" method="post" action="default.aspx?id=5936">
+			          				<input type="hidden" name="trazi" value="1" />
+									<table border="0" cellspacing="0" cellpadding="0">									
+										<tr>
+											
+											<td><input name="pojam" type="text" class="searchTextField" value="Pretraživanje" onclick="this.value='';" /></td>
+											
+											<td><input name="" type="image" src="img/search_img.gif" alt="Traži" style="margin-left: 7px; margin-top:8px;" /></td>
+										</tr>									
+									</table>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="img/spacer.gif" alt="" width="1" height="20" /></td>
+							</tr>
+							<tr>
+								<td>
+									<table cellspacing="0" cellpadding="0" id="menuLeft">
+										<tr><td class='type1'><a href='default.aspx?id=4' class='link12pxBlue' ><b>MINISTARSTVO KULTURE</b></a></td></tr><tr><td class='type1'><a href='default.aspx?id=5' class='link12pxBlue' ><b>KULTURNE DJELATNOSTI</b></a></td></tr><tr><td class='type1'><a href='default.aspx?id=6' class='link12pxBlue' ><b>KULTURNA BAŠTINA</b></a></td></tr><tr><td class='type1'><a href='default.aspx?id=7' class='link12pxBlue' ><b>ZAŠTITA PRIRODE</b></a></td></tr><tr><td class='type1'><a href='default.aspx?id=8' class='link12pxBlue' ><b>MEĐUNARODNA SURADNJA</b></a></td></tr>
+										
+									</table>								
+								</td>
+							</tr>
+							
+							<tr>
+								<td><img src="img/spacer.gif" alt="" width="1" height="40" /></td>
+							</tr>
+							<tr>
+								<td>
+									<table cellspacing="0" cellpadding="0" class="boxIndex">
+										<tr>
+											<td class="boxHeading"><a href="default.aspx?id=92" class="link12pxBlue"><strong>Izabrane teme</strong></a></td>
+										</tr>
+										<tr><td class='boxBody'><a href='default.aspx?id=5673' class='link12pxBlue'>Otvoren Muzej krapinskih neandertalaca</a></td></tr><tr><td class='boxBody'><a href='default.aspx?id=5403' class='link12pxBlue'>Otvoren Muzej suvremene umjetnosti</a></td></tr><tr><td class='boxBody'><a href='default.aspx?id=5237' class='link12pxBlue'>Deset fenomena hrvatske kulturne baštine na UNESCO-ovoj listi</a></td></tr>
+									</table>								
+								</td>
+							</tr>
+							<tr>
+								<td><img src="img/spacer.gif" alt="" width="1" height="40" /></td>
+							</tr>
+							<tr>
+								<td>
+									<table cellspacing="0" cellpadding="0" class="boxIndex">
+										<tr>
+											<td class="boxHeading"><a href="default.aspx?id=93" class="link12pxBlue"><strong>Iz tiska</strong></a></td>
+										</tr>
+										<tr>
+											<td class="boxBody">
+												<ul class='linkList2'><li>Glas Koncila, 12.12.2010.<br /><a href='tisak/default.aspx?id=6277' class='link12pxBlue'>Obnovljena srednjovjekovna crkva</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 09.12.2010.<br /><a href='tisak/default.aspx?id=6276' class='link12pxBlue'>Svečanom akademijom obilježena je dvadeseta godišnjica obnoviteljske skupštine Matice hrvatske</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 08.12.2010.<br /><a href='tisak/default.aspx?id=6271' class='link12pxBlue'>Počeli Krležini dani u Osijeku - znanstveni skup posvećen povjesničarima kazališta</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 06.12.2010.<br /><a href='tisak/default.aspx?id=6259' class='link12pxBlue'>Fenomen Murtić očarao Zagrepčane</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 04.12.2010.<br /><a href='tisak/default.aspx?id=6261' class='link12pxBlue'>Batina, panonska Troja željeznog doba</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 04.12.2010.<br /><a href='tisak/default.aspx?id=6260' class='link12pxBlue'>Otvoren Sajam knjige u Istri</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Karlovački tjednik, 02.12.2010.<br /><a href='tisak/default.aspx?id=6272' class='link12pxBlue'>Očuvanje običaja naših starih</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Novi list, 01.12.2010.<br /><a href='tisak/default.aspx?id=6253' class='link12pxBlue'>Tijekom istraživanja u Umagu otkrivene rijetke freske</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Glas Istre, 30.11.2010.<br /><a href='tisak/default.aspx?id=6254' class='link12pxBlue'>Utvrda Petrapilosa kod Istarskih toplica obnavlja se kamen po kamen</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Zagorski list, 27.11.2010.<br /><a href='tisak/default.aspx?id=6250' class='link12pxBlue'>Srčeka koja su opčinila svijet</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 27.11.2010.<br /><a href='tisak/default.aspx?id=6246' class='link12pxBlue'>Simfonijski orkestar HRT-a svečano obilježio 80. obljetnicu postojanja</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 27.11.2010.<br /><a href='tisak/default.aspx?id=6245' class='link12pxBlue'>Predani čuvari ojkalice</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 25.11.2010.<br /><a href='tisak/default.aspx?id=6239' class='link12pxBlue'>Najbolja dramska predstava "Građanin plemić"</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 22.11.2010.<br /><a href='tisak/default.aspx?id=6223' class='link12pxBlue'>Noć kazališta održana u 25 hrvatskih gradova</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li><li>Vjesnik, 22.11.2010.<br /><a href='tisak/default.aspx?id=6221' class='link12pxBlue'>Trepše u novome svjetlu</a></li><li class='spacer'><img src='img/spacer.gif' alt='' width='1' height='3' border='0' /></li></ul>
+											</td>
+										</tr>
+									</table>								
+								</td>
+							</tr>
+							
+						</table>		
+						<!-- LEFT COL -->			
+					</td>
+					<td width="40"><img src="img/spacer.gif" alt="" width="40" height="1" /></td>
+					<td valign="top">
+						<table cellspacing="0" cellpadding="0" class="indexTable">
+							
+									<tr>
+										<td id="path"><a href='default.aspx?id=89' class='link12pxBlue'>Novosti</a>&nbsp;&nbsp;>&nbsp;&nbsp;<span style='color: rgb(197, 0, 10);'>Klovićevi dvori: otvorena izložba "Ruske ikone 15. - 20. stoljeća" </span></td>
+									</tr>
+									
+									
+									
+									<tr>
+										<td><img src="img/spacer.gif" alt="" width="1" height="20" /></td>
+									</tr>
+									<tr>
+										<td class="content"><b>9.6.2010</b>. - <b>Izložbu je otvorio ministar kulture mr. sc. Božo Biškupić istaknuvši kako je ona potvrda dobre suradnje dvije zemlje, te izrazivši želju za širenjem dubljih kulturnih veza Hrvatske i Rusije.</b><br /><br /><p>Sve&#269;anim otvorenjem izlo&#382;be &ldquo;Ruska ikona XV.-XX st.&ldquo; u Galeriji Klovi&#263;evi dvori u Zagrebu, 8. lipnja 2010. zapo&#269;elo je odr&#382;avanje Dana ruske duhovne kulture u Hrvatskoj 2010. godine. Manifestacija &#263;e obuhvatiti reprezentativne priredbe duhovnog karaktera u izvedbi vode&#263;ih ruskih ansambala i izvo&#273;a&#269;a, izlo&#382;be i tjedan ruskog filma.&nbsp;</p>
+<p>
+<table border="0" cellspacing="1" summary="" cellpadding="1" width="200">
+    <tbody>
+        <tr>
+            <td>
+            <p><img alt="" src="http://www.min-kulture.hr/userdocsimages/najnovije novosti/FAH-H6081790_H.jpg" /></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p align="right"><font size="1">FOTO: HINA</font></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+U nazo&#269;nosti veleposlanika Ruske Federacije u Republici Hrvatskoj Roberta Markaryana, arhimandrida Iovana, ravnatelja Crkvenog povijesno&ndash;arheolo&scaron;kog muzeja Kostromske Eparhije Ruske pravoslavne crkve, ravnateljice Dr&#382;avnog povijesno&ndash;arhitektonskog i umjetni&#269;kog muzeja Kostrome Natalije Pavli&#269;kove te ravnateljice Galerije Klovi&#263;evih dvora Vesne Kusin, brojnih posjetitelja, stru&#269;njaka, kulturnih djelatnika i gostiju iz Rusije, izlo&#382;bu ruskih ikona otvorio je ministar kulture mr. sc. Bo&#382;o Bi&scaron;kupi&#263;. <br />
+<br />
+Nakon izlo&#382;be ikona, koja &#263;e biti otvorena do 18. srpnja, sredinom rujna uslijedit &#263;e drugi dio programa Dana ruske duhovne kulture: Gala koncert baletnog&nbsp;ansambla - prvaka&nbsp;Bolj&scaron;og teatra (Moskva)&nbsp;te Marijinskog i Mihajlovskog&nbsp;&nbsp;teatra (St. Petersburg) u Hrvatskom narodnom kazali&scaron;tu u Zagrebu, koncerti duhovne glazbe Vokalnog trija Relikt te Moskovskog sinodalnog zbora u Koncertnoj dvorani Vatroslava Lisinskog te tjedan ruskog filma u Kinu Tu&scaron;kanac. Pijanisti&#269;ki koncert Evgenija Kisina bit &#263;e odr&#382;an 9. studenoga, dok &#263;e 25. studenoga u Muzeju Mimara biti otvorena izlo&#382;ba umjetni&#269;ke fotografije. </p></td>
+									</tr>
+									<tr>
+										<td><img src="img/spacer.gif" alt="" width="1" height="20" /></td>
+									</tr>
+									
+						</table>																
+					</td>
+					
+					<td width="40"><img src="img/spacer.gif" alt="" width="40" height="1" /></td>
+					<td class="right" valign="top">
+						<table border="0" width="100%" cellspacing="0" cellpadding="0">
+							
+							<tr>
+								<td>
+									<table cellspacing="0" cellpadding="0" class="boxIndex">
+										<tr>
+											<td class="boxBody" style="width:203px;padding-bottom:19px;">
+											<div id="prviScroll">
+												<font color="#ff0000"><a href="http://www.min-kulture.hr/userdocsimages/priroda%20nova/Odabrani%20projekti%20(I%20JP).pdf">Popis odabranih projekata prispjelih na &bdquo;I. Javni poziv za dostavu projekata iz podru&#269;ja za&scaron;tite prirode u svrhu financiranja iz sredstava dr&#382;avnog prora&#269;una raspolo&#382;ivih u 2010. godini&ldquo;</a></font><font color="#000fc0"><font color="#ff0000">&nbsp;</font></font><font color="#ff0000" size="2">&#9642;</font><font color="#000fc0"><font color="#ff0000"><font size="2">&nbsp;</font><font color="#555555"> </font><a href="http://www.min-kulture.hr/default.aspx?id=5748">Financiranje javnih potreba u kulturi &#382;upanija, gradova i op&#263;ina</a>&nbsp; <font size="2">&#9642; </font></font><a href="http://www.min-kulture.hr/default.aspx?id=5390">Javni poziv za ovla&scaron;tenje veterinarskih organizacija i privatnih praksi za ozna&#269;avanje strogo za&scaron;ti&#263;enih i za&scaron;ti&#263;enih divljih &#382;ivotinja i upis u bazu ozna&#269;enih &#382;ivotinja</a><font color="#ff0000"> </font></font><font color="#ff0000" size="2">&#9642;</font><font color="#000fc0"><font color="#ff0000"> </font></font>
+<p><font color="#ff0000" size="2"></font></p>
+<p>&nbsp;</p>
+											</div>
+											</td>
+											</tr>
+										<tr>
+											<td><img src="img/spacer.gif" alt="" width="1" height="20" /></td>
+										</tr>
+										<tr>
+											<td class="boxHeading"><img src="img/bullet_kockica.gif" alt="" /><a href="/najave" class="link12pxBlue"><strong>Najave</strong></a>&nbsp;<img src="img/spacer.gif" alt="" width="120" height="1" />&nbsp;<a href="default.aspx?id=2749"><img src="img/rss.gif" border="0" alt="RSS" /></a></td>
+										</tr>
+										<tr>
+											<td class="boxBody" style="border-bottom: none;">
+												<!--ul class="linkList2">
+												
+												</ul-->
+											</td>
+										</tr>
+									</table>								
+								</td>
+							</tr>
+							<tr>
+								<td><img src="img/spacer.gif" alt="" width="1" height="20" /></td>
+							</tr>
+							
+							<tr>
+								<td>
+									<table cellspacing="0" cellpadding="0" class="boxIndex" style="border: none;">
+										<tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=6256' class='link12pxFancy'>KONAČNI PRIJEDLOG ZAKONA O HRT-u</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=4898' class='link12pxFancy'>ON-LINE PRIJAVNICE </a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=5849' class='link12pxFancy'>SMJERNICE ZA POMOĆ PODUZETNICIMA U TEŠKOĆAMA – MODEL „C“</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=3758' class='link12pxFancy'>Dopuštenje za obavljanje poslova na kulturnim dobrima  </a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=3938' class='link12pxFancy'>Hrvatska kulturna baština</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=224' class='link12pxFancy' target='_blank'>Culturenet.hr</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=6190' class='link12pxFancy'>Međunarodni centar za podvodnu arheologiju u Zadru (MCPA)</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=2597' class='link12pxFancy'>Hrvatski audiovizualni centar</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=5179' class='link12pxFancy'>Portal webGIS zaštite prirode </a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='/ccp' class='link12pxFancy'>Program Kultura (2007.- 2013.)</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='/unesco' class='link12pxFancy'>UNESCO</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=2687' class='link12pxFancy'>Natječaji MK za zapošljavanje</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='/projekti' class='link12pxFancy'>Projekti Ministarstva</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='/nagrade' class='link12pxFancy'>Nagrade u kulturi</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='/publikacije' class='link12pxFancy'>Publikacije</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=4691' class='link12pxFancy'>MEDIA desk Hrvatske </a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=5759' class='link12pxFancy'>Sustav javne nabave</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=5886' class='link12pxFancy'>FOTOGALERIJA</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=6230' class='link12pxFancy'>Zaštita i upravljanje vukovima u Hrvatskoj</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=5755' class='link12pxFancy'>Sredozemna medvjedica</a></td></tr><tr><td class='boxFancyLink'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=6228' class='link12pxFancy'>Državni zavod za zaštitu prirode</a></td></tr><tr><td class='boxFancyLink2'><img src='img/bullet_zarez1.gif' alt='' border='0' /><a href='default.aspx?id=6229' class='link12pxFancy'>Natura 2000</a></td></tr><tr><td style='padding-left:4px;border-bottom: none;'><table cellpadding='0' cellspacing='0'><tr><td style='border-bottom: none;'><img src='img/bullet_zarez1.gif' alt='' border='0' /></td><td style='border-bottom: none;padding-top:10px;'><a href='http://www.min-kulture.hr/tisak/default.aspx?id=5842'><img src='UserDocsImages/IYB2010_Logo_Englishmalxxcya_mala.jpg' border='0' style='vertical-align:bottom;' alt='' /></a></td></tr></table></td></tr><tr><td style='padding-left:4px;border-bottom: none;'><table cellpadding='0' cellspacing='0'><tr><td style='border-bottom: none;'><img src='img/bullet_zarez1.gif' alt='' border='0' /></td><td style='border-bottom: none;padding-top:10px;'><a href='http://www.mojauprava.hr' target='_blank'><img src='UserDocsImages/logo_mj.jpg' border='0' style='vertical-align:bottom;' alt='' /></a></td></tr></table></td></tr>
+										
+									</table>								
+								</td>
+							</tr>
+						</table>					
+					</td>
+					
+				</tr>
+			</table>		
+		</td>
+    </tr>
+	<tr>
+		<td><img src="img/spacer.gif" alt="" width="1" height="25" /></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellspacing="0" cellpadding="0" id="footer">
+				<tr>
+					
+					<td id="footerLeft">&copy; 2010 Ministarstvo kulture Republike Hrvatske</td>
+					
+					<td width="20"><img src="img/spacer.gif" alt="" width="20" height="1" /></td>
+					<td id="footerMain">
+						<ul class="inline">
+							
+							<li><a href="default.aspx?id=411" class="link12pxBlue"><img src="img/icon_impresum.gif" border="0" alt="Impresum" />Impresum</a></li>
+							<li><img src="img/spacer.gif" alt="" width="15" height="1" /></li>
+							<li><a href="default.aspx?id=225" class="link12pxBlue"><img src="img/icon_sitemap.gif" border="0" alt="Mapa weba" />Mapa weba</a></li>
+							<li><img src="img/spacer.gif" alt="" width="15" height="1" /></li>
+							<li><a href="javascript:;" onclick="window.print()" class="link12pxBlue"><img src="img/icon_print.gif" border="0" alt="Ispiši stranicu" />Ispiši stranicu</a></li>
+							<li><img src="img/spacer.gif" alt="" width="15" height="1" /></li>
+							<li><a href="#" class="link12pxBlue"><img src="img/icon_pagetop.gif" border="0" alt="Povratak na vrh" />Povratak na vrh</a></li>
+							
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	window.addEvent("domready", function(){
+		new MooMarquee($("prviScroll"),{direction:'horizontal',speed:30,width:203,height:30, step:1})        
+	})
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-848827-1";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
+<head>
+<title>Domaljevac - Posavina - Darko Matic</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="expires" content="0" />
+<meta name="author" content="permis &amp; team 2007-2010" />
+<meta name="description" content="Domaljevcani ponosno spominju 1928. godinu , kao godinu kada je u Domaljevac donesena prva nogometna lopta..." />
+<meta name="keywords" lang="hr" content="domaljevac, posavina, posavac, posavka, posavljak, bosna, sava, hercegovina, bosanac, bosanski, bosanska, hercegovina, bih, hasic, samac, orasje, odzak, bazik, grebnice, hrvatska" />
+<meta name="generator" content="web to date 7.0" />
+<link rel="stylesheet" type="text/css" href="../../../assets/sf.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/sd.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/sc.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/ssb.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/scal.css" />
+<link href="http://www.domaljevac.com/assets/rss/rssfeeds.xml" rel="alternate" type="application/rss+xml" title="DOM@ljevac" />
+<link rel="shortcut icon" href="http://www.domaljevac.com/images/favicon.ico" />
+<script type="text/javascript" src="../../../assets/jq.js"></script>
+<script type="text/javascript">
+
+/* <![CDATA[ */
+
+jQuery.extend( jQuery.easing,
+{
+	def: 'easeKaleido',
+	easeKaleido: function (x, t, b, c, d) {
+		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+	}
+});
+
+$(document).ready(function() {
+
+	$('#searchcriteria').focus(function() {
+		if (this.value==this.defaultValue) {
+			this.value='';
+		}
+	}).blur(function() {
+		if (this.value=='') {
+			this.value=this.defaultValue;
+		}
+	});
+
+	
+	$('#kaleidoboundary').css('width', $('#kaleidoboundary .kaleidodiv').length*50+450+'px');
+	
+	var kaleidoDiv=$('#kaleidoboundary .kaleidodiv');
+	var kaleidoTitleLeft=$('#kaleidoboundary .kaleidotitleleft');
+	var kaleidoTitleBottom=$('#kaleidoboundary .kaleidotitlebottom');
+	
+	var kaleidoCurrent=Math.floor(kaleidoDiv.length/2);
+	
+	for (var i=0; i<kaleidoDiv.length; i++) {
+		if (kaleidoDiv.eq(i).hasClass('kaleidocurrent')) {
+			kaleidoCurrent=i;
+		}
+	}
+
+	setImage(kaleidoCurrent, false);
+	
+
+	kaleidoDiv.each(function(j) {
+		$(this).data('kaleidoIndex', j);
+		$(this).mouseover(function() {
+			setImage($(this).data('kaleidoIndex'), true);
+		});
+	});
+	
+	function setImage(index, animate) {
+		var kaleidoOffset=0;
+		for (var k=0; k<kaleidoDiv.length; k++) {
+			if (animate) {
+				kaleidoDiv.eq(k).animate({'left':kaleidoOffset}, {queue: false, duration: 800, easing: 'easeKaleido'});
+				kaleidoTitleLeft.eq(k).css({'opacity': (k==index ? 0 : 0.7) });
+				kaleidoTitleBottom.eq(k).css({'opacity': (k==index ? 0.8 : 0) });
+			} else {
+				kaleidoDiv.eq(k).css({'left':kaleidoOffset});
+				kaleidoTitleLeft.eq(k).css({'opacity': (k==index ? 0 : 0.7) });
+				kaleidoTitleBottom.eq(k).css({'opacity': (k==index ? 0.8 : 0) });
+			}
+			if (k==index) {
+				kaleidoOffset+=500;
+			} else {
+				kaleidoOffset+=50;				
+			}
+		}
+	}
+});
+
+/* ]]> */
+	
+</script>
+
+</head>
+
+<body>
+
+<div id="maincontainer">
+
+<div id="topcontainer">
+
+	<div id="searchbox">
+		<form action="../../../fts.php" method="get">
+		<input id="searchcriteria" value="Upiši traženi pojam ..." type="text" name="criteria" maxlength="30" />
+		<input id="searchsubmit" type="image" src="../../../images/psearchsbmt.gif" />
+		</form>
+	</div>
+<ul>
+<li><a href="../../../index-a-z.html">Index A-Z</a></li>
+<li><a href="../../../newsletter.html">Newsletter</a></li>
+<li><a href="../../../preporuke.html">Preporuke</a></li>
+<li><a href="../../../impressum.html">Impressum</a></li>
+<li><a href="../../../kontakt.html">Kontakt</a></li>
+</ul>
+
+</div>
+
+<div id="kaleido">
+<div id="kaleidoboundary">
+
+									<div class="kaleidodiv kaleidocurrent">
+					<a href="../../index.html"><img src="../../../images/jabuke_domlj2_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../index.html"><img src="../../../images/pnavleft1.gif" width="50" height="300" class="kaleidotitleleft" alt="Domaljevac-Šamac" border="0"/></a>
+		<a href="../../index.html"><img src="../../../images/pnavbottom1.gif" width="500" height="50" class="kaleidotitlebottom" alt="Domaljevac-Šamac" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../bosna-i-hercegovina/index.html"><img src="../../../images/pic_logo_ice_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../bosna-i-hercegovina/index.html"><img src="../../../images/pnavleft2.gif" width="50" height="300" class="kaleidotitleleft" alt="Bosna i Hercegovina" border="0"/></a>
+		<a href="../../../bosna-i-hercegovina/index.html"><img src="../../../images/pnavbottom2.gif" width="500" height="50" class="kaleidotitlebottom" alt="Bosna i Hercegovina" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../posavina/index.html"><img src="../../../images/posavina_ps-nav_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../posavina/index.html"><img src="../../../images/pnavleft3.gif" width="50" height="300" class="kaleidotitleleft" alt="Posavina" border="0"/></a>
+		<a href="../../../posavina/index.html"><img src="../../../images/pnavbottom3.gif" width="500" height="50" class="kaleidotitlebottom" alt="Posavina" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../svijet/index.html"><img src="../../../images/pic_logo_avenue_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../svijet/index.html"><img src="../../../images/pnavleft4.gif" width="50" height="300" class="kaleidotitleleft" alt="Svijet" border="0"/></a>
+		<a href="../../../svijet/index.html"><img src="../../../images/pnavbottom4.gif" width="500" height="50" class="kaleidotitlebottom" alt="Svijet" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../razmiljaonica/index.html"><img src="../../../images/zeleno_nav_3_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../razmiljaonica/index.html"><img src="../../../images/pnavleft5.gif" width="50" height="300" class="kaleidotitleleft" alt="Razmišljaonica" border="0"/></a>
+		<a href="../../../razmiljaonica/index.html"><img src="../../../images/pnavbottom5.gif" width="500" height="50" class="kaleidotitlebottom" alt="Razmišljaonica" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../osini-po-prasini/index.php"><img src="../../../images/nav_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../osini-po-prasini/index.php"><img src="../../../images/pnavleft6.gif" width="50" height="300" class="kaleidotitleleft" alt="Ošini po prašini" border="0"/></a>
+		<a href="../../../osini-po-prasini/index.php"><img src="../../../images/pnavbottom6.gif" width="500" height="50" class="kaleidotitlebottom" alt="Ošini po prašini" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../autori/index.html"><img src="../../../images/alien_1godina_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../autori/index.html"><img src="../../../images/pnavleft7.gif" width="50" height="300" class="kaleidotitleleft" alt="Autori" border="0"/></a>
+		<a href="../../../autori/index.html"><img src="../../../images/pnavbottom7.gif" width="500" height="50" class="kaleidotitlebottom" alt="Autori" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../skrinja/index.html"><img src="../../../images/tastatur_gruen_03_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../skrinja/index.html"><img src="../../../images/pnavleft9.gif" width="50" height="300" class="kaleidotitleleft" alt="Škrinja" border="0"/></a>
+		<a href="../../../skrinja/index.html"><img src="../../../images/pnavbottom9.gif" width="500" height="50" class="kaleidotitlebottom" alt="Škrinja" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../sadrzaj/index.html"><img src="../../../images/pic_logo_click_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../sadrzaj/index.html"><img src="../../../images/pnavleft10.gif" width="50" height="300" class="kaleidotitleleft" alt="Sadržaj" border="0"/></a>
+		<a href="../../../sadrzaj/index.html"><img src="../../../images/pnavbottom10.gif" width="500" height="50" class="kaleidotitlebottom" alt="Sadržaj" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../poruke/index.php"><img src="../../../images/k640_haende_gruen_sw_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../poruke/index.php"><img src="../../../images/pnavleft11.gif" width="50" height="300" class="kaleidotitleleft" alt="Poruke" border="0"/></a>
+		<a href="../../../poruke/index.php"><img src="../../../images/pnavbottom11.gif" width="500" height="50" class="kaleidotitlebottom" alt="Poruke" border="0"/></a>
+	</div>
+</div>
+</div>
+
+<div id="contentcontainer">
+
+<div id="title">
+<img src="../../../images/ptitle.gif" width="48" height="500" alt="Think different" border="0"/></div>
+
+<div id="navcontainer">
+
+<ul><li>Ovdje ste:
+<ul>
+<li><a href="../../../index.html">NASLOVNICA</a></li>
+
+<li><a href="../../index.html">Domaljevac-Šamac</a></li>
+<li><a href="../index.html">Nogomet</a></li>
+<li><a href="./index.html">Darko Matic</a></li>
+</ul>
+
+</li></ul>
+
+<ul>
+<li><a  href="../../sava/index.html">Sava</a>
+<ul>
+<li><a  href="../../sava/dzemo/index.html">Džemo</a></li>
+<li><a  href="../../sava/poplave/index.html">Poplave</a></li>
+<li><a  href="../../sava/slikovnica/index.html">Slikovnica</a></li>
+<li><a  href="../../sava/savo-vodo/index.html">Savo vodo</a></li>
+<li><a  href="../../sava/pjesme/index.html">Pjesme</a></li>
+<li><a  href="../../sava/sava-opet-prijeti/index.html">Sava opet prijeti</a></li>
+<li><a  href="../../sava/klonula-je-stara-dama/index.html">Klonula je stara dama</a></li>
+</ul>
+</li>
+<li><a  href="../../opcina/index.html">Opcina</a>
+<ul>
+<li><a  href="../../opcina/proracun/index.html">Proracun</a></li>
+<li><a  href="../../opcina/adresar/index.html">Adresar</a></li>
+<li><a  href="../../opcina/cestitka/index.html">Cestitka</a></li>
+<li><a  href="../../opcina/darujte-ljubav/index.html">Darujte ljubav</a></li>
+</ul>
+</li>
+<li><a  href="../../grebnice/index.html">Grebnice</a>
+<ul>
+<li><a  href="../../grebnice/grebnicani/index.html">Grebnicani</a></li>
+<li><a  href="../../grebnice/stanovnistvo/index.html">Stanovništvo</a></li>
+<li><a  href="../../grebnice/korparstvo/index.html">Korparstvo</a></li>
+<li><a  href="../../grebnice/zivot/index.html">Život</a></li>
+<li><a  href="../../grebnice/poplave/index.html">Poplave</a></li>
+<li><a  href="../../grebnice/rat/index.html">Rat</a></li>
+<li><a  href="../../grebnice/sport/index.html">Sport</a></li>
+<li><a  href="../../grebnice/crtice/index.html">Crtice</a></li>
+<li><a  href="../../grebnice/spomenar/index.html">Spomenar</a></li>
+<li><a  href="../../grebnice/o-carima-posavskim/index.html">O carima posavskim</a></li>
+<li><a  href="../../grebnice/ovo-je-genocid/index.html">Ovo je genocid!</a></li>
+</ul>
+</li>
+<li><a  href="../../bazik/index.html">Bazik</a>
+<ul>
+<li><a  href="../../bazik/rat/index.html">Rat</a></li>
+<li><a  href="../../bazik/logor/index.html">Logor</a></li>
+<li><a  href="../../bazik/bazicani/index.html">Bazicani</a></li>
+<li><a  href="../../bazik/svecenici/index.html">Svecenici</a></li>
+<li><a  href="../../bazik/gospodarstvo/index.html">Gospodarstvo</a></li>
+<li><a  href="../../bazik/nogomet/index.html">Nogomet</a></li>
+<li><a  href="../../bazik/prsten/index.html">Prsten</a></li>
+<li><a  href="../../bazik/slikovnica/index.php">Slikovnica</a></li>
+<li><a  href="../../bazik/spomenar/index.html">Spomenar</a></li>
+<li><a  href="../../bazik/fazan/index.html">Fazan</a></li>
+<li><a  href="../../bazik/opcina/index.html">Opcina</a></li>
+<li><a  href="../../bazik/kakvu-cemo-vlast-dobiti/index.html">Kakvu cemo vlast dobiti?</a></li>
+<li><a  href="../../bazik/moj-djed-ilija/index.html">Moj djed Ilija</a></li>
+</ul>
+</li>
+<li><a  href="../../brvnik/index.html">Brvnik</a>
+<ul>
+<li><a  href="../../brvnik/nogometna-legenda/index.html">Nogometna legenda</a></li>
+<li><a  href="../../brvnik/nacelnik-josic-u-brvniku/index.html">Nacelnik Josic u Brvniku</a></li>
+<li><a  href="../../brvnik/brvnik/index.html">Brvnik</a></li>
+<li><a  href="../../brvnik/mine/index.html">Mine</a></li>
+</ul>
+</li>
+<li><a  href="../../top-10/index.html">TOP 10</a>
+<ul>
+<li><a  href="../../top-10/kico/index.html">Kico</a></li>
+<li><a  href="../../top-10/spomenik-josipu/index.html">Spomenik Josipu</a></li>
+<li><a  href="../../top-10/ilija-lucic/index.html">Ilija Lucic</a></li>
+<li><a  href="../../top-10/danas-sam-bio-sretan/index.html">Danas sam bio sretan!</a></li>
+</ul>
+</li>
+<li><a  href="../../povijest/index.html">Povijest</a>
+<ul>
+<li><a  href="../../povijest/polozaj/index.html">Položaj</a></li>
+<li><a  href="../../povijest/postanak/index.html">Postanak</a></li>
+<li><a  href="../../povijest/460-godina-sela/index.html">460 godina sela</a></li>
+<li><a  href="../../povijest/ljepote/index.php">Ljepote</a></li>
+<li><a  href="../../povijest/stanovnistvo/index.html">Stanovništvo</a></li>
+<li><a  href="../../povijest/knezovi/index.html">Knezovi</a></li>
+<li><a  href="../../povijest/1945-1992/index.html">1945-1992</a></li>
+<li><a  href="../../povijest/izgradnja/index.html">Izgradnja</a></li>
+<li><a  href="../../povijest/cestitka/index.html">Cestitka</a></li>
+<li><a  href="../../povijest/rat/index.html">Rat</a></li>
+<li><a  href="../../povijest/pali-u-ratu/index.php">Pali u ratu</a></li>
+<li><a  href="../../povijest/rusevine/index.php">Ruševine</a></li>
+<li><a  href="../../povijest/i-svjetski-rat/index.html">I svjetski rat</a></li>
+<li><a  href="../../povijest/radovan-karadzic/index.html">Radovan Karadžic</a></li>
+<li><a  href="../../povijest/zbogom-radovanje/index.html">Zbogom Radovan(j)e</a></li>
+<li><a  href="../../povijest/frust-srbije/index.html">Frust Srbije</a></li>
+<li><a  href="../../povijest/hrvati-u-bih/index.html">Hrvati u BiH</a></li>
+<li><a  href="../../povijest/kultura-sjecanja/index.html">Kultura sjecanja</a></li>
+<li><a  href="../../povijest/rej/index.html">Rej</a></li>
+</ul>
+</li>
+<li><a  href="../../tradicija-1/index.html">Tradicija</a>
+<ul>
+<li><a  href="../../tradicija-1/moj-bane-ne-brini-se-nsita/index.html">Moj Bane ne brini se ništa...</a></li>
+<li><a  href="../../tradicija-1/festival-domljecke-sarme/index.html">Festival domljecke sarme</a></li>
+</ul>
+</li>
+<li><a  href="../../tradicija/index.html">Tradicija 2</a>
+<ul>
+<li><a  href="../../tradicija/asikovanje-na-divanu/index.html">Ašikovanje na divanu</a></li>
+<li><a  href="../../tradicija/predkorizmeni-divani/index.html">Predkorizmeni divani</a></li>
+<li><a  href="../../tradicija/obicaji/index.html">Obicaji</a></li>
+<li><a  href="../../tradicija/svadbe/index.html">Svadbe</a></li>
+<li><a  href="../../tradicija/pjesme/index.html">Pjesme</a></li>
+<li><a  href="../../tradicija/glazba/index.html">Glazba</a></li>
+<li><a  href="../../tradicija/nosnja/index.html">Nošnja</a></li>
+<li><a  href="../../tradicija/bozic/index.html">Božic</a></li>
+<li><a  href="../../tradicija/nova-2008/index.html">Nova 2008</a></li>
+<li><a  href="../../tradicija/sveti-nikola/index.html">Sveti Nikola</a></li>
+<li><a  href="../../tradicija/rakija/index.html">Rakija</a></li>
+<li><a  href="../../tradicija/mesare/index.html">Mesare</a></li>
+<li><a  href="../../tradicija/busari/index.html">Bušari</a></li>
+<li><a  href="../../tradicija/nadimci/index.html">Nadimci</a></li>
+<li><a  href="../../tradicija/komaljike/index.html">Komaljike</a></li>
+<li><a  href="../../tradicija/narodna-jela/index.html">Narodna jela</a></li>
+<li><a  href="../../tradicija/sretan-uskrs/index.html">Sretan Uskrs</a></li>
+<li><a  href="../../tradicija/asikovanje/index.html">Ašikovanje</a></li>
+<li><a  href="../../tradicija/ledo/index.html">Ledo</a></li>
+<li><a  href="../../tradicija/prsten/index.html">Prsten</a></li>
+<li><a  href="../../tradicija/ajmo-praviti-mesaru/index.html">`ajmo praviti mesaru</a></li>
+<li><a  href="../../tradicija/stare-igre/index.html">Stare igre</a></li>
+<li><a  href="../../tradicija/obiljezje/index.html">Obilježje</a></li>
+<li><a  href="../../tradicija/8-mart/index.html">8. mart</a></li>
+<li><a  href="../../tradicija/dani-pokladnog-karnevala-u-domaljevcu/index.html">Dani pokladnog karnevala u Domaljevcu</a></li>
+</ul>
+</li>
+<li><a  href="../../kultura/index.html">Kultura</a>
+<ul>
+<li><a  href="../../kultura/lokalisti-vode-u-propast-hkc-domaljevac/index.html">Lokalisti vode u propast HKC Domaljevac</a></li>
+<li><a  href="../../kultura/kud/index.html">KUD</a></li>
+<li><a  href="../../kultura/knjiznica/index.html">Knjiznica</a></li>
+<li><a  href="../../kultura/filatelija/index.html">Filatelija</a></li>
+<li><a  href="../../kultura/hkud-mladost-u-sarajevu/index.html">HKUD &quot;Mladost&quot; u Sarajevu</a></li>
+<li><a  href="../../kultura/djakovacki-vezovi/index.html">Ðakovacki vezovi</a></li>
+<li><a  href="../../kultura/domaljevacka-tkanica/index.html">Domaljevacka tkanica</a></li>
+<li><a  href="../../kultura/tkanica-u-medjunarodnom-ruhu/index.html">Tkanica u medjunarodnom ruhu</a></li>
+<li><a  href="../../kultura/klub-croatia-u-becu/index.html">Klub Croatia u Becu</a></li>
+<li><a  href="../../kultura/lisov/index.html">Lisov</a></li>
+<li><a  href="../../kultura/djeca-pjevaju-hitove/index.html">Djeca pjevaju hitove</a></li>
+<li><a  href="../../kultura/brana-sere-ko-foka/index.html">Brana sere k`o foka!</a></li>
+</ul>
+</li>
+<li><a  href="../../informiranje/index.html">Informiranje</a>
+<ul>
+<li><a  href="../../informiranje/sarena-laa-borjane-kristo/index.html">Šarena laža Borjane Krišto!</a></li>
+<li><a  href="../../informiranje/sarenilo-posavskog-interneta/index.html">Šarenilo posavskog interneta</a></li>
+<li><a  href="../../informiranje/donja-mahala-stozer-posavskog-interneta/index.html">Donja Mahala - stožer posavskog interneta!</a></li>
+<li><a  href="../../informiranje/google--brzi-i-sigurniji-internet/index.html">Google - brži i sigurniji Internet!</a></li>
+<li><a  href="../../informiranje/pioniri-interneta/index.html">Pioniri Interneta</a></li>
+<li><a  href="../../informiranje/prva-webstranica/index.html">Prva webstranica</a></li>
+<li><a  href="../../informiranje/misliti-drukcije/index.html">Misliti drukcije!</a></li>
+<li><a  href="../../informiranje/godisnjica/index.html">Godišnjica</a></li>
+<li><a  href="../../informiranje/idemo-dalje/index.html">Idemo dalje!</a></li>
+<li><a  href="../../informiranje/posavina/index.html">&quot;Posavina&quot;</a></li>
+<li><a  href="../../informiranje/domljevac-2008/index.html">DOM@ljevac 2008</a></li>
+<li><a  href="../../informiranje/promocija/index.html">Promocija</a></li>
+<li><a  href="../../informiranje/zdravica/index.html">Zdravica</a></li>
+<li><a  href="../../informiranje/zasto-pisem/index.html">Zašto pišem?</a></li>
+<li><a  href="../../informiranje/umjesto-cestitke/index.html">Umjesto cestitke</a></li>
+<li><a  href="../../informiranje/google-chrome/index.html">Google Chrome</a></li>
+<li><a  href="../../informiranje/papina-poruka/index.html">Papina poruka</a></li>
+<li><a  href="../../informiranje/tko-koga/index.html">Tko koga...</a></li>
+<li><a  href="../../informiranje/opcina-online/index.html">Opcina online</a></li>
+<li><a  href="../../informiranje/opcina-orasje/index.html">Opcina Orašje</a></li>
+<li><a  href="../../informiranje/wwwkako-se-u-svemu-snaciba/index.html">www.kako-se-u-svemu-snaci.ba?</a></li>
+<li><a  href="../../informiranje/raskrizje/index.html">Raskrižje</a></li>
+<li><a  href="../../informiranje/pradjed-svih-apple-kompjutora-na-aukciji/index.html">Pradjed svih Apple kompjutora na aukciji</a></li>
+</ul>
+</li>
+<li><a  href="../../gospodarstvo/index.html">Gospodarstvo</a>
+<ul>
+<li><a  href="../../gospodarstvo/zdravstvo/index.html">Zdravstvo</a></li>
+<li><a  href="../../gospodarstvo/adresar/index.html">Adresar</a></li>
+<li><a  href="../../gospodarstvo/frankfurt/index.php">Frankfurt</a></li>
+<li><a  href="../../gospodarstvo/poljoprivreda/index.html">Poljoprivreda</a></li>
+<li><a  href="../../gospodarstvo/staklenici/index.html">Staklenici</a></li>
+<li><a  href="../../gospodarstvo/dotex/index.html">Dotex</a></li>
+<li><a  href="../../gospodarstvo/tepelung/index.html">Tepelung</a></li>
+<li><a  href="../../gospodarstvo/teta-vegeta/index.html">Teta Vegeta</a></li>
+<li><a  href="../../gospodarstvo/finansijska-kriza/index.html">Finansijska kriza</a></li>
+<li><a  href="../../gospodarstvo/bauk-recesije/index.html">Bauk recesije</a></li>
+<li><a  href="../../gospodarstvo/san-i-java-lokalnih-proracuna/index.html">San i java lokalnih proracuna</a></li>
+<li><a  href="../../gospodarstvo/dan-vozaca-i-mehanicara/index.html">Dan vozaca i mehanicara</a></li>
+<li><a  href="../../gospodarstvo/bdi-ti/index.html">BDI-TI</a></li>
+<li><a  href="../../gospodarstvo/20-godina-yimor-a/index.html">20 godina &quot;Yimor&quot;-a</a></li>
+<li><a  href="../../gospodarstvo/knjiga-o-yimor-u/index.html">Knjiga o Yimor-u</a></li>
+<li><a  href="../../gospodarstvo/feniks/index.html">Feniks</a></li>
+</ul>
+</li>
+<li><a  href="../../skolstvo/index.html">Školstvo</a>
+<ul>
+<li><a  href="../../skolstvo/upravitelji/index.html">Upravitelji</a></li>
+<li><a  href="../../skolstvo/nastavno-osoblje/index.html">Nastavno osoblje</a></li>
+<li><a  href="../../skolstvo/razredi/index.php">Razredi</a></li>
+<li><a  href="../../skolstvo/nasilje-u-kolama/index.html">Nasilje u školama</a></li>
+<li><a  href="../../skolstvo/jesam-li-u-pravu/index.html">Jesam li u pravu?</a></li>
+<li><a  href="../../skolstvo/generacijo-64/index.html">Generacijo 64</a></li>
+</ul>
+</li>
+<li><a  href="../../religija/index.html">Religija</a>
+<ul>
+<li><a  href="../../religija/kapela-svetog-ante/index.html">Kapela Svetog Ante</a></li>
+<li><a  href="../../religija/oda-rodnom-kraju-1/index.html">Oda rodnom kraju</a></li>
+<li><a  href="../../religija/vrijeme-duhovnog-loma-i-besmisla/index.html">Vrijeme duhovnog loma i besmisla</a></li>
+<li><a  href="../../religija/jaslice-za-puriste/index.html">Jaslice za puriste</a></li>
+<li><a  href="../../religija/fenomen-praznovjerja/index.html">Fenomen praznovjerja</a></li>
+<li><a  href="../../religija/to-nije-krizma/index.html">To nije krizma!</a></li>
+<li><a  href="../../religija/sveta-ana-2010/index.html">Sveta Ana 2010</a></li>
+</ul>
+</li>
+<li><a  href="../../religija-ii/index.html">Religija II</a>
+<ul>
+<li><a  href="../../religija-ii/malo-drukciji-svecenik/index.html">Malo drukciji svecenik</a></li>
+<li><a  href="../../religija-ii/sveta-ana/index.html">Sveta Ana</a></li>
+<li><a  href="../../religija-ii/crkva/index.html">Crkva</a></li>
+<li><a  href="../../religija-ii/kapele/index.html">Kapele</a></li>
+<li><a  href="../../religija-ii/sv-ana-u-djelima-slikara/index.php">Sv. Ana u djelima slikara</a></li>
+<li><a  href="../../religija-ii/sv-ana-u-djelima-kipara/index.php">Sv. Ana u djelima kipara</a></li>
+<li><a  href="../../religija-ii/svi-sveti/index.html">Svi sveti</a></li>
+<li><a  href="../../religija-ii/svecenici/index.html">Svecenici</a></li>
+<li><a  href="../../religija-ii/slikovnica/index.php">Slikovnica</a></li>
+<li><a  href="../../religija-ii/uskrsnje-poruke/index.html">Uskršnje poruke</a></li>
+<li><a  href="../../religija-ii/duhovi/index.html">Duhovi</a></li>
+<li><a  href="../../religija-ii/molitva-djeteta/index.html">Molitva djeteta</a></li>
+<li><a  href="../../religija-ii/katolicanstvo-i-islam/index.html">Katolicanstvo i islam</a></li>
+<li><a  href="../../religija-ii/godina-svetog-pavla/index.html">Godina svetog Pavla</a></li>
+<li><a  href="../../religija-ii/bozicni-obicaji/index.html">Božicni obicaji</a></li>
+<li><a  href="../../religija-ii/bozic-2008/index.html">Božic 2008</a></li>
+<li><a  href="../../religija-ii/najljepsi-bozicni-dar/index.html">Najljepši Božicni dar</a></li>
+<li><a  href="../../religija-ii/most-zajednsitva/index.html">Most zajedništva</a></li>
+<li><a  href="../../religija-ii/vjernici-danas/index.html">Vjernici danas</a></li>
+<li><a  href="../../religija-ii/razmiljsanje-uz-uskrs/index.html">Razmišljanje uz Uskrs</a></li>
+<li><a  href="../../religija-ii/krizma/index.html">Krizma</a></li>
+<li><a  href="../../religija-ii/medjugorje-i-droga/index.html">Medjugorje i droga</a></li>
+<li><a  href="../../religija-ii/sveta-ana-iz-brazila/index.html">Sveta Ana iz Brazila</a></li>
+<li><a  href="../../religija-ii/misno-slavlje-na-sv-anu/index.html">Misno slavlje na sv. Anu</a></li>
+<li><a  href="../../religija-ii/restoran-u-crkvi/index.html">Restoran u Crkvi</a></li>
+</ul>
+</li>
+<li><a  href="../../sport/index.html">Sport</a>
+<ul>
+<li><a  href="../../sport/lov/index.html">Lov</a></li>
+<li><a  href="../../sport/ribolov/index.html">Ribolov</a></li>
+<li><a  href="../../sport/hrtarosi/index.html">Hrtaroši</a></li>
+<li><a  href="../../sport/kuglanje/index.html">Kuglanje</a></li>
+<li><a  href="../../sport/turnir/index.html">Turnir</a></li>
+<li><a  href="../../sport/motosport/index.html">Motošport</a></li>
+<li><a  href="../../sport/sportal/index.php">Sportal</a></li>
+<li><a  href="../../sport/vazno-je-ucestvovati/index.html">Važno je ucestvovati</a></li>
+<li><a  href="../../sport/ajmo-bosno/index.html">Ajmo, Bosno...</a></li>
+<li><a  href="../../sport/plavo-bijela-noc/index.html">Plavo-bijela noc</a></li>
+<li><a  href="../../sport/tri-nogometna-asa-messi-ibrahimovic-i-matic/index.html">Tri nogometna ASA: Messi, Ibrahimovic i Matic!</a></li>
+</ul>
+</li>
+<li><a  href="../index.html">Nogomet</a>
+<ul>
+<li><a class="sel" href="./index.html">Darko Matic</a></li>
+<li><a  href="../otac-darija-srne/index.html">Otac Darija Srne</a></li>
+<li><a  href="../nogometna-karijera-u-kini---srce-u-posavini/index.html">Nogometna karijera u Kini - srce u Posavini!</a></li>
+<li><a  href="../lopta-u-posavini/index.html">Lopta u Posavini</a></li>
+<li><a  href="../borac/index.html">Borac</a></li>
+<li><a  href="../borac-ii/index.html">Borac II</a></li>
+<li><a  href="../cestitka/index.html">Cestitka</a></li>
+<li><a  href="../ekipa/index.html">Ekipa</a></li>
+<li><a  href="../igraliste/index.html">Igralište</a></li>
+<li><a  href="../top-11/index.html">TOP 11</a></li>
+<li><a  href="../braco/index.html">Braco</a></li>
+<li><a  href="../juniori/index.html">Juniori</a></li>
+<li><a  href="../veterani/index.html">Veterani</a></li>
+<li><a  href="../slikovnica/index.php">Slikovnica</a></li>
+<li><a  href="../nogometni-sok/index.html">Nogometni šok</a></li>
+<li><a  href="../kud-puklo-da-puklo/index.html">Kud puklo da puklo!</a></li>
+<li><a  href="../ich-habe-fertig/index.html">Ich habe fertig!</a></li>
+<li><a  href="../nova-uprava/index.html">Nova uprava</a></li>
+<li><a  href="../fotoarhiv/index.html">Fotoarhiv</a></li>
+<li><a  href="../i-puce-balon/index.html">I puce balon</a></li>
+<li><a  href="../60-godina-mladosti/index.html">60 godina Mladosti</a></li>
+<li><a  href="../gasi-li-se-hnk-mladost/index.html">Gasi li se HNK Mladost?</a></li>
+<li><a  href="../nepoznati-nogometni-veterani/index.html">Nepoznati nogometni veterani</a></li>
+<li><a  href="../turnir-veterana-u-svicarskoj/index.html">Turnir veterana u Švicarskoj</a></li>
+<li><a  href="../odacani-nam-nisu-dali-predahnuti/index.html">Odžacani nam nisu dali predahnuti</a></li>
+</ul>
+</li>
+<li><a  href="../../odbojka/index.html">Odbojka</a>
+<ul>
+<li><a  href="../../odbojka/rodjendan-hok-mladost/index.html">Rodjendan HOK &quot;Mladost&quot;</a></li>
+<li><a  href="../../odbojka/osnutak/index.html">Osnutak</a></li>
+<li><a  href="../../odbojka/top-6/index.html">TOP 6</a></li>
+<li><a  href="../../odbojka/igraliste/index.php">Igraliste</a></li>
+<li><a  href="../../odbojka/slikovnica/index.php">Slikovnica</a></li>
+<li><a  href="../../odbojka/posavina-odbojkaski-brazil/index.html">Posavina - odbojkaški Brazil!</a></li>
+</ul>
+</li>
+<li><a  href="../../politika/index.html">Politika</a>
+<ul>
+<li><a  href="../../politika/zabranjene-teme/index.html">Zabranjene teme</a></li>
+<li><a  href="../../politika/dan-svih-majki-ili-majki-clanica-hdz-bih/index.html">Dan svih majki ili majki clanica HDZ BiH?</a></li>
+<li><a  href="../../politika/nacelnik-i-konzul/index.html">Nacelnik i konzul</a></li>
+<li><a  href="../../politika/raditi-a-ne-pricati/index.html">Raditi a ne pricati!</a></li>
+<li><a  href="../../politika/hkc-domaljevac/index.html">HKC Domaljevac</a></li>
+<li><a  href="../../politika/izjave-dana/index.html">Izjave dana</a></li>
+<li><a  href="../../politika/svrsimo-zapoceto/index.html">Svršimo zapoceto</a></li>
+<li><a  href="../../politika/jahaci-apokalipse/index.html">Jahaci apokalipse</a></li>
+<li><a  href="../../politika/mislim-drukcije/index.html">Mislim drukcije!</a></li>
+<li><a  href="../../politika/mi-komunisti/index.html">Mi, &quot;komunisti&quot;...</a></li>
+<li><a  href="../../politika/udruge/index.html">Udruge</a></li>
+<li><a  href="../../politika/bleiburg/index.html">Bleiburg</a></li>
+<li><a  href="../../politika/nije-jako-ko-dojako/index.html">Nije jako ko dojako!</a></li>
+<li><a  href="../../politika/tako-se-radi-za-narod-svoj-domaljevcani/index.html">Tako se radi za narod svoj, Domaljevcani!</a></li>
+<li><a  href="../../politika/priopcenje-hdz-1990/index.html">Priopcenje HDZ 1990</a></li>
+</ul>
+</li>
+<li><a  href="../../izbori-2008/index.html">Izbori 2008</a>
+<ul>
+<li><a  href="../../izbori-2008/cestitka/index.html">Cestitka</a></li>
+<li><a  href="../../izbori-2008/moj-glas/index.html">Moj glas</a></li>
+<li><a  href="../../izbori-2008/podrska/index.html">Podrška</a></li>
+<li><a  href="../../izbori-2008/joso-leovac/index.html">Joso Leovac</a></li>
+<li><a  href="../../izbori-2008/perica-jelecevic/index.html">Perica Jelecevic</a></li>
+<li><a  href="../../izbori-2008/za-narod-svoj/index.html">...za narod svoj!</a></li>
+<li><a  href="../../izbori-2008/egzodus/index.html">Egzodus</a></li>
+<li><a  href="../../izbori-2008/smece/index.html">Smece</a></li>
+<li><a  href="../../izbori-2008/nisu-ljudi-ovce/index.html">Nisu ljudi ovce</a></li>
+<li><a  href="../../izbori-2008/izborne-zavrzlame/index.html">Izborne zavrzlame</a></li>
+<li><a  href="../../izbori-2008/opcinska-vijeca/index.html">Opcinska vijeca</a></li>
+<li><a  href="../../izbori-2008/izborimo-svoje/index.html">Izborimo svoje</a></li>
+<li><a  href="../../izbori-2008/seljacka-buna/index.html">Seljacka buna</a></li>
+<li><a  href="../../izbori-2008/kise-i-izbora/index.html">Kiše i izbora</a></li>
+<li><a  href="../../izbori-2008/izbori-su-prosli/index.html">Izbori su prošli</a></li>
+<li><a  href="../../izbori-2008/plakatiranje/index.html">Plakatiranje</a></li>
+<li><a  href="../../izbori-2008/ekologija-izbora/index.php">Ekologija izbora</a></li>
+<li><a  href="../../izbori-2008/imovina-duznosnika/index.html">Imovina dužnosnika</a></li>
+</ul>
+</li>
+<li><a  href="../../izbori-2010/index.html">Izbori 2010</a>
+<ul>
+<li><a  href="../../izbori-2010/tihic-je-dobar-covjek-i-nije-srpski-igrac/index.html">Tihic je dobar covjek i nije srpski igrac</a></li>
+<li><a  href="../../izbori-2010/tapija/index.html">Tapija</a></li>
+<li><a  href="../../izbori-2010/burke-i-izbori/index.html">Burke i izbori</a></li>
+<li><a  href="../../izbori-2010/sjetimo-se-samo/index.html">Sjetimo se samo...</a></li>
+<li><a  href="../../izbori-2010/opustite-se/index.html">Opustite se...</a></li>
+<li><a  href="../../izbori-2010/teroristicki-pucnji-na-demokraciju/index.html">Teroristicki pucnji na demokraciju</a></li>
+<li><a  href="../../izbori-2010/za-posavinu-samo-najbolje/index.html">Za Posavinu samo najbolje!</a></li>
+<li><a  href="../../izbori-2010/ej-hoces-prodat-svoj-glas/index.html">Ej, hoceš prodat`svoj glas?</a></li>
+<li><a  href="../../izbori-2010/po-drugi-put-prognani/index.html">Po drugi put prognani</a></li>
+<li><a  href="../../izbori-2010/bosanska-posavina-nece-biti-hrvatsko-kosovo/index.html">Bosanska Posavina nece biti hrvatsko Kosovo</a></li>
+<li><a  href="../../izbori-2010/cije-su-oruzane-snage/index.html">Cije su oružane snage?</a></li>
+<li><a  href="../../izbori-2010/skadar-na-borjani/index.html">Skadar na Bo(r)jani</a></li>
+<li><a  href="../../izbori-2010/riznica-pesama-za-decu-borjane-krito/index.html">Riznica pesama za decu Borjane Krišto</a></li>
+<li><a  href="../../izbori-2010/buljin-cosak-borjane-kristo/index.html">Buljin cošak Borjane Krišto</a></li>
+<li><a  href="../../izbori-2010/hrvatska-koalicija-za-dostojanstvo-posavaca/index.html">Hrvatska koalicija za dostojanstvo Posavaca</a></li>
+<li><a  href="../../izbori-2010/neistine-kao-izborni-program-hdz-bih/index.html">Neistine kao izborni program HDZ BiH</a></li>
+<li><a  href="../../izbori-2010/porazimo-korupciju-vec-3-listopada/index.html">Porazimo korupciju vec 3. listopada!</a></li>
+<li><a  href="../../izbori-2010/predizborni-skup-sdp-u-odaku/index.html">Predizborni skup SDP u Odžaku</a></li>
+<li><a  href="../../izbori-2010/hdz-bih-dijeli-domaljevac/index.html">HDZ BiH dijeli Domaljevac!</a></li>
+<li><a  href="../../izbori-2010/iluzija-o-postenim-izborima/index.html">Iluzija o poštenim izborima</a></li>
+<li><a  href="../../izbori-2010/komemoracija-za-za-bojovnike-hos-a/index.html">Komemoracija za bojovnike HOS-a</a></li>
+<li><a  href="../../izbori-2010/crna-rupa-politike-hdz-bih/index.html">&quot;Crna rupa&quot; politike HDZ BiH</a></li>
+<li><a  href="../../izbori-2010/borjanine-igre-ili-igre-oko-borjane/index.html">Borjanine igre, ili igre oko Borjane</a></li>
+<li><a  href="../../izbori-2010/ima-li-nade-za-nas/index.html">Ima li nade za nas?</a></li>
+<li><a  href="../../izbori-2010/zasto-treba-promijeniti-vladajucu-garnituru-u-zp/index.html">Zašto treba promijeniti vladajucu garnituru u ŽP?</a></li>
+</ul>
+</li>
+<li><a  href="../../svastara/index.html">Svaštara</a>
+<ul>
+<li><a  href="../../svastara/mi-citamo-posavinu-od-prvog-broja---a-vi/index.html">Mi citamo &quot;Posavinu&quot; od prvog broja :-) A vi?</a></li>
+<li><a  href="../../svastara/kviz-znanja-iz-historije-7-pod-nazivom-jlz/index.html">Kviz znanja iz Historije 7 pod nazivom J.L.Z.</a></li>
+<li><a  href="../../svastara/prekasno-je-da-budemo-pesimisti/index.html">Prekasno je da budemo pesimisti</a></li>
+<li><a  href="../../svastara/baraka/index.html">Baraka</a></li>
+<li><a  href="../../svastara/desktop-pozadine/index.html">Desktop pozadine</a></li>
+<li><a  href="../../svastara/konacno-odmor/index.html">Konacno odmor</a></li>
+<li><a  href="../../svastara/kafa/index.html">Kafa</a></li>
+<li><a  href="../../svastara/odmor-ili-umor/index.php">Odmor ili umor?</a></li>
+<li><a  href="../../svastara/bosanski-horoskop/index.html">Bosanski horoskop</a></li>
+<li><a  href="../../svastara/kuda-za-novu-godinu/index.html">Kuda za Novu Godinu?</a></li>
+<li><a  href="../../svastara/i-ovo-je-domaljevac/index.php">I ovo je Domaljevac</a></li>
+<li><a  href="../../svastara/radne-akcije/index.html">Radne akcije</a></li>
+<li><a  href="../../svastara/miine-kucne-carolije/index.html">Mišine kucne carolije</a></li>
+<li><a  href="../../svastara/uskrs-u-domaljevcu/index.html">Uskrs u Domaljevcu!</a></li>
+<li><a  href="../../svastara/rodjendanska-kritika/index.html">Rodjendanska kritika</a></li>
+<li><a  href="../../svastara/najskuplji-antikni-tepih-na-svijetu/index.html">Najskuplji antikni tepih na svijetu</a></li>
+<li><a  href="../../svastara/soldier-of-love/index.html">Soldier of Love</a></li>
+<li><a  href="../../svastara/tri-puta-zato/index.html">Tri puta zašto</a></li>
+<li><a  href="../../svastara/svinjska-gripa/index.html">Svinjska gripa</a></li>
+<li><a  href="../../svastara/neka-vide-da-nas-ima/index.html">Neka vide da nas ima!</a></li>
+<li><a  href="../../svastara/rijec-imaju-nase-bebe-i-djeca/index.html">Rijec imaju naše bebe i djeca?</a></li>
+<li><a  href="../../svastara/the-best-of-mujo/index.html">The Best of Mujo</a></li>
+<li><a  href="../../svastara/jesen-na-cetinju/index.html">Jesen na Cetinju</a></li>
+<li><a  href="../../svastara/to-cu-prije/index.html">Što cu prije?</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<div id="content">
+<h1>Darko Matic</h1>
+<div class="paragraph">
+	
+	
+<img src="../../../images/dmp03_460.jpg" width="460" height="295" alt="" border="0"/>	
+<h3>Postoje ljudi cije ime oslikava njihovu velicinu.</h3>
+<p>Darko sa suprugom Marijanom i roditeljima.</p>
+</div>
+<div class="paragraph">
+<p style=""  ><br/><b><i>Pi&scaron;e: Pejo Ga&scaron;parevi&#263;</i></b><br/><br/>Za&scaron;to sam ovom uratku dao naslov &ndash; Darko Mati&#263;? <br/><br/>Samo je jedan razlog, dovoljno je istaknuti to ime i prezime u naslovu kako bi gotovo svaki Posavac znao o komu i &#269;emu se radi. To ime i prezime u tako velikoj mjeri govori samo za sebe da mu u naslovu nisu potrebni ni glagoli, ni epiteti, ni prilozi, ni veznici. Veliki filozof Kjerkegard je sugerirao golemu istinu rekav&scaron;i kako postoje knjige &#269;iji naslovi sve govore te gotovo i nije nu&#382;no &#269;itati takve knjige. <br/><br/>Sli&#269;no je i sa ljudima, postoje osobe &#269;ije ime i prezime oslikava njihovu veli&#269;inu. Ta prepoznatljivost na poseban je na&#269;in razvijena me&#273;u sporta&scaron;ima. Primjerice, dovoljno je re&#263;i Usain Bolt i odmah se pred o&#269;ima stvara slika najboljeg atleti&#269;ara dana&scaron;njice, kojeg je u sprinterskim disciplinama trenuta&#269;no nemogu&#263;e pobjediti. Ako se izrekne Blanka Vla&scaron;i&#263;, to je posve dovoljno da nam se u umu pali lampica koja signalizira kako je rije&#269; o najboljoj svjetskoj skaka&#269;ici u vis. Ili, izgovorimo li Roger Federer odmah znamo da se radi o tenisa&#269;u koji godinama vlada svjetskim turnirima s velikim izgledima da postane najbolji igra&#269; tog sporta svih vremena. Izustimo li, pak, Lionell Messi istog trenutka izranja predod&#382;ba o trenuta&#269;no najboljem nogometa&scaron;u svijeta koji, nastavi li svojim majstorijama odu&scaron;evljavati publiku, po procjenama stru&#269;njaka nije bez igleda da sa trona naj&#269;arobnijih igra&#269;a svih vremena svrgne &#269;ak i Pelea i Maradonu. <br/><br/>Za nas Posavce, Darko Mati&#263;, koji igra u Kini, zavrije&#273;uje po&scaron;tovanje najve&#263;eg mogu&#263;eg ranga jer se vinuo u uspje&scaron;nike univerzalne, globalne vrijednosti. <br/><br/></p>
+</div>
+<div class="paragraph">
+	
+	
+<img src="../../../images/dmp06_460.jpg" width="246" height="345" alt="" border="0"/>	
+</div>
+<div class="paragraph">
+<p style=""  ><br/>Engleski magazin goal.com nedavno ga je uvrstio u najbolju mom&#269;ad Azije. U toj &#269;injenici stanuju dva podatka od kolosalne va&#382;nosti. Prvi podatak- Azija je golem kontinent gdje se nogomet razvija strelovitom brzinom, pa biti izabran u najbolju ekipu tog kontinenta u veznoj liniji sa doskora ponajboljim svjetskim nogometa&scaron;em brazilcem Rivaldom koji igra u Uzbekistanu, zna&#269;i potvrdu ekstra klase. <br/><br/>Drugi podatak &ndash; Mati&#263;a su u najbolju Mom&#269;ad Azije izabrali Englezi koji su tvorci nogometa, &scaron;to &#263;e re&#263;i da je Darkovo umije&#263;e prepoznato i uva&#382;eno od svjetskih nogometnih mahera, kakvi Englezi tradicionalno jesu. <br/><br/>No, nije Darko Mati&#263; preko no&#263;i pokorio nogometnu Aziju. On je, po&scaron;to je sa mom&#269;adi Beijing Guoan iz Pekinga osvoji 2009. godine tutulu prvaka Kine, izabran za najboljeg stranog nogometa&scaron;a u toj zemlji. Darko ove godine sa Beijing Guoanom igra u Azijskoj ligi prvaka, najpresti&#382;nijem nogometnom klupskom natjecanju na tom kontinentu koje za Aziju zna&#269;i ono &scaron;to je za na&scaron; kontinent Europska liga &scaron;ampiona . Prije prelaska u klub iz Pekinga Darko Mati&#263; je dvije godine nastupao za mom&#269;ad Teda Tianjin. U sve tri dosada&scaron;nje sezone on je bio izabran u najbolju mom&#269;ad kineskog prvenstva. Dakle, dijete poteklo iz jednog malog Domaljevca ostavlja neizbrisiv trag u najmnogoljudnijoj zemlji svijeta i cijelom azijskom kontinentu.</p>
+</div>
+<div class="paragraph">
+	
+	
+<img src="../../../images/dmp01_460.jpg" width="460" height="345" alt="" border="0"/>	
+<h3>Bravo majstore sa Save!</h3>
+</div>
+<div class="paragraph">
+<p style=""  ><br/>Darko mi je u jednom razgovoru posvjedo&#269;io kako mu katkad za vrijeme utakmica na kineskim stadionima kroz misli prostruji njegov Domaljevac i Posavina. Dirljivo! Jednom posa&#273;en u srcu, zavi&#269;aj cijelog &#382;ivota klija u nama, ma gdje se mi nalazili svojim fizi&#269;kim tijelima.<br/><br/>Stara izreka ka&#382;e &ndash; ne pada kru&scaron;ka daleko od stabla. I Darkov otac Marko svojedobno je bio vrstan nogometa&scaron;. Marko je meni ostao u sje&#263;anju kao robusan ali koncentriran igra&#269;, sna&#382;nih ali promi&scaron;ljenih pokreta. Marko je bio velika radilica na terenu. Pamtim prizore utakmica na Jelasu u Domaljevcu kako Marko nezaustavljivo jurne uz aut liniju i lako&#263;om s loptom u nogama pretr&#269;i ve&#263;i dio igrali&scaron;ta ostavljaju&#263;i obi&#269;no po nekoliko protivni&#269;kih nogometa&scaron;a iza sebe. Svojim stilom podsje&#263;ao je na sada&scaron;njeg hrvatskog reprezentativca Ivicu Oli&#263;a. Zapravo, Marko je jo&scaron; prije tridesetak godina bio prete&#269;a modernog nogometa&scaron;a, znao igrati bez lopte &ndash; svojim trkom i kretanjem u prostoru bez baluna zadavao je glavobolju protivni&#269;kim mom&#269;adima i njihovim igra&#269;ima. Igra u prostoru bez lopte danas temelj nogometne taktike i strategije. <br/><br/>Marko Mati&#263; je profesor njema&#269;kog jezika, i gle podudarnosti, njegov sin Darko, osim &scaron;to igra nogomet na vrhunskoj razini, pravi je poliglota &ndash; govori jezike: njema&#269;ki, engleski, francuski, talijanski, &scaron;panjolski, slova&#269;ki, portugalski i kineski. <br/><br/>S Markom, kad god sam u prilici, rado vodim razgovore na razli&#269;ite teme, ali, nogomet je uvijek na prvom mjestu. Marko govori o nogometu temeljito i pribrano s igra&#269;kim iskustvom, a ja aktivno slu&scaron;am i, s novinarskim iskustvom &ndash; pamtim pri&#269;u. Ivo Andri&#263; bi rekao:&ldquo;Pa&#382;ljivo saslu&scaron;aj svakog sugovornika, jer nikada ne zna&scaron; iz &#269;ijih &#263;e&scaron; usta &#269;uti rije&#269; koja ti treba&ldquo;. <br/><br/>Marko mi je nedavno otkrio kako mu Darko &#269;esto govori: &bdquo;Tata, najva&#382;nije za nogometa&scaron;a je da igra pripremljen&ldquo;. <br/><br/>U toj Darkovoj re&#269;enici, zapravo, klju&#269; je njegovog uspjeha i otpornosti na ozljede. Darka, kojemu je 29 godina, ozljede su u dosada&scaron;njoj bogatoj karijeri gotovo posve zaobilazile. Njegova majka Dara ka&#382;e kako joj je najva&#382;nije kada se nakon utakmice Darko mobitelom javi iz daleke Kine i rekne da je sve proteklo u redu, bez ozljede. &bdquo;Kad &#269;ujem njegov glas odmah mi je lak&scaron;e&ldquo;, ka&#382;e bri&#382;na majka Dara.</p>
+</div>
+<div class="paragraph">
+	
+	
+<img src="../../../images/dmp02_460.jpg" width="460" height="345" alt="" border="0"/>	
+<h3>Marijana i Darko</h3>
+</div>
+<div class="paragraph">
+<p style=""  ><br/>&bdquo;Ponosna sam na Darka. Zbog njegovih uspjeha ali i ljudskih vrlina toliko sam ushi&#263;ena da to ne mogu rije&#269;ima opisati. Neka ga Bog &#269;uva i sre&#263;a prati jer moj Darko je sretno dijete&ldquo;, isti&#269;e majka Dara. Ona priznaje kako joj te&scaron;ko pada &scaron;to Darko rijetko, jednom godi&scaron;nje, do&#273;e ku&#263;i u Domaljevac. &bdquo; Ja bih voljela da Darko bude s nama i za Uskrsne blagdane, ali svjesna sam da mu profesionalne obveze to ne omogu&#263;avaju i moram se pomiriti s tim&ldquo;, obja&scaron;njava Dara. <br/><br/>No, Darkovi roditelji odnedavno ipak uspijevaju &#269;e&scaron;&#263;e vidjeti sina. U svojem domu u Domaljevacu Dara i Marko su instalirali posebni sportski satelitski televizijski program koji izravno prenosi utakmice kineskog prvenstva i Azijske lige prvaka. Naravno, kad igra Darko sve se ostavlja i gleda se utakmica. &bdquo;Te utakmice na televiziji gledam kao navija&#269; i veselim se svakoj Darkovoj dobroj akciji ili uspje&scaron;nom potezu. Kinezi Darku skandiraju u slogovima 'Ma-ti-&#263;i Ma-ti-&#263;i', i priznajem da mi srce zatreperi kada cijeli stadion kli&#269;e Darku&ldquo;, obja&scaron;njava Marko. <br/><br/>Osim vrhunskog sportskog Darko Mati&#263; ima sre&#273;en i obiteljski &#382;ivot. Supruga Marijana &#263;e uskoro na svijet donijeti bebu. Darko mi je nedavno rekao kako je dijete, koje o&#269;ekuje, njegov najve&#263;i &#382;ivotni uspjeh. Dara i Marko razdraganim glasom ka&#382;u kako se neizmjerno raduju prvom svojem unu&#269;etu. &bdquo;Spremni smo preuzeti ulogu bake i djeda&ldquo;, rekli su.<br/><br/>Zavr&scaron;imo ovu pri&#269;u iskrenim pokli&#269;om: &bdquo;od srca sretno Ma-ti-&#263;i Ma-ti-&#263;i&quot;! <br/><br/><i>Pejo Ga&scaron;parevi&#263;<br/>Fotografije: &#272;uro Kesi&#263;</i> <i>i China-Press</i></p>
+</div>
+</div>
+<div id="sidebar">
+<p></p><br/>
+
+</div>
+
+<div class="clearer"></div>
+
+</div>
+
+<div id="footer">© 2007-2010  permis & team</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,619 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Travel Club</title>
+<meta name="description" content="" /><base href="http://www.worldtravelclub.info/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="global.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="anylinkmenu.css" />
+<!-- <script language="JavaScript" src="js/jq.js"></script> -->
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="menucontents.js"></script>
+
+<script type="text/javascript" src="anylinkmenu.js">
+
+/***********************************************
+* AnyLink JS Drop Down Menu v2.0- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Project Page at http://www.dynamicdrive.com/dynamicindex1/dropmenuindex.htm for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+//anylinkmenu.init("menu_anchors_class") //Pass in the CSS class of anchor links (that contain a sub menu)
+anylinkmenu.init("menu_system2")
+anylinkmenu.init("menu_system3_1")
+</script>
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+	<script type="text/javascript" src="js/jquery-easing-1.3.pack.js"></script>
+	<script type="text/javascript" src="js/jquery-easing-compatibility.1.2.pack.js"></script>
+	<script type="text/javascript" src="js/coda-slider.1.1.1.pack.js"></script>
+	
+	<script type="text/javascript">
+	
+		var theInt = null;
+		var $crosslink, $navthumb;
+		var curclicked = 0;
+		
+		theInterval = function(cur){
+			clearInterval(theInt);
+			
+			if( typeof cur != 'undefined' )
+				curclicked = cur;
+			
+			$crosslink.removeClass("active-thumb");
+			$navthumb.eq(curclicked).parent().addClass("active-thumb");
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+			
+			theInt = setInterval(function(){
+				$crosslink.removeClass("active-thumb");
+				$navthumb.eq(curclicked).parent().addClass("active-thumb");
+				$(".stripNav ul li a").eq(curclicked).trigger('click');
+				curclicked++;
+				if( 6 == curclicked )
+					curclicked = 0;
+				
+			}, 5000);
+		};
+		
+		$(function(){
+			
+			$("#main-photo-slider").codaSlider();
+			
+			$navthumb = $(".nav-thumb");
+			$crosslink = $(".cross-link");
+			
+			$navthumb
+			.click(function() {
+				var $this = $(this);
+				theInterval($this.parent().attr('href').slice(1) - 1);
+				return false;
+			});
+			
+			theInterval();
+		});
+	</script>    
+
+
+<link type="text/css" rel="stylesheet" href="dhtmlgoodies_calendar/dhtmlgoodies_calendar.css?random=20051112" media="screen" />
+<script type="text/javascript" src="dhtmlgoodies_calendar/dhtmlgoodies_calendar.js?random=20060118"></script>
+
+<script language="JavaScript">
+this.tooltip = function(){	
+	/* CONFIG */		
+		xOffset = 10;
+		yOffset = 20;		
+		// these 2 variable determine popup's distance from the cursor
+		// you might want to adjust to get the right result		
+	/* END CONFIG */		
+	$("input.tooltip").hover(function(e){											  
+		this.t = this.title;
+		this.title = "";									  
+		$("body").append("<p id='tooltip'>"+ this.t +"</p>");
+		$("#tooltip")
+			.css("top",(e.pageY - xOffset) + "px")
+			.css("left",(e.pageX + yOffset) + "px")
+			.fadeIn("fast");		
+    },
+	function(){
+		this.title = this.t;		
+		$("#tooltip").remove();
+    });	
+	$("input.tooltip").mousemove(function(e){
+		$("#tooltip")
+			.css("top",(e.pageY - xOffset) + "px")
+			.css("left",(e.pageX + yOffset) + "px");
+	});			
+};
+
+
+
+// starting the script on page load
+$(document).ready(function(){
+	tooltip();
+});
+
+</script>
+
+	<script type="text/javascript">
+	function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("Ljubazno Vas molimo da ponovite unos elektronicke adrese. Pogresno je unesena.")
+		    return false
+		 }
+
+ 		 return true					
+	}
+
+function ValidateForm(){
+	var telefonID=document.form.telefon
+	var emailID=document.form.email
+	var imeID=document.form.iz
+	var imeID2=document.form.u
+	
+	if ((telefonID.value==null)||(telefonID.value=="")){
+		alert("Ljubazno Vas molimo da unesite svoj broj telefona.")
+		telefonID.focus()
+		return false
+	}
+		if ((emailID.value==null)||(emailID.value=="")){
+		alert("Ljubazno Vas molimo da unesite svoju elektronicku adresu.")
+		emailID.focus()
+		return false
+	}
+	if (echeck(emailID.value)==false){
+		emailID.value=""
+		emailID.focus()
+		return false
+	}
+
+	if ((imeID.value==null)||(imeID.value=="")){
+		alert("Ljubazno Vas molimo da unesite grad iz kojeg putujete.")
+		imeID.focus()
+		return false
+	}
+	if ((imeID2.value==null)||(imeID2.value=="")){
+		alert("Ljubazno Vas molimo da unesite grad u koji putujete.")
+		imeID2.focus()
+		return false
+	}	
+	
+	return true
+ }
+
+	</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#radiobut1").click(function(){
+  $("#druga_lokacija").css("display","block")
+  })
+})
+$(document).ready(function(){
+  $("#radiobut2").click(function(){
+  $("#druga_lokacija").css("display","none")
+  })
+})
+</script>
+
+<style type="text/css">
+#tooltip{
+	position:absolute;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:2px 5px;
+	color:#333;
+	display:none;
+	}	
+
+</style>
+
+<style type="text/css"> 
+#Div1toggle 
+{ 
+display: none; 
+} 
+</style> 
+
+<script type="text/javascript">
+function untoggle(theDiv) {
+document.getElementById("Div1toggle").style.display = "block";
+document.getElementById(theDiv).style.display = "none";
+}
+function toggle(theDiv) {
+document.getElementById("Div1toggle").style.display = "none";
+document.getElementById(theDiv).style.display = "block";
+}
+
+</script> 
+<link href="/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="/facebox/facebox.js" type="text/javascript"></script> 
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $('a[rel*=facebox]').facebox({
+        loading_image : 'loading.gif',
+        close_image   : 'closelabel.gif'
+      }) 
+    })
+  </script>
+
+</head>
+<body onload="MM_preloadImages('images/Home_hover.jpg','images/Airline_tickets_hover.jpg','images/Hotel_accommodation_hover.jpg','images/car_rental_hover.jpg','images/other_services_hover.jpg','images/aboutus_hover.jpg','images/contactus_hover.jpg')">
+
+<div id="Total_container">
+	<div class="flags_container">
+    	<div class="flags"><a href="#"><img src="images/index_07.jpg" width="26" height="17" alt="" /></a></div>
+    	<div class="flags"><a href="#"><img src="images/Croatian_Flag.jpg" width="26" height="17" alt="" /></a></div>
+    </div>
+    	<div class="clear"></div>
+     <div class="heaer">
+     <img src="images/Header.jpg" width="999" height="152" alt="" /></div>
+		<div class="clear"></div>
+     <div class="nav">
+       <a href="/" class="menu_system1"  rel="anylinkmenu1">Naslovnica</a>
+       <a href="zrakoplovne_karte.html" class="menu_system2"  rel="anylinkmenu1">Zrakoplovne karte</a>
+       <a href="forma/hoteli.html" class="menu_system3"  rel="anylinkmenu1">Hoteli</a>
+       <a href="forma/auti.html" class="menu_system3"  rel="anylinkmenu1">Najam vozila</a>
+       <a href="ostale_usluge.html" class="menu_system3_1"  rel="anylinkmenu2">Ostale usluge</a>
+       <a href="tekst/o_nama.html" class="menu_system4"  rel="anylinkmenu1">O nama</a>
+       <a href="tekst/kontakt.html" class="menu_system5"  rel="anylinkmenu1">Kontakt</a>       
+       </div>
+        
+     <div id="Middle_column">
+     	<div class="middle_column_inside">
+     	  <div class="left_column">
+            	<div class="left_box1">
+                	<div class="left_box_inside">
+                                        	<div class="box_title_bg" style="text-transform: uppercase;">Ponuda</div>
+                        <div class="but_left_nav">
+                        <div>
+                        <div class="cssnav"><a href="wellness_coner.html" title="-10% samo za klijente Travel Club Radiusa">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Wellness Coner</span></a></div><div class="cssnav"><a href="zrakoplovne_karte.html" title="Zrakoplovne karte">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Zrakoplovne karte</span></a></div><div class="cssnav"><a href="forma/hoteli.html" title="Hoteli| Travel Club">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Hotelski smještaj</span></a></div><div class="cssnav"><a href="forma/yacht_charter.html" title="Yacht charter Travel Club Radius">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Yacht charter</span></a></div><div class="cssnav"><a href="ostale_usluge.html" title="Ostale usluge">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Ostale usluge</span></a></div><div class="cssnav"><a href="poklon_bon.html" title="Poklon bon | Travel Club">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Poklon bon</span></a></div><div class="cssnav1"><a href="placanje.html" title="Mogućnosti plaćanja | Travel Club">
+								<img src="images/cards_over.jpg" width="198" height="64" /><span>Mogućnosti plaćanja</span></a></div>                          
+                         <!-- <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Hotel Accommodation</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Car Rental</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Other Services</span></a></div>
+                          -->
+                          
+</div>
+</div>
+<div class="clear"></div>
+                    
+                    
+                    </div>
+                
+                </div>
+                <div class="clear"></div>
+              <div class="space_box"></div>
+                <div class="clear"></div>
+                <div class="left_box1">
+                	<div class="left_box_inside">
+                    	<!--<div class="box_title_bg1">&nbsp;&nbsp;&nbsp;&nbsp;KUTAK ZA PARTNERE</div>
+                        <div class="but_left_nav">
+                        <div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Why Travel Club Radius?</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>About us and our mission</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Star Alliance Company Plus</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Popis sajmova</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Izjava o privatnosti</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>World destinations</span></a></div>
+                            <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Contact</span></a></div>
+                            -->
+                                              	<div class="box_title_bg1" style="text-transform: uppercase;">Kutak za partnere</div>
+                        <div class="but_left_nav">
+                        <div>
+                        <div class="cssnav"><a href="o_nama_i_nasa_misija.html">
+							<img src="images/over_bg11.jpg" width="198" height="36" /><span>O nama i naša misija</span></a></div><div class="cssnav"><a href="opci_uvjeti.html">
+							<img src="images/over_bg11.jpg" width="198" height="36" /><span>Opći uvjeti</span></a></div><div class="cssnav"><a href="izjava_o_privatnosti.html">
+							<img src="images/over_bg11.jpg" width="198" height="36" /><span>Izjava o privatnosti</span></a></div><div class="cssnav"><a href="pres_kutak.html">
+							<img src="images/over_bg11.jpg" width="198" height="36" /><span>Objave u medijima</span></a></div><div class="cssnav"><a href="zasto_travel_club_radius.html">
+							<img src="images/over_bg11.jpg" width="198" height="36" /><span>Zašto Travel Club Radius?</span></a></div><div class="cssnav"><a href="star_allianze_program.html">
+							<img src="images/over_bg11.jpg" width="198" height="36" /><span>Star Allianze program</span></a></div>                          
+</div>
+</div>
+<div class="clear"></div>
+                    </div>
+     </div>
+	 <div class="space_box"></div>
+<div class="left_box1">
+                	<div class="left_box_inside">
+                                        	<div class="box_title_bg6" style="text-transform: uppercase;">Destinacije svijeta </div>
+                        <div class="but_left_nav">
+                        <div>
+                        <div class="cssnav"><a href="tekst/tajland.html" title="Tajland">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Tajland</span></a></div><div class="cssnav"><a href="tekst/dominikanska_republika.html" title="Dominikanska republika">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Dominikanska republika</span></a></div><div class="cssnav"><a href="tekst/usa.html" title="USA">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>USA</span></a></div><div class="cssnav"><a href="tekst/juzna_amerika.html" title="Južna Amerika">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Južna Amerika</span></a></div><div class="cssnav"><a href="tekst/kina.html" title="Kina">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Kina</span></a></div><div class="cssnav"><a href="tekst/tunis.html" title="Tunis">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Tunis</span></a></div>                          
+                         <!-- <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Hotel Accommodation</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Car Rental</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Other Services</span></a></div>
+                          -->
+	<a class="readmore11" style="float:right; padding-top:3px;" href="destinacije_svijeta.html">Sve destinacije...</a>
+                          
+</div>
+</div>
+<div class="clear"></div>
+                    </div>
+					
+                
+                </div>
+           <div class="clear"></div>
+                <div class="space_box"></div>
+                <div class="clear"></div>
+            
+            </div>     	  <div class="middle_col_container">
+            	
+                             <div class="clear"></div>
+                <div class="aboutus_text">
+                                <h1>Engleska</h1>
+								<a href="http://radius.timalweb.com/cms/uploads/resize_1264248063.jpg" rel="facebox" style="float:left; margin:5px 10px 10px 0;"><img src="http://radius.timalweb.com/cms/uploads/thumbnail_1264248063.jpg" alt="Pic" /></a>
+								
+                <p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Engleska</span></span></strong></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><em>Zemlja Robin Hooda, James Bonda, Sherlock Holmesa, Harry Pottera, najboljih rock bandova na svijetu!&nbsp; Dakle, destinacija na kojoj je sve mogu</em>ć<em>e!</em></span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Jeste li znali:</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><em><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">*Za&scaron;to se u Britaniji vozi lijevom stranom? U dalekom srednjem vijeku, većina ljudi bili su, naime, de&scaron;njaci, a na put u opasnome srednjem vijeku ne biste kretali bez barem nekakvog oružja. Oružju je mjesto u desnoj ruci i svakako biste željeli da osoba s kojom se mimoilazite bude s va&scaron;e desne &ndash; a nikako ne s lijeve strane. Zatreba li vam u samoobrani, morali biste biti maksimalno brzi i spretni. Potencijalnog neprijatelja željeli ste imati s desne strane.</span></span></em></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><em><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">*Da se u rečenici "The quick brown fox jumps over the lazy dog." koriste sva slova engleske abecede?</span></span></em></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Zemljopisni položaj</strong><br />Ujedinjeno Kraljevstvo Velike Britanije i Sjeverne Irske (najče&scaron;će se naziva samo Velika Britanija, UK ili samo Britanija) je suverena država koja se nalazi na sjeverozapadnom dijelu Europe. Velika Britanija je smje&scaron;tena na sjeverozapadnoj obali kontinentalne Europe, okružena je Sjevernim morem, Engleskim kanalom i Atlantskim oceanom. Pod suverenitetom Ujedinjenog Kraljevstva, iako nisu njegov dio, spadaju i zavisni teritoriji - Kanalski otoci, otok Man te niz prekomorskih teritorija. Ujedinjeno Kraljevstvo je nastalo nizom Zakona o uniji (Act of Union), koji su ujedinili Englesku, &Scaron;kotsku i Wales sa Sjevernom Irskom, regijom na otoku Irskoj. Britansko otočje je zemljopisni naziv za skupinu otoka, kojima pripadaju Velika Britanija, Irska, otoci Man, Wight i Orkney, Hebridi, otočje Shetland, Kanalski otoci i drugi.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Povr&scaron;ina</strong><br />242,514 km&sup2;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Broj stanovnika</strong><br />59.8 milijuna</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Državno uređenje</strong><br />Parlamentarna monarhija</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Glavni grad</strong><br />London, 7,43 milijuna stanovnika</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Klima</strong><br />Pretežno ki&scaron;ovito tokom cijele godine. Dok Engleska i Wales bilježe prosječne temperature kao i u Europi, zimi rijetko ispod -5 C a ljeti rijetko iznad 30 C, &Scaron;kotska bilježi prilično promjenljive vremenske uvjete s pone&scaron;to nižim temperaturama nego u ostalim djelovima Ujedinjenog Kraljevstva. Sjeverna Irska ima pretežno pomorske klimatske uvijete, vrijeme je dosta nestabilno sa prosječnim temperaturama SIJEČANJ: 6.5 C, SRPANJ: 17.5 C.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Novac</strong><br />Britanska funta (&pound;) = 100 penija. Novčanice za 50, 20,10 5 &pound;. Kovanice</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Jezik</strong><br />Engleski, službeno priznati regionalni jezici: vel&scaron;ki, &scaron;kotski, galski, irski, kornvolski i ulsterski &scaron;kotski</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Religija</strong><br />Većina Protestanti, Katolička manjina</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Strane valute</strong><br />Novac možete promjeniti u bankama, mjenjačnicama i većini hotela (gdje je obično nepovoljniji tečaj).</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Električni napon</strong><br />240 V, 50 Hz. Utikači većinom s tri priključka</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Vremenske zone</strong><br />GTM + 1 (od zadnje subote u ožujku do zadnje subote u studenom)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Putne isprave</strong><br />Hrvatski državljani, kao i građani svih drugih država koje nisu članice EU podliježu imigracijskoj kontroli prilikom ulaska u Veliku Britaniju. Upit o uvjetima odlaska u Veliku Britaniju možete poslati na adresu Britanskog veleposlanstva, Aleksandra von Humbolta 4, 10 000 Zagreb,</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Zdravlje</strong><br />Nema upozorenja. Preporučujemo da se prije putovanja detaljnije informirate na web stranicama Svjetske zdravstvene organizacije (</span></span><a href="http://www.who.int/en/" target="_blank"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">WHO</span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">).</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Cijepljenje<br />Cijepljenja nisu potrebna.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Radno vrijeme</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Standardno radno vrijeme je od ponedjeljka do petka od 9:30h &ndash; 18:00h, te subotom od 9:30h &ndash; 12:30h.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Po&scaron;te: </strong>ponedjeljak &ndash; petak od 9.00h &ndash; 17.30h. <br />Po&scaron;tanske marke možete kupiti u kioscima ili na po&scaron;ti. <br />Po&scaron;tanski sandučići su crvene boje. <br /><strong>Banke: </strong>ponedjeljak &ndash; petak od 9.30h &ndash; 16.30h (vrijeme zatvaranja nije standardno u svim bankama). <br /><strong>Trgovine:</strong> standardno radno vrijeme za sve trgovine je od ponedjeljka do subote od 9:30h - 18:00h, iako su neke trgovine otvorene do 20:00h. <br />Rijetko se trgovine zatvaraju za vrijeme ručka, a većina ih je otvorena i nedjeljom od 12:00h - 18:00h.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Telekomunikacije<br /><strong>Telefon: </strong>pozivni broj za Veliku Britaniju je 44, a izlazni broj iz Velike Britanije prema Hrvatskoj: +385 (+ pozivni broj mreže bez 0; npr. 1 &ndash; za Zagreb) + preplatnički broj korisnika. <br />Na telefonskim govornicama možete koristiti kovanice a ukoliko ne primaju kovanice, možete koristiti telefonsku ili kreditnu karticu. <br />Telefonske kartice mogu se kupiti u po&scaron;tanskim uredima te u poslovnicama cigareta/novina. <br /><br /><strong>Mobitel: </strong><br />Pokrivenost signala je dobra:<br />Preporučeni roaming partneri: Vodafone <br />Oznaka mreže na zaslonu telefona: Vodafone UK, O2 UK, ORANGE<br />Odlazni pozivi prema Hrvatskoj i unutar Velike Britanije: 8,91 kn<br />Dolazni pozivi: 4,91 kn <br />Slanje SMS poruka: 1,91 kn <br />Slanje MMS poruka: 5,91 kn <br />Preporučen roaming partner: T-mobile UK <br />Oznaka mreže na zaslonu telefona: T-mobile, T-mobile UK, one2one <br />Odlazni pozivi prema Hrvatskoj i unutar Velike Britanije: 12,48 kn/min <br />Dolazni pozivi: 7,98kn/min <br />Slanje SMS poruka: 3,98 kn <br />Slanje MMS poruka: 6kn</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Korisni brojevi</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Policija<br />999</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Hitna služba<br />112</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Pomoć na cesti<br />+33 472 171 205</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Vatrogasci<br />911</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>PROMET - Važno:u Britaniji se vozi lijevom stranom ulice! </strong><br /><br />Tijekom dana u Britaniji, posebice u većim gradovima, vlada poprilično velika gužva na prometnicama pa se preporuča da se na vrijeme krene prema odredi&scaron;tu. <br />Sigurnosni pojas je obavezan za putnike na prednjim kao i na stražnjim sjedalima. <br />Strogo je zabranjen razgovor mobilnim telefonom za vrijeme vožnje.<br />Dodatne informacije možete pronaći na: www.theaa.com i www.rac.co.uk</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Zrakoplov</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Velika Britanija ima preko 100 zračnih luka,&nbsp; a glavne su Heathrow i Gatwick<br /><br /></span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Brod</strong><br />Glavne luke u Velikoj Britaniji su: Dover, Harwich, Holyhead and Portsmouth. Vlak<br />Velika Britanija ima dobru mrežu vlakova koji su odlično povezani sa brodskim linijama.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Gradski prijevoz</strong><br />Putujete li gradskim prijevozom, važno je znati da svi gradovi u Velikoj Britaniji imaju odlično organizirani autobusni gradski prijevoz. <br /><span style="text-decoration: underline;">Glasgow,Liverpool</span>, <span style="text-decoration: underline;">London</span> i <span style="text-decoration: underline;">Newcastle</span> imaju <strong>podzemnu željeznicu</strong>. <br />Urbani gradovi <span style="text-decoration: underline;">Birmingham</span>, <span style="text-decoration: underline;">Cardiff</span>, <span style="text-decoration: underline;">Glasgow</span>, <span style="text-decoration: underline;">Liverpool</span> i <span style="text-decoration: underline;">Manchester</span> imaju <strong>dobru povezanost željeznicom</strong>.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Taxi</strong><br />Ovla&scaron;teni taxi operatori naplaćuju po kilometru. <br />Cijena je ne&scaron;to vi&scaron;a ukoliko se radi o prazniku, vikendu, ukoliko putnik ima puno prtljage ili ako se radi o kasnoj noćnoj vožnji. <br />U velikim gradovima, neovla&scaron;teni taxi operatori nude svoje usluge po ne&scaron;to nižim cijenama.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Hrana i piće</strong><br />Svaka regija u Velikoj Britaniji je poznata po svojim lokalnim specijalitetima.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Cijene</strong>: London je trenutno jedna od najzanimljivijih gastronomskih destinacija a jedini pravi rival koji ga slijedi u stopu, je New York.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Restorani se u Londonu većinom mogu podijeliti u četiri kategorije: oni u kojima je večera, koja obuhvaća predjelo-glavno jelo-desert bez pića, iznad 70&pound; (npr. Gordon Ramsay na Royal Hospital Road, ili La Gavroche,&hellip;), oni u kojim večera koja obuhvaća predjelo-glavno jelo-desert bez pića, između 45&pound; i 70&pound; (npr. Lindsay House, Locanda Locatelli,&hellip;), u treću kategoriju ulaze restorani u kojima je večera koja uključuje predjelo-glavno jelo-desert bez pića, od 20&pound; do 45&pound; (npr. Incognico, Mash,&hellip;) i u četvrtoj kategoriji su restorani u kojima je večera sa predjelom-glavnim jelom-desertom bez pića do 20&pound; (npr. Rock and Sole Plaice, Duke of York,&hellip;). U sve cijene je uključen PDV.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Napojnice</strong>: Cijena za uslugu većinom nije dodana ukupnom računu pa će se najče&scaron;će dodatno naplatiti 12.5%. Iako je to tehnički gledano na svakom potro&scaron;aču da odluči , bilo bi jako neobično kad bi se zatražilo da se ne naplati ta usluga.&nbsp; Zasigurno, gdje ta usluga nije uključena, napojnica od minimalno 10% je prihvaćena, iako se u zadnje vrijeme napojnica kreće između 12-15%.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Dress code:</strong> u većini restorana je neformalan dress code osim u ekskluzivnim restoranima prve navedene kategorije (pogledaj odjeljak o cjenama) u kojima nije dress code nagla&scaron;en ali se pretpostavlja. Također, u takvim restoranima, prethodna rezervacija je obavezna.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Napojnice<br />Usluga servisa i svi porezi uključeni su u račun. Ako ste bili zadovoljni možete ostaviti napojnicu u visini od 10% do 12% u hotelu, 10% - 15% u restoranu i 10% - 15% svim uslužnim djelatnostima ( taxi, frizerski salon,...)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Shopping</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Poznati shooping centri:</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- The King&rsquo;s Road in Chelsa, SW1</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Notting Hill: Westbourne Grove and Ledbury Road, W11 Brick&nbsp; Lane area, E1 and E2</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Ulica Oxford: Regent Street (website: </span></span><a href="http://www.regentstreetonline.com/" target="_blank"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">www.regentstreetonline.com</span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">) uključuje: Hamley&rsquo;s toy Emporium, robne kuće sa poznatim i cjenovno prihvatljivijim imenima, poput Selfridges, Marks &amp; Spencer i John Lewis.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Tottenham Court Road, WC1 (elektronička oprema)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Charing Cross Road, WC2 (većinom knjižare)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Piccadily, W1, Waterstones - najpoznatija Londonska knjižara</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Convent Garden, WC2 &ndash; najpopularnije mjesto za shooping</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Old and New Bond Streets, W1 - odlično mjesto ako ste ljubitelji odjeće s potpisom poznatih dizajnera jer se tamo nalaze trgovine poput: Prada i Gucci, a u obližnjoj Conduit Street možete naći dizajnerske kuće poput Issey Miyake i Vivien Westwood.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Također se preporuča obilazak nekih od poznatih londonskih tržnica gdje možete kombinirati kupnju sa razgledavanjem kulturnih znamenitosti. Neke od najpoznatijih tržnica su:</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Camden Lock, Chalk Farm Road, NW1</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Portobello Road, W10 (antikviteti)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Petticoat Lane i Brick Lane, E1 (voće, povrće, nakit,...)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Columbia Road, E2 (cvijeće)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Alfie&rsquo;s Antique Market (antikviteti 20. st.)</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- Borough Market, SE1 (hrana),...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>&Scaron;to i gdje se isplati kupovati suvenire:</strong><span style="text-decoration: underline;"> </span>Ukoliko ste u potrazi za suvenirom koji bi ponjeli iz Londona svojim najmilijima, najbolje mjesto za kupnju je&nbsp;u Oxford ulici, u Piccadilly cirkusu i na ostalim turističkim atrakcijama. Najzanimljiviji su suveniri koji predstavljaju neke od članova kraljevske obitelji. Također, u Harrodsu (Knightsbridge SW1) možete naći mno&scaron;tvo suvenira koji privlače svakodnevno velik broj turista, ali ne samo zbog velikog izbora suvenira, nego i zbog poznatih rasprodaja.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Radno vrijeme:</strong><span style="text-decoration: underline;"> </span>standardno radno vrijeme za sve trgovine je od ponedjeljka do subote od 9:30 - 18:00, iako su neke trgovine otvorene do 20:00. Rijetko se trgovine zatvaraju za vrijeme ručka, i većina ih je otvorena i nedjeljom od 12:00 - 18:00. Kasno večernje otvaranje (obično do 20:00) je utorkom na West Endu i srijedom na Knightsbridge području.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Povrat poreza:</strong><span style="text-decoration: underline;"> </span>većina najpoznatijih trgovina na West Endu nude povrat poreza ( 17.5%) u sklopu Global Refund (vi&scaron;e informacija možete dobiti na broju telefona: 0800 829 373, ili na web stranici: </span></span><a href="http://www.globalrefund.com/" target="_blank"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">www.globalrefund.com</span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">) stanovnicima zemalja koje ne pripadaju Europskoj Uniji.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">U većini trgovina možete plaćati u funtama i u eurima</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Lokalni običaji<br />Sunčanje u toplesu dozvoljeno je na određenim plažama i tolerira se u određenim parkovima. Cigarete se ne smiju prodavati djeci mlađoj od 16 godina. Mjesta u kojima je pu&scaron;enje dozvoljeno kao i ona u kojima je zabranjeno su jasno označena. Monarhija, iako danas samo simbolično, predstavlja značajno i najče&scaron;će podsvjesno divljenje i važnost. Članovi Kraljevske obitelji izazivaju divljenje i svaki njihov čin je popraćen velikom medijskom pažnjom.Stisak ruke je uobičajena gesta naručito prilikom prvog upoznavanja.Naručito se cijeni simboličan poklon, ruža ili čokolada, prilikom dolaska u nečiji dom. Pristojni je sačekati da svi budu usluženi ili uzmu hranu prije nego se počme jesti.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Znamenitosti:</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">City Card - </span></span><a href="http://www.londonpass.com/" target="_blank"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Iskaznica London Pass</strong> </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp; <strong>&scaron;tedi</strong> vrijeme i novac jer <strong>omogućava:</strong><br />&bull;&nbsp;besplatan ulaz ili popust za vi&scaron;e od 55 znamenitosti i atrakcija Londona <br />&bull;&nbsp;vi&scaron;e od 40 dodatnih posebnih pogodnosti, popusta ili besplatnih proizvoda/usluga <br />&bull;&nbsp;besplatan vodič s informacijama<br />&bull;&nbsp;prednost pri ulazu u najposjećenije znamenitosti - Fast Pass<br />&bull;&nbsp;mogućnost &bdquo;besplatne&ldquo; vožnje javnim gradskim prijevozom po Londonu <br /><br />Iskaznica London Pass <strong>uključuje</strong>: čip karticu i vodič s informacijama o glavnim znamenitostima i atrakcijama, popustima i besplatnim specijalnim ponudama, te (ovisno o opciji) kartu za javni gradski prijevoz - Travelcard</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/trafalgarsquaretrgtrafalgar-8-1-1772.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/trafalgarsquaretrgtrafalgar-8-1-1772.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Trafalgar Square (Trg Trafalgar) </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;- Trafalgar trg obuhvaća jednu od najpoznatijih svjetskih galerija National Gallery, koja posjeduje izuzetnu kolekciju slika.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/coventgarden-8-1-1752.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/coventgarden-8-1-1752.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Covent Garden </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">- ulični plesači daju poseban ugođaj ovom mjestu i čine ga zanimljivom turističkom atrakcijom koju morate vidjeti ako ste prvi put u Londonu.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/britishairwayslondoneyeicountyhall-8-1-1659.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/britishairwayslondoneyeicountyhall-8-1-1659.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">British Airways London Eye i County Hall </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;- iako je London Eye sredi&scaron;te znamenitosti,&nbsp;tu je i&nbsp;County Hall, biv&scaron;i dom Velikog londonskog sabora, a danas dom Londonskog Akvarijuma.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/southkensingtonmuseums-8-1-81.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/southkensingtonmuseums-8-1-81.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">South Kensington Museums </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Victoria &amp; Albert muzeji (V&amp;A) spadaju u tri najvažnija muzeja u South Kensintonu - ostali su: Natural History Museum i Science Museum.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/britishmuseumbritanskimuzej-8-1-80.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/britishmuseumbritanskimuzej-8-1-80.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">British Museum (Britanski muzej) </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Britanski muzej je jedan od najljep&scaron;ih svjetskih muzeja.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/stpaulscathedralkatedralasvpavla-8-1-79.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/stpaulscathedralkatedralasvpavla-8-1-79.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">St Paul&rsquo;s Cathedral (Katedrala Sv. Pavla) </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Kupola Katedrale Sv. Pavla je treća najveća na svijetu i jedna od najprepoznatljivijih u Londonu.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/towerhill-8-1-78.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/towerhill-8-1-78.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Tower Hill </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Zloglasna kraljevska utvrda i palača ima 900 godina staru povijest &ndash; od zatvora i mjesta za pogubljenje, do kovnice, arsenala i impresivne zbirke dragulja.</span></span></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/buckinghampalacepalacabuckingham-8-1-77.aspx"><span style="font-family: verdana,geneva;"></span></a></p>
+<p><a href="http://www.puturist.com/destinacije/london/stoposjetiti/buckinghampalacepalacabuckingham-8-1-77.aspx"><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Buckingham Palace (Palača Buckingham) </span></span></a><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">Dom kraljice, mjesto koje je oduvijek bilo jedna od najposjećenijih atrakcija Londona. Svi turisti žele prisustvovati smjeni straže, koja se svakodnevno odvija u 11:30 od travnja do srpnja.</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Veleposlanstvo RH</strong><br /><strong>London</strong> <br />21 Conway Street<br />London W1T 6BN <br />UK <br /><em>Tel.</em> 0044 20 73872022<br /><em>Konz.</em> 73871144 <br /><em>Fax</em> 0044 20 73870310<br /><em>Konz.</em> 73870936</span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;"><strong>Slu</strong>ž<strong>bena stranica zemlje:</strong></span></span></p>
+<p><strong><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">http://www.visitbritain.co.uk/</span></span></strong></p>
+<p><span style="font-family: verdana,geneva;"><span style="font-size: x-small;">&nbsp;</span></span></p>				
+				              </div>
+              <div class="clear"></div>
+                          
+            
+        </div>
+            
+            <div class="right_column">
+            <div class="left_box1">
+				
+					<div class="left_box_inside">
+                                        	<div class="box_title_bg2" style="text-transform: uppercase;">Korisne informacije</div>
+                        <div class="but_left_nav">
+                        <div>
+                        	<div class="cssnav"><a href="http://www.wunderground.com/" target="_blank"><img src="images/over_bg11.jpg" width="198" height="36" /><span>Vrijeme</span></a></div>
+                        <div class="cssnav"><a href="zracne_luke_i_avio_kompanije_.html" title="Zračne luke i popis avio kompanija u Hrvatskoj">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Zračne luke i avio kompanije </span></a></div><div class="cssnav"><a href="putno_osiguranje8.html" title="Putno zdravstveno i osiguranje od otkaza">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Putno osiguranje</span></a></div><div class="cssnav"><a href="najcesca_pitanja_i_odgovori_.html" title="">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Najčešća pitanja i odgovori </span></a></div><div class="cssnav"><a href="sta_sve_moram_znati_prije_ukrcaja_u_avion.html" title="">
+								<img src="images/over_bg11.jpg" width="198" height="36" /><span>Savjeti prije ukrcaja u avion</span></a></div>						                          <div class="cssnav"><a href="http://www.viamichelin.com/" target="_blank"><img src="images/over_bg11.jpg" width="198" height="36" /><span>Viamichelin planer putovanja</span></a></div>
+                          <div class="cssnav"><a href="http://www.mvpei.hr/" target="_blank"><img src="images/over_bg11.jpg" width="198" height="36" /><span>MVP</span></a></div>
+                          
+                         <!-- <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Hotel Accommodation</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Car Rental</span></a></div>
+                          <div class="cssnav"><a href="#" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Other Services</span></a></div>
+                          -->
+                          
+</div>
+</div>
+<div class="clear"></div>
+                    </div>
+					
+					
+					
+					<!-- -->
+                
+              </div>
+ <div class="space_box"></div>
+                <div class="clear"></div>
+                <div class="left_box1">
+                	<div class="left_box_inside">
+                   	  <div class="box_title_bg3">NEWSLETTER</div>
+                        <div class="but_left_nav">
+                        <div>
+                        <div class="enter_email">&nbsp;&nbsp;&nbsp;Unesite e-mail adresu:</div>
+                        <div class="enter_email_field"><input name="" type="text" style="width:170px;" /></div>
+                        <div class="subscribe_container">
+                          <div class="subscribe_button"><a href="#"><img src="images/subscribe_button.jpg" width="77" height="24" alt="" /></a></div></div>
+                        
+                        </div>
+</div>
+<div class="clear"></div>
+                    
+                    
+                    </div>
+                
+                </div>
+               <!--  <div class="left_box1">
+               	<div class="left_box_inside">
+                   	  <div class="box_title_bg4">&nbsp;&nbsp;&nbsp;PARTNERI</div>
+                        <div class="but_left_nav">
+                        <div>
+                          <div class="cssnav"><a href="http://coner.hr/wellness/" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Wellness</span></a></div>
+                          <div class="cssnav"><a href="http://www.airlinesconnection.com/" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Airlineconnection</span></a></div>
+                          <div class="cssnav"><a href="http://www.aua.com/hr/eng" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Austrian Airlines</span></a></div>
+                          <div class="cssnav"><a href="http://www.croatiaairlines.com/" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Croatia Airlines</span></a></div>
+                          <div class="cssnav"><a href="http://www.czechairlines.com/en/worldwide/portal_intropage.htm" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>Czech Airlines</span></a></div>
+                            <div class="cssnav"><a href="http://www.hgk.hr/wps/portal/" title=""><img src="images/over_bg11.jpg" width="198" height="36" /><span>HGK</span></a></div>
+                            
+                          
+</div>
+</div>
+<div class="clear"></div>
+                    
+                    
+                    </div> 
+                
+                </div>-->
+				                <div class="space_box"></div>
+           <div class="clear"></div>
+                <div class="space_box"></div>
+                <div class="clear"></div>
+                <div class="left_box1">
+                	<div class="left_box_inside">
+                   	  <div class="box_title_bg5">MAISTRA</div>
+                      	<div class="maestro_banner"><a href="http://www.maistra.hr/"><img src="images/maistra_banner.jpg" width="156" height="142" alt="" /></a></div>
+                   	  <div class="clear"></div>
+                    
+                    
+                    </div>
+                
+                </div>
+                <div class="clear"></div>
+                <div class="space_box"></div>
+                <div class="clear"></div>
+               <!-- <div class="left_box1">
+                	<div class="left_box_inside">
+                   	  <div class="box_title_bg6">DESTINACIJE</div>
+                   	  <div class="business_jet_title">POSLOVNI ČARTER</div>
+                        <div class="biz_jet_pic"><img src="images/Destinations_pic.jpg" width="173" height="139" alt="" /></div>
+                        <div class="just_choose_but"><a href="http://radius.timalweb.com/forma/poslovni.html"><img src="images/just_choose_button.jpg" width="173" height="37" alt="" /></a></div>
+                   	  <div class="clear"></div>
+                    
+                    
+                    </div>
+                
+                </div> -->
+            
+            </div>        
+        </div>
+     
+     
+     </div>
+     
+
+</div>
+
+<div class="footer_container">
+	<!-- <a href="#" class="footer_links">About us</a>&nbsp;&nbsp;&nbsp;   <a href="#" class="footer_links">Contact Us</a>&nbsp;&nbsp;&nbsp;   <a href="#" class="footer_links">Site Map</a> &nbsp;&nbsp;&nbsp;<a href="#" class="footer_links">General Terms and Conditions</a>&nbsp;&nbsp;&nbsp;<a href="#" class="footer_links">    Method of Payment</a><br />
+    -->
+    <div class="container1" style="width:400px;">
+    <div class="container1_1"> &copy;2010. Travel Club - Member of Radius</div>
+<div class="container1_2"><img src="images/footer_icons.jpg" width="78" height="37" alt="" /></div><div class="container1_3">Amcham</div>
+</div>
+</div>
+</body>
+</html>

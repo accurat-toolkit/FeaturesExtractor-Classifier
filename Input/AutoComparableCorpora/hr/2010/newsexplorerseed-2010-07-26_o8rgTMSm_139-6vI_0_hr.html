@@ -1,0 +1,1133 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dp="http://www.dpawson.co.uk">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+   
+      <meta http-equiv="Content-Language" content="hr">
+      <title></title>
+      <link href="/css/adriatica_v3.css?v=1.100" rel="stylesheet" type="text/css">
+      <link href="/css/offer_v3.css?v=1.59" rel="stylesheet" type="text/css">
+      <link href="/css/commons/calendar.css?v=1.0" rel="stylesheet" type="text/css">
+      <link href="/css/adriatica_n.css?v=1.0" rel="stylesheet" type="text/css">
+      
+      <script type="text/javascript" src="/jscripts/yui/yahoo-dom-event/yahoo-dom-event.js?v=2.3.1"></script>
+      <script type="text/javascript" src="/jscripts/yui/animation/animation-min.js?v=2.3.1"></script>
+      
+      <script src="/jscripts/commons/common.js?v=1.22" type="text/javascript"></script>
+      <script src="/jscripts/commons/dates.js?v=1.0" type="text/javascript"></script>
+      <script src="/jscripts/commons/calendar.js?v=1.1" type="text/javascript"></script>
+      <script src="/jscripts/commons/forms.js?v=1.22" type="text/javascript"></script>
+      <script src="/jscripts/commons/anim.js?v=1.1" type="text/javascript"></script>
+      
+      <script src="/jscripts/nav_v3.js?v=1.2" type="text/javascript"></script>
+      
+      <script type="text/javascript">
+      // namespaces
+      var $D = YAHOO.util.Dom;
+      var $E = YAHOO.util.Event;
+      
+      // calendar
+      var Calendar = window.Calendar || {};
+      Calendar.options.rules = ['futureOnly'];
+      Calendar.options.onclick = function() {Calendar.updateToDate('dateTo', 7)};
+      Calendar.options.onstart = function() {Calendar.clearAllInstances(['dateFrom','dateTo'])};
+      
+      // set calendar dates
+      if (window.location.href.indexOf('adriatica.cs')>-1)
+      var host = 'adriatica.cs_cb';
+      else
+      var host = 'adriatica.net_cb';
+      
+      var dateData = {
+      dateFrom: null,
+      dateTo: null,
+      offset: 7
+      }
+      
+      if (Utils.readDecodedCookie('Adriatica.ODMOR.GODINAPOCETKA', host) && Utils.readDecodedCookie('Adriatica.ODMOR.MJESECPOCETKA',
+      host) && Utils.readDecodedCookie('Adriatica.ODMOR.DANPOCETKA', host))
+      dateData.dateFrom = new Dates.date(Utils.readDecodedCookie('Adriatica.ODMOR.GODINAPOCETKA', host), Utils.readDecodedCookie('Adriatica.ODMOR.MJESECPOCETKA',
+      host), Utils.readDecodedCookie('Adriatica.ODMOR.DANPOCETKA', host));
+      
+      if (Utils.readDecodedCookie('Adriatica.ODMOR.GODINAKRAJA', host) && Utils.readDecodedCookie('Adriatica.ODMOR.MJESECKRAJA',
+      host) && Utils.readDecodedCookie('Adriatica.ODMOR.DANKRAJA', host))
+      dateData.dateTo = new Dates.date(Utils.readDecodedCookie('Adriatica.ODMOR.GODINAKRAJA', host), Utils.readDecodedCookie('Adriatica.ODMOR.MJESECKRAJA',
+      host), Utils.readDecodedCookie('Adriatica.ODMOR.DANKRAJA', host));
+      
+      if (dateData.dateFrom!=null && dateData.dateTo!=null) {
+      dateData.offset = dateData.dateTo.days-dateData.dateFrom.days;
+      }
+      
+      $E.addListener(window, "load", function(e, dateData) { var start = dateData.dateFrom; var offset = dateData.offset; Forms.setCurrentDates(document.getElementById('searchForm'),
+      'dateFrom', 'dateTo', start, offset) }, dateData);
+      </script>
+      <script src="/jscripts/common.js?v=1.13" type="text/javascript"></script>
+      <script src="/jscripts/date_funkcije.js" type="text/javascript"></script>
+      <script src="/jscripts/calendar_generic_v004.js?v=1.1" type="text/javascript"></script>
+      
+      <script type="text/javascript">
+function openNapomene( getURL)
+{
+var prozor=window.open( getURL, '_blank', 'width=603,height=350,toolbar=0,location=0,directories=0,status=0,menuBar=0,scrollBars=1,resizable=0' ) ;
+// w.document.title=' ';
+return prozor;
+}
+</script><style type="text/css">/* ---- [ MAIN CONTAINER ]---- */
+#content { border-width: 0 1px 0 1px; }
+
+/* ---- [ HEADER ]---- */
+
+
+
+/* ---- [ SORTIRANJE/FILTRIRANJE ]---- */
+div.dropdownz { padding: 10px 0 px 10px; }
+div.sort, div.filt {	display:  }
+div.dropdownz select { width: 100%; font-size:10px;  }
+div#sort { padding:5px 0 1px 1px }
+div#filters div, div#sort { padding: 2px 0 0 1px; }
+div.sort {  float:left; width:265px; }
+div.filt {  float:right; width:265px;  }
+div.filt .naslov, div.sort .naslov {
+display: block;
+font-weight: bold;
+color: #ff6300;
+margin: 0 0 .4em 0;
+padding: .2em 0 .4em 26px;
+font-size: 1em;
+background: url(/img/v3/h2-bg.gif) no-repeat left center;
+}
+
+
+/* ---- [ ZASTAVICE ]---- */
+#languages{ visibility: ; }
+
+
+
+/* ---- [ RESULTS PAGES - POSTAVKE PRETRAŽIVANJA ]---- */
+.paramsBlock {	background-color: #dde7f3;	padding: 10px 0; margin-bottom: 20px; }
+/*.paramsBlock br {	display: none; }  .result-reserve span br*/
+.paramsBlock p { padding-left: 10px; }
+.paramsBlock h2 {	background: none;	padding: 0 0 10px 10px;}
+.deptPort { background-color: #F2F5FC; padding: 0 10px 20px 10px; margin: 0px; }
+.deptPort p { margin: 0px; }
+
+
+/* ---- [ ABSTRACT OBJECT ]---- */
+.result-img a {	display: block; clear: left; width: 19%; }
+.result-left ul { margin-top: 5px;  }
+.result-left div.result-price-subunit { float: right;  background-color: #fff; width: 25%; }
+.result-left .result-price-subunit div { text-transform: none;	background-color: #FFF; }
+.result-price-subunit .result-price p { font-weight:  normal; }
+.result-price-subunit .result-reserve { text-align: center; padding-top: 15px }
+
+
+/* ---- [ MAIN SEARCH ]---- */
+
+#search-simple { border: none; }
+
+
+.linkovi a {
+display:  block;
+margin-bottom: 4px;
+}
+
+
+
+/* ---- [ IKONICE ]---- */
+
+a.icon:link, a.icon:visited {
+font-size: 10px;
+line-height: 12px;
+float: left;
+display: block;
+text-align: left;
+padding: 0 5px 1px 30px;
+margin: 4px 5px;
+background-position: 0 center;
+background-repeat:  no-repeat;
+}
+
+* html a.icon:link.gal2, * html a.icon:visited.gal2 { margin: 4px 5px 5px 0; border:1px solid #ffffff }
+
+a.icon:hover {	background-position: -975px center; }
+a.icon.r:link, a.icon.r:visited { float: right; }
+a.icon.nofloat:link, a.icon.nofloat:visited { float: none; }
+
+a.icon.lm:link, a.icon.lm:visited {
+text-transform: uppercase;
+font-weight: bold;
+line-height: 10px;
+color: #fff;
+padding: 2px 5px 2px 16px;
+margin-left: 30px;
+background-image: url(/icon/icon_lm.gif);
+background-position: 0 0;
+
+}
+
+a.icon.lm:hover {	background-position: 0 -75px; }
+a.icon.s:link, a.icon.s:visited { float: none; margin: 0 0 1px 10px; padding: 3px 0 3px 24px; background-position: 0 3px; }
+a.icon.s:hover { background-position: 0 3px; }
+a.icon.cj:link, a.icon.cj:visited {	background-image: url(/icon/icon_cjenik.gif); padding: 6px 5px 7px 30px; }
+a.icon.info:link, a.icon.info:visited { background-image: url(/icon/icon_info.gif);	padding: 6px 5px 7px 30px; }
+a.icon.rez:link, a.icon.rez:visited { background-image: url(/icon/icon_upit.gif);	padding: 6px 5px 7px 30px; }
+a.icon.izb2:link, a.icon.izb2:visited { background-image: url(/icon/icon_mojizbor.gif); padding: 6px 5px 7px 30px; }
+a.icon.gal2 { background-image: url(/icon/icon_galerija.gif); margin:5px 5px 5px 0px; }
+a.icon.izb { background-image: url(/icon/icon_mojizbor.gif); }
+a.icon.upt { background-image: url(/icon/icon_upit.gif); }
+a.icon.gal { background-image: url(/icon/icon_galerija.gif); }
+a.icon.srch { background-image: url(/icon/icon_trazi.gif); }
+
+/* ---- [ ABSTRACT OBJECT ]---- */
+.result-img { width: 20%;}
+.result-left { width: 79%; }
+
+
+
+/* ---- [ STATIC ABSTRACT OBJECT -- SPECIAL OFFERS ]---- */
+span.lm-style-unit-oldprice {
+background: url(/last_minute/img/xprice.gif) no-repeat center;
+height: 12px;
+display: block;
+font-size: 11px;
+color: #555;
+font-weight: normal;
+margin-bottom: 3px
+}
+.lm-style-unit-oldprice span, .lm-style-subunit-oldprice span { padding-left: 3px; font-size: 11px; color: #555; font-weight: normal;}
+.lm-style-unit-newprice { display:block; font-size: 14px; font-weight: bold; }
+.lm-style-subunit-newprice { font-size: 14px; color: #ff6300; font-weight: bold; }
+.lm-style-unit-newprice span, .lm-style-subunit-newprice span { padding-left: 3px; font-size: 14px; }
+.no-lm-price {	font-size: 14px; color: #ff6300; font-weight: bold; }
+span.lm-style-subunit-oldprice {
+background: url(/last_minute/img/xprice.gif) no-repeat center;
+height: 12px;
+margin-top: 5px;
+font-size: 11px;
+margin-right: 7px;
+color: #555;
+font-weight: normal
+}
+
+#rotery-link a:link, #rotery-link a:visited{display:block; background: #082194; color:#FFF; text-align:center; font-size:1.1em;}
+#rotery-link a:hover{background: #EF643B; color:#FFF;}
+
+/* ---- [ RESULTS PAGES - NO DATA]---- */
+.results-param-text { margin:0 }
+.noParams .paramsBlock .ie {	display: none; }
+
+/* ---- [ ALT. DETAIL POP UP + ALT. DETAIL ]---- */
+.main { font-size: 11px; font-family: verdana, arial, tahoma, sans-serif; color: #555; padding:0px 9px 20px 9px; }
+a:link, a:visited { color: #06469c; text-decoration: none; border: 0; }
+a:hover { color: #ff6300; border-color: #06469c; }
+#title h2, .unit-head h2 { font-size: 1.2em; text-transform: uppercase; margin: 0 0 18px 0; background: none; padding: 0 }
+#title img { margin: 0 0 0 .5em; }
+div.clear { clear: both; padding: 0 0 1px 0; margin: 0; }
+
+.main span.border, .unit span.border { display: block; background: transparent; font-size: 1px; }
+.main .border .b1, .main .border .b2, .main .border .b3, .main .border .b4, .unit .border .b1, .unit .border .b2, .unit .border .b3, .unit .border .b4 { display: block; overflow: hidden; }
+.main .border .b1, .main .border .b2, .main .border .b3, .unit .border .b1, .unit .border .b2, .unit .border .b3  { height: 0; }
+.main .border .b2, .main .border .b3, .main .border .b4, .unit .border .b2, .unit .border .b3, .unit .border .b4  { border-left: 1px solid; border-right: 1px solid; }
+.main .border .b1, .unit .border .b1  { margin: 0 0; }
+.main .border .b2, .unit .border .b2 { margin: 0 0; border-width: 0 0; }
+.main .border .b3, .unit .border .b3 { margin: 0 0; }
+.main .border .b4, .unit .border .b4 { height: 0; margin: 0 0; }
+
+
+* html .main div.container, * html .unit div.container   { height: 1%; }
+
+.main span.border b, .unit span.border b { background-color: #fff; border-color: #7598D8 ; color: #7598D8 ; }
+.main span.border b.b1, .unit span.border b.b1 { background-color: #7598D8 ; }
+
+div#summary { margin: 1em 0 1em; }
+div#summary #mainImg { float: left; width: 240px; margin: 0 1em 0 0; }
+
+div#summary #mainImg div.container { border: none }
+
+div#summary #mainImg img { display: block; margin: 0; padding: 0; width: 230px; height: 152px; }
+div#summary p { padding: 0; margin: 0 1em 1em 1em; }
+div#summary ul { margin: 0 0 0 240px; padding-left:25px; }
+div#summary div.block, div#summary div.all_units  { margin-top:5px; }
+div#summary div.block p { margin:3px 0 }
+* html div#summary li { line-height: 14px; }
+div#summary h2 {  margin: 0 5px 5px 250px; }
+* html div#summary h2 {	height: 1%; }
+
+div#units, div.unit-content, div.unit-cjenik, div.unit-footer  { clear: both; }
+
+.sifra, .sifrax { font-size: .8em; color: #8C8C8C; font-weight: normal;  }
+div.unit { margin-bottom: 1em; padding-left: 1em }
+div.unit span.sifra, .sifrax { margin-left: .5em; }
+div.unit h2 { float: left; width: 60%; font-style: normal; font-size: 1.2em; margin-bottom: 0; }
+div.unit h3 { font-size: 1em; margin-bottom: .5em; }
+div.unit h2 p { font-size: .85em; font-weight: normal }
+div.unit h2 img { margin: 0 .5em; vertical-align: middle; }
+div.unit div.price { float: right; text-align: right; color: #ff6300; font-size: 1.3em; font-weight: bold; margin: 0; width: 20%; }
+div.unit div.price .pers { margin:0; padding:0; color:#555; font-size: .7em; font-weight: normal }
+div.unit-head { margin-bottom: .5em; padding: .35em; background: #F0F0F0;}
+div.unit-content { margin-bottom: 1em; }
+div.unit-content img { float: left; margin: 0 .5em .5em 0; }
+div.unit-content p { margin-left: 150px }
+
+span.top { text-align: right; margin: 0 0 1.5em 20px; }
+span.closeme { text-align: right; margin: 0 0 1.5em 0;  }
+div.unit_infos { clear: left; margin-bottom: 15px; padding-top: 15px }
+div.unit_infos td.unit_pix { width:145px; }
+
+div.unit_infos .unit_text div.mainHeading {
+font-weight: bold;
+padding: 4px 5px 4px 25px;
+margin: 4px;
+background-color: #F0F0F0 ;
+background-repeat: no-repeat;
+background-position: center left;
+}
+
+div.unit_infos .unit_text div.mainHeading.default { background-image: url(/hotels/img/det/head_opis.gif); }
+div.unit_infos .unit_text div.mainHeading.plaze { background-image: url(/hotels/img/det/head_opis_pl.gif); }
+div.unit_infos .unit_text div.mainHeading.zicara { background-image: url(/ski/img/head_opis_zicara.gif); }
+div.unit_infos .unit_text h4 { font-weight:bold; margin-top:8px }
+div.unit_infos .unit_text img { float:left; clear:right; padding:5px 6px 5px 0 }
+
+a#notes { font-weight: bold; display:block; margin:15px 0 8px 0; }
+
+div#cruiseNotes    { margin-bottom:10px }
+div#cruiseNotes h1 { display:none }
+div#cruiseNotes h2 { font-size:11px; margin:10px 0 3px 0 }
+div#cruiseNotes p  { margin:0; }
+
+div.unit_infos .unit_pix p { margin:5px 0; }
+
+td.unit_text table {	background: 0;	margin: 6px 0;	border: solid #e5e5e5;	border-width: 1px 0 0 1px;}
+td.unit_text table td {	border: solid #e5e5e5;	border-width: 0 1px 1px 0;	padding: 2px;}
+table td.h { background-color: #efefef; }
+
+
+
+
+/* cjenici */
+div.unit-cjenik {	display: none; }
+
+div.unit-cjenik table {
+width: 99%;
+margin: 0 0 2em 0;
+position: relative;
+left: 2px;
+font-size: 1em;
+text-align: center;
+border-collapse: collapse;
+empty-cells: show;
+}
+
+div.unit-cjenik td { padding: .2em;	background-color: transparent; color: #ff6300; border: 1px solid #d6d6d6; }
+div.unit-cjenik tr.h td, div.unit-cjenik td.h {	color: #333;  white-space: nowrap; }
+div.unit-cjenik ul { margin-bottom: 2em; margin-left: 2em; }
+div.unit-cjenik div { display: block; overflow: auto; width: 99%; padding: 0 2px 0 0; margin-bottom: .5em; }
+* html div.unit-cjenik div { position: relative; }
+div.price .desc { color: #3f3f3f; font-size: .7em; font-weight: normal;}
+.desc  { border: none; padding: 0; }
+
+a.top:link, a.top:visited  {
+padding: .3em 20px .3em 0;
+background/**/: url(/b2bf/img/icons/default/icon_up.gif) no-repeat center right; /* IE 5.0 ovo ne vidi */
+}
+
+a.closeme:link, a.closeme:visited  {
+padding: .3em 20px .3em 0;
+background/**/: url(/special/img/icon_close.gif) no-repeat center right; /* IE 5.0 ovo ne vidi */
+}
+
+span.top { text-align: right; margin: 0 0 1.5em 20px; }
+div.top { text-align: right; margin: 0 0 1.5em 0; }
+
+p.sifra { margin: 0 0 1.5em 0; }
+#content-main #summary { margin-top:  15px;	background-color: #fff;}
+#intro h1 img { padding-left: 5px }
+
+
+#result-content .result-left li{margin:0; padding:0;}
+#result-content .result-left ul{margin:0; padding:0;}
+#result-content .result-left ul{ list-style-position: outside;  }
+#result-content .vikendi2009 ul{ list-style-position: inside; list-style-type:disc; }#box-main{padding:8px 0 8px 0;}
+#box-content-hg{
+border: solid 1px #e2e2e2; width: 30%; float: left; margin:0 0 7px 8px; padding:6px 0 0 5px; height:145px;
+}
+
+#box-content{
+width:46%; border: solid 1px #e2e2e2; float: left; margin:0 0 5px 7px; padding:5px 0 0 5px; height:115px;
+}
+
+#box-content img{margin:0 5px 0 0; float: left;}
+
+#box-content-hg{height:280px;}
+#box-content-hg .title{ background-color: #F2F5FC; color:#EF643D; font-weight: bold; height:32px; padding:4px 0 4px 4px; margin-right:9px; }
+#box-content-hg .title p{
+margin-right:5px;
+}
+#box-content-hg .content{height:220px}
+#box-content-hg img{ margin:0 0 4px 0;}
+#box-content-hg p{margin:0;}
+
+#box-content-hg .title a:link, #box-content-hg .title a:visited, #box-content-hg .title a:hover{color:#EF643D; display: block;}
+
+.more{ border-top: solid 1px #e2e2e2; width:159px; text-align: right; padding: 3px 4px 0 0; }
+.more-advent{ border-top: solid 1px #e2e2e2; width:158px; float: right; text-align: right; padding: 3px 4px 0 0; margin:-20px 5px 0 85px;  }
+#header-journey{width:100%; height:140px;}
+#header-journey a:link, div#header-journey a:visited { color: #fff; font-weight: bold; text-decoration: underline; }
+#header-journey a:hover { color: #ff6300; }
+
+#rotery-link a:link, #rotery-link a:visited{display:block; background: #082194; color:#FFF; text-align:center; font-size:1.1em;}
+#rotery-link a:hover{background: #EF643B; color:#FFF;}
+
+/*-------- adventi -----------*/
+.adventi-sub{text-transform: uppercase; margin-right:5px; }
+
+#intro .catalogs{ background: url(/img/v3/icons/arow.gif) #FFF; display: block; width: 160px; padding: 5px;  background-repeat: no-repeat; background-position: right center; font-weight: bold; float: right; border: solid 1px #EF643D; margin-top: 15px;
+}
+#intro .catalogs a{ display: block;}
+
+/* IE5-6 */
+
+* html #box-content, * html #box-content-hg img
+{ overflow: hidden; }
+.pictograms { width: 280px; padding-top: 10px }
+.pictograms a img { border: 1px solid #f0f0f0; margin: 1px; padding: 1px }
+.pic a.aat-gall { display: block; font-weight: bold; margin-top: 4px; }
+</style><style type="text/css">
+
+
+#result-content .result-left p { font-weight:normal; }
+#result-content .result-left p span { font-weight:bold; }
+#result-content .result-left ul {margin:0; padding:0; }
+#result-content .result-left li { margin:0; padding:0; list-style-position:outside; }
+a.link_ture:link, a.link_ture:visited { background-image:url(/icon/upit.gif);background-repeat:no-repeat;display:block;font-weight:bold;height:25px;text-align:right;text-decoration:none;width:96px;padding-top:5px; }
+a.link_ture:hover { background-image:url(/icon/upit_hover.gif); }
+a.icon { line-height:1.2em; }
+.detail-table { background-color: #fff;padding: 0 0 7px 0; margin:0 0 16px 0; }
+.detail-table td { border:1px solid #E6E6E6; }
+.detail-table td.bez { border: none; }
+.detail-text br { display:block; }
+.detail-includ { padding: 10px; margin-bottom: 15px; }
+.detail-text { float: none; padding:10px; width: 96%; }
+.detail-text .pic { float: right; padding: 0 0px 15px 15px; }
+.detail-text .text { text-align: left; padding: 0 0 20px 0; }
+#intro { margin-bottom: 15px; }
+
+.detail-cjenik { overflow: auto; height: 400px; }
+
+</style><script type="text/javascript">
+Forms.messages.invalidDate = "Datum nije ispravan!";
+Calendar.loc.months = ["sijeèanj","veljaèa","ožujak","travanj","svibanj","lipanj","srpanj","kolovoz","rujan","listopad","studeni","prosinac"];
+Calendar.loc.days = ['P','U','S','È','P','S','N'];
+</script></head>
+   <body>
+      <div id="container-top">
+         <div id="header-top">
+         <div id="adrLogo"><a href="/home/home_hr.htm"><img src="/img/adr-logo.jpg"></a><div id="headerTools">
+         <ul class="links">
+         <li class="parent"><a href="#">Izaberi jezik</a><img src="/images/header/flags/hr.gif" alt="Hr" style="margin:0 0 -2px 2px;">
+         <ol id="languages"><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_cz.htm"><img src="/images/header/flags/cz.gif" alt="Cs"
+         /> Cs</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_de.htm"><img src="/images/header/flags/de.gif" alt="De"
+         /> De</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_en.htm"><img src="/images/header/flags/en.gif" alt="En"
+         /> En</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_es.htm"><img src="/images/header/flags/es.gif" alt="Es"
+         /> Es</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_fr.htm"><img src="/images/header/flags/fr.gif" alt="Fr"
+         /> Fr</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_hr.htm"><img src="/images/header/flags/hr.gif" alt="Hr"
+         /> Hr</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_ita.htm"><img src="/images/header/flags/ita.gif" alt="It"
+         /> It</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_hu.htm"><img src="/images/header/flags/hu.gif" alt="Hu"
+         /> Hu</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_pl.htm"><img src="/images/header/flags/pl.gif" alt="Pl"
+         /> Pl</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_ro.htm"><img src="/images/header/flags/ro.gif" alt="Ro"
+         /> Ro</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_sk.htm"><img src="/images/header/flags/sk.gif" alt="Sk"
+         /> Sk</a></li><li><a href="/pub/daleka_putovanja/122797-9_detail_aat_slo.htm"><img src="/images/header/flags/slo.gif" alt="Sl"
+         /> Sl</a></li></ol>
+         
+         <li><a href="/reservation/statusupita_hr.htm">Login za goste</a></li>
+         <li><a href="/aff/data_hr.aw">Affiliate login</a></li>
+         <li class="parent"><a href="#">B2B login</a><ol id="login">
+         <li><a href="/b2b/main_hr.aw">Partner login</a></li>
+         <li><a href="http://onlineclient.adriatica.net/airline_tickets/login_hr.htm">Avionske karte</a></li>
+         </ol>
+         </li>
+         <li><a href="/iznajmljivaci/portal_za_iznajmljivace_hr.htm">Za iznajmljiva&#269;e i hotele</a></li>
+         </li>
+         </ul>
+         <ul class="links" style="margin-top:48px;">
+         <li><a href="http://www.adriatica.net/hr/o-nama/info_hr.htm">O nama</a></li>
+         <li><a href="/contact/index_hr.htm">Kontakt</a></li>
+         </ul>
+         </div>
+         </div>
+         </div>
+         
+         <div id="content-top">
+            <div id="contentMain-top">
+               <div id="offerSidebar">
+                  <style>
+                  .showMe { display: block }
+                  .hideMe { display: none }
+                  </style><script type="text/javascript">
+                  // PONUDA
+                  function showofferNav()
+                  {
+                  document.getElementById("show_hide_offerNav").style.display="block";
+                  }
+                  
+                  function hideofferNav()
+                  {
+                  document.getElementById("show_hide_offerNav").style.display="none";
+                  }
+                  
+                  function changeofferNav()
+                  {
+                  if (document.getElementById("show_hide_offerNav").style.display=="none")
+                  {
+                  showofferNav();
+                  } else
+                  {
+                  hideofferNav();
+                  }
+                  }
+                  
+                  // INFO
+                  function showinfoNav()
+                  {
+                  document.getElementById("show_hide_infoNav").style.display="block";
+                  }
+                  
+                  function hideinfoNav()
+                  {
+                  document.getElementById("show_hide_infoNav").style.display="none";
+                  }
+                  
+                  function changeinfoNav()
+                  {
+                  if (document.getElementById("show_hide_infoNav").style.display=="none")
+                  {
+                  showinfoNav();
+                  } else
+                  {
+                  hideinfoNav();
+                  }
+                  }
+                  </script><div>
+                  <div id="navi-offer" onclick="changeofferNav()" style="cursor:pointer;">Ponuda</div>
+                  <div id="nav-sidebar-new">
+                  <ul id="show_hide_offerNav" style="display: block;">
+                  <li id="navi_sjena"><a href="/home/home_hr.htm">Poèetna stranica</a></li>
+                  <li><a href="/last_minute/last_minute_hr.htm">Last Minute</a></li>
+                  <li class="parent"><a class="back" href="/ski/ski_hr.htm">Skijanje</a><ul class="active-aktualno">
+                  <li><a class="sjena-mali" href="/ski/austria_hr.htm">Skijanje Austrija</a></li>
+                  <li><a href="/ski/italy_hr.htm">Skijanje Italija</a></li>
+                  <li><a href="/ski/france_hr.htm">Skijanje Francuska</a></li>
+                  <li><a href="/ski/slovenia_hr.htm">Skijanje Slovenija</a></li>
+                  <li><a href="/ski/bosnia_and_herzegovina_hr.htm">Skijanje Bosna i Hercegovina</a></li>
+                  <li><a href="/hr/skijanje/bugarska.htm">Skijanje Bugarska</a></li>
+                  </ul>
+                  </li>
+                  <li class="parent"><a class="back" href="#">Privatni smještaj</a><ul>
+                  <li><a class="sjena-mali" href="/private/main_hr.htm">Apartmani, sobe i kuæe</a></li>
+                  <li><a href="/agroturizam/agroturizam_hr.htm">Agroturizam</a></li>
+                  <li><a href="/villas/villas_hr.htm">Vile</a></li>
+                  <li><a href="/plitvice/plitvice_hr.htm">Plitvice</a></li>
+                  </ul>
+                  </li>
+                  <li class="parent"><a class="back" href="#">Hoteli u Hrvatskoj</a><ul>
+                  <li><a class="sjena-mali" href="/hotels/hotels_hr.htm">Hoteli u regiji</a></li>
+                  <li><a href="/hotels/croatia_hr.htm">Hoteli u Hrvatskoj</a></li>
+                  <li><a href="/hr/hoteli/mali_hoteli.htm">Mali hoteli</a></li>
+                  <li><a href="/resorts/resorts_hr.htm">Turistièka naselja</a></li>
+                  <li><a href="/hotels/hotelspod_hr__5g4ji3i3oh5g5ji3p__.htm">Zagreb i okolica</a></li>
+                  <li><a href="/hotels/hotelspod_hr__5g4ji3i3nh5g5ji3i__.htm">Hoteli – Plitvièka jezera</a></li>
+                  <li><a href="/weekend/index_hr.htm">Vikend ponuda</a></li>
+                  <li><a href="/green_summer/index_hr.htm">Ljetovanje u zelenom</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="/wellness/wellness_hr.htm">Wellness</a></li>
+                  <li><a href="/hr/odmor/mediteran.htm">Mediteran / Egipat</a></li>
+                  <li><a href="/europski_gradovi/main_hr.htm">Europska putovanja</a></li>
+                  <li><a href="/daleka_putovanja/index_hr.htm">Daleka putovanja</a></li>
+                  <li><a href="/hotels/world_hr.htm">Hoteli u svijetu</a></li>
+                  <li><a href="/rentacar/rentacar_hr.htm">Rent-a-car</a></li>
+                  <li><a href="/lighthouses/lighthouses_hr.htm">Svjetionici</a></li>
+                  <li class="parent"><a class="back" href="/hr/odmor/krstarenja.htm">Krstarenja</a><ul>
+                  <li><a class="sjena-mali" href="/cruise/adriatic_cruise_hr.htm">Jadran</a></li>
+                  <li><a href="/cruise/european_cruise_hr.htm">Europa</a></li>
+                  <li><a href="/cruise/world_cruise_hr.htm">Svijet</a></li>
+                  </ul>
+                  </li>
+                  <li class="parent"><a class="back" href="/charter/charter_hr.htm">Nautika</a><ul>
+                  <li><a class="sjena-mali" href="/pub/charter/sailboats/index_hr.htm">Jedrilice</a></li>
+                  <li><a href="/pub/charter/sailboats/catamarans/index_hr.htm">Katamarani</a></li>
+                  <li><a href="/pub/charter/motor_boats/yachts/index_hr.htm">Jahte</a></li>
+                  <li><a href="/pub/charter/motor_boats/powerboats/index_hr.htm">Gliseri</a></li>
+                  <li><a href="/sailing_school/sailing_school_hr.htm">Škola jedrenja</a></li>
+                  <li><a href="/hr/posebna-ponuda/guleti.htm">Luksuzni guleti</a></li>
+                  </ul>
+                  </li>
+                  <li class="parent"><a class="back" href="/hr/posebna-ponuda/grupe.htm">Ponuda za grupe</a><ul>
+                  <li><a class="sjena-mali" href="http://www.adriatica.net/hr/posebna-ponuda/grupe_hr.htm">Grupe</a></li>
+                  <li><a href="http://www.adriatica.net/hr/posebna-ponuda/grupe/apsolventska_putovanja.htm">Apsolventska putovanja</a></li>
+                  <li><a href="http://www.adriatica.net/hr/posebna-ponuda/grupe/maturalna_putovanja.htm">Maturalna putovanja</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="/hr/posebna-ponuda/sajmovi.htm">Sajmovi i kongresi</a></li>
+                  </ul>
+                  </div>
+                  <div id="navi-guide"><a href="/destinations/hrvatska_hr.htm" style="color:#ffffff;">Hrvatska</a></div>
+                  <div id="navi-info" onclick="changeinfoNav()" style="cursor:pointer;">Kutak za gosta</div>
+                  <div id="nav-sidebar-new">
+                  <ul id="show_hide_infoNav" style="display: block;">
+                  <li id="navi_sjena"><a href="/jadran/faq_hr.htm">FAQ</a></li>
+                  <li><a href="/reservation/main_hr.htm">Kako rezervirati?</a></li>
+                  <li><a href="/guest_info_hr.htm">Ostale informacije</a></li>
+                  <li><a href="/reservation/placanje_hr.htm">Na&#269;ini pla&#263;anja</a></li>
+                  <div style="padding:2px 0 6px 2px;"><a target="_new" href="http://www.visa.com/" style="padding: 0pt; display: inline; background-image:
+                  none;"><img src="/img/logos/visa23.gif" alt="VisaCard" title="VisaCard" width="37" height="23" border="0" style="padding-right:3px;"></a><a
+                  target="_new" href="http://www.americanexpress.hr/" style="padding: 0pt; display: inline; background-image: none;"><img src="/img/logos/americanexpress_23.jpg"
+                  alt="American Express" title="American Express" width="29" height="23" border="0" style="padding-right:3px;"></a><a target="_new"
+                  href="http://www.mastercard.com/" style="padding: 0pt; display: inline; background-image: none;"><img src="/img/logos/mastercard_23.gif"
+                  alt="MasterCard" title="MasterCard" width="37" height="23" border="0" style="padding-right:3px;"></a><img src="/img/logos/diners23.gif"
+                  alt="DinersCard" title="DinersCard" width="30" height="23" border="0"></div>
+                  </ul>
+                  </div>
+                  <script>
+                  function convert(value) {
+                  var toValue = document.getElementById('valueTo');
+                  var toCurrency = document.getElementById('valutaTo');
+                  var fromCurrency = document.getElementById('valutaFrom');
+                  
+                  toValue.value = convert_currencies(fromCurrency.value.replace(/-\d+/g, ''), fromCurrency.value.replace(/\d+-/g, ''), toCurrency.value.replace(/-\d+/g,
+                  ''), toCurrency.value.replace(/\d+-/g, ''), value);
+                  }
+                  </script><div id="navi-converter">Konverter valuta</div>
+                  <center>
+                  <div><input type="text" class="konverter_input" id="bla" style="margin:0 3px 0 3px;"><select id="valutaFrom" style="margin:0
+                  3px 0 3px;">
+                  <option value="3-2">EUR</option>
+                  <option value="2-2">HRK</option>
+                  <option value="4-2">USD</option>
+                  <option value="7-2">CZK</option>
+                  <option value="9-2">PLN</option>
+                  <option value="10-2">SEK</option>
+                  <option value="12-2">GBP</option>
+                  <option value="13-2">CHF</option>
+                  <option value="14-9">CAD</option>
+                  <option value="15-9">HUF</option>
+                  <option value="16-9">SKK</option>
+                  <option value="17-9">NOK</option>
+                  <option value="18-9">DKK</option></select></div>
+                  <div><input type="text" class="konverter_input_disabled" id="valueTo" readonly style="margin:0 3px 0 3px;"><select id="valutaTo"
+                  style="margin:0 3px 0 3px;">
+                  <option value="2-2">HRK</option>
+                  <option value="3-2">EUR</option>
+                  <option value="4-2">USD</option>
+                  <option value="7-2">CZK</option>
+                  <option value="9-2">PLN</option>
+                  <option value="10-2">SEK</option>
+                  <option value="12-2">GBP</option>
+                  <option value="13-2">CHF</option>
+                  <option value="14-9">CAD</option>
+                  <option value="15-9">HUF</option>
+                  <option value="16-9">SKK</option>
+                  <option value="17-9">NOK</option>
+                  <option value="18-9">DKK</option></select></div>
+                  <div style="width: 160px; margin:3px 5px 0 0;" align="right"><b><a href="javascript:convert(document.getElementById('bla').value);"
+                  onclick="convert(document.getElementById('bla').value);">Izra&#269;unaj&nbsp;<font color="#FF6600">&raquo;</font></a></b></div>
+                  </center>
+                  
+                  <div><img src="/images/hp/adriatica-group.gif" width="152" height="39" style="margin:20px 0 10px 0;" align="center"></div>
+                  <div><img src="/images/nav/htzLogo.gif" width="141" height="77" style="margin:0 0 10px 0;" align="center"></div>
+                  </div><br><div style="text-align: center; margin-right: 40px" class="hideMe" id="paymentLogosCont"><a href="#" onClick="openPaymentInfos('http://www2.americanexpress.hr/userinfo/Jamstvo_sigurne_online_kupnje.html','750','590');
+                  return false" style="display: block"><img src="/img/logos/american_jamstvo_hr.gif" width="111" height="46" border="0"></a><a
+                  href="#" onClick="openPaymentInfos('http://www.pbzcard.hr/media/53827/vbv_hr.html','540','450'); return false" style="display:
+                  block; margin-top: 15px"><img src="/img/logos/verified_by_visa.gif" width="111" height="52" border="0"><span style="text-decoration:underline;
+                  font-size: 10px; line-height: 6px; display: block; text-align: center; padding: 0 0 15px 18px">saznaj vi&#353;e</span></a><a
+                  href="#" onClick="openPaymentInfos('http://www.pbzcard.hr/media/53821/mcsc_hr.html','540','450'); return false" style="display:
+                  block; margin-top: 5px"><img src="/img/logos/mastercard_securecode.gif" width="111" height="52" border="0"><span style="text-decoration:underline;
+                  font-size: 10px; line-height: 6px; display: block; text-align: center; padding: 0 0 15px 10px">saznaj vi&#353;e</span></a><div
+                  style="margin-top: 15px"><img src="/img/logos/seal_blank.gif" width="95" height="45" border="0"></div>
+                  </div><script type="text/javascript">
+                  
+                  if (window.location.href.indexOf('reservation/placanje') > -1)
+                  document.getElementById('paymentLogosCont').className = 'showMe';
+                  else
+                  document.getElementById('paymentLogosCont').className = 'hideMe';
+                  
+                  function openPaymentInfos(getURL,WinWidth,WinHeight){
+                  var prozor = window.open(getURL, '_blank', 'width='+WinWidth+',height='+WinHeight+',toolbar=0,location=0,directories=0,status=0,menuBar=0,scrollBars=1,resizable=0'
+                  ) ;
+                  return prozor;
+                  }
+                  
+                  </script>
+                  
+               </div>
+               <div id="main-top">
+                  <div id="container">
+                     <div id="header">
+                        <div id="csInfo">
+                        <h2><a href="/contact/index_hr.htm">Korisnièki servis</a></h2>
+                        <ul>
+                        <li>Hrvatska:&nbsp;<strong>0800-99-98</strong></li>
+                        <li>Druge države: <strong>+385 (0)1 2415-619</strong></li>
+                        <li>Radno vrijeme:</li>
+                        <li>Pon - Pet: 8 - 21</li>
+                        <li>Sub: 8 - 16</li>
+                        <li><a href="mailto:info@adriatica.net">info@adriatica.net</a></li>
+                        </ul>
+                        
+                        <div></div>
+                        </div>
+                        
+                     </div>
+                     <div id="content" class="container">
+                        <div id="content-main">
+                           <div id="backlinks"><a href="/home/home_HR.htm">Po&#269;etna stranica</a> &gt; <a href="/offer/offer_HR.htm">Ponuda</a> &gt;
+                              <a href="/pub/index_HR.htm"></a> &gt;
+                              AUSTRALIJA
+                           </div>
+                           <div id="intro">
+                              <h1>AUSTRALIJA</h1>
+                              <h3 class="podnaslov">VRIJEDNOST VIŠE: City break u Hong Kongu</h3>
+                              <p><strong>14 DANA / 10 NOÆENJA</strong></p>
+                              <p><strong></strong></p>
+                           </div>
+                           <h2>Opis</h2>
+                           <div class="detail-tour">
+                              <div class="detail-text">
+                                 <div class="pic"><img src="/aiml?AA-3164/Vv"><a href="#" class="aat-gall" onClick="javascript: window.open('/common/gallery_obj.xsl?C=122797&amp;S=9','GALERIJA','width=360,height=450,toolbar=0,location=0,directories=0,menuBar=0,scrollBars=1,resizable=1');return false;">Galerija fotografija</a></div>
+                                 <div class="text"><p>
+                                    <strong>1. dan ZAGREB - FRANKFURT - HONG KONG<br />
+                                    </strong>Sastanak putnika u zagrebaèkoj zraènoj luci „Pleso&quot; kod šaltera središnjih informacija. Nakon podjele putne
+                                    dokumentacije prijava na let. Polijetanje zrakoplova prema Frankfurtu u 9.05 sati na liniji OU 416 (Croatia Airlines). Po
+                                    dolasku u Frankfurt u 10.40 sati nastavak putovanja prema Hong Kongu u 13.50 sati na liniji CX 288 (Cathay Pacific). Obroci
+                                    za vrijeme leta.<br />
+                                    <br />
+                                    <strong>2. dan HONG KONG<br />
+                                    </strong>Slijetanje zrakoplova u Hong Kong predviðeno je u 7.50 sati. Nakon obavljanja pograniènih formalnosti na putu do
+                                    hotela panoramski razgled Kowloona. Vidjet æete tržnicu ptica, zlatnih ribica i cvijeæa, te hram Tai Sin. Nakon razgleda smještaj
+                                    u hotel 4* i odmor. U veèernjim satima moguæ je odlazak (fakultativno uz doplatu na licu mjesta) na vožnju brodom gdje æete
+                                    moæi uživati u spektakularnom „Light Show&quot;-u. U veèernjim satima preporuèamo šetnju popularnom noænom tržnicom. Povratak
+                                    u hotel, noæenje.<br />
+                                    <br />
+                                    <strong>3. dan HONG KONG - SYDNEY<br />
+                                    </strong>Doruèak. Slobodno prijepodne za kupovinu i vlastite programe. Odjava iz hotela (oko 12.00 sati) i odlazak na razgled
+                                    „Hong Kong Island Tour&quot; koji objedinjuje posjet Victoria Peaku (vrhu) odakle se pruža prekrasan panoramski pogled na
+                                    cijeli Hong Kong. U povratku æete vidjeti plažu u uvali Repulse, kao i Aberdeen, tipièno ribarsko selo na vodi. Nakon razgleda
+                                    odlazak u zraènu luku i prijava na let za Sydney i polijetanje zrakoplova u 21.25 sati na liniji CX 161 (Cathay Pacific).
+                                    Obroci za vrijeme leta.<br />
+                                    <br />
+                                    <strong>4. dan SYDNEY<br />
+                                    </strong>Po dolasku u Sydney u 12.10 sati, panoramski razgled grada, jedne od najljepših svjetskih metropola. Vidjet æete
+                                    Kings Cross, ekskluzivna predgraða double Bay, Rose Bay, Watsons Bay uz zaustavljanje kako biste imali priliku za spektakularan
+                                    pogled na Sydneysku luku i Pacifik. Nastavak vožnje prema. poznatoj plaži Bondi Beach, gdje æete imati kraæe zaustavljanje.
+                                    Povratak prema gradu preko Peddingtona i slikovitog Royal botanièkog vrta. Posjet jedinstvenoj zgradi Opere, razgled traje
+                                    jedan sat. Nakon razgleda nastavak do Rocks-a najstarijeg dijela grada i Darling Harboura. Prijava u hotel 4* i noæenje (iako
+                                    æete biti umorni dobro je izdržati što duže budan, kako biste lakše prebrodili „jet lag&quot; i uhvatili australski vremenski
+                                    ritam).<br />
+                                    <br />
+                                    <strong>5.dan SYDNEY<br />
+                                    </strong>Doruèak. Polazak iz hotela u 7.45 Prvo æete imati šetnju kroz kolijevku Sydneya „Rocks&quot;, gdje æete vidjeti Argyle
+                                    Cut, Argyle tavernu, crkvu Garrison, i najstarije kuæe u Australiji. Nakon razgleda slijedi vožnja autobusom prema „Sjevernim
+                                    plažama&quot; . Po dolasku na plažu Manly æete imati ruèak u Kiosk Restoranu u 12.30 sati (za ruèak je predviðeno 1 i pol
+                                    sat. Piæe nije ukljuèeno). Ruèak se sastoji od 3 slijeda (predjelo, glavno jelo i desert). Nakon ruèka slobodno vrijeme na
+                                    plaži do polaska trajekta prema circular Quay-u Sydneysko pristanište. Uživat æete u vožnji prema Sydneyu i pogledu koji se
+                                    pruža prema Operi s mora. Po dolasku u luku oko 16.30 sati šetnja pješice do hotela. Ostatak dana slobodan za vlastite programe.
+                                    Noæenje.<br />
+                                    <br />
+                                    <strong>6. dan SYDNEY - NACIONALNI PARK BLUE MOUNTAINS<br />
+                                    </strong>Doruèak. U 8.30 polazak na cjelodnevni izlet u nacionalni park „Blue Mountains&quot;, koji se nalazi oko 65 km zapadno
+                                    od Sydneya, poznatom po prekrasnoj prirodi, šumama, slapovima, kanjonima. tura ukljuèuje: Featherdale park gdje æete vidjeti
+                                    razne životinje; Scenic World - dvije vožnje žièarom i panoramskom željeznicom/uspinjaèom. Ruèak s tri slijeda je predviðen
+                                    u restoranu Mountain Heritage. Èaj i kava i obièna voda s ledom su ukljuèeni. Povratak u Sydney predviðen je oko 18.30 sati.
+                                    Priprema za doèek Nove godine. Noæenje u hotelu.<br />
+                                    <strong>SRETNA NOVA GODINA!<br />
+                                    <br />
+                                    7. dan SYDNEY<br />
+                                    </strong>Nakon doruèka slobodan dan za odmor te vlastite aktivnosti i programe. Povratak u hotel. Noæenje.<br />
+                                    <br />
+                                    <strong>8.dan SYDNEY - ALICE SPRINGS - KINGS KANJON<br />
+                                    </strong>Doruèak. Odjava iz hotela i u 8 sati transfer do zraène luke. Polijetanje zrakoplova prema gradu Alice Springs u
+                                    9.55 sati na liniji QF 790 (Qantas). Po dolasku u 11.40 nastavak puta prema Kings kanjonu. vožnja do Kings Canyona traje ca.
+                                    5 sati. (Ruèak na vlastiti trošak pri usputnom zaustavljanju) Po dolasku u Kings kanjon odlazak na šetnju uz potok (cca. 1,5km
+                                    i traje cca. 1 sat), prema vidikovcu odakle se ima prekrasan pogled na litice kanjona. Na ruti æete vidjeti znakove kulture
+                                    aboridžina. Tura završava u vašem hotelu Kings Canyon Resort oko 19.30 smještaj u resort, noæenje.<br />
+                                    <br />
+                                    <strong>9. dan KINGS KANJON - AYERS ROCK<br />
+                                    </strong>Doruèak u hotelu - restoran se otvara veæ u 5.30 sati. Rani polazak iz hotela veæ u 6.30 autobusom do tzv. Rim Walk-a
+                                    šetnju kanjonom. Ova šetnja je za ljude dobre tjelesne kondicije kojima ne smeta šetnja po neravnom terenu i 90 metara po
+                                    jako strmom putu uzbrdo. Sa samog vrha se pruža prekrasan pogled na Kanjon. Plato se sastoji od manjih ravnica omeðenim stijenama
+                                    koje izgledaju poput ruševina. Nastavak puta predviðen je oko 10.30 h prema Ayers crvenom središtu Australije. Ruèak je na
+                                    vlastiti trošak. Po dolasku smještaj u hotel Outback Pioneeri kraæe osvježenje prije odlaska na poslijepodnevnu turu „Olgas&quot;
+                                    u 15.30. Polazak na Kata Tjuta turu + turu Uluru zalaska sunca. Vidjet æete najveæu monolitnu stijenu na svijetu (9 km opsega
+                                    i 348 m visok) i promatrat æete varijacije boja pri zalasku sunca uz èašu australskog vina i kanapee. Tura završava oko 20
+                                    sati. Noæenje.<br />
+                                    <br />
+                                    <strong>10. dan AYERS ROCK - ALICE SPRINGS<br />
+                                    </strong>Rana odjava iz hotela prije odlaska na promatranje jedinstvenog izlaska sunca kod Ayers Rocka. Polazak u 5.00h. Za
+                                    vrijeme promatranja izlaska sunca bit æe vam serviran èaj ili kava i keksi. Nakon promatranja æete napraviti šetnju oko stijene
+                                    Ayers Rocka. Doruèak æete imati u 7.30 u Initi Cafeu koji se nalazi u Kulturnom centru Aboridžina. Tura završava u 10 sati.
+                                    Nastavak puta prema Alice Springsu. Dolazak je predviðen oko 16 sati. Noæenje u hotelu 4*.<br />
+                                    <br />
+                                    <strong>11. dan ALICE SPRINGS - MELBOURNE<br />
+                                    </strong>Nakon doruèka odjava iz hotela i u 8 sati polazak na razgledanje Royal Flying Doctors koje je predviðeno u 9.15 i
+                                    ANZAC Hill. Tura završava u 10 sati u zraènoj luci. Prijava za let prema Melbourneu. Polijetanje zrakoplova u 11 sati na liniji
+                                    QF 797 (Qantas). Po dolasku u Melbourne u 15.05 sati razgled grada. Vidjet æete kinesku èetvrt, zgradu parlamenta, Fitzroy
+                                    vrt, posjetit æete kolibu kapetana Cooka (ukluèuje ulaznicu). Nastavak preko mosta Westgate za panoramski pogled na grad,
+                                    prije posjeta botanièkom vrtu. Tura završava oko 19 sati. Smještaj u hotelu 4*, noæenje.<br />
+                                    <br />
+                                    <strong>12. dan MELBOURNE - PHILIP ISLAND - MELBOURNE<br />
+                                    </strong>Nakon doruèka slobodno prijepodne. U 14 sati polazak na izlet na Philip Island, poznat po koloniji najmanjih pingvina
+                                    na svijetu. Po dolasku na Philip Island posjetit æete Koala centar gdje koale žive u prirodnom okruženju. Vidjet æete koale
+                                    iz bliza. Veèera æe biti u 18.30 sati. Nakon veèere odlazak do plaže Summerland. Ovdje æete u predveèerje vidjeti kako pingvini
+                                    dolaze iz lova i odlaze u svoja gnijezda. Povratak u Melbourne oko 23.30 sata, noæenje.<br />
+                                    <br />
+                                    <strong>13. dan MELBOURNE - HONG KONG - FRANKFURT<br />
+                                    </strong>Nakon doruèka slobodno prijepodne. U 11 sati odjava iz hotela. Polazak u zraènu luku je u 12.15 sati. Po dolasku
+                                    u zraènu luku prijava na let i polijetanje zrakoplova prema Hong Kongu u 15.30 sati na liniji CX 104 (Cathay Pacific). Po
+                                    dolasku u Hong Kong u 21.45 sati, nastavak leta prema Frankfurtu u 23.50 sata na liniji CX 289 (Cathay Pacific). Obroci za
+                                    vrijeme leta.<br />
+                                    <br />
+                                    <strong>14. dan FRANKFURT - ZAGREB<br />
+                                    </strong>Po dolasku u Frankfurt u 5.30 sati, nastavak putovanja prema Zagrebu u 9.30 sati na liniji OU 417 (Croatia Airlines).
+                                    Dolazak u Zagreb predviðen je u 10.50 sati. Završetak putovanja.
+                                    </p>
+                                    
+                                 </div>
+                              </div>
+                           </div>
+                           <h2>Opis aran&#382;mana</h2>
+                           <div class="detail-includ" style="margin-top:0;width:96%;">
+                              <div style="float: left; padding-right: 10px;"><p>
+                                 <strong>Obavezna doplata:<br />
+                                 </strong>Zrakoplovne pristojbe (plaæanje prilikom rezervacije putovanja) 2.800 kn<br />
+                                 Napojnice (plaæanje na licu mjesta) oko 50 eur<br />
+                                 <br />
+                                 <strong>MINIMUM PRIJAVLJENIH PUTNIKA: 15<br />
+                                 <br />
+                                 CIJENA UKLJUÈUJE</strong>: prijevoz zrakoplovom na ekonomskoj klasi na relaciji Zagreb - Hong Kong - Sydney - Alice Springs
+                                 - Melbourne - Hong Kong - Zagreb, sve transfere prema programu, pratitelja iz Zagreba, smještaj prema programu u hotelima
+                                 3* i 4* na osnovi usluge noæenje/doruèak; razglede prema programu, troškove organizacije putovanja, putno zdravstveno osiguranje.<br
+                                 />
+                                 <br />
+                                 <strong>CIJENA NE UKLJUÈUJE</strong>: zrakoplovne pristojbe, pristojbe u zraènim lukama plativo na licu mjesta, australsku
+                                 vizu, uslugu posredovanja pri ishoðenju vize, napojnice, sve što nije navedeno pod stavkom „cijena ukljuèuje&quot;, osobne
+                                 troškove, osiguranje od otkaza putovanja.<br />
+                                 <br />
+                                 <strong>VIZA</strong>: potrebna. Ishoduje se u Veleposlanstvu Australije u Zagrebu. Cijena vize 105 AUD (australskih dolara).
+                                 Atlas Airtours nudi moguænost posredovanja pri ishoðenju vize. Vrijeme potrebno za obradu i ishodovanje vize je 5 tjedana.
+                                 Više informacija o potrebnim dokumentima i proceduri na prodajnim mjestima. <br />
+                                 <br />
+                                 <strong>VAŽNA NAPOMENA</strong>: pristojbe zraènih luka su podložne promjenama i konaèni iznos pristojbe se potvrðuje na dan
+                                 izdavanja zrakoplovne karte. Atlas Airtours pridržava pravo promjene cijena u sluèaju teèajnih razlika. Agencija zadržava
+                                 pravo izmjene letova i programa.<br />
+                                 <br />
+                                 <br />
+                                 <strong>KORISNE INFORMACIJE:<br />
+                                 <br />
+                                 AUSTRALIJA<br />
+                                 Službeno ime</strong>: Australija (Commonwealth of Australia).<br />
+                                 <strong>Glavni grad</strong>: Canberra.<br />
+                                 <strong>Površina</strong>: 7.692.030 km2<br />
+                                 <strong>Viza</strong>: potrebna, informacije na prodajnim mjestima<br />
+                                 <strong>Državno ureðenje</strong>: Konstitucionalna Monarhija. Neovisna od Ujedinjenog Kraljevstva od 1901. g.<br />
+                                 <strong>Jezik</strong>: službeni jezik je engleski. Etnièke manjine koriste se talijanskim, njemaèkim, grèkim, kineskim i
+                                 aboridžinskim jezikom.<br />
+                                 <strong>Vremenska razlika</strong>: od +7 do +9 sati u odnosu na Hrvatsku.<br />
+                                 <strong>Novac</strong>: Australski dolar (AUD, (A$) = 100 centa. Novèanice za A$ 100, 50, 20, 10, 5. Kovanice za A$ 2, 1 i
+                                 50, 20, 10 i 5 centi.<br />
+                                 <strong>Zemljopisni položaj</strong>: Australija se proteže od 10° do 45° južne geografske širine (raèunajuæi i Tasmaniju)
+                                 i 113° i 115° istoène geografske dužine. Èitavom svojom površinom nalazi se na južnoj zemljinoj polutci. Obuhvaæa kopno Australiju
+                                 i otok Tasmaniju te mnoge male otoke oko kopna. S tri strane Australiju okružuju velike površine Tihog (na istoku) i Indijskog
+                                 oceana (na jugu i zapadu). Samo je na sjevernoj strani nizovima otoka donekle povezana sa Azijom. Zbog te prirodne izolacije
+                                 tj. udaljenosti od drugih kontinenata, geografski položaj Australije se èesto karakterizira kao nepovoljan, meðutim baš zbog
+                                 toga su se u Australiji razvile posebne biljne i životinjske vrste. Dužina obale Australije zajedno sa svim otocima iznosi
+                                 36.735 km. Površinom je malo manja od Brazila i 136 puta veæa od Hrvatske, a njena površina pokrivala bi 3/4 Europe.<br />
+                                 <strong>Klima</strong>: Australija se nalazi na južnoj polutci pa su i godišnja doba drugaèija od godišnjih doba u Europi
+                                 i Sjevernoj Americi. Dvije su klimatske zone: tropska zona (na sjeveru iznad Jarèeve obratnice) i umjerena zona. Tropska zona
+                                 (pokriva 40% Australije) ima dvije sezone - ljetnu (kišnu) i zimsku (suhu) dok umjereni pojas ima sva 4 godišnja doba. Proljeæe
+                                 - Ljeto: Toplo ili vruæe posvuda dok je malo umjerenije na jugu. Jesen - Zima: Sjeverna i centralna Australija imaju lijepe
+                                 tople dane i hladne noæi dok su na jugu dani svježi sa povremenom kišom, ali je i tamo uglavnom sunèano. Snijeg je u potpunosti
+                                 ogranièen u gorskom podruèju na jugoistoku.
+                                 </p>
+                                 
+                              </div>
+                              <div style="clear: left"></div>
+                           </div>
+                           <h2>Jednokrevetna soba <span style="display:block; font-size:11px; font-weight: normal; "></span></h2>
+                           <div class="detail-table">
+                              <h3 style="margin:15px 0 5px 0;">Aran&#382;man</h3>
+                              <table cellpadding="0" cellspacing="0" border="1" width="100%" style="border:1px solid #E6E6E6;">
+                                 <tr>
+                                    <td>Termini</td>
+                                    <td>Broj dana</td>
+                                    <td>Broj osoba</td>
+                                    <td>Cijena od (po osobi)</td>
+                                 </tr>
+                                 <tr>
+                                    <td>26.12.2010. - 09.01.2011.</td>
+                                    <td>14</td>
+                                    <td>1</td>
+                                    <td><span name="rxautocijena" id="rxautocijena"><!--39790.01|2|2--></span>&nbsp;<span id="rxautovalutad" name="rxautovalutad"></span></td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="4"><a class="icon r rez" href="/rezervacije/direktupit_hr__4v4i4q4l4s5ki3h3i3i3n3p3oh4v4i4q4l4s5k5j4p5k4li3p__.aw?DP=&amp;MP=&amp;GP=&amp;BROJNOCENJA=&amp;BO="><strong>Rezerviraj</strong></a></td>
+                                 </tr>
+                              </table>
+                              <h3 style="margin:15px 0 5px 0;">Cjenik dodatnih usluga</h3>
+                              <table cellpadding="0" cellspacing="0" border="1" width="100%" style="border:1px solid #E6E6E6;">
+                                 <tr>
+                                    <td>Termini</td>
+                                    <td>usluga</td>
+                                    <td>osoba/dana</td>
+                                    <td>Cijena</td>
+                                 </tr>
+                                 <tr>
+                                    <td>01.01 - 31.12</td>
+                                    <td>Pristojbe u zra&#269;nim lukama</td>
+                                    <td>1/0</td>
+                                    <td><span name="rxautocijena" id="rxautocijena"><!--2800|2|2--></span>&nbsp;<span id="rxautovalutad" name="rxautovalutad"></span></td>
+                                 </tr>
+                              </table>
+                           </div>
+                           <h2>Dvokrevetna soba <span style="display:block; font-size:11px; font-weight: normal; "></span></h2>
+                           <div class="detail-table">
+                              <h3 style="margin:15px 0 5px 0;">Aran&#382;man</h3>
+                              <table cellpadding="0" cellspacing="0" border="1" width="100%" style="border:1px solid #E6E6E6;">
+                                 <tr>
+                                    <td>Termini</td>
+                                    <td>Broj dana</td>
+                                    <td>Broj osoba</td>
+                                    <td>Cijena od (po osobi)</td>
+                                 </tr>
+                                 <tr>
+                                    <td>26.12.2010. - 09.01.2011.</td>
+                                    <td>14</td>
+                                    <td>2</td>
+                                    <td><span name="rxautocijena" id="rxautocijena"><!--32989.97|2|2--></span>&nbsp;<span id="rxautovalutad" name="rxautovalutad"></span></td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="4"><a class="icon r rez" href="/rezervacije/direktupit_hr__4v4i4q4l4s5ki3h3i3i3n3p3ph4v4i4q4l4s5k5j4p5k4li3p__.aw?DP=&amp;MP=&amp;GP=&amp;BROJNOCENJA=&amp;BO="><strong>Rezerviraj</strong></a></td>
+                                 </tr>
+                              </table>
+                              <h3 style="margin:15px 0 5px 0;">Cjenik dodatnih usluga</h3>
+                              <table cellpadding="0" cellspacing="0" border="1" width="100%" style="border:1px solid #E6E6E6;">
+                                 <tr>
+                                    <td>Termini</td>
+                                    <td>usluga</td>
+                                    <td>osoba/dana</td>
+                                    <td>Cijena</td>
+                                 </tr>
+                                 <tr>
+                                    <td>01.01 - 31.12</td>
+                                    <td>Pristojbe u zra&#269;nim lukama</td>
+                                    <td>1/0</td>
+                                    <td><span name="rxautocijena" id="rxautocijena"><!--2800|2|2--></span>&nbsp;<span id="rxautovalutad" name="rxautovalutad"></span></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </div>
+                        <div id="content-sidebar">
+                           <form action="/adriatica/search_results.htm" id="cse-search-box" style="margin: 5px 0 10px 1px;"><input type="hidden" name="cx"
+                           value="010497678407424742481:b1vt5ct0kco" /><input type="hidden" name="cof" value="FORID:11" /><input class="g_text" type="text"
+                           name="q" size="21" /><input type="image" name="sa" value="" src="/img/hp/fast-search-butt.gif" alt="Submit" style="vertical-align:bottom;border:none;padding:
+                           1px 0px 0px 2px;width:20px;">
+                           </form><script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=hr"></script><center>
+                           <div style="width:160px;margin:10px 0 10px 0;text-align:center;"><script type="text/javascript">
+                           
+                           var m3_u = (location.protocol=='https:'?'https://adserv.emporion.hr/www/delivery/ajs.php':'http://adserv.emporion.hr/www/delivery/ajs.php');
+                           
+                           var m3_r = Math.floor(Math.random()*99999999999);
+                           
+                           if (!document.MAX_used) document.MAX_used = ',';
+                           
+                           document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+                           
+                           document.write ("?zoneid=16");
+                           
+                           document.write ('&amp;cb=' + m3_r);
+                           
+                           if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+                           
+                           document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet
+                           : ''));
+                           
+                           document.write ("&amp;loc=" + escape(window.location));
+                           
+                           if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+                           
+                           if (document.context) document.write ("&context=" + escape(document.context));
+                           
+                           if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+                           
+                           document.write ("'><\/scr"+"ipt>");
+                           
+                           </script><noscript><a href="http://adserv.emporion.hr/www/delivery/ck.php?n=a4e11956&amp;cb=INSERT_RANDOM_NUMBER_HERE" target="_blank"><img
+                           src="http://adserv.emporion.hr/www/delivery/avw.php?zoneid=16&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a4e11956" border="0"
+                           alt=""></a></noscript>
+                           </div>
+                           </center>
+                           
+                        </div>
+                     </div>
+                     <div id="banner" style="position:absolute;" onmouseout="this.innerHTML=''"></div>
+                     <div id="skyscraper">
+                     <div id="multibanner"><script language="JavaScript">
+                     document.write(unescape("%3Cscript src='/banners/banner_desno_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_dolje_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home1_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home2_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home3_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home4_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home5_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home6_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home7_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home8_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home9_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     
+                     document.write(unescape("%3Cscript src='/banners/banner_home10_hr/"+Math.random()+".htm' type='text/javascript'%3E%3C/script%3E"));
+                     </script></div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="footer-top">
+            <div id="footer-top">
+            <p><a href="/reservation/main_hr.htm">Kako rezervirati?</a> -
+            <a href="/reservation/placanje_hr.htm">Naèini plaæanja</a> -
+            <a href="/jadran/faq_hr.htm">FAQ</a> -
+            <a href="/reservation/opci_hr.htm">Opæi uvjeti</a> -
+            <a href="/jadran/sitemap_hr.htm">Sitemap</a> -
+            <a href="/offer/offer_hr.htm">Cijela ponuda</a><br>Heinzelova 62a, 10000 Zagreb - Hrvatska / e-mail:&nbsp;<a href="mailto:info@adriatica.net">info@adriatica.net</a>,
+            ID HR-AB-20-060000638, OIB 02041978827
+            
+            </p>
+            <div id="footerDown">
+            <div id="footerLeft"><span><b>OSTALA PONUDA</b></span><br><br><ul>
+            <li class="title">Hoteli:</li>
+            <li><a href="/hr/hoteli/mali_hoteli.htm">Mali hoteli</a></li>
+            <li><a href="/resorts/resorts_hr.htm">Turistièka naselja</a></li>
+            <li><a href="/hotels/croatia_hr.htm">Hoteli Hrvatska</a></li>
+            <li><a href="/hotels/montenegro_hr.htm">Hoteli Crna Gora</a></li>
+            <li><a href="/hotels/slovenia_hr.htm">Hoteli Slovenija</a></li>
+            <li><a href="/hotels/bih.htm">Hoteli u Bosni i Hercegovini</a></li>
+            <li><a href="/hotels/city-hotels_hr.htm">Gradski hoteli</a></li>
+            <li class="break"><a href="/hotels/seaside-hotels_hr.htm">Hoteli uz more</a></li>
+            <li class="title">Plovila:</li>
+            <li><a href="/cruise/cruise_hr.htm">Krstarenja</a></li>
+            <li><a href="/pub/charter/motor_boats/index_hr.htm">Motorni brodovi</a></li>
+            <li><a href="/pub/charter/motor_boats/powerboats/index_hr.htm">Gliseri</a></li>
+            <li><a href="/pub/charter/motor_boats/yachts/index_hr.htm">Jahte</a></li>
+            <li><a href="/pub/charter/sailboats/index_hr.htm">Jedrilice</a></li>
+            <li><a href="/pub/charter/sailboats/catamarans/index_hr.htm">Katamarani</a></li>
+            <li><a href="/sailing_school/sailing_school_hr.htm">Škola jedrenja</a></li>
+            <li><a href="/cruise/adriatic_cruise_hr.htm">Krstarenja u Hrvatskoj</a></li>
+            <li class="break"><a href="/cruise/european_cruise_hr.htm">Krstarenja Europa</a></li>
+            <li class="title">Vikendi</li>
+            <li><a href="/family_weekends/index_hr.htm">Vikendi s obitelji</a></li>
+            <li><a href="/friend_weekends/index_hr.htm">Vikendi s prijateljima</a></li>
+            <li><a href="/romantic_weekends/index_hr.htm">Romantièni vikendi</a></li>
+            <li class="break"><a href="/active_weekends/index_hr.htm">Aktivni vikendi</a></li>
+            <li class="title">Vodiè:</li>
+            <li class="break"><a href="/destinations/hrvatska_hr.htm">Hrvatska</a></li>
+            </ul>
+            <ul>
+            <li class="title">Privatni smještaj:</li>
+            <li><a href="/plitvice/plitvice_hr.htm">Nacionalni park Plitvièka jezera</a></li>
+            <li><a href="/private/blue-istria-accommodation_hr.htm">Privatni smještaj u Plavoj Istri</a></li>
+            <li><a href="/private/kvarner-accommodation_hr.htm">Privatni smještaj na Kvarneru</a></li>
+            <li><a href="/private/dalmatia-accommodation_hr.htm">Privatni smještaj u Dalmaciji</a></li>
+            <li><a href="/private/islands-accommodation_hr.htm">Privatni smještaj na otocima</a></li>
+            <li><a href="/private/cities-accommodation_hr.htm">Privatni smještaj u gradovima</a></li>
+            <li><a href="/private/green-istria-accommodation_hr.htm">Privatni smještaj u Zelenoj Istri</a></li>
+            <li class="break"><a href="/agroturizam/agroturizam_hr.htm">Agroturizam u Hrvatskoj</a></li>
+            <li class="title">Vile</li>
+            <li><a href="/villas/villaspod_hr__5g4ji3h3ih5g5ji3i__.htm">Vile Istra</a></li>
+            <li><a href="/villas/villaspod_hr__5g4ji3i3jh5g5ji3i__.htm">Vile Kvarner</a></li>
+            <li><a href="/villas/villaspod_hr__5g4ji3mh5g5ji3h__.htm">Vile Srednja Dalmacija</a></li>
+            <li class="break"><a href="/villas/villaspod_hr__5g4ji3hh5g5ji3h__.htm">Vile Južna Dalmacija</a></li>
+            <li class="title">Europska putovanja:</li>
+            <li><a href="/pub/europski_gradovi/index_hr.htm">Avionom</a></li>
+            <li class="break"><a href="/pub/bus_ture/index_hr.htm">Autobusom</a></li>
+            </ul>
+            </div>
+            <div id="footerRight">
+            <ul class="intSites">
+            <li class="title">Suradnja:</li>
+            <li><a href="/jadran/postanib2b_hr.htm">Turistièke agencije</a></li>
+            <li><a href="/jadran/affiliate_hr.htm">Web siteovi (Affiliate program)</a></li>
+            <li><a href="http://www.adriatica-group.net/press/releases_hr.htm">Za medije (novine, TV, radio, Internet)</a></li>
+            </ul>
+            <ul class="intSites">
+            <li class="title">Oglašavanje:</li>
+            <li><a href="/jadran/iznajmlj_hr.htm">Za ponuðaèe turistièkih usluga</a></li>
+            <li><a href="/company/advertising_hr.htm">Oglašavanje na stranicama (banneri)</a></li>
+            </ul>
+            <ul class="intSites">
+            <li class="title">Odredišta:</li>
+            <li><a href="/croatia/arealist_hr.htm">Hrvatska</a></li>
+            <li><a href="/austrija/main_hr.htm">Austrija</a></li>
+            <li><a href="/italija/main_hr.htm">Italija</a></li>
+            <li><a href="/slovenija/main_hr.htm">Slovenija</a></li>
+            <li><a href="/bih/main_hr.htm">Bosna i Hercegovina</a></li>
+            <li><a href="/ski/ski_list_hr__5q4l4t4r4q4hi3m3g3l3n3o2t3p__.htm">Francuska</a></li>
+            </ul>
+            <ul class="intSites">
+            <li class="title">Adriatica.net International sites:</li>
+            <li><a href="/home/home_cz.htm">&#268;esky</a></li>
+            <li><a href="/home/home_de.htm">Deutsch</a></li>
+            <li><a href="/home/home_en.htm">English</a></li>
+            <li><a href="/home/home_es.htm">Espanol</a></li>
+            <li><a href="/home/home_fr.htm">Francis</a></li>
+            <li><a href="/home/home_hr.htm">Hrvatski</a></li>
+            <li><a href="/home/home_ita.htm">Italiano</a></li>
+            <li><a href="/home/home_hu.htm">Magyar</a></li>
+            <li><a href="/home/home_pl.htm">Polski</a></li>
+            <li><a href="/home/home_ro.htm">Romana</a></li>
+            <li><a href="/home/home_sk.htm">Sloven&#269;ina</a></li>
+            <li><a href="/home/home_slo.htm">Sloven&#353;&#269;ina</a></li>
+            </ul>
+            <ul class="membersLogo">
+            <li class="title">adriatica.net Grupa je èlanica:</li>
+            <li><img src="/img/hp/footer/accka.gif" alt="Member of Czech Tourist Agencies Association" title="Member of Czech Tourist
+            Agencies Association"><img src="/img/hp/footer/ztas.gif" alt="Member of Slowenian Tourist Agencies Association" title="Member
+            of Slowenian Tourist Agencies Association"><img src="/img/hp/footer/icca.gif" alt="Member of International Congress &amp;
+            Convention Association" title="Member of International Congress &amp; Convention Association"><img src="/img/hp/footer/wata.gif"
+            alt="Member of World Association of Travel Agencies" title="Member of World Association of Travel Agencies"><img src="/img/hp/footer/moa.gif"
+            alt="Member of Mediterranean Operators Association" title="Member of Mediterranean Operators Association"><img src="/img/hp/footer/iata.gif"
+            alt="Member of International Air Transport Association" title="Member of International Air Transport Association"><img src="/img/hp/footer/rda.gif"
+            alt="Member of Coach Tourism's Innovative Network" title="Member of Coach Tourism's Innovative Network"><img src="/img/hp/footer/drv.gif"
+            alt="Member of German Association of Travel Agents and Tour Operators" title="Member of German Association of Travel Agents
+            and Tour Operators"><img src="/img/hp/footer/uftar.gif" alt="Member of Federaci&oacute;n Universal de las Asociaciones de
+            Agencias de Viajes" title="Member of Federaci&oacute;n Universal de las Asociaciones de Agencias de Viajes"><img src="/img/hp/footer/ustoa.gif"
+            alt="Member of United States Tour Operators Association" title="Member of United States Tour Operators Association"><img src="/img/hp/footer/jata.gif"
+            alt="Member of Japan Association of Travel Agents" title="Member of Japan Association of Travel Agents"><img src="/img/hp/footer/uhpa2.gif"
+            alt="Member of the Association of Croatian Travel Agencies" title="Member of the Association of Croatian Travel Agencies"></li>
+            <li>COTAL, JATA, ORV, SITE, TRAVEL CONTACTS, VIRTUOSO (ON SITE)</li>
+            <li>&nbsp;</li>
+            <li><img src="/img/hp/footer/LogoAtlas.gif" alt="Atlas travel agency" title="Atlas travel agency"></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            <center style="margin:0 0 20px 0;">Sva prava pridržana&nbsp;<strong><a href="/company/profile_hr.htm">adriatica.<span class="emp">net</span>
+            d.o.o. 2000.</a></strong></center><script language="Javascript" type="text/javascript" src="/tecaj_hr.js"></script>
+            
+         </div>
+      </div><script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script><script type="text/javascript">
+_uacct = "UA-225433-1";
+urchinTracker();
+</script></body>
+</html>

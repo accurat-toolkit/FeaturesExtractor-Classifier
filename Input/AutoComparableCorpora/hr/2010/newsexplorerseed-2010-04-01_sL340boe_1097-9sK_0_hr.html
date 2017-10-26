@@ -1,0 +1,1547 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Mrvicak</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+<meta name="copyright" content="Design by nelchee @ inobscuro.com" />
+<style type="text/css">
+* {margin: 0; padding: 0; border: none; text-decoration: none}
+body, html {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-bg9qa.gif) #3D3E4D center top;
+	text-align: center;
+	font: 10px "Georgia", "Palatino Linotype", "Times New Roman", serif;
+	color: #3f2f30;
+}
+body {padding-bottom: 15px;}
+#container {
+	width: 757px;
+	margin: auto;
+	text-align: left;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-contentbg0ow.gif) left top repeat-y;
+}
+#header {
+	height: 170px;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-header4gg.jpg) left top no-repeat;
+}
+#header h1 {
+	padding: 36px 350px 0 60px;
+	color: #61626f;
+	font: italic bold 36px "Times New Roman", "Georgia", sans-serif;
+}
+#header h2 {
+	padding: 10px 350px 0 80px;
+	color: #492022;
+	font: italic normal 18px "Times New Roman", "Georgia", sans-serif;
+}
+#footer {
+	height: 122px;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-footer6kb.jpg) left top no-repeat;
+	clear: both;
+}
+#footer p {
+	padding: 20px 130px 0 230px;
+	text-align: right;
+	line-height: 20px;
+}
+#content {
+	width: 525px;
+	float: left;
+	padding: 7px 40px 10px 20px;
+	line-height: 20px;
+	margin-top: -12px;
+	font-size: 11px;
+	overflow: hidden;
+}
+#column {
+	width: 172px;
+	float: left;
+	line-height: 16px;
+	overflow: hidden;
+}
+#content p, #content li {
+	text-align: justify;
+}
+#content h1 {
+	font: italic bold 24px "Times New Roman", "Georgia", sans-serif;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-heading0fs.gif) left bottom no-repeat;
+	padding: 20px 0 20px 65px;
+	color: #5f4c41;
+}
+h2 {
+	color: #4d4f5f;
+	font: italic bold 18px "Times New Roman", "Georgia", sans-serif;
+}
+p, ul, ol {
+	font-size: 11px;
+	padding: 10px 0;
+}
+#content li {
+	margin-left: 26px;
+}
+a:link, a:visited {
+	color: #373d7f;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-line5hr.gif) center bottom repeat-x;
+}
+a:visited {
+	background: none;
+}
+a:hover {
+	color: #7f85c7;
+}
+code {
+	color: #9f4f54;
+	font-family: "lucida console", "courier new", "courier", monospace;
+}
+em, strong {
+	color: #9f4f54;
+}
+.box {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-paperblue8ji.gif) #D0D6DD;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-left: 1px solid #B9BBC1;
+	border-bottom: 1px solid #A9A6AB;
+	overflow: auto;
+}
+.box h2 {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-staple2vw.gif) top left no-repeat;
+	text-align: right;
+	padding: 0 0 5px 0;
+	text-indent: 30px;
+}
+#content .comment {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-comment3lw.gif) left top no-repeat;
+	padding: 62px 0 0 0;
+	position: relative;
+	list-style: none;
+	margin: 0 0 20px 0;
+}
+.comment * {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-paperblue8ji.gif);
+	padding: 5px;
+	margin-left: 13px;
+}
+.comment * * {
+	padding: 0; margin: 0; background: none;
+}
+.comment .author {
+	position: absolute;
+	left: 99px;
+	top: 16px !important;
+	top: 13px;
+	width: 406px;
+	margin: 0;
+	height: 26px;
+	font: italic normal 16px "Times New Roman", "Georgia", sans-serif;
+	padding: 20px 0 0 20px;
+}
+.slika {
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-right: 1em
+}
+#content p.time {clear: both; text-align: right;}
+
+.kalendar {width:100%;height:150px;font-size:10px;}
+.kalendar-aktivni-dani {background:#C8CFD8;text-align:center;}
+.kalendar-aktivni-dani-linkovi {color:blue;text-decoration:underline;}
+.kalendar-aktivni-dani-linkovi:hover {color:black;text-decoration:none;}
+.kalendar-neaktivni-dani {background:#C8CFD8;color:#606060;text-align:center;}
+.kalendar-prazni-dani {background:#C8CFD8;}
+.kalendar-nazivi-dana {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-mjesec-godina {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-strelica-natrag {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-strelica-natrag:hover {color:black;text-decoration:none;}
+.kalendar-strelica-naprijed {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-strelica-naprijed:hover {color:black;text-decoration:none;}
+
+.quoted {
+	font-style: italic;
+	padding: 10px;
+	color: #492022;
+}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Mrvicak" href="http://mrvicak.blog.hr/rss.xml" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.blog.hr/wlw/rsd.php?11880457" />
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+<meta name="keywords" content="mrvicak,blog,hrvatska,film,fotografija,gastronomija,ljubav,glazba,humor,internet,karijera,književnost,novac,obitelj,obrazovanje,osobno,poezija,politika,prièe,putopisi,raèunala,religija,seks,sex,sport,televizija,umjetnost,zdravlje,znanost,rasprave,diskusije,korisnik,politika,www" />
+<meta name="description" content="mrvicak.blog.hr" />
+<!-- (C)2000-2008 Gemius SA - gemiusAudience / blog.hr / Cool -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('zZzrC_s8ZDIbXXPBdQyH0ZaEHZHFQfrjNU9Z7huhFOj.h7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.blog.hr/xgemius.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8213121-28']);
+  _gaq.push(['_setDomainName', '.blog.hr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="http://www.blog.hr/js/hr/prototype.lite.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/moo.ajax.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/frontend.js?=1"></script>
+
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1>Mrvicak</h1>
+<h2>http://mrvicak.blog.hr</h2>
+</div>
+<div id="content">
+
+<a name="1627333784"></a>
+
+<!-- Datum posta -->
+
+<h4>utorak, <a name="dan30"></a>30.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Kad najpri ja tvoje <br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627333784%2Fkad-najpri-ja-tvoje.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>Kad najpri ja tvoje vidih zlate kose<br />
+<br />
+I oèi, gospoje, ke sarca zanose<br />
+<br />
+I dike još ine tvojega obraza<br />
+<br />
+Gdi narav naèine sve lipe ukaza,<br />
+<br />
+Ne mogoh ne reæi i sudit u sebi<br />
+<br />
+Da je dar najveæi lipota u tebi.<br />
+<br />
+Nu kada procinih tvoj razum pak i æud,<br />
+<br />
+Tuj misal prominih, gospoje, i taj sud.<br />
+<br />
+I, evo, ne vim reæ, oda dva taj dobra:<br />
+<br />
+Ali si lipa veæ, al umna i dobra?<br />
+<br />
+<br />
+Autor: Hanibal Luciæ<br />
+<br />
+<img src=http://i40.tinypic.com/2uy4yo2.jpg><br />
+<br />
+</p>
+<p class="time">- 19:27 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627333784/kad-najpri-ja-tvoje.html" target="_blank">Komentari</a> (6) - 
+<a href="http://www.blog.hr/print/id/1627333784/kad-najpri-ja-tvoje.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627333784/kad-najpri-ja-tvoje.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627333784">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627333784', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627328830"></a>
+
+<!-- Datum posta -->
+
+<h4>subota, <a name="dan27"></a>27.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i42.tinypic.com/20j07iu.jpg></p>
+<p class="time">- 23:32 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627328830/img-srchttpi42tinypiccom20j07iujpg.html" target="_blank">Komentari</a> (2) - 
+<a href="http://www.blog.hr/print/id/1627328830/img-srchttpi42tinypiccom20j07iujpg.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627328830/img-srchttpi42tinypiccom20j07iujpg.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627328830">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627328830', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627326921"></a>
+
+<!-- Datum posta -->
+
+<h4>petak, <a name="dan26"></a>26.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Tajanstvena ruža<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627326921%2Ftajanstvena-rua.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>U mome tajnom vrtu æuti dreka<br />
+<br />
+Rogobornog vijeka. Sjajni majevi<br />
+<br />
+Kroz miris lebde uz rijeku meda i mlijeka <br />
+<br />
+Oj, snovi mog života, modri krajevi!<br />
+<br />
+Jer duša moja bašta je daleka,<br />
+<br />
+Visok zid je èuva, sfinga i zmajevi,<br />
+<br />
+Tud šeta draga žena, duše jeka,<br />
+<br />
+A njenim biæem struje sveti gajevi.<br />
+<br />
+Zoveš li se Cintija, Sibila,<br />
+<br />
+Kakvoga si lika, ne znam reæi,<br />
+<br />
+Znam te kao sebe i nemam za te rijeèi.<br />
+<br />
+Kao sanak diraš moje zjene,<br />
+<br />
+Ne znam, što si, djevojka il vila <br />
+<br />
+O, tajno moga vrta! O, ružo moje sjene!<br />
+<br />
+<br />
+Autor: Antun Gustav Matoš<br />
+<br />
+<img src=http://i43.tinypic.com/6rlflw.jpg></p>
+<p class="time">- 07:18 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627326921/tajanstvena-rua.html" target="_blank">Komentari</a> (2) - 
+<a href="http://www.blog.hr/print/id/1627326921/tajanstvena-rua.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627326921/tajanstvena-rua.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627326921">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627326921', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627326824"></a>
+
+<!-- Datum posta -->
+
+<h4>èetvrtak, <a name="dan25"></a>25.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i43.tinypic.com/fbdpab.jpg></p>
+<p class="time">- 23:45 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627326824/img-srchttpi43tinypiccomfbdpabjpg.html" target="_blank">Komentari</a> (1) - 
+<a href="http://www.blog.hr/print/id/1627326824/img-srchttpi43tinypiccomfbdpabjpg.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627326824/img-srchttpi43tinypiccomfbdpabjpg.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627326824">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627326824', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627325560"></a>
+
+<!-- Datum posta -->
+
+<h4>srijeda, <a name="dan24"></a>24.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Starinski mirisi <br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627325560%2Fstarinski-mirisi.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i42.tinypic.com/15hkh94.jpg><br />
+<br />
+Naša soba miriše po tamjanu,<br />
+<br />
+Po starom vinu,<br />
+<br />
+I svijeæa plaèe suzama bijelim.<br />
+<br />
+Krevet se naseli pun zrikavaca<br />
+<br />
+Od poljubaca koje s tobom dijelim.<br />
+<br />
+Kroz šuštave modre zastore zore<br />
+<br />
+Slute se obrisi tijela što gore.<br />
+<br />
+<br />
+Autor: Enes Kiševiæ<br />
+<br />
+<img src=http://i39.tinypic.com/5p3jtw.jpg><br />
+<br />
+</p>
+<p class="time">- 22:32 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627325560/starinski-mirisi.html" target="_blank">Komentari</a> (4) - 
+<a href="http://www.blog.hr/print/id/1627325560/starinski-mirisi.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627325560/starinski-mirisi.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627325560">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627325560', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627324509"></a>
+
+<!-- Datum posta -->
+
+<h4>utorak, <a name="dan23"></a>23.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Sretna ljubav<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627324509%2Fsretna-ljubav.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>Cvijet kapi rijeke ispod mene protjece u ljepoti latica sunca <br />
+I ja ga zadrzavam odsjajem pogleda i stavljam na predvidjeno mjesto , <br />
+Za bozanstvena uzivanja , u sebe , u moj san i moje disanje . <br />
+Kako zajedno otjecemo , taj divni dragulj mojih ociju i ja , <br />
+Kao da u biseru pticjeg pjeva slavimo plavi miris , jer nestajemo <br />
+Preplavljeni horizontom vrucih dodira tvog prekrasnog pejsaza . <br />
+<br />
+Uzitak mi je postajati odraz tvog predivnog jezera , misao njegovih titraja , <br />
+Krosnja sveg lisca sto zanosom ljepote sumi iznad bistre vode tvog osmjeha , <br />
+Drhtati uzdahom pozude dok se sva ta voda slijeva dlanovima i prozirna nestaje . <br />
+Osjecam sve te vodene krugove kad se mojom dusom sire melodijom odvaznosti , <br />
+Kad me sustizu i pod mojim se nogama neprimjetno u zanosu valjaju , <br />
+Pretvarajuci tisinu u najljepsi sklad nasih tijela i misli ciji smo stvaratelji . <br />
+<br />
+Usnama mi otpocinju tada rasti ruze , iz tih mirnih pupoljaka izlazi sretna ljubav , <br />
+Njeni prvi pokreti svom snagom mame zvijezde , oslanjaju se na njihov sjaj , <br />
+Upijaju tvoju svjetlost pretvarajuci moje ruke u uzarene grane sto se oko tebe svijaju . <br />
+Upisujem se povrsinom velicanstvenog ogledala , slazem obrise mojih mastanja <br />
+I sa njima u dubini jezera pocivam , unutar skoljki i u perajama riba , zapleten u alge , <br />
+Osjecam te podvodne dodire i u cistoj zjenici ljubavi se odmaram i nanovo stvaram . <br />
+<br />
+S radosnom pjesmom svemira , kao naslada u tezini tvoje mjesecine ostajem , <br />
+Ti me prepoznajes i svakom mom drhtaju dodajes ples dijamantnih kapljica , <br />
+Sa svog obraza predajes vodu vjecnom moru i ono na izvoru duge pjenom progovora . <br />
+Zrcalimo se u tihim drhtajima srca , a njegovim otkucajima prikupljamo ritam srece , <br />
+Na kamenu pod vodom , ostavljamo jeku nasih izmirenih glasova i lijezemo , <br />
+Uranjamo u dubine , gdje sa beskrajnim pocecima radjamo nase blazeno konaciste . <br />
+<br />
+<br />
+Autor: Zal Kopp<br />
+<br />
+<img src=http://i41.tinypic.com/20jnzo5.jpg></p>
+<p class="time">- 22:51 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627324509/sretna-ljubav.html" target="_blank">Komentari</a> (1) - 
+<a href="http://www.blog.hr/print/id/1627324509/sretna-ljubav.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627324509/sretna-ljubav.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627324509">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627324509', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627323317"></a>
+
+<!-- Datum posta -->
+
+<h4>ponedjeljak, <a name="dan22"></a>22.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i43.tinypic.com/2z71y15.jpg></p>
+<p class="time">- 22:28 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627323317/img-srchttpi43tinypiccom2z71y15jpg.html" target="_blank">Komentari</a> (0) - 
+<a href="http://www.blog.hr/print/id/1627323317/img-srchttpi43tinypiccom2z71y15jpg.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627323317/img-srchttpi43tinypiccom2z71y15jpg.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627323317">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627323317', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627321734"></a>
+
+<!-- Datum posta -->
+
+<h4>nedjelja, <a name="dan21"></a>21.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Proljeæe<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627321734%2Fproljee.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i43.tinypic.com/24m7p7p.jpg><br />
+<br />
+Nemoj, draga, noæas da te san obrva<br />
+I da sklopiš oèi na dušeku mekom!<br />
+Kada mjesec sine nad našom rijekom<br />
+I na zemlju pane tiha rosa prva,<br />
+<br />
+Rodiæe se mlado proljeæe! I svuda<br />
+Prosuæe se miris plavih jorgovana;<br />
+I pahulje snježne padaæe sa grana<br />
+U naš bistri potok što baštom krivuda.<br />
+<br />
+Uzviæe se ljeto nad našim Mostarom,<br />
+I svaki æe prozor zasuti beharom,<br />
+Da probudi srca što ljube i gore...<br />
+<br />
+Zato nemoj, draga, da te san obrva!<br />
+Doði, i u bašti budi ruža prva,<br />
+I na mome srcu miriši do zore!<br />
+<br />
+<br />
+Autor: Aleksa Šantiæ<br />
+<br />
+<img src=http://i40.tinypic.com/s28n7t.jpg></p>
+<p class="time">- 19:04 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627321734/proljee.html" target="_blank">Komentari</a> (3) - 
+<a href="http://www.blog.hr/print/id/1627321734/proljee.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627321734/proljee.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627321734">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627321734', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627317421"></a>
+
+<!-- Datum posta -->
+
+<h4>utorak, <a name="dan16"></a>16.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Govorim poljupcem<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627317421%2Fgovorim-poljupcem.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>Sjeo sam na ono isto mjesto<br />
+Odakle se pogledom u nebeski mir razvlaèim,<br />
+Dohvatio sazviježðe<br />
+I u njemu raskošne putove tvoje beskonaènosti zadržao,<br />
+Zaruèio te rijeèima i na ispružene dlanove<br />
+Položio tvoje zlatne obraze.<br />
+Poèinjem stizati prvo snen iz dubine svoje duše<br />
+I svojim grlom vjeènosti, a zatim mirisan i strastven,<br />
+Vješt i razigran, bezbrojan i ljepotom optoèen.<br />
+Sve ti donosim, uvale na žlici praskozorja,<br />
+Ravnicu u pojasu tvog struka,<br />
+Pregršt zaboravljenih osmjeha,<br />
+Vrelinu izraslu pod svodom preplanulih bedara<br />
+I plave oèi svih tvojih maštanja<br />
+Kao neviðene vrhove naših noænih postajanja.<br />
+<br />
+Nježno ti govorim poljupcima, ne šutim,<br />
+Stalno se smijem i prièam,<br />
+U zagrljajima duge otvaram netaknute snove,<br />
+Vodim te laganim drhtajima,<br />
+Trèim jezikom izmeðu proplanaka uzdaha<br />
+I vješto s milovanjima želja stižem.<br />
+Promatraš me svakom svojom rijeèju, svakim dodirom<br />
+I pokretom oèaravaš, u mjesto svojih izvora unosiš,<br />
+Iznad mekih brežuljaka slasti zanosno izvijaš,<br />
+Nadmoæno upijaš trzanjem<br />
+I pratiš velikim mjeseèevim ulaskom u puèinu tijela.<br />
+Plovim tvojom bjelinom, zaoravam tvoj sjaj,<br />
+Hodam tvojim drvoredima,<br />
+Letim nebeskom mekoæom tvojih krošnji<br />
+I uzbuðen tonem u tvoja prostranstva.<br />
+<br />
+Mirišeš, Bože, kako si samo zamirisala,<br />
+Kakvom me zaljubljenošæu isplela,<br />
+Bojama suncokreta nahranila,<br />
+Stopila ženstvenom vatrom utrobe,<br />
+Biserom oka posvetila i dovela u sebe,<br />
+Po tko zna koji puta šapatom crvenih trešanja zavela.<br />
+Zamamno me ispunjavaš svojom iskrenom sigurnošæu<br />
+I dok te opijam gutljajima velikih i nepresušnih zagrljaja,<br />
+Oblažeš me sokovima strasti onako kako samo ti znaš,<br />
+Ljubavnièki i bez prestanka,<br />
+Iskonskom potrebom za svojim ljubavnikom.<br />
+Ponesen velièanstvenim plesom tankih prstiju,<br />
+Klizim rubom postelje prema svemiru,<br />
+Gdje susreæem obris istinske melodije<br />
+S kojom si me ne tako davno, u sebe unijela.<br />
+<br />
+Osjeæam kako se akordima na vene prislanjaš,<br />
+Kako se tonovima uspinješ krvotokom.<br />
+Slušam te u predivnoj glazbi srca<br />
+I pretaèem kroz pore taj slavujev pjev.<br />
+Ne pamtim ljepšu sliku istkanu u ljubavi niti pronalazim<br />
+Bogatije misli od tvoje zrelosti, ne vidim ništa<br />
+Izvan neprocjenjivog toka tvojih obala, izvan usjeka u kojima nestajem.<br />
+Uživam što me polagano prekrivaš harmonijom grudi<br />
+I njihovim snom gasiš moje èežnje,<br />
+Što lakoæom svog uzdisanja pripremaš mir za mene<br />
+I rukama tiho budiš moja èula.<br />
+Uživam kad me primaš, kad primaš moje latice<br />
+I poput leptirovih krila nježno rasanjuješ.<br />
+Tada samo tvojim dodirima vjerujem<br />
+I jedino se usuðujem s tobom u blaženstvo smjestiti.<br />
+<br />
+Autor: Boris Nikšiæ<br />
+<br />
+<img src=http://i39.tinypic.com/91b1jp.jpg></p>
+<p class="time">- 19:11 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627317421/govorim-poljupcem.html" target="_blank">Komentari</a> (6) - 
+<a href="http://www.blog.hr/print/id/1627317421/govorim-poljupcem.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627317421/govorim-poljupcem.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627317421">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627317421', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627315660"></a>
+
+<!-- Datum posta -->
+
+<h4>nedjelja, <a name="dan14"></a>14.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i41.tinypic.com/esjhv8.jpg></p>
+<p class="time">- 22:24 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627315660/img-srchttpi41tinypiccomesjhv8jpg.html" target="_blank">Komentari</a> (3) - 
+<a href="http://www.blog.hr/print/id/1627315660/img-srchttpi41tinypiccomesjhv8jpg.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627315660/img-srchttpi41tinypiccomesjhv8jpg.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627315660">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627315660', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627314437"></a>
+
+<!-- Datum posta -->
+
+<h4>subota, <a name="dan13"></a>13.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Žena <br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627314437%2Fena.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>Ja sam svoju dušu u tvoj život prenio,<br />
+I sve tvoje mane, grijehe i vrline<br />
+Zavolio tamnom strašæu, draga ženo,<br />
+Strašæu radi koje živi se i gine.<br />
+<br />
+Ti si svjetost moje radosti i tuge<br />
+I molitva èista srca u samoæi,<br />
+Radost mojih snova u bojama duge,<br />
+Vjera moga biæa u danu i noæi.<br />
+<br />
+Kad prièešæe doðe duše koju zvona<br />
+Zovu vjeènom carstvu èistote i mira,<br />
+Ti si moje vjere velika Madona<br />
+Pred kojom se cijeli iz svetog putira.<br />
+<br />
+Što živimo duže, vezani smo èvršæe.<br />
+Ti si tamna težnja nagona i žudi<br />
+I razblude moje, kad na meni dršæe<br />
+Sve, a pohota se poèinje da budi.<br />
+<br />
+Kad instinkt sa svješæu stane da se bori,<br />
+Kad se vani prospe mjeseèina bijela,<br />
+Crven plamen mojih strasti uvijek gori<br />
+Na griješnom oltaru tvog mirisnog tijela.<br />
+<br />
+I sto tamnih veza u nama se spaja:<br />
+Veza ranih snova o vjeènoj ljepoti,<br />
+Veza našom djecom, radosti i vaja,<br />
+I perversne strasti i duše i ploti. <br />
+<br />
+<br />
+Autor: Sima Panduroviæ<br />
+<br />
+<img src=http://i39.tinypic.com/v6umnb.jpg></p>
+<p class="time">- 18:39 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627314437/ena.html" target="_blank">Komentari</a> (10) - 
+<a href="http://www.blog.hr/print/id/1627314437/ena.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627314437/ena.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627314437">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627314437', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627309366"></a>
+
+<!-- Datum posta -->
+
+<h4>srijeda, <a name="dan10"></a>10.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>U vrtu<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627309366%2Fu-vrtu.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>Kroz zeleno granje<br />
+Sunašce te viri,<br />
+A slatko pjevanje<br />
+S vjetriæem se širi.<br />
+<br />
+Oko tebe ruže<br />
+Bajni vjenac svile,<br />
+A leptiri kruže<br />
+Njedra im od svile.<br />
+<br />
+Svaki cvjetak veli<br />
+U šaptanju tajnom,<br />
+Da snivati želi<br />
+Na njedru ti bajnom.<br />
+<br />
+Ti razumješ cvjetak<br />
+Kad zboriti stane,<br />
+Pa ruže za spletak<br />
+Otkidaš sa grane.<br />
+<br />
+Daj i meni jednu,<br />
+Kojoj zvjezde poju, -<br />
+Daj mi ružu èednu -<br />
+Daj mi dušu tvoju!...<br />
+<br />
+<br />
+Autor: Aleksa Šantiæ<br />
+<br />
+<img src=http://i39.tinypic.com/syxwgm.jpg><br />
+<br />
+</p>
+<p class="time">- 22:26 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627309366/u-vrtu.html" target="_blank">Komentari</a> (1) - 
+<a href="http://www.blog.hr/print/id/1627309366/u-vrtu.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627309366/u-vrtu.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627309366">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627309366', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627308470"></a>
+
+<!-- Datum posta -->
+
+<h4>utorak, <a name="dan9"></a>09.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Na ruševinama <br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627308470%2Fna-ruevinama.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>O, daj mi ruku, da te vodim tuda,<br />
+<br />
+Tek èuvaj mi se, da mi ne posrneš;<br />
+<br />
+Gle, kako bršljan obrasto je svuda!<br />
+<br />
+Divota sama kud god okom svrneš;<br />
+<br />
+Gle, laki lahor kosicu ti gladi!<br />
+<br />
+I ðavolasto u njena njendra zaviri<br />
+<br />
+I obrašèiæe tvoje vrele hladi<br />
+<br />
+I opet dalje, nestaško otpiri.<br />
+<br />
+<br />
+<br />
+Autor: Avdo Karabegovic Hasanbegov<br />
+<br />
+<img src=http://i42.tinypic.com/14t7nyb.jpg></p>
+<p class="time">- 22:35 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627308470/na-ruevinama.html" target="_blank">Komentari</a> (3) - 
+<a href="http://www.blog.hr/print/id/1627308470/na-ruevinama.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627308470/na-ruevinama.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627308470">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627308470', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627307375"></a>
+
+<!-- Datum posta -->
+
+<h4>ponedjeljak, <a name="dan8"></a>08.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i48.tinypic.com/11vk40j.jpg></p>
+<p class="time">- 22:24 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627307375/img-srchttpi48tinypiccom11vk40jjpg.html" target="_blank">Komentari</a> (1) - 
+<a href="http://www.blog.hr/print/id/1627307375/img-srchttpi48tinypiccom11vk40jjpg.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627307375/img-srchttpi48tinypiccom11vk40jjpg.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627307375">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627307375', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627304812"></a>
+
+<!-- Datum posta -->
+
+<h4>subota, <a name="dan6"></a>06.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Boje duge <br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627304812%2Fboje-duge.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><a href=http://www.youtube.com/watch?v=CrKPZGvrIjc target=_blank>Boje duge - Klikni i uzivaj...</a><br />
+<br />
+<img src=http://i48.tinypic.com/rihpip.jpg><br />
+<br />
+Boje duge, u tvojim ocima<br />
+Ja ne vidim druge, ni u snovima<br />
+Pre podne za dvoje – prazna ulica<br />
+Sve moje i tvoje – tu u grudima<br />
+<br />
+Tuzne oci – sto pitanja<br />
+Zbogom noci bez svitanja...<br />
+Sve pogresne rijeci, kad udju nam u san<br />
+Ko ce njih sprijecit, bar jos jedan dan<br />
+Opet dugine boje kad kapnu mi na dlan<br />
+I mali svijet za dvoje – ljubav ti i ja<br />
+<br />
+Tuzne oci – sto pitanja<br />
+Zbogom noci bez svitanja<br />
+<br />
+Kao modro more – izmedju nas<br />
+Ja jos cekam zore – tvojih koraka<br />
+<br />
+...Sve pogresne rijeci...<br />
+....Kad udju ti u san...<br />
+<br />
+Tuzne oci – sto pitanja<br />
+Zbogom noci bez svitanja....<br />
+...bez svitanja....<br />
+<br />
+Gde pocinju duge – u kojim morima<br />
+Samo korak do tuge – tu u venama<br />
+<br />
+<br />
+Autor: Milan Ðurðeviæ<br />
+<br />
+</p>
+<p class="time">- 19:15 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627304812/boje-duge.html" target="_blank">Komentari</a> (2) - 
+<a href="http://www.blog.hr/print/id/1627304812/boje-duge.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627304812/boje-duge.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627304812">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627304812', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627303953"></a>
+
+<!-- Datum posta -->
+
+<h4>petak, <a name="dan5"></a>05.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><img src=http://i50.tinypic.com/dra7np.jpg></p>
+<p class="time">- 22:14 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627303953/img-srchttpi50tinypiccomdra7npjpg.html" target="_blank">Komentari</a> (2) - 
+<a href="http://www.blog.hr/print/id/1627303953/img-srchttpi50tinypiccomdra7npjpg.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627303953/img-srchttpi50tinypiccomdra7npjpg.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627303953">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627303953', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627302329"></a>
+
+<!-- Datum posta -->
+
+<h4>èetvrtak, <a name="dan4"></a>04.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Ruža<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627302329%2Frua.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>U šumici cvatu mlade ruže,<br />
+<br />
+Milo grmom zelenim prosute<br />
+<br />
+Rosa božja kitila im skute,<br />
+<br />
+Ljuljajuæ se s povjetarcem druže.<br />
+<br />
+Da ih miloj tražim, oèi kruže;<br />
+<br />
+Kæeri zore želju moju slute,<br />
+<br />
+Slatko s' smiju prijatno nagnute,<br />
+<br />
+Da prekrasne veæem krasu služe:<br />
+<br />
+Kad se netom bujni grm otvori,<br />
+<br />
+A ljubovca oèi pune slasti<br />
+<br />
+Na me slatko smiješeæ' se obori.<br />
+<br />
+"Èemu cvijeæa, èemu teškog truda?<br />
+<br />
+Sama æu ti ljupkom ružom cvasti.<br />
+<br />
+Mila, vjerna, svako doba, svuda!<br />
+<br />
+<br />
+<br />
+Autor: August Šenoa<br />
+<br />
+<img src=http://i46.tinypic.com/2ue44m9.jpg></p>
+<p class="time">- 15:49 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627302329/rua.html" target="_blank">Komentari</a> (2) - 
+<a href="http://www.blog.hr/print/id/1627302329/rua.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627302329/rua.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627302329">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627302329', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<a name="1627300523"></a>
+
+<!-- Datum posta -->
+
+<h4>utorak, <a name="dan2"></a>02.03.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Zlatne suze<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmrvicak.blog.hr%2F2010%2F03%2F1627300523%2Fzlatne-suze.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p>Da nije mene bilo, <br />
+<br />
+Da nisam bio jak <br />
+<br />
+Ko bi sa duše tvoje <br />
+<br />
+Sklonio vjeèiti mrak? <br />
+<br />
+Da nije tebe bilo <br />
+<br />
+Na teškom putu mom, <br />
+<br />
+Ja nikad pjevao ne bih, <br />
+<br />
+Jer ne bih imao kom. <br />
+<br />
+I kada sam padao <br />
+<br />
+Ja sam se nadao <br />
+<br />
+Postoje sigurna vrata, <br />
+<br />
+Pjevao, plakao, <br />
+<br />
+Gasio pakao <br />
+<br />
+Suzama svojim od zlata.<br />
+<br />
+<br />
+Autor: Duško Trifunoviæ<br />
+<br />
+<img src=http://i48.tinypic.com/2v3gd2w.jpg></p>
+<p class="time">- 21:06 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627300523/zlatne-suze.html" target="_blank">Komentari</a> (2) - 
+<a href="http://www.blog.hr/print/id/1627300523/zlatne-suze.html" target="_blank">Isprintaj</a> - 
+<a href="http://mrvicak.blog.hr/2010/03/1627300523/zlatne-suze.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627300523">
+<script type="text/javascript">
+	get_post_comments('http://mrvicak.blog.hr', '1627300523', '11880457', '50');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<p><div align="center">
+<A HREF="http://mrvicak.blog.hr/2010/02/index.html"><< Prethodni mjesec</A> | <A HREF="http://mrvicak.blog.hr/2010/04/index.html">Sljedeæi mjesec >></A></div>
+</p><p><div align="center"><!--Creative Commons License--><a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/hr/" target="_blank"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.png"/></a><br/><a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/hr/" target="_blank">Ovaj blog je ustupljen pod Creative Commons licencom Imenovanje-Dijeli pod istim uvjetima</a>.<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><Work rdf:about=""><license rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/hr/" /></Work><License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/hr/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> - --></div></p>
+
+</div>
+<div id="column">
+
+<div class="box">
+
+<!-- Logo -->
+
+<p><a href="http://mrvicak.blog.hr"><img src="http://mrvicak.blog.hr/slike/logo.jpg" alt="" class="logo"></a></p>
+
+<!-- Logo kraj -->
+
+<!-- Kalendar -->
+<!-- Kalendar -->
+<table class="kalendar" cellspacing="1">
+<tr>
+	<td class="kalendar-strelica-natrag"><a href="http://mrvicak.blog.hr/2010/02/index.html">&lt;</a></td>
+	<td COLSPAN="5" class="kalendar-mjesec-godina">ožujak, 2010</td>
+	<td class="kalendar-strelica-naprijed"><a href="http://mrvicak.blog.hr/2010/04/index.html">&gt;</a></td>
+</tr>
+<tr class="kalendar-nazivi-dana">
+	<td>P</td>
+	<td>U</td>
+	<td>S</td>
+	<td>È</td>
+	<td>P</td>
+	<td>S</td>
+	<td>N</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">1</td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan2"  class="kalendar-aktivni-dani-linkovi">2</a></td>
+		<td class="kalendar-neaktivni-dani">3</td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan4"  class="kalendar-aktivni-dani-linkovi">4</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan5"  class="kalendar-aktivni-dani-linkovi">5</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan6"  class="kalendar-aktivni-dani-linkovi">6</a></td>
+		<td class="kalendar-neaktivni-dani">7</td>
+</tr>
+<tr>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan8"  class="kalendar-aktivni-dani-linkovi">8</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan9"  class="kalendar-aktivni-dani-linkovi">9</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan10"  class="kalendar-aktivni-dani-linkovi">10</a></td>
+		<td class="kalendar-neaktivni-dani">11</td>
+		<td class="kalendar-neaktivni-dani">12</td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan13"  class="kalendar-aktivni-dani-linkovi">13</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan14"  class="kalendar-aktivni-dani-linkovi">14</a></td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">15</td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan16"  class="kalendar-aktivni-dani-linkovi">16</a></td>
+		<td class="kalendar-neaktivni-dani">17</td>
+		<td class="kalendar-neaktivni-dani">18</td>
+		<td class="kalendar-neaktivni-dani">19</td>
+		<td class="kalendar-neaktivni-dani">20</td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan21"  class="kalendar-aktivni-dani-linkovi">21</a></td>
+</tr>
+<tr>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan22"  class="kalendar-aktivni-dani-linkovi">22</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan23"  class="kalendar-aktivni-dani-linkovi">23</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan24"  class="kalendar-aktivni-dani-linkovi">24</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan25"  class="kalendar-aktivni-dani-linkovi">25</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan26"  class="kalendar-aktivni-dani-linkovi">26</a></td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan27"  class="kalendar-aktivni-dani-linkovi">27</a></td>
+		<td class="kalendar-neaktivni-dani">28</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">29</td>
+		<td class="kalendar-aktivni-dani"><a href="http://mrvicak.blog.hr/2010/03/index.html#dan30"  class="kalendar-aktivni-dani-linkovi">30</a></td>
+		<td class="kalendar-neaktivni-dani">31</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+</tr>
+</table><br/>
+<a href="http://mrvicak.blog.hr/2010/12/index.html">Prosinac 2010 (1)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/11/index.html">Studeni 2010 (20)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/10/index.html">Listopad 2010 (17)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/09/index.html">Rujan 2010 (9)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/08/index.html">Kolovoz 2010 (20)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/07/index.html">Srpanj 2010 (11)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/06/index.html">Lipanj 2010 (22)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/05/index.html">Svibanj 2010 (21)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/04/index.html">Travanj 2010 (17)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/03/index.html">Ožujak 2010 (18)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/02/index.html">Veljaèa 2010 (19)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2010/01/index.html">Sijeèanj 2010 (29)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/12/index.html">Prosinac 2009 (25)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/11/index.html">Studeni 2009 (20)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/10/index.html">Listopad 2009 (17)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/09/index.html">Rujan 2009 (8)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/08/index.html">Kolovoz 2009 (9)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/07/index.html">Srpanj 2009 (7)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/06/index.html">Lipanj 2009 (5)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/05/index.html">Svibanj 2009 (23)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/04/index.html">Travanj 2009 (26)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/03/index.html">Ožujak 2009 (24)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/02/index.html">Veljaèa 2009 (27)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2009/01/index.html">Sijeèanj 2009 (26)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/12/index.html">Prosinac 2008 (20)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/11/index.html">Studeni 2008 (23)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/10/index.html">Listopad 2008 (18)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/09/index.html">Rujan 2008 (32)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/08/index.html">Kolovoz 2008 (20)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/07/index.html">Srpanj 2008 (31)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/06/index.html">Lipanj 2008 (30)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/05/index.html">Svibanj 2008 (23)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/04/index.html">Travanj 2008 (28)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/03/index.html">Ožujak 2008 (29)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/02/index.html">Veljaèa 2008 (28)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2008/01/index.html">Sijeèanj 2008 (31)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2007/12/index.html">Prosinac 2007 (17)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2007/11/index.html">Studeni 2007 (17)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2007/10/index.html">Listopad 2007 (57)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2007/09/index.html">Rujan 2007 (28)</a><br/>
+
+<a href="http://mrvicak.blog.hr/2007/08/index.html">Kolovoz 2007 (30)</a><br/>
+
+<!-- Kalendar kraj-->
+<!-- Link za prikaz komentara -->
+
+<A HREF="http://mrvicak.blog.hr/2010/03/index.2.html">Komentari On/Off</A>
+<!-- Link za prikaz komentara kraj-->
+
+<!-- Molimo da ne micete ovu varijablu jer
+ce se koristi za eventualne obavijesti. Hvala! -->
+<br><br><a href="http://www.igre.hr" target="_blank">Igre.hr</a><br>
+Igrajte najbolje online igre i igrice<br><br>
+<!-- Kraj -->
+</div>
+
+<!-- Prvi box -->
+
+<div class="box">
+<h2>Opis bloga</h2>
+<p>Blog posvecen jednoj predivnoj osobi i jednoj predivnoj zeni koju puno volim<br />
+<br />
+<img src=http://img406.imageshack.us/img406/8650/1ruzado3.jpg><br />
+<br />
+<img src=http://img151.imageshack.us/img151/3396/nasakafa24022008ki1.jpg><br />
+<br />
+<br />
+<a href="http://www.webarhiva.com"><img src="http://www.webarhiva.com/themes/portaldex/banneri/banner_125x125.gif" width="125" height="125" alt="Web Hrvatska" /></a><br />
+<br />
+<br />
+</p>
+</div>
+
+<!-- Prvi box kraj -->
+
+<!-- Drugi box -->
+
+<!-- Drugi box kraj -->
+
+<!-- Treci box -->
+
+<div class="box">
+<h2>Pjesme za Tebe</h2>
+<p><img src=http://img230.imageshack.us/img230/639/pticabehargx5.png><br />
+<br />
+<a href=http://www.youtube.com/watch?v=yXQLKnK1uxA target=_blank>Teska Industrija - Kolika je Jahorina planina</a><br />
+<a href=http://www.youtube.com/watch?v=C1bOz-RObgk target=_blank>Kemal Monteno - Uvijek ti</a><br />
+<a href=http://www.youtube.com/watch?v=d19b67vf_cQ target=_blank>Grupa SMAK - Miris nje</a><br />
+<a href=http://www.youtube.com/watch?v=CJ1dtpv4MwQ target=_blank>Mate Miso Kovac - Od svega te volim vise</a><br />
+<a href=http://www.youtube.com/watch?v=f89S-hTOaOs target=_blank>Toni Cetinski - Kad zena zavoli</a><br />
+<a href=http://www.youtube.com/watch?v=MG7RkGqU9QA target=_blank>Grupa COD - Ciciban</a><br />
+<a href=http://www.youtube.com/watch?v=-yGPasZ6Dek target=_blank>Riblja Corba - Boze koliko je volim</a><br />
+<a href=http://www.youtube.com/watch?v=CrKPZGvrIjc target=_blank>Neverne Bebe i Aki Rahimovski - Boje duge</a><br />
+<a href=http://www.youtube.com/watch?v=yfMxsS37KQU target=_blank>Toma Bebic - Tajne mora</a><br />
+<a href=http://www.youtube.com/watch?v=zd01gH-u1Fk target=_blank>Crvena Jabuka - Sa tvojih usana</a><br />
+<a href=http://www.youtube.com/watch?v=RKL24CoqUdY target=_blank>Miladin Sobic - To sam ja</a><br />
+<a href=http://www.youtube.com/watch?v=k7d6nSoaPJM target=_blank>Marko Perkovic Thompson i Stepincevi malisani - Zvona zvone Bozic je</a><br />
+<a href=http://www.youtube.com/watch?v=soDZBW-1P04 target=_blank>Nazareth - Love Hurts</a><br />
+<a href=http://www.youtube.com/watch?v=UKzFjgOkusw target=_blank>Mate Miso Kovac - Da te sretnem za sto godina</a><br />
+<a href=http://www.youtube.com/watch?v=xpSzhod04a0&feature=PlayList&p=554556B20FA7A4C7&playnext_from=PL&playnext=1&index=53 target=_blank>Tomislav Bralic i klapa Intrade - Neka ti bude postelja meka</a><br />
+<a href=http://www.youtube.com/watch?v=MVc6Ga80LwQ target=_blank>Kemal Monteno - Ti si moja poezija</a><br />
+<a href=http://www.youtube.com/watch?v=d82BPHicxQQ target=_blank>Fantomi - Sretan ti rodjendan</a><br />
+<a href=http://www.youtube.com/watch?v=-tJYN-eG1zk target=_blank>Queen - We Will Rock You</a><br />
+<a href=http://www.youtube.com/watch?v=HH85zttgbGg target=_blank>ZZ Top - Legs</a><br />
+<a href=http://www.youtube.com/watch?v=IbqchLSjAaI target=_blank>Jimi Hendrix - Red House</a><br />
+<a href=http://www.youtube.com/watch?v=l4CaA7vDe3M target=_blank>Senad od Bosne - Sal</a><br />
+<a href=http://www.youtube.com/watch?v=eKtfjsonPFE target=_blank>Led Zeppelin - Kashmir</a><br />
+<a href=http://www.youtube.com/watch?v=RbkL_c0Bx_0 target=_blank>Mate Miso Kovac - Ti si za me rodjena</a><br />
+<a href=http://www.youtube.com/watch?v=nkhTA6MQ3BQ target=_blank>The Beatles - Yellow Submarine</a><br />
+<a href=http://www.youtube.com/watch?v=hGbgMXzJvYQ target=_blank>Uriah Heep - Free Me</a><br />
+<a href=http://www.youtube.com/watch?v=tctzUNMp5po&feature=PlayList&p=476A398E9A631244&playnext_from=PL&playnext=1&index=51 target=_blank>Bob Dylan i George Harrison - If Not For You</a><br />
+<a href=http://www.youtube.com/watch?v=sgMDTRPqXbk&feature=fvst target=_blank>Scorpions - Wind of Change</a><br />
+<a href=http://www.youtube.com/watch?v=10BqYeIwfmw target=_blank>Arsen Dedic - Sve te vodilo  k meni</a><br />
+<a href=http://www.youtube.com/watch?v=eDIaDS9HhMw target=_blank>Janis Joplin - Cry Baby</a><br />
+<a href=http://www.youtube.com/watch?v=kRXjYFj12rM target=_blank>The Sweet - Wig Wam Bam</a><br />
+<a href=http://www.youtube.com/watch?v=B9d7aI69o_Q target=_blank>Zvonko Bogdan - Prosle su mnoge ljubavi</a><br />
+<a href=http://www.youtube.com/watch?v=UE3Nek00PMQ target=_blank>Bolujem ja, bolujes ti</a><br />
+<a href=http://www.youtube.com/watch?v=9vFTksaposs target=_blank>Suzi Quatro - Devil Gate Drive</a><br />
+<a href=http://www.youtube.com/watch?v=AwTb2i3DA3I target=_blank>Legende i Bora Djordjevic - Tocak zivota</a><br />
+<a href=http://www.youtube.com/watch?v=C8-f_3yGBJw target=_blank>Generacija 5 - Ritam tvoga dodira</a><br />
+<a href=http://www.youtube.com/watch?v=FBwpCaLq2mk target=_blank>Mirzino Jato - Apsolutno tvoj</a><br />
+<a href=http://www.youtube.com/watch?v=UfjsnQSFHxw target=_blank>The Eagels - Hotel California</a><br />
+<a href=http://www.youtube.com/watch?v=Sio3ZWMeQIM target=_blank>Pink Floyd - Another Brick In The Wall</a><br />
+<a href=http://www.youtube.com/watch?v=rblmGHKIyO8 target=_blank>Bolero - Krcmarska Moskva</a><br />
+<a href=http://www.youtube.com/watch?v=aIrCFrFpHvw target=_blank>Tina Turner - Simply The Best</a><br />
+<a href=http://www.youtube.com/watch?v=3a7cHPy04s8 target=_blank>The Rolling Stones - Satisfaction</a><br />
+<a href=http://www.youtube.com/watch?v=t6Lp4w8wyy0 target=_blank>Frank Sinatra - My Way</a><br />
+<a href=http://www.youtube.com/watch?v=SO7eCbEVX7k target=_blank>Goran Karan - Lipa si lipa</a><br />
+<a href=http://www.youtube.com/watch?v=iC-8wpL4o7s target=_blank>Kemal Monteno - Svoj ti zivot poklanjam</a><br />
+<a href=http://www.youtube.com/watch?v=-0iSDpzfg7M target=_blank>Zlatko Pejakovic - Za saku ljubavi</a><br />
+<a href=http://www.youtube.com/watch?v=RLZF1YDY1kU target=_blank>Rondo - Plave oci</a><br />
+<a href=http://www.youtube.com/watch?v=1JbkGA3Qtek target=_blank>Dubrovacki Trubaduri - Nocna muzika (La musica di notte)</a><br />
+<a href=http://www.youtube.com/watch?v=ZXc-XHokh2s target=_blank>Tereza Kesovija - Zapjevajmo prijatelji</a><br />
+<a href=http://de.youtube.com/watch?v=WX3fsLnIVRs target=_blank>Davor Borno - Samo ti i ja</a><br />
+<a href=http://de.youtube.com/watch?v=OxJP6idUUrA target=_blank>Piloti - Zamisli</a><br />
+<a href=http://www.youtube.com/watch?v=X-9Sew2jdJM target=_blank>Dragana, Semsa, Mile, Kemal i Sinan - Jaci nego ikad</a><br />
+<a href=http://www.youtube.com/watch?v=TCXoeVycwKg target=_blank>Vlado Georgiev - Sve si mi ti</a><br />
+<a href=http://www.youtube.com/watch?v=jXK0c5kektk target=_blank>Mate Bulic - Vijavica</a><br />
+<a href=http://www.youtube.com/watch?v=2SriQmMKZxc target=_blank>Aerodrom - Mili moj andjele</a><br />
+<a href=http://www.youtube.com/watch?v=-vTvZ2EMBG0 target=_blank>Bolero - Galebovi</a><br />
+<a href=http://www.youtube.com/watch?v=IojvkY_XazU target=_blank>Divlje Jagode - Mojoj ljubavi</a><br />
+<a href=http://www.youtube.com/watch?v=aJP0LoSASV4 target=_blank>Ivan Mikulic - Ne mogu ja bez tebe</a><br />
+<a href=http://www.youtube.com/watch?v=L5vOary-JsE target=_blank>Oliver Dragojevic - Samo ti</a><br />
+<a href=http://www.youtube.com/watch?v=wQER8gMLv2E target=_blank>Antonija Sola i Tose Proeski - Volim osmijeh tvoj</a><br />
+<a href=http://www.youtube.com/watch?v=xlISEyAlM9g target=_blank>Oliver Mandic - Govor tvog tijela</a><br />
+<a href=http://www.youtube.com/watch?v=rikm0OFq3Z8 target=_blank>Garavi Sokak - Teci, teci Dunave</a><br />
+<a href=http://www.youtube.com/watch?v=fwR2gNMVAQk target=_blank>Leteci Odred - Veceras je duso rodjendan tvoj</a><br />
+<a href=http://www.youtube.com/watch?v=zrWNkOjK2SM&feature=PlayList&p=C8F302FA1A447FBB&playnext_from=PL&playnext=1&index=29 target=_blank>Teska Industrija - Odlazi Teska industrija</a><br />
+<a href=http://www.youtube.com/watch?v=ipPp9yggoiU target=_blank>Miroslav Skoro - Svetinja</a><br />
+<a href=http://de.youtube.com/watch?v=80hgjHO0kA4 target=_blank>Jasmin Stavros - Hej da si vino</a><br />
+<a href=http://www.youtube.com/watch?v=_CUNWpsvqDA target=_blank>Srebrna Krila - Zakuni se ljubavi</a><br />
+<a href=http://de.youtube.com/watch?v=GZThetyXss4 target=_blank>AZRA - Meni se duso od tebe ne rastaje</a><br />
+<a href=http://www.youtube.com/watch?v=5xpg_9u2eRI target=_blank>Djordje Balasevic - Tvoj Neko</a><br />
+<a href=http://www.youtube.com/watch?v=COdzvDRjiFw&feature=related target=_blank>Mladen Grdovic - Reci mi reci zivote moj</a><br />
+<a href=http://www.youtube.com/watch?v=WlBfxxBd8lE target=_blank>Parni Valjak - Dok je tebe</a><br />
+<a href=http://www.youtube.com/watch?v=qTI30DS04ec target=_blank>Haris Dzinovic - Kako mi nedostajes</a><br />
+<a href=http://de.youtube.com/watch?v=F92ZGicvgWI target=_blank>Goran Karan - Jos uvijek vjerujem da ljubav postoji</a><br />
+<a href=http://www.youtube.com/watch?v=nQ8buO3ozzY target=_blank>Miroslav Ilic - Naljutices me ti</a><br />
+<a href=http://www.youtube.com/watch?v=7oh3f8nUyBI target=_blank>Sandi Cenov - To si htjela</a><br />
+<a href=http://www.youtube.com/watch?v=SqQzvgp6lDk target=_blank>Mladen Grdovic - Reci mi reci zivote moj</a><br />
+<a href=http://www.youtube.com/watch?v=LA1zLugKelQ target=_blank>Dusko Lokin - Casa gorkih suza</a><br />
+<a href=http://www.youtube.com/watch?v=LiT5K1tqcTw target=_blank>Mugdim Avdic Henda - I dok predajem se tebi</a><br />
+<a href=http://de.youtube.com/watch?v=H2OepurqIAE target=_blank>Zeljko Samardzic - Ako odes</a><br />
+<a href=http://www.youtube.com/watch?v=mWR5VcPLypc target=_blank>Momcilo Bajagic Bajaga - Zazmuri</a><br />
+<a href=http://www.youtube.com/watch?v=adamdPuqk9c target=_blank>Crvena Jabuka - Da znas da me bolis</a><br />
+<a href=http://www.youtube.com/watch?v=WpXoIJvKqfI target=_blank>Stefan Filipovic - Zauvijek volim te</a><br />
+<a href=http://www.youtube.com/watch?v=jYnba5519Fw target=_blank>Halid Beslic - Zumbuli su procvali</a><br />
+<a href=http://www.youtube.com/watch?v=fD2PyeyZT14 target=_blank>Indexi Sanjam</a><br />
+<a href=http://www.youtube.com/watch?v=yqBmX6_Tl18 target=_blank>Vesna Zmijanac i Dino Merlin - Kad zamirisu jorgovani</a><br />
+<a href=http://www.youtube.com/watch?v=r-HJAeAvMnI target=_blank>Nenad Kero i Bepo - Evo ti dusu dajen</a><br />
+<a href=http://www.youtube.com/watch?v=JsLD5z2Le7o target=_blank>Dalibor Brun - Sta si mi sinoc stavila u vino</a><br />
+<a href=http://www.youtube.com/watch?v=gwFfN0p113Q target=_blank>Miroslav Ilic - Bozanstvena zeno</a><br />
+<a href=http://www.youtube.com/watch?v=pronFLd1Tr4 target=_blank>Josipa Lisac i Miro Ungar - Ljubavna pjesma</a><br />
+<a href=http://www.youtube.com/watch?v=EthCU8C22ZI target=_blank>Prva Liga - Jedan zivot malo je</a><br />
+<a href=http://www.youtube.com/watch?v=cec34OOdnRA target=_blank>Mikis Theodorakis - Zorba</a><br />
+<a href=http://www.youtube.com/watch?v=ljrFIOEHyYs target=_blank>Miroslav Rus - Jos i danas zamirise tresnja</a><br />
+<a href=http://de.youtube.com/watch?v=WUq2oDUH8Og target=_blank>Bijelo Dugme - Lose vino</a><br />
+<a href=http://de.youtube.com/watch?v=T278o17Lqlk target=_blank>Dino Merlin - Zelja</a><br />
+<a href=http://de.youtube.com/watch?v=S2UWFy6oZ00 target=_blank>Tedi Spalato - Njeno lice ka u Gospe</a><br />
+<a href=http://de.youtube.com/watch?v=dCjL7z7hEvs target=_blank>Zdravko Colic - Odvescu te</a><br />
+<a href=http://www.youtube.com/watch?v=vmRrVEH3PeI target=_blank>Vlado Kalember - Vino na usnama</a><br />
+<a href=http://www.youtube.com/watch?v=ex32qlF6Ss0 target=_blank>Ekatarina Velika - Oci boje meda</a><br />
+<a href=http://de.youtube.com/watch?v=TFHG2PJTjdE target=_blank>Tony Cetinski - Ti moja si desna ruka</a><br />
+<a href=http://de.youtube.com/watch?v=Zb2avc-U5I0 target=_blank>Leteci Odred - Tebi mogu reci sve</a><br />
+<a href=http://de.youtube.com/watch?v=wle9VcEaY94 target=_blank>Zeljko Samardzic - Ja kunem se u ljubav</a><br />
+<a href=http://de.youtube.com/watch?v=lzOKvSZijbI target=_blank>Miso Kovac - Ako me ostavis</a><br />
+<a href=http://youtube.com/watch?v=tWAYWBOGvzw target=_blank>AZRA - Plavi golub</a><br />
+<a href=http://youtube.com/watch?v=lj3MAQlLf-c target=_blank>Latino - Divno je biti nekome nesto</a><br />
+<a href=http://www.youtube.com/watch?v=99KC5gdknhg target=_blank>Oliver Dragojevic - Vjeruj u ljubav</a><br />
+<a href=http://www.youtube.com/watch?v=L2b5IpkYH2w target=_blank>Massimo Savic - Da mogu</a><br />
+<a href=http://youtube.com/watch?v=EIfOgoyxQo4 target=_blank>Miladin Sobic - Umjesto gluposti</a><br />
+<a href=http://www.youtube.com/watch?v=J0onXF3AZXs target=_blank>Leo Martin - Ja te volim</a><br />
+<a href=http://www.youtube.com/watch?v=YB38qGV2zmc target=_blank>Drazen Zecic - Kad sjetis se mene</a><br />
+<a href=http://www.youtube.com/watch?v=TMDerewQRps target=_blank>Mladen Grdovic - Zaljubljen san u te</a><br />
+<a href=http://www.youtube.com/watch?v=uGyqRwMKLV0 target=_blank>Nenad Vetma i Jole - Bolis me duso</a><br />
+<a href=http://youtube.com/watch?v=MhlXNhwhH6Q target=_blank>Kemal Monteno - Kad umre ljubav</a><br />
+<a href=http://youtube.com/watch?v=_4UflJ4tFgE target=_blank>Zlatko Pejakovic - Ako odem prijatelji</a><br />
+<a href=http://youtube.com/watch?v=es082uJPZWU target=_blank>Toma Zdravkovic - Nocas mi srce pati</a><br />
+<a href=http://www.youtube.com/watch?v=J8vKoVIbpPo&feature=PlayList&p=D57EEE9B179B3B2C&playnext_from=PL&playnext=1&index=37 target=_blank>Galija - Ti mozes sve</a><br />
+<a href=http://www.youtube.com/watch?v=0ACB5pXFct4 target=_blank>Dragan Stojnic - C`est la vie</a><br />
+<a href=http://youtube.com/watch?v=9Phfb4XVZI0 target=_blank>Gibonni - Divji cvit</a><br />
+<a href=http://youtube.com/watch?v=5FJ3TVGCC0k target=_blank>Miroslav Skoro - Sil, dil, daj</a><br />
+<a href=http://youtube.com/watch?v=3rpaRR66xKs target=_blank>Atomsko Skloniste - Za ljubav treba imat dusu</a><br />
+<a href=http://www.youtube.com/watch?v=LXruuCz8ijg target=_blank>Vlado Georgijev - Nisam ljubomoran</a><br />
+<a href=http://youtube.com/watch?v=8I1LEdygp-s target=_blank>Lepa Brena - Ja nemam drugi dom</a><br />
+<a href=http://youtube.com/watch?v=8ftdIUwbNcg target=_blank>Vatreni Poljubac - Od zelje da te ljubim</a><br />
+<a href=http://youtube.com/watch?v=FO9ouHwNyu0 target=_blank>Valentino - Mirise mi na Tebe</a><br />
+<a href=http://www.youtube.com/watch?v=0Yu39v4ySXA target=_blank>Oliver Dragojevic - Tvoje ruke</a><br />
+<a href=http://www.youtube.com/watch?v=7486Oa6EwC4 target=_blank>Zlatko Manojlovic - Jednoj zeni</a><br />
+<a href=http://www.youtube.com/watch?v=817zZjqvoyk target=_blank>Alen Slavica - S tobom nasao sam srecu</a><br />
+<a href=http://youtube.com/watch?v=l8XjEgkCBuM target=_blank>YU grupa - Opasno te volim</a><br />
+<a href=http://www.youtube.com/watch?v=lR3xGQGlV8M target=_blank>Tomislav Ivcic - Otrov s tvojih usana</a><br />
+<a href=http://youtube.com/watch?v=yKHcep1xGEE target=_blank>Amir Kazic Leo - Nasa ljubav od svega je jaca</a><br />
+<a href=http://www.youtube.com/watch?v=aydHddp6ack target=_blank>Boris Novkovic - U dobru i zlu</a><br />
+<a href=http://youtube.com/watch?v=g3v0IKYCENA target=_blank>Doris Dragovic i Miso Kovac - Da te nema</a><br />
+<a href=http://www.youtube.com/watch?v=Z2huE4uAvUM target=_blank>Flamingosi - Mila, najmilija</a><br />
+<a href=http://www.youtube.com/watch?v=ldN7RteLKgQ target=_blank>Dado Polumenta - Volim te</a><br />
+<a href=http://www.youtube.com/watch?v=sIw5Pn_mpRU&feature=PlayList&p=3F4245B80921CD7B&playnext_from=PL&playnext=1&index=25 target=_blank>Ibrica Jusic - U svakom slucaju te volim</a><br />
+<a href=http://www.youtube.com/watch?v=lESdfxhbi_g target=_blank>Himzo Polovina - Emina</a><br />
+<a href=http://youtube.com/watch?v=G7FtR4oe2Rw target=_blank>Severina - Virujen u te</a><br />
+<a href=http://www.youtube.com/watch?v=PJ9MJeAOOw0&feature=related target=_blank>Bijelo Dugme - Sanjao sam nocas da te nemam</a><br />
+<a href=http://www.youtube.com/watch?v=fyExzyMf0rY target=_blank>Miro Ungar - Nocas si lijepa ljubavi</a><br />
+<a href=http://www.youtube.com/watch?v=16XcEKx1-HM target=_blank>Divlje Jagode - Jedina moja</a><br />
+<a href=http://www.youtube.com/watch?v=a6mParoMO6o target=_blank>Idoli - Ona to zna</a><br />
+<a href=http://www.youtube.com/watch?v=c3WIhrdLUUM target=_blank>Tose Proeski - Zauvijek tvoj</a><br />
+<a href=http://www.youtube.com/watch?v=dqeinDdA8Cw target=_blank>Prljavo Kazaliste - Ako trazis nekoga</a><br />
+<a href=http://www.youtube.com/watch?v=d8uteBWZ_Wc&feature=PlayList&p=DF903D8C00CC729E&playnext_from=PL&playnext=1&index=19 target=_blank>Indexi - Balada</a><br />
+<a href=http://www.youtube.com/watch?v=zMKAGL6EEmA target=_blank>Haris Dzinovic - Volim te ludo, znaj</a><br />
+<a href=http://www.youtube.com/watch?v=ptHxN0Ci-gE target=_blank>Tereza Kesovija i Kemal Monteno - Sve dok bude bilo i nas dvoje</a><br />
+<a href=http://youtube.com/watch?v=tf9O-VDjBC4 target=_blank>Krunoslav Kico Slabinac - Tri slatke rijeci</a><br />
+<a href=http://de.youtube.com/watch?v=8zqKkw7KT-Q target=_blank>Marko Perkovic Thompson - Diva Grabovceva</a><br />
+<a href=http://www.youtube.com/watch?v=pS5wWrMHijI target=_blank>Miroslav Ilic - Zena k`o ruza</a><br />
+<a href=http://www.youtube.com/watch?v=thBwCJcMHjY target=_blank>Mahir Palos - Spavaj cvijete moj</a><br />
+<a href=http://www.youtube.com/watch?v=OZmJHb3bgjU target=_blank>Oliver Dragojevic - Kad mi dodjes ti</a><br />
+<a href=http://www.youtube.com/watch?v=t_bWZY5508o target=_blank>No Name - Moja ljubavi</a><br />
+<a href=http://www.youtube.com/watch?v=5spdnrDvAsA target=_blank>Vlado Georgijev - Sve si mi ti</a><br />
+<a href=http://www.youtube.com/watch?v=xYVW4rmw1us target=_blank>Tony Cetinski - Sve je s tobom napokon na mjestu</a><br />
+<a href=http://www.youtube.com/watch?v=BtCzt3Dc22c target=_blank>Goran Karan - Kad zaspu andjeli</a><br />
+<a href=http://www.youtube.com/watch?v=1tgz05CD3FA target=_blank>Lejla Jusic - Sto te nema</a><br />
+<a href=http://www.youtube.com/watch?v=bD1qVLiuvrY target=_blank>Luka Nizetic - Meni trebas ti</a><br />
+<a href=http://www.youtube.com/watch?v=whX2yE5UkI4 target=_blank>Parni Valjak - Kada me dotakne</a><br />
+<a href=http://www.youtube.com/watch?v=PEY0Fqa226M target=_blank>Giuliano - Pismom te ljubi millijun mandolina</a><br />
+<a href=http://www.youtube.com/watch?v=NvRHVX07wjc target=_blank>Jacques Houdek - Zauvijek tvoj</a><br />
+<a href=http://www.youtube.com/watch?v=JsYCrB7gw24 target=_blank>Dado Topic i TIME - Da li znas da te volim</a><br />
+<a href=http://www.youtube.com/watch?v=StBk1j8GUGg&feature=PlayList&p=659DBA41497F4E23&playnext_from=PL&playnext=1&index=12 target=_blank>Vatreni Poljubac - Zikino kolo</a><br />
+<a href=http://www.youtube.com/watch?v=WT4bFUg3t_M target=_blank>Kemal Monteno - Duso moja</a><br />
+<a href=http://www.youtube.com/watch?v=wENMeruVJ-E target=_blank>Dino Dvornik - Ljubav se zove imenom tvojim</a><br />
+<a href=http://www.youtube.com/watch?v=Iewq-CZS_eY target=_blank>Danijela Martinovic i Miroslav Skoro - Tajna najveca</a><br />
+<a href=http://www.youtube.com/watch?v=eyGhPKJwszI target=_blank>Djordje Balasevic - Caletova pjesma</a><br />
+<a href=http://www.youtube.com/watch?v=9RWzutT9_bc target=_blank>Hari Mata Hari - Ja sam vjecni cuvar tvoga sna</a><br />
+<a href=http://www.youtube.com/watch?v=GhVBYY6o7Nc target=_blank>Sinisa Vuco - Volim piti i ljubiti</a><br />
+<a href=http://www.youtube.com/watch?v=ULrSU8pFIrc target=_blank>Prljavo Kazaliste - Uzalud vam trud sviraci</a><br />
+<a href=http://www.youtube.com/watch?v=iTgeMiVWJDk target=_blank>Saban Saulic - Srno moja malena</a><br />
+<a href=http://www.youtube.com/watch?v=C7hWLX27Mb0 target=_blank>Mladen Burnac i Angie - Jabuke i vino</a><br />
+<a href=http://www.youtube.com/watch?v=3TY5gqaCauY target=_blank>Oliver Dragojevic - Sto to bjese ljubav</a><br />
+<a href=http://www.youtube.com/watch?v=B0JMly_op6E target=_blank>Hari Roncevic - I sve dok disen</a><br />
+<a href=http://www.youtube.com/watch?v=khFZ1ahAhHU target=_blank>Dalmatino i Oliver Dragojevic - Ditelina s cet`ri lista</a><br />
+<a href=http://www.youtube.com/watch?v=nOSujkeDYUw target=_blank>Zeljko Samardzic - 9.000 metara</a><br />
+<a href=http://www.youtube.com/watch?v=0p5swAVCgiM target=_blank>Baruni - Mene grije</a><br />
+<a href=http://www.youtube.com/watch?v=hklhFcr0ZcE target=_blank>Sladjana Milosevic - Pada prvi snijeg</a><br />
+<a href=http://www.youtube.com/watch?v=J5jiL1Il_tI target=_blank>Ivan Mikulic - Dajes mi krila</a><br />
+<a href=http://www.youtube.com/watch?v=uz7lFn0yn1c&feature=PlayList&p=E0D7E0A22984CDEF&playnext_from=PL&playnext=1&index=21 target=_blank>Momcilo Bajagic Bajaga - Bademi i so</a><br />
+<a href=http://www.youtube.com/watch?v=WPdkZ3HzonM target=_blank>Marko Perkovic Thompson - Moj dida i ja</a><br />
+<a href=http://www.youtube.com/watch?v=jiIfhpPihB0 target=_blank>Cenk Bosnali - Anadolka</a><br />
+<a href=http://www.youtube.com/watch?v=8-L0qzZwJBc&feature=PlayList&p=A5C40BF29FE10A63&playnext_from=PL&playnext=1&index=36 target=_blank>Esma Redzepova i Dragan Kojic Keba - Sanjam jedan isti san</a><br />
+<a href=http://www.youtube.com/watch?v=iJAm7t7Geb8 target=_blank>Josipa Lisac - Gdje Dunav ljubi nebo</a><br />
+<a href=http://www.youtube.com/watch?v=dymg0sEOml8 target=_blank>Stanisa Stosic - Vranjanka</a><br />
+<a href=http://www.youtube.com/watch?v=ldLgl4WzCbo target=_blank>Daleka Obala - Sto te vise gledam, to te vise ne dam</a><br />
+<a href=http://www.youtube.com/watch?v=dBSyQ-BBDYY target=_blank>Oliver Dragojevic - Cesarica</a><br />
+<a href=http://www.youtube.com/watch?v=cp2NR2EL6wY target=_blank>Crvena Jabuka - Ne dam da ovaj osjecaj ode</a><br />
+<a href=http://www.youtube.com/watch?v=dS2LfRkEi6g target=_blank>Marko Perkovic Thompson - Vjetar s Dinare</a><br />
+<a href=http://www.youtube.com/watch?v=BayvP5xLN8s target=_blank>Hanka Paldum - Crne kose</a><br />
+<a href=http://www.youtube.com/watch?v=tE1M2pA32GU target=_blank>Zdravko Colic - Ti si mi u krvi</a><br />
+<a href=http://www.youtube.com/watch?v=gfYTqcSlLuY target=_blank>Lepa Brena i Miroslav Ilic - Jedan dan zivota</a><br />
+<a href=http://www.youtube.com/watch?v=yY6xJ9evMpg&feature=PlayList&p=6720EE42871889B6&playnext_from=PL&playnext=1&index=29 target=_blank>Josipa Lisac - Pjesma za tebe</a><br />
+<a href=http://www.youtube.com/watch?v=3QTAJ0U-1HQ target=_blank>Halid Beslic - Malo je malo dana</a><br />
+<a href=http://www.youtube.com/watch?v=nrX53K09ObI target=_blank>Neda Ukraden i Zeljko Samardzic - Samo je nebo iznad nas</a><br />
+<a href=http://www.youtube.com/watch?v=dudBOY1qyrI target=_blank>Ivana Banfic i Toni Cetinski - To je vrijedilo cekati</a><br />
+<a href=http://youtube.com/watch?v=IwHre4HJkz0 target=_blank>Dzej Ramadanovski - Sunce ljubavi</a><br />
+<a href=http://www.youtube.com/watch?v=jsiimgX9gHI target=_blank>Lana Jurcevic i Luka Nizetic - Prava ljubav</a><br />
+<a href=http://www.youtube.com/watch?v=VD7gpShP_90 target=_blank>Oliver Dragojevic - Trag u beskraju</a><br />
+<a href=http://www.youtube.com/watch?v=VTIyBsn-yPY target=_blank>Crvena Jabuka - Volio bih da si tu</a></p>
+</div>
+
+<!-- Treci box kraj -->
+
+<!-- Cetvrti box -->
+
+<div class="box">
+<h2></h2>
+<p><br />
+<a href="http://flagcounter.com/more/fc3ZW"><img src="http://flagcounter.com/count/fc3ZW/bg=FFFFFF/txt=000000/border=CCCCCC/columns=2/maxflags=12/viewers=3/labels=0/" border="0"></a></p>
+</div>
+
+<!-- Cetvrti box kraj -->
+
+</div>
+<div id="footer">
+<p></p>
+</div>
+</div>
+</body>
+</html>

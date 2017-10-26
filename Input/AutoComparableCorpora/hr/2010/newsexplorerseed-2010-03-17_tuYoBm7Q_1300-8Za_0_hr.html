@@ -1,0 +1,442 @@
+<html>
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=iso8859-2'>
+<meta name='author'  content='ASP scripting: Drago Kelemen, dkelemen@.morh.hr'>
+	<style type=text/css>A:link     { color: black; font-size: 8pt; font-family: Helvetica, sans-serif; text-decoration: none }
+A:visited   { color: black; font-size: 8pt; font-family: Helvetica, sans-serif; text-decoration: none }
+A:hover   { color: black; font-size: 8pt; font-family: Helvetica, sans-serif; text-decoration: underline }
+</style>
+<head>
+		<style type="text/css" media="screen"><!--
+.autor   { color: white; font-style: italic; font-weight: bold; font-size: x-small; font-family: Verdana; background-color: #bfbfa5; padding-left: 10px; border-top: 1px solid black; border-bottom: 1px solid black }
+.glavni_tekst { color: black; font-size: 9pt; font-family: Verdana; text-align: justify; padding-right: 5px; padding-left: 10px }
+.ukratko { color: black; font-weight: bold; font-size: x-small; font-family: Verdana; padding-left: 10px; border-top: 1px solid black; border-bottom: 1px solid black }
+.potpis_slika { color: black; font-weight: 900; font-size: xx-small; font-family: Arial; border-top: 1px solid #b20000; border-bottom: 1px solid #b20000 }
+.naslov  { color: black; font-weight: bold; font-size: small; font-family: Arial; padding-left: 10px }
+.podnaslov  { color: #b20000; font-weight: bold; font-size: x-small; font-family: Arial; padding-left: 10px }
+.tabela { color: black; font-size: 9pt; font-family: Arial; background-color: #bfbfa5; border: solid 1px black }
+.tabela_crte_vodoravno { border-bottom: 1px solid black }
+--></style>
+		<title>Hrvatski vojnik - Internet izdanje</title>
+		<csscriptdict>
+			<script type="text/javascript"><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+CSIsW3CDOM = ((document.getElementById) && !(IsIE()&&CSBVers<6)) ? true : false;
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { if (CSIsW3CDOM) return document.getElementById(s).style; else return CSFindElement(s,0);  }
+CSIImg=false;
+function CSInitImgID() {if (!CSIImg && document.images) { for (var i=0; i<document.images.length; i++) { if (!document.images[i].id) document.images[i].id=document.images[i].name; } CSIImg = true;}}
+function CSFindElement(n,ly) { if (CSBVers<4) return document[n];
+	if (CSIsW3CDOM) {CSInitImgID();return(document.getElementById(n));}
+	var curDoc = ly?ly.document:document; var elem = curDoc[n];
+	if (!elem) {for (var i=0;i<curDoc.layers.length;i++) {elem=CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSGetImage(n) {if(document.images) {return ((!IsIE()&&CSBVers<5)?CSFindElement(n,0):document.images[n]);} else {return null;}}
+CSDInit=false;
+function CSIDOM() { if (CSDInit)return; CSDInit=true; if(document.getElementsByTagName) {var n = document.getElementsByTagName('DIV'); for (var i=0;i<n.length;i++) {CSICSS2Prop(n[i].id);}}}
+function CSICSS2Prop(id) { var n = document.getElementsByTagName('STYLE');for (var i=0;i<n.length;i++) { var cn = n[i].childNodes; for (var j=0;j<cn.length;j++) { CSSetCSS2Props(CSFetchStyle(cn[j].data, id),id); }}}
+function CSFetchStyle(sc, id) {
+	var s=sc; while(s.indexOf("#")!=-1) { s=s.substring(s.indexOf("#")+1,sc.length); if (s.substring(0,s.indexOf("{")).toUpperCase().indexOf(id.toUpperCase())!=-1) return(s.substring(s.indexOf("{")+1,s.indexOf("}")));}
+	return "";
+}
+function CSGetStyleAttrValue (si, id) {
+	var s=si.toUpperCase();
+	var myID=id.toUpperCase()+":";
+	var id1=s.indexOf(myID);
+	if (id1==-1) return "";
+	s=s.substring(id1+myID.length+1,si.length);
+	var id2=s.indexOf(";");
+	return ((id2==-1)?s:s.substring(0,id2));
+}
+function CSSetCSS2Props(si, id) {
+	var el=document.getElementById(id);
+	if (el==null) return;
+	var style=document.getElementById(id).style;
+	if (style) {
+		if (style.left=="") style.left=CSGetStyleAttrValue(si,"left");
+		if (style.top=="") style.top=CSGetStyleAttrValue(si,"top");
+		if (style.width=="") style.width=CSGetStyleAttrValue(si,"width");
+		if (style.height=="") style.height=CSGetStyleAttrValue(si,"height");
+		if (style.visibility=="") style.visibility=CSGetStyleAttrValue(si,"visibility");
+		if (style.zIndex=="") style.zIndex=CSGetStyleAttrValue(si,"z-index");
+	}
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+function CSButtonReturn () { return !CSClickReturn(); }
+CSIm=new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img=CSGetImage(n);
+			if (img&&typeof(CSIm[n][i].src)!="undefined") {img.src=CSIm[n][i].src;}
+			if(i!=0) self.status=CSIm[n][3]; else self.status=" ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im=action[1];
+	if (document.images) {
+		CSIm[im]=new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i]!='') {CSIm[im][i-2]=new Image(); CSIm[im][i-2].src=action[i];}
+			else CSIm[im][i-2]=0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}			
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script type="text/javascript"><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button',/*URL*/'../new_pic/pretrazivanje.jpg',/*URL*/'../new_pic/pretrazivanje_up.jpg',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button3',/*URL*/'../new_pic/galerija.jpg',/*URL*/'../new_pic/galerija_up.jpg',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+<body onload="CSScriptInit();" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" bgcolor="white">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr height="20">
+				<td rowspan="3" bgcolor="#b20000" width="213">
+					<div align="center">
+						<b><font size="2" color="white" face="Verdana"><html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1250">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="broj_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>dkelemen</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>ajgor</o:LastAuthor>
+  <o:Revision>90</o:Revision>
+  <o:TotalTime>12</o:TotalTime>
+  <o:Created>2009-02-05T12:48:00Z</o:Created>
+  <o:LastSaved>2010-03-18T12:22:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>3</o:Words>
+  <o:Characters>20</o:Characters>
+  <o:Company>HVG</o:Company>
+  <o:Lines>1</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>22</o:CharactersWithSpaces>
+  <o:Version>11.6568</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="54274"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=HR style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal>broj 284, ozujak 2010.</p>
+
+</div>
+
+</body>
+
+</html>
+</font></b></div>
+				</td>
+				<td class="autor" rowspan="3" colspan="2">Nikola HRASTIÆ</td>
+			</tr>
+			<tr></tr>
+			<tr height="1"></tr>
+			<tr height="13">
+				<td bgcolor="#bfbfa5" width="213" valign="top" rowspan="3">
+					<div align="center">
+						<table width="100%" border="0" cellspacing="0" cellpadding="2">
+							<tr>
+								<td bgcolor="#000011">
+									<div align="center">
+										<font color="white" size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Zadnja promjena: 10.12.2010.</font><br>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-2">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Welcome to Adobe GoLive 6</title>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<table border="0" cellpadding="0" cellspacing="2" width="90%">
+			<tr>
+				<td width="209"><font color="black"><a href="flegar.asp">RAZGOVOR - KAPETAN KORVETE ANTUN FLEGAR</a></font><a href="../../../temp/vojnapsihologija.asp"><font color="black"><br>
+						</font></a><a href="seminar.asp">SEMINAR - AFGANISTAN - IZAZOV ZA BUDUÆNOST</a><a href="../../../temp/vojnapsihologija.asp"><font color="black"><br>
+						</font></a><a href="medjsuradnja.asp">MEÐUNARODNA SURADNJA<font color="black"><br>
+						</font></a><a href="pilot.asp">PILOT - PRVAK OSRH U SKIJA©KOM TRÈANJU<font color="black"><br>
+						</font></a><a href="kondicija.asp">KONDICIJSKA PRIPREMA</a><a href="../../../temp/vojnapsihologija.asp"><font color="black"><br>
+						</font></a><font color="black"><a href="vijesti.asp">Vijesti<br>
+						</a></font><font color="black"><a href="tehnika.asp">Novosti iz vojne tehnike<br>
+						</a></font><a href="mbl.asp">Male besposadne letjelice</a><a href="austrija.asp"><font color="black"><br>
+						</font></a><font color="black"><a href="hrana_lijek.asp">Hrana kao lijek</a></font><a href="austrija.asp"><font color="black"><br>
+						</font></a><a href="kasmir.asp">Ka¹mir - gordijski èvor ju¾ne Azije </a><a href="austrija.asp"><font color="black"><br>
+						</font></a><a href="podlistak.asp">Podlistak - HRVATSKI ZRAÈNI ASOVI 1916.-1948.<font color="black"><br>
+						</font></a>
+					<p></p>
+				</td>
+				<td width="37"></td>
+			</tr>
+		</table>
+	</body>
+
+</html>
+						<br>
+						<table border="0" cellpadding="0" cellspacing="2">
+							<tr>
+								<td width="205">
+									<hr noshade size="1">
+								</td>
+							</tr>
+							<tr>
+								<td width="205"><csobj w="203" h="42" t="Button" ht="../new_pic/pretrazivanje_up.jpg"><a href="../../hv_baza/form_trazi.asp" target="mainBar" onmouseover="return CSIShow(/*CMP*/'button',1)" onmouseout="return CSIShow(/*CMP*/'button',0)" onclick="return CSButtonReturn()"><img src="../new_pic/pretrazivanje.jpg" width="203" height="42" name="button" border="0"></a></csobj></td>
+							</tr>
+							<tr>
+								<td width="205">
+									<hr noshade size="1">
+								</td>
+							</tr>
+							<tr>
+								<td width="205"><csobj w="203" h="42" t="Button" ht="../new_pic/galerija_up.jpg"><a href="../fotogallery/gallery.asp" target="mainBar" onmouseover="return CSIShow(/*CMP*/'button3',1)" onmouseout="return CSIShow(/*CMP*/'button3',0)" onclick="return CSButtonReturn()"><img src="../new_pic/galerija.jpg" width="203" height="42" name="button3" border="0"></a></csobj></td>
+							</tr>
+						</table>
+						<br>
+						<table border="0" cellpadding="0" cellspacing="2" width="100%">
+							<tr>
+								<td width="9"></td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="../new_pic/empa.jpg" width="70" height="70" border="0"><br>
+										<p><a href="pretplata.asp"><img src="../banners/logo-vojnik.gif" alt="" height="31" width="100" border="0"></a></p>
+									</div>
+									<hr>
+									<font color="black" face="Helvetica,Arial" size="2"><b> </b></font></td>
+							</tr>
+						</table>
+						<br>
+					</div>
+				</td>
+				<td class="glavni" rowspan="3" colspan="2" valign="top">
+					<table width="100%" border="0" cellspacing="2" cellpadding="0">
+						<tr>
+							<td class="podnaslov"></td>
+						</tr>
+						<tr>
+							<td class="naslov">Ka¹mir - gordijski èvor Ju¾ne Azije</td>
+						</tr>
+						<tr>
+							<td class="ukratko">Borbe oko pokrajine Ka¹mir vode se zadnje 62 godine a popraæene su represijom i masovnim kr¹enjem ljudskih prava. Dogaðali su se masovni pokolji nenaoru¾anih civila, silovanja, te su tisuæe stanovnika Ka¹mira postali izbjeglice. Spor dvije nuklearne sile, Indije i Pakistana, oko teritorija Ka¹mira traje i danas</td>
+						</tr>
+						<tr>
+							<td class="glavni_tekst">
+								<table border="0" cellpadding="5" cellspacing="0" width="64" align="right">
+									<tr>
+										<td>
+											<p><img src="pictures/kashmir1.jpg" width="200" height="206" border="0"><a href="bpictures/1.jpg" target="_blank"><br>
+												</a></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="potpis_slika"></td>
+									</tr>
+								</table>
+								Ka¹mir je naziv za sjeverozapadnu pokrajinu indijskog potkontinenta. Poèetkom tisuæljeæa bio je va¾no sredi¹ta hinduizma i budizma. Britanska vladavina indijskim poluotokom zavr¹ila je 1947., a britansko Indijsko Carstvo raspalo se na nove dr¾ave Indijsku Uniju i Pakistanski Dominion, te vi¹e kne¾evina koje su trebale same odluèiti o svojoj sudbini. Jedna od njih bio je i Ka¹mir, kojim je tada vladao maharad¾a Hari Singh. Indija i Pakistan potpisali su sporazum prema kojem su biv¹e britanske kolonijalne kne¾evine mogle same odabrati hoæe li se pridru¾iti Indiji ili Pakistanu, te u nekim specijalnim sluèajevima ostati nezavisne. Godine 1947. stanovni¹tvo Ka¹mira bilo je veæinski muslimansko (77%), a Ka¹mir je granièio s Pakistanom, pa je javno oèekivanje bilo da æe se Ka¹mir prikljuèiti Pakistanu. No, maharad¾a Singh, potomak hinduistièke indijske kraljevske loze, odbio je prikljuèiti svoje kraljevstvo Pakistanu. Pakistan je nakon odbijanja reagirao slanjem gerilskih boraca preko granice u Ka¹mir, s ciljem zastra¹ivanja maharad¾e. Kako su se pakistanski borci pribli¾avali njegovoj prijestolnici, Hari Singh se obratio za pomoæ indijskim vlastima, koje su uvjetovale slanje vojnih pojaèanja prikljuèivanjem Ka¹mira Indiji. Singh je potpisao Sporazum o pripajanju, a Indija je u Ka¹mir poslala vojne snage koje su brzo protjerale pakistanske borce iz veæine zemlje (Indijsko-Pakistanski rat 1947., poznat i kao &quot;Prvi ka¹mirski rat&quot;). Tada je zbog posredovanja pozvana misija UN-a. Ujedinjeni narodi zahtijevali su da se po¹tuje volja veæine stanovni¹tva oko pitanja pripajanja, no Indija je ustrajala da se referendum ne mo¾e provesti dok se svi dijelovi zemlje ne oslobode od pakistanskih gerilaca. Taj referendum nije proveden do dana¹njeg dana.<br>
+								<br>
+								<p><b>Ratne godine i kulminacija sukoba<br>
+									</b></p>
+								<p>Spor oko Ka¹mira trajao je desetljeæima, a  1968. naoru¾ani pobunjenici iz muslimanskog dijela stanovni¹tva Ka¹mira, potpomognuti Pakistanom, podi¾u ustanak protiv indijske vlasti. Od tog dogaðaja, Indija rabi vojne snage za suzbijanje ustanka i nadzor Ka¹mira. No, od fenomena &quot;mud¾ahedina&quot; u Afganistanu, mnogi od tih iskusnih afganistanskih boraca dolaze u Ka¹mir pomoæi pobunjenicima u borbi protiv Indije. Dolaze i dobrovoljci iz ostalih zemalja. Indija je optu¾ila Pakistan za pru¾anje </p>
+								<table border="0" cellpadding="5" cellspacing="0" width="64" align="right">
+									<tr>
+										<td>
+											<p><img src="pictures/ks_foto1.jpg" width="200" height="133" border="0"><a href="bpictures/1.jpg" target="_blank"><br>
+												</a></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="potpis_slika">Indijski vojnici u Ka¹miru </td>
+									</tr>
+								</table>potpore pobunjenicima i za voðenje kampanje terora protiv nje. Uz povremene oru¾ane konflikte manjeg intenziteta, dvije su zemlje - obje nuklearne sile, bile na rubu rata. Dana 13. prosinca 2001. godine teroristi su napali indijski parlament, ubiv¹i 9 slu¾benika osiguranja, no i sami teroristi u su poginuli u napadu. Ubijene teroriste Indije je identificirala kao pakistanske dr¾avljane, ¹to je dodatno zao¹trilo odnose Indije i Pakistana. Nakon tog dogaðaja, Indija se okreæe novoj strategiji &quot;netoleriranja terorizma&quot;, te poo¹trava i mjere u Ka¹miru.<br>
+								<p>Godine1965., a pogotovo 1971. vodile su se borbe izmeðu Indije i Pakistana, (Indijsko-Pakistanski rat 1971. ili &quot;Drugi ka¹mirski rat&quot;), a zavr¹ile su porazom pakistanskih snaga i predajom u Istoènom Pakistanu (dana¹nji Banglade¹). Mirovni sporazum potpisan je 1972., prema kojem su obje zemlje odluèile su se dalje mirnim putem rje¹avati spor oko Ka¹mira, u skladu s odredbama UN-a. <br>
+								</p>
+								<p>Do ustanka islamistièkih pobunjenika u Ka¹miru ponovno dolazi 1989., ovaj put potpomognutim afganistanskim veteranima - mud¾ahedinima. Pakistanska je vlada javno pru¾ila moralnu i diplomatsku potporu ustanicima u njihovoj borbi protiv indijske vojske. Odbacila je indijske optu¾be da pru¾a vojnu pomoæ pobunjenicima. <br>
+								</p>
+								<p>Sredinom 1999. godine pobunjenici i pakistanski vojnici iz pakistanskog dijela Ka¹mira prelaze u indijsku pokrajinu Jammu i Ka¹mir, te zauzimaju kljuène pozicije na planinama nad autocestom koja spaja Ka¹mirsku dolinu i Ladakh. To je dovelo do oru¾anog sukoba indijske i pakistanske vojske. Pakistanska se vojska povukla tijekom borbi, ¹to je okonèalo konflikt. <br>
+									<br>
+								</p>
+								<p><b>Trenutaèno stanje<br>
+									</b></p>
+								<p>Indija nadzire oko polovicu teritorija biv¹eg kraljevstva Jammu i Ka¹mira (taj dio se danas smatra indijskom dr¾avom Jammu i Ka¹mir), pod Pakistanom je treæina teritorija na sjeverozapadu (Sjeverna Pokrajina i Azad Ka¹mir), a ostatak je pod vlasti NR Kine, koja je 1950. zaposjela sjeveroistoène dijelove regije Ladakh, ne po¹tujuæi ranije dogovore Velike Britanije, Afganistana i Rusije oko nezauzimanja tog dijela Ka¹mira. Ni Indija ni Pakistan nikad nisu slu¾beno priznali prikljuèenje tih dijelova jedno drugom. Slu¾beno stajali¹te Indije jest da je regija Ka¹mira sastavni dio Indije. Pakistansko slu¾beno stajali¹te jest da je Ka¹mir sporni teritorij o èijem statusu moraju odluèiti sami stanovnici Ka¹mira referendumom. <br>
+								</p>
+								<table border="0" cellpadding="5" cellspacing="0" width="64" align="right">
+									<tr>
+										<td>
+											<p><img src="pictures/ks_foto2.jpg" width="200" height="141" border="0"><a href="bpictures/1.jpg" target="_blank"><br>
+												</a></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="potpis_slika">Protest muslimanskog stanovni¹tva u Srinagaru, Ka¹mir 2008.</td>
+									</tr>
+								</table>
+								Indijska vlada takoðer vjeruje da pobune i terorizam u Ka¹miru aktivno podupire Pakistan, zbog èega je zatra¾ila od meðunarodne zajednice da proglasi Pakistan zemljom - sponzorom terorizma. <br>
+								<p>Pakistan odbacuje te tvrdnje, tvrdeæi da je Akt o pristupanju Ka¹mira Indiji nevaljan, jer maharad¾a Singh nije bio popularan ni narodni voða, veæ je od stanovni¹tva do¾ivljavan kao diktator i tiranin, te da je pobjegao iz Ka¹mira prije nego je potpisao sporazum, izgubio je poziciju vladara i nije mogao imati ovlasti ni autoritet da ga potpi¹e. <br>
+								</p>
+								<p>Jedan od razloga spora oko Ka¹mira jest i pitanje vode i rijeka; Ka¹mirom prolazi vi¹e rijeka koje imaju va¾nu ulogu u navodnjavanju i agrikulturi i Indije i Pakistana. Spor oko rijeka djelomièno je rije¹en Sporazumom o vodama Indusa iz 1960. godine, no i taj spor je jo¹ aktualan zbog gradnje velikih brana na indijskoj strani pritoka, a koje smanjuju kolièinu vode na pakistanskoj strani, te prouzrokuju gubitke u poljoprivredi.<br>
+									<br>
+								</p>
+								<p><b>Nazire li se rje¹enje?<br>
+									</b></p>
+								<p>Prvi znakovi napretka pojavili su se upravo nakon teroristièkih napada na WTC 11.9.2001. Tada¹nji predsjednik Musharraf je uspio ogranièiti moæ militantnih islamista u samom Pakistanu, ¹to mu je omoguæilo vi¹e pragmatièan, a manje retorièan pristup indijskim zahtjevima. Indija je zahtjevala brzu akciju Pakistana protiv teroristièkih grupa upletenih u napad na indijski parlament. Pakistanske vlasti su uhitile èlanove teroristièkih skupina. <br>
+								</p>
+								<p>Musharraf je ¾elio oèuvati svoju reputaciju sekularnog voðe, pa samim time i ¾elio smanjiti moæ militantnih skupina u samom Pakistanu. <br>
+								</p>
+								<table border="0" cellpadding="5" cellspacing="0" width="64" align="right">
+									<tr>
+										<td>
+											<p><img src="pictures/ks_foto4.jpg" width="200" height="134" border="0"><a href="bpictures/1.jpg" target="_blank"><br>
+												</a></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="potpis_slika">Mud¾ahedini u Ka¹miru </td>
+									</tr>
+								</table>
+								Godine 2005. Ka¹mir je pogodio razoran potres u kojem je ¾ivot izgubilo vi¹e od 80 000 ljudi, ¹to je potaknulo Indiju i Pakistan da ubrzaju pregovore i dogovore te potpi¹u otvaranje ceste za slu¾be spa¹avanja i pomoæ u katastrofama kroz Ka¹mir. Taj je dogaðaj polako pokrenuo daljnje mirovne pregovore, iz kojih bi se mo¾da moglo doæi do rje¹enje krize u sljedeæim godinama.<br>
+								<p>Indija je u 21. stoljeæu zemlja u usponu i ima sve veæi utjecaj u globalnoj ekonomiji i tehnologiji. No, pitanje Ka¹mira koèi njeno napredovanje i zadr¾ava je u &quot;mraènom&quot; 20. stoljeæu. Kada bi se pitanje Ka¹mira rije¹ilo, i Pakistan postao saveznik Indije, obje bi zemlje postigle daleko vi¹e na unutarnjem i vanjskopolitièkom planu. Rje¹enje ka¹mirske krize znatno bi utjecalo na regionalnu stabilnost ju¾ne Azije. Svjetski analitièari sla¾u se da se pitanje Ka¹mira ne mo¾e rije¹iti putem vojnih sukoba, veæ postizanjem politièkog dogovora, ako ne izravnim pregovorima onda uz pomoæ meðunarodne zajednice. <br>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr height="13"></tr>
+			<tr></tr>
+			<tr>
+				<td width="213" background="../new_pic/siva_lijevo1.jpg"></td>
+				<td colspan="2">
+					<div align="center">
+						<hr noshade size="1">
+						<font size="1" face="Helvetica,Arial">Copyright (c) Slu¾ba za odnose s javno¹æu i informiranje, Odjel Hrvatskih vojnih glasila, MORH.<br>
+							Sva prava pridr¾ana - All rights reserved<br>
+							<a href="pravo.asp" target="mainBar"><font size="1" color="blue">Pravne napomene</font></a></font></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

@@ -1,0 +1,2646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="http://www.dnevno.hr/templates/tgstudio/css/template_css.css" type="text/css" />
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="http://www.dnevno.hr/templates/tgstudio/css/ie7.css" type="text/css" />
+<![endif]--> 
+
+<script type="text/javascript" src="http://www.dnevno.hr/js/jquery-1.3.2.js"></script>
+
+
+<!-- Izbornik -->
+
+
+
+
+<meta name="google-site-verification" content="8jxmuMaZF6bqWrK-ufr6_GPYjtTA0sJLrZyblP7nl2s" />
+<link rel="stylesheet" href="http://www.dnevno.hr/templates/tgstudio/css/typo.css" type="text/css" />
+<script type="text/javascript" src="http://www.dnevno.hr/js/jquery.cookie.js"></script>
+
+
+
+<script type="text/javascript" language="JavaScript"> 
+	var COOKIE_NAME = 'dnevno_font';
+	function setFont( font ){
+		var date = new Date();
+		date.setTime(date.getTime() + (3 * 24 * 60 * 60 * 1000));
+		$.cookie(COOKIE_NAME, font , { path: '/', expires: date });				
+	};
+
+	function getFont(){
+		if	( $.cookie(COOKIE_NAME) > 0 & $.cookie(COOKIE_NAME) < 7 ) return $.cookie(COOKIE_NAME);
+		return '3';
+	};
+
+	var CurrentFontSize = 3;
+
+	function switchFontSize(ckname,val){
+		var bd = $('body');
+		switch ( val) {
+			case 'inc':
+				if (CurrentFontSize+1 < 7) {
+					bd.removeClass('fs'+CurrentFontSize);
+					bd.removeClass('fs3');
+					CurrentFontSize++;
+					bd.addClass('fs'+CurrentFontSize);
+					setFont( CurrentFontSize );
+				}		
+			break;
+			case 'dec':
+				if (CurrentFontSize-1 > 0) {
+					bd.removeClass('fs'+CurrentFontSize);
+					bd.removeClass('fs3');
+					CurrentFontSize--;
+					bd.addClass('fs'+CurrentFontSize);
+					setFont( CurrentFontSize );
+				}		
+			break;
+			default:
+				bd.removeClass('fs3');
+				bd.removeClass('fs'+CurrentFontSize);
+				CurrentFontSize = val;
+				bd.addClass('fs'+CurrentFontSize);
+				setFont( CurrentFontSize );
+			}
+	}
+
+
+$(function() {
+	CurrentFontSize = parseInt( getFont() );
+	switchFontSize('test',CurrentFontSize);
+});
+
+
+// skripta za bojanje
+$(function(){
+	var boja = "nema";
+	
+	$("#content-left-teble-right ul#menuid1 > li").each(function(){
+		$this= $(this);		
+		if($this.hasClass("selected")){
+			boja =  $this.css("background-color");
+		}		
+		$(this).find("li").each(function(){
+			if($(this).hasClass("selected")){
+				boja = $this.css("background-color");
+			}
+		});
+	});
+	
+	//alert(boja);
+	
+	if(boja!="nema"){
+		$("div.moduletable .modulehead h3").css("background-color", boja);
+		$("#menumodul li.selected").css("background-color", boja);
+		$("div.h3okvir h3").css("background-color", boja);		
+		$("div.cat-box h3.title_alias").css("border-color", boja);
+		$("div.cat-box h3.title_alias").css("color", boja);
+		$(".button").css("background-color", boja);
+		$("div.moduletable_categories ul li ul li.selected a").css("color", boja);
+		$("div.moduletable_categories ul li ul li.selected a").css("border-color", boja);
+		$("ul.tabs a span h3").css("background-color", boja);
+	}
+});
+
+//add to favorite
+$(function(){
+	$('a#addtofavorite').jFav();
+});
+
+
+//sada idemo malo fontove srediti
+/**/
+$(function(){
+	$("#ja-current-content2 div.fulltext span,#ja-current-content2 div.introtext span").each(function(){
+		if($(this).css("font-size")=='10px'){
+			//alert("font-size-error");
+			$(this).css("font-size","100%");
+			
+		}
+	});
+	
+});
+
+
+
+</script>
+
+<!-- video player moj skripta-->
+
+
+<script type="text/javascript" language="JavaScript"> 
+$(function() {
+	if( $("a.videoplayer").length >0 ){	
+		$.getScript('js/flowplayer/example/flowplayer-3.1.4.min.js', function() {
+		  flowplayer("a.videoplayer", "js/flowplayer/flowplayer-3.1.5.swf", { 
+				clip:  { 
+					autoPlay: false, 
+					autoBuffering: true 
+				} 
+			});
+		});		
+	}
+}); 
+
+//function GA_googleFillSlot(){}
+
+//radi googla
+</script>
+
+
+<!-- Google ad script  -->
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-5944658090760477");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_auto_techno_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_automoto_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_crna_kronika_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_film_i_tv_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_formula1_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_hrvatska_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_izbor_za_dja_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_kosarka_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_kultura_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_lifestyle_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_moda_i_ljepota_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_naslovnica_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_nogomet_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_novac_728x90");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_pokroviteljstvo_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_pomaganje_je_uvijek_in_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_revije_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_sp_2010_jar_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_sport_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_svijet_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_techno_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_tenis_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_vijesti_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_vip_studio_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_zagreb_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_zdravlje_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_znanost_728x90");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_glazba_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_playground_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_ostali_sportovi_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_sp_turska_2010_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_vaterpolo_ep_zagreb_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_nekretnine_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_klinci_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_top_igre_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_dva_igraca_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_akcija_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_utrke_728x90");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_pucacina_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_tucnjave_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_arkade_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_strategije_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_avanture_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_mozgalice_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_life_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_nagradne_igre_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_nocna_ptica_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_kolumne_728x90");
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_psihonauti_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_terapija_za_dusu_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_dr_luka_marsic_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_dr_zoran_zoricic_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_dr_robert_torre_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_ovisnosti_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_hitan_prijem_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_zvonimir_hodak_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_davor_tustic_728x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_0_zorica_zivkovic_farina_728x90");
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_missnet_banner_missnet_635x90");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_missnet_banner_right_missnet_300x250");
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_naslovnica_468x60");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_4_naslovnica_468x60");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_5_naslovnica_468x60");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_auto_techno_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_automoto_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_crna_kronika_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_formula1_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_hrvatska_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_izbor_za_dja_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_kosarka_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_kultura_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_lifestyle_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_moda_i_ljepota_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_naslovnica_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_naslovnica_468x60");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_nogomet_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_novac_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_ostali_sportovi_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_pokroviteljstvo_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_pomaganje_je_uvijek_in_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_revije_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_sp_2010_jar_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_svijet_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_techno_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_tenis_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_tv_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_vijesti_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_vip_studio_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_zagreb_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_zdravlje_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_znanost_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_glazba_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_playground_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_ostali-sportovi_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_sp_turska_2010_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_vaterpolo_ep_zagreb_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_nekretnine_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_klinci_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_top_igre_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_dva_igraca_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_akcija_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_utrke_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_pucacina_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_tucnjave_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_arkade_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_strategije_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_avanture_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_mozgalice_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_life_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_nagradne_igre_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_nocna_ptica_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_sport_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_psihonauti_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_terapija_za_dusu_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_dr_luka_marsic_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_dr_zoran_zoricic_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_dr_robert_torre_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_ovisnosti_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_hitan_prijem_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_zvonimir_hodak_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_davor_tustic_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_6_zorica_zivkovic_farina_300x250");
+
+
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_auto_techno_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_automoto_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_crna_kronika_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_formula1_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_hrvatska_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_izbor_za_dja_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_kosarka_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_kultura_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_lifestyle_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_moda_i_ljepota_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_naslovnica_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_nogomet_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_novac_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_ostali_sportovi_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_pokroviteljstvo_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_pomaganje_je_uvijek_in_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_revije_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_sp_2010_jar_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_svijet_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_techno_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_tenis_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_tv_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_vijesti_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_vip_studio_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_zagreb_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_zdravlje_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_znanost_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_glazba_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_playground_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_ostali-sportovi_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_sp_turska_2010_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_vaterpolo_ep_zagreb_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_nekretnine_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_klinci_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_top_igre_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_dva_igraca_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_akcija_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_utrke_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_pucacina_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_tucnjave_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_arkade_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_strategije_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_avanture_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_mozgalice_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_life_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_nagradne_igre_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_nocna_ptica_300x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_sport_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_psihonauti_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_terapija_za_dusu_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_dr_luka_marsic_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_dr_zoran_zoricic_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_dr_robert_torre_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_ovisnosti_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_hitan_prijem_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_zvonimir_hodak_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_davor_tustic_300x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_7_zorica_zivkovic_farina_300x250");
+
+
+
+
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_auto_techno_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_automoto_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_crna_kronika_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_film_i_tv_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_formula1_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_hrvatska_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_kosarka_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_kultura_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_lifestyle_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_moda_i_ljepota_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_nogomet_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_novac_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_ostali_sportovi_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_pomaganje_je_uvijek_in_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_revije_180x150");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_svijet_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_techno_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_tenis_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_vijesti_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_vip_studio_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_zagreb_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_zdravlje_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_znanost_180x150");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_glazba_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_playground_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_ostali-sportovi_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_nekretnine_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_klinci_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_top_igre_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_dva_igraca_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_akcija_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_utrke_180x150");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_pucacina_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_tucnjave_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_arkade_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_strategije_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_avanture_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_mozgalice_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_life_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_nagradne_igre_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_nocna_ptica_180x150");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_sport_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_psihonauti_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_terapija_za_dusu_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_dr_luka_marsic_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_dr_zoran_zoricic_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_dr_robert_torre_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_ovisnosti_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_hitan_prijem_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_zvonimir_hodak_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_davor_tustic_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_zorica_zivkovic_farina_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_2_izbor_za_dja_180x150");
+
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_auto_techno_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_automoto_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_crna_kronika_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_film_i_tv_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_formula1_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_hrvatska_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_kosarka_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_kultura_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_lifestyle_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_moda_i_ljepota_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_nogomet_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_novac_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_ostali_sportovi_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_pomaganje_je_uvijek_in_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_revije_180x150");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_svijet_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_techno_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_tenis_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_vijesti_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_vip_studio_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_zagreb_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_zdravlje_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_znanost_180x150");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_glazba_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_playground_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_ostali-sportovi_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_nekretnine_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_klinci_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_top_igre_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_dva_igraca_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_akcija_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_utrke_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_sport_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_pucacina_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_tucnjave_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_arkade_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_strategije_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_avanture_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_mozgalice_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_life_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_nagradne_igre_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_nocna_ptica_180x150");
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_psihonauti_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_terapija_za_dusu_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_dr_luka_marsic_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_dr_zoran_zoricic_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_dr_robert_torre_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_ovisnosti_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_hitan_prijem_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_zvonimir_hodak_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_davor_tustic_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_zorica_zivkovic_farina_180x150");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_3_izbor_za_dja_180x150");
+
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_auto_techno_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_automoto_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_crna_kronika_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_film_i_tv_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_formula1_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_hrvatska_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_izbor_za_dja_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_kosarka_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_kultura_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_lifestyle_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_moda_i_ljepota_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_naslovnica_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_nogomet_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_novac_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_ostali_sportovi_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_pokroviteljstvo_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_pomaganje_je_uvijek_in_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_revije_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_sp_2010_jar_250x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_svijet_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_techno_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_tenis_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_vijesti_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_vip_studio_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_zagreb_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_zdravlje_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_znanost_250x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_glazba_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_playground_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_ostali-sportovi_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_nekretnine_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_klinci_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_top_igre_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_dva_igraca_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_akcija_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_utrke_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_sport_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_pucacina_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_tucnjave_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_arkade_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_strategije_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_avanture_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_mozgalice_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_life_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_nagradne_igre_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_nocna_ptica_250x250");
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_psihonauti_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_terapija_za_dusu_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_dr_luka_marsic_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_dr_zoran_zoricic_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_dr_robert_torre_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_ovisnosti_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_hitan_prijem_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_zvonimir_hodak_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_davor_tustic_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_4_zorica_zivkovic_farina_250x250");
+
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_auto_techno_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_automoto_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_crna_kronika_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_film_i_tv_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_formula1_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_hrvatska_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_izbor_za_dja_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_kosarka_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_kultura_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_lifestyle_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_moda_i_ljepota_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_naslovnica_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_nogomet_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_novac_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_ostali_sportovi_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_pokroviteljstvo_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_pomaganje_je_uvijek_in_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_revije_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_sp_2010_jar_250x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_svijet_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_techno_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_tenis_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_vijesti_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_vip_studio_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_zagreb_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_zdravlje_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_znanost_250x250");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_glazba_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_playground_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_ostali-sportovi_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_nekretnine_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_klinci_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_top_igre_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_dva_igraca_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_akcija_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_utrke_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_sport_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_pucacina_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_tucnjave_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_arkade_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_strategije_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_avanture_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_mozgalice_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_life_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_nagradne_igre_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_nocna_ptica_250x250");
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_psihonauti_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_terapija_za_dusu_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_dr_luka_marsic_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_dr_zoran_zoricic_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_dr_robert_torre_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_ovisnosti_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_hitan_prijem_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_zvonimir_hodak_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_davor_tustic_250x250");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_2_5_zorica_zivkovic_farina_250x250");
+
+
+
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_auto_techno_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_automoto_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_crna_kronika_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_film_i_tv_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_formula1_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_hrvatska_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_izbor_za_dja_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_kosarka_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_kultura_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_lifestyle_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_moda_i_ljepota_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_naslovnica_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_nogomet_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_novac_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_ostali_sportovi_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_pokroviteljstvo_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_pomaganje_je_uvijek_in_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_revije_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_sp_2010_jar_300x115");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_svijet_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_techno_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_tenis_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_vijesti_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_vip_studio_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_zagreb_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_zdravlje_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_znanost_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_glazba_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_playground_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_ostali-sportovi_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_nekretnine_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_klinci_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_top_igre_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_dva_igraca_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_akcija_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_utrke_300x115");
+
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_pucacina_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_tucnjave_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_arkade_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_strategije_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_avanture_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_mozgalice_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_life_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_nocna_ptica_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_nagradne_igre_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_sport_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_psihonauti_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_terapija_za_dusu_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_dr_luka_marsic_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_dr_zoran_zoricic_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_dr_robert_torre_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_ovisnosti_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_hitan_prijem_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_zvonimir_hodak_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_davor_tustic_300x115");
+GA_googleAddSlot("ca-pub-5944658090760477", "om_1_3_zorica_zivkovic_300x115");
+
+
+
+
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+
+
+<!-- sortiranje modula
+
+<script type="text/javascript" src="http://www.dnevno.hr/templates/tgstudio/js/ui.core.js"></script>
+<script type="text/javascript" src="http://www.dnevno.hr/templates/tgstudio/js/ui.sortable.js"></script>
+<script type="text/javascript" src="http://www.dnevno.hr/templates/tgstudio/js/modulesort.js"></script>
+-->
+<script type="text/javascript" src="http://www.dnevno.hr/templates/tgstudio/js/jFav_v1.0.js"></script>
+
+<base href="http://www.dnevno.hr/" />
+<title>Dnevno.hr - Na današnji dan u Parizu je 1978. godine ubijen hrvatski domoljub Bruno Bušić</title>
+<meta name="description" content="Multimedijalni novinarski portal. Vijesti, Hrvatska, svijet, kronike i revije., Misa zadušnica za Brunu Bušića služit će se danas (16. listopada) u 17 sati u crvkvi Svegog Marka u Zagrebu." />
+<meta name="keywords" content="Multimedijalni ,novinarski, portal,dnevno, vijesti, bušić, bruno, svetog marka, godišnjica, tuđman, udba, agenti, pariz, ubojstvo, jugoslavije, samostalnost" />
+<meta name="Generator" content="Cms by dnevno.hr" />
+<meta name="robots" content="index, follow" />
+<link rel="stylesheet" href="js/lightbox/css/jquery.lightbox-0.5.css" type="text/css" />
+			<script type="text/javascript" src="js/jcarousellite_1.0.1.min.js"></script>
+			<!--
+			
+			<script type="text/javascript" src="components/article/tonigallery.js"></script>	
+			-->
+			<script type="text/javascript" src="js/galleriffic-2.0/js/jquery.opacityrollover.js"></script>
+			<script type="text/javascript" src="js/lightbox/js/jquery.lightbox-0.5.min.js"></script>
+
+
+
+			<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				// We only want these styles applied when javascript is enabled
+				// Initially set opacity on thumbs and add
+				// additional styling for hover effect on thumbs
+				var onMouseOutOpacity = 0.7;
+				$("#thumbs ul.thumbs li").opacityrollover({
+					mouseOutOpacity:   onMouseOutOpacity,
+					mouseOverOpacity:  1.0,
+					fadeSpeed:         "fast",
+					exemptionSelector: ".selected"
+				});
+
+				
+				
+		/*
+
+// tonijeva galerija
+				
+				$("#tonigallery").tonigallery();
+		*/		
+				
+				var kolicina = $("#thumbs ul.thumbs li").size();
+
+				if(kolicina > 6){
+					$("#thumbsouter").prepend("<div id=\"slideprev\"> </div>");
+					$("#thumbsouter").prepend("<div id=\"slidenext\"> </div>");
+													
+				}
+				
+				$("#thumbs").jCarouselLite({
+					mouseWheel: true,
+					btnNext: "div#slidenext",
+					btnPrev: "div#slideprev",
+					visible: 6,
+					scroll: 1,
+
+					circular: false					
+
+				});
+
+
+		      // sada stavljamo veliku sliku 
+
+
+				var lista = $("#tonigallery").find("div#thumbs ul > li");
+
+				if ( lista.length > 0 )
+				{
+					var src = lista.find("a.thumb").attr("href");
+					$("#slideshow").append("<ul class=\"thumbs \"><li><img src=\""+src+"\"/></li></ul>").show().fadeIn("fast");
+					$("span.photoby").append( lista.find("p.photo").html()+" "  );
+					
+				}
+
+				if ( lista.length == 1 )
+				{
+					lista.hide();
+				}
+
+								
+
+				$("#tonigallery a, div.article-photo a").lightBox({
+					overlayBgColor: "#FFF",
+					overlayOpacity: 0.6,
+					imageLoading: "images/lightbox-ico-loading.gif",
+					imageBtnClose: "images/lightbox-btn-close.gif",
+					imageBtnPrev: "images/lightbox-btn-prev.gif",
+					imageBtnNext: "images/lightbox-btn-next.gif",
+					containerResizeSpeed: 350
+				});
+
+
+				
+			});
+		</script>
+	<link rel="shortcut icon" href="http://www.dnevno.hr/images/favicon.ico" />
+	
+
+
+<!-- (C)2000-2010 Gemius SA - gemiusAudience / dnevno.hr / Home Page -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('B7ZLy2uDWFRcv3l47oeFDoYhnA5poAvJ4GBRSLiJsNz.v7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.dnevno.hr/js/xgemius.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://www.dnevno.hr/templates/tgstudio/css/top_menu.css" /> 
+
+
+
+<!-- Tabovi i scroll modul s tabovima nacitanije i najnovije-->
+<script type="text/javascript" src="http://www.dnevno.hr/modules/newest/jquery.tools.min.js"></script>
+<script type="text/javascript" src="http://www.dnevno.hr/modules/vTicker.js"></script>
+
+</head>
+
+
+
+<body id="bd" class="fs3">
+	<a name="Top" id="Top"></a>
+	<div id="pozadina"> </div>	
+	<div id="velikiokvir">
+		<div id="head">
+			<div id="firsthead">
+				<div id="toplogo">
+					<a href="http://www.dnevno.hr"> 
+						Dnevno.hr					</a>
+				</div>			
+				
+				<div class="top-right-float">
+				  <span>Subota | </span> <span>11. Prosinac 2010  | </span> 
+											<div class="moduletable-login" id="modul-1"><div class="modulehead"><h3>Prijava</h3></div><div class="modulebody"><div class="trans-back"></div>
+<div class="tg-login">
+<div class="inner">
+<div class="login-close"> </div>
+<div class="okvir">
+
+
+
+<h2 class="login-title" >Prijava</h2>
+	<form class="loginform" method="POST" action="index.php">
+		<div id="username">
+			<span class="label" for="username">Korisničko ime: </span>   
+			<input class="intext" type="text" name="username" size="15" /> 
+		</div>
+
+		<div id="pass">
+			<span class="label" for="password">Šifra: </span>  
+			<input class="intext" type="password" name="password" size="15" /> 					
+		</div>
+		
+		<div id="button">
+			<span class="label" for="submit"></span>  
+			<input type="submit" class="button" value="Prijava" />				
+		</div>
+		
+		<input type="hidden" name="login" value="login"/> 
+		<a href="registracija/6397-zaboravili+ste+%C5%A1ifru%3F.html" class="forget-button"> Zaboravili ste šifru? </a>
+		<a href="registracija/6320-registracija.html" class="reg-button"> Registracija </a>	
+	</form></div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="modules/login.js"></script>
+
+
+
+</div><div class="modulebottom"></div>
+							</div>						
+										
+						<div class="rssicon">
+							<a href = "http://www.dnevno.hr/vijesti/rssvijesti/50782.html"><img src="templates/tgstudio/images/blank.gif" /></a>
+						</div>
+					
+						<div class="twittericon">
+							<a href = "http://twitter.com/portaldnevno"><img src="templates/tgstudio/images/blank.gif" /></a>
+						</div>
+						
+						<div class="facebookicon">
+							<a href = "http://www.facebook.com/pages/dnevnohr/111421992219589"><img src="templates/tgstudio/images/blank.gif" /></a>
+						</div>				
+				</div>
+			</div>			
+			<div id="secondhead">			
+				<div id="headlogo">
+					<a href="http://www.dnevno.hr" >
+					
+											<!--[if !IE]> -->
+						<object type="application/x-shockwave-flash" data="templates/tgstudio/images/logo.swf" width="253" height="77">
+						<!-- <![endif]-->
+
+						<!--[if IE]>
+						<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+							codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" 
+							width="253" height="77">
+						  <param name="movie" value="templates/tgstudio/images/logo.swf" />
+						<!--><!--dgx-->
+						  <param name="loop" value="true">
+						  <param name="menu" value="false">
+						  <param name="quality" value="high">
+						  <img src="templates/tgstudio/images/logo.gif" width="253" height="76" alt="dnevno.hr">
+						</object>
+						<!-- <![endif]-->
+						
+						
+												
+						
+						
+					</a>
+				</div>			
+				<div id="headmarketing">
+											<div class="moduletablebanner" id="modul-13"><div class="modulebody">
+<div class="marketing2"   style="width:728px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_1_0_hrvatska_728x90");
+</script>
+</div>
+
+</div><div class="modulebottom"></div>
+							</div>						
+										
+				</div>			
+			</div>			
+		</div>
+					<div id="menumodul">		
+				<div class="moduletable-menu" id="modul-2"><div class="modulebody">
+			<ul class="menu" id="menuid1">
+					<li id="item1" class="active" > 
+					<a href="index.html">
+						<span> Naslovnica </span>
+					</a>
+			<ul class="menu1" id="menuid2">
+			</ul>
+					</li>
+					<li id="item11" class="selected" > 
+					<a href="vijesti/">
+						<span> Vijesti </span>
+					</a>
+			<ul class="menu11" id="menuid2">
+					<li id="item21" class="selected" > 
+					<a href="vijesti/hrvatska/">
+						<span> Hrvatska </span>
+					</a>
+			<ul class="menu21" id="menuid3">
+					<li id="item93" class="active" > 
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/povratak_ive_sanadera/135912.html">
+						<span> Povratak Ive Sanadera </span>
+					</a>
+			<ul class="menu93" id="menuid4">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item22" class="active" > 
+					<a href="vijesti/svijet/">
+						<span> Svijet </span>
+					</a>
+			<ul class="menu22" id="menuid3">
+					<li id="item103" class="sakriven" > 
+					<a href="eu/151188.html">
+						<span> EU </span>
+					</a>
+			<ul class="menu103" id="menuid4">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item24" class="active" > 
+					<a href="vijesti/crna_kronika/">
+						<span> Crna kronika </span>
+					</a>
+			<ul class="menu24" id="menuid3">
+			</ul>
+					</li>
+					<li id="item25" class="active" > 
+					<a href="vijesti/zagreb/">
+						<span> Zagreb </span>
+					</a>
+			<ul class="menu25" id="menuid3">
+			</ul>
+					</li>
+					<li id="item26" class="active" > 
+					<a href="vijesti/znanost/">
+						<span> Znanost </span>
+					</a>
+			<ul class="menu26" id="menuid3">
+			</ul>
+					</li>
+					<li id="item27" class="active" > 
+					<a href="vijesti/novac/">
+						<span> Novac </span>
+					</a>
+			<ul class="menu27" id="menuid3">
+			</ul>
+					</li>
+					<li id="item28" class="active" > 
+					<a href="vijesti/kultura/">
+						<span> Kultura </span>
+					</a>
+			<ul class="menu28" id="menuid3">
+			</ul>
+					</li>
+					<li id="item86" class="active" > 
+					<a href="vijesti/nekretnine/">
+						<span> Nekretnine </span>
+					</a>
+			<ul class="menu86" id="menuid3">
+			</ul>
+					</li>
+					<li id="item104" class="active" > 
+					<a href="balkan_express/151189.html">
+						<span> Balkan express </span>
+					</a>
+			<ul class="menu104" id="menuid3">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item12" class="active" > 
+					<a href="sport/">
+						<span> Sport </span>
+					</a>
+			<ul class="menu12" id="menuid2">
+					<li id="item29" class="sakriven" > 
+					<a href="sport/nogomet/">
+						<span> Nogomet </span>
+					</a>
+			<ul class="menu29" id="menuid3">
+					<li id="item61" class="sakriven" > 
+					<a href="sport/sp_2010_jar/sp_jar_2010/50779.html">
+						<span> SP JAR 2010 </span>
+					</a>
+			<ul class="menu61" id="menuid4">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item30" class="sakriven" > 
+					<a href="sport/kosarka/">
+						<span> Košarka </span>
+					</a>
+			<ul class="menu30" id="menuid3">
+			</ul>
+					</li>
+					<li id="item31" class="sakriven" > 
+					<a href="sport/tenis/">
+						<span> Tenis </span>
+					</a>
+			<ul class="menu31" id="menuid3">
+			</ul>
+					</li>
+					<li id="item32" class="sakriven" > 
+					<a href="sport/formula1/">
+						<span> Formula 1 </span>
+					</a>
+			<ul class="menu32" id="menuid3">
+			</ul>
+					</li>
+					<li id="item33" class="sakriven" > 
+					<a href="sport/ostali-sportovi/">
+						<span> Ostali sportovi </span>
+					</a>
+			<ul class="menu33" id="menuid3">
+			</ul>
+					</li>
+					<li id="item84" class="sakriven" > 
+					<a href="sport/kosarka/sp_turska_2010/">
+						<span> SP Turska 2010 </span>
+					</a>
+			<ul class="menu84" id="menuid3">
+			</ul>
+					</li>
+					<li id="item85" class="sakriven" > 
+					<a href="sport/ostali_sportovi/vaterpolo_ep_zagreb/">
+						<span> Vaterpolo EP Zagreb </span>
+					</a>
+			<ul class="menu85" id="menuid3">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item14" class="active" > 
+					<a href="revije/">
+						<span> Revije </span>
+					</a>
+			<ul class="menu14" id="menuid2">
+					<li id="item40" class="sakriven" > 
+					<a href="revije/lifestyle/">
+						<span> Lifestyle </span>
+					</a>
+			<ul class="menu40" id="menuid3">
+			</ul>
+					</li>
+					<li id="item34" class="sakriven" > 
+					<a href="revije/moda-i-ljepota/">
+						<span> Moda i ljepota </span>
+					</a>
+			<ul class="menu34" id="menuid3">
+			</ul>
+					</li>
+					<li id="item36" class="sakriven" > 
+					<a href="revije/tv/">
+						<span> TV </span>
+					</a>
+			<ul class="menu36" id="menuid3">
+			</ul>
+					</li>
+					<li id="item41" class="sakriven" > 
+					<a href="revije/zdravlje/">
+						<span> Zdravlje </span>
+					</a>
+			<ul class="menu41" id="menuid3">
+			</ul>
+					</li>
+					<li id="item42" class="sakriven" > 
+					<a href="revije/vip-studio/">
+						<span> V.I.P. Studio </span>
+					</a>
+			<ul class="menu42" id="menuid3">
+			</ul>
+					</li>
+					<li id="item48" class="sakriven" > 
+					<a href="pokroviteljstvo/pokroviteljstvo/66366.html">
+						<span> Pokroviteljstvo </span>
+					</a>
+			<ul class="menu48" id="menuid3">
+			</ul>
+					</li>
+					<li id="item63" class="sakriven" > 
+					<a href="revije/glazba/glazba/66365.html">
+						<span> Glazba </span>
+					</a>
+			<ul class="menu63" id="menuid3">
+			</ul>
+					</li>
+					<li id="item87" class="sakriven" > 
+					<a href="revije/nagradne_igre/nagradne_igre/112944.html">
+						<span> Nagradne igre </span>
+					</a>
+			<ul class="menu87" id="menuid3">
+			</ul>
+					</li>
+					<li id="item88" class="sakriven" > 
+					<a href="revije/nocna_ptica/">
+						<span> Noćna ptica </span>
+					</a>
+			<ul class="menu88" id="menuid3">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item16" class="active" > 
+					<a href="auto-techno/">
+						<span> Auto Techno </span>
+					</a>
+			<ul class="menu16" id="menuid2">
+					<li id="item38" class="sakriven" > 
+					<a href="auto-techno/auto-moto/">
+						<span> Auto-moto </span>
+					</a>
+			<ul class="menu38" id="menuid3">
+			</ul>
+					</li>
+					<li id="item39" class="sakriven" > 
+					<a href="auto-techno/techno/">
+						<span> Techno </span>
+					</a>
+			<ul class="menu39" id="menuid3">
+			</ul>
+					</li>
+			</ul>
+					</li>
+					<li id="item71" class="active" > 
+					<a href="auto_techno/playground/playground/79481.html">
+						<span> Playground </span>
+					</a>
+			<ul class="menu71" id="menuid2">
+					<li id="item72" class="sakriven" > 
+					<a href="playground/top_igre/top_igre/83935.html">
+						<span> Top igre </span>
+					</a>
+			<ul class="menu72" id="menuid3">
+			</ul>
+					</li>
+					<li id="item73" class="sakriven" > 
+					<a href="playground/dva_igraca/dva_igraca/83883.html">
+						<span> Dva igrača </span>
+					</a>
+			<ul class="menu73" id="menuid3">
+			</ul>
+					</li>
+					<li id="item74" class="sakriven" > 
+					<a href="playground/akcija/akcija/83884.html">
+						<span> Akcija </span>
+					</a>
+			<ul class="menu74" id="menuid3">
+			</ul>
+					</li>
+					<li id="item75" class="sakriven" > 
+					<a href="playground/utrke/utrke/83886.html">
+						<span> Utrke </span>
+					</a>
+			<ul class="menu75" id="menuid3">
+			</ul>
+					</li>
+					<li id="item76" class="sakriven" > 
+					<a href="playground/sport/sport/83887.html">
+						<span> Sport </span>
+					</a>
+			<ul class="menu76" id="menuid3">
+			</ul>
+					</li>
+					<li id="item77" class="sakriven" > 
+					<a href="playground/pucacina/pucacina/83888.html">
+						<span> Pucačina </span>
+					</a>
+			<ul class="menu77" id="menuid3">
+			</ul>
+					</li>
+					<li id="item78" class="sakriven" > 
+					<a href="playground/tucnjave/tucnjave/83889.html">
+						<span> Tučnjave </span>
+					</a>
+			<ul class="menu78" id="menuid3">
+			</ul>
+					</li>
+					<li id="item79" class="sakriven" > 
+					<a href="playground/arkade/arkade/83890.html">
+						<span> Arkade </span>
+					</a>
+			<ul class="menu79" id="menuid3">
+			</ul>
+					</li>
+					<li id="item80" class="sakriven" > 
+					<a href="playground/strategije/strategije/83891.html">
+						<span> Strategije </span>
+					</a>
+			<ul class="menu80" id="menuid3">
+			</ul>
+					</li>
+					<li id="item81" class="sakriven" > 
+					<a href="playground/avanture/avanture/83892.html">
+						<span> Avanture </span>
+					</a>
+			<ul class="menu81" id="menuid3">
+			</ul>
+					</li>
+					<li id="item82" class="sakriven" > 
+					<a href="playground/mozgalice/mozgalice/83893.html">
+						<span> Mozgalice </span>
+					</a>
+			<ul class="menu82" id="menuid3">
+			</ul>
+					</li>
+					<li id="item83" class="sakriven" > 
+					<a href="playground/life/life/83894.html">
+						<span> Life </span>
+					</a>
+			<ul class="menu83" id="menuid3">
+			</ul>
+					</li>
+			</ul>
+					</li>
+			</ul></div><div class="modulebottom"></div>
+							</div>				<div id="search-module">
+					<div class="moduletablesearch" id="modul-3"><div class="modulebody">
+<form action="index.php?option=search&task=results" method="POST" id="searchforma">
+	<div class="search">
+	<div class="inputboxsearch"> 
+		<input name="searchword" id="searchword" alt="search" class="inputboxsearch" type="text" value=""/><input type="submit" value="Traži" class="buttonsearch"/>	</div>
+	<div class="buttonsearch"></div>
+	</div>
+	<input type="hidden" name="option" value="search" />
+    <input type="hidden" name="Itemid" value="" />	
+</form>
+
+<script  language="javascript">
+$(document).ready(function() {
+	$("div.buttonsearch").click(function(){
+		$('#searchforma').submit();
+	});
+});
+
+
+</script>
+
+</div><div class="modulebottom"></div>
+							</div>				</div>				
+			</div>
+				
+				
+		
+		<div id="content">		
+			<div class="table-row">		
+				<div id="content-left">				
+						
+					
+					<div id="content-left-table" class="maxleft">
+						
+													
+							<div id="content-left-teble-right" >							
+								<div class="moduletable_categories" id="modul-8"><div class="modulebody">
+<ul class="menu" id="menuid1"><li id="item27" class="active" > 
+				<a href="vijesti/">
+					<span>Vijesti				
+				</span>
+				</a><ul class="menu27" id="menuid2"><li id="item28" class="selected" > 
+				<a href="vijesti/hrvatska/">
+					<span>Hrvatska				
+				</span>
+				</a><ul class="menu28" id="menuid3"><li id="item94" class="active" > 
+				<a href="vijesti/hrvatska/povratak_ive_sanadera/povratak_ive_sanadera/135800.html">
+					<span>Povratak Ive Sanadera				
+				</span>
+				</a><ul class="menu94" id="menuid4"></ul></li></ul></li><li id="item29" class="active" > 
+				<a href="vijesti/svijet/">
+					<span>Svijet				
+				</span>
+				</a><ul class="menu29" id="menuid3"><li id="item95" class="sakriven" > 
+				<a href="vijesti/svijet/eu/eu/151195.html">
+					<span>EU				
+				</span>
+				</a><ul class="menu95" id="menuid4"></ul></li></ul></li><li id="item30" class="active" > 
+				<a href="vijesti/crna_kronika/">
+					<span>Crna kronika				
+				</span>
+				</a><ul class="menu30" id="menuid3"></ul></li><li id="item31" class="active" > 
+				<a href="vijesti/zagreb/">
+					<span>Zagreb				
+				</span>
+				</a><ul class="menu31" id="menuid3"></ul></li><li id="item33" class="active" > 
+				<a href="vijesti/znanost/">
+					<span>Znanost				
+				</span>
+				</a><ul class="menu33" id="menuid3"></ul></li><li id="item83" class="active" > 
+				<a href="vijesti/nekretnine/nekretnine/108787.html">
+					<span>Nekretnine				
+				</span>
+				</a><ul class="menu83" id="menuid3"></ul></li><li id="item26" class="active" > 
+				<a href="vijesti/novac/">
+					<span>Novac				
+				</span>
+				</a><ul class="menu26" id="menuid3"></ul></li><li id="item32" class="active" > 
+				<a href="vijesti/kultura/">
+					<span>Kultura				
+				</span>
+				</a><ul class="menu32" id="menuid3"></ul></li><li id="item96" class="active" > 
+				<a href="vijesti/balkan_express/balkan_express/151193.html">
+					<span>Balkan express				
+				</span>
+				</a><ul class="menu96" id="menuid3"></ul></li></ul></li><li id="item6" class="active" > 
+				<a href="sport/">
+					<span>Sport				
+				</span>
+				</a><ul class="menu6" id="menuid2"><li id="item22" class="sakriven" > 
+				<a href="sport/nogomet/">
+					<span>Nogomet				
+				</span>
+				</a><ul class="menu22" id="menuid3"></ul></li><li id="item1" class="sakriven" > 
+				<a href="sport/kosarka/">
+					<span>Košarka				
+				</span>
+				</a><ul class="menu1" id="menuid3"><li id="item81" class="sakriven" > 
+				<a href="sport/kosarka/sp_turska_2010/">
+					<span>SP Turska 2010				
+				</span>
+				</a><ul class="menu81" id="menuid4"></ul></li></ul></li><li id="item25" class="sakriven" > 
+				<a href="sport/tenis/">
+					<span>Tenis				
+				</span>
+				</a><ul class="menu25" id="menuid3"></ul></li><li id="item4" class="sakriven" > 
+				<a href="sport/formula1/">
+					<span>Formula1				
+				</span>
+				</a><ul class="menu4" id="menuid3"></ul></li><li id="item19" class="sakriven" > 
+				<a href="sport/ostali-sportovi/">
+					<span>Ostali sportovi				
+				</span>
+				</a><ul class="menu19" id="menuid3"><li id="item82" class="sakriven" > 
+				<a href="sport/ostali_sportovi/vaterpolo_ep_zagreb/">
+					<span>Vaterpolo EP Zagreb				
+				</span>
+				</a><ul class="menu82" id="menuid4"></ul></li></ul></li></ul></li><li id="item34" class="active" > 
+				<a href="revije/">
+					<span>Revije				
+				</span>
+				</a><ul class="menu34" id="menuid2"><li id="item36" class="sakriven" > 
+				<a href="revije/vip-studio/">
+					<span>V.I.P. Studio				
+				</span>
+				</a><ul class="menu36" id="menuid3"></ul></li><li id="item54" class="sakriven" > 
+				<a href="pokroviteljstvo/">
+					<span>Pokroviteljstvo				
+				</span>
+				</a><ul class="menu54" id="menuid3"></ul></li><li id="item35" class="sakriven" > 
+				<a href="revije/moda-i-ljepota/">
+					<span>Moda i ljepota				
+				</span>
+				</a><ul class="menu35" id="menuid3"></ul></li><li id="item44" class="sakriven" > 
+				<a href="revije/lifestyle/">
+					<span>Lifestyle				
+				</span>
+				</a><ul class="menu44" id="menuid3"></ul></li><li id="item45" class="sakriven" > 
+				<a href="revije/zdravlje/">
+					<span>Zdravlje				
+				</span>
+				</a><ul class="menu45" id="menuid3"></ul></li><li id="item37" class="sakriven" > 
+				<a href="revije/tv/">
+					<span>Film i TV				
+				</span>
+				</a><ul class="menu37" id="menuid3"></ul></li><li id="item57" class="sakriven" > 
+				<a href="revije/glazba/glazba/59319.html">
+					<span>Glazba				
+				</span>
+				</a><ul class="menu57" id="menuid3"></ul></li><li id="item84" class="sakriven" > 
+				<a href="revije/nagradne_igre/nagradne_igre/112538.html">
+					<span>Nagradne igre				
+				</span>
+				</a><ul class="menu84" id="menuid3"></ul></li><li id="item85" class="sakriven" > 
+				<a href="revije/nocna_ptica/">
+					<span>Noćna ptica				
+				</span>
+				</a><ul class="menu85" id="menuid3"></ul></li></ul></li><li id="item39" class="active" > 
+				<a href="auto-techno/">
+					<span>Auto techno				
+				</span>
+				</a><ul class="menu39" id="menuid2"><li id="item40" class="sakriven" > 
+				<a href="auto-techno/auto-moto/">
+					<span>Auto-moto				
+				</span>
+				</a><ul class="menu40" id="menuid3"></ul></li><li id="item41" class="sakriven" > 
+				<a href="auto-techno/techno/">
+					<span>Techno				
+				</span>
+				</a><ul class="menu41" id="menuid3"></ul></li></ul></li><li id="item66" class="active" > 
+				<a href="auto_techno/playground/playground/79458.html">
+					<span>Playground				
+				</span>
+				</a><ul class="menu66" id="menuid2"><li id="item68" class="sakriven" > 
+				<a href="playground/top_igre/top_igre/83865.html">
+					<span>Top igre				
+				</span>
+				</a><ul class="menu68" id="menuid3"></ul></li><li id="item69" class="sakriven" > 
+				<a href="playground/dva_igraca/dva_igraca/83866.html">
+					<span>Dva igrača				
+				</span>
+				</a><ul class="menu69" id="menuid3"></ul></li><li id="item70" class="sakriven" > 
+				<a href="playground/akcija/akcija/83867.html">
+					<span>Akcija				
+				</span>
+				</a><ul class="menu70" id="menuid3"></ul></li><li id="item71" class="sakriven" > 
+				<a href="playground/utrke/utrke/83868.html">
+					<span>Utrke				
+				</span>
+				</a><ul class="menu71" id="menuid3"></ul></li><li id="item72" class="sakriven" > 
+				<a href="playground/sport/sport/83869.html">
+					<span>Sport				
+				</span>
+				</a><ul class="menu72" id="menuid3"></ul></li><li id="item73" class="sakriven" > 
+				<a href="playground/pucacina/pucacina/83870.html">
+					<span>Pucačina				
+				</span>
+				</a><ul class="menu73" id="menuid3"></ul></li><li id="item74" class="sakriven" > 
+				<a href="playground/tucnjave/tucnjave/83871.html">
+					<span>Tučnjave				
+				</span>
+				</a><ul class="menu74" id="menuid3"></ul></li><li id="item75" class="sakriven" > 
+				<a href="playground/arkade/arkade/83872.html">
+					<span>Arkade				
+				</span>
+				</a><ul class="menu75" id="menuid3"></ul></li><li id="item76" class="sakriven" > 
+				<a href="playground/strategije/strategije/83873.html">
+					<span>Strategije				
+				</span>
+				</a><ul class="menu76" id="menuid3"></ul></li><li id="item77" class="sakriven" > 
+				<a href="playground/avanture/avanture/83874.html">
+					<span>Avanture				
+				</span>
+				</a><ul class="menu77" id="menuid3"></ul></li><li id="item78" class="sakriven" > 
+				<a href="playground/mozgalice/mozgalice/83875.html">
+					<span>Mozgalice				
+				</span>
+				</a><ul class="menu78" id="menuid3"></ul></li><li id="item79" class="sakriven" > 
+				<a href="playground/life/life/83876.html">
+					<span>Life				
+				</span>
+				</a><ul class="menu79" id="menuid3"></ul></li><li id="item80" class="sakriven" > 
+				<a href="playground/klinci/klinci/97967.html">
+					<span>Klinci				
+				</span>
+				</a><ul class="menu80" id="menuid3"></ul></li></ul></li><li id="item46" class="active" > 
+				<a href="kolumne/kolumne/79755.html">
+					<span>Kolumne				
+				</span>
+				</a><ul class="menu46" id="menuid2"><li id="item47" class="sakriven" > 
+				<a href="zvonimir_hodak/zvonimir_hodak/50893.html">
+					<span>Zvonimir Hodak				
+				</span>
+				</a><ul class="menu47" id="menuid3"></ul></li><li id="item93" class="sakriven" > 
+				<a href="kolumne/miroslav_tudman/miroslav_tudman/130450.html">
+					<span>Miroslav Tuđman				
+				</span>
+				</a><ul class="menu93" id="menuid3"></ul></li><li id="item50" class="sakriven" > 
+				<a href="davor_tustic/davor_tustic/50964.html">
+					<span>Davor Tustić				
+				</span>
+				</a><ul class="menu50" id="menuid3"></ul></li><li id="item97" class="sakriven" > 
+				<a href="kolumne/josip_jurcevic/josip_jurcevic/156694.html">
+					<span>Josip Jurčević				
+				</span>
+				</a><ul class="menu97" id="menuid3"></ul></li><li id="item92" class="sakriven" > 
+				<a href="kolumne/josip_kregar/josip_kregar/130034.html">
+					<span>Josip Kregar				
+				</span>
+				</a><ul class="menu92" id="menuid3"></ul></li><li id="item98" class="sakriven" > 
+				<a href="kolumne/marko_lopusina/marko_lopusina/172599.html">
+					<span>Marko Lopušina				
+				</span>
+				</a><ul class="menu98" id="menuid3"></ul></li><li id="item87" class="sakriven" > 
+				<a href="kolumne/fanopolis/fanopolis/129196.html">
+					<span>Fanopolis				
+				</span>
+				</a><ul class="menu87" id="menuid3"></ul></li><li id="item86" class="sakriven" > 
+				<a href="kolumne/cetiri_nivoa_zdravlja/cetiri_nivoa_zdravlja/118796.html">
+					<span>Četiri nivoa zdravlja				
+				</span>
+				</a><ul class="menu86" id="menuid3"></ul></li><li id="item59" class="sakriven" > 
+				<a href="psihonauti/psihonauti/75400.html">
+					<span>Psihonauti				
+				</span>
+				</a><ul class="menu59" id="menuid3"><li id="item60" class="sakriven" > 
+				<a href="terapija_za_dusu/terapija_za_dusu/75401.html">
+					<span>Terapija za dušu				
+				</span>
+				</a><ul class="menu60" id="menuid4"><li id="item63" class="sakriven" > 
+				<a href="terapija_za_dusu/dr_luka_marsic/dr_luka_marsic/75417.html">
+					<span>Dr. Luka Maršić				
+				</span>
+				</a><ul class="menu63" id="menuid5"></ul></li><li id="item64" class="sakriven" > 
+				<a href="terapija_za_dusu/dr_zoran_zoricic/dr_zoran_zoricic/75415.html">
+					<span>Dr. Zoran Zoričić				
+				</span>
+				</a><ul class="menu64" id="menuid5"></ul></li><li id="item65" class="sakriven" > 
+				<a href="terapija_za_dusu/dr_robert_torre/dr_robert_torre/75402.html">
+					<span>Dr. Robert Torre				
+				</span>
+				</a><ul class="menu65" id="menuid5"></ul></li></ul></li><li id="item61" class="sakriven" > 
+				<a href="psihonauti/ovisnosti/ovisnosti/75625.html">
+					<span>Ovisnosti				
+				</span>
+				</a><ul class="menu61" id="menuid4"></ul></li><li id="item62" class="sakriven" > 
+				<a href="hitan_prijem/hitan_prijem/75419.html">
+					<span>Hitan prijem				
+				</span>
+				</a><ul class="menu62" id="menuid4"></ul></li></ul></li><li id="item2" class="sakriven" > 
+				<a href="pomaganje_je_uvijek_in/">
+					<span>Pomaganje je uvijek IN				
+				</span>
+				</a><ul class="menu2" id="menuid3"></ul></li><li id="item51" class="sakriven" > 
+				<a href="izbor_za_dja/">
+					<span>Izbor za DJ-a				
+				</span>
+				</a><ul class="menu51" id="menuid3"></ul></li></ul></li></ul>
+
+<div id="modul_lijevo_dolje"></div></div><div class="modulebottom"></div>
+							</div><div class="moduletablebanner" id="modul-24"><div class="modulebody">
+<div class="marketing2"   style="width:180px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_2_2_hrvatska_180x150");
+</script>
+</div>
+
+<div id="modul_lijevo_dolje"></div></div><div class="modulebottom"></div>
+							</div><div class="moduletablerelated" id="modul-12"><div class="modulebody"><div class="moduletable"><div class="modulehead"> <h3>Vezane vijesti</h3></div><div class="modulebody"><ul class="newsmoduls">
+									<li class="newsmoduls">
+										<a href="clanak/356-epilog+seksualne+igrice+koja+je+krenula+%27krivim+putem%27+.html" class="newsmoduls_link">
+											<!-- <span class="newsmoduls_date">18:03 </span> -->
+											<div class="newsmoduls_title"> Epilog seksualne igrice koja je krenula 'krivim putem'  </div>		
+											<!-- <div class="newsmoduls_category">Svijet</div> -->
+										</a>
+									</li>
+									<li class="newsmoduls">
+										<a href="clanak/3903-jo%C5%A1+uvijek+patim+za+arkanom.html" class="newsmoduls_link">
+											<!-- <span class="newsmoduls_date">13:13 </span> -->
+											<div class="newsmoduls_title"> Još uvijek patim za Arkanom </div>		
+											<!-- <div class="newsmoduls_category">V.I.P. Studio</div> -->
+										</a>
+									</li>
+									<li class="newsmoduls">
+										<a href="clanak/4658-nova+kazna+za+ubojitu+krasoticu+.html" class="newsmoduls_link">
+											<!-- <span class="newsmoduls_date">10:03 </span> -->
+											<div class="newsmoduls_title"> Nova kazna za ubojitu krasoticu  </div>		
+											<!-- <div class="newsmoduls_category">Svijet</div> -->
+										</a>
+									</li>
+									<li class="newsmoduls">
+										<a href="clanak/5936-ivo+josipovi%C4%87+otvorit+%C4%87e+sef+prvog+hrvatskog+predsjednika.html" class="newsmoduls_link">
+											<!-- <span class="newsmoduls_date">00:00 </span> -->
+											<div class="newsmoduls_title"> Ivo Josipović otvorit će sef prvog hrvatskog predsjednika </div>		
+											<!-- <div class="newsmoduls_category">Hrvatska</div> -->
+										</a>
+									</li>
+									<li class="newsmoduls">
+										<a href="clanak/835-virtualni+%C5%BEivot+i+stvarna+smrt+djeteta+.html" class="newsmoduls_link">
+											<!-- <span class="newsmoduls_date">00:00 </span> -->
+											<div class="newsmoduls_title"> Virtualni život i stvarna smrt djeteta  </div>		
+											<!-- <div class="newsmoduls_category">Svijet</div> -->
+										</a>
+									</li></ul></div><div class="modulebottom">	</div></div>
+<style type="text/css">
+	.newsmodul a.newsmoduls_link:hover {
+		background: #c6c6c6;
+		color: #315077;
+	}
+</style>
+
+<div id="modul_lijevo_dolje"></div></div><div class="modulebottom"></div>
+							</div><div class="moduletablebanner" id="modul-18"><div class="modulebody">
+<div class="marketing2"   style="width:180px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_2_3_hrvatska_180x150");
+</script>
+</div>
+
+<div id="modul_lijevo_dolje"></div></div><div class="modulebottom"></div>
+							</div>						
+							</div>						
+											
+						<div id="content-left-table-left" >							
+							<div class="block">
+								<!-- <img src="http://www.bannercreator.nu/full-banner-a833.gif"/><br/> -->
+								
+
+<div id="__xclaimwords_wrapper"><div id="ja-current-content2">
+
+	<div id="ja-pathway" class="toniputanja">
+						<span class="breadcrumbs pathway">
+							<a class="pathway" href="vijesti/">Vijesti</a>
+							<img src="templates/dnevno2/images/arrow.png"/>
+						</span>					
+					
+						<span class="breadcrumbs pathway">
+							<a class="pathway" href="vijesti/hrvatska/">Hrvatska</a>
+							<img src="templates/dnevno2/images/arrow.png"/>
+						</span>					
+					Na dana&scaron;nji dan u Parizu je 1978. godine ubijen hrvatski domoljub Bruno Bu&scaron;i&#263; </div>
+	
+	<div id="tonigallery">
+		<div id="slideshow"></div>
+		<div id="caption"></div>
+		<div id="thumbsouter">
+			<div id="thumbs" class="thumbs2"><ul class="thumbs noscript"><li class="gallery" >
+							<a class="thumb" name="Bruno Bu&scaron;i&#263;" href="images/480/19079.jpg" title=" Photo: fair use" href="images/480/19079.jpg">
+								<img src="images/60/19079.jpg" alt="Bruno Bu&scaron;i&#263;" />
+							</a>
+							
+							<div class="caption">
+								<h3 class="title_alias">GODI&Scaron;NJICA ATENTATA</h3>
+								<h3 class="title">Na dana&scaron;nji dan u Parizu je 1978. godine ubijen hrvatski domoljub Bruno Bu&scaron;i&#263; </h3>								
+								<p class="photo">Photo: fair use</p>
+							</div>
+
+							
+						</li></ul></div>
+		</div>
+	</div>
+	
+	<div class="clearfix" style="display:table; width:100%;">
+		
+		<div class="h3okvir">
+			<h3 class="cat_heading">
+					<span class="title_alias">GODI&Scaron;NJICA ATENTATA</span>
+			</h3>
+		</div>
+		
+		<h2 class="contentheading">Na dana&scaron;nji dan u Parizu je 1978. godine ubijen hrvatski domoljub Bruno Bu&scaron;i&#263; </h2>
+		<div class="introtext"><p>Misa zadu&scaron;nica za Brunu Bu&scaron;i&#263;a slu&#382;it &#263;e se danas (16. listopada) u 17 sati u crkvi Svetog Marka u Zagrebu.</p></div>
+		<hr>
+	</div>
+
+	<div class="article-tools clearfix">		
+		<div class="article-meta">				
+				<span class="createby">Autor: dnevno.hr</span>
+				<span class="photoby"></span>
+				<span class="createdate">Subota | 16.10.2010 11:13 </span>
+				<div class="buttonheading">
+					<!--<span>
+						<a href="#">
+							<img alt="E-mail" src="templates/dnevno2/images/emailButton.png" />
+						</a>			
+					</span>
+							
+					<span>
+						<a href="#">
+							<img alt="Print" src="templates/dnevno2/images/printButton.png" />
+						</a>			
+					</span> 
+					
+						
+					<span>
+						<a href="#">
+							<img alt="PDF" src="templates/dnevno2/images/pdf_button.png" />
+						</a>
+					</span>-->
+				</div>
+		</div>		
+	</div>	
+	<!-- <div id="controls"></div> -->	
+	<div class="fulltext"><p>Na dana&scaron;nji dan prije 32 godine, dakle 16. listopada 1978. godine, U Parizu su agenti UDBE ubili hrvatskog politi&#269;ara i publicista Brunu Bu&scaron;i&#263;a koji se je zalagao za hrvatsko osamostaljenje i izdvajanje iz tada&scaron;nje Jugoslavije. Povijesni doga&#273;aji su kasnije, me&#273;utim, pokazali da je to bio pucanj u prazno, jer je Bruno Bu&scaron;i&#263; kao personifikacija stoljetne hrvatske te&#382;nje za vlastitom dr&#382;avom, nad&#382;ivio njihov poku&scaron;aj da njegovim ubojstvom ubiju i ideju za hrvatskim osamostaljenjem.</p>
+<p><strong>Uhi&#263;en zajedno s dr. Franjom Tu&#273;manom</strong></p>
+<p>Bruno Bu&scaron;i&#263; je, da podsjetimo, za vrijeme Jugoslavije zbog svojih politi&#269;kih stavova bio proganjan i zatvaran, te je me&#273;u prvima, nakon gu&scaron;enja Hrvatskog prolje&#263;a, 12. prosinca 1972. bio uhi&#263;en i pritvoren, da bi zajedno s dr. Franjom Tu&#273;manom i dr. Dragutinom &Scaron;&#263;ukancem, bio optu&#382;en i 13. listopada 1972. osu&#273;en na dvije godine zatvora (kao i tre&#263;eoptu&#382;eni Franjo Tu&#273;man).</p>
+<p>Nakon izlaska iz zatvora Bruno Bu&scaron;i&#263; bio je podvrgnut neprestanom nadzoru i zlostavljanju. Budu&#263;i da putovnicu nije mogao dobiti legalnim putem, Hrvatsku je napustio u rujnu 1975. s krivotvorenim putnim ispravama.</p>
+<p><strong>Brzo postao najugledniji hrvatski politi&#269;ar u inozemstvu</strong></p>
+<p>Nakon toga je gotovo dvije godine djelovao izvan iseljeni&#269;kih organizacija, da bi se po&#269;etkom 1977. godine u&#269;lanio u Hrvatsko narodno vije&#263;e (HNV). Na izborima za Drugi sabor HNV-a u svibnju i lipnju 1977. godine Bruno Bu&scaron;i&#263; je dobio daleko najvi&scaron;e glasova od svih kandidata. Taj Sabor HNV-a nije samo personalnim promjenama u vodstvu organizacije simboli&#269;no naglasio ideju svehrvatske pomirbe, ve&#263; je nagovijestio i koncepcijski zaokret u radu hrvatskog politi&#269;kog iseljeni&scaron;tva.</p>
+<p>Djelovanje Brune Bu&scaron;i&#263;a nije zabrinulo samo &scaron;efove Udbe, nego i cijelu beogradsku politi&#269;ku i vojnu vrhu&scaron;ku. Pored toga, nakon kratkog vremena u izbjegli&scaron;tvu Bruno Bu&scaron;i&#263; je zamijetio dvije klju&#269;ne stvari. Prvo, da ni zapadne velesile, kao ni isto&#269;no-europske, komunisti&#269;ke dr&#382;ave na &#269;elu s SSSR-om, nisu bile nimalo sklone hrvatskoj borbi za dr&#382;avnu samostalnost i nacionalnu slobodu, nego su svim sredstvima pomagale opstanak jugoslavenske dr&#382;ave i Titovog re&#382;ima.</p>
+<p><strong>Doputovao na izvanredni sabor HNV-a</strong></p>
+<p>Aktivnost Brune Bu&scaron;i&#263;a, dakle, nije zasmetala samo Jugoslaviji nego i nekim me&#273;unarodnim sredi&scaron;tima mo&#263;i kojima nije odgovarala pojava &#269;ovjeka u hrvatskom iseljeni&scaron;tvu, koji je hrvatskoj osloboditeljskoj politici mogao dati suvremene crte. Tada&scaron;nje hrvatsko iseljeni&scaron;tvo nije, naime, bilo sposobno na&scaron;tetiti Jugoslaviji do mjere koja bi uzdrmala njezine temelje.</p>
+<p>U rujnu 1978., Bruno Bu&scaron;i&#263; je, dakle, doputovao iz Londona u Pariz radi priprema za Izvanredni sabor HNV-a, koji je bio zakazan za 20. i 21. listopada 1978. u Amsterdamu. Beograd je, vjerojatno uz pomo&#263; nekih stranih sredi&scaron;ta mo&#263;i, odlu&#269;io da se Bruno ne smije pojaviti na tom skupu gdje bi mogao preuzeti potpuno vodstvo me&#273;u hrvatskim politi&#269;kim izbjeglicama.</p>
+<p>U Beogradu je, stoga, donesena odluka &ndash; Bruno Bu&scaron;i&#263; mora biti ubijen.</p>
+<p><strong>Francuske vlasti nikada nisu istra&#382;ile ubojstvo</strong></p>
+<p>Kad je 16. listopada 1978., nekoliko minuta poslije 23 sata ulazio u dvori&scaron;te zgrade u kojoj je stanovao na adresi 57. rue de Belleville, Paris 19eme, za njim je potr&#269;ao ubojica i usmrtio ga iz neposredne blizine. Svjedoci su izjavili da je jedna osoba slijedila &#382;rtvu, pucala u nju i pobjegla.</p>
+<p>Nakon vi&scaron;egodi&scaron;nje, ne pretjerano marljive istrage, francuske vlasti su u skladu sa zahtjevom dr&#382;avnoga odvjetnika Republike Francuske od 18. lipnja 1982. obustavile istra&#382;ni postupak protiv nepoznate osobe za kazneno djelo ubojstva Brune Bu&scaron;i&#263;a. (Vi&scaron;e o toj temi mo&#382;ete pro&#269;itati na web stranici Kluba hrvatskih povratnika iz iseljeni&scaron;tva na adresi www.klub-povratnika.com.hr).</p>
+<p>Misa zadu&scaron;nica za Brunu Bu&scaron;i&#263;a slu&#382;it &#263;e se danas (16. listopada) u 17 sati u crkvi Svetog Marka u Zagrebu.</p></div>
+	<span class="modifydate">Zadnja Promjena: Subota | 16.10.2010 11:13 </span>
+	<span class="article_separator"></span>        
+</div>
+
+	 </div>
+	<div id="banner250-left" ><div class="moduletablebanner" id="modul-14"><div class="modulebody">
+<div class="marketing2"   style="width:250px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_2_4_hrvatska_250x250");
+</script>
+</div>
+
+</div><div class="modulebottom"></div>
+							</div></div><div id="banner250-right"  ><div class="moduletablebanner" id="modul-15"><div class="modulebody">
+<div class="marketing2"   style="width:250px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_2_5_hrvatska_250x250");
+</script>
+</div>
+
+</div><div class="modulebottom"></div>
+							</div></div><div id="article-like"><div class="moduletable" id="modul-45"><div class="modulebody"></div><div class="modulebottom"></div>
+							</div></div><div class="comments">
+		<div class="h3okvir">
+			<h3 class="cat_heading">
+					<span class="title_alias">KOMENTARI</span>
+			</h3>
+		</div>
+		<p class="message"> Samo registrirani korisnici mogu pisati komentare  </p><p class="message"><span class="showlogin"> Prijava </span> </p>
+		<script type="text/javascript">
+		
+		jQuery(document).ready(function($) {
+			$("span.showlogin").click(function(){
+				$("div.moduletable-login div").show();
+			});
+		
+		});		
+		</script>
+		
+		<style>
+		
+		.showlogin{
+			font-weight: bold;
+			cursor: pointer;
+		}
+		
+		</style>
+		</div>								
+															</div>
+						</div>
+						<br class="clear"/>
+					</div>
+					
+						
+					<br class="clear"/>
+				</div>
+								<div id="content-right">					
+					<div class="all" id="right-sortable">
+						<div class="moduletable" id="modul-34"><div class="modulehead"><h3>Izdvojeno</h3></div><div class="modulebody"><div class="flashnews"><div class="flash-prev"> </div><div class="flash-next"> </div><ul class="flashnews"><li><div class="flash-okvir" style="background-image:url('images/320/23136.jpg');" ><h2 class="flash-title">		
+		<a href="vijesti/hrvatska/izbaceni_prilozi_potvrdili_htvovi_cenzori_rade_odlican_posao_za_konkurenciju/179230.html" title="VIDEO: Pogledajte zabranjenu emisiju Latinice">VIDEO: Pogledajte zabranjenu emisiju Latinice
+		</a>
+		</h2></div></li><li><div class="flash-okvir" style="background-image:url('images/320/23029.jpg');" ><h2 class="flash-title">		
+		<a href="kolumne/marko_lopusina/da_nije_hrvata_ne_bi_bilo_srba_/177820.html" title="Da nije Hrvata, ne bi bilo Srba !">Da nije Hrvata, ne bi bilo Srba !
+		</a>
+		</h2></div></li><li><div class="flash-okvir" style="background-image:url('images/320/23017.jpg');" ><h2 class="flash-title">		
+		<a href="vijesti/novac/istovremno_dok_otpusta_visak_od_1731_radnika_fina_zaposljava_63_nova_djelatnika/177382.html" title="Ministar Šuker u Fini 'uhljebljuje' rodbinu HDZ-ovaca">Ministar Šuker u Fini 'uhljebljuje' rodbinu HDZ-ovaca
+		</a>
+		</h2></div></li><li><div class="flash-okvir" style="background-image:url('images/320/7066.jpg');" ><h2 class="flash-title">		
+		<a href="sport/nogomet/ekskluzivno_robert_prosinecki_preuzima_kormilo_crvene_zvezde/176810.html" title="Robert Prosinečki preuzima kormilo Crvene Zvezde!">Robert Prosinečki preuzima kormilo Crvene Zvezde!
+		</a>
+		</h2></div></li><li><div class="flash-okvir" style="background-image:url('images/320/16762.jpg');" ><h2 class="flash-title">		
+		<a href="vijesti/hrvatska/nobilo_vlast_je_u_rasulu_pa_dorh_napokon_moze_ciniti_sto_treba/114806.html" title="Pali su svi autoriteti u državi, DORH može krenuti u čistku">Pali su svi autoriteti u državi, DORH može krenuti u čistku
+		</a>
+		</h2></div></li></ul></div><!-- -->
+<script type="text/javascript" src="modules/flashnews.js"></script>
+
+
+</div><div class="modulebottom"></div>
+							</div><div class="moduletable" id="modul-39"><div class="modulebody">
+<div class="marketing2"   style="width:468px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_1_3_hrvatska_468x60");
+</script>
+</div>
+
+</div><div class="modulebottom"></div>
+							</div><div class="moduletable" id="modul-4"><div class="modulehead"><h3>Najnovije vijesti</h3></div><div class="modulebody">	
+		
+		<script type="text/javascript">		
+			$(function() { 
+				$.getScript("modules/vTicker.js", function() {					
+					$('.scroll').vTicker({
+					   speed: 1000,
+					   pause: 3000,
+					   showItems: 4,
+					   mousePause: true,
+					   animation: 'fade'
+					});
+				});				
+			});	
+		
+		</script>
+	<div class="scroll"><ul class="newsmoduls">
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/uhicenje_sanadera_nece_dovesti_do_izbora/181275.html" class="newsmoduls_link" >
+							<img src="images/60/23250.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/uhicenje_sanadera_nece_dovesti_do_izbora/181275.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Uhićenje Sanadera neće dovesti do izbora <span class="createdate">Sub&nbsp;15:34 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/i_kosor_bi_mogla_puno_izgubiti_od_iskrenog_sanaderova_svjedocenja/181207.html" class="newsmoduls_link" >
+							<img src="images/60/481.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/i_kosor_bi_mogla_puno_izgubiti_od_iskrenog_sanaderova_svjedocenja/181207.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> I Kosor bi mogla puno izgubiti od iskrenog Sanaderova svjedočenja <span class="createdate">Sub&nbsp;14:33 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/poceo_postupak_izrucenja_sanader_dobio_odvjetnika_po_sluzbenoj_duznosti/181173.html" class="newsmoduls_link" >
+							<img src="images/60/18962.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/poceo_postupak_izrucenja_sanader_dobio_odvjetnika_po_sluzbenoj_duznosti/181173.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Sanader dijeli ćeliju s austrijskim lopovom <span class="createdate">Sub&nbsp;13:28 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/hrvatska_se_sramoti_sdp_obecaje_nikad_vise/181168.html" class="newsmoduls_link" >
+							<img src="images/60/718.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/hrvatska_se_sramoti_sdp_obecaje_nikad_vise/181168.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Hrvatska se sramoti, SDP obećaje: Nikad više <span class="createdate">Sub&nbsp;13:15 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/tisak_u_srbiji_o_sanaderu/181152.html" class="newsmoduls_link" >
+							<img src="images/60/310.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/tisak_u_srbiji_o_sanaderu/181152.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Tisak u Srbiji o Sanaderu <span class="createdate">Sub&nbsp;12:27 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/kosor_o_sanaderu_svatko_je_nevin_dok_se_ne_dokaze_suprotno/181149.html" class="newsmoduls_link" >
+							<img src="images/60/23236.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/kosor_o_sanaderu_svatko_je_nevin_dok_se_ne_dokaze_suprotno/181149.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Kosor o Sanaderu: Svatko je nevin dok se ne dokaže suprotno <span class="createdate">Sub&nbsp;12:15 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/umro_novinar_i_politicki_pisac_krsto_cviic/181142.html" class="newsmoduls_link" >
+							<img src="images/60/23234.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/umro_novinar_i_politicki_pisac_krsto_cviic/181142.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Umro novinar i politički pisac Krsto Cviić <span class="createdate">Sub&nbsp;11:45 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/nitko_u_hdzu_ne_zna_nista_o_nikakvom_isisavanju_i_torbarenju_nikakvog_novca/181016.html" class="newsmoduls_link" >
+							<img src="images/60/15622.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/nitko_u_hdzu_ne_zna_nista_o_nikakvom_isisavanju_i_torbarenju_nikakvog_novca/181016.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Nitko u HDZ-u ne zna ništa o nikakvom 'isisavanju i torbarenju' novca <span class="createdate">Pet&nbsp;21:24 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/smuseni_sanader_je_naivnim_bijegom_pokazao_svoju_zecju_psihu/180936.html" class="newsmoduls_link" >
+							<img src="images/60/23231.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/smuseni_sanader_je_naivnim_bijegom_pokazao_svoju_zecju_psihu/180936.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> 'Sanader je napokon tamo gdje mu je mjesto' <span class="createdate">Pet&nbsp;20:49 </span></div>
+					</a>
+				</div>
+			</div>
+		</li>
+		<li class="newsmoduls_latest" >
+			<div class="newsmoduls_latest_item">
+				<div class="okvir3">
+					<div class="okvir" >
+						<a href="vijesti/hrvatska/povratak_ive_sanadera/sanaderovo_uhicenje_na_autocesti_nije_bila_dobra_reklama_za_hrvatsku/180935.html" class="newsmoduls_link" >
+							<img src="images/60/16773.jpg"  style="width: 60px; height: 28px;" />
+						</a>
+					</div>
+				</div>
+				<div class="okvir2">
+					<a href="vijesti/hrvatska/povratak_ive_sanadera/sanaderovo_uhicenje_na_autocesti_nije_bila_dobra_reklama_za_hrvatsku/180935.html" class="newsmoduls_link" >					
+						<div class="newsmoduls_title"> Sanaderovo uhićenje na autocesti nije bila dobra reklama za Hrvatsku <span class="createdate">Pet&nbsp;20:48 </span></div>
+					</a>
+				</div>
+			</div>
+		</li></ul></div>
+
+</div><div class="modulebottom"></div>
+							</div><div class="moduletable" id="modul-40"><div class="modulebody">
+
+</div><div class="modulebottom"></div>
+							</div><div class="moduletablebanner" id="modul-27"><div class="modulebody">
+<div class="marketing2"   style="width:300px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_1_6_hrvatska_300x250");
+</script>
+</div>
+
+</div><div class="modulebottom"></div>
+							</div>						<div class="moduletable" id="modul-5"><div class="modulehead"><h3>Najčitanije</h3></div><div class="modulebody"><ul class="mostread">
+		<li class="mostread">
+			<a href="vijesti/hrvatska/mislav_stipic_smijenjen_hloverka_culjak_i_kovacic_pod_istragom_dorha/180020.html" class="mostread_link">
+				<div class="mostread_title"> Mislav Stipić smijenjen, Hloverka, Čuljak i Kovačić pod istragom DORH-a? </div>
+				<!--<div class="mostread_date">Četvrtak , 22:55 </div> -->
+			</a>
+		</li>
+		<li class="mostread">
+			<a href="vijesti/hrvatska/izbaceni_prilozi_potvrdili_htvovi_cenzori_rade_odlican_posao_za_konkurenciju/179230.html" class="mostread_link">
+				<div class="mostread_title"> VIDEO: Pogledajte zabranjenu emisiju Latinice </div>
+				<!--<div class="mostread_date">Srijeda , 21:10 </div> -->
+			</a>
+		</li>
+		<li class="mostread">
+			<a href="vijesti/hrvatska/unatoc_sukobu_interesa_hloverka_i_stipic_i_dalje_drmaju_htvom/177007.html" class="mostread_link">
+				<div class="mostread_title"> Nema spasa za HRT dok Prisavljem drmaju cenzori, sukobi interesa i politika </div>
+				<!--<div class="mostread_date">Nedjelja , 23:44 </div> -->
+			</a>
+		</li>
+		<li class="mostread">
+			<a href="vijesti/novac/istovremno_dok_otpusta_visak_od_1731_radnika_fina_zaposljava_63_nova_djelatnika/177382.html" class="mostread_link">
+				<div class="mostread_title"> Ministar Šuker u Fini 'uhljebljuje' rodbinu HDZ-ovaca </div>
+				<!--<div class="mostread_date">Ponedjeljak , 22:28 </div> -->
+			</a>
+		</li>
+		<li class="mostread">
+			<a href="vijesti/hrvatska/nobilo_nemam_dokaza_za_to_da_sam_morao_popisati_imovinu_jer_branim_polanceca/178220.html" class="mostread_link">
+				<div class="mostread_title"> Nobilo: Imam više imovine nego što imam prihoda </div>
+				<!--<div class="mostread_date">Utorak , 21:30 </div> -->
+			</a>
+		</li></ul>
+
+
+</div><div class="modulebottom"></div>
+							</div><div class="moduletable" id="modul-26"><div class="modulehead"><h3>Kolumne</h3></div><div class="modulebody">
+	<div  onclick="document.location.href='http://www.dnevno.hr/zvonimir_hodak/zvonimir_hodak/50893.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/3228.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/zvonimir_hodak/bolje_je_biti_bogat_i_zdrav_nego_siromasan_i_bolestan/177211.html">Bolje je biti bogat i zdrav nego siromašan i bole...</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/kolumne/miroslav_tudman/miroslav_tudman/130450.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/18455.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/miroslav_tudman/treba_prikriti_ono_sto_se_iza_brda_valja_inace_strategije_nisu_djelotvorne/143107.html">'Treba prikriti ono što se iza brda valja, inače...</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/kolumne/josip_jurcevic/josip_jurcevic/156694.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/19000.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/josip_jurcevic/ubojice_za_pisacim_stolom/179421.html">Ubojice za pisaćim stolom</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/kolumne/josip_kregar/josip_kregar/130034.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/18370.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/josip_kregar/treci_put_cetvrti_put/180394.html">Treći put, četvrti put...</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/kolumne/marko_lopusina/marko_lopusina/172599.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/lopusina.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/marko_lopusina/da_nije_hrvata_ne_bi_bilo_srba_/177820.html">Da nije Hrvata, ne bi bilo Srba !</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/kolumne/fanopolis/fanopolis/129196.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/18270.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/fanopolis/netko_mi_je_ukrao_biciklo/175670.html">Netko mi je ukrao biciklo</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/kolumne/cetiri_nivoa_zdravlja/cetiri_nivoa_zdravlja/118796.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/17261.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/cetiri_nivoa_zdravlja/ogranicenost_iskljucivosti/173326.html">Ograničenost isključivosti</a>
+		</div>
+	</div>
+	<div  onclick="document.location.href='http://www.dnevno.hr/psihonauti/psihonauti/75400.html'" class="kolumna" style="background-image: url(http://www.dnevno.hr/images/800/11036.jpg);   width:290px; height:108px;" >
+		<div>
+		<a  href="kolumne/psihonauti/terapija_za_dusu/dr_luka_marsic/imaginarni_svijet_slika_oduzeo_nam_je_pravo_na_slobodnu_mastu_/176991.html">Imaginarni svijet slika oduzeo nam je pravo na slo...</a>
+		</div>
+	</div>
+<style>
+div.kolumna div a
+{	/*
+	color: white;
+	font-size: 1.3em;
+	padding-left:10px;
+	*/
+	color:white;
+	display:block;
+	font-size:0.9em;
+	padding-left:8px;
+	padding-top:94px;
+	
+}
+
+div.kolumna
+{
+	cursor:pointer;	
+}
+
+</style></div><div class="modulebottom"></div>
+							</div><div class="moduletablebanner" id="modul-22"><div class="modulebody">
+<div class="marketing2"   style="width:300px;" >
+<script type='text/javascript'>
+	GA_googleFillSlot("om_1_7_hrvatska_300x250");
+</script>
+</div>
+
+</div><div class="modulebottom"></div>
+							</div><div class="moduletable" id="modul-44"><div class="modulebody">
+			<script type="text/javascript">
+				$(function () {
+				
+					$("#weatherReport").load("modules/weather/getweather.php?city=Zagreb");
+					
+				});
+			</script>
+		
+			<div id="weatherReport">
+			</div>
+		
+
+<style>
+
+div#weatherReport
+{
+	height: 240px;
+	padding-left: 18px;
+	padding-top: 18px;
+	background-color:#fff;
+	color:white;
+	background-image: url('modules/weather/weather-bck.png');
+	background-position: center;
+	background-repeat:no-repeat;
+}
+
+div#weather_top
+{
+	display: block;
+	height: 125px;
+}
+
+div.celzius
+{
+	font-size: 28px;
+}
+
+
+form#weatherForm select
+{
+	font-size: 14px;
+	padding: 2px;
+	width: 165px;
+	background-color: #003399;
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #ccc;	
+}
+
+
+div#weather_details
+{
+	margin-left: 10px;
+	display: inline-block;
+	width: 165px;
+}
+
+div.weather_conditions
+{
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+
+div.weather_days
+{
+	display: block;
+	margin-top: 10px;
+	width: 100px;
+}
+
+div.day_condition
+{
+	display: block;
+	float: left;
+	width: 70px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+
+div.day_condition img
+{
+	border: none;
+}
+
+div.day
+{
+	text-transform:uppercase;
+	font-size: 14px;
+	color: #6699ff;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+
+</style></div><div class="modulebottom"></div>
+							</div>						<div class="moduletable" id="modul-6"><div class="modulehead"><h3>Anketa</h3></div><div class="modulebody">
+		<script type="text/javascript" src="modules/poll.js"></script>	
+	<div id="poll_wraper">
+	<div id="poll_content">
+		<div id="poll_question">
+		Kako biste ocijenili kaznu izre&#269;enu Berislavu Ron&#269;evi&#263;u?</div>
+		<div id="poll_answers">
+		<p><input type="radio" name="poll_answer" value="1977" />Kazna je preblaga</p><p><input type="radio" name="poll_answer" value="1978" />Dobio je &scaron;to je zaslu&#382;io</p><p><input type="radio" name="poll_answer" value="1979" />Osudili su nevinog &#269;ovjeka!</p></div>
+	</div>
+	<div id="poll_buttons">
+		<button id="odgovori" class="button">Odgovori</button>
+		
+	</div>
+	<div id="poll_results"><a href="anketa/kako_biste_ocijenili_kaznu_izrecenu_berislavu_roncevicu/177231.html" > Rezultati </a></div>
+	
+	
+	<input type="hidden" name="anketaid" id="anketaid" value="95">
+</div>
+
+<style type="text/css">
+	#poll_question {
+		font-family: Tahoma;
+		font-weight: bold;
+		font-size: 1.1em;
+		margin-bottom: 10px;
+		
+	}
+	
+	#poll_answers p {
+		font-family: Tahoma;
+		font-size: 1em;
+		padding: 0;
+		margin-bottom: 2px;
+		line-height: 0;
+	}
+	
+	#poll_answers p input {
+		padding-top: 3px;
+		margin-right: 4px;
+	}
+		
+</style>
+</div><div class="modulebottom"></div>
+							</div><div class="moduletable" id="modul-9"><div class="modulehead"><h3>Komentar dana</h3></div><div class="modulebody">
+				
+				<!--<img id="comofday-left" src="images/so-q.gif" /> -->
+				<img id="comofday-app" src="images/app.png" />
+				<div class="comofday_txt">
+					
+					<i> To je sramota za hrvatsku policiju, koja mu je dopustila, odnosno \'organizirala\' bijeg. U nijednoj zemlji to ne bi bilo moguće. Trebalo je spriječiti izlazak iz zemlje, a slažem se s predsjednikom Josipovićem da se policija nema pravo opravdavati </i>
+					
+				</div>		
+				<!-- <img id="comofday-right" src="images/so-q.gif" /> -->
+				
+				<div class="com-person">
+					Damir Kajin
+				</div>
+				
+						
+		
+<style>
+
+div.comofday_txt i {
+width: 145px;
+
+}
+
+
+
+div.comofday_txt
+{
+	font-size: 1.5em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	width:200px;
+	margin-left:40px;
+	padding-right:20px;
+	text-align:left;
+background: url(http://www.dnevno.hr/images/app.png) bottom right no-repeat;
+}
+
+div.com-person
+{
+	margin-left: 40px;
+	margin-top:10px;	
+}
+
+a#com-edit
+{
+	margin-left: 40px;
+	margin-top: 15px;
+	padding: 2px;
+	width:20px;
+	background: #ccc;
+	display:block;	
+}
+
+img#comofday-left
+{
+	margin-left:20px;
+}
+
+img#comofday-app
+{
+	float:left;
+	margin-left: 10px;
+}
+
+img#comofday-right
+{
+	margin-left: 200px;
+}
+
+</style></div><div class="modulebottom"></div>
+							</div>					</div>					
+				</div>
+					
+				<br class="clear"/>
+			</div>			
+		</div>		
+		
+		<div id="footer" class="all" >		
+							<div id="ja-footer"  >
+					<div class="moduletable" id="modul-10"><div class="modulebody">
+<ul class="menu" id="menuid1"><li id="item27" class="active" > 
+				<a href="vijesti/">
+					<span>Vijesti				
+				</span>
+				</a><ul class="menu27" id="menuid2"><li id="item28" class="selected" > 
+				<a href="vijesti/hrvatska/">
+					<span>Hrvatska				
+				</span>
+				</a><ul class="menu28" id="menuid3"><li id="item94" class="active" > 
+				<a href="vijesti/hrvatska/povratak_ive_sanadera/povratak_ive_sanadera/135800.html">
+					<span>Povratak Ive Sanadera				
+				</span>
+				</a><ul class="menu94" id="menuid4"></ul></li></ul></li><li id="item29" class="active" > 
+				<a href="vijesti/svijet/">
+					<span>Svijet				
+				</span>
+				</a><ul class="menu29" id="menuid3"><li id="item95" class="sakriven" > 
+				<a href="vijesti/svijet/eu/eu/151195.html">
+					<span>EU				
+				</span>
+				</a><ul class="menu95" id="menuid4"></ul></li></ul></li><li id="item30" class="active" > 
+				<a href="vijesti/crna_kronika/">
+					<span>Crna kronika				
+				</span>
+				</a><ul class="menu30" id="menuid3"></ul></li><li id="item31" class="active" > 
+				<a href="vijesti/zagreb/">
+					<span>Zagreb				
+				</span>
+				</a><ul class="menu31" id="menuid3"></ul></li><li id="item33" class="active" > 
+				<a href="vijesti/znanost/">
+					<span>Znanost				
+				</span>
+				</a><ul class="menu33" id="menuid3"></ul></li><li id="item83" class="active" > 
+				<a href="vijesti/nekretnine/nekretnine/108787.html">
+					<span>Nekretnine				
+				</span>
+				</a><ul class="menu83" id="menuid3"></ul></li><li id="item26" class="active" > 
+				<a href="vijesti/novac/">
+					<span>Novac				
+				</span>
+				</a><ul class="menu26" id="menuid3"></ul></li><li id="item32" class="active" > 
+				<a href="vijesti/kultura/">
+					<span>Kultura				
+				</span>
+				</a><ul class="menu32" id="menuid3"></ul></li><li id="item96" class="active" > 
+				<a href="vijesti/balkan_express/balkan_express/151193.html">
+					<span>Balkan express				
+				</span>
+				</a><ul class="menu96" id="menuid3"></ul></li></ul></li><li id="item6" class="active" > 
+				<a href="sport/">
+					<span>Sport				
+				</span>
+				</a><ul class="menu6" id="menuid2"><li id="item22" class="sakriven" > 
+				<a href="sport/nogomet/">
+					<span>Nogomet				
+				</span>
+				</a><ul class="menu22" id="menuid3"></ul></li><li id="item1" class="sakriven" > 
+				<a href="sport/kosarka/">
+					<span>Košarka				
+				</span>
+				</a><ul class="menu1" id="menuid3"><li id="item81" class="sakriven" > 
+				<a href="sport/kosarka/sp_turska_2010/">
+					<span>SP Turska 2010				
+				</span>
+				</a><ul class="menu81" id="menuid4"></ul></li></ul></li><li id="item25" class="sakriven" > 
+				<a href="sport/tenis/">
+					<span>Tenis				
+				</span>
+				</a><ul class="menu25" id="menuid3"></ul></li><li id="item4" class="sakriven" > 
+				<a href="sport/formula1/">
+					<span>Formula1				
+				</span>
+				</a><ul class="menu4" id="menuid3"></ul></li><li id="item19" class="sakriven" > 
+				<a href="sport/ostali-sportovi/">
+					<span>Ostali sportovi				
+				</span>
+				</a><ul class="menu19" id="menuid3"><li id="item82" class="sakriven" > 
+				<a href="sport/ostali_sportovi/vaterpolo_ep_zagreb/">
+					<span>Vaterpolo EP Zagreb				
+				</span>
+				</a><ul class="menu82" id="menuid4"></ul></li></ul></li></ul></li><li id="item34" class="active" > 
+				<a href="revije/">
+					<span>Revije				
+				</span>
+				</a><ul class="menu34" id="menuid2"><li id="item36" class="sakriven" > 
+				<a href="revije/vip-studio/">
+					<span>V.I.P. Studio				
+				</span>
+				</a><ul class="menu36" id="menuid3"></ul></li><li id="item54" class="sakriven" > 
+				<a href="pokroviteljstvo/">
+					<span>Pokroviteljstvo				
+				</span>
+				</a><ul class="menu54" id="menuid3"></ul></li><li id="item35" class="sakriven" > 
+				<a href="revije/moda-i-ljepota/">
+					<span>Moda i ljepota				
+				</span>
+				</a><ul class="menu35" id="menuid3"></ul></li><li id="item44" class="sakriven" > 
+				<a href="revije/lifestyle/">
+					<span>Lifestyle				
+				</span>
+				</a><ul class="menu44" id="menuid3"></ul></li><li id="item45" class="sakriven" > 
+				<a href="revije/zdravlje/">
+					<span>Zdravlje				
+				</span>
+				</a><ul class="menu45" id="menuid3"></ul></li><li id="item37" class="sakriven" > 
+				<a href="revije/tv/">
+					<span>Film i TV				
+				</span>
+				</a><ul class="menu37" id="menuid3"></ul></li><li id="item57" class="sakriven" > 
+				<a href="revije/glazba/glazba/59319.html">
+					<span>Glazba				
+				</span>
+				</a><ul class="menu57" id="menuid3"></ul></li><li id="item84" class="sakriven" > 
+				<a href="revije/nagradne_igre/nagradne_igre/112538.html">
+					<span>Nagradne igre				
+				</span>
+				</a><ul class="menu84" id="menuid3"></ul></li><li id="item85" class="sakriven" > 
+				<a href="revije/nocna_ptica/">
+					<span>Noćna ptica				
+				</span>
+				</a><ul class="menu85" id="menuid3"></ul></li></ul></li><li id="item39" class="active" > 
+				<a href="auto-techno/">
+					<span>Auto techno				
+				</span>
+				</a><ul class="menu39" id="menuid2"><li id="item40" class="sakriven" > 
+				<a href="auto-techno/auto-moto/">
+					<span>Auto-moto				
+				</span>
+				</a><ul class="menu40" id="menuid3"></ul></li><li id="item41" class="sakriven" > 
+				<a href="auto-techno/techno/">
+					<span>Techno				
+				</span>
+				</a><ul class="menu41" id="menuid3"></ul></li></ul></li><li id="item66" class="active" > 
+				<a href="auto_techno/playground/playground/79458.html">
+					<span>Playground				
+				</span>
+				</a><ul class="menu66" id="menuid2"><li id="item68" class="sakriven" > 
+				<a href="playground/top_igre/top_igre/83865.html">
+					<span>Top igre				
+				</span>
+				</a><ul class="menu68" id="menuid3"></ul></li><li id="item69" class="sakriven" > 
+				<a href="playground/dva_igraca/dva_igraca/83866.html">
+					<span>Dva igrača				
+				</span>
+				</a><ul class="menu69" id="menuid3"></ul></li><li id="item70" class="sakriven" > 
+				<a href="playground/akcija/akcija/83867.html">
+					<span>Akcija				
+				</span>
+				</a><ul class="menu70" id="menuid3"></ul></li><li id="item71" class="sakriven" > 
+				<a href="playground/utrke/utrke/83868.html">
+					<span>Utrke				
+				</span>
+				</a><ul class="menu71" id="menuid3"></ul></li><li id="item72" class="sakriven" > 
+				<a href="playground/sport/sport/83869.html">
+					<span>Sport				
+				</span>
+				</a><ul class="menu72" id="menuid3"></ul></li><li id="item73" class="sakriven" > 
+				<a href="playground/pucacina/pucacina/83870.html">
+					<span>Pucačina				
+				</span>
+				</a><ul class="menu73" id="menuid3"></ul></li><li id="item74" class="sakriven" > 
+				<a href="playground/tucnjave/tucnjave/83871.html">
+					<span>Tučnjave				
+				</span>
+				</a><ul class="menu74" id="menuid3"></ul></li><li id="item75" class="sakriven" > 
+				<a href="playground/arkade/arkade/83872.html">
+					<span>Arkade				
+				</span>
+				</a><ul class="menu75" id="menuid3"></ul></li><li id="item76" class="sakriven" > 
+				<a href="playground/strategije/strategije/83873.html">
+					<span>Strategije				
+				</span>
+				</a><ul class="menu76" id="menuid3"></ul></li><li id="item77" class="sakriven" > 
+				<a href="playground/avanture/avanture/83874.html">
+					<span>Avanture				
+				</span>
+				</a><ul class="menu77" id="menuid3"></ul></li><li id="item78" class="sakriven" > 
+				<a href="playground/mozgalice/mozgalice/83875.html">
+					<span>Mozgalice				
+				</span>
+				</a><ul class="menu78" id="menuid3"></ul></li><li id="item79" class="sakriven" > 
+				<a href="playground/life/life/83876.html">
+					<span>Life				
+				</span>
+				</a><ul class="menu79" id="menuid3"></ul></li><li id="item80" class="sakriven" > 
+				<a href="playground/klinci/klinci/97967.html">
+					<span>Klinci				
+				</span>
+				</a><ul class="menu80" id="menuid3"></ul></li></ul></li><li id="item46" class="active" > 
+				<a href="kolumne/kolumne/79755.html">
+					<span>Kolumne				
+				</span>
+				</a><ul class="menu46" id="menuid2"><li id="item47" class="sakriven" > 
+				<a href="zvonimir_hodak/zvonimir_hodak/50893.html">
+					<span>Zvonimir Hodak				
+				</span>
+				</a><ul class="menu47" id="menuid3"></ul></li><li id="item93" class="sakriven" > 
+				<a href="kolumne/miroslav_tudman/miroslav_tudman/130450.html">
+					<span>Miroslav Tuđman				
+				</span>
+				</a><ul class="menu93" id="menuid3"></ul></li><li id="item50" class="sakriven" > 
+				<a href="davor_tustic/davor_tustic/50964.html">
+					<span>Davor Tustić				
+				</span>
+				</a><ul class="menu50" id="menuid3"></ul></li><li id="item97" class="sakriven" > 
+				<a href="kolumne/josip_jurcevic/josip_jurcevic/156694.html">
+					<span>Josip Jurčević				
+				</span>
+				</a><ul class="menu97" id="menuid3"></ul></li><li id="item92" class="sakriven" > 
+				<a href="kolumne/josip_kregar/josip_kregar/130034.html">
+					<span>Josip Kregar				
+				</span>
+				</a><ul class="menu92" id="menuid3"></ul></li><li id="item98" class="sakriven" > 
+				<a href="kolumne/marko_lopusina/marko_lopusina/172599.html">
+					<span>Marko Lopušina				
+				</span>
+				</a><ul class="menu98" id="menuid3"></ul></li><li id="item87" class="sakriven" > 
+				<a href="kolumne/fanopolis/fanopolis/129196.html">
+					<span>Fanopolis				
+				</span>
+				</a><ul class="menu87" id="menuid3"></ul></li><li id="item86" class="sakriven" > 
+				<a href="kolumne/cetiri_nivoa_zdravlja/cetiri_nivoa_zdravlja/118796.html">
+					<span>Četiri nivoa zdravlja				
+				</span>
+				</a><ul class="menu86" id="menuid3"></ul></li><li id="item59" class="sakriven" > 
+				<a href="psihonauti/psihonauti/75400.html">
+					<span>Psihonauti				
+				</span>
+				</a><ul class="menu59" id="menuid3"><li id="item60" class="sakriven" > 
+				<a href="terapija_za_dusu/terapija_za_dusu/75401.html">
+					<span>Terapija za dušu				
+				</span>
+				</a><ul class="menu60" id="menuid4"><li id="item63" class="sakriven" > 
+				<a href="terapija_za_dusu/dr_luka_marsic/dr_luka_marsic/75417.html">
+					<span>Dr. Luka Maršić				
+				</span>
+				</a><ul class="menu63" id="menuid5"></ul></li><li id="item64" class="sakriven" > 
+				<a href="terapija_za_dusu/dr_zoran_zoricic/dr_zoran_zoricic/75415.html">
+					<span>Dr. Zoran Zoričić				
+				</span>
+				</a><ul class="menu64" id="menuid5"></ul></li><li id="item65" class="sakriven" > 
+				<a href="terapija_za_dusu/dr_robert_torre/dr_robert_torre/75402.html">
+					<span>Dr. Robert Torre				
+				</span>
+				</a><ul class="menu65" id="menuid5"></ul></li></ul></li><li id="item61" class="sakriven" > 
+				<a href="psihonauti/ovisnosti/ovisnosti/75625.html">
+					<span>Ovisnosti				
+				</span>
+				</a><ul class="menu61" id="menuid4"></ul></li><li id="item62" class="sakriven" > 
+				<a href="hitan_prijem/hitan_prijem/75419.html">
+					<span>Hitan prijem				
+				</span>
+				</a><ul class="menu62" id="menuid4"></ul></li></ul></li><li id="item2" class="sakriven" > 
+				<a href="pomaganje_je_uvijek_in/">
+					<span>Pomaganje je uvijek IN				
+				</span>
+				</a><ul class="menu2" id="menuid3"></ul></li><li id="item51" class="sakriven" > 
+				<a href="izbor_za_dja/">
+					<span>Izbor za DJ-a				
+				</span>
+				</a><ul class="menu51" id="menuid3"></ul></li></ul></li></ul>
+
+</div><div class="modulebottom"></div>
+							</div>	
+				</div>
+						
+							<div id="footerbody" >
+					<div class="moduletable" id="modul-35"><div class="modulebody">
+			<ul class="menu" id="menuid1">
+					<li id="item58" class="active" > 
+					<a href="impressum/44788.html">
+						<span> Impressum </span>
+					</a>
+			<ul class="menu58" id="menuid2">
+			</ul>
+					</li>
+					<li id="item59" class="active" > 
+					<a href="kontakt/44789.html">
+						<span> Kontakt </span>
+					</a>
+			<ul class="menu59" id="menuid2">
+			</ul>
+					</li>
+					<li id="item60" class="active" > 
+					<a href="uvjeti_koristenja/44801.html">
+						<span> Uvjeti korištenja </span>
+					</a>
+			<ul class="menu60" id="menuid2">
+			</ul>
+					</li>
+			</ul></div><div class="modulebottom"></div>
+							</div>	
+				</div>
+						
+		
+			<div id="footerfooter">
+				<p>&copy; 2010 Dnevno.hr Portal </p>
+				<p>
+				
+				<a id="addtofavorite" href="http://www.dnevno.hr">  <img src="templates/tgstudio/images/favorite.gif" alt="Add to favorite" id="addtofavorite"/></a>
+					
+				</p>		
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+<script src="http://engine.xclaimwords.net/script.aspx?partnerid=117268"  language="javascript" type="text/javascript"></script>	
+	
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15530499-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+	</body>
+</html>
+<!-- 1292079052 -->

@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
+<head>
+<title>Domaljevac - Posavina - Hrvati složno za svoju propast</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="expires" content="0" />
+<meta name="author" content="permis &amp; team 2007-2010" />
+<meta name="description" content="Borjana Krišto bi bila drugi srpski clan Predsjedništva Bosne i Hercegovine" />
+<meta name="keywords" lang="hr" content="domaljevac, posavina, posavac, posavka, posavljak, bosna, sava, hercegovina, bosanac, bosanski, bosanska, hercegovina, bih, hasic, samac, orasje, odzak, bazik, grebnice, hrvatska" />
+<meta name="generator" content="web to date 7.0" />
+<link rel="stylesheet" type="text/css" href="../../../assets/sf.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/sd.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/sc.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/ssb.css" />
+<link rel="stylesheet" type="text/css" href="../../../assets/scal.css" />
+<link href="http://www.domaljevac.com/assets/rss/rssfeeds.xml" rel="alternate" type="application/rss+xml" title="DOM@ljevac" />
+<link rel="shortcut icon" href="http://www.domaljevac.com/images/favicon.ico" />
+<script type="text/javascript" src="../../../assets/jq.js"></script>
+<script type="text/javascript">
+
+/* <![CDATA[ */
+
+jQuery.extend( jQuery.easing,
+{
+	def: 'easeKaleido',
+	easeKaleido: function (x, t, b, c, d) {
+		return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+	}
+});
+
+$(document).ready(function() {
+
+	$('#searchcriteria').focus(function() {
+		if (this.value==this.defaultValue) {
+			this.value='';
+		}
+	}).blur(function() {
+		if (this.value=='') {
+			this.value=this.defaultValue;
+		}
+	});
+
+	
+	$('#kaleidoboundary').css('width', $('#kaleidoboundary .kaleidodiv').length*50+450+'px');
+	
+	var kaleidoDiv=$('#kaleidoboundary .kaleidodiv');
+	var kaleidoTitleLeft=$('#kaleidoboundary .kaleidotitleleft');
+	var kaleidoTitleBottom=$('#kaleidoboundary .kaleidotitlebottom');
+	
+	var kaleidoCurrent=Math.floor(kaleidoDiv.length/2);
+	
+	for (var i=0; i<kaleidoDiv.length; i++) {
+		if (kaleidoDiv.eq(i).hasClass('kaleidocurrent')) {
+			kaleidoCurrent=i;
+		}
+	}
+
+	setImage(kaleidoCurrent, false);
+	
+
+	kaleidoDiv.each(function(j) {
+		$(this).data('kaleidoIndex', j);
+		$(this).mouseover(function() {
+			setImage($(this).data('kaleidoIndex'), true);
+		});
+	});
+	
+	function setImage(index, animate) {
+		var kaleidoOffset=0;
+		for (var k=0; k<kaleidoDiv.length; k++) {
+			if (animate) {
+				kaleidoDiv.eq(k).animate({'left':kaleidoOffset}, {queue: false, duration: 800, easing: 'easeKaleido'});
+				kaleidoTitleLeft.eq(k).css({'opacity': (k==index ? 0 : 0.7) });
+				kaleidoTitleBottom.eq(k).css({'opacity': (k==index ? 0.8 : 0) });
+			} else {
+				kaleidoDiv.eq(k).css({'left':kaleidoOffset});
+				kaleidoTitleLeft.eq(k).css({'opacity': (k==index ? 0 : 0.7) });
+				kaleidoTitleBottom.eq(k).css({'opacity': (k==index ? 0.8 : 0) });
+			}
+			if (k==index) {
+				kaleidoOffset+=500;
+			} else {
+				kaleidoOffset+=50;				
+			}
+		}
+	}
+});
+
+/* ]]> */
+	
+</script>
+
+</head>
+
+<body>
+
+<div id="maincontainer">
+
+<div id="topcontainer">
+
+	<div id="searchbox">
+		<form action="../../../fts.php" method="get">
+		<input id="searchcriteria" value="Upiši traženi pojam ..." type="text" name="criteria" maxlength="30" />
+		<input id="searchsubmit" type="image" src="../../../images/psearchsbmt.gif" />
+		</form>
+	</div>
+<ul>
+<li><a href="../../../index-a-z.html">Index A-Z</a></li>
+<li><a href="../../../newsletter.html">Newsletter</a></li>
+<li><a href="../../../preporuke.html">Preporuke</a></li>
+<li><a href="../../../impressum.html">Impressum</a></li>
+<li><a href="../../../kontakt.html">Kontakt</a></li>
+</ul>
+
+</div>
+
+<div id="kaleido">
+<div id="kaleidoboundary">
+
+									<div class="kaleidodiv">
+					<a href="../../../domaljevac/index.html"><img src="../../../images/jabuke_domlj2_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../domaljevac/index.html"><img src="../../../images/pnavleft1.gif" width="50" height="300" class="kaleidotitleleft" alt="Domaljevac-Šamac" border="0"/></a>
+		<a href="../../../domaljevac/index.html"><img src="../../../images/pnavbottom1.gif" width="500" height="50" class="kaleidotitlebottom" alt="Domaljevac-Šamac" border="0"/></a>
+	</div>
+									<div class="kaleidodiv kaleidocurrent">
+					<a href="../../index.html"><img src="../../../images/pic_logo_ice_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../index.html"><img src="../../../images/pnavleft2.gif" width="50" height="300" class="kaleidotitleleft" alt="Bosna i Hercegovina" border="0"/></a>
+		<a href="../../index.html"><img src="../../../images/pnavbottom2.gif" width="500" height="50" class="kaleidotitlebottom" alt="Bosna i Hercegovina" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../posavina/index.html"><img src="../../../images/posavina_ps-nav_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../posavina/index.html"><img src="../../../images/pnavleft3.gif" width="50" height="300" class="kaleidotitleleft" alt="Posavina" border="0"/></a>
+		<a href="../../../posavina/index.html"><img src="../../../images/pnavbottom3.gif" width="500" height="50" class="kaleidotitlebottom" alt="Posavina" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../svijet/index.html"><img src="../../../images/pic_logo_avenue_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../svijet/index.html"><img src="../../../images/pnavleft4.gif" width="50" height="300" class="kaleidotitleleft" alt="Svijet" border="0"/></a>
+		<a href="../../../svijet/index.html"><img src="../../../images/pnavbottom4.gif" width="500" height="50" class="kaleidotitlebottom" alt="Svijet" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../razmiljaonica/index.html"><img src="../../../images/zeleno_nav_3_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../razmiljaonica/index.html"><img src="../../../images/pnavleft5.gif" width="50" height="300" class="kaleidotitleleft" alt="Razmišljaonica" border="0"/></a>
+		<a href="../../../razmiljaonica/index.html"><img src="../../../images/pnavbottom5.gif" width="500" height="50" class="kaleidotitlebottom" alt="Razmišljaonica" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../osini-po-prasini/index.php"><img src="../../../images/nav_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../osini-po-prasini/index.php"><img src="../../../images/pnavleft6.gif" width="50" height="300" class="kaleidotitleleft" alt="Ošini po prašini" border="0"/></a>
+		<a href="../../../osini-po-prasini/index.php"><img src="../../../images/pnavbottom6.gif" width="500" height="50" class="kaleidotitlebottom" alt="Ošini po prašini" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../autori/index.html"><img src="../../../images/alien_1godina_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../autori/index.html"><img src="../../../images/pnavleft7.gif" width="50" height="300" class="kaleidotitleleft" alt="Autori" border="0"/></a>
+		<a href="../../../autori/index.html"><img src="../../../images/pnavbottom7.gif" width="500" height="50" class="kaleidotitlebottom" alt="Autori" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../skrinja/index.html"><img src="../../../images/tastatur_gruen_03_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../skrinja/index.html"><img src="../../../images/pnavleft9.gif" width="50" height="300" class="kaleidotitleleft" alt="Škrinja" border="0"/></a>
+		<a href="../../../skrinja/index.html"><img src="../../../images/pnavbottom9.gif" width="500" height="50" class="kaleidotitlebottom" alt="Škrinja" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../sadrzaj/index.html"><img src="../../../images/pic_logo_click_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../sadrzaj/index.html"><img src="../../../images/pnavleft10.gif" width="50" height="300" class="kaleidotitleleft" alt="Sadržaj" border="0"/></a>
+		<a href="../../../sadrzaj/index.html"><img src="../../../images/pnavbottom10.gif" width="500" height="50" class="kaleidotitlebottom" alt="Sadržaj" border="0"/></a>
+	</div>
+									<div class="kaleidodiv">
+					<a href="../../../poruke/index.php"><img src="../../../images/k640_haende_gruen_sw_nav.jpg" width="500" height="300" class="kaleidoimg" alt="" border="0"/></a>
+				<a href="../../../poruke/index.php"><img src="../../../images/pnavleft11.gif" width="50" height="300" class="kaleidotitleleft" alt="Poruke" border="0"/></a>
+		<a href="../../../poruke/index.php"><img src="../../../images/pnavbottom11.gif" width="500" height="50" class="kaleidotitlebottom" alt="Poruke" border="0"/></a>
+	</div>
+</div>
+</div>
+
+<div id="contentcontainer">
+
+<div id="title">
+<img src="../../../images/ptitle.gif" width="48" height="500" alt="Think different" border="0"/></div>
+
+<div id="navcontainer">
+
+<ul><li>Ovdje ste:
+<ul>
+<li><a href="../../../index.html">NASLOVNICA</a></li>
+
+<li><a href="../../index.html">Bosna i Hercegovina</a></li>
+<li><a href="../index.html">Bosna i Hercegovina 2</a></li>
+<li><a href="./index.html">Hrvati složno za svoju propast</a></li>
+</ul>
+
+</li></ul>
+
+<ul>
+<li><a  href="../../bosna-i-hercegovina-12/index.html">Bosna i Hercegovina 1</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-12/vezi-agu-gdje-ti-konj-kaze/index.html">Veži agu gdje ti konj kaže!</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/o-dodikovom-povratku-hrvata-u-rs/index.html">O Dodikovom povratku Hrvata u RS</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/politika-za-narod-u-herceg-bosni/index.html">Politika za narod u Herceg-Bosni</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/dodikov-sat-povijesti/index.html">Dodikov sat povijesti</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/akademija-za-pacice-male/index.html">Akademija za pacice male!</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/vecernjak-medij-na-hrvatskoj-vlasti/index.html">Vecernjak - medij na hrvatskoj vlasti</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/nova-herceg-bosna-za-bosnu-bez-hrvata/index.html">Nova Herceg-Bosna za Bosnu bez Hrvata</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/festival-kulture-bosne-i-hercegovine-u-briselu/index.html">Festival Kulture Bosne i Hercegovine u Briselu</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/bih-zivi-politiku-licemjerja/index.html">BiH živi politiku licemjerja</a></li>
+<li><a  href="../../bosna-i-hercegovina-12/hrvatski-interes-kao-opijum-za-narod/index.html">Hrvatski interes kao opijum za narod</a></li>
+</ul>
+</li>
+<li><a  href="../index.html">Bosna i Hercegovina 2</a>
+<ul>
+<li><a  href="../tko-minira-treci/index.html">Tko minira treci?</a></li>
+<li><a  href="../emile-zola-jaccuse/index.html">&Eacute;mile Zola: J'accuse!</a></li>
+<li><a  href="../sto-i-gdje-su-hrvati-u-republici-srpskoj/index.html">Što i gdje su Hrvati u Republici Srpskoj?</a></li>
+<li><a  href="../kardinal-na-kusnji/index.html">Kardinal na kušnji</a></li>
+<li><a  href="../kardinalovi-kvadrati-i-hrvatska-ugrozenost/index.html">Kardinalovi kvadrati i hrvatska ugroženost</a></li>
+<li><a  href="../potemkinova-sela-za-bih-hrvate/index.html">Potemkinova sela za BiH Hrvate</a></li>
+<li><a  href="../izborna-bespuca/index.html">Izborna bespuca</a></li>
+<li><a  href="../stzoernikovo-hrvatstvo-na-braniku-velikosrpstva/index.html">Stožernikovo &quot;hrvatstvo&quot; na braniku velikosrpstva</a></li>
+<li><a  href="../kuda-idu-granice-treceg-entiteta/index.html">Kuda idu granice treceg entiteta?</a></li>
+<li><a class="sel" href="./index.html">Hrvati složno za svoju propast</a></li>
+<li><a  href="../mi-smo-tudjmanova-greska/index.html">Mi smo Tudjmanova greška!</a></li>
+<li><a  href="../obecali-smo-treci-al-macka-u-vreci/index.html">Obecali smo treci, al macka u vreci!</a></li>
+<li><a  href="../sramota-je-to-neki-svecenici-govore-o-muslimanima/index.html">Sramota je što neki svecenici govore o Muslimanima</a></li>
+<li><a  href="../kome-se-to-treba-vjerovati/index.html">Kome se to treba vjerovati?</a></li>
+<li><a  href="../panic-on-the-titanic/index.html">Panic on the Titanic</a></li>
+<li><a  href="../generali-s-cetiri-djona/index.html">Generali s cetiri djona!</a></li>
+<li><a  href="../bih-je-moja-jedina-domovina-i-ja-druge-nemam/index.html">BiH je moja jedina domovina i ja druge nemam</a></li>
+<li><a  href="../bosansko-hercegovacke-izborne-kuhinje/index.html">Bosansko-hercegovacke izborne kuhinje</a></li>
+<li><a  href="../tajna-operacije-soko-pteron/index.html">Tajna operacije &quot;Soko Pteron&quot;</a></li>
+<li><a  href="../nerezidentni-raccuni-kao-instrument-kradje/index.html">Nerezidentni racuni kao instrument kradje</a></li>
+<li><a  href="../politika-isplaeznog-jezika/index.html">Politika isplaženog jezika</a></li>
+<li><a  href="../na-djelu-je-opet-sludijvanje-biraca/index.html">Na djelu je opet sludijvanje biraca</a></li>
+<li><a  href="../ceka-li-nas-kiprizacija-bosne-i-hercegovine/index.html">Ceka li nas kiprizacija Bosne i Hercegovine?</a></li>
+<li><a  href="../zasto-covic-ne-uspijeva-prikriti-nervozu/index.html">Zašto Covic ne uspijeva prikriti nervozu?</a></li>
+<li><a  href="../devedesetka-kupljena-za-tri-fotelje/index.html">Devedesetka kupljena za tri fotelje?</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-10/index.html">Bosna i Hercegovina 3</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-10/raskrinkana-politika-hss-nhi/index.html">Raskrinkana politika HSS/NHI</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/evociranje-uspomena-za-spas-srpske/index.html">Evociranje uspomena za spas Srpske!</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/nema-neovisnosti-na-zlocinima/index.html">Nema neovisnosti na zlocinima!</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/opet-si-zakazao-i-kao-zbir-i-kao-znanstvenik/index.html">Opet si zakazao, i kao žbir i kao znanstvenik!</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/nema-nsita-od-treceg/index.html">Nema ništa od treceg</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/tajna-operacija-soko/index.html">Tajna operacija &quot;Soko&quot;</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/lopovluk-u-ime-hrvatstva/index.html">Lopovluk u ime hrvatstva</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/lazna-panika-zbog-zeljke-komsica/index.html">Lažna panika zbog Željke Komšica</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/lijevi-populisti/index.html">Lijevi populisti</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/dasak-svjetlosti-na-kraju-tunela/index.html">Dašak svjetlosti na kraju tunela</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/utopijski-apel-za-spas-hrvatstva/index.html">Utopijski apel za spas hrvatstva!</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/konji-neprezeni/index.html">Konji nepreženi</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/treba-li-hrvatima-bih---predsjednik/index.html">Treba li Hrvatima BiH - predsjednik?</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/podizem-kazneu-prijavu-protiv-sebe/index.html">Podižem kaznenu prijavu protiv sebe!</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/buducnost-bosne-i-hercegovina/index.html">Buducnost Bosne i Hercegovine</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/dodikovi-motivi-dizanja-praisne-oko-ht-a/index.html">Dodikovi motivi dizanja prašine oko HT-a</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/covicev-juris-na-ht/index.html">Covicev juriš na HT</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/lice-i-nalicje-operacije-eronet/index.html">Lice i nalicje operacije Eronet</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/dodikov-i-covicev-juris-na-ftv/index.html">Dodikov i Covicev juriš na FTV</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/covicev-esalon-za-unistenje-ht-a/index.html">Covicev ešalon za uništenje HT-a</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/kontraudar-coviceva-potrcka/index.html">Kontraudar Coviceva potrcka</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/to-je-bila-bih-i-tko-smo-bili-mi/index.html">Što je (bila) BiH i tko smo (bili) mi?</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/pozadina-zapadnohercegovackog-puca/index.html">Pozadina zapadno-hercegovackog puca</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/za-bih-ili-zavnobih/index.html">Za BiH ili ZAVNOBiH?</a></li>
+<li><a  href="../../bosna-i-hercegovina-10/bestidni-izvodjac-hrvatske-nesrece/index.html">Bestidni izvodjac hrvatske nesrece</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina/index.html">Bosna i Hercegovina 4</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina/u-ime-oca-i-sina/index.html">U ime oca i sina...</a></li>
+<li><a  href="../../bosna-i-hercegovina/samo-bez-rata-drugovi-moji/index.html">Samo bez rata, drugovi moji!</a></li>
+<li><a  href="../../bosna-i-hercegovina/tkome-je-treci-spas/index.html">Tkome je &quot;treci&quot; spas?</a></li>
+<li><a  href="../../bosna-i-hercegovina/treci-entitet---iluzija-ili-spas-za-bih/index.html">Treci entitet - iluzija ili spas za BIH?</a></li>
+<li><a  href="../../bosna-i-hercegovina/politika-demonizacije/index.html">Politika demonizacije</a></li>
+<li><a  href="../../bosna-i-hercegovina/sve-za-fotelju-fotelju-nizata/index.html">Sve za fotelju, fotelju nizašta!</a></li>
+<li><a  href="../../bosna-i-hercegovina/jadni-hrvati/index.html">&quot;Jadni Hrvati&quot;</a></li>
+<li><a  href="../../bosna-i-hercegovina/moja-domovina/index.html">Moja domovina?</a></li>
+<li><a  href="../../bosna-i-hercegovina/moe-li-josipovic-biti-mirotvorac/index.html">Može li Josipovic biti mirotvorac?</a></li>
+<li><a  href="../../bosna-i-hercegovina/na-nama-je-dakle-sve/index.html">Na nama je, dakle, sve</a></li>
+<li><a  href="../../bosna-i-hercegovina/bez-panike/index.html">Bez panike!</a></li>
+<li><a  href="../../bosna-i-hercegovina/covic-ide-bobanovim-stopama/index.html">Covic ide Bobanovim stopama!</a></li>
+<li><a  href="../../bosna-i-hercegovina/referen-dum/index.html">Referen-DUM</a></li>
+<li><a  href="../../bosna-i-hercegovina/ne-laje-kera-zbog-sela/index.html">Ne laje kera zbog sela...</a></li>
+<li><a  href="../../bosna-i-hercegovina/treci-hrvatski-ili-drugi-srpski-entitet/index.html">Treci hrvatski ili drugi srpski entitet?</a></li>
+<li><a  href="../../bosna-i-hercegovina/srbi-u-obrani-hrvatskih-interesa/index.html">Srbi u obrani hrvatskih interesa!</a></li>
+<li><a  href="../../bosna-i-hercegovina/den-haag/index.html">Den Haag</a></li>
+<li><a  href="../../bosna-i-hercegovina/nove-automobilske-oznake-u-bih/index.html">Nove automobilske oznake u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina/vatikansko-zauzimanje-za-hrvate-u-bih/index.html">Vatikansko zauzimanje za Hrvate u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina/birajmo-posavca-u-predsjednitvo-bih/index.html">Birajmo Posavca u Predsjednitvo BiH!</a></li>
+<li><a  href="../../bosna-i-hercegovina/hrvatskoj-se-dogodila-bih/index.html">Hrvatskoj se dogodila BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina/zlatni-ljiljan-iz-arnhema/index.html">&quot;Zlatni ljiljan&quot; iz Arnhema</a></li>
+<li><a  href="../../bosna-i-hercegovina/hrvatska-trai-kompromis-za-hrvate-u-bih/index.html">Hrvatska traži kompromis za Hrvate u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina/naa-sadija/index.html">Naša Sadija!</a></li>
+<li><a  href="../../bosna-i-hercegovina/sline-su-postale-jace-od-razuma/index.html">Sline su postale jace od razuma...</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-2/index.html">Bosna i Hercegovina 5</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-2/lopovi-drzte-policajca/index.html">Lopovi: Drž'te policajca!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/hercegovacka-rapsodija/index.html">Hercegovacka rapsodija</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/granice-treceg-ko-sveti-gral/index.html">Granice treceg k'o Sveti Gral!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/hercegovacka-bojna---protiv-domovine-spremna/index.html">Hercegovacka bojna - protiv domovine spremna!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/dijasporina-dijaspora/index.html">Dijasporina dijaspora!?</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/povratak-herceg-bosne/index.html">Povratak Herceg-Bosne?!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/hrvati-su-taoci-politicklih-utopija/index.html">Hrvati su taoci politicklih utopija!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/braci-posavskoj/index.html">Braci posavskoj</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/polako-s-trecim/index.html">Polako s trecim</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/trijumf-bandicizma/index.html">Trijumf Bandicizma</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/hrvati-u-bih-trae-novo-lice/index.html">Hrvati u BiH traže novo lice</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/vrazji-krugovi/index.html">Vražji krugovi</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/tudjman-i-bosna/index.html">Tudjman i Bosna</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/televizija-po-glavi-stanovnika/index.html">Televizija po glavi stanovnika</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/posavina-u-trecem/index.html">Posavina u trecem!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/ima-li-boljih-komunista-od-komsica/index.html">Ima li boljih komunista od Komšica?</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/pljacka-mostarskog-ht-a/index.html">&quot;Pljacka mostarskog HT-a!&quot;</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/bosanski-hrvati/index.html">Bosanski Hrvati</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/rusko-odvracanje-srba-od-nato-a/index.html">Rusko odvracanje Srba od NATO-a</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/zmijsko-kukavicje-jaje/index.html">Zmijsko-kukavicje jaje</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/srpska-cela-na-dva-dela/index.html">Srpska cela na dva dela</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/hrvatska-preoblikuje-odnos-prema-bih/index.html">Hrvatska preoblikuje odnos prema BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/opre-roma/index.html">Opre Roma!</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/dajte-rulji-herrcegovinu-da-se-igraju/index.html">Dajte rulji Herrcegovinu da se igraju</a></li>
+<li><a  href="../../bosna-i-hercegovina-2/slucaj-ejup-ganic/index.html">Slucaj &quot;Ejup Ganic&quot;</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-3/index.html">Bosna i Hercegovina 6</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-3/hercegovinizam/index.html">Hercegovinizam?</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/u-ime-naroda/index.html">U ime naroda?</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/treci-entitet/index.html">Treci entitet</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/partizanski-sinovi-i-ustase/index.html">Partizanski sinovi i ustaše</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/jesu-li-posavci-za-hrvatsku-stvar/index.html">Jesu li Posavci za hrvatsku stvar?</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/drug-dragan/index.html">Drug Dragan</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/ukinuti-entitete-u-bih/index.html">Ukinuti entitete u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/propala-politika-hdz-bih/covicuzdodikanastavljapropaluhdzovupolitiku.html">Propala politika HDZ BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/zabrana-minareta-u-svicarskoj/index.html">Zabrana minareta u Švicarskoj</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/hrvatska-pozicija-u-bih/index.html">Hrvatska pozicija u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/rjesenje-za-bih/index.html">Rješenje za BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/hrvatska-ljevica/index.html">Hrvatska ljevica</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/veliki-i-malecki-hrvati/index.html">Veliki i malecki Hrvati</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/srednja-razina---tri-kantona/index.html">Srednja razina - tri kantona</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/gradjani-biraju-novi-ustav-bih/index.html">Gradjani biraju novi Ustav BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/otomanska-imperija-uzvraca-udarac/index.html">Otomanska imperija uzvraca udarac!</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/tursko-obnavljanje-otomanskog-imperija/index.html">Tursko obnavljanje otomanskog imperija</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/kuda-plovi-covicev-brod/index.html">Kuda plovi Covicev brod?</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/za-republiku-srpsku-spremni/index.html">Za Republiku Srpsku spremni!</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/usaglasenost-koja-smrdi/index.html">Usaglašenost koja smrdi!</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/hdz-izdaja/index.html">HDZ izdaja?</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/zaostravanje-stajalita/index.html">Zaoštravanje stajališta</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/knjizevni-susreti/index.html">Književni susreti</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/moglo-bi-biti-treceg/index.html">Moglo bi biti treceg?</a></li>
+<li><a  href="../../bosna-i-hercegovina-3/proslava-zavnobih/index.html">Proslava ZAVNOBiH</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-4/index.html">Bosna i Hercegovina 7</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-4/treci-entitet/index.html">Treci entitet</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/jovicicu-malo-oladi/index.html">Jovicicu, malo oladi!</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/disciplina/index.html">Disciplina</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/koga-covic-farba/index.html">Koga Covic farba?</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/hrvatska-utopija/index.html">Hrvatska utopija</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/covic-i-dodik-u-beogradu/index.html">Covic i Dodik u Beogradu</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/tko-stoji-iza-dodika/index.html">Tko stoji iza Dodika?</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/lokalni-dijalog/index.html">Lokalni dijalog</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/enciklopedija-spasa/index.html">Enciklopedija spasa</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/obmane-hdz-bih/index.html">Obmane HDZ BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/instrukcije-iz-rusije/index.html">Instrukcije iz Rusije</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/ostavka-ministrice-alic/index.html">Ostavka ministrice Alic</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/reigionalna-bih/index.html">Reigionalna BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/prudski-proces-u-kvaru/index.html">Prudski proces u kvaru</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/politicki-monoteizam/index.html">Politicki monoteizam</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/hrvati-u-bih/index.html">Hrvati u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/bih-nesporazumi/index.html">BiH nesporazumi</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/demagogijom-protiv-ohr/index.html">Demagogijom protiv OHR</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/kocenje-ustavnih-promjena/index.html">Kocenje ustavnih promjena</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/dijaspora-o-ustavu/index.html">Dijaspora o Ustavu</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/bih-u-raljama-nesigurnosti/index.html">BiH u raljama nesigurnosti</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/pravilnik-o-odbenicima/index.html">Pravilnik o odžbenicima</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/summit/index.html">Summit</a></li>
+<li><a  href="../../bosna-i-hercegovina-4/neravnopravnost-hrvata/index.html">Neravnopravnost Hrvata</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-5/index.html">Bosna i Hercegovina 9</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-5/tihiceva-lekcija/index.html">Tihiceva lekcija</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/zasto-se-pravda-zaobilazi/index.html">Zašto se pravda zaobilazi?</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/renesansa-muslimana/index.html">Renesansa muslimana?</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/restitucija/index.html">Restitucija</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/bravo-dragane/index.html">Bravo Dragane!</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/kineska-prodavnica/index.html">Kineska prodavnica</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/dobri-i-losi-hrvati/index.html">Dobri i loši Hrvati</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/sumnja-u-opstanak-bih/index.html">Sumnja u opstanak BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/hoce-li-bosna-umrijeti/index.html">Hoce li Bosna umrijeti?</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/ostajte-ovdje/index.html">Ostajte ovdje</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/hrvatska-i-bih/index.html">Hrvatska i BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/amerika-i-bih/index.html">Amerika i BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/komunisticki-zlocini/index.html">Komunisticki zlocini</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/teritorijalizam-u-bih/index.html">Teritorijalizam u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/eu-usa-perspektiva-bih/index.html">EU-USA perspektiva BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/pritisak-bih-prilika/index.html">Pritisak BiH prilika</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/sram-vas-bilo/index.html">Sram vas bilo</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/hdz-bih/index.html">HDZ BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/ujedinjenje-ili-cistka/index.html">Ujedinjenje ili cistka?</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/zapad/index.html">Zapad</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/joseph-biden/index.html">Joseph Biden</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/tresla-se-brda/index.html">Tresla se brda</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/hdz-i-spd/index.html">HDZ i SPD</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/tihic-i-ustavne-promjene/index.html">Tihic i ustavne promjene</a></li>
+<li><a  href="../../bosna-i-hercegovina-5/udruga-libertas/index.html">Udruga Libertas</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-6/index.html">Bosna i Hercegovina 9</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-6/boze-cuvaj-bih/index.html">Bože cuvaj BiH!</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/ode-nama-posavina/index.html">ODE NAMA POSAVINA!?</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/povrat-imovine/index.html">Povrat imovine</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/komisija-za-nepovrat-imovine/index.html">Komisija za nepovrat imovine</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/konacna-pravda/index.html">Konacna pravda</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/kuda-idu-divlje-svinje/index.html">Kuda idu divlje svinje?</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/los-banditos/index.html">Los Banditos!</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/cipelarenje/index.html">Cipelarenje</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/medjuzupanijsko-vijece/index.html">Medjužupanijsko vijece</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/sveta-tri-kralja/index.html">Sveta tri kralja</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/moj-stav/index.html">Moj stav</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/kontrastav/index.html">Kontrastav</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/odgovor-na-odgovor/index.html">Odgovor na odgovor</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/zavrsna-rijec/index.html">Završna rijec</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/nesloga/index.html">Nesloga</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/dijalog/index.html">Dijalog</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/politicki-rat/index.html">Politicki rat</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/kojim-smjerom-hrvati/index.html">Kojim smjerom Hrvati?</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/rabota-naopacke/index.html">Rabota naopacke</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/kuca-bez-temelja/index.html">Kuca bez temelja</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/ti-si-svjetlo-moje-duse/index.html">&quot;Ti si svjetlo moje duše&quot;?!</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/hnz/index.html">HNZ</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/jurisic/index.html">Jurišic</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/gradacac/index.html">Gradacac</a></li>
+<li><a  href="../../bosna-i-hercegovina-6/krajina/index.html">Krajina</a></li>
+</ul>
+</li>
+<li><a  href="../../bosna-i-hercegovina-7/index.html">Bosna i Hercegovina 10</a>
+<ul>
+<li><a  href="../../bosna-i-hercegovina-7/vlast-u-bih/index.html">Vlast u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/daytonska-bih-i-eu/index.html">Daytonska BiH i EU</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/turske-zastave/index.html">Turske zastave</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/raspadaju-li-se-rs-i-bih/index.html">Raspadaju li se RS i BiH?</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/rat-u-gruziji/index.html">Rat u Gruziji</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/on-meni-nema-bosne/index.html">On meni nema Bosne</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/narod/index.html">Narod</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/kugle/index.html">Kugle</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/nove-place/index.html">Nove place</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/herceg-bosna/index.html">Herceg-Bosna</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/posavski-hrvati/index.html">Posavski Hrvati</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/status-quo/index.html">Status Quo</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/nacionalne-homogenizacije/index.html">Nacionalne homogenizacije</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/novi-sukobi/index.html">Novi sukobi</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/otcjepljenje-rs/index.html">Otcjepljenje RS</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/hrvati-u-bih/index.html">Hrvati u BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/pregovarac-o-ustavu/index.html">Pregovarac o Ustavu</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/barack-obama/index.html">Barack Obama</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/europa-trenira-strogocu/index.html">Europa trenira strogocu</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/autonomija-za-hrvate/index.html">Autonomija za Hrvate</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/luda-kuca-bih/index.html">Luda kuca BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/svijet-nadzire-bih/index.html">Svijet nadzire BiH</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/new-deal/index.html">New Deal</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/bih-u-raljama/index.html">BiH u raljama</a></li>
+<li><a  href="../../bosna-i-hercegovina-7/dodik/index.html">Dodik</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<div id="content">
+<h1>Hrvati složno za svoju propast</h1>
+<div class="paragraph">
+	
+	
+<img src="../../../images/borjana_dodik_konf_k_460.jpg" width="444" height="333" alt="" border="0"/>	
+<h3>Piše: fra Petar Jelec</h3>
+<p>Borjana Krišto bi bila drugi srpski clan Predsjedništva Bosne i Hercegovine</p>
+</div>
+<div class="paradate">
+<div class="paramonth paramonth-10"></div>
+<div class="paraday paraday-8"></div>
+<div class="parayear parayear-2010"></div>
+</div>
+
+<div class="paragraph">
+<p style=""   class="emphasizeleft">Pro&scaron;li su jo&scaron; jedni izbori koji su od mnogih politi&#269;kih subjekata predstavljeni kao ne&scaron;to sudbonosno za ovu zemlju i njezine narode, ne&scaron;to &scaron;to &#263;e uvelike odrediti budu&#263;nost Bosne i Hercegovine. Rezultati tih izbora su manje vi&scaron;e o&#269;ekivani, uz nekoliko manjih iznena&#273;enja koja ipak ne&#263;e bitno utjecati na razvoj ovda&scaron;nje politi&#269;ke situacije.</p>
+</div>
+<h2><a name="6546769e0a11def0a"></a>Hrvati složno za svoju propast</h2>
+<div class="paragraph">
+<p style=""  >&Scaron;to se ti&#269;e hrvatskog naroda, on ustrajno i dosljedno nastavlja birati svoje najve&#263;e upropastitelje i poklanjati povjerenje &#269;ovjeku i stranci koji su najodgovorniji za ono &scaron;to se Hrvatima doga&#273;alo svih ovih godina i &scaron;to &#263;e im se i u budu&#263;nosti doga&#273;ati. Ve&#263; sam jednom rekao kako je na&scaron; narod politi&#269;ki zapu&scaron;ten i kako je njime vrlo lako manipulirati, &scaron;to su pokazali i zadnji izbori, nakon kojih &#263;e Hrvati imati sve manje moralnog prava &#382;aliti se na politi&#269;are koje su izabrali i na situaciju u kojoj se nalaze. HDZ BiH je vodio svoju uobi&#269;ajenu prljavu kampanju razbacuju&#263;i se velikim svotama novca, la&#382;nim obe&#263;anjima, blate&#263;i protivnike udba&scaron;kim metodama, potkupljuju&#263;i na mnogim mjestima i same glasa&#269;e, a iza sebe je kao glavnu udarnu snagu imao Ve&#269;ernji list i Crkvu, to&#269;nije mnoge lokalne bh franjevce i dijecezanske sve&#263;enike koji su bili u prvim redovima na predizbornim skupovima ove stranke, &scaron;to jo&scaron; samo jednom potvr&#273;uje tezu o velikoj odgovornosti Katoli&#269;ke crkve i njezinih slu&#382;benika za ovo &scaron;to se doga&#273;a Hrvatima u BiH. Malo je koje sveti&scaron;te i crkva zadnjih mjeseci ostalo po&scaron;te&#273;eno navale visokih izaslanstava HDZ-a BiH na &#269;elu s Borjanom Kri&scaron;tom i Draganom &#268;ovi&#263;em, osim naravno onih u kojima nema ve&#263;eg broja glasa&#269;a i povratnika. Web stranica HDZ-a BiH vrvila je fotografijama sve&#263;enika uslikanih pored &#268;ovi&#263;a i Borjane Kri&scaron;to tijekom njihove predizborne kampanje, a politi&#269;ke manipulacije nije ostalo po&scaron;te&#273;eno ni nedavno re&#273;enje pomo&#263;nog banjolu&#269;kog biskupa. &bdquo;Prvi u Hrvata&ldquo; je o Borjani Kri&scaron;to govorio kao o &#382;eni &bdquo;koja je prije svega vjernica katolkinja i koja sve radi u okviru bo&#382;anskih i ljudskih zakona&ldquo;, vjerojatno kao &scaron;to je i on sam kao &bdquo;revni katolik i vjernik&ldquo; dosada radio udesetorostru&#269;uju&#263;i u samo par godina svoje ve&#263; ogromno materijalno bogatstvo, zgrnuto po svoj prilici &bdquo;u okviru svih bo&#382;anskih i ljudskih zakona&ldquo;. HDZ BiH i lokalno sve&#263;enstvo su po ne znam koji puta bili u otvorenom <i>dealu</i> zbog &#269;ega na&#382;alost nije protestirao nitko iz Katoli&#269;ke crkve.<br/><br/>Dragan &#268;ovi&#263; ponovno slavodobitno najavljuje formiranje tre&#263;eg entiteta, na &scaron;to jo&scaron; mogu nasjesti samo naivni glasa&#269;i kojih me&#273;u Hrvatima o&#269;ito ima poprili&#269;an broj. U intervjuu <i>Glasu Srpske</i> &#268;ovi&#263; nije mogao odoljeti a da odmah ne krene s pohvalama Miloradu Dodiku i RS-u, suosje&#263;aju&#263;i s njime &scaron;to Bo&scaron;njaci navodno nisu umalo izabrali i srpskog &#269;lana predsjedni&scaron;tva BiH. Otvoreno je ponovio svoju poznatu re&#269;enicu kako Hrvati u formiranju tre&#263;eg entiteta ne&#263;e postavljati pitanje integriteta teritorija RS-a, koju uva&#382;ava kao realnu &#269;injenicu. Izdaja Hrvata i vlastite domovine BiH je, kako je to dobro primijetio Ivan &Scaron;ar&#269;evi&#263;, glavna konstanta politike HDZ-a BiH svih ovih dvadeset godina vlasti. &#268;ovi&#263; sve probleme Hrvata u BiH lukavo i la&#382;no svodi na problem reizbora &#381;eljka Kom&scaron;i&#263;a. To pitanje i mogu&#263;nost takvog izbora se svakako treba &scaron;to prije rije&scaron;iti u sljede&#263;im ustavnim promjenama, ali je od njega za Hrvate kudikamo va&#382;nije pitanje sveobuhvatne reorganizacije dr&#382;ave, pitanje statusa Bosanske Posavine, rje&scaron;avanje kriminala i plja&#269;ke koja se uvelike doga&#273;a na teritoriju (stvarnog tre&#263;eg entiteta) gdje ve&#263; toliko godina vlada &bdquo;sto&#382;erna stranka&ldquo;, pitanje uru&scaron;avanja politi&#269;ke kulture, ljudskih i moralnih vrednota u politici, dru&scaron;tvu i ekonomiji, u zdravstvu, &scaron;kolstvu, medijima i na ostalim podru&#269;jima &#382;ivota. Dragan &#268;ovi&#263; i njegov HDZ su razbili svaku mogu&#263;nost zajedni&#269;kog nastupa i dogovora hrvatskih stranaka i on se kudikamo bolje sla&#382;e s Miloradom Dodikom nego s bilo kojim drugim hrvatskim politi&#269;arom. <br/><br/>Ako se kojim slu&#269;ajem ovih dana ne dogodi nekakvo &#269;udo s glasa&#269;kim listi&#263;ima koji trebaju do&#263;i iz inozemstva, za potpredsjednika RS-a iz &bdquo;reda hrvatskog naroda&ldquo; srpskim glasovima &#263;e biti izabran &bdquo;Dodikov Hrvat&ldquo; Emil Vlajki, sna&#382;ni i otvoreni podr&#382;avatelj velikosrpske politike i branitelj lika i djela Slobodana Milo&scaron;evi&#263;a. Dragan &#268;ovi&#263; o tomu naravno nije prozborio ni rije&#269;i, jer ne smije remetiti idilu s Dodikom, nego svu svoju razbija&#269;ku energiju usmjerava na Federaciju i na Bo&scaron;njake. Na tu nedosljednost konstantno ukazujem &ndash; s jedne strane se samo govorio o problemu Kom&scaron;i&#263;, a s druge strane se potpuno &scaron;uti o kudikamo ve&#263;emu problemu biranja tzv. hrvatskih kadrova u RS-u koji su mahom izabrani voljom M. Dodika i srpske politike. &Scaron;uti se o &#269;injenici da vlasti RS-a rade nevi&#273;ene opstrukcije onome malome broju povratnika u RS-u, &scaron;to nisu htjele obnoviti nijednu ku&#263;u od Doboja do Bosankog Broda premda su ih poru&scaron;ile na tisu&#263;e. Sve se to doga&#273;a zato &scaron;to za &#268;ovi&#263;a i HDZ bosanski Hrvati u RS-u, Posavini i Krajini ne predstavljaju apsolutno ni&scaron;ta &scaron;to je potvrdio i ovim svojim zadnjim intervjuom <i>Glasu Srpske</i>. Umjesto brige za Hrvate na &#269;itavom teritoriju BIH, &#268;ovi&#263; sve svoje snage usmjeruje isklju&#269;ivo na antagoniziranje Hrvata i Bo&scaron;njaka i sekundiranje velikosrpskoj politici, na isti na&#269;in kao &scaron;to je to radio jedan od njegovih prethodnika - Mate Boban. <br/><br/>Za formiranje tre&#263;eg entiteta na na&#269;in na koji ga &#382;eli i predstavlja Dragan &#268;ovi&#263; ne postoji nijedan potreban preduvjet i oni koji jo&scaron; uvijek vjeruju &#268;ovi&#263;u da &#263;e to napraviti u velikoj su zabludi. Kao &scaron;to &#268;ovi&#263; navodno &bdquo;zna&ldquo; kako je 99,9 % Bo&scaron;njaka glasalo za Kom&scaron;i&#263;a, tako je izra&#269;unao i kako je i preko 90% Hrvata za tre&#263;i entitet. Jest da mu ti podaci &bdquo;malo&ldquo; proturje&#269;e s nedavnom anketom koju je me&#273;u Hrvatima proveo njegov Ve&#269;ernji list i u kojoj je pisalo da je 51% Hrvata za tre&#263;i entitet, pa ne bi bilo lo&scaron;e da posegne za svojim ure&#273;iva&#269;kim ovlastima i u novoj naru&#269;enoj anketi u Ve&#269;ernjaku taj broj zaokru&#382;i na nekih 99,9% glasova, kad ve&#263; toliko voli okrugle brojke. Ako ima i&scaron;ta dobro u reizboru &#381;eljka Kom&scaron;i&#263;a, to je svakako &#269;injenica &scaron;to na njegovo mjesto nije zasjela Borjana Kri&scaron;to, &#382;ena na daljinski upravlja&#269; Dragana &#268;ovi&#263;a i &bdquo;snaga kojoj ne vjerujem&ldquo;, jer bismo tada, da parafraziram samog predsjednika HDZ-a BiH, umjesto jednoga imali dva srpska &#269;lana u predsjedni&scaron;tvu Bosne i Hercegovine, koja bi se onda natjecala u za&scaron;tititi Republike Srpske koju &#268;ovi&#263; tako ustrajno i dosljedno brani i hvali, te bi tom svojom aktivno&scaron;&#263;u mogao ozbiljno ugroziti i samoga Dodika i postati najpopularniji politi&#269;ar u manjem bh entitetu.</p>
+</div>
+<div class="paragraph">
+	
+	
+<img src="../../../images/borjana_dodik_konf_k2_460.jpg" width="429" height="345" alt="" border="0"/>	
+</div>
+<h2><a name="6546769e0a11e2b0b"></a>Boris Tadic pokazao svoje pravo lice</h2>
+<div class="paragraph">
+<p style=""  >U tom entitetu dogodilo se zapravo o&#269;ekivano. Milorad Dodik i njegova stranka &#263;e i dalje neprikosnoveno vladati ovim teritorijem od kojega su napravili najnedemokratskiji feud u Europi i u kojemu je na svim razinama potpuno institucionalizana diskriminacija prema Hrvatima i Bo&scaron;njacima, o &#269;emu Dragan &#268;ovi&#263; naravno nikada nije prozborio nijednu rije&#269;. Neobi&#269;no je va&#382;no ovdje zapaziti sna&#382;nu podr&scaron;ku koju je predsjednik Srbije Boris Tadi&#263; dao Miloradu Dodiku do&scaron;av&scaron;i na predizborni skup ove stranke u - od Hrvata i Bo&scaron;njaka &bdquo;o&#269;i&scaron;&#263;eni&ldquo; - Doboj &scaron;to samo jo&scaron; jednom pokazuje svu licemjernost njegove politike koja navodno podr&#382;ava integritet Bosne i Hercegovine (u &scaron;to samo naivni mogu vjerovati), a zapravo potpuno stoji iza Dodikova velikosrpskoga projekta dezintegracije ove dr&#382;ave. Fascinira &bdquo;naivnost&ldquo; me&#273;unarodne zajednice, pa i samoga hrvatskog predsjednika Josipovi&#263;a koji u Borisu Tadi&#263;u vide &#269;ovjeka koji navodno predstavlja &bdquo;demokratsko lice&ldquo; Srbije, li&scaron;eno velikosrpskih pretenzija. Tadi&#263; prema BiH nastavlja istu politiku koju su imali i njegovi prethodnici, samo &scaron;to to &#269;ini na umiveniji i lukaviji na&#269;in. &#268;elni&scaron;tvo hrvatske dr&#382;ave bi trebalo &scaron;to prije postati svjesno te &#269;injenice i ne graditi odnose sa Srbijom na krivim postavkama i preko le&#273;a Bosne i Hercegovine, jer se takva politika Hrvatskoj ve&#263; jednom obila o glavu. Nadam se da &#263;e netko od mnogobrojnih savjetnika na Pantov&#269;aku podsjetiti predsjednika Josipovi&#263;a da upita svojega prijatelja Tadi&#263;a otkud njegova tako otvorena podr&scaron;ka Miloradu Dodiku, glavnom razbija&#269;u Bosne i Hercegovine i kako pomiriti tu &#269;injenicu s Tadi&#263;evom la&#382;nom podr&scaron;kom integritetu na&scaron;e zemlje. O tom pogre&scaron;nome pristupu predsjednika Josipovi&#263;a Srbiji i Borisu Tadi&#263;u neki dan je u svojem vi&scaron;e nego zanimljivom intervju odli&#269;no govorio hrvatski povjesni&#269;ar Ivo Banac.</p>
+</div>
+<h2><a name="6546769e0a11e5a0c"></a>Bošnjaci odbacili radikale</h2>
+<div class="paragraph">
+<p style=""  >Kod Bo&scaron;njaka su se na zadnjim izborima dogodile najve&#263;e promjene i jo&scaron; se jednom pokazalo kako taj narod posjeduje najve&#263;i demokratski potencijal unutar vlastitog nacionalnog korpusa. Premda rezultat koji je Fahrudin Radon&#269;i&#263; postigao nije zanemariv, pozitivno je &scaron;to njegova radikalna politika nije dobila veliku potporu Bo&scaron;njaka za koje se u Dnevnom Avazu ve&#263; mjesecima najavljivalo da &#263;e mahom krenuti za SBB-om i njegovim vo&#273;om i kako &#263;e ovoj stranci dati svoje plebiscitarno povjerenje na svim razinama vlasti. Unato&#269; otvorenoj podr&scaron;ci Radon&#269;i&#263;evoj stranci od strane Islamske zajednice, &#269;iji je naibu-reis Spahi&#263; dva dana prije samih izbora na jednoj hutbi opet sramotno napao Sulejmana Tihi&#263;a kojega je ve&#263; nazvao &bdquo;srpskim igra&#269;em&ldquo;, a sada ga optu&#382;io za &bdquo;stra&scaron;ni krimen&ldquo; jer ovaj navodno &bdquo;ustaju&#263;i na uranak iz kreveta pije rakiju viljamovku&ldquo; (IZ se ovakvim sramotnim izjavama zaista potpuno iskompromitirala), Bo&scaron;njaci ipak nisu nasjeli na radikalnu retoriku svojih politi&#269;ara i vjerskih vo&#273;a (Radon&#269;i&#263;a, Silajd&#382;i&#263;a, reisa Ceri&#263;a), te su, za razliku od Hrvata i Srba, kaznili takve politi&#269;are pokloniv&scaron;i najve&#263;e povjerenje Sulejmanu Tihi&#263;u i njegovoj umjerenoj politici. Tihi&#263;u za ono &scaron;to je sa SDA-om napravio u deklerikaliziranju i denacionaliziranju svoje stranke i koji je uz velike rizike da izgubi izbore reisu Ceri&#263;u jasno dao do znanja da Islamska zajednica ne&#263;e voditi politiku u ime Bo&scaron;njaka, svakako treba odati priznanje. Za jedan takav iskorak Hrvatima i Srbima &#263;e trebati jo&scaron; dugo vremena. Za BiH mo&#382;e, ali naravno i ne mora, biti pozitivno &scaron;to je SDP dobio ovako veliki broj glasova. Vrijeme &#263;e pokazati ho&#263;e li Zlatko Lagumd&#382;ija i njegova stranka jo&scaron; jednom razo&#269;arati svoje simpatizere ili &#263;e pokrenuti neke pozitivne procese u ovoj zemlji. Predstoje nam ustavne promjene, koje bez &bdquo;&scaron;tapa&ldquo; me&#273;unarodne zajednice ne&#263;e biti mogu&#263;e donijeti na zadovoljavaju&#263;i na&#269;in. Na kraju nam svima ostaje &bdquo;nada protiv svake nade&ldquo; da &#263;e u na&scaron;oj domovini Bosni i Hercegovini neke stvari kona&#269;no krenuti nabolje. <br/><br/><i>Fra Petar Jele&#269;</i></p>
+</div>
+</div>
+<div id="sidebar">
+<h2>Bosna i Hercegovina</h2>
+<a href="../tko-minira-treci/index.html"><img src="../../../images/tko_minira_treci_sbt.jpg" width="160" height="119" class="picture" alt="" border="0"/></a>
+<h2><a href="../tko-minira-treci/index.html">Tko minira treci?</a></h2>
+<p >
+Bosanski Hrvati u kontekstu „treceg“ nisu Hrvati</p>
+  <a href="../emile-zola-jaccuse/index.html"><img src="../../../images/velikosrbin_emil_vlajki_sbt.jpg" width="160" height="68" class="picture" alt="" border="0"/></a>
+<h2><a href="../emile-zola-jaccuse/index.html">&Eacute;mile Zola: J'accuse!</a></h2>
+<p >
+Takve hrvatska majka ne radja!</p>
+  <a href="../sto-i-gdje-su-hrvati-u-republici-srpskoj/index.html"><img src="../../../images/hrvati-urs_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="../sto-i-gdje-su-hrvati-u-republici-srpskoj/index.html">Što i gdje su Hrvati u Republici Srpskoj?</a></h2>
+<p >
+Hrvati definitivno izbrisani kao politicki faktor u Republici Srpskoj</p>
+  <a href="../kardinal-na-kusnji/index.html"><img src="../../../images/kardinal_na_kusnji_2_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="../kardinal-na-kusnji/index.html">Kardinal na kušnji</a></h2>
+<p >
+Piše: JOSIP SENIC</p>
+  <a href="../kardinalovi-kvadrati-i-hrvatska-ugrozenost/index.html"><img src="../../../images/kardinalovi_kvadrati_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="../kardinalovi-kvadrati-i-hrvatska-ugrozenost/index.html">Kardinalovi kvadrati i hrvatska ugroženost</a></h2>
+<p >
+Intervju fra PETRA JELECA za domaljevac.com</p>
+  <a href="../potemkinova-sela-za-bih-hrvate/index.html"><img src="../../../images/potemkinova_sela_2_sbt.jpg" width="160" height="118" class="picture" alt="" border="0"/></a>
+<h2><a href="../potemkinova-sela-za-bih-hrvate/index.html">Potemkinova sela za BiH Hrvate</a></h2>
+<p >
+Knez Potemkin se nakon jednog prežderavanja pecenom guskom razbolio, legao na Rusku travu i umro...</p>
+  <a href="../izborna-bespuca/index.html"><img src="../../../images/izborna_bespuca_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="../izborna-bespuca/index.html">Izborna bespuca</a></h2>
+<p >
+Za ovakav položaj bh Hrvata najodgovorniji su HDZ BiH i Crkva</p>
+  <a href="../stzoernikovo-hrvatstvo-na-braniku-velikosrpstva/index.html"><img src="../../../images/hrvatski_suncokreti_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="../stzoernikovo-hrvatstvo-na-braniku-velikosrpstva/index.html">Stožernikovo &quot;hrvatstvo&quot; na braniku velikosrpstva</a></h2>
+<p >
+Za DOM@ljevac piše: prof.dr. Slavo Kukic</p>
+  <a href="../kuda-idu-granice-treceg-entiteta/index.html"><img src="../../../images/buga-2007-zierpaprika-als-herbstdeko-farben-ge_sbt.jpg" width="160" height="96" class="picture" alt="" border="0"/></a>
+<h2><a href="../kuda-idu-granice-treceg-entiteta/index.html">Kuda idu granice treceg entiteta?</a></h2>
+<p >
+Mala povijesna citanka</p>
+  <a href="./index.html"><img src="../../../images/borjana_dodik_konf_k_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="./index.html">Hrvati složno za svoju propast</a></h2>
+<p >
+Borjana Krišto bi bila drugi srpski clan Predsjedništva Bosne i Hercegovine</p>
+  <a href="../mi-smo-tudjmanova-greska/index.html"><img src="../../../images/herceg-bosna_tudjman_sbt.jpg" width="160" height="124" class="picture" alt="" border="0"/></a>
+<h2><a href="../mi-smo-tudjmanova-greska/index.html">Mi smo Tudjmanova greška!</a></h2>
+<p >
+Piše: DEAN RANT</p>
+  <a href="../obecali-smo-treci-al-macka-u-vreci/index.html"><img src="../../../images/borjana_dodik_treci_sbt.jpg" width="160" height="128" class="picture" alt="" border="0"/></a>
+<h2><a href="../obecali-smo-treci-al-macka-u-vreci/index.html">Obecali smo treci, al macka u vreci!</a></h2>
+<p >
+Narod je sebi izabrao vlast kakvu je zaslužio...</p>
+  <a href="../sramota-je-to-neki-svecenici-govore-o-muslimanima/index.html"><img src="../../../images/fra_ivan_nujic_sbt.jpg" width="160" height="69" class="picture" alt="" border="0"/></a>
+<h2><a href="../sramota-je-to-neki-svecenici-govore-o-muslimanima/index.html">Sramota je što neki svecenici govore o Muslimanima</a></h2>
+<p >
+Fra Ivan Nujic</p>
+  <a href="../kome-se-to-treba-vjerovati/index.html"><img src="../../../images/covicnaselaz_sbt.jpg" width="160" height="109" class="picture" alt="" border="0"/></a>
+<h2><a href="../kome-se-to-treba-vjerovati/index.html">Kome se to treba vjerovati?</a></h2>
+<p >
+Gusle moje i gudalo krivo...</p>
+  <a href="../panic-on-the-titanic/index.html"><img src="../../../images/hdz_panika_sbt.jpg" width="160" height="237" class="picture" alt="" border="0"/></a>
+<h2><a href="../panic-on-the-titanic/index.html">Panic on the Titanic</a></h2>
+<p >
+Panika u kraljevstvu Dragana III i  Brojane I</p>
+  <a href="../generali-s-cetiri-djona/index.html"><img src="../../../images/obraz_ko_djon_sbt.jpg" width="160" height="109" class="picture" alt="" border="0"/></a>
+<h2><a href="../generali-s-cetiri-djona/index.html">Generali s cetiri djona!</a></h2>
+<p >
+HDZ BiH manipulira HVO-om, invalidima i pogunilim</p>
+  <a href="../bih-je-moja-jedina-domovina-i-ja-druge-nemam/index.html"><img src="../../../images/jelec_posavina_17_sbt.jpg" width="160" height="107" class="picture" alt="" border="0"/></a>
+<h2><a href="../bih-je-moja-jedina-domovina-i-ja-druge-nemam/index.html">BiH je moja jedina domovina i ja druge nemam</a></h2>
+<p >
+Fra PETAR JELEC, doktor povijesti i beskompromisni fratar</p>
+  <a href="../bosansko-hercegovacke-izborne-kuhinje/index.html"><img src="../../../images/izborna-kuharica_480_sbt.jpg" width="160" height="122" class="picture" alt="" border="0"/></a>
+<h2><a href="../bosansko-hercegovacke-izborne-kuhinje/index.html">Bosansko-hercegovacke izborne kuhinje</a></h2>
+<p >
+Jesu li BiH narodi vec siti corbi &quot;nacionalnog spasenja&quot;?</p>
+  <a href="../tajna-operacije-soko-pteron/index.html"><img src="../../../images/tajna2_soko_sbt.jpg" width="160" height="120" class="picture" alt="" border="0"/></a>
+<h2><a href="../tajna-operacije-soko-pteron/index.html">Tajna operacije &quot;Soko Pteron&quot;</a></h2>
+<p >
+Za DOM@ljevac piše: dr. Slavo Kukic</p>
+  <a href="../nerezidentni-raccuni-kao-instrument-kradje/index.html"><img src="../../../images/novac_pranje_sbt.jpg" width="160" height="75" class="picture" alt="" border="0"/></a>
+<h2><a href="../nerezidentni-raccuni-kao-instrument-kradje/index.html">Nerezidentni racuni kao instrument kradje</a></h2>
+<p >
+Za DOM@ljevac piše: dr. Slavo Kukic</p>
+  <a href="../politika-isplaeznog-jezika/index.html"><img src="../../../images/isplazeni_jezik_sbt.jpg" width="160" height="245" class="picture" alt="" border="0"/></a>
+<h2><a href="../politika-isplaeznog-jezika/index.html">Politika isplaženog jezika</a></h2>
+<p >
+E moj narode, lažu dok zinu!</p>
+  <a href="../na-djelu-je-opet-sludijvanje-biraca/index.html"><img src="../../../images/jelec_slobodna_europa_sbt.jpg" width="160" height="214" class="picture" alt="" border="0"/></a>
+<h2><a href="../na-djelu-je-opet-sludijvanje-biraca/index.html">Na djelu je opet sludijvanje biraca</a></h2>
+<p >
+Dnevnik fra Petra Jeleca za Radio Slobodna Europa</p>
+  <a href="../ceka-li-nas-kiprizacija-bosne-i-hercegovine/index.html"><img src="../../../images/dodik_cipar_sbt.jpg" width="160" height="68" class="picture" alt="" border="0"/></a>
+<h2><a href="../ceka-li-nas-kiprizacija-bosne-i-hercegovine/index.html">Ceka li nas kiprizacija Bosne i Hercegovine?</a></h2>
+<p >
+Ova slika nas podsjeca...</p>
+  <a href="../zasto-covic-ne-uspijeva-prikriti-nervozu/index.html"><img src="../../../images/dc_hdz1_sbt.jpg" width="160" height="118" class="picture" alt="" border="0"/></a>
+<h2><a href="../zasto-covic-ne-uspijeva-prikriti-nervozu/index.html">Zašto Covic ne uspijeva prikriti nervozu?</a></h2>
+<p >
+Za DOM@ljevac piše: prof. dr. Slavo Kukic</p>
+  <a href="../devedesetka-kupljena-za-tri-fotelje/index.html"><img src="../../../images/hdz_fotelje_sbt.jpg" width="160" height="252" class="picture" alt="" border="0"/></a>
+<h2><a href="../devedesetka-kupljena-za-tri-fotelje/index.html">Devedesetka kupljena za tri fotelje?</a></h2>
+<p >
+Piše: D. Ivankovic</p>
+  <br/>
+
+</div>
+
+<div class="clearer"></div>
+
+</div>
+
+<div id="footer">© 2007-2010  permis & team</div>
+</div>
+
+
+</body>
+</html>

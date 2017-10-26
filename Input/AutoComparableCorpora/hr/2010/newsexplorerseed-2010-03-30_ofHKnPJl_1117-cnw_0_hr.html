@@ -1,0 +1,836 @@
+
+ <script type='text/javascript'>
+  var sirx = screen.width;
+  var visy = screen.height;
+  var dubb = screen.colorDepth;
+  var dogodine = new Date();
+  dogodine.setDate(dogodine.getDate() + 365);
+  var the_cookie = 'rezolucija=' + sirx + ' x ' + visy + ' (' + dubb + ')';
+  var the_cookie = the_cookie + ';expires=' + dogodine.toGMTString();
+  document.cookie = the_cookie;
+ </script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='pragma' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='imagetoolbar' content='no'>
+<meta http-equiv='content-type' content='text/html; charset=iso-8859-2'>
+<title>Dnevnik : Dnevnik</title>
+<style type="text/css">
+ body { 
+  margin: 30px;
+  background-color: #f3f5f9;
+ }
+ a:link {
+  color: #333377; 
+  text-decoration: none;
+ }
+ a:visited {
+  color: #7777dd; 
+  text-decoration: none;
+ }
+ a:hover {
+  color: #337733; 
+  text-decoration: underline;
+ }
+ a:active {
+  color: #ff0000; 
+  background-color: transparent;
+  text-decoration: underline;
+ }
+ div { 
+  font: 100% Verdana, Tahoma, Arial; 
+  cursor: default; 
+ }
+ a { 
+  cursor: pointer; 
+ }
+ p.slik_p {
+  margin-left: 0px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  text-align: center; 
+ }
+ hr.crta {
+  background-color: #abcdef;
+  align: right;
+  height: 1px;
+  border-width: 0px;
+  width: 100%;
+  margin-top: 7px;
+  margin-right: 0px;
+  margin-bottom: 7px;
+ }
+ hr.c_kom {
+  background-color: #abcdef;
+  align: right;
+  height: 1px;
+  border-width: 0px;
+  width: 92%;
+  margin-top: 7px;
+  margin-right: 0px;
+  margin-bottom: 7px;
+ }
+ img.slik_a {
+  margin: 0px;
+  border: 1px solid #ddddef;
+  padding: 7px;
+  background: white;
+ }
+ img.fotk_a {
+  border: 1px solid #7893d1; 
+  padding: 5px; 
+ }
+ img.sl_li {
+  margin-right: 5px;
+  margin-bottom: 2px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  background: white;
+ }
+ img.sl_de {
+  margin-left: 5px;
+  margin-bottom: 2px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  background: white;
+ }
+ #d_slik {
+  margin-left: 0px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+  /* -webkit-transition: -webkit-transform 0.5s ease-in; */
+ }
+ .t_nas {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 20px; 
+  font-weight: bolder; 
+  color: #dd0303; 
+  background-color: transparent;
+  cursor: default; 
+ }
+ .tekst {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  /* text-indent: 7px; */
+  text-align: justify;
+  cursor: default;
+ }
+ .slik_d {
+  margin-left: 0px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+ }
+ .navod {
+  padding: 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  text-indent: 7px; 
+  text-align: justify; 
+  border: #fedcba 1px solid; 
+  background: #eeeeee; 
+  cursor: default; 
+ }
+ .navod_kom {
+  padding: 7px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 10px; 
+  text-indent: 0px; 
+  text-align: justify; 
+  border: #abcdef 1px solid; 
+  background: #eeeeee; 
+  cursor: default; 
+  -moz-border-radius: 1%; 
+ }
+ .koma {
+  margin-top: 5px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 11px; 
+  color: #1277d3; 
+  cursor: default; 
+ } 
+ .rub_kom {
+  padding: 7px;
+  border: 1px solid #238cff;
+  background-color: #f3f3f3;
+  text-align: justify; 
+ }
+ .rub_koment {
+  padding: 7px;
+  border: 1px solid #1e77d3;
+  background-color: #efefef;
+  text-align: justify; 
+ }
+ .blok {
+  margin: 3px 10px 3px 30px; 
+  padding: 17px;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  text-indent: 0px; 
+  text-align: justify; 
+  border: #abcdef 1px solid; 
+  background-color: #eeeeff; 
+  -moz-border-radius: 2%; 
+  -moz-outline-radius: 2%; 
+  cursor: default; 
+ }
+ .mali { 
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  color: #ffffff; 
+  cursor: default; 
+ }
+ .izbor {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  color: #7893d1; 
+  cursor: default;
+ } 
+ .njiva {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  font-weight: normal; 
+  font-style: normal; 
+  text-indent: 0px; 
+  color: #000033; 
+  border: 1px solid #7893d1;
+  background-color: #fefeff;
+  cursor: default;
+ } 
+ .njivica {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  font-weight: normal; 
+  font-style: normal; 
+  text-indent: 0px; 
+  color: #000033; 
+  border: 1px solid #abcdef;
+  background-color: #fefeff;
+ } 
+ .osoba {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 11px; 
+  color: #1e77d3; 
+  cursor: default; 
+ }
+ .brojac {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 9px; 
+  color: #1e77d3; 
+  cursor: default; 
+ }
+ .spomen {
+  font-family: Arial, "Times New Roman", Times, serif; 
+  font-size: 12px; 
+  font-weight: bold; 
+  color: #ffff99; 
+  background-color: transparent;
+  cursor: default; 
+ }
+ .ankica { 
+  /* width: 99%; */
+  /* padding-left: 23px; */
+  border: 2px solid #abcdef; 
+  /* background-color: #abcdef; */
+  /* background: #1e77d3; */
+  font-family: Tahoma, Verdana, Arial; 
+  font-size: 12px; 
+  color: #012345; 
+  }
+ .okolo {
+  border: 2px solid #abcdef;
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  color: #012377;
+  -moz-border-radius: 1%;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#f3f5f9, endColorStr=#7894fb);
+ }
+ .staklar {
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  -ms-filter: 'alpha (opacity=70)';
+  filter: alpha (opacity=70);
+ }
+ .anketar {
+  margin: 0px 0px 0px 0px;
+  border: 2px solid #d7d7f7;
+  padding: 0px;
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  color: #373773;
+  -moz-border-radius: 1%;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#f3f5f9, endColorStr=#7894fb);
+ }
+ .stup {
+  text-indent: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20%;
+  text-align: justify;
+  font-size: 0.8em;
+ }
+ .kura {
+  font-family: 'Courier New';
+  font-size: 11px;
+ }
+ .content .pre {
+  font-family: 'Courier New';
+  font-size: 11px;
+ }
+ .gumbic {
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: #012345;
+  border: 2px outset #cdefff;
+  background-color: #abcdef;
+  cursor: hand;
+  width: 77px;
+  height: 24px;
+ }
+ .srez {
+  /* width: 100%; */
+  border: 1px solid #abcdef;
+  padding: 3px;
+  font-family: Tahoma, Verdana, Arial;
+  font-size: 12px;
+  font-weight: bold;
+  color: #1e77d3;
+  text-align: center;
+  cursor: pointer;
+ }
+ .nasank { 
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #0777d3; 
+  cursor: default; 
+ }
+ .header {
+  font-size: 100%;
+  font-weight: bold;
+ }
+ .b_nas {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 14px; 
+  font-weight: bold; 
+  color: #ad0303; 
+  cursor: default; 
+ }
+ .k_nad {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 10px; 
+  font-weight: normal; 
+  color: #0777d3; 
+  text-transform: uppercase;
+  cursor: default; 
+ }
+ .k_nas {
+  font-family: 'Arial Black', Verdana, Arial, Helvetica; 
+  font-size: 15px; 
+  font-weight: 900; 
+  color: #033777; 
+  cursor: default; 
+ }
+ .k_pod {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: bold; 
+  color: #0777d3; 
+  cursor: default; 
+ }
+ .k_uvo {
+  font-family: Verdana, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: bold; 
+  color: #0777d3; 
+  cursor: default; 
+ }
+ .k_vez {
+  font-family: Arial, Tahoma, Helvetica; 
+  font-size: 11px; 
+  font-weight: normal; 
+  color: #7999d3; 
+  cursor: default; 
+ }
+ .k_kom {
+  font-family: Tahoma, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: normal; 
+  color: #030777; 
+  cursor: default; 
+ } 
+ .k_dod {
+  font-family: Tahoma, Verdana, Arial, Helvetica; 
+  font-size: 11px; 
+  font-weight: normal; 
+  color: #cd0303; 
+  cursor: default; 
+ }
+ .p_nas {
+  font-family: 'Arial Black', Verdana, Arial, Helvetica; 
+  font-size: 12px; 
+  font-weight: bold; 
+  color: #033777; 
+  cursor: default; 
+ }
+ .ruka {
+  cursor: pointer;
+ }
+ .tx_li {
+  text-align: left;
+ }
+ .tx_sr {
+  text-align: center;
+ }
+ .tx_de {
+  text-align: right;
+ }
+ .raz_li {
+  padding-left: 40px;;
+ }
+ .ram0 {
+  margin: 0px;
+ }
+ .rowEven {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: top;
+  padding: 3px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #aa9c92;
+  height: 30px;
+ }
+ .rowOdd {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fffafa;
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: top; 
+  padding: 3px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #aa9c92;
+ }
+ .strila {
+  margin: 0px;
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 0px;
+ }
+ .veznik {
+  float: left; 
+  margin: 0px 5px 3px 0px;
+  padding: 3px;
+  /* border: 1px dotted #7893d1; */
+  /* background-color: #ffffff; */
+  text-indent: 0px;
+  font-size: 11px;
+  color: 7893d1;
+ }
+ .redPar {
+  background-color: #d3d3d3;
+  color: #000077;
+ }
+ .redNepar {
+  background-color: #f7f7f7;
+  color: #000033;
+ }
+ .redOznA {
+  background-color: #97dd97;
+  color: #ffffff;
+  cursor: crosshair;
+ }
+ .redTaK {
+  background-color: #f7f700;
+  color: #000033;
+ }
+</style>
+<script type="text/javascript">
+ //
+ var ipl = new Image(38,38);
+ ipl.src = "slike/design/palac-g.png";
+ var iplx = new Image(38,38);
+ iplx.src = "slike/design/palac-gx.png";
+ var ida = new Image(16,16);
+ ida.src = "slike/design/koment-da.png";
+ var idax = new Image(16,16);
+ idax.src = "slike/design/koment-dax.png";
+ var ine = new Image(16,16);
+ ine.src = "slike/design/koment-ne.png";
+ var inex = new Image(16,16);
+ inex.src = "slike/design/koment-nex.png";
+ //
+ if (window.XMLHttpRequest)
+ { // IE7+, Firefox, Chrome, Opera, Safari
+  var xmlhttp = new XMLHttpRequest();
+ }
+ else
+ { // IE5, IE6
+  var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+ }
+ //
+ var redAngel = 0;
+ //
+// -----
+function angelRedak(kaj, farba)
+{
+ iznad = kaj.rowIndex;
+ if (iznad != redAngel) kaj.className = farba;
+}
+// -----
+function dajVrimE()
+{
+ elPor = document.getElementById('poruka');
+ elUra = document.getElementById('urar');
+ today = new Date();
+ h = today.getHours();
+ m = today.getMinutes();
+ s = today.getSeconds();
+ // nula ispred broja <10
+ h = nulaIspreD(h);
+ m = nulaIspreD(m);
+ s = nulaIspreD(s);
+ //
+ du = elPor.value.length;
+ pozz = 63777 - du; // 65535
+ //
+ elUra.innerHTML = h + ':' + m + ':' + s + ' &nbsp; ( '+ pozz + ' )';
+ //
+ if (pozz < 0) 
+ {
+  vis = du - 63777;
+  tit = " UPOZORENJE: " + vis + " ZNAKOVA PREVI©E! ";
+  elUra.style.color = '#ff0000';
+ }
+ else
+ {
+  tit = " Sat i broj preostalih znakova ";
+  elUra.style.color = '#7893d1';
+ }
+ elUra.setAttribute('title', tit)
+ //
+ t = setTimeout('dajVrimE()', 500);
+}
+//
+function nulaIspreD(i)
+{
+ if (i < 10) { i = '0' + i; }
+ return i;
+}
+// -----
+function divSlikNov(koja, koliko)
+{
+ diva = document.getElementById(koja);
+ diva.style.MozTransform = 'scale(' + koliko + ')';
+ diva.style.webkitTransform = 'scale(' + koliko + ')';
+}
+// -----
+function divSlikSta(koja)
+{
+ diva = document.getElementById(koja);
+ // diva.MozTransformOrigin;
+ // diva.webkitTransformOrigin;
+ diva.style.MozTransform = 'scale(1)';
+ diva.style.webkitTransform = 'scale(1)';
+}
+// -----
+function miNjaj(imgDocID, imgObjName)
+{
+ document.images[imgDocID].src = eval(imgObjName + ".src");
+ return true;
+}
+// -----
+function misStO(sto)
+{
+ otvor = window.open('dodaci/kliker.php?redar='+sto,'_blank','width=397,height=197,resizable=no');
+ // otvor.close();
+}
+// -----
+function naVrH()
+{
+ window.scroll(0, 0);
+}
+// -----
+function noviLisT(url, width, height)
+{
+ ostal = "width=" + parseInt(width + 47) + ",height=" + parseInt(height + 47) + ",status=no,toolbar=no,menubar=no,location=no";
+ otvor = window.open(url, '', ostal);
+ otvor.focus();
+}
+// -----
+function noviProzoR(uri, width, height, sto)
+{
+ if (sto == 'img')
+ {
+  ostal = "width=" + width + ",height=" + height + ",status=no,toolbar=no,menubar=no,location=no,scrollbars=no,resizable=no";
+ }
+ else
+ {
+  ostal = "width=" + width + ",height=" + height + ",status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes";
+ }
+ otvor = window.open(uri, '', ostal);
+ otvor.focus();
+}
+// -----
+function zaTvoR()
+{
+ window.close();
+ return false;
+}
+// -----
+function cistiPoljE()
+{
+ document.forms.prikaz.reset();
+}
+// -----
+function poSaljI(puce)
+{
+ var xva = document.getElementById('vaznox');
+
+ if (document.forms.prikaz.faca.value == '' || document.forms.prikaz.poruka.value == '')
+ {
+  // alert('Ime i komentar moraju biti upisani!   ');
+  xva.style.color = '#ff7373';
+  xva.style.fontWeight = '900';
+  xva.innerHTML = 'Ime i komentar moraju biti upisani!   ';
+  return false;
+ }
+ else 
+ {
+  // document.forms.prikaz.submit();
+  puce.value = ' Gotovo ';
+  puce.disabled = true;
+  puce.form.submit();
+ }
+}
+// -----
+function iMejL(ajn, cvaj, draj)
+{
+ document.write(ajn + cvaj + '&#64;' + draj);
+}
+// -----
+function imaIme(lokva, skj)
+{
+ frk = document.forms['prikaz']; 
+ xis = document.getElementById('faca').value;
+ grr = document.getElementById('grsk');
+ //
+ if ((skj == 0) && (xis == 'Gost'))
+ {
+  // document.getElementById('faca').value = '';
+  lokva.value = '';
+ }
+ //
+ if (skj == 3)
+ {
+  if ((xis == '') || (xis.length) < 2)
+  {
+   grr.style.color = '#ffa3a3';
+   grr.innerHTML = ' najmanje 2 slova'
+   frk.faca.focus();
+   frk.faca.style.backgroundColor = '#ffa3a3';
+   // document.prikaz.faca.focus();
+  }
+  else
+  {
+   grr.innerHTML = ''
+   frk.faca.style.backgroundColor = '#ffffff';
+  }
+ }
+}
+// -----
+function poTrazZi()
+{
+ pitaj = document.forms.dnevba.qb.value;
+ if (pitaj.length < 2)
+ {
+  alert('Unesite rijeè s najmanje dva slova!   ');
+  return false;
+ }
+}
+// -----
+function pozTrg(lokva)
+{
+ grr = document.getElementById('upDST');
+ if (lokva.value.length < 2)
+ {
+  grr.style.backgroundColor = '#ff0303';
+  grr.disabled = true;
+ }
+ else
+ {
+  grr.style.backgroundColor = '#03ff03';
+  grr.disabled = false;
+ }
+}
+// -----
+function dneLajkiT(kaj)
+{
+ xmlhttp.onreadystatechange = function()
+ {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+  {
+   document.getElementById("lajkas").innerHTML = xmlhttp.responseText;
+  }
+ }
+ //
+ xmlhttp.open('GET', './dodaci/lajkit.php?ky=dnevnik&dx=' + kaj, true);
+ xmlhttp.send();
+}
+// -----
+function komLajkiT(kaj, tam, kul)
+{
+ za_pKP = "pkom_" + kaj;
+ p_kome = document.getElementById(za_pKP);
+ //
+ if (tam == 'p_doli') {
+  skup = (parseInt(kul) - 1); }
+ else {
+  skup = (parseInt(kul) + 1); }
+ //
+ if (skup < 0) {
+  p_kome.style.color = '#da3030'; }
+ else if (skup == 0) {
+  p_kome.style.color = '#d7d7d7'; }
+ else if (skup > 0) {
+  p_kome.style.color = '#30da30';
+  skup = '+' + skup; }
+ za_sDA = "kom_da_" + kaj;
+ za_sNE = "kom_ne_" + kaj;
+ sp_kDA = document.getElementById(za_sDA);
+ sp_kNE = document.getElementById(za_sNE);
+ //
+ xmlhttp.onreadystatechange = function()
+ {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+  {
+   sp_kDA.disabled = true;
+   sp_kDA.style.visibility = 'hidden';
+   sp_kNE.disabled = true;
+   sp_kNE.style.visibility = 'hidden';
+   p_kome.innerHTML = skup;
+  }
+ }
+ //
+ xmlhttp.open('GET', './dodaci/lajkit.php?ky=komentari&dx=' + kaj + '&tz=' + tam, true);
+ xmlhttp.send();
+}
+</script>
+<script type="text/javascript" src="dodaci/klik.dst"></script>
+</head>
+<body onload="dajVrimE()">
+<div class='mali' style='text-align: left; width:100%; padding-top:3px; padding-bottom:3px; background: #1e77d3; background: -moz-linear-gradient(left, #1e77d3 17%, #f3f5f9 100%); background: -webkit-gradient(linear, left top, right top, from(#1e77d3), to(#f3f5f9));'>&nbsp; <a href='http://www.dragotadic.net/' style='color:#abcdef; text-decoration:none'>&copy; Drago TADIÆ</a></div>
+<div class='brojac' align='right'> &nbsp; </div>
+<div class='tekst' style='padding: 7px; border: #1e77d3 1px solid' align='justify'><span style='float:left'>Dubrovnik, 10. 09. 2008.</span> <span style='float:right'><a href='#' onclick='noviProzoR("ispis.php?ploca=dnevnik&amp;redar=2008-09-10&amp;kreda=Bo¾anska èestica", 777, 500, 0)'><img border='0' src='slike/design/print-sd.png'></a>&nbsp;</span><br><script type='text/javascript'>document.title = 'Dnevnik : Bo¾anska èestica';</script><span class='t_nas'>Bo¾anska èestica</span><br><br>
+&nbsp;&nbsp; <div class='blok'>www.javno.com<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; 10.09.2008.<br>&nbsp;&nbsp; <font size=4><b>Pokrenut eksperiment, èeka se Veliki prasak!</b></font><br>&nbsp;&nbsp; <b>Znanstvenici su pokrenuli LHC, najveæi svjetski akcelerator èestica, koji æe nas pribli¾iti stvaranju svega, ili razoèarati ulagaèe.</b><br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Projekt vrijedan 9 milijuna eura aktiviran je u blizini ¹vicarsko-francuske granice. Dugo oèekivano pokretanje najveæeg svjetskog akceleratora èestica, Large Hadron Collidera izvr¹eno je, te se oèekuju rezultati, koji æe mo¾da odgovoriti na najveæe (i mo¾da najva¾nije) pitanje koje je èovjek ikada postavio - "Kako je sve nastalo?".<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; ©to se tièe "normalnog" èovjeka, CERN je u popularnu znanost u¹ao na mala vrata, ali velikim tunelom. I dok mnogi znaju o èemu je rijeè, veæina ipak zbunjeno trepæe na spomen Europske organizacije za nuklearna istra¾ivanja (odnosno CERN-a) i zadnjeg projekta, golemog akceleratora èestica, smje¹tenog ispod ©vicarske, vrijednog oko 9 milijardi amerièkih dolara, razvijanog oko 20 godina.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Large Hadron Collider (LHC) je u su¹tini 27-metarski tunel, èiji se poèetak i kraj spajaju. Dakle, prstenastog je oblika, a akcelerator æe èestice ubrzavati do brzine samo 0,01 posto manje od brzine svjetlosti, pri èemu æe ih natjerati na koliziju, koja bi trebala dati konaène rezultate i odgovore na puno unaprijed postavljenih pitanja, od kojih je jedno od najva¾nijih - kako smo nastali?<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; No, dok znanstvenici u CERN-u pru¾aju ruku Bogu, nadajuæi se da slu¹a, pozabavimo se osnovama.<br>&nbsp;&nbsp; Kao agencija, CERN je osnovan 1954. godine, zajednièkim ulaganjem 12 europskih dr¾ava, kako bi se razdijelili tro¹kovi eksperimenata u fizici èestica. Te su dr¾ave: Belgija, Engleska, Danska, Francuska, Njemaèka, Grèka, Italija, Norve¹ka, Nizozemska, ©vedska, ©vicarska i Jugoslavija, a gradnja 27-kilometarskog tunela, koji je sada dom LHC-u, odvijala se od 1989., kako bi u njega bio smje¹ten Large Electron - Positron Collider. Nakon 11 godina rada, odnosno 2000. godine, tunel ispod ©vicarske je zatvoren zbog smje¹tanja LHC-a.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; U meðuvremenu, 1990. godine, znanstvenici u CERN-u razvili su projekt nevezan uz ubrzanje èestica, no koji je ipak znaèio golemi napredak za znanost i svekoliki puk - World wide web, ili WWW.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Godine 1995. u CERN-u je iz èestica antimaterije stvoren atom anti-vodika, ¹to je objasnilo ravnote¾u izmeðu materije i antimaterije u svemiru, te su takvi atomi antimaterije 2002., usporeni rashlaðivanjem, te su postojali dovoljno dugo da omoguæe podrobnije istra¾ivanje, prije no ¹to se sudare s normalnom tvari i nestanu.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; ©to nas dovodi do tekuæe godine, kad je pokrenut golemi akcelerator èestica, od kojeg znanstvenici oèekuju toliko odgovora. A pitanja? Pitanja su vrlo iskonska - ©to daje tvari masu?, Za¹to priroda preferira tvar nad antimaterijom? ili Kako se tvar (materija) razvijala od poèetaka svemira?<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Na sva æe ta pitanja, nadaju se CERN-ovci, odgovoriti eksperimentom, koji æe poku¹ati reproducirati Veliki prasak, na mikroskopskoj razini.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Kada proizvedu uèinak slièan Prasku, praæenje stanja u akceleratoru nekoliko sljedeæih sekundi bit æe kljuèno, jer ba¹ tada bi se trebale otkriti okolnosti koje su dovele do stvaranja svemira kakvog danas znamo.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Takoðer, znanstvenici se nadaju da æe uspjeti napokon doæi do èestice koja je omoguæila nastanak ¾ivota - èestice 'Higgs Boson', nazvane po ¹kotskom znanstveniku, Peteru Higgsu, koji je prvi ustvrdio da je takva èestica morala postojati, te da je ona obja¹njenje za prevlast materije nad antimaterijom.<br>&nbsp;&nbsp; <p class='navod_kom'><b>Veliki Prasak (Big Bang)</b><br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Ime kojim se, vjeruju znanstvenici, obja¹njava teorija ¹irenja svemira. Ime je nastalo 1949. godine, a Big Bang zamijenio je dotad va¾eæu teoriju &#8222;stanja mirovanja&#8220;, kojom se tvrdi da svemir postoji oduvijek, te se ne ¹iri, veæ samo evoluira.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Teoretièari Praska vjeruju da je svemir nastao naglim ¹irenjem (eksplozijom) iz komprimiranog pradavnog stanja, tijekom kojeg je znatno smanjena njegova gustoæa i temperatura, te je tvar (materija) postala dominantna nad antimaterijom. Svemir se, dakle, razvio iz malene èestice ekstremno visoke temperature i gustoæe, a nagaða se da su u nasilnoj reakciji koja je &#8222;proizvela&#8220; svemir, nastali i atomi odreðenih kemijskih elemenata &#8211; vodika, litija i helija, te ostale tvari koje èine sve ¹to jest.</p><br>&nbsp;&nbsp; Naravno, u projekt ovakve magnitude i va¾nosti, ukljuèene su i neke velike brojke - koje oznaèavaju iznimno male vrijednosti. Tako æe trilijuni protona juriti prstenastim tunelom akceleratora pri brzini kojom æe krug od 27 kilometara dovr¹iti 11 tisuæa puta u jednoj sekundi, a broj sudara izmeðu èestica, takoðer po sekundi, æe se kretati oko 600 milijuna.<br>&nbsp;&nbsp; U sudaru èestica u LHC-u, nastajat æe temperature 100 tisuæa puta veæe od one sunèeve jezgre. Iako vrlo malih dimenzija, temperatura æe ipak biti golema, tako æe hlaðenje akceleratora morati dr¾ati stroj na konstantnih 271,3 Celzijevih stupnjeva ispod ni¹tice, a to æe se postiæi cirkulacijom tekuæeg helija oko prstena LHC-a.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Nadalje, kako bi se prikupili podaci o 600 milijuna sudara èestica u sekundi, znanstvenici su opremljeni ureðajima koji mjere razdoblja vremena u milijarditim dijelovima sekunde - vremenskim jedinicama koje bismo mogli nazvati i milijardinkama. Takoðer, prostorno gledajuæi, ti ureðaju æe nadzirati i protjecanje èestica i njihov polo¾aj u milijuntim dijelovima metra.<br>&nbsp;&nbsp; Svake æe godine podaci dobiveni u istra¾ivanjima u LHC-u popuniti prosjeèno 100 tisuæa dvoslojnih DVD-ova. Takoðer, biti æe pohranjeni u kompjuterskoj mre¾i od nekoliko desetaka tisuæa kompjutera, ma¹tovito nazvanoj 'Mre¾a' (The Grid).<br>&nbsp;&nbsp; <p class='navod_kom'><b>Pojmovnik:</b><br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Èestica - Objekt manji od atoma, koji ima svojstvenu masu i naboj.<br>&nbsp;&nbsp; Hadron - Èestica odreðene mase, sastavljena od manjih dijelova, zvanih kvarkovi, koji su povezani i èine cjelinu. Primjeri za hadrone su elektroni ili protoni.<br>&nbsp;&nbsp; Akcelerator èestica - stroj koji se koristi za ubrzavanje struja èestica na velike brzine, u odreðenom smjeru.<br>&nbsp;&nbsp; Collider - akcelerator u kojem dvije zrake èestica putuju u razlièitim smjerovima, te se sudaraju kako bi proizveli visokoenergetske kolizije izmeðu èestica. LHC je najveæi svjetski collider.<br>&nbsp;&nbsp; Standardni princip - teorija moderne fizike, sklopljena od druge dvije razlièite teorije - opæe relativnosti i kvantne mehanike. Najveæa joj je mana ¹to jo¹ uvijek ne mo¾e u cijelosti objasniti masu ili gravitaciju.<br>&nbsp;&nbsp; Higgs Boson - "bo¾anska èestica" je, u teoriji, èestica koja bi trebala davati materiji njenu masu, a igra kljuènu ulogu u potvrðivanju Standardnog principa.</p><br>&nbsp;&nbsp; Pesimisti, ipak, nikad ne miruju, pa tako ni na ovom projektu, a postoji nekoliko teorija o tome ¹to bi sve moglo poæi po zlu. (...)<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Usprkos tome, bezbrojne su implikacije rezultata eksperimenta. Jo¹ kad se u znanstveni projekt golemih razmjera upletu izrazi kao ¹to su 'bo¾anska èestica' ili 'stroj postanka', situacija postaje zanimljiva apsolutno svima - skepticima, vjernicima, ateistima i agnosticima, tehnofilima i tehnofobima. Ukratko, svima.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; No krije li se bog (opæenito reèeno) u minijaturnoj èestici? Mo¾emo li strojem, odnosno tehnologijom, stupiti u kontakt s neèim ¹to nas 'èini', zbog èega jesmo i spoznati to kao iskon razuma?<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; LHC je ispru¾ena ruka znanosti, a sad je na 'bo¾anskom', ako postoji, da toj ruci uzvrati stisak. </div><div class='blok'>mindpositive.bloger.hr<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; srijeda, svibanj 9, 2007<br>&nbsp;&nbsp; <b>Ljubav po kvantnoj fizici</b> (III. dio)<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Nismo samo na energetskoj razini tako "prozraèni", puni "praznog prostora" i stoga zaista podlo¾ni moguænosti brze, takoreæi trenutne promjene. I na biolo¹koj razini stanica i organa nismo uopæe tako "èvrsti" kakvo je uobièajeno mi¹ljenje.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Poznato je da se povr¹inske stanice ko¾e promijene u 14 dana, stanice na povr¹ini ¾eluca i crijeva svakih 5 dana, 120 dana traju crvene krvne stanice, 300 - 500 dana traju stanice jetre, èitav kostur odraslog èovjeka zamijeni se kompletno novim stanicama u roku od 10 godina. Pa ipak èovjek stari iako je svaka njegova stanica relativno mlada, ili jako mlada. O èemu to govori? Stanice se mijenjaju, ali ne¹to u na¹oj svijesti ne. Svijest, iskustvo milijuna generacija prije nas nam govori da moramo ostarjeti. To je èvrsta matrica u na¹oj svijesti koja mlade stanice tjera da se pona¹aju kao stare. Otkuda ta matrica u na¹oj svijesti? Iz negativne energije, iz negativnog uma. <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Ne ka¾em da je èovjek besmrtan, ali iz iskustva pozitivne svijesti sigurno æe proiziæi drugaèije ideje o zdravlju i bolesti, o mladosti i starosti, o ¾ivotu i smrti. Oèito da su nam materijalna sredstva za to evolucijski veæ dana - stalno imamo nove stanice. Pa, dajmo im, onda, novu uputu putem svjesne poruke i one se neæe razbolijevati i neæe starjeti drastièno kao sada. Kako? Svi procesi u na¹em tijelu su regulirani na kvantnoj razini, sve se informacije dobivaju na kvantnoj razini, a to znaèi na energetskoj razini. Ako svjesnom odlukom pokrenemo pozitivnu energiju, a to je kvantna razina djelovanja, to æe biti sasvim dostatna informacija svemu ¹to se u na¹em tijelu i na¹oj psihi dogaða da krene u pozitivnom smjeru.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Moje poznavanje fizike, iako povr¹no i nesustavno, zahvaljujem nekolicini nobelovaca koji su na temu kvantne fizike napisali popularno-znanstvene knjige. "Moji uèitelji" su mahom nobelovci: Hawking, Lederman, Penrose, Aczel, Gleick, Gribin, Weinberg, Capra. Upu¹tam se u razmatranje mojih teza u kontekstu kvantne fizike ne samo da bih ¹to bolje objasnila te teze, nego i da bih dala poticaj za razmi¹ljanje onima kojima je kvantna fizika struka. Ne treba se èuditi tome ¹to se dobar dio suvremene fizike izra¾ava esejistièki i hipotetièki, jer fizika veæ nekoliko desetljeæa tapka u mjestu. Vjerojatno i to treba zahvaliti negativnom umu koji nema stvaralaèku, inovativnu komponentu. Mislim da o tome svjedoèi jedan zanimljivi detalj. Poznato je da su vrijeme velikih otkriæa na polju kvantne fizike poèetkom pro¹loga stoljeæa Nobelove nagrade dobivali vrlo mladi fizièari u svojim dvadesetim, ili èak ranim dvadesetim godinama. Rijetko koji fizièar je dobio Nobelovu nagradu u svojim tridesetim godinama, u starijim godinama valjda niti jedan. Imam jednostavno obja¹njenje za to - otkrivali su novo dok im je um jo¹ koliko toliko bio pozitivan. S godinama su sve vi¹e bili obuzeti negativnom energijom i njihov um vi¹e nije bio sposoban za otkriæa. Danas ni mladi ljudi vi¹e nisu pozitivni i usprkos ne znam kakvom obrazovanju ni dvadesetogodi¹nji znanstvenici vi¹e nemaju osnovnu predispoziciju za velike znanstvene poduhvate - a to je pozitivni um.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Dobro, ja imam pozitivni um, a malo znam o fizici. Zato sam zahvalna nobelovcu Leonu Ledermanu koji je u prekrasnoj i duhovitoj knjizi 'Bo¾ja èestica', bez krzmanja istaknuo niz pitanja na koja fizièari danas ne znaju odgovoriti, a dao mi je i jedan krasan termin kojim æu se slobodno poslu¾iti. Za svoju knjigu "Bo¾ja èestica" koja je napisana da bi se ¹irokoj publici na razumljiv naèin prikazali osnovni pojmovi iz povijesti i suvremene fizike, posebno kvantne fizike, on ¹aljivo ka¾e da je napisana u "vodoinstalaterskoj" maniri. Tako æu i ja nastaviti o fizici "vodoinstalaterski", jer drugaèije i ne znam i jer mislim da ima smisla.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Oduvijek je fizika predano tra¾ila najmanju èesticu od koje se sastoji materija. Onda je Einstein rekao da su materija i energija jedna te ista "stvar", ¹to ba¹ i nije bilo tako jednostavno, pa su fizièari i dalje tra¾ili sve manje i manje èestice, do danas su ih unutar atoma na¹li preko 200, a tra¾e ih i dalje jer im nekakva njihova logika i matematika govore da ih mora biti jo¹. Tako je Lederman dobio Nobelovu nagradu za otkriæe jedne od tih dvije stotine subatomskih èestica.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Tisuæe fizièara na svijetu u lovu je na subatomske èestice s najskupljom znanstvenom opremom koja danas postoji. Lederman u zakljuèku svoje knjige ide jo¹ dalje, pa ka¾e kako izgleda da masa nije unutra¹nje svojstvo èestice, ¹to znaèi da èestice "nema", veæ da su to naboj i spin. Taj spin sam "èekala". Dakle, prema opæeprihvaæenom mi¹ljenju vrhunskih kvantnih fizièara, spin je jedna od dvije temeljne osobine subatomskih èestica.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Spin, pojednostavljeno reèeno, oznaèava vrtnju èestice, jer osnovno svojstvo subatomskih èestica je da se kreæu i to vrtnjom. (Ostavljam elektrièni naboj po strani, jer mislim da je za moju prièu nebitan, tj. da se u polju pozitivne energije uravnote¾uje ili poni¹tava na vrlo zanimljiv naèin.)<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Sva¹ta su fizièari mjerili u vezi tog spina, ali znaju da mu je osnovno svojstvo vrtnja, koja mo¾e biti samo udesno, ili ulijevo, tj. u smjeru kazaljke na satu ili obrnuto. Izgleda da nitko nije shvatio dramatiènu i egzistencijalnu razliku desnog i lijevog spina.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Prevedimo to na vrtnju èakre u smjeru kazaljke na satu, ili obrnuto, i povezali smo indijsku mudrost od prije barem pet tisuæa godina i dana¹nju kraljicu znanosti - kvantnu fiziku.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp;  Tako se su¹tinsko svojstvo subatomskih èestica, koje kvantna fizika zove spinom, pokazuje presudnim za na¹u svijest, ali i za na¹e fizièko tijelo. Pretpostavljam da je jednako bitno i za svu ne¾ivu materiju. Dakle, iako kvantna fizika tvrdi da svaka èestica ima beskonaèno mnogo moguænosti gdje æe se nalaziti i kojom brzinom æe se vrtjeti, ista ta fizika tvrdi da spin èestica mo¾e biti u smjeru kazaljke na satu, ili obrnuto. Nema treæe moguænosti. ©to je svakome oèito za bilo koju vrtnju.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp; Prema mom je iskustvu,  za cijeli   na¹ svijet, za na¹u spoznaju, za na¹ um, za na¹e tijelo, presudno jedino to u kom smjeru se vrti na¹a energija, dakle i èestice na¹eg fizièkog tijela. Sve ostalo, gdje se èestica toèno nalazi npr., malo je va¾no.<br>&nbsp;&nbsp;  <br>&nbsp;&nbsp;  I onda - odluèujuæa teza koju smatram da sam iskusila i dokazala: smjer vrtnje odreðuje na¹a svijest. Mislim da je tako uspostavljena neposredna veza izmeðu svijesti i materije. I mislim da je time dokazano da svijest ima stvaralaèku ili pokretaèku ulogu na bilo kojoj razini Kreacije. Jednako ljudska kao i bo¾anska svijest, svaka na razini svoje frekvencije, tj. svaka u svojoj frekvencijskoj domeni, svaka na svojoj razini stvarnosti. I ljudska i bo¾anska svijest imaju u sebi sadr¾an isti princip, istu zakonitost. Jedna i druga mogu po slobodnom izboru sve pokrenuti udesno ili ulijevo. Bog zna razliku pa ne koristi moguænost da pokreæe vrtnju suprotno od kazaljke na satu. Jer Bog stvara.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Nama je ostavio slobodu da shvatimo. Da shvatimo razliku izmeðu stvaranja i ru¹enja. I slobodu da izaberemo hoæemo li zajedno s njim stvarati sebe i svijet, ili æemo ga ru¹iti, uni¹titi. Mi smo se bahato i u neznanju poigrali moguæno¹æu da koristimo oba smjera. Toènije, prevladalo je to da koristimo negativni smjer. Za¹to? Ne znam. Bo¾ja ¹ala?</div><br>&nbsp;&nbsp; Ja uopæe nisam kont'o za¹to ljudi tra¾e pojam "sudnji dan" i s time povezuju dana¹nji dan. Tek kad sam do¹ao do informacije da se priprema znanstveni pokus èiji poèetak je pokrenut upravo danas i kad sam proèitao neke vijesti, ostao sam lagano iznenaðen kakav sve strah se uvlaèi u ljudsku du¹u (i tijelo). <br>&nbsp;&nbsp; <br>&nbsp;&nbsp; Nema straha od ovih pokusa, a ako ¾elimo odr¾avati temperaturu sumnje tada se zapitajmo kakvu jo¹ svrhe mo¾e imati taj tunel. Postoje veæ neke prièe kako se svjetska elita priprema za III. svjetski rat i nuklearne udare, a ovakav tunel svakako nije predviðen za uzgoj ¹ampinjona. Znamo kako je ©vicarska svjetski bankarski centar gdje se èuva blago svih moænika zemaljske kugle pa takav tunel upravo tamo i ima smisla. Dakle, èeka se veliki prasak cionistièko-amerièkog zla koje se danas zove "Novi svjetski poredak" pa bi se mog'o dogoditi stvarni povratak u pro¹lost. Dinastija Rothschild ¾eli svoje prokletstvo novca konkretizirati prema zapisima iz Talmuda, ali ..., nije Bog stvorio Zemlju da bi trijumfiralo zlo. Nevini æe izginuti, to je sigurno, a tko æe se spasiti - budemo vidjeli.<br>&nbsp;&nbsp; Moram priznati da ovo pi¹em bez ikakvi signala iz drugih izvora, a nisam se niti interesirao provjeriti ¹to ima na mre¾i u vezi ovoga. Budem to poslije, ali je indikativno to ¹to se dogaða sa svjetskim burzama, naftom, hranom i vodom. I upravo dan pred obljetnicu kad se dogodio onaj famozni 11. rujan, kada je tajni lobi sru¹io zgrade u kojima se ne¹to krilo. Obogaæen spoznajom njihova zla i moæi koju demonstriraju, ja osobno vjerujem kako je ovo bitka za buduænost, a ne za pro¹lost. Dok oligarhija 'otkriva prvi prasak' nama ostaje bitka za spreèavanje zadnjeg praska.<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; No, postoji i ona druga bo¾anska èestica koja nas èini posebnima, kojom smo najkreativnija ¾iva biæa i kojom gradimo posebno stanje èovjekove svijesti. Sve izlazi iz nas pa tako i kolektivna energija kojom se pokreæu ovakvi i slièni projekti. Zlatno tele i zakon privlaènosti mogu stvoriti ogromnu energiju èije uèinke æe mjeriti povijest, ali na¹a odgovornost ne prestaje - nikada ...<p class='tx_sr' style='margin:17px 0px 0px 0px'><span id='lajkas' style='color:#30ad30'>2</span> &times; <span id='sl_s' onMouseOver='miNjaj("sl_g", "iplx")' onMouseOut='miNjaj("sl_g", "ipl")'><img name='sl_g' class='staklar ruka' src='./slike/design/palac-g.png' onclick='dneLajkiT("2008-09-10")' style='vertical-align:middle;' alt=' Sviða mi se (Like it) ' title=' Sviða mi se (I Like It) '></span> <span style='color:#f3f5f9'> &times; 2</span><br><img src='./slike/design/ornament-p.png'></p></div>
+<div class='brojac' align='right' style='padding: 2px'><span><a href='dnevnik.php' title=' dnevnik '>[ dnevnik ]</a></span> &nbsp; &nbsp; <span><a href='kontakt.php?ploca=Kontakt&redar=upis&kreda=poruke' title=' kontakt obrazac '>[ kontakt ]</a></span></div><br>
+<span class='izbor'>KOMENTARI ( 22 )</span><div id='kom_enteri'><a name='2008-09-10-16-34-45'></a><a name='1'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 1. komentar '><b>www.nacional.hr</b>, 2008-09-10 u 16:34:45</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+10.09.2008. 12:26<br>Milenijski projekt CERN-a<br><b>Poèetak potrage za 'bo¾jom èesticom'</b><br><br>Za sada sve ide po planu, poruèuju znanstvenici ukljuèeni u projekt, a nastavi li se tako u sljedeæih mjesec dana, doæi æe do prvih sudara protona. Cilj je da u jednom od milijardi sudara nastane Higgisov bozon, koji æe se potom raspasti nakon èega æe ga detektirati sofisticirani detektori CMS I ATLAS<br><br>Najambiciozniji pothvat u povijesti znanosti, kako ga reklamiraju u znanstvenoj javnosti, prije nekoliko sati zapoèeo je u Europskom centru za nuklearna istra¾ivanja (CERN) u ®enevi. Desetljeæima teoretski i praktièno konstruiran, te potom izgraðen, pet milijardi eura vrijedan projekt LHC (veliki hadronski sudaraè), trebao bi odgovoriti na neka iskonska pitanja postojanja, preko rekonstrukcije uvjeta koji su vladali u trenucima nastanka svemira, a voðena idejom Velikog praska prije 13 milijardi godina.<br><br>Vi¹e od 8 tisuæa znanstvenika iz cijelog svijeta udru¾ilo se ne bi li tehnièkim i teorijskim obolom doprinijeli stvaranju potencijalno jednog od najva¾nijih trenutaka u povijesti èovjeèanstva. Osnovica cjelokupnog projekta su protoni, koji æe se u pokusima sudarati te prema predviðanjima proizvoditi bljeskove materije i energije. Rezultat toga, nadaju se znanstvenici, biti æe stvaranje malih nabora u prostor-vremenu - Higgsovih bozona - koji bi im pomogli u boljem razumijevanju praznog prostora. Praæena pljeskom, u 9:38 ispucana je prva protonska zraka, na prvu èetvrtinu kruga cijevi duge 27 kilometara, dok ju je pratila druga, u 9:45 sati, odaslana na duplo veæu udaljenost. Nakon polusatne stanke, zalet æe se poveæavati, te æe zraka na kraju napraviti puni krug. Naknadno æe se broj zraka i krugovi koje oni prolaze poveæati, protoni æe se sudarati, s ciljem da prasnu.<br><br>Za sada sve ide po planu, poruèuju znanstvenici ukljuèeni u projekt, a nastavi li se tako u sljedeæih mjesec dana, doæi æe do prvih sudara protona. Cilj je, kad centar bude u punom pogonu, da u jednom od tisuæu milijardi sudara nastane Higgisov bozon, koji æe se potom raspasti nakon èega bi ga trebali detektirati sofisticirani detektori CMS I ATLAS. Popularnu 'bo¾ju èesticu' i kljuè razumijevanja mase, koja je do danas ostala 'neuhvatljiva', predvidio je teorijski 1964. godine britanski fizièar Peter Higgs. U vi¹egodi¹njem istra¾ivanju, elementarni problem predstavljala je èinjenica da inaèe teoretska teza-èestice koje bi morale biti bez mase te se kretati brzinom svjetlosti, u praksi do sada jednostavno nije bila izvediva.<br><br>Na teoretsko rje¹enje prvi je do¹ao upravo Higgs, koji je objasnio kako svemir ipak nije prazan, èak i kad se èini da je tako, veæ je ispunjen kvantnim poljem. Razlog pokusa je pokazivanje ¹to bi se eventualno dogodilo kad bi se polje moglo iskljuèiti. Teoretski, sve bi se raspalo jer bi svaka moguæa najsitnija èestica krenula brzinom svjetlosti na neku svoju stranu. U CERN-ovu projektu, koji je plod dvadesetogodi¹njeg razvoja tehnologije i znanstvenog rada, sudjeluje i ¹estero hrvatskih fizièara, koji poku¹avaju proniknuti u tajnu nastanka svemira: dr. Daniel Denegri, dr. Guy Paiæ i dr. Danilo Vraniæ, dr. Vuko Brigljeviæ te dvoje mladih znanstvenih novaka, Senka Ðuriæ i Sreæko Moroviæ. <br><br>Dvadesetogodi¹nji projekt tisuæa znanstvenika<br><br>Projekt vrijedan gotovo 10 milijardi ¹vicarskih franaka radi se pod okriljem Europskog centra za nuklearna istra¾ivanja ili skraæeno CERN-a, organizacije koja u svome èlanstvu okuplja 20 europskih zemalja. Iako Hrvatska nije jedna od njih, hrvatski fizièari su, zbog svoga znanja i kvalitete, dobili priliku da budu va¾an dio projekta koji poku¹ava proniknuti u tajnu nastanka svemira. Pro¹le godine, Kre¹o Kadija, Vuko Brgljeviæ, Tome Antièiæ, Sreæko Moroviæ, Tatjana ©u¹a, Senka Pintariæ i Vedran Nikoliæ, sudjelujuæi u CERN-ovu projektu, dobili su priliku upoznati se na najnaprednijim svjetskim tehnologijama. Grupa mladih zagrebaèkih znanstvenika radila je na algoritmima za filtriranje podataka unutar ovog velikog sustava.<br><br>Projekt se inaèe sastoji od dva eksperimenta. CMS eksperiment poku¹ava utvrditi prapoèetke egzistencije svemira uopæe, neposredno nakon velikog praska. Drugi pak eksperiment nazvan Alice tra¾i stanje materije za koje se pretpostavlja da je postojalo par mikrosekundi nakon velikog praska. Na CMS eksperimentu radi 36 zemalja, 155 instituta te 2000 znanstvenika, dok je na ALICE eksperimentu ukljuèeno 30 zemalja, 104 instituta i vi¹e od 1000 znanstvenika.<br><br>Dr. Guy Paiæ: jedan od veterana projekta<br><br>Dr. Guy Paiæ jedan je od CERN-ova 'veterana projekta', koji je od samih poèetaka ukljuèen. "Na CERN sam do¹ao 1987., zajedno s grupom suradnika s Ruðera. U CERN-u je tada zapoèinjao novi ciklus istra¾ivanja sudara te¹kih iona da bi se u¹lo u trag novom stanju materije, takozvanoj Kvark gluon plazmi.<br><br>Na¹oj grupi povjerili su gradnju novog detektora, a poèetkom 90-ih ukljuèio sam se u gradnju eksperimenta ALICE za najveæi akcelerator na svijetu Larde Hadron Collider odnosno LHC. U toj kolaboraciji obavljao sam mnoge funkcije, a nekoliko godina bio sam koordinator za fiziku", kazao je Paiæ u ovogodi¹njem intervjuu za Nacional, koji æe na minus 269 Celzijevih stupnjeva, zajedno s drugim znanstvenicima poku¹ati uloviti "Higgsov bozon" ili popularno zvanu "Bo¾ju èesticu"<p id='pkom_3517' class='tx_de ram0'><span id='kom_da_3517' onMouseOver='miNjaj("sl_d3517", "idax")' onMouseOut='miNjaj("sl_d3517", "ida")'><img name='sl_d3517' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e www.nacional.hr. ' title=' www.nacional.hr ima dobar komentar ' onclick='komLajkiT(3517, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3517' onMouseOver='miNjaj("sl_n3517", "inex")' onMouseOut='miNjaj("sl_n3517", "ine")'><img name='sl_n3517' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e www.nacional.hr. ' title=' www.nacional.hr ima lo¹ komentar ' onclick='komLajkiT(3517, "p_doli", 0)'></span></p></div>
+<a name='2008-09-10-20-22-45'></a><a name='2'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 2. komentar '><b>ljiljana kurtoviæ</b>, 2008-09-10 u 20:22:45</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Te idiote treba zaustaviti, napraviti æe crnu rupu koja èe nas sve progutati, pomozite ljudi, organizirajte ne¹to, nemojte da nas satru sebièni nauènici radi svojih gluposti!!!<p id='pkom_3524' class='tx_de ram0'><span id='kom_da_3524' onMouseOver='miNjaj("sl_d3524", "idax")' onMouseOut='miNjaj("sl_d3524", "ida")'><img name='sl_d3524' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e ljiljana kurtoviæ. ' title=' ljiljana kurtoviæ ima dobar komentar ' onclick='komLajkiT(3524, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3524' onMouseOver='miNjaj("sl_n3524", "inex")' onMouseOut='miNjaj("sl_n3524", "ine")'><img name='sl_n3524' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e ljiljana kurtoviæ. ' title=' ljiljana kurtoviæ ima lo¹ komentar ' onclick='komLajkiT(3524, "p_doli", 0)'></span></p></div>
+<a name='2008-09-10-23-44-50'></a><a name='3'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 3. komentar '><b>business.hr</b>, 2008-09-10 u 23:44:50</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+10.09.2008 15:59<br><b>Ima li smisla potro¹iti 9 milijardi dolara na ubrzivaè èestica?</b><br><br>Iako je èetiri puta prema¹io proraèun, CERN-ov Large Hadron Collider koji je u srijedu zapoèeo s radom sufinancirale su i banke kreditima, a oèekuje se da æe, uz tajne svemira, donijeti i komercijalno iskoristiva otkriæa.<br><br> U srijedu u 9.25 i slu¾beno je pu¹ten u rad najveæi i najskuplji eksperimentalni pogon u povijesti, Large Hadron Collider (LHC), koji bi trebao èovjeèanstvu dati odgovore na neke od najveæih tajni svemira. Projekt je zami¹ljen prije èak 30 godina, a dosad je za razvoj LHC-a potro¹eno oko devet milijardi dolara. Tim golemim ubrzivaèem èestica upravlja Europska organizacija za nuklearna istra¾ivanja (CERN), a najveæim dijelom financiralo ga je 20 zemalja èlanica EU. U projektu sudjeluje oko 10.000 znanstvenika iz 80 zemalja svijeta, pa i iz Hrvatske.<br><br>&#8222;LHC je stroj za otkriæa. Njegov istra¾ivaèki program mogao bi fundamentalno promijeniti na¹ pogled na svemir, te na taj naèin produljiti tradiciju ljudske radoznalosti, koja je stara kao sam ljudski rod&#8220;, kazao je Robert Aymar, direktor CERN-a, nakon sveèanog pu¹tanja prve protonske zrake u LHC. Laskavim rijeèima èestitao je i prvi èovjek konkurentskog amerièkog Fermilaba, Pier Oddone: &#8222;Pu¹tanje LHC-a u rad oznaèava poèetak revolucije u fizici èestica&#8220;.<br><br>Crna rupa - mamac za naivne<br><br>Iako je veæina medijske pa¾nje uoèi poèetka rada LHC-a bila posveæena &#8222;opasnosti&#8220; od moguænosti &#8222;stvaranja crne rupe koja æe uni¹titi cijelu Zemlju&#8220;, takve su spekulacije vrlo brzo odbaèene kao statistièki zanemarive, ¹to ipak nije sprijeèilo smrtne prijetnje èelnim ljudima projekta.<br><br>No, ma koliko god stvar izgledala spektakularno danas, do samog pu¹tanja u rad najveæeg civilnog eksperimentalnog pogona u povijesti znanstvenici su morali svladati cijeli niz problema &#8211; mahom financijske prirode. Projekt je u vi¹e navrata probio sve predviðene tro¹kove, bilo je velikih problema s opremom (koja je sve osim &#8222;standardna&#8220;) te konstrukcijom izuzetno zahtjevne infrastrukture.<br><br>Koliki su bili problemi, najbolje pokazuje podatak da je pu¹tanje LHC-a u pogon kasnilo èak dvije godine. Konaèna cijena LHC-a èetiri je puta prema¹ila prvotna predviðanja, zbog èega je CERN morao od banaka posuditi stotine milijuna eura. <br><br>Èemu to sve?<br><br>U LHC-u se, suprotno uvrije¾enu mi¹ljenju, ne tra¾i &#8222;samo&#8220; èestica Higgsov bozon, iako bi njezino otkriæe bilo monumentalan korak za znanost. Za¹to materija ima masu, za¹to ne uoèavamo antimateriju (a morali bismo), postoje li u svemiru vi¹e od tri dimenzije, od èega se zaista sastoji svemir, postoji li jedinstvena &#8222;teorija svega&#8220; &#8211; samo su neka pitanja na koja æe znanost godinama tra¾iti odgovor u monumentalnu kompleksu smje¹tenom 100 metara ispod ¹vicarsko-francuske granice.<br><br>CERN-ov internet nove generacije<br><br>No, nameæe se pitanje ima li to sve smisla u situaciji u kojoj globalna ekonomija usporava, a dobar dio èovjeèanstva gladuje? Odgovor je jasan: kratkoroèno - ne, dugoroèno - vi¹e nego ¹to mo¾emo i zamisliti.<br>&#8222;Nitko ne zna kakva æemo nova podruèja u znanju otvoriti rezultatima koje dobijemo u LHC-u&#8220;, kazao je dr. Robert Kirby-Harris, prvi èovjek britanskog Instituta za fiziku, dodav¹i da æe se, tehnolo¹ki gledano, LHC vi¹estruko isplatiti.<br><br>&#8222;Potreba za obradom goleme kolièine podataka koju æemo dobiti iz LHC-a veæ je rezultirala novom raèunalnom mre¾om koja æe poveæati kapacitet i kolièinu podataka koje mo¾emo pohraniti, te pobolj¹ati moguænost interneta da prenosi sve vi¹e podataka&#8220;, kazao je Kirby-Harris govoreæi o mre¾i koju mnogi veæ nazivaju &#8222;novom generacijom interneta&#8220;, te koja je veæ sada 10.000 puta br¾a od klasiènog broadband interneta.<br><br>Podsjetimo, upravo su znanstvenici s CERN-a prije 20-tak godina, u ¾elji za pobolj¹anjem komunikacije raèunalom sa svojim kolegama ¹irom svijeta, dizajnirali WWW (World Wide Web). Potom su tu tehnologiju svijetu dali besplatno, a koliko je novca u svjetskoj ekonomiji promijenilo vlasnika zahvaljujuæi webu, te¹ko je i nagaðati.<p id='pkom_3526' class='tx_de ram0'><span id='kom_da_3526' onMouseOver='miNjaj("sl_d3526", "idax")' onMouseOut='miNjaj("sl_d3526", "ida")'><img name='sl_d3526' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e business.hr. ' title=' business.hr ima dobar komentar ' onclick='komLajkiT(3526, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3526' onMouseOver='miNjaj("sl_n3526", "inex")' onMouseOut='miNjaj("sl_n3526", "ine")'><img name='sl_n3526' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e business.hr. ' title=' business.hr ima lo¹ komentar ' onclick='komLajkiT(3526, "p_doli", 0)'></span></p></div>
+<a name='2008-09-12-22-03-57'></a><a name='4'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 4. komentar '><b>he he</b>, 2008-09-12 u 22:03:57</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Koja Bo¾anska èestica? Nova vrsta oru¾ja se tamo istra¾uje i stvara. Tolike novce i trud da daju za znanost bez ikakvih osobnih interesa, ma dajte. Sjetite se baruta!!!!!!!!!!<p id='pkom_3541' class='tx_de ram0'><span id='kom_da_3541' onMouseOver='miNjaj("sl_d3541", "idax")' onMouseOut='miNjaj("sl_d3541", "ida")'><img name='sl_d3541' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e he he. ' title=' he he ima dobar komentar ' onclick='komLajkiT(3541, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3541' onMouseOver='miNjaj("sl_n3541", "inex")' onMouseOut='miNjaj("sl_n3541", "ine")'><img name='sl_n3541' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e he he. ' title=' he he ima lo¹ komentar ' onclick='komLajkiT(3541, "p_doli", 0)'></span></p></div>
+<a name='2008-09-24-16-14-35'></a><a name='5'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 5. komentar '><b>www.hrt.hr</b>, 2008-09-24 u 16:14:35</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+24.09.08.<br><b>Odgoðena potraga za "bo¾jom èesticom"</b><br><br>Nastavak najveæeg i najskupljeg eksperimenta fizike, kojim se u 27-kilometarskom tunelu pod ®enevom poku¹ava odgovoriti na misterij nastanka materije, odgoðen je do proljeæa.<br><br>Prije èetiri dana do¹lo je do kvara na magnetima akceleratora, a vatrogasci su intervenirali nakon ¹to je tona tekuæeg helija procurila u tunel. Problem se trebao otkloniti za dva mjeseca, no prema struènjacima ipak se radi o slo¾enijem kvaru.<br><br>Opasnosti za ljude nema, no potragu za takozvanom Bo¾jom èesticom u eksperimentu, koji stoji èak 6 milijarda eura, prièekat æe barem do kraja o¾ujka 2009.<p id='pkom_3660' class='tx_de ram0'><span id='kom_da_3660' onMouseOver='miNjaj("sl_d3660", "idax")' onMouseOut='miNjaj("sl_d3660", "ida")'><img name='sl_d3660' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e www.hrt.hr. ' title=' www.hrt.hr ima dobar komentar ' onclick='komLajkiT(3660, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3660' onMouseOver='miNjaj("sl_n3660", "inex")' onMouseOut='miNjaj("sl_n3660", "ine")'><img name='sl_n3660' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e www.hrt.hr. ' title=' www.hrt.hr ima lo¹ komentar ' onclick='komLajkiT(3660, "p_doli", 0)'></span></p></div>
+<a name='2008-09-24-21-07-33'></a><a name='6'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 6. komentar '><b>Jutarnji.hr</b>, 2008-09-24 u 21:07:33</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+23.09.2008 21:25<br><b>Rije¹ena zagonetka supravodljivosti</b><br><br>ZAGREB - Mladi hrvatski znanstvenik dr. Neven Bari¹iæ jedan je od autora istra¾ivanja, objavljenog u vodeæem svjetskom znanstvenom èasopisu Nature, u kome se obja¹njava jedna od zagonetki visokotemperturne  supravodljivosti. Fascinantni fizikalni fenomen supravodljivost stanje je pri kojem materijal vodi elektriènu struju bez imalo otpora.<br><br>Zbog toga supravodièi mogu imati potencijalno golemu primjenu: od ¾ica vodova dalekovoda, skladi¹tenja energije, izrade sna¾nih magneta do konstrukcije superbrzih vlakova koji lebde na magnetskim jastucima. Na¾alost, primjenu supravodljivosti ote¾ava to ¹to se fenomen ne manifestira na sobnoj nego na niskim temperaturama.<br><br> - Ukoliko od supravodièa napravite zatvoreni krug, u njemu zavrtite struju te doðete nakon po volji dugo vremena, ustanovit æete da se ta struja jo¹ uvijek nepromijenjeno vrti. Jedini problem je da se to dogaða, u do danas sintetiziranim materijalima, na temperaturama od oko minus 100 Celzijevih stupnjeva, no mi fizièari to ipak smatramo visokim temperaturama, jer zahtijevaju samo jednostavno i jeftino hlaðenje - pojasnio je dr. Neven Bari¹iæ (36) koji od pro¹le godine radi na Sveuèili¹tu Stuttgart gdje je nedavno dobio presti¾nu Humboldtovu stipendiju.<br><br>Supravodljivost je jo¹ 1911. godine otkrio Nizozemac Heike Kamerlingh-Onnes. No, fenomen se manifestirao na ekstremno niskim temperaturma blizu apsolutne nule (minus 273,15 Celzijevih stupnjeva) koje se posti¾u pomoæu vrlo skupog tekuæeg helija zbog èega supravodljivost nije na¹la ¹iroku primjenu.<br><br>Prije dvadesetak godina otkriveni su visokotemperaturni supravodièi (HTSC-s), materijali keramièke prirode ¹to u supravodljivo stanje prelaze na temperaturama koje se relativno jeftino i lako posti¾u pomoæu tekuæeg du¹ika.  Ipak, znanstvenici ni danas ne razumiju u potpunosti mehanizam visokotemperaturne supravodljivosti.<br><br>- Mi smo u na¹em istra¾ivanju poku¹ali odgonetnuti prirodu stanja koje neposredno prethodi samoj supravodljivosti. Stoga je na¹ rad vrijedan korak u razumijevanju visokotemperaturne supravodljivosti. Kada bi se razumio taj mehanizam, to bi pomoglo i otkrivanju supravodièa koji rade na sobnoj temperaturi - rekao je  Neven Bari¹iæ naglasiv¹i da visokotemperaturni supravodièi imaju sve ¹iru primjenu u industriji kao razlièit strujni osiguraè, kablova, generatori  i supravodljivi magneti.<br><br>- Trenutna ¹iroka upotreba supravodièa zanemariva je spram potencijala koji ti materijali nude  ako postanu supravodljivi na sobnim temperaturama. Danas nije samo problem nedostatak jeftinih, pouzdanih i dostupnih izvora energije nego i kako transportirati te skladi¹titi energiju. Naime, samo u dalekovodima se prilikom prijenosa zbog otpora gubi èak 10 posto elektriène energije, pa bi u¹tede koje bi se postigle primjenom supravodièa na sobnim temparturama bile goleme - istaknuo  je dr. Bari¹iæ.<p id='pkom_3662' class='tx_de ram0'><span id='kom_da_3662' onMouseOver='miNjaj("sl_d3662", "idax")' onMouseOut='miNjaj("sl_d3662", "ida")'><img name='sl_d3662' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Jutarnji.hr. ' title=' Jutarnji.hr ima dobar komentar ' onclick='komLajkiT(3662, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3662' onMouseOver='miNjaj("sl_n3662", "inex")' onMouseOut='miNjaj("sl_n3662", "ine")'><img name='sl_n3662' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Jutarnji.hr. ' title=' Jutarnji.hr ima lo¹ komentar ' onclick='komLajkiT(3662, "p_doli", 0)'></span></p></div>
+<a name='2008-10-30-09-33-16'></a><a name='7'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 7. komentar '><b>www.nationalgeographic.com.hr</b>, 2008-10-30 u 09:33:16</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+o¾ujak 2008.<br><b>Bo¾ja èestica</b><br><br>Najveæi elektromagnet na svijetu bit æe uklopljen u èelièni cilindar u srcu CMS-a. CMS i tri druga glavna detektora smje¹tena u Velikome hadronskom sudaraèu mogli bi otkriti nepoznate subatomske èestice.<br><br><font size=1>NAPISAO JOEL ACHENBACH</font><br><br>Kad biste usred dra¾esnoga francuskog sela Crozeta iskopali jamu duboku 100 metara, ugledali biste prizor koji podsjeæa na podzemnu jazbinu kakvog zlikovca iz filmova o Jamesu Bondu. Napadno osvijetljen tunel ¹irok tri metra zavija u daljinu, a svakih nekoliko kilometara ¹iri se u visoku prostoriju pretrpanu te¹kim èeliènim konstrukcijama, kabelima, cijevima, ¾icama, magnetima, ¹ipkama, nogostupima i zagonetnim spravama.<br><br>Taj tehnolo¹ki podzemni svijet golemi je znanstveni instrument, preciznije golemi ubrzivaè èestica - najsna¾nija atomska "puhaljka" ikad stvorena. Zove se Veliki hadronski sudaraè (Large Hadron Collider - LHC), a svrha mu je jednostavna ali ambiciozna: razbiti ¹ifru fizièkoga svijeta, odgonetnuti od èega se sastoji svemir ili, drugim rijeèima, doprijeti do same sr¾i stvar&#299;.<br><br>U iduæim mjesecima zapoèet æe eksperiment u kojem æe dva snopa èestica juriti u suprotnim smjerovima kroz podzemni tunel u obliku prstena opsega 27 kilometara. Èestice æe voditi vi¹e od tisuæu valjkastih supravodljivih magneta ohlaðenih na temperaturu sasvim blisku apsolutnoj nuli i povezanih poput kobasica. Na èetiri mjesta snopovi æe se sastati i prouzroèiti sudare èestica pri brzini koja se pribli¾ava svjetlosnoj. Ako sve bude kako treba, tvar æe se u silovitim sudarima pretvarati u oblake energije, koji æe se zatim opet zgu¹njavati u razne zanimljive vrste èestica, od kojih neke jo¹ nikad nisu viðene. To je bit eksperimentalne fizike èestica: razbijati stvari jedne o druge i onda gledati ¹to æe iz toga proiziæi.<br><br>One gomile opreme razmje¹tene du¾ tunela pomno æe pregledavati sve ¹to nastane nakon sudara. Najveæa, ATLAS (izvorno kratica za prstenasti LHC-ov ureðaj, A Toroidal LHC AparatuS), ima detektor visok sedam katova. Najte¾a, CMS (Compact Muon Solenoid, odnosno Kompaktna mionska zavojnica), te¾a je od Eiffelova tornja. "Veæe je bolje kad tragate za manjim" mogao bi biti slogan u Europskoj organizaciji za nuklearna istra¾ivanja, poznatijoj po svojoj povijesnoj kratici CERN, meðunarodnom laboratoriju u kojem se nalazi Veliki hadronski sudaraè.<br><br>Zvuèi stra¹no, a i jest. Izgradnja LHC-a u tunelu bila je mudar potez. Snop èestica mo¾e naèiniti rupu u bilo èemu, iako bi najvjerojatnija ¾rtva bio sam ureðaj. Sitna se nezgoda veæ dogodila: jedan od magneta gotovo je iskoèio iz vlastite ko¾e tijekom probe u o¾ujku 2007. godine. Nakon toga, 24 magneta preureðena su kako bi se ispravila pogre¹ka u konstrukciji. Ljudi koji rade na LHC-u suzdr¾ani su dok govore o tome ¹to bi sve moglo poæi po zlu, mo¾da i stoga ¹to je javnost sklona strahovati da bi ludi znanstvenici mogli sluèajno proizvesti crnu jamu koja æe progutati Zemlju.<br><br>No vjerojatnije je kako se pribojavaju da sudaraè mo¾da neæe uspjeti pronaæi stvari za koje fizièari tvrde da moraju le¾ati pritajene u najdubljim temeljima stvarnosti. Tako velik stroj mora proizvesti i veliku znanost, velike odgovore, ne¹to ¹to mo¾e uroditi velikim novinskim naslovima jednako kao i zanimljivim èesticama. No èak i nastojanje takvih razmjera neæe moæi odgovoriti na sva va¾na pitanja koja se tièu tvari i energije. Ni u kojem sluèaju. I to stoga ¹to je stoljeæe fizike èestica iznjedrilo jednu temeljnu istinu: stvarnost svoje tajne ne otkriva lako.<br><br>Ili recimo to na ovaj naèin: svemir je tvrd orah.<br><br>Vratimo se nakratko ne¹to vi¹e od sto godina u pro¹lost, na kraj 19. stoljeæa, i bacimo pogled na fiziku: ona je potpuno razvijena znanost i poprilièno samodopadna. Bilo je onih koji su vjerovali da se tu nema vi¹e bogzna ¹to uèiniti, da treba samo izglaèati neke neobraðene rubove. Postojao je shvatljiv red stvari, mehanièki svemir kojim su upravljale njutnovske sile, s atomima kao temeljem tvari. Atomi su po definiciji bili nedjeljivi - rijeè dolazi iz grèkoga i znaèi "nerazreziv"...<br><br><br>http://www.nationalgeographic.com.hr/default.asp?ru=284<p id='pkom_3979' class='tx_de ram0'><span id='kom_da_3979' onMouseOver='miNjaj("sl_d3979", "idax")' onMouseOut='miNjaj("sl_d3979", "ida")'><img name='sl_d3979' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e www.nationalgeographic.com.hr. ' title=' www.nationalgeographic.com.hr ima dobar komentar ' onclick='komLajkiT(3979, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_3979' onMouseOver='miNjaj("sl_n3979", "inex")' onMouseOut='miNjaj("sl_n3979", "ine")'><img name='sl_n3979' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e www.nationalgeographic.com.hr. ' title=' www.nationalgeographic.com.hr ima lo¹ komentar ' onclick='komLajkiT(3979, "p_doli", 0)'></span></p></div>
+<a name='2008-12-11-19-09-44'></a><a name='8'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 8. komentar '><b>www.hrt.hr</b>, 2008-12-11 u 19:09:44</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+08.12.08.<br><b>Zagrebaèki Pentagon</b><br><br>Zagrebaèki ured za upravljanje u hitnim situacijama priopæio je da je nabava vi¹enamjenskog specijalnog vozila, koje se mo¾e kretati u ote¾anim terenskim uvjetima te koje je opremljeno suvremenim sustavom nuklearno-biolo¹ko-kemijske (NBK) i primarne protueksplozivne za¹tite, prijeko potrebna.<br><br>Zagreb ima vi¹e potencijalnih ugroza u kojima æe vozilo poslu¾iti, a kao primjer istièu moguænost kvara na jednome od kemijskih ili farmaceutskih postrojenja gdje æe vozilo priæi i utvrditi ¹tetu. Slu¾it æe kao zapovjedno telekomunikacijsko vozilo, upotrebljavat æe se za terenski koordinacijski tim, za medicinski prijevoz, prijevoz NBK specijalnih timova, a pogodno je i za zraèni prijevoz. Zbog svih tih èinjenica, u skladu je sa standardima NATO-a, stoji u priopæenju.<br><br>Proèelnik Ureda za upravljanje u hitnim situacijama Pavle Kaliniæ danas demantira svoju nedavnu izjavu da bi vozilo slu¾ilo prevo¾enju premijera Ive Sanadera te predsjednika Stjepana Mesiæa. Osnovna njegova namjena je za¹tita i spa¹avanje. Buduæi da je vozilo jedinstveno u Hrvatskoj, stajat æe na usluzi i drugim gradovima i ¾upanijama.<br><br>Nabava novog specijalnog vozila vrijednog oko 4 milijuna kuna uznemirila je graðane Zagreba koji smatraju da je to, u doba financijske krize, i vi¹e nego nepotrebno. U priopæenju Ureda za upravljanje u hitnim situacijama stoji da su sredstva za kupnju vozila osigurana u ovogodi¹njem proraèunu Ureda i da kupnja zapovjednog pokretnog centra spada u prioritete razvoja Ureda. Jo¹ se ne zna hoæe li biti kupljen ju¾noafrièki Casspi ili amerièka Gurkha.<br><br>Zapovjedno-komunikacijski centar<br><br>Kako je objavio Veèernji list, do kraja 2011. Ured za upravljanje u hitnim situacijama trebao bi nabaviti mobilni komunikacijsko-zapovjedni centar, opremiti 17 timova za brzo reagiranje u sluèaju katastrofe, u suradnji s dr¾avom kupiti dva helikoptera te na kraju i bespilotnu letjelicu.<br><br>U Zapruðu su prona¹li ZET-ovu zgradu otpornu na potrese i u nju æe useliti svoje ljude te u prvo vrijeme koristiti ZET-ovu komunikacijsku opremu za potrebe novog centra. No veæ u rujnu 2009. uselit æe se u zapovjedni bunker u Sesvetama, za koji æe dodatno morati kupiti i posebnu opremu.<br><br>Bespilotna letjelica nu¾na je u sluèaju sliènih nezgoda, za koje se nabavlja i oklopnjak. Slala bi se nad pogoðeno podruèje da detektira koncentraciju otrovnih plinova u zraku.  Jedan helikopter je potreban Zagrebaèkoj hitnoj pomoæi, dok bi drugi slu¾io za potragu i spa¹avanje ljudi na Medvednici.<br><br><br>09.12.08.<br><b>Èemu tenkiæ i helikopter</b><br><br>Grad Zagreb priprema se za krizne situacije. Veæ se krenulo u nabavu 4 milijuna kuna vrijednoga oklopnog vozila, a na redu su i bespilotne letjelice, helikopteri...<br><br>Za kakve se to akcije sprema zagrebaèko Poglavarstvo, poku¹ao nam je objasniti proèelnik Ureda za krizna stanja Pavle Kaliniæ.<br><br><br>11.12.08.<br><b>Javna nabava za tenkiæ</b><br><br>Poglavarstvo Grada Zagreba na sjednici je bez rasprave prihvatilo da se vozilo za posebne namjene Ureda za upravljanje u hitnim situacijama nabavi putem postupka javne nabave.<br><br>Vozilo æe biti premljeno za djelovanje operativnih snaga za¹tite i spa¹avanja u uvjetima nuklearno-biolo¹ko-kemijske kontaminacije, u situacijama katastrofa i velikih nesreæa, a kako bi se omoguæili rukovoðenje, koordinacija i zapovijedanje operativnim snagama za¹tite i spa¹avanja Grada Zagreba na terenu, stoji u zakljuècima sa sjednice.<br><br>Poglavarstvo je odluèilo i da se provede postupak javne nabave za usluge tjelesne za¹tite osoba i imovine, jer u sijeènju 2009. istjeèe ugovor za za¹titu osoba i imovine sklopljen sa za¹titarskom tvrtkom V grupa za¹tita d.o.o.<br><br>Prihvaæen je Sporazum o podmirenju meðusobnih potra¾ivanja Republike Hrvatske i Grada Zagreba. Proèelnik gradskog Ureda za financije Slavko Kojiæ rekao je da æe meðusobne obaveze i potra¾ivanja biti regulirana novim sporazumom. Dodao je da Zagreb od dr¾ave potra¾uje 185.589.287 kuna.<br><br>Poglavarstvo je prihvatilo da se radi gradnje Buzinskog prilaza za 31.200 eura kupi 195 èetvornih metara zemlji¹ta u vlasni¹tvu dru¹tva M san nekretnine. Poglavarstvo je sklopilo i nagodbu s dru¹tvima Uranium savjetovanje d.o.o. i Alfa stan d.o.o., kako bi se mogle izgraditi potrebne prometnice i komunalna infrastruktura za potrebe Arene Zagreb.<br><br>Prihvatilo je i ponudu o kupnji poslovnog prostora u podrumu, prizemlju te na 1. i 2. katu u Jagiæevoj ulici 31, za potrebe osiguranja radnog prostora za slu¾benike i namje¹tenike gradskih upravnih tijela i struènih slu¾bi. Tijekom rasprave èlan Poglavarstva Stjepan Stubliæ (HSS) upitao je za¹to bi Grad od nekog kupovao kad mu drugi daruju zemlji¹te. Smatra da pojedinci nisu mogli dobiti graðevinske dozvole ako nisu Gradu darovali zemlji¹te.<p id='pkom_4295' class='tx_de ram0'><span id='kom_da_4295' onMouseOver='miNjaj("sl_d4295", "idax")' onMouseOut='miNjaj("sl_d4295", "ida")'><img name='sl_d4295' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e www.hrt.hr. ' title=' www.hrt.hr ima dobar komentar ' onclick='komLajkiT(4295, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_4295' onMouseOver='miNjaj("sl_n4295", "inex")' onMouseOut='miNjaj("sl_n4295", "ine")'><img name='sl_n4295' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e www.hrt.hr. ' title=' www.hrt.hr ima lo¹ komentar ' onclick='komLajkiT(4295, "p_doli", 0)'></span></p></div>
+<a name='2008-12-11-19-55-35'></a><a name='9'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 9. komentar '><b>Adis Beèiæ</b>, 2008-12-11 u 19:55:35</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<b>PISMO NORVE©KOG POLITIÈARA</b><br><br>Ja sam politièar iz Norve¹ke. ®elim reæi da æe se te¹ke stvari desiti izmeðu 2008. i 2012. godine.<br>Norve¹ka vlada pravi sve vi¹e podzemnih baza i bunkera. Na to pitanje su jednostavno odgovorili da je to radi za¹tite ljudi u Norve¹koj. Tra¾io sam informaciju kada æe to biti zavr¹eno, a odovorili su: "Prije 2011. godine".<br>Izrael èini istu stvar, kao i mnoge druge dr¾ave.<br>Dokaz, da je ono ¹to govorim istina, su fotografije sa ministrima koje sam upoznao. Oni sve ovo znaju, ali ne ¾ele stvarati uzbunu i masovnu paniku.<br>Planet X dolazi i Norve¹ka je poèela skladi¹titi hranu i sjemena u podruèju Svalbard i sjevernom polu uz pomoæ SAD-a i EU. Oni æe spasiti samo one koji pripadaju eliti i imaju moæ, kao i ljekare, nauènike i sl. koji su potrebni za novi poèetak.<br>Ja veæ znam da æu prije 2012. godine otièi u podruèje Mosjoen, gdje se nalazi duboka podzemna vojna baza. Tamo smo podijeljeni u sektore: crveni, plavi i zeleni. Njima je ovo veæ naznaèeno, a kampovi su veæ odavno napravljeni.<br>Ljudi koji æe ostati na povr¹ini i umrijeti zajedno sa drugima neæe dobiti pomoæ. Plan je da 2 miliona Norve¾ana bude osigurano, a ostalih 2,6 miliona æe umrijeti.<br>Svi sektori i arke su povezani tunelima i imaju vozila kojima se mo¾e preæi sa jedne arke na drugu. To je iz razloga da mogu biti u kontaktu jedni sa drugima.<br>Veoma sam tu¾an. Èesto plaèem sa drugima znajuæi da æe toliko mnogo ljudi saznati istinu prekasno. Vlada la¾e ljude od 1983. godine do sada. Svi va¾niji politièari Norve¹ke znaju za ovo, ali samo mali broj njih æe to reæi drugima zbog straha da bi mogli propustiti NOAH 12 vozila koja bi ih odvezla na sigurno mjesto.<br>Ako ka¾u ikome, zasigurno su mrtvi. Ali, ja vi¹e ne brinem za sebe. Èovjeèanstvo i druge vrste moraju pre¾ivjeti. Ljudi to moraju znati.<br>Sve vlade svijeta su zabrinute zbog ovoga. Za ljude koji se ¾ele sami spasiti mogu samo reæi da potra¾e peæine na visokim mjestima gdje mogu napraviti zalihe hrane za najmanje 5 godina, ukljuèujuæi konzerviranu hranu i vodu.<br>Posljednji put govorim: "Bo¾e, pomozi nam svima...", ali znam da nam Bog neæe pomoæi. Samo svaka osoba pojedinaèno mo¾e ne¹to uèiniti. Probudite se, molim vas...!<br>Mogao sam vam pisati koristeæi drugo ime, ali vi¹e se ne bojim nièega. Kada znate ovo pouzdano, postajete nesavladivi i nikakvo zlo vam se neæe dogoditi kada znate da je blizu kraj.<br>Uvjeravam vas 100% da æe se ovo desiti. Èetiri godine su preostale do kraja. Nabavite oru¾je, napravite grupe za pre¾ivljavanje i pronaðite mjesto gdje mo¾ete biti sigurni sa hranom.<br>Pitajte me bilo ¹ta - ja æu vam odgovoriti koliko god znam o povezanosti Norve¹ke sa ovim sluèajem. Samo pogledajte okolo, svugdje se prave podzemne baze i bunkeri. Ljudi, otvorite oèi. Pitate li vlade ¹ta to prave, samo æe odgovoriti: "To je samo skladi¹te za hranu". Zasljepljuju vas la¾ima.<br>Znaci prisustva vanzemaljaca su takoðe tu i èesto vidim norve¹ke elitne politièare koji nisu ono ¹to govore. Èini se kao da su kontrolirani u svakom pogledu.<br>Zapamtite da oni koji æe biti u gradu i okolini su oni koji æe biti prvi umrijeti. Kasnije æe vojska poèistiti ostatke pre¾ivjelih i imat æe nareðenje da ubiju bilo koga ko se usprotivi odvoðenju u kampove gdje æe svi biti oznaèeni brojem.<br>Vidim da je na va¹oj stranici spomenuta Benazir Bhutto. Njena smrt je tragièna. Kao ¹to vidite, sastao sam se s njom. Takoðe sa fotografija æete vidjeti da sam upoznao brojne politièare i svjetske voðe.<br>Javnost neæe znati ¹ta se dogaða do pred sami kraj, jer vlada ne ¾eli stvarati masovnu paniku. Sve æe se desiti mirno, a vlada æe samo nestati.<br>Ali ja ka¾em: Ne idite mirno u noæ. Preduzmite mjere da budete sigurno sa va¹om porodicom. Doðite zajedno sa ostalima. Radite zajedno da naðete naèin rje¹avanja problema sa kojima æete se suoèiti.<br><br>S po¹tovanjem ...<br><br><br><b>A letter from a Norwegian politician</b><br><br>I am a Norwegian politician. I would like to say that difficult things will happen from the year 2008 till the year 2012.<br><br>The Norwegian government is building more and more underground bases and bunkers. When asked, they simply say that it is for the protection of the people of Norway. When I enquire when they are due to be finished, they reply "before 2011".<br><br>Israel is also doing the same and many other countries too.<br><br>My proof that what I am saying is true is in the photographs I have sent of myself and all the Prime Ministers and ministers I tend to meet and am acquainted with. They know all of this, but they don't want to alarm the people or create mass panic.<br><br>Planet X is coming, and Norway has begun with storage of food and seeds in the Svalbard area and in the arctic north with the help of the US and EU and all around in Norway. They will only save those that are in the elite of power and those that can build up again: doctors, scientists, and so on.<br><br>As for me, I already know that I am going to leave before 2012 to go the area of Mosj&#248;en where we have a deep underground military facility. There we are divided into sectors, red, blue and green. The signs of the Norwegian military are already given to them and the camps have already been built a long time ago.<br><br>The people that are going to be left on the surface and die with along the others will get no help whatsoever. The plan is that 2,000,000 Norwegians are going to be safe, and the rest will die. That means 2,600,000 will perish into the night not knowing what to do.<br><br>All the sectors and arks are connected with tunnels and have railcars that can take you from one ark to the other. This is so that they can be in contact with each other. Only the large doors separate them so that the sectors are not compromised in any matter.<br> <br>I am very sad. Often I cry with others that know that so many will learn too late, and then it will all be over for them. The government has been lying to the people from 1983 till now. All the major politicians know this in Norway, but few will say it to the people and the public - because they are afraid in case they too will miss the NOAH 12 railcars that will take them to the ark sites where they will be safe.<br><br>If they tell anyone, they are dead for sure. But I don't care any more about myself. Mankind must survive and the species must survive. People must know this.<br> <br>All the governments in the world are aware of this and they just say it is going to happen. For those of the people that can save themselves I can only say reach for higher ground and find caves up in the high places where you can have a food storage for at least five years with canned food and water to last for a while. Radiation pills and biosuits are also advisable if your budget allows it.<br> <br>For the last time I say may God help us all... but God will not help us I know. Only each person individually can make a difference. Wake up, please...!<br> <br>I could have written to you using another name but I am not afraid of anything any more. When you know certain things, you become invincible and no harm can come to you when you know that the end is soon.<br> <br>I assure you 100% that things will happen. There are four years to prepare for the endgame. Get weapons, and make survival groups, and a place where you can be safe with food for a time.<br> <br>Ask me anything and I will answer as much as I know about the Norwegian connection to all this. And just look around: they are building underground bases and bunkers everywhere. Open your eyes, people. Ask the governments what they are building, and they will say "Oh, it's just storage for food", and so on. They blind you with all the lies.<br> <br>The marks of the alien presence are also there, and I often see the Norwegian elite politicians are not what they say they are. It's like they are controlled in every thought, and what they have to say is just as they are told to do things in such manners. It is clear for me who they are, and who they are not. You can see it in their eyes and in their minds.<br> <br>Remember that those who are going to be in and around the city areas in 2012 are those that are going to be hit first and die first. Later the army will purge the rest of the survivors and they have a shoot to kill order if there is any resistance to bring them into the camps where every one will get marked with a number and a tag.<br><br>I also see that Benazir Bhutto is spoken of on your site. Her death was tragic. I have met Benazir, as you can see. You will also see from the photographs that I have met with a number of other notable politicians and world leaders.<br><br>The public will not know what happens till the very end, because the government does not want to create mass panic. Everything will happen quietly and the government will just disappear.<br><br>But I say this: don't go quietly into the night. Take precautions to be safe with your family. Come together with others. Work together to find ways to solve all the many problems you will face.<br><br>Kind regards<br><br>[Name and proof of identity supplied]<br><br><a href='http://projectcamelot.org/norway.html' target='_blank'>http://projectcamelot.org/norway.html</a><p id='pkom_4296' class='tx_de ram0'><span id='kom_da_4296' onMouseOver='miNjaj("sl_d4296", "idax")' onMouseOut='miNjaj("sl_d4296", "ida")'><img name='sl_d4296' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Adis Beèiæ. ' title=' Adis Beèiæ ima dobar komentar ' onclick='komLajkiT(4296, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_4296' onMouseOver='miNjaj("sl_n4296", "inex")' onMouseOut='miNjaj("sl_n4296", "ine")'><img name='sl_n4296' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Adis Beèiæ. ' title=' Adis Beèiæ ima lo¹ komentar ' onclick='komLajkiT(4296, "p_doli", 0)'></span></p></div>
+<a name='2008-12-29-01-03-13'></a><a name='10'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 10. komentar '><b>www.hrt.hr</b>, 2008-12-29 u 01:03:13</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+28.12.08.<br><b>Rat na Bliskom istoku?</b><br><br>Odmazda Izraela zbog napada Hamasa pretvorila se u pravi rat. Veæ 48 sati Izrael gotovo neprekidno bombardira palestinske ciljeve u Gazi. Jezivi su podaci o stradalima. Ubijeno je gotovo 300 ljudi, a vi¹e od tisuæu ih je ozlijeðeno. <br><br>Izraelski zraèni udari na pojas Gaze, prema broju ¾rtava, najkrvaviji su u 60- godi¹njem sukobu. Na palestinsko podruèje baèeno je vi¹e od 100 tona bombi.<br><br><br>Upozoravamo da su neki kadrovi u videoprilogu uznemirujuæi.<br><br>Izrael tvrdi da su mete upori¹ta Hamasove vlasti. No u gusto naseljenom pojasu Gaze ginu civili. Milijun i pol Palestinaca dvostruki su taoci. Zbog blokade humanitarna se katastrofa nastavlja. Nesta¹ica je hrane, lijekova, goriva.<br><br><br>Sukobi na granici Gaze s Egiptom<br><br>Stotine Palestinaca probile su za¹titnu ogradu na graniènom prijelazu Rafah i u¹le u Egipat sukobiv¹i se s egipatskim snagama sigurnosti. Ubijen je jedan egipatski grtanièni policajac, a jo¹ jedan je ranjen. Ograda duga 14 kilometara probijena je na najmanje èetiri mjesta. Naoru¾ani Palestinci preuzeli su kontrolu nad èetiri kontrolne toèke koje su prije dr¾ali egipatski policajci.<br><br>Do proboja granice do¹lo je nedugo nakon ¹to su izraelski zrakoplovi gaðali podzemne tunele za krijumèarenje koji prolaze ispod granice s Egiptom. Prema Rafahu je hitno upuæeno najmanje 300 egipatskih policajaca.<br><br>©iri se revolt Palestinaca<br><br>Revolt Palestinaca ¹iri se na podruèje Zapadne obale pod kontrolom umjerenije frakcije Fataha. Hamas je ponovno udario na izraelski teritorij. Najavljuju i samoubilaèke napade. Na granici s pojasom Gaze izraelski su tenkovi spremni.<br><br>Na¹ cilj nije ponovna okupacija pojasa Gaze. ®elimo poslati jasnu poruku Hamasu da Izrael neæe tolerirati njihove napade na na¹ teritorij. To se mora promijeniti i prestati. Mislim da je to interes svih, pa i pragmatiènog vodstva umjerenih Palestinaca, izjavila je izraelska ministrica vanjskih poslova Tzipi Livni.<br><br><br>Saudijski imam izrekao je fatvu kojom poziva muslimane da napadnu Izraelce bilo gdje u svijetu u znak odmazde za izraelske napade u pojasu Gaze.<br><br>Izraelske napade osudili su Sirija, Turska i Jordan.<br><br>Pogoðena je d¾amija u Gazi za koju izraelska vojska tvrdi da je kori¹tena za teroristièke aktivnosti. O¹teæena je glavna bolnica, a lijeènici upozoravaju na nedostatak lijekova i bolnièkog osoblja. Uni¹teno je i sjedi¹te Hamasove televizijske postaje Al-Aqse, koja je nastavila emitirati s nepoznate lokacije. Izraelski zrakoplovi napali su i kamp za obuku Hamasovih militanata.<br><br>Glasnogovornik izraelske vojske rekao je da je Izrael ¾elio izbjeæi napade na vjerske ustanove, ali da odgovorni za napade na Izrael neæe nigdje naæi utoèi¹te.<br><br>Hamas nastavlja samoubilaèke napade<br><br>©ef Hamasa u egzilu Haled Meshal u govoru na katarskoj satelitskoj televiziji Al-Jaazera pozvao je Palestince na novu intifadu protiv Izraela i spomenuo nastavak samoubilaèkih napada.<br><br>©ef Hamasove vlade Ismail Hanija rekao je da njegov pokret neæe popustiti pred Izraelom, ma kakvom se on silom koristio.<br><br>Izraelski vojni komentatori tvrde da Izrael ne ¾eli preuzeti nadzor nad pojasom Gaze niti sru¹iti Hamasovu vladu, nego prisiliti Hamas na novi prekid vatre kako bi se zaustavili raketni napadi na ju¾ni Izrael.<br><br>Istodobno, palestinski militanti nastavili su ispaljivati rakete preko granice, od kojih je jedna pala na nenaseljeno podruèje, 30 kilometara unutar Izraela. ®rtava nema.<br><br>Izrael je objavio da je juèer izveo oko stotinu zraènih napada te da su palestinski militanti ispalili oko 70 raketa na izraelski teritorij, pri èemu je poginuo jedan Izraelac.<br><br><br>Abas okrivio Hamas<br><br>Palestinski predsjednik Mahmud Abas okrivio je Hamas da je prekr¹iv¹i ¹estomjeseèni prekid vatre potaknuo izraelske napade na Gazu.<br><br>Razgovarali smo s Hamasom i rekli im, molimo vas, nemojte prekidati primirje. Neka prekid vatre potraje i ne prekida se kako bismo izbjegli ovo ¹to se dogodilo, rekao je èelnik umjerenog palestinskog pokreta Fataha tijekom boravka u Kairu.<br><br>Fatah i Hamas ne sla¾u se otkako je Hamas pobijedio na parlamentarnim izborima 2006. i istjerao snage Fataha iz Gaze u lipnju 2007. Fatah i dalje ima kontrolu nad Zapadnom obalom.<br><br><br>Barak: Izrael ne mo¾e prihvatiti primirje s Hamasom<br><br>Izraelski ministar obrane Ehud Barak dopustio je danas prolazak humanitarnog konvoja s humanitarnom pomoæi za pojas Gaze.<br><br>Istaknuo je da Izrael ne mo¾e prihvatiti primirje s Hamasom i odbio pozive UN-a i EU-a za prekid vatre. Tra¾iti od nas prekid vatre s Hamasom isto je kao da od vas tra¾e primirje s Al-Qa'idom. To je ne¹to ¹to mi zaista ne mo¾emo prihvatiti, rekao je Barak u intervjuu za Fox News.<br><br>Ako Hamas ne prestane ispaljivati rakete, Izrael æe krenuti u kopneni napad, dodao je. Na granici s palestinskim podruèjem izraelska je vojska razmjestila nekoliko desetaka izraelskih oklopnih transportera u oèekivanju moguæe kopnene invazije.<br><br>Izrael je proglasio izvanredno stanje u podruèjima unutar pojasa od 20 kilometara od Gaze pripremajuæi ih za rat.<br><br><br>Vijeæe sigurnosti UN-a: Trenutaèno zaustavljanje nasilja<br><br>Vijeæe sigurnosti UN-a, kojim u prosincu predsjeda Hrvatska, odr¾alo je izvanredni sastanak. Pozvali su na trenutaèno zaustavljanje nasilja u Gazi.<br><br>Sjednica je sazvana na zahtjev Libije, jedine arapske èlanice Vijeæa, a izjava je usugla¹ena nakon èetverosatne rasprave iza zatvorenih vrata. Njome se pozivaju sve èlanice Vijeæa da odgovore na ozbiljne humanitarne potrebe u Gazi.<br><br><br>Upozoravamo da su neki kadrovi u videoprilogu uznemirujuæi.<br><br>Pozivi na suzdr¾anost sti¾u iz cijeloga svijeta. SAD optu¾uje militantnu organizaciju da je pokrenula novu spiralu nasilja. Glavni tajnik UN-a Ban Ki-moon osuðuje izraelsku prekomjernu uporabu sile, ali i palestinske napade. Pozive na suzdr¾anost uputili su i izaslanik za Bliski istok, biv¹i britanski premijer Tony Blair, te francuski predsjednik Nicolas Sarkozy.<br><br>Humanitarne skupine strahuju da bi izraelska operacija mogla dovesti do humanitarne katastrofe u pojasu Gaze, siroma¹noj obalnoj enklavi u kojoj ¾ivi 1,5 miljuna Palestinaca, od kojih polovica ovisi o pomoæi u hrani.<br><br>Ruski ministar vanjskih poslova Sergej Lavrov zatra¾io je od svoje izraelske kolegice Tzipi Livni hitan prekid izraelskih vojnih operacija u pojasu Gaze. Stajali¹te Rusije je jasno. Treba hitno zaustaviti vojne operacije u pojasu Gaze koje su veæ odnijele brojne ¾rtve meðu Palestincima, naglasio je. Tijekom telefonskog razgovora s Livni, voðenog na inicijativu Izraela, Lavrov je inzistirao na va¾nosti propu¹tanja humanitarne pomoæi u Gazu. Rusija je uz EU, UN i SAD jedna od èetiri èlanice Bliskoistoènog kvarteta.<br><br><br>Sastanak Arapske lige u srijedu<br><br>Arapska liga odgodila je do srijede sastanak ministara vanjskih poslova arapskih zemalja, najavljen radi zauzimanja zajednièkog stajali¹ta o izraelskim napadima na pojas Gaze.<br><br>Glavni tajnik Arapske lige Amr Musa rekao je novinarima da je sastanak otkazan jer je veæina ministara zauzeta na razdvojenim skupovima dviju arapskih regionalnih skupina. Zabrinuti smo zbog odgode sastanka, ali æemo nastaviti savjetovanja, dodao je Musa.<br><br><br>Europski prosvjedi protiv nasilja<br><br>U europskim gradovima nastavljeni su prosvjedi protiv izraelskih zraènih napada na pojas Gaze. Tri su osobe uhiæene zbog remeæenja javnog reda na manifestaciji ispred veleposlanstva Izraela u Londonu, gdje se okupilo oko 700 ljudi. Manifestaciju je organizirala koalicija Stop the war. Prosvjednici su sru¹ili ograde blizu veleposlanstva Izraela.<br><br>Britanski ministar vanjskih poslova David Miliband pozvao je na trenutaèni prekid nasilja u Gazi.<br><br>Vi¹e od tisuæu osoba prosvjedovalo je u Parizu na dva razlièita skupa protiv izraelskih napada. Najveæi skup, na kojem je bilo 1 300 ljudi, odr¾an je u èetvrti Barbes gdje ¾ivi velik broj stanovnika iz Magreba. Na drugom skupu, na vrhu Elizejskih polja na Etoile, skupilo se izmeðu 150 i 300 ljudi.<br><br>Izmeðu 700 osoba, prema podacima policije, i 2 000, prema organizatorima, protestiralo je poslijepodne ispred izraelskog veleposlanstva u Kopenhagenu protiv izraelskih napada na Gazu. Mirni prosvjed odr¾an je na poziv nekoliko danskih muslimanskih organizacija.<br><br>U ©vedskoj se okupilo oko tisuæu ljudi u Stockholmu, a jedna manifestacija predviðena je za ponedjeljak. U Finskoj se predviðaju manifestacije za ponedjeljak i utorak poslijepodne ispred parlamenta.<p id='pkom_4462' class='tx_de ram0'><span id='kom_da_4462' onMouseOver='miNjaj("sl_d4462", "idax")' onMouseOut='miNjaj("sl_d4462", "ida")'><img name='sl_d4462' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e www.hrt.hr. ' title=' www.hrt.hr ima dobar komentar ' onclick='komLajkiT(4462, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_4462' onMouseOver='miNjaj("sl_n4462", "inex")' onMouseOut='miNjaj("sl_n4462", "ine")'><img name='sl_n4462' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e www.hrt.hr. ' title=' www.hrt.hr ima lo¹ komentar ' onclick='komLajkiT(4462, "p_doli", 0)'></span></p></div>
+<a name='2008-12-30-19-43-10'></a><a name='11'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 11. komentar '><b>www.index.hr</b>, 2008-12-30 u 19:43:10</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<b>AMD na samom rubu - otkazi i 70 milijuna dolara gubitka</b><br><br>EKONOMSKI kolaps nije zaobi¹ao niti tehnolo¹ki sektor, nakon nestanka Abita u krizu je zapao i veliki AMD.<br><br>Kalifornijski proizvoðaè procesora i flash memorija, Advanced Micro Devices, jo¹ je u studenome najavio nu¾no otpu¹tanje 500 radnika, no ta se brojka popela do 600 èemu se pridru¾uju katastrofalni rezultati poslovanje u èetvrtom tromjeseèju.<br><br>Naime, posljednji ovogodi¹nji period stajao je AMD dodatnih 70 milijuna dolara gubitaka ¹to se ponajvi¹e odnosi na restrukturiranje same tvrtke. Otpu¹tanje 600 radnika stajalo je AMD 34 milijuna dolara otpremnina, 13 milijuna dolara iznose tro¹kovi zatvaranja odreðenih radnih mjesta, 17 milijuna dolara cijena je koju AMD treba platiti za popravak o¹teæene imovine, a ¹est milijuna dolara namijenjeno je izlaznim tro¹kovima AMD-ovih tvornica.<br><br>Cijena dionice AMD ove je godine pala za èetiri dolara, sa ¹est na sada¹njih dva. 2009. godina, kako najavljuje AMD, bit æe oznaèena velikim gubitcima stoga se oèekuje jo¹ tmurniji scenarij.<p id='pkom_4486' class='tx_de ram0'><span id='kom_da_4486' onMouseOver='miNjaj("sl_d4486", "idax")' onMouseOut='miNjaj("sl_d4486", "ida")'><img name='sl_d4486' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e www.index.hr. ' title=' www.index.hr ima dobar komentar ' onclick='komLajkiT(4486, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_4486' onMouseOver='miNjaj("sl_n4486", "inex")' onMouseOut='miNjaj("sl_n4486", "ine")'><img name='sl_n4486' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e www.index.hr. ' title=' www.index.hr ima lo¹ komentar ' onclick='komLajkiT(4486, "p_doli", 0)'></span></p></div>
+<a name='2009-10-11-01-51-19'></a><a name='12'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 12. komentar '><b>Jutarnji list</b>, 2009-10-11 u 01:51:19</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+09.10.2009 17:29<br><b>Uhiæen in¾enjer CERN-a zbog povezanosti s Al-Qaedom</b><br><br>ZAGREB - Francuske vlasti uhitile su in¾enjera zaposlenog u CERN-u (Europska organizacija za atomska istra¾ivanja) zbog sumnje u povezanost s teroristièkom organizacijom Al-Qaedom.<br><br>Rijeè je o jednom od dvojice braæe uhiæenih u gradiæu Vienne na jugoistoku Francuske. Sumnja se da su braæa povezana s ogrankom al-Qaide za islamski Maghreb (Sjevernu Afriku).<br><br>Zasad nije poznat identitet uhiæenog in¾enjera. U CERN-u istièu da je rijeè o osobi koja je radila s vanjskom institucijom te da nije bio u kontaktu s nièim ¹to bi se moglo upotrijebiti za teroristièke aktivnosti.<br><br>U ¹vicarskom institutu CERN vodi se intelektualno najambiciozniji znanstveni pothvat u povijesti. LHC, najveæi instrument na svijetu smje¹ten na dubini od 100 metara u tunelu opsega 27 kilometara èiji je jedan dio u ©vicarskoj, a drugi u Francuskoj. Veliki hadronski sudaraè (LHC) rekonstruirat æe uvjete kakvi su vladali u trenucima nastanka svemira, za koji se smatra da je nastao Velikim praskom (Big Bang) prije 13 milijardi godina.<br><br>- - - <br>http://www.jutarnji.hr/svijet/clanak/art-2009,10,9,,179045.jl<br><br><br>10.10.2009 18:55<br><b>Znanstvenik koji je hvatao 'Bo¾ju èesticu' radio za teroriste</b><br><br>Fizièar koji je radio na LHC-u u ©vicarskoj navodno je kontaktirao s èlanovima al-Qa'ide u islamskom Magrebu i javljao im mete za teroristièke napade u Francuskoj<br><br>®ENEVA - Strahovi da al-Qa'ida planira napade na nuklearnu industriju u Europi obnovljeni su nakon ¹to su francuski tajni agenti uhitili fizièara koji radi u Europskoj organizaciji za atomska istra¾ivanja (CERN) u ®enevi.<br><br>Tridesetdvogodi¹nji mu¹karac, priveden zajedno sa svojim 25-godi¹njim bratom, osumnjièen je da je dao listu teroristièkih meta svjevernoafrièkim islamskim radikalistima. Radio je kao in¾enjer u CERN-u u ®enevi, kako navodi policija. Bio je jedan od 7000 znanstvenika koji su radili na LHC-u (Veliki hadronski sudaraè), najveæem i najskupljem znanstvenom stroju na svijetu, vrijednom pet milijardi eura. <br><br>[ ©pijuna¾a - Fizièar je navodno islamistima javio mete za napade u Francuskoj ]<br><br>Fizièar i njegov brat, èija imena nisu objavljena, francuski su dr¾avljani al¾irskog podrijetla. Agenti su navodno presreli fizièarove poruke u kojima radikalima navodi mete u Francuskoj. Vjeruje se da je bio u kontaktu s èlanovima al-Qa'ide u islamskom Magrebu - dijelu sjeverne Afrike koji pokriva Maroko, Al¾ir i Tunis.<br><br>- Izrazio je ¾elju za teroristièkim èinom - naveo je jedan izvor iz obavje¹tajne slu¾be. Nakon ¹to su ga indentificirali, tijekom istage o francuskoj radikalnoj islamistièkoj mre¾i koja je radikale slala u Afganistan, fizièar je bio stavljen pod nadzor, te su ga agenti pratili 18 mjeseci. Pro¹li je mjesec sudac Christophe Teissier, specijaliziran za terorizam, otvorio i slu¾benu istragu o aktivnostima fizièara.<br><br> Braæa su navodno privukla pa¾nju tajnih slu¾bi kad su agenti nadgledali internet u sklopu istrage o regrutiranju ekstremista za borbe u Afganistanu. Snimljeno je nekoliko poruka izmeðu braæe i pripadnika al-Qa'ide. Njih dvojica uhiæena su u svom domu u gradu Vienne, na istoku Francuske. Policija je zaplijenila dva kompjutora, tri hard diska i dva USB prikljuèka, a njih dvojicu privela na ispitivanje. <br><br>- Mo¾da smo izbjegli najgori scenarij. Neprestano smo na oprezu i odreðene organizacije svakodnevno pratimo i nadgledamo. Na¹a budnost nikada ne opada. Rizik je stalno prisutan - izjavio je nakon uhiæenja fizièara Brice Hortefeux, francuski ministar unutarnjih poslova.<br><br>[ CERN - Nijeèe da je osumnjièeni do¹ao u kontakt sa spornim tvarima ]<br><br>Iz CERN-a su objavili kako osumnjièeni nikada nije do¹ao u kontakt s bilo kakvim tvarima koje bi mogle biti upotrijebljene u teroristièke svrhe.<br><br>- - - <br>http://www.jutarnji.hr/svijet/clanak/art-2009,10,10,,179157.jl<p id='pkom_5724' class='tx_de ram0'><span id='kom_da_5724' onMouseOver='miNjaj("sl_d5724", "idax")' onMouseOut='miNjaj("sl_d5724", "ida")'><img name='sl_d5724' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Jutarnji list. ' title=' Jutarnji list ima dobar komentar ' onclick='komLajkiT(5724, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_5724' onMouseOver='miNjaj("sl_n5724", "inex")' onMouseOut='miNjaj("sl_n5724", "ine")'><img name='sl_n5724' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Jutarnji list. ' title=' Jutarnji list ima lo¹ komentar ' onclick='komLajkiT(5724, "p_doli", 0)'></span></p></div>
+<a name='2009-11-27-14-24-42'></a><a name='13'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 13. komentar '><b>Jutarnji list</b>, 2009-11-27 u 14:24:42</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nad'>TRAGOM BO®JE ÈESTICE</span><br><span class='k_nas'>Stroj za Veliki prasak: U LHC-u veæ poèeli prvi sudari protona</span><br><br>Objavljeno: 24.11.2009<br><br><span class='k_pod'>Popravak LHC-a trajao je gotovo 14 mjeseci i stajao oko 30 milijuna eura te veæ nakon tri dana izaziva pravo odu¹evljenje znanstvenika</span><br><br>Svega tri dana nakon "o¾ivljavanja" LHC (Veliki hadronski sudaraè) u tome divovskome sudaraèu su poèeli prvi sudari protona. Znanstvenici ne kriju svoje odu¹evljenje jer su prvi sudari bili predviðeni tek za desetak dana.<br><br>- Ovo je veliko postignuæe do kojega smo do¹li u kratko vrijeme - izjavio je za BBC Rolf Heuer, generalni direktor CERN-a (Europski centar za nuklearna istra¾ivanja) koji je dom LHC-a, najveæeg znanstvenog instrumenta na svijetu.<br><br>"Stroj za Veliki prasak", kako popularno zovemo LHC, trebao bi rekonstruirati uvjete koji su vladali u prvim trenucima nastanka svemira. Smatra se da je svemir nastao Velikim praskom (Big Bang) prije oko 13,7 milijardi godina. Vi¹e od pet milijardi eura vrijedni LHC na spektakularan je naèin pu¹ten u pogon 10. rujna 2008. godine, ali je veæ nakon desetak dana do¹lo do prekida zbog kvara na jednom od 1600 supravodljivih magneta koji èine srce LHC-a. Taj divovski instrument smje¹ten je na dubini od sto metara u tunelu opsega 27 kilometara koji se jednim dijelom prote¾e u ©vicarskoj, a drugim dijelom u Francuskoj.<br><br>Popravak LHC-a trajao je gotovo 14 mjeseci i stajao oko 30 milijuna eura. No, nakon ponovnog pu¹tanja u rad stroj radi besprijekorno.<br><br>- Pro¹logodi¹nji kvar 19. rujna je sigurno bio te¹ki udarac ali LHC se na fantastièan naèin digao. Mnogo smo nauèili u proteklih godinu dana - rekao je dr. Vuko Brigljeviæ, jedan od dvadesetak hrvatskih fizièara ukljuèenih u eksperimente u CERN-u gdje suraðuje vi¹e od 6500 znanstvenika iz 80 zemalja.<br><br>Glavni cilj LHC-a jest uloviti Higgsov bozon, famoznu èesticu koja je kljuè za nastanak mase u svemiru. Higgsov bozon teorijski je predvidio britanski fizièar Peter Higgs jo¹ 1964. godine, ali svih proteklih godina èestica bila neuhvatljiva. Zbog toga je nobelovac Leon Lederman u ¹ali Higgsov bozon nazvao "Bo¾jom èesticom".<br><br><br>- - - <br><span class='k_vez'>http://www.jutarnji.hr/stroj-za-veliki-prasak--u-lhc-u-vec-poceli-prvi-sudari-protona/367551/</span><p id='pkom_6276' class='tx_de ram0'><span id='kom_da_6276' onMouseOver='miNjaj("sl_d6276", "idax")' onMouseOut='miNjaj("sl_d6276", "ida")'><img name='sl_d6276' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Jutarnji list. ' title=' Jutarnji list ima dobar komentar ' onclick='komLajkiT(6276, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_6276' onMouseOver='miNjaj("sl_n6276", "inex")' onMouseOut='miNjaj("sl_n6276", "ine")'><img name='sl_n6276' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Jutarnji list. ' title=' Jutarnji list ima lo¹ komentar ' onclick='komLajkiT(6276, "p_doli", 0)'></span></p></div>
+<a name='2009-11-29-13-31-38'></a><a name='14'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 14. komentar '><b>HINA</b>, 2009-11-29 u 13:31:38</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+29.11.2009. / 12:30<br><span class='k_nas'>Glas za ksenofobiju: ©vicarci danas odluèuju hoæe li zabraniti minarete</span><br><br>©vicarci se u nedjelju izja¹njavaju na referendumu o prijedlogu ¹vicarske populistièke Narodne stranke o zabrani gradnje minareta.<br><br>Za ¹vicarsku vladu, poslovne krugove i sve politièare od ljevice do desnog centra zabrana gradnje minareta "izazvala bi nerazumijevanje u inozemstvu i ¹tetila bi ugledu ©vicarske".<br><br>Nakon ranijih plakata kojima se poziva na protjerivanje stranih "crnih ovaca" iz ©vicarske, propaganda populistièke krajnje desnice za ovaj referendum opet je izazvala skandal. Njezini plakati pokazuju muslimanku, pokrivenu velom ispred ¹vicarske zastave prekrivene minaretima, èija stilizirana silueta podsjeæa na rakete.<br><br>Prizori mr¾nje<br><br>Taj prizor "izaziva mr¾nju", osudilo je ¹vicarsko savezno povjerenstvo protiv rasizma (CFR), dok je Odbor za ljudska prava UN-a izrazio zabrinutost kampanjom.<br><br>Katolièka i protestantska crkva kao i predstavnici ¾idovske i muslimanske zajednice jednoglasno su osudili projekt. "Strah je lo¹ savjetnik", upozorili su katolièki sveæenici.<br><br>53 posto ©vicaraca protivi se inicijativi<br><br>U ©vicarskoj ima prema najnovijim vladinim statistikama oko 400.000 muslimana, od èega su 50.000 praktièni vjernici. U ©vicarskoj ima 7,5 milijuna stanovnika ¹to islam èini drugom vjeroispovijesti u zemlji nakon kr¹æanstva. Mnogi od muslimana ratne su izbjeglice iz BiH.<br><br>Prema zadnjoj anketi, 53 posto ©vicaraca protivi se inicijativi. Dosad su u ©vicarskoj podignuta èetiri minareta pored d¾amija.<br><br><br>- - - <br>http://www.nacional.hr/clanak/72458/glas-za-ksenofobiju-svicarci-danas-odlucuju-hoce-li-zabraniti-minarete<p id='pkom_6301' class='tx_de ram0'><span id='kom_da_6301' onMouseOver='miNjaj("sl_d6301", "idax")' onMouseOut='miNjaj("sl_d6301", "ida")'><img name='sl_d6301' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e HINA. ' title=' HINA ima dobar komentar ' onclick='komLajkiT(6301, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_6301' onMouseOver='miNjaj("sl_n6301", "inex")' onMouseOut='miNjaj("sl_n6301", "ine")'><img name='sl_n6301' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e HINA. ' title=' HINA ima lo¹ komentar ' onclick='komLajkiT(6301, "p_doli", 0)'></span></p></div>
+<a name='2010-01-29-15-56-19'></a><a name='15'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 15. komentar '><b>...</b>, 2010-01-29 u 15:56:19</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+YouTube : History Channel <br><a href='http://www.youtube.com/watch?v=roaKAN2IRcM' target='_blank'>Ratovanje vremenskim nepogodama - Od kontroliranja munja do Nikole Tesle - 1 od 4</a><br><br>Ovaj serijal s History channela daje nam uvid u mogucnosti mijenjanja i kontroliranja - posrednog utjecanja na vremenske prilike - koje trenutacno posjeduju najmocnije vojne sile svijeta ...<p id='pkom_6985' class='tx_de ram0'><span id='kom_da_6985' onMouseOver='miNjaj("sl_d6985", "idax")' onMouseOut='miNjaj("sl_d6985", "ida")'><img name='sl_d6985' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e .... ' title=' ... ima dobar komentar ' onclick='komLajkiT(6985, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_6985' onMouseOver='miNjaj("sl_n6985", "inex")' onMouseOut='miNjaj("sl_n6985", "ine")'><img name='sl_n6985' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e .... ' title=' ... ima lo¹ komentar ' onclick='komLajkiT(6985, "p_doli", 0)'></span></p></div>
+<a name='2010-01-29-16-05-49'></a><a name='16'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 16. komentar '><b>Marino Tumpiæ</b>, 2010-01-29 u 16:05:49</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Tajno klimatolo¹ko oru¾je - HAARP</span><br>ponedeljak, 20 april 2009 19:29<br><br><b>Klima na Zemlji se mijenja! Tko je za to odgovoran? Prirodni procesi, nenamjerna èovjekova aktivnost, tajni znanstveni projekti?</b><br><br>Svakodnevno smo svjedoci klimatskih promjena kako na lokalnoj tako i na globalnoj razini. Suho li¹æe koje je s grana drveæa trebalo otpasti jo¹ u listopadu èvrsto se dr¾i i na najjaèoj buri krajem travnja. Cvijeæe koje je nekada procvjetalo samo tijekom naj¾e¹æih ljetnih vruæina danas cvate i tijekom zime. Nerijetko vruæi proljetni dan za svega par sati postaje nesnosno hladan i be¾ivotan, u trenu nestaje cvrkut ptica, ¾ivot zamire, biljke hiberniraju.. Nekontrolirane poplave na nekad pustinjski suhim predjelima odnose ¾ivote a istovremeno na drugom kraju svijeta nekada¹nje ¾itnice ne mogu opstati bez forsiranog sustava navodnjavanja...Sve je ovo na¹a stvarnost te se vi¹e nitko zapravo i ne obazire na podivljale vremenske i klimatolo¹ke prilike.<br><br>No tko ili ¹to generira takve oèite promjene vremenskih prilika tijekom posljednjih nekoliko desetljeæa?! Najpo¹teniji bi odgovor bio kako nitko na svijetu nezna i ne mo¾e na to pitanje dati jednoznaèan odgovor s dovoljno velikom sigurno¹æu!<br><br>Pored prirodnih uzroka klimatskih promjena (aktivnost Sunca, promjena nagiba Zemljine osi, geolo¹ki procesi..) posljednje se vrijeme puno govori i o nekontroliranoj, nenamjernoj promjeni klime kojoj je uzrok èovjekova djelatnost - tehnologija. No mo¾e li èovjek namjerno, kontrolirano izazivati promjene vremenskih prilika? Da! Mo¾e i to èini svakodnevno! Rakete za sprjeèavanje tuèe ili izazivanje ki¹e dio su na¹e svakodnevice. Rat u Vijetnamu voðen je dijelom i klimatolo¹kim oru¾jem kada su smi¹ljeno izazivane vremenske neprilike ne bi li se osujetilo neprijateljske jedinice u borbenim djelovanjima ili onemoguæila poljoprivredna proizvodnja. No ¹to ako po¾elimo ne¹to vi¹e i od toga?<br><br>Tijekom osamdesetih godina pro¹log stoljeæa uvidjelo se kako se klimatolo¹ke prilike oko nuklearnih elektrana mijenjaju. U krugu dvadesetak km unaokolo njih prosjeèna temperatura raste, kolièina padalina se poveæava za 10-20%! Sliène se stvari dogaðaju i uokolo velikih termo i hidro elektrana. Sve to dalo je tridesetak godina ranije nekim znanstvenim krugovima ideju da se poku¹a upravljati klimom - ne samo na malom, lokaliziranom podruèju veæ na velikim povr¹inama pa i u globalnim razmjerima.<br><br>Na¾alost, moguæe koristi i ¹tete mijenjanja klime nisu zaintrigirale samo "nevine" znanstvenike veæ i vojne strukture Rusije, SAD-a..<br><br>Prièa o eksperimentima namjerne promjene globalne klime zapoèinje pod krinkom istra¾ivaèkih projekata, a ona nas vodi prema velikom znanstveniku s na¹ih prostora - Nikoli Tesli!<br><br>[ <i>foto: Mamutski sustav antena HAARPa, obratite pa¾nju na velièinu antena i velikih kamp kuæica u njihovom podno¾ju!</i> ]<br><br>Projekt HAARP (High-frequncy Active Auroral Research Program) slu¾beno se predstavlja kao civilni znanstveni projekt èiji je cilj pomoæu umjetnih promjena temperature u ionosferi istra¾iti njezine karakteristike. Javna je tajna kako je rijeè o vojnom projektu vojske SAD. Podaci o istome su "procurili" u javnost 1995. godine. Tada je postalo jasno kako HAARP mora omoguæiti sigurne komunikacije s duboko zaronjenim nuklearnim podmornicama diljem svijeta bez moguænosti opstrukcije informacija od strane protivnika.<br><br>[ <i>foto: Shematski prikaz djelovanja sustava HAARP</i> ]<br><br>Stvaranjem "rijeke elektriciteta" koja se iz ionosfere dovodi na polarnu kapu te tamo formira umjetna vibrirajuæa antena za oda¹iljanje elektromagnetskih valova komunikacijske tehnologije podi¾u se na jednu sasvim novu, vi¹u, razinu. Tesla je bio veoma oprezan u publiciranju svojih rezultata pionirskih istra¾ivanja prijenosa energije i informacija na velike udaljenosti. Ipak njegov rad nije pro¹ao nezapa¾eno i vojska SAD se dokopala svih spisa koje je Tesla ostavio iza sebe.<br><br>[ <i>foto: Vremenske nepogode mo¾da nisu samo djelo prirode veæ i èovjeka</i> ]<br><br>Prema rijeèima Rosalie Bertel (predsjednik Internacionalnog instituta za brigu o ljudskom zdravlju) HAARP je mamutski "grijaè" sposoban da u ionosferi naèini velike promjene. U moguænosti je ne samo da stvara malene "rupe" veæ i da bezmalo "zasijeca" atmosferski sloj koji nas èuva od pogubnih kozmièkih zraèenja! HAARP pretpostavlja ureðaj snage 1.7GW koju putem slo¾enog antenskog sustava mo¾e emitirati u ciljano podruèje ionosfere. Na taj se naèin izaziva "kuhanje" ionosfere koja reagira zraèenjem u podruèju dugih valnih duljina prema Zemlji, ¹to mo¾e izazvati globalne posljedice po klimu, biljni i ¾ivotinjski svijet te èovjeka!<br><br>Na taj naèin be¾ièni prijenos energije, kontrola elektroprocesa u Schumanovom rascjepu te oscilator za izazivanje vibracija tla, kao kljuèni Teslini projekti predstavljaju militaristièki osnov projekta HAARP. Njegovo djelovanje mo¾e biti upotrijebljeno prema nepoæudnim dr¾avama, re¾imima ili narodima na bilo kojem dijelu Zemaljske kugle. Neovisni znanstveni krugovi rekonstrukcijom rascjepkanih projekata sustava HAARP do¹li su do zabrinjavajuæih rezultata. Taj je projekt sposoban (ili æe to uskoro biti) mijenjati lokalnu i globalnu klimu, naèiniti nezamislive promjene ekosustava, blokirati, ometati i onemoguæiti komunikaciju protivnika uz istodobno oèuvanje vlastitog komunikacijskog sustava, onemoguæiti elektroenergetski sustav, izvr¹iti nevidljiv pritisak i izazvati ciljane promjene mentalnog pona¹anja i stanja ljudi i ¾ivotinja..<br><br>Ukratko HAARP omoguæava potpunu kontrolu nad planetom onome tko ga posjeduje, ¾eli i zna iskoristiti!<br><br>Ruska Duma u svojim dokumentima - kritici amerièkog projekta mo¾da je posredno najbolje opisala vlastita, slièna vojna istra¾ivanja za koja se jedino zna da se provode jo¹ od pedesetih godina pro¹log stoljeæa u Sibirskim bespuæima daleko od oèiju javnosti.<br><br>Poznato je i kako Ruska vojska jo¹ od ¹ezdesetih godina pro¹log stoljeæa velikim antenskim sustavom mo¾e kontrolirati vremenske prilike u krugu od preko 300km unaokolo antena!<br><br>Desetak godina kasnije u javnost izlaze prvi znanstveni radovi u kojima anga¾irani znanstvenici upozoravaju kako jednom inicirani procesi otapanja ledenjaka, promjene kolièina padalina i drugih klimatskih promjena mo¾da neæe biti moguæe zaustaviti! Od tada na ovamo vojne strukture Rusije i SAD strogo paze na tajnost prilikom izvoðenja eksperimenata kontrole klime i publiciranja radova na ovu temu.<br>Bespuæa ledene Aljaske i Sibira kao stvorena su za nesmetano eksperimentiranje procesima za koje ne znamo kako i/ili koliko veæ sada utjeèu na nas kao emocionalo-intelektualne individue, biljke, ¾ivotinje, tehnièke tvorevine..<br><br>UN-ov IPPC (Meðunarodni projekt o klimatskim promjenama) na kojem je godinama radilo preko 2.500 znanstvenika dobio je 2007. godine Nobelovu nagradu za mir!<br><br>[ <i>foto: Polarna svjetlost iznad poligona HAARP na Aljasci</i> ]<br><br>No ono ¹to nas sve skupa treba zabrinuti je izostanak objavljivanja pojedinih dokumenata projekta "Rat za klimu", koji su i danas nedostupni javnosti! Moguæe su tamo navedeni podaci previ¹e intrigantni i optu¾ujuæi za naredbodavce Teslinih eksperimenata.<br><br>"Luckasti" èovjek iz Smiljana shvatio je na vrijeme pozitivne dobiti njegovih zamisli za ljudski rod, ali i opasnosti ako bi prirodne sile postale upravljive u vlasni¹tvu intelektno i duhovno impotentnih kreatura. Nikada nije do kraja objavio i razjasnio svoje rezultate. Mo¾da nije stigao do njih, mo¾da se i hvalio "u prazno", no nama danas ostaje samo nada kako æe HAARP, SKYFIRE, STORMFURY i slièni eksperimenti postati vlasni¹tvo svih ljudi na planeti kako bi njime mogli èiniti dobro. U protivnom mogli bi ubrzo doæi u situaciju da na¹e mjesto pod Suncem, nakon globalne katastrofe koju sami iniciramo, prepustimo nekoj drugoj vrsti.<br><br>Na kraju moramo spomenuti i kako se u pojedinim krugovima bezrezervno odobravaju ovakva istra¾ivanja. Naime, u sluèaju da prirodni procesi vode klimatske promjene prema katastrofiènim scenarijima za ljudski rod - preostala bi nam moguænost da svoju sudbinu sami uzmemo u svoje ruke...<br><br><br>- - - <br>http://www.astronomija.co.rs/sunev-sistem/planete/zemlja/klima/569-tajno-klimatoloko-oruje-haarp.html<p id='pkom_6986' class='tx_de ram0'><span id='kom_da_6986' onMouseOver='miNjaj("sl_d6986", "idax")' onMouseOut='miNjaj("sl_d6986", "ida")'><img name='sl_d6986' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e Marino Tumpiæ. ' title=' Marino Tumpiæ ima dobar komentar ' onclick='komLajkiT(6986, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_6986' onMouseOver='miNjaj("sl_n6986", "inex")' onMouseOut='miNjaj("sl_n6986", "ine")'><img name='sl_n6986' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e Marino Tumpiæ. ' title=' Marino Tumpiæ ima lo¹ komentar ' onclick='komLajkiT(6986, "p_doli", 0)'></span></p></div>
+<a name='2010-03-10-23-32-23'></a><a name='17'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 17. komentar '><b>...</b>, 2010-03-10 u 23:32:23</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>LHC se zaustavlja</span><br><br>
+Krajem 2011. godine na godinu se dana zatvara Veliki sudaraè hadrona (LHC), 27 kilometara dug kru¾ni ubrzivaè subatomskih èestica. Na njemu æe se potom u godinu dana prepraviti zamijeæeni nedostaci, izjavio je BBC-u dr. Steve Myers, direktor odjela ubrzivaèa u CERN-u, Europskom centru za nuklearna istra¾ivanja nedaleko od ®eneve. Popravak i uhodavanje odgodit æe istra¾ivanja za jo¹ dvije godine, nakon 14 mjeseci zastoja poslije havarije iz rujna 2008.<br><br>- Stroj kakav je LHC gradi se samo jednom. Na¾alost, u javnosti se ne èuje za stotine tisuæa sklopova koji rade izvrsno, a nevolje uvijek odjeknu jaèe. Morate znati da je to prototip graðen na tehnologijama buduænosti i to je ujedno jedini naèin da te tehnologije provjerimo. Bez prepravka ne bismo iz LHC-a izvukli onoliko znanosti koliko ¾elimo i koliko je objektivno moguæe - rekao je BBC-u Myers.<br><br>Veliki sudaraè hadrona graðen je èetvrt stoljeæa da bi fizièari, sudarajuæi subatomske èestice u snopovima ubrzanima na visoke energije, iz njihovih kratkotrajnih "krhotina" mogli prouèavati stanje materije u prvoj milijuntinki prve milijuntinke sekunde nakon Velikog praska te odgovoriti na najmanje èetiri temeljna pitanja o prirodi postojeæega svijeta.<br><br><br>- - - <br><span class='k_dod'><b>Dodatak:</b><br>Ovo je jo¹ jedna podvala i la¾, a valja se zapitati za¹to Norve¾ani grade projekt Camelot.</span><p id='pkom_7446' class='tx_de ram0'><span id='kom_da_7446' onMouseOver='miNjaj("sl_d7446", "idax")' onMouseOut='miNjaj("sl_d7446", "ida")'><img name='sl_d7446' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e .... ' title=' ... ima dobar komentar ' onclick='komLajkiT(7446, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7446' onMouseOver='miNjaj("sl_n7446", "inex")' onMouseOut='miNjaj("sl_n7446", "ine")'><img name='sl_n7446' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e .... ' title=' ... ima lo¹ komentar ' onclick='komLajkiT(7446, "p_doli", 0)'></span></p></div>
+<a name='2010-03-30-18-33-33'></a><a name='18'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 18. komentar '><b>HINA</b>, 2010-03-30 u 18:33:33</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nad'>osloboðena najveæa energija ikad stvorena u laboratoriju</span><br><span class='k_nas'><a href='http://www.business.hr/hr/Naslovnica/Znanost/Stroj-Velikoga-praska-usao-u-povijest' target='_blank'>Stroj "Velikoga praska" u¹ao u povijest!</a></span><br><br><span class='k_pod'>Veliki hadronski sudaraè (LHC), poznat i kao stroj "Velikoga praska", u¹ao je u utorak u povijest izazvav¹i sudar snopova èestica pri èemu je osloboðena najveæa energija ikad stvorena u laboratoriju.</span> <br><br>"Skupljamo prve podatke - ovo je povijesni trenutak", napisali su znanstvenici na Twitteru.<br><br>Uzbuðenje èinjenicom da, nakon brojnih problema, konaèno mogu prikupiti podatke, mogla se osjetiti i u prvim porukama znanstvenika nakon svake uspje¹no obavljene faze eksperimenta.<br><br>Èinjenica da æe za obradu podataka trebati mjeseci ili godine ne umanjuju odu¹evljenje struènjaka koji smatraju da je upravo nastupila nova znanstvena epoha.<br><br>Povijesni sudar, pri kojem su se protoni meðusobno razbijali pri brzinama 3,5 puta veæim od dosada¹njeg rekorda, trebao bi znanstvenicima pomoæi u razumjevanju prirode svemira.<br><br>Kvar LHC-a u utorak ujutro, zbog kojeg su se snopovi èestica izgubili, brzo je popravljen omoguæujuæi znanstvenicima i njihovim sljedbenicima diljem svijeta da sudjeluju u povijesnom postignuæu.<br><br>Pri prvom poku¹aju 2008., pojavili su se ozbiljni tehnièki problemi koji su izbacili iz uporabe stroj vrijedan deset milijardi dolara. Nakon 14-mjeseènog popravka i nekoliko pokusa pri ni¾im energijama, do¹lo je vrijeme da za ponovno pokretanje glavnog pokusa.<br><br>LHC, smje¹ten 100 metara ispod Europske organizacije za nuklearna istra¾ivanja (CERN) na granici ©vicarske i Francuske, proizveo je najbr¾i dosad izmjereni sudar èestica od sedam teraelektronvolta (TeV).<br><br>CERN sada planira da stroj radi kontinuirano 18 do 24 mjeseca, uz kratke tehnièke prekide krajem 2010.<br><br>Cilj je ustanoviti mogu li odreðene èestice ponovno nastati i kako elementarne èestice dobivaju masu, a sve kako bi se objasnio trenutak nakon Velikog praska, goleme eksplozije prije oko 14 milijardi godina kojom je nastao svemir.<br><br>Znanstvenici tragaju za tzv. Higgsovom èesticom bozona i spoznajom za¹to materija ima masu.<br><br><br>- - - <br><span class='k_dod'><b>Dodatak:</b><br>Kad znamo da se 90% svjetske znanosti koristi u vojne svrhe, zar ovi zbilja misle kako su "goimi" toliko glupi? Priprema se tu ipak ne¹to drugo, a "Bo¾ja èestice" - ona o kojoj nam prièaju - tek je gradivo za djecu onih koje obraðuje Komitet 300 & Co. ...</span><p id='pkom_7593' class='tx_de ram0'><span id='kom_da_7593' onMouseOver='miNjaj("sl_d7593", "idax")' onMouseOut='miNjaj("sl_d7593", "ida")'><img name='sl_d7593' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e HINA. ' title=' HINA ima dobar komentar ' onclick='komLajkiT(7593, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_7593' onMouseOver='miNjaj("sl_n7593", "inex")' onMouseOut='miNjaj("sl_n7593", "ine")'><img name='sl_n7593' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e HINA. ' title=' HINA ima lo¹ komentar ' onclick='komLajkiT(7593, "p_doli", 0)'></span></p></div>
+<a name='2010-11-04-15-00-52'></a><a name='19'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 19. komentar '><b>abC</b>, 2010-11-04 u 15:00:52</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+Negdje sam na¹ao podatak da se 90% podruèja znanosti koristi u vojne svrhe pa mi se ovaj Dragin uvodni tekst èini normalnim i jedinim logiènim jer samo "ovce" mogu popu¹iti ovu preskupu foru da se radi iskljuèivo o znanstvenom projektu koji ima za cilj povratak u 'Veliki prasak'.<br><p class='navod_kom'><span class='p_nas'>LHC æe napokon izazvati Veliki prasak</span><br><br>Za svega nekoliko dana, odnosno kako su najavili u CERN-u, koji vodi projekt LHC-a, trebalo bi se krenuti u stvaranje uvjeta neposredno nakon velikog praska. LHC je dosad sudarao èestice protona, kako bi otkrio neka osnovna znanja o prirodi materije.<br><br>Odsad, LHC æe sudarati ione olova i eksperiment æe trajati puna èetiri tjedna. Za to æe biti zadu¾en projekt nazvan ALICE, koji se nalazi u sklopu LHC-a. ALICE je zapravo jedan od èetiri projekta eksperimenata, koje CERN provodi pomoæu gigantskog sudaraèa èestica, pi¹e BBC.<br><br>Ioni olova<br><br>Cilj sudaranja iona olova, jest istra¾iti kako je svemir izgledao u trenutku roðenja. Sudaranje protona, s druge strane, bilo je namijenjeno drugom cilju, odnosno potrazi za neuhvatljivim Higgsovim bosonom te potragom za novim fizikalnim zakonima, poput supersimetrije.<br><br>"ALICE æe samo privremeno sudarati ione", rekao je glasnogovornik CERN-a James Gillies. Dodao je kako bi eksperiment mogao pokazati stanje svemira prije 13,7 milijardi godina, odnosno odmah nakon Velikog praska. Znanstvenici vjeruju kako je u trenutku velikog praska postojalo posebno stanje materije, drugaèije od materije koja danas saèinjava svemir.<br><br>Peti element<br><br>Ono o èemu znanstvenici govore, sami su nazvali kvark-gluon plazmom, ili petim elementarnim stanjem. kako znamo, preostala èetiri su èvrsto, tekuæe, plinovito i stanje plazme (koja nastaje micanjem elektrona iz atoma). "To je takvo stanje materije, koje nastaje ako uspje¹no rastopite nuklearnu materiju, koja saèinjava atome te oslobaðajuæi ono ¹to se nalazi unutra, a to su kvarkovi i gluoni", objasnio je Gillies.<br><br>"Iako æe malene vatrene kugle prilikom sudara postojati tek iznimno mali djeliæ sekunde (odnosno trilijunti dio trilijuntog dijela sekunde), temperature æe doseæi preko 10 trilijuna stupnjeva Celzijusa, ¹to je milijun puta veæa temperatura od one u sredi¹tu Sunca", istaknuo je David Evans sa sveuèili¹ta u Birminghamu, koji je i sam dio tima znanstvenika na projektu ALICE.<br><br>Istièe kako æe LHC time vjerojatno postaviti i apsolutni temperaturni rekord, a jezgra atoma pri tim temperaturama postaje "juha gluona i kvarkova".</p><br>Ja dr¾im kako su u pitanju - uz ovaj glavni (formalni) pokus - jo¹ mnogi pokusi i pripreme o kojima zna samo mali broj ljudi. To je definitivno priprema za nuklearni rat i testiranje uvjeta ¾ivota pod zemljom, kada se radijacija iz nuklearnih projektila raspr¹i nad kontinente. Nisu cionisti sluèajno izabrala bankarsku ©vicarsku i Alpe, kao leglo koje bi trebalo pre¾ivjeti svjetski nuklearni rat.<p id='pkom_8519' class='tx_de ram0'><span id='kom_da_8519' onMouseOver='miNjaj("sl_d8519", "idax")' onMouseOut='miNjaj("sl_d8519", "ida")'><img name='sl_d8519' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e abC. ' title=' abC ima dobar komentar ' onclick='komLajkiT(8519, "p_gori", 1)'></span> &nbsp; <span id='kom_ne_8519' onMouseOver='miNjaj("sl_n8519", "inex")' onMouseOut='miNjaj("sl_n8519", "ine")'><img name='sl_n8519' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e abC. ' title=' abC ima lo¹ komentar ' onclick='komLajkiT(8519, "p_doli", 1)'></span></p></div>
+<a name='2010-11-09-11-02-17'></a><a name='20'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 20. komentar '><b>...</b>, 2010-11-09 u 11:02:17</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Veliki prasak u malom</span><br><br>
+Veliki hadronski sudaraè (LHC) kod ®eneve danas je uspje¹no kreirao '<i>Veliki prasak u malom</i>'. U sudarima iona olova fizièari su kreirali uvjete kakvi su vladali u prvim trenucima svemira za koji se smatra da je nastao <i>Velikim praskom</i> ('Big Bang') prije 13,7 milijardi godina.<br><br>... "Procesi su se odvijali u sigurnom, kontroliranom okoli¹u i mi smo stvorili temperature milijun puta vi¹e od onih u sredi¹tu Sunca. Na tako visokim temperturama èak i protoni i neutroni, koji èine jezgru atoma, otapaju se i stvaraju vruæu juhu kvarkova i gluona, tzv. kvark-gluonsku plazmu", naglasio je dr. David Evans.<br><br>Dana¹nji '<i>Veliki prasak u malom</i>' samo je potvrdio da LHC, najveæi znanstveni instrument na svijetu, sada radi besprijekorno. Podsjetimo, vi¹e od pet milijardi eura vrijedni LHC na spektakularan je naèin pu¹ten u pogon 10. rujna 2008. godine. No, desetak dana kasnije uslijedilo je razoèarenje jer je zbog kvara na jednom od supravodljivih magneta, koji se nalaze na dubini od 100 metara u tunelu opsega 27 kilometara, do¹lo do prekida rada LHC-a ...<p id='pkom_8578' class='tx_de ram0'><span id='kom_da_8578' onMouseOver='miNjaj("sl_d8578", "idax")' onMouseOut='miNjaj("sl_d8578", "ida")'><img name='sl_d8578' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e .... ' title=' ... ima dobar komentar ' onclick='komLajkiT(8578, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8578' onMouseOver='miNjaj("sl_n8578", "inex")' onMouseOut='miNjaj("sl_n8578", "ine")'><img name='sl_n8578' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e .... ' title=' ... ima lo¹ komentar ' onclick='komLajkiT(8578, "p_doli", 0)'></span></p></div>
+<a name='2010-11-20-01-30-20'></a><a name='21'></a>
+<div class='koma rub_koment'><span style='float: left;' title=' 21. komentar '><b>...</b>, 2010-11-20 u 01:30:20</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>Antimaterija u CERN-u</span><br><br>
+Fizièari u CERN-u (Europski centar za nuklearna istra¾ivanja) kod ®eneve prvi su put uspje¹no zarobili atome antivodika, objavio je juèer vodeæi èasopis Nature. Prvi antivodik u CERN-u je stvoren jo¹ 1995. godine. No, znanstvenicima je tek nedavno uspjelo stvoriti 38 atoma antivodika i zadr¾ati ih ¹estinu sekunde ¹to je bilo dovoljno dugo za istra¾ivanja antimaterije, jedne od velikih zagonetki svemira.<br><br>- Ovo je veliko postignuæe i vrlo smo uzbuðeni zbog toga - izjavio je Rob Thompson, jedan od èelnih ljudi CERN-ova projekta ALPH koji se bavi antimaterijom.<br><br>Postojanje antimaterije prvi je 1928. godine predvidio Paul Dirac, a Carl Anderson je ubrzo u kozmièkim zrakama otkrio prve antièestice, pozitrone, tj. antielektrone. Svaka èestica ima svoju antièesticu, a kada se one sudare, meðusobno se poni¹te pretvarajuæi se u elektromagnetsko zraèenje (anihilacija). Antimaterija je omiljena tema znanstveno-fantastiènih serija, romana, a i filma "Anðeli i demoni" u kome je tajanstvena sekta iluminata u CERN-u ukrala spremnik s "antimaterijskom bombom" i prijeti da æe uni¹titi Vatikan. <p id='pkom_8794' class='tx_de ram0'><span id='kom_da_8794' onMouseOver='miNjaj("sl_d8794", "idax")' onMouseOut='miNjaj("sl_d8794", "ida")'><img name='sl_d8794' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e .... ' title=' ... ima dobar komentar ' onclick='komLajkiT(8794, "p_gori", 0)'></span> &nbsp; <span id='kom_ne_8794' onMouseOver='miNjaj("sl_n8794", "inex")' onMouseOut='miNjaj("sl_n8794", "ine")'><img name='sl_n8794' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e .... ' title=' ... ima lo¹ komentar ' onclick='komLajkiT(8794, "p_doli", 0)'></span></p></div>
+<a name='2010-12-02-21-30-54'></a><a name='22'></a>
+<div class='koma rub_kom'><span style='float: left;' title=' 22. komentar '><b>...</b>, 2010-12-02 u 21:30:54</span><span style='float: right;'><a class='ruka' onClick='naVrH()'><img src='slike/graf/strela_vrh_s.png' alt=' na vrh stranice ' title=' na vrh stranice '></a></span><br><br>
+<span class='k_nas'>NASA-ini kenjci</span><br><br>
+Tresla se brda, rodio se mi¹! Tako se najkraæe mo¾e opisati tiskovna konferencija amerièke svemirske agencije NASA-e koju su mediji proteklih dana najavljivali kao "spektakl na kojemu æe biti predstavljeni dokazi o ¾ivotu izvan Zemlje". U 14 sati po amerièkom istoènom vremenu, (20 sati po srednjoevropskom vremenu) tisuæe novinara diljem svijeta kojima je NASA podijelilia posebne pristupne ¹ifre uz pomoæ kojih su mogli videolinkom postavljati pitanja, napeto su i¹èekivale poèetak konferencije za koju je svemirska agencija u najavi tvrdila kako æe "pojasniti fantastièna astrobiolo¹ka dostignuæa".<br><br>- Predstavljamo jedno otkriæe, ne iz svemira veæ sa povr¹ine Zemlje, koje æe pomoæi u razumjevanju razvoja ¾ivota. Radi se o vrlo neobiènom obliku ¾ivota, bakteriji GFAJ-1 koja ¾ivi u jezeru Mono u Kaliforniji, koje je puno arsena. Ova bakterija u svom metabolizmu koristi arsen umjesto fosfora, izjavila je u prvim minutama tiskovne konferencije dr.Felisa Wolfe-Simon, NASA-ina astrobiologinja koja je vodila istra¾ivanje. Prema tvrdnjama znanstvenika koji su sudjelovali na tiskovnoj konferenciji, ovo nam otkriæe govori da je ¾ivot moguæ i na mjestima i u uvjetima za koje nismo vjerovali da ijedno ¾ivo biæe mo¾e podnijeti, pa sukladno tome, postoji moguænost da se ¾æivot razvija i u svemiru. Kolika je va¾nost ove tiskovne konferencije koja je u proteklih nekoliko dana uzbudila svijet govori i èinjenica da joj nije prisustvovao ni direktor NASA-e, veæ je najvi¹e rangirana osoba koja se u tome trenutku na¹la pred kamerama Mary Voytek, direktorica NASA-ina astrobiolo¹kog programa. Znanstvena zajednica sla¾e se kako se ne radi o velikom i spektakularnom otkriæu o kakvom su proteklih dana brujali mediji diljem svijeta ...<p id='pkom_8944' class='tx_de ram0'><span id='kom_da_8944' onMouseOver='miNjaj("sl_d8944", "idax")' onMouseOut='miNjaj("sl_d8944", "ida")'><img name='sl_d8944' class='ruka' src='slike/design/koment-da.png' alt=' Podr¾avam ovo ¹to ka¾e .... ' title=' ... ima dobar komentar ' onclick='komLajkiT(8944, "p_gori", -1)'></span> &nbsp; <span id='kom_ne_8944' onMouseOver='miNjaj("sl_n8944", "inex")' onMouseOut='miNjaj("sl_n8944", "ine")'><img name='sl_n8944' class='ruka' src='slike/design/koment-ne.png' alt=' Nisam za ovo ¹to ka¾e .... ' title=' ... ima lo¹ komentar ' onclick='komLajkiT(8944, "p_doli", -1)'></span></p></div>
+</div>
+<br><script type='text/javascript'>document.title = 'Dnevnik : NASA-ini kenjci';</script><br><span class='izbor'>NOVI KOMENTAR</span><div class='njiva'>
+ <form name='prikaz' method='post' action='list.php?ploca=Komentari&amp;redar=2008-09-10&amp;kreda=vadi' style='margin: 0px'>
+  <table width='100%' border=0 cellpadding=0 cellspacing=7 align='center'>
+   <tr>
+    <td class='izbor'>ime (i prezime) <br><input id='faca' name='faca' type='text' class='njivica' value='Gost' onclick='imaIme(this, 0)' onblur='imaIme(this, 3)' style='width: 277px; padding: 2px' title=' Ime (i prezime) '> <span id='grsk' style='color:#ffd3d3'></span></td>
+   </tr>
+   <tr>
+    <td class='izbor'>e-mail (nije nu¾no)<br><input name='mejl' type='text' class='njivica' value='' style='width: 277px; padding: 2px' title=' E-mail adresa (ne mora biti) '></td>
+   </tr>
+   <tr> 
+    <td class='izbor'><span style='float:left;'>komentar na tekst od  10. 09. 2008.</span><span id='urar' style='float:right;' title=' Sat i broj preostalih znakova '></span><br><textarea id='poruka' name='poruka' rows='7' class='njivica' style='width: 99%; padding: 2px' title=' Komentar '></textarea></td>
+   </tr>
+   <tr>
+    <td align='center'><br><input name='gumb' type='submit' value='    OK    ' title=' Potvrdi ' onclick='poSaljI(this);'></td>
+   </tr>
+  </table>
+</form><p class='izbor' align='center' style='margin: 5px'><span id='vaznox'>Unesite tekst za komentar !</span></p></div><br>
+<table width="100%" border=0 cellspacing=0 cellpadding=2 align="center">
+ <tr>
+  <td class="mali" style="width:59px; padding-bottom:4px; background:#f3f5f9; color:#1e77d3;" title=" 843 ">&nbsp; <a OnClick='zaTvoR()' style="cursor: pointer">zatvori</a></td><td class="mali" align="right" style="background: #1e77d3; background: -moz-linear-gradient(left, #f3f5f9 17%, #1e77d3 100%); background: -webkit-gradient(linear, left top, right top, from(#f3f5f9), to(#1e77d3));"><a href='http://www.dragotadic.net/' title=" 843 " style='color:#abcdef; text-decoration:none'>&copy; Drago TADIÆ</a> &nbsp;</td>
+ </tr>
+</table>
+</body>
+</html>

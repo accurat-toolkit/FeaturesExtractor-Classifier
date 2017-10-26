@@ -1,0 +1,955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <base href="http://www.serbiatravelers.org/Blogovi/32-levant-autostopom/313-sabun" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Klub putnika Srbije, Serbia Travel Club, Klub putnika, Srbija, Serbia, putovanja, travel, putopisi, travelogues, destinacije, destinations, hitchhiking, autostop, voz, autobus, avion, jeftini letovi, hosteli, hoteli, traveling in Serbia, putovanja po Srbiji, autostopiranje, autostop Srbija" />
+  <meta name="title" content="Sabun, voće i gume" />
+  <meta name="author" content="" />
+  <meta name="description" content="Klub putnika je udruženje putnika koji veruju u aktivan pristup putovanju. Sajt Klub putnika sadrži sve što treba da znate o samostalnim putovanjima." />
+  <meta name="generator" content="" />
+  <title>Sabun, voće i gume</title>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/plugins/content/fboxbot/frontbox/fbox.css" type="text/css" />
+  <link rel="stylesheet" href="http://www.serbiatravelers.org/plugins/content/discussbot/tmpl/default/jfusion.css" type="text/css" />
+  <link rel="stylesheet" href="http://www.serbiatravelers.org/plugins/content/discussbot/markitup/skins/simple/style.css" type="text/css" />
+  <link rel="stylesheet" href="http://www.serbiatravelers.org/plugins/content/discussbot/markitup/sets/bbcode/style.css" type="text/css" />
+  <script type="text/javascript" src="/plugins/system/mtupgrade/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <script type="text/javascript" src="/plugins/content/fboxbot/frontbox/fbox_conf.js"></script>
+  <script type="text/javascript" src="/plugins/content/fboxbot/frontbox/fbox_engine-min.js"></script>
+  <script type="text/javascript" src="http://www.serbiatravelers.org/plugins/content/discussbot/markitup/jquery.pack.js"></script>
+  <script type="text/javascript" src="http://www.serbiatravelers.org/plugins/content/discussbot/markitup/jquery.markitup.pack.js"></script>
+  <script type="text/javascript" src="http://www.serbiatravelers.org/plugins/content/discussbot/markitup/sets/bbcode/set.js"></script>
+  <script type="text/javascript">
+function confirmThreadAction(id,task,vars,url) {
+    if (task=='create_thread') {
+        var text = "Initiate the discussion bot for this article?  A thread will automatically be created in the forum and associated with this article.";
+    } else if (task=='unpublish_discussion') {
+        var text = "Unpublish this discussion?  Note that this will not manipulate the forum in any way.  It will simply remove the discussion from the article.";
+    } else if (task=='publish_discussion') {
+        var text = 'This article has been previously initiated.  After clicking OK, you will be promp0ted to choose between two options: 1) Associate the article with the existing discussion (this can be undone by simply clicking Unitiate Discussion after initializing)  2) Create a new thread and associate the article with the new discussion.  Continue?';
+    }
+    var answer = confirm(text);
+    var use_ajax = true;
+    if (answer) { 
+        if (task=='create_thread') {
+            $('JFusionTaskForm').articleId.value = id;
+            $('JFusionTaskForm').dbtask.value = task;
+            $('JFusionTaskForm').submit();
+            use_ajax = false;
+        } else if (task=='publish_discussion') {
+            var answer = confirm('Click OK to associate the article with the existing discussion.  Click Cancel to create a new thread to be associated with this article.');
+            if (!answer) { 
+                $('JFusionTaskForm').articleId.value = id;
+                $('JFusionTaskForm').dbtask.value = 'create_thread';
+                $('JFusionTaskForm').submit();
+                use_ajax = false;
+            }
+        }
+        if (use_ajax) {
+            var performTask = new Ajax(url, {
+                method: 'post',
+                update: $('jfusionButtonArea'+id),
+                onComplete: function() {
+                    if ($('discussion')) {
+                        updateMainContent.request('tmpl=component&ajax_request=1&dbtask=update_content');
+                    }
+                }
+            });
+            performTask.request('tmpl=component&ajax_request=1&dbtask='+task+'&articleId='+id+vars);            var updateMainContent = new Ajax(url, {
+                method: 'post',
+                update: $('discussion'),
+                onComplete: function() {
+                    if (task=='unpublish_discussion') {
+                        $('discussion').setStyle('display','none');
+                    } else if (task=='publish_discussion') {
+                        if (typeof load_markitup != 'undefined') {
+                            jQuery.noConflict();
+                            if(jQuery('#quickReply')) { 
+                                jQuery('#quickReply').markItUp(mySettings);
+                                ajax_submit();
+                            }
+                        }
+                        $('discussion').setStyle('display','block');
+                    }
+                }
+            });
+        }
+    }
+}
+function toggleDiscussionVisibility() {
+    var override = toggleDiscussionVisibility.arguments[0]
+    var discuss_link = toggleDiscussionVisibility.arguments[1]
+    var show_discussion = '';
+    if ($('discussion')) {
+        var state = $('discussion').style.display;
+        if (state=='none') {
+            $('discussion').style.display = 'block';
+            $('jfusionBtnShowreplies313').innerHTML = 'Hide Replies';
+            show_discussion = 1;
+        } else {
+            $('discussion').style.display = 'none';
+            $('jfusionBtnShowreplies313').innerHTML = 'Show Replies';
+            show_discussion = 0;
+        }    }    if (override!=null) show_discussion = override;
+    var setdiscussionvisibility = new Ajax('/Blogovi/32-levant-autostopom/313-sabun', {
+        method: 'get',
+        onComplete: function() {
+            if (discuss_link!=null) {
+                window.location=discuss_link;
+            }
+        }
+    });
+    setdiscussionvisibility.request('tmpl=component&ajax_request=1&show_discussion='+show_discussion);}
+function jfusionQuote(pid) {
+    $('quickReply').value = $('originalText'+pid).innerHTML;
+    window.location='#jfusionQuickReply';
+    $('quickReply').focus();
+}
+var mySlide, updatepostarea;
+
+window.addEvent('domready', function() {
+	mySlide = new Fx.Slide('jfusionMessageArea');
+	mySlide.hide();
+
+	var url = '/Blogovi/32-levant-autostopom/313-sabun';
+	var submitpost = $('submitpost'); var ajaxstatusholder = $('jfusionAjaxStatus'); var postarea = $('jfusionPostArea');
+
+
+
+    updatepostarea = new Ajax(url, {
+        update: ajaxstatusholder,
+        method: 'post',
+
+        onComplete: function() {
+			var ajaxstatus = ajaxstatusholder.innerHTML;
+			if (ajaxstatus.search(/Discussion Bot Error/) == -1) {
+
+				//update the post area with the updated content
+				var posthtml = postarea.innerHTML;
+				postarea.innerHTML = ajaxstatus;
+
+				//reset the status area
+				ajaxstatusholder.innerHTML = '';
+
+				if($('submittedPostId')) {
+					var postid = $('submittedPostId').innerHTML;
+					postid = 'post' + postid;
+					hightlight_post(postid);
+
+					//empty the quick reply form
+					$('quickReply').value = '';
+
+					//remove the preview iframe if exists
+					if($('markItUpQuickReply')) {
+						jQuery.markItUp({ call: 'previewClose' });
+					}
+
+					//manually update the number of replies
+					if($('jfusionPostCount')) {
+						var num = $('jfusionPostCount').innerHTML;
+						num = parseInt(num) + 1;
+						if(num==1) {
+							var post = '';
+						} else {
+							var post = '';
+						}
+						//convert num back to a string
+						num = num + "";
+						$('jfusionPostCount').innerHTML = num + post;
+					}
+
+					show_message('Komentar uspešno napisan.','Success');
+					hide_message();
+				} else if ($('moderatedPostId')){
+					//empty the quick reply form
+					$('quickReply').value = '';
+
+					show_message('Reply posted successfully. However, it will not be displayed until approved by an administrator.','Success');
+					hide_message();
+				}
+
+							} else {
+				show_message(ajaxstatus,'Error');
+				window.location='#jfusionMessageArea';
+				hide_message();
+			}
+        }
+    });
+
+ 	    //add the submitpost function
+    submitpost.addEvent('click', function(e) {
+    	//show a loading
+    	show_message('Komentar se šalje...','Loading');
+
+    	//update the post area content
+		var paramString = 'tmpl=component&ajax_request=1';
+		var frm = document.jfusionQuickReply313;
+		for(i=0; i<frm.elements.length; i++){
+			if(frm.elements[i].type=="select-one"){
+				if(frm.elements[i].options[frm.elements[i].selectedIndex].value) {
+					paramString = paramString + '&' + frm.elements[i].name + '=' + frm.elements[i].options[frm.elements[i].selectedIndex].value;
+				}
+			} else {
+				paramString = paramString + '&' + frm.elements[i].name + '=' + frm.elements[i].value;
+			}
+		}
+		updatepostarea.request(paramString);
+	});
+	});
+
+var delayHiding;
+function show_message(msg, type)
+{
+	//stop a slideOut if pending
+	if(delayHiding) {
+		clearTimeout(delayHiding);
+	}
+
+
+	$('jfusionMessage').innerHTML = msg;
+	$('jfusionMessageArea').setAttribute('class','jfusion'+type+'Message');
+
+	mySlide.slideIn();
+}
+
+function hide_message()
+{
+	delayHiding = setTimeout('mySlide.slideOut()',5000);
+}
+
+function hightlight_post(postid)
+{
+	$(postid).setStyle('border','2px solid #FCFC33');
+	(function() { $(postid).setStyle('border','2px solid #afafaf'); } ).delay(5000);
+
+		window.location='#' + postid;
+	}
+
+function refreshPosts()
+{
+	updatepostarea.request('tmpl=component&ajax_request=1&dbtask=update_posts');
+}
+var load_markitup = true;
+jQuery.noConflict();
+jQuery(document).ready(function() {
+jQuery('#quickReply').markItUp(mySettings);
+});
+
+  </script>
+  <!-- JoomlaWorks "Tabs & Slides" Plugin (v2.3) adaptet for J!1.5 by Roger Abt for joomlaportal.ch starts here -->		
+			<style type="text/css" media="screen">
+				@import "http://www.serbiatravelers.org//plugins/content/plugin_jch_ts/tabs_slides.css";
+			</style>
+			<style type="text/css" media="print">.jchts_tabbernav{display:none;}</style>
+			<script type="text/javascript">var jchts_slideSpeed=30; var jchts_timer=10;</script>
+			<script type="text/javascript" src="http://www.serbiatravelers.org//plugins/content/plugin_jch_ts/tabs_slides_comp.js"></script><script type="text/javascript" src="http://www.serbiatravelers.org//plugins/content/plugin_jch_ts/tabs_slides_opt_loader.js"></script>
+			<!-- JoomlaWorks "Tabs & Slides" Plugin (v2.3) adaptet for J!1.5 by Roger Abt for joomlaportal.ch ends here -->
+
+
+<link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="/templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="/templates/siteground-j15-2/css/template_new.css" type="text/css" /><!--[if IE 6]><link rel="stylesheet" href="/templates/siteground-j15-2/css/ie6only.css" type="text/css" /><![endif]-->
+<script language="JavaScript" type="text/javascript">
+<!--
+function processForm()
+{
+   f = document.searchform;
+   switch (f.searcharea.selectedIndex)
+   {
+   // mambo
+   case 0: f.method='post';
+         f.action='index.php?option=search';
+         break;
+   //smf
+   case 1: f.method='post';
+         f.action='http://www.serbiatravelers.org/forum/index.php?action=search2';
+         f.search.value=f.searchword.value;
+         f.option.value="";
+         break;
+   //coppermine
+   case 2: f.method='get';
+         f.action='http://www.serbiatravelers.org/foto/thumbnails.php';
+         f.search.value=f.searchword.value;
+         //f.option.value = "com_wrapper";
+         //f.wrap.value = "cpg_search";
+         break;
+   }
+   f.submit();
+}
+-->
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4016011-1']);
+  _gaq.push(['_trackPageview']);
+	setTimeout('_gaq.push([\'_trackEvent\', \'NoBounce\', \'Over 10 seconds\'])',10000);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<a name="up" id="up"></a>
+<div id="sitewrap" align="center">	
+			
+<div id="wrapper">
+	<div id="wrapper_r">
+	
+		<div id="whitebox">
+        	<div id="tabarea">
+			<table cellpadding="0" cellspacing="0" class="pill">
+				<tr>
+
+					<td>
+					<div id="pillmenu">
+						<ul id="mainlevel-nav"><li><a href="http://www.serbiatravelers.org/en/" class="mainlevel-nav" >ENGLISH, please!</a></li><li><a href="/o-klub-putnika" class="mainlevel-nav" >Klub putnika - o nama</a></li><li><a href="/uclanite-se" class="mainlevel-nav" >Klub putnika - članstvo</a></li><li><a href="/linkovi" class="mainlevel-nav" >Linkovi</a></li><li><a href="/kontakt" class="mainlevel-nav" >Kontakt</a></li></ul><a href="http://www.serbiatravelers.org/login">Login</a>                                        </div>
+					</td>
+                                       
+                                        <td>
+ 					<div id="search">
+						
+<script type="text/javascript">
+
+function dropdown(mySel)
+{
+if ( mySel == "drzava" ) {
+alert('Izaberite državu iz liste');
+return false;
+}
+else
+	return true;
+}
+</script>
+
+<div class="search">
+<form class="searchform" action="/index.php" method="get" onSubmit="return dropdown(this.cp_drzava.value)">
+<input type="hidden" name="option" value="com_customproperties"/>
+<input type="hidden" name="task" value="show"/>
+
+<input type="hidden" name="bind_to_section" value=""/>
+<table>
+<tr><td>
+<select name="cp_drzava" class="inputbox">
+<option value="drzava" class="empty" selected="selected" disabled='disabled'>Država</option>
+<option value='seperator' disabled='disabled'>-------------</option><option value="afganistan"  >Afganistan</option>
+<option value="albanija"  >Albanija</option>
+<option value="alzir"  >Alžir</option>
+<option value="andora"  >Andora</option>
+<option value="angola"  >Angola</option>
+<option value="angvila"  >Angvila</option>
+<option value="antigvaibarbuda"  >Antigva i Barbuda</option>
+<option value="argentina"  >Argentina</option>
+<option value="australija"  >Australija</option>
+<option value="austrija"  >Austrija</option>
+<option value="azerbejdzan"  >Azerbejdžan</option>
+<option value="bahami"  >Bahami</option>
+<option value="bahrein"  >Bahrein</option>
+<option value="banglades"  >Bangladeš</option>
+<option value="barbados"  >Barbados</option>
+<option value="belgija"  >Belgija</option>
+<option value="belize"  >Belize</option>
+<option value="belorusija"  >Belorusija</option>
+<option value="benin"  >Benin</option>
+<option value="bermudi"  >Bermudi</option>
+<option value="bocvana"  >Bocvana</option>
+<option value="bolivija"  >Bolivija</option>
+<option value="bosna"  >Bosna i Hercegovina</option>
+<option value="brazil"  >Brazil</option>
+<option value="brunej"  >Brunej Darusalam</option>
+<option value="bugarska"  >Bugarska</option>
+<option value="burkinafaso"  >Burkina Faso</option>
+<option value="burundi"  >Burundi</option>
+<option value="butan"  >Butan</option>
+<option value="centralnoafricka"  >Centralnoafrička Rep.</option>
+<option value="crnagora"  >Crna Gora</option>
+<option value="cad"  >Čad</option>
+<option value="ceska"  >Češka</option>
+<option value="cile"  >Čile</option>
+<option value="danska"  >Danska</option>
+<option value="devicanskaostvra"  >Devičanska ostrva</option>
+<option value="dominika"  >Dominika</option>
+<option value="dominikana"  >Dominikana</option>
+<option value="dzibuti"  >Džibuti</option>
+<option value="egipat"  >Egipat</option>
+<option value="ekvador"  >Ekvador</option>
+<option value="ekvatorijalnagvin"  >Ekvatorijalna Gvineja</option>
+<option value="engleska"  >Engleska</option>
+<option value="eritreja"  >Eritreja</option>
+<option value="estonija"  >Estonija</option>
+<option value="etiopija"  >Etiopija</option>
+<option value="farskaostrva"  >Farska ostrva</option>
+<option value="fidzi"  >Fidži</option>
+<option value="filipini"  >Filipini</option>
+<option value="finska"  >Finska</option>
+<option value="francuska"  >Francuska</option>
+<option value="francuskagvajana"  >Francuska Gvajana</option>
+<option value="francuskapolinez"  >Francuska Polinezija</option>
+<option value="gabon"  >Gabon</option>
+<option value="gambija"  >Gambija</option>
+<option value="gana"  >Gana</option>
+<option value="gibraltar"  >Gibraltar</option>
+<option value="grcka"  >Grčka</option>
+<option value="grenada"  >Grenada</option>
+<option value="gruzija"  >Gruzija</option>
+<option value="gvajana"  >Gvajana</option>
+<option value="gvatemala"  >Gvatemala</option>
+<option value="gvineja"  >Gvineja</option>
+<option value="gvinejabisao"  >Gvineja Bisao</option>
+<option value="haiti"  >Haiti</option>
+<option value="holandija"  >Holandija</option>
+<option value="honduras"  >Honduras</option>
+<option value="hongkong"  >Hong Kong</option>
+<option value="hrvatska"  >Hrvatska</option>
+<option value="indija"  >Indija</option>
+<option value="indonezija"  >Indonezija</option>
+<option value="irak"  >Irak</option>
+<option value="iran"  >Iran</option>
+<option value="irska"  >Irska</option>
+<option value="island"  >Island</option>
+<option value="istocnitimor"  >Istočni Timor</option>
+<option value="italija"  >Italija</option>
+<option value="izrael"  >Izrael</option>
+<option value="jamajka"  >Jamajka</option>
+<option value="japan"  >Japan</option>
+<option value="jemen"  >Jemen</option>
+<option value="jermenija"  >Jermenija</option>
+<option value="jordan"  >Jordan</option>
+<option value="juznaafrika"  >Južna Afrika</option>
+<option value="jkoreja"  >Južna Koreja</option>
+<option value="kajmanskaostvra"  >Kajmanska ostrva</option>
+<option value="kambodza"  >Kambodža</option>
+<option value="kamerun"  >Kamerun</option>
+<option value="kanada"  >Kanada</option>
+<option value="kanarskaostvra"  >Kanarska Ostrva</option>
+<option value="katar"  >Katar</option>
+<option value="kazahstan"  >Kazahstan</option>
+<option value="kenija"  >Kenija</option>
+<option value="kina"  >Kina</option>
+<option value="kipar"  >Kipar</option>
+<option value="kirgizija"  >Kirgizija</option>
+<option value="kiribati"  >Kiribati</option>
+<option value="kolumbija"  >Kolumbija</option>
+<option value="komori"  >Komori</option>
+<option value="kongo"  >Kongo (D. Rep.)</option>
+<option value="kostarika"  >Kostarika</option>
+<option value="kuba"  >Kuba</option>
+<option value="kuvajt"  >Kuvajt</option>
+<option value="laos"  >Laos</option>
+<option value="lesoto"  >Lesoto</option>
+<option value="letonija"  >Letonija</option>
+<option value="liban"  >Liban</option>
+<option value="liberija"  >Liberija</option>
+<option value="libija"  >Libija</option>
+<option value="lihtenstajn"  >Lihtenštajn</option>
+<option value="litvanija"  >Litvanija</option>
+<option value="luksemburg"  >Luksemburg</option>
+<option value="madjarska"  >Mađarska</option>
+<option value="madagaskar"  >Madagaskar</option>
+<option value="majot"  >Majot</option>
+<option value="makedonija"  >Makedonija</option>
+<option value="malavi"  >Malavi</option>
+<option value="maldivi"  >Maldivi</option>
+<option value="malezija"  >Malezija</option>
+<option value="mali"  >Mali</option>
+<option value="malta"  >Malta</option>
+<option value="maroko"  >Maroko</option>
+<option value="mauricijus"  >Mauricijus</option>
+<option value="mauritanija"  >Mauritanija</option>
+<option value="meksiko"  >Meksiko</option>
+<option value="mjanmar"  >Mjanmar</option>
+<option value="moldavija"  >Moldavija</option>
+<option value="monako"  >Monako</option>
+<option value="mongolija"  >Mongolija</option>
+<option value="montserat"  >Montserat</option>
+<option value="mozambik"  >Mozambik</option>
+<option value="namibija"  >Namibija</option>
+<option value="nemacka"  >Nemačka</option>
+<option value="nepal"  >Nepal</option>
+<option value="niger"  >Niger</option>
+<option value="nigerija"  >Nigerija</option>
+<option value="nikaragva"  >Nikaragva</option>
+<option value="norveska"  >Norveška</option>
+<option value="novizeland"  >Novi Zeland</option>
+<option value="obalasl"  >Obala Slon</option>
+<option value="oman"  >Oman</option>
+<option value="pakistan"  >Pakistan</option>
+<option value="palestina"  >Palestina</option>
+<option value="panama"  >Panama</option>
+<option value="papuang"  >Papua N. Gvin.</option>
+<option value="paragvaj"  >Paragvaj</option>
+<option value="peru"  >Peru</option>
+<option value="pitkernostrva"  >Pitkern ostrva</option>
+<option value="poljska"  >Poljska</option>
+<option value="portoriko"  >Portoriko</option>
+<option value="portugal"  >Portugal</option>
+<option value="ruanda"  >Ruanda</option>
+<option value="rumunija"  >Rumunija</option>
+<option value="rusija"  >Rusija</option>
+<option value="sad"  >SAD</option>
+<option value="salvador"  >Salvador</option>
+<option value="samoa"  >Samoa</option>
+<option value="sanmarino"  >San Marino</option>
+<option value="saudijskaarab"  >Saudijska Arabija</option>
+<option value="sejseli"  >Sejšeli</option>
+<option value="senegal"  >Senegal</option>
+<option value="severnakoreja"  >Severna Koreja</option>
+<option value="sleone"  >Sijera Leone</option>
+<option value="singapur"  >Singapur</option>
+<option value="sirija"  >Sirija</option>
+<option value="slovacka"  >Slovačka</option>
+<option value="slovenija"  >Slovenija</option>
+<option value="solomonskaostvra"  >Solomonska ostrva</option>
+<option value="somalija"  >Somalija</option>
+<option value="srbija"  >Srbija</option>
+<option value="sudan"  >Sudan</option>
+<option value="surinam"  >Surinam</option>
+<option value="svazilend"  >Svazilend</option>
+<option value="svetajelena"  >Sveta Jelena</option>
+<option value="svetalucija"  >Sveta Lucija</option>
+<option value="spanija"  >Španija</option>
+<option value="srilanka"  >Šri Lanka</option>
+<option value="svajcarska"  >Švajcarska</option>
+<option value="svedska"  >Švedska</option>
+<option value="tadzikistan"  >Tadžikistan</option>
+<option value="tajland"  >Tajland</option>
+<option value="tajvan"  >Tajvan (Rep. Kina)</option>
+<option value="tanzanija"  >Tanzanija</option>
+<option value="togo"  >Togo</option>
+<option value="tonga"  >Tonga</option>
+<option value="trinidaditobago"  >Trinidad i Tobago</option>
+<option value="tunis"  >Tunis</option>
+<option value="turkmenistan"  >Turkmenistan</option>
+<option value="turksikaikos"  >Turks i Kaikos ostrva</option>
+<option value="turska"  >Turska</option>
+<option value="ujedarapemir"  >UAE</option>
+<option value="uganda"  >Uganda</option>
+<option value="ukrajina"  >Ukrajina</option>
+<option value="urugvaj"  >Urugvaj</option>
+<option value="uzbekistan"  >Uzbekistan</option>
+<option value="vatikan"  >Vatikan</option>
+<option value="venecuela"  >Venecuela</option>
+<option value="vijetnam"  >Vijetnam</option>
+<option value="zambija"  >Zambija</option>
+<option value="zelenortska"  >Zelenortska Ostrva</option>
+<option value="zimbabve"  >Zimbabve</option>
+</select>
+
+
+	<td>
+        <input type="submit" class="button" name="submit_search" value="Tragaj!" style="width:45px;height:21px;font-size: 11px;" />
+    </td>
+  </tr>
+</table>
+
+</form>
+</div>
+
+
+                                        </div>                                              
+  				        </td>
+				</tr>
+			</table>
+		</div>		
+		</div>
+
+		<div id="header">
+
+          <!--<map name="mymap"><area shape="rect" coords="0,0,400,99" href="http://www.serbiatravelers.org" alt="Klub putnika Srbije" title="Klub putnika Srbije">-->
+          <div id="logo-top">
+                <a href="http://www.serbiatravelers.org">
+                	<span id="header_levo"><img src="/templates/siteground-j15-2/images/header-levo.png"  alt="Klub putnika Srbije" title="Klub putnika Srbije">
+                	</span>
+                </a>
+                </div>
+              <div id="tekst">
+                <div id="srp-tekst">
+                <a href="http://www.serbiatravelers.org/"><strong>Klub putnika Srbije</strong></a>
+              </div>
+              <div id="eng-tekst">
+                <a href="http://www.serbiatravelers.org"><span id="header_tekst_eng"><strong>Serbia Travel Club</strong></span></a>
+                </div>
+               </div>
+               
+                <a href="http://www.serbiatravelers.org/zbivanja/3432-neutabanim-stazama/" id="header-ad"></a>
+              
+		</div>
+                
+
+			
+			
+			<div id="whitebox_m">
+				<div id="area">
+													<div id="leftcolumn" style="float:left;">
+												<div class="moduletable">
+					
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr ><td><a href="/" class="mainlevel" >Početna stranica</a></td></tr>
+<tr ><td><a href="/izmena" class="mainlevel" >Predložite izmenu</a></td></tr>
+<tr ><td><a href="http://www.serbiatravelers.org/forum/" class="mainlevel" >Forum</a></td></tr>
+<tr ><td><a href="/zbivanja" class="mainlevel" >Zbivanja</a></td></tr>
+</table>		</div>
+			<div class="moduletable">
+					<h3>Putopisna građa</h3>
+					
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr ><td><a href="/putoskop" class="mainlevel" >Putoskop</a></td></tr>
+<tr ><td><a href="/fotopisi" class="mainlevel" >Fotopisi</a></td></tr>
+<tr ><td><a href="/Putopisi" class="mainlevel" >Putopisi</a></td></tr>
+<tr ><td><a href="/Blogovi" class="mainlevel" id="active_menu">Blogovi</a></td></tr>
+<tr ><td><a href="/vremeplov" class="mainlevel" >Vremeplov</a></td></tr>
+</table>		</div>
+			<div class="moduletable">
+					<h3>Servisna stanica</h3>
+					<ul class="menu"><li class="item36"><a href="/iskustvenik"><span>Iskustvenik</span></a></li><li class="item37"><a href="/vize"><span>Vize, Vize...</span></a></li><li class="item44"><a href="/stoperski-vodic"><span>Stoperski Vodič</span></a></li><li class="parent item38"><a href="/destinacije"><span>Destinacije</span></a></li><li class="item63"><a href="/medijateka"><span>Medijateka</span></a></li><li class="item47"><a href="/putnickirecnik"><span>Putnički rečnik</span></a></li></ul>		</div>
+			<div class="moduletable">
+					<p align="justify"><a href="/zbivanja/3432-neutabanim-stazama"><img height="140" width="150" src="/images/novosti/neutabanim-stazama_novost.jpg" alt="neutabanim stazama" title="neutabanim stazama" style="border: 0pt none;" /></a></p>
+<p><a href="http://www.docek-nove-godine.com/" title="Doček Nove godine 2011 Beograd - Novogodišnja putovanja" target="_blank"><img alt="dng-kps" src="/images/banners/dng-kps.jpg" width="150" height="50" /></a></p>
+<p align="justify"><a href="/zbivanja/3408-putopis"><img src="/images/novosti/putopis.gif" alt="pošaljite putopis" title="pošaljite putopis" /></a></p>
+<iframe src="http://www.facebook.com/plugins/likebox.php?id=75831906542&amp;width=160&amp;connections=0&amp;stream=false&amp;header=true&amp;height=100" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:160px; height:100px;" allowTransparency="true"></iframe>		</div>
+	
+										<div style="width: 100%;">
+<br/>
+
+
+
+</div> 
+ 
+ 							</div>
+						
+					
+                                                
+
+					
+												<div id="maincolumn_full">
+												
+					
+
+							<div class="nopad">
+							
+							
+										<div id="pathway">
+												<div class="moduletable">
+					<span class="breadcrumbs pathway">
+<a href="http://www.serbiatravelers.org/" class="pathway">Klub putnika</a> <img src="/templates/siteground-j15-2/images/arrow.png" alt=""  /> <a href="/Blogovi" class="pathway">Blogovi</a> <img src="/templates/siteground-j15-2/images/arrow.png" alt=""  /> <a href="/Blogovi/32-levant-autostopom" class="pathway">Levant autostopom</a> <img src="/templates/siteground-j15-2/images/arrow.png" alt=""  /> Sabun, voće i gume</span>
+		</div>
+	
+										</div>
+
+    <div id="fejsbuk">        		<div class="moduletable">
+					
+<div id="jbmwrap" style="padding:2px;" align="center">
+<script type="text/javascript">
+ 
+  window.addEvent('domready', function(){
+            
+            var list = $$('#jbmwrap .jbm');
+            
+            list.each(function(element) {
+                var fx = new Fx.Style(element , 'opacity').start(1,0.5);
+				var fx = new Fx.Styles(element, {duration:200, wait:false});
+				
+                 element.addEvent('mouseenter', function(){
+				 	    fx.start({
+				 	    	'opacity': 1
+				    	});
+				 });
+
+				 element.addEvent('mouseleave', function(){
+				    	fx.start({
+					       	'opacity': 0.5
+					    });
+				 });
+
+		  });
+
+  });
+</script>
+
+
+
+
+		<div id="fejsbuk_slova">Okači na fejsbuk <a rel="nofollow" style="text-decoration:none;" href="http://www.facebook.com/" onclick="
+
+                window.open('http://www.facebook.com/share.php?u='+encodeURIComponent(location.href)+'&amp;t='+encodeURIComponent(document.title));
+                
+                return false;"
+
+                title="Add to: Facebook"><img style="padding-bottom:1px;" class="jbm" src="http://www.serbiatravelers.org/modules/mod_jbookmarks/images/facebook_trans.gif" alt="Add to: Facebook" name="facebook" border="0" id="facebook"/></a></div>
+
+
+</div>		</div>
+	
+    </div>                                						
+							
+							
+										
+																					<div id="contentwrap">
+<table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+		<h1>
+			Sabun, voće i gume	</h1>
+	</td>
+				
+		
+					</tr>
+</table>
+
+<table class="contentpaneopen">
+
+<tr>
+	<td valign="top" class="createdate">
+		Utorak, 18. Jul 2006. 00:53	</td>
+</tr>
+
+
+<tr>
+<td valign="top">
+<p>&nbsp;</p><p>"Ok! Aleppo!" - izgovorio je  vozac negde oko pola 12, i mi smo se poluusnuli, iscrpljeni sve jacim suncem istovarili iz auta i nasli se na sirokom bulevaru, bez najblaze ideje gde se u Alepu nalazimo. Nekako smo se dogegali do klupe u parku i krenuli da pretresamo mapu. Nekoliko krugova po gradu kasnije, znali smo gde je ulica sa vecinom jeftinih hotela, imali smo nesto sirijskih funti (u stvari, sirijskih lira, ali je iz nekog razloga engleski prevod 'pound') i jedan fantastican sok od cedjenih kupina u stomaku. Ubrzo smo nasli neugledan, ali prilicno jeftin hotel i, kako nije bilo smestaja na krovu, strpali smo se u dvokrevetnu sobu.</p>  <p>Nas hotel se nalazio u ulici guma - naime, svaka ulica koja ima prodavnice u sebi, najcesce je tematska - sve prodavnice prodaju sapun, ili zacine, ili nargile, eventualno prosarano kioscima sa hranom (felafel, svarma) - nasa ulica je, dakle, bila nacickana prodavnicama guma - automobilskih, autobuskih, kamionskih, traktorskih, guma za bicikl, a na samom kraju bilo je i nekoliko radnji koje su prodavale cele bicikle. Na sledecem cosku, sto je bilo mnogo atraktivnije za nas, nalazio se kraj sa prodavcima svezeg vocnog soka - od banana i pomorandzi, preko breskvi i kajsija, kupina, jabuka - definitivno najbolji sok koji sam ja pio. A nije ni skup - 25 funti da vam napuni termos od pola litre i jos dobijete gratis casu za popiti na licu mesta. Prvo popodne u Alepu proteklo je u ispijanju ovih sokova, setnji po gradu i zavrsilo se vecerom u simpaticnom restoranu pod vinovom lozom po imenu "Al Chabab", sto ce reci "Momci". Na kraju odlicne klope (cak smo pili i pivo - i to neko od 0,75l, uz to sasvim pristojno) dobili smo tanjir s ledenom lubenicom, u koju je bila zabodena vizitkarta restorana sa porukom nazvrljanom na francuskom: "c'est l'hospitalite du Restaurant Al-Chabab". Nesto kasnije prijatni dekica kog smo pitali gde da nadjemo net-kafe odveo nas je do zabacene ulicice i, kako se kasnije ispostavilo, najjeftinijeg net-kafea u gradu.</p> <p>Sutradan, poceli smo od muzeja, upoznali se sa simpaticnim bronzanim lavom i jos nekoliko zivotinjki koje su me strasno podsetile na "Beskrajnu pricu", koja mi je inace nesto u glavi tokom celog puta. Pricu o njoj i njen zavrsetak u buducnosti, ispricacu nesto kasnije. Nakon muzeja, krenuli smo kroz sokak i zaskocio nas je neki covek, uz pitanje - "Slovenija". Bio je jos zadovoljniji kad smo rekli da smo iz Srbije, odmah je krenuo da prica o 'general Titu', i objasnio kako mu je veoma zao Miloseviceve smrti. Mi smo mu uljudno objasnili da nama bas i nije - i, sta drugo nastavili da caskamo, na nekoj mesavini srpskog i engleskog. Predlozio je razmenu - nekoliko starih sirijskih i libanskih novcica za nove srpske, ja nisam imao razloga da odbijem, a nakon toga je ponudio da nas provede po gradu. Alepo je najpoznatiji po proizvodnji sapuna, pa smo krenuli od kraja gde prave i prodaju neugledne spolja, ali jako mirisne, i kad se preseku, intenzivno smaragdno-zelene, sapune od maslina. Odatle smo napravili kratku posetu fabrici leda (ogromne sante, koje se nosaju okolo, sto kamionetima, sto kolima, sto biciklima - posebno su neophodne prodavcima vocnih sokova), popili caj, popricali, pozdravili se sa starom nemackom dizel masinom koja pokrece celu stvar, opet uljudno objasnili vidno razocaranim domacinima kako Srbija bas i ne obiluje fabrikama leda i nastavili dalje. Naisli smo na cetvrt s kovacima - od maceva do manje uglednih komada - delova za masine, nepoznate funkcije. Odmah pored, dekorateri bakrenih posuda, a nedugo zatim i otkrice koje se ispostavilo jako korisnim u ostatku boravka - kiosk s lokalnom Master Cola-om i Cheer-up-om, cena 5 funti - nekih 7 dinara srpskih. Posle besomucnog slikanja, nisam vise imao mesta na kartici i tu stizem do novog (ne i poslednjeg) preseka sa pricom Atreja/Bastijana:</p> <p>Jedna od najuzbudljivijih ideja, makar za mene, koja figurira u beskrajnoj prici, bila je ona o brisanju uspomena zarad ispunjenja zelja (decak Atrej, odnosno Bastijan, ili mozda drugi na putu da postane prvi - dobija ogrlicu, uroborus je simbol koji predstavlja, koja mu dozvoljava da mu se ispuni svaka zelja u zemlji fantaziji, ali po cenu brisanja iz secanja neke uspomene, ideja koja u stvari odlicno obuhvata ogromne slicnosti i ogromne razlike konacnog i beskonacnog - uspomene kao konacne, vec dogodjene stvari i zelje, kao beskonacne i naravno, njihove zamenjivosti, ali samo u smeru beskonacnog, odnosno, pretvaranju uspomene u neku novu, cime i ta nova, do tada neogranicena, parce beskonacnosti i samo beskonacno, postaje samo jos jedno iskustvo, omedjeno vremenom i prostorom, glavnim ljudskim dimenzijama. Sentimentalnost je vezana iskljucivo za stvari koje cuvamo, ne za one koje jos nismo iskusili i to cini prelaz i njegovu jednosmernost bolnim, inace, u nekoj velikoj panorami, bilo bi svejedno. Ne znam da li sam dobro objasnio kako ja dozivljavam ovo, niti da li ce to moci da shvati bilo ko ko nije procitao knjigu (mislim da je ova ideja originalna za knjigu, da nije 'pozajmica iz neke od mitologija, kao vecina stvari u knjizi, koju svakako, i ipak i bez obzira na godine, preporucujem), ali ovo sam ispricao jer sam se prvi put, tu u Alepu suocio sa brisanjem uspomena kao necim sto se stvarno desava. Naravno, obrisati fotografiju ne znaci da se neki dozivljaj nije desilo, da nestaje secanje na mesto, ali je to ipak na neki nacin brisanje, makar simbola, jedne uspomene. Po prvi put, zagledan u aparat, razmisljajuci koje fotke da brisem - osetio sam se odnesenim u prethodne dane i mesta, koja su bila dovoljno razlicita od svega u predjasnjem zivotu iskusenog, da bi mogla da predstavljaju svojevrsnu fantaziju i brisao sam uspomene, da bih stavio nove, koje su se desavale tu ispred mene, kao da se nece desiti, ako se ne ucini ta zrtva - brisanje nekih prethodnih, kao da ce u suprotnom ostati poluformirane, neizdvojeni deo nepoznate beskonacnosti utisaka ispred mene, i time vec sledece sekunde nestati i iz onog poluartikulisanog predvorja svesti, mozda i jedine veze koju imamo sa svim potencijalnim osetima, pa i onim koji opsegom ili kolicinom prevazilaze neku prosecnu kalibriranost cula i raznovrsnih memorija culnih. Tu negde iz sna sam trgnuo sam sebe, potrazivsi od Alija da me odvede do neke radnje gde se uspomene s kartice prebacuju na cd, i tad sam prvi put zaista zazalio sto postoji fotografija kao takva, i mozda, sebosvojstvenosebicno, sto sam ja u mogucnosti da je proizvodim. Ovo je jedan od razloga (ostali kad za njih dodje vreme) sto ovom prilikom saljem svega nekoliko "uspomena" i to samo jednu ekstremno nespecificnu, a drugu sasvim konacnu.</p> <p><img src="/images/blogs/luka06/IMG_7032.JPG" border="0" alt="IMG_7032.JPG" title="IMG_7032.JPG" width="519" height="389" align="middle" /></p> <p>Oprostili smo se od Alija i otisli da bazamo ogromnim parkom u severnom delu grada. Na ivici velelepnog parka nasao se neugledni kavez u kom je sedeo ogromni babun i igrao se s maketom nekog americkog aviona - gomila lokalnih klinaca delila je nase odusevljenje. Posle secerne bombe (ogromni sladoled i neki kolac od kokosa sa pistacima, indijskim orahom i bademom), otisli smo da obidjemo crkve i dzamije i u pokusaju da nadjemo ulaz u veliku pravoslavnu crkvu naleteli smo na nekoliko klinaca koji u dvoristu pozadi igraju fudbal. Posle sat vremena trcanja za loptom po najgorem suncu oko 3 popodne, bio sam najzedniji u zivotu (bar do tada) i uzasno srecan sto glava moze da stane ispod cesme. Saznali smo kasnije da je bilo 45 stepeni. Malo odmoreni, vratili smo se da potrazimo Alija. Usli smo kod nekog jermenskog prodavca srebrnina, na ciju radnju je Ali pokazao nesto ranije dok smo prolazili sokakom. Caskali smo s njim, gledali sta ima da ponudi, a utom je, u prolazu, navratio Ali, sa sledecim, nezaboravnim recima: "Mr Harac, good man - nije skupo". Ostatak dana smo uzivali u grickanju hleba i trgicu na koji smo imali odlican pogled iz Haracove radnje.</p><div id="napisiteputopis"><p></p><em>Volite da pišete, ili ste voljni da se okušate? <a href="http://www.serbiatravelers.org/zbivanja/3408-putopis" title="Napišite putopis">Napišite putopis</a>.<p></p></em></div><div id="facebooklike"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.serbiatravelers.org%2FBlogovi%2F32-levant-autostopom%2F313-sabun&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
+		<span style="float: right; margin-right: 7px;"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class='jfusionclearfix commentposition' id='jfusionButtonArea313'>
+<a id="jfusionBtnDiscuss313" class="readon jfusionButton" target="_self" href="http://www.serbiatravelers.org/forum/index.php?topic=2997">komentari (<span id="jfusionPostCount">8</span>)</a>
+</div>
+<div style='float:none; display:block;' id='discussion'>
+<br />
+<div class='jfusionPostHeader'></div>
+
+
+<div class='jfusionPostArea' id='jfusionPostArea'>
+
+
+<div class = 'jfusionPostBody' id='post35263'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35263#msg35263">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+Ceca (guest)</span>
+
+<div class='jfusionPostDate'>Sreda, 19 Jul 2006 09:25</div>
+
+<div  class='jfusionPostText'>Da fotografije, i konacno... Nama su potrebni "dokazi", a fotografija pokriva tek deo onoga sto dozivimo, mada nije los podsetnik. Poneti deo prostora sa sobom i ponovo ga proziveti, uvek na drugi nacin, na drugom mestu. Moze to naravno i drugacije. Covek se uvek pita da li ce se vratiti i ponovo videti sva ta mesta, a cak i da to ucini nikada se ne vraca po isto.<br />
+U svakom slucaju, jedva cekam da vidim ostatak fotografija.<br />
+Dani i ja sa uzivanjem pratimo vase putovanje. Mislim da cete tek po povratku videti koliko vam je bilo dragoceno. Sa nestrpljenjem ocekujem da vidim u kom pravcu cete usmeriti novostecenu energiju.<br />
+Srecno. Ne skrecite bas u Liban. Pozdrav obojici. Ceca</div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35263);'>| Quote |</a></span></div>
+<div id="originalText35263" style="display:none;">[quote="Ceca"]
+Da fotografije, i konacno... Nama su potrebni &quot;dokazi&quot;, a fotografija pokriva tek deo onoga sto dozivimo, mada nije los podsetnik. Poneti deo prostora sa sobom i ponovo ga proziveti, uvek na drugi nacin, na drugom mestu. Moze to naravno i drugacije. Covek se uvek pita da li ce se vratiti i ponovo videti sva ta mesta, a cak i da to ucini nikada se ne vraca po isto.
+U svakom slucaju, jedva cekam da vidim ostatak fotografija. 
+Dani i ja sa uzivanjem pratimo vase putovanje. Mislim da cete tek po povratku videti koliko vam je bilo dragoceno. Sa nestrpljenjem ocekujem da vidim u kom pravcu cete usmeriti novostecenu energiju.
+Srecno. Ne skrecite bas u Liban. Pozdrav obojici. Ceca
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35262'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35262#msg35262">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+sanvila (guest)</span>
+
+<div class='jfusionPostDate'>Utorak, 18 Jul 2006 16:26</div>
+
+<div  class='jfusionPostText'>Da znas da pratim iako definitivno nisam net osoba! Pozdrav.</div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35262);'>| Quote |</a></span></div>
+<div id="originalText35262" style="display:none;">[quote="sanvila"]
+Da znas da pratim iako definitivno nisam net osoba! Pozdrav.
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35265'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35265#msg35265">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+djaguard (guest)</span>
+
+<div class='jfusionPostDate'>Utorak, 18 Jul 2006 12:11</div>
+
+<div  class='jfusionPostText'>lepo lepo... neverending story x2 (kad sam bila mala i jos jednom nedavno) - sjajna knjiga, i sjajno izabran motiv da se pise o njemu... beskraj i kraj, ne mogu postojati jedno bez drugog.<br />
+cujem poceo rat tu negde tebi relativno u komsiluku, valjda neces kroz liban da se vracas <img src='http://www.serbiatravelers.org/forum/Smileys/default/wink.gif' alt=';)' /><br />
+uzivaj u suncu i polulitarskim dozama sokova a i u redovnom pisanju bloga (znamo svi da si se navukao na net, sad ti nema pomoci) =========<br />
+d</div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35265);'>| Quote |</a></span></div>
+<div id="originalText35265" style="display:none;">[quote="djaguard"]
+lepo lepo... neverending story x2 (kad sam bila mala i jos jednom nedavno) - sjajna knjiga, i sjajno izabran motiv da se pise o njemu... beskraj i kraj, ne mogu postojati jedno bez drugog.
+cujem poceo rat tu negde tebi relativno u komsiluku, valjda neces kroz liban da se vracas ;)
+uzivaj u suncu i polulitarskim dozama sokova a i u redovnom pisanju bloga (znamo svi da si se navukao na net, sad ti nema pomoci) =========
+d
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35264'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35264#msg35264">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+Arven (guest)</span>
+
+<div class='jfusionPostDate'>Ponedeljak, 17 Jul 2006 22:51</div>
+
+<div  class='jfusionPostText'>Jos uvek brinem, ali drago mi je da se dobro provodis..P.S. Fenomenalan text, obavezno nakaciti na CIP!</div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35264);'>| Quote |</a></span></div>
+<div id="originalText35264" style="display:none;">[quote="Arven"]
+Jos uvek brinem, ali drago mi je da se dobro provodis..P.S. Fenomenalan text, obavezno nakaciti na CIP!
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35268'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35268#msg35268">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+panonski (guest)</span>
+
+<div class='jfusionPostDate'>Ponedeljak, 17 Jul 2006 21:17</div>
+
+<div  class='jfusionPostText'>Odlican blog, samo tako nastavite.... Uzivamo s vama, sto rece Acketa. <img src='http://www.serbiatravelers.org/forum/Smileys/default/smiley.gif' alt=':)' /></div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35268);'>| Quote |</a></span></div>
+<div id="originalText35268" style="display:none;">[quote="panonski"]
+Odlican blog, samo tako nastavite.... Uzivamo s vama, sto rece Acketa. :)
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35267'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35267#msg35267">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+franzee (guest)</span>
+
+<div class='jfusionPostDate'>Ponedeljak, 17 Jul 2006 11:45</div>
+
+<div  class='jfusionPostText'>Sirija je kul <img src='http://www.serbiatravelers.org/forum/Smileys/default/cool.gif' alt='8)' /></div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35267);'>| Quote |</a></span></div>
+<div id="originalText35267" style="display:none;">[quote="franzee"]
+Sirija je kul 8)
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35269'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35269#msg35269">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+Acketa (guest)</span>
+
+<div class='jfusionPostDate'>Ponedeljak, 17 Jul 2006 09:51</div>
+
+<div  class='jfusionPostText'>Uuu Luka, ovo je vise nego putopis, a ja vise nego uzivam u vasem putesestviju i opisu istog...<br />
+Zelim vam vise nego puno srece u nastavku puta...</div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35269);'>| Quote |</a></span></div>
+<div id="originalText35269" style="display:none;">[quote="Acketa"]
+Uuu Luka, ovo je vise nego putopis, a ja vise nego uzivam u vasem putesestviju i opisu istog...
+Zelim vam vise nego puno srece u nastavku puta...
+[/quote]</div>
+</div>
+
+
+<div class = 'jfusionPostBody' id='post35270'>
+
+<span class = 'jfusionPostTitle'><a href="http://www.serbiatravelers.org/forum/index.php?topic=2997.msg35270#msg35270">Re: komentar</a></span>
+
+-- <span class='jfusionPostUser'>
+mimi (guest)</span>
+
+<div class='jfusionPostDate'>Ponedeljak, 17 Jul 2006 09:05</div>
+
+<div  class='jfusionPostText'>hej Luko  svidela mi se pricica,,,,,, ko je pobedio u fudbalu?<br />
+more photos! ,,,,,,iliti: uspomena ,,,,, vidim da nesto fali,,,,,,<br />
+i da te vidimo ....uskoro</div>
+<div class='jfusionToolbar jfusionclearfix'><span><a href='javascript:void(0);' onclick='jfusionQuote(35270);'>| Quote |</a></span></div>
+<div id="originalText35270" style="display:none;">[quote="mimi"]
+hej Luko  svidela mi se pricica,,,,,, ko je pobedio u fudbalu?
+more photos! ,,,,,,iliti: uspomena ,,,,, vidim da nesto fali,,,,,,
+ i da te vidimo ....uskoro
+[/quote]</div>
+</div>
+
+
+</div>
+
+
+<div class='jfusionQuickReply' id='jfusionQuickReply'>
+
+<div id='jfusionMessageArea'><div id='jfusionMessage'></div></div>
+
+<div class='jfusionQuickReplyHeader'></div>
+<form id='jfusionQuickReply313' name='jfusionQuickReply313' method=post action=''>
+<input type=hidden name='dbtask' value='create_post'>
+<table><tr><td>Nickname:</td><td><input name='guest_username' value='' class='inputbox'/></td></tr><tr><td>Unesite rec sa slike latinicom, malim slovima:<br/><img src="/images/rec.jpg" alt="captcha" /></td><td><input name='captcha_answer' value='' class='inputbox'/></td></tr></table><br><textarea id='quickReply' name='quickReply' class='inputbox'></textarea><br></form>
+<div style='width:99%; text-align:right;'>
+<input type='button' class='button' id='submitpost' value='Pošalji'/>
+</div>
+
+</div>
+
+<div id='jfusionAjaxStatus' style='display:none;'></div>
+
+</div><form style='display:none;' id='JFusionTaskForm' name='JFusionTaskForm' method='post' action='/Blogovi/32-levant-autostopom/313-sabun'>
+<input type='hidden' name='articleId' value='' />
+<input type='hidden' name='dbtask' value='' />
+</form>
+
+			<div class="clr"></div>
+			<table align="center" class="pagenav">
+			<tr>
+				<th class="pagenav_next">
+					<a href="/Blogovi/32-levant-autostopom/312-non-stop">&lt; Prethodni tekst</a>
+				</th>
+				<td width="50">
+					&nbsp;
+				</td>
+				<th class="pagenav_prev">
+					<a href="/Blogovi/32-levant-autostopom/314-mrtvi-gradovi-i-selo">Sledeći tekst &gt;</a>
+
+				</th>
+			</tr>
+			</table></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+</div>
+																	</div>
+							
+							
+													
+							
+						</div>
+						
+										
+						
+						<div class="clr"></div>
+				</div>
+			</div>
+
+	</div>
+	<div id="footer">
+		<div id="footer_l">
+			<div id="footer_r">
+				<p style="float:left; padding:4px 25px;">
+					
+				</p>
+
+			</div>
+		</div>
+	</div>			
+		</div>
+	</div>
+	<div id="sgf">Klub putnika Srbije - Serbia Travel Club / Kompletan sadržaj sajta je privatno vlasništvo. 2005-2010. &copy; Sva prava zadržana. Korišćenje delova ili celine bez izričite dozvole je zabranjeno.</div>
+</div>
+
+</body>
+</html>

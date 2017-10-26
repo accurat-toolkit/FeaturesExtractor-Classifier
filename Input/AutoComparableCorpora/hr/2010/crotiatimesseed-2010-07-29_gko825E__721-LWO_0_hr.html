@@ -1,0 +1,1261 @@
+<html>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta http-equiv="Content-Language" content="hr_HR">
+ <meta http-equiv="X-UA-Compatible" content="chrome=1">
+ <meta name="Author" content="BetBrain">
+ <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+ <title>Spread Betting, Handicap Betting and Over/Under Bets | BetBrain.com</title>
+ <meta name="Description" content="">
+ <meta name="KeyWords" content="spread betting handicap over under bets gambling odds sports">
+ <meta name="msvalidate.01" content="F22A641F7C2F2AA33CB7B1AAA9077864" /> <meta http-equiv="expires" content="never"/>
+ <meta name="robots" content="unavailable_after: never"/>
+ 
+ <script>
+ //alert("cookie ="+document.cookie+' url = '+document.location);
+ if(document.location.href.indexOf('jsessionid')>-1){
+ url=document.location.href.substring(document.location.href.lastIndexOf('jsessionid'),document.location.href.indexOf('um_rnd'));
+ url=url.replace('&','').replace('?','').replace('jsessionid=','');
+ var a=document.cookie.split(';');
+ var cook;
+ for(i=0; i < a.length; i++){
+ if(a[i].indexOf('JSESSIONID')>-1){
+ cook=a[i];
+ var b=cook.split('=');
+ cook = b[1];
+ if(((cook.indexOf('tomcat1')>-1 && url.indexOf('tomcat2')>-1) ||(cook.indexOf('tomcat2')>-1 && url.indexOf('tomcat1')>-1 )) && document.cookie.indexOf('redirecttries')<0){
+ Delete_Cookie('JSESSIONID','/');
+ document.cookie='JSESSIONID' + "=" +escape(url);
+ window.location.reload();
+ break;
+ }
+ }
+ }
+ //alert('final:'+document.cookie);
+ 
+ }
+ function Get_Cookie( name ) {
+ 
+ var start = document.cookie.indexOf( name + "=" );
+ var len = start + name.length + 1;
+ if ( ( !start ) &&
+ ( name != document.cookie.substring( 0, name.length ) ) )
+ {
+ return null;
+ }
+ if ( start == -1 ) return null;
+ var end = document.cookie.indexOf( ";", len );
+ if ( end == -1 ) end = document.cookie.length;
+ return unescape( document.cookie.substring( len, end ) );
+ }
+ function Delete_Cookie( name, path ) {
+ if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+ ( ( path ) ? ";path=" + path : "") +
+ ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+ }
+ </script>
+ <script type="text/javascript">
+ <!--
+ window.status='';
+ isPortal=false;
+ window.defaultStatus='BetBrain'
+ //-->
+ </script>
+ <!-- SCRIPT TYPE="text/javascript" src="http://js.betbrain.com/javascript/menu201012101330.js"></SCRIPT-->
+ <link rel="stylesheet" type="text/css" href="http://css.betbrain.com/styles/styles_0.min201012101330.css"/>
+ <link rel="stylesheet" type="text/css" href="http://css.betbrain.com/styles/forum.css"/>
+ <script type="text/javascript" src="http://js.betbrain.com/javascript/standardutil201012101330.js"></script> 
+ 
+ <script type="text/javascript" src="http://js.betbrain.com/javascript/jquery-postmessage201012101330.js"></script>
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript" src="http://js.betbrain.com/javascript/match_jquery201012101330.js"></script>
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://gfx.betbrain.com/gfx/favicon.ico">
+ </head>
+ <body>
+ <div id="swfContainer"></div>
+ <iframe src="/alive.jsp" style="display:none;" id="keepAlive" ></iframe>
+ <script>
+ jQuery.noConflict();
+ bbGlobal.portalId = 0;
+ bbGlobal.userRoleId = 1;
+ bbGlobal.userRoleLink = '';
+ bbGlobal.isBOV=false;
+ bbGlobal.gfxServer = 'http://gfx.betbrain.com';
+ bbGlobal.cssServer = 'http://css.betbrain.com';
+ bbGlobal.jsServer = 'http://js.betbrain.com';
+ bbGlobal.phpbbServer = 'http://10.0.3.219';
+ bbGlobal.imgSufix = '';
+ bbGlobal.uacct = 'UA-613177-19';
+ 
+ <!-- global vars for textIds: -->
+ bbGlobal.txtCollapse = 'Smanji';
+ bbGlobal.txtExpand = 'Proširi';
+ bbGlobal.txtHideOdds = 'Click to hide best odds';
+ bbGlobal.txtShowOdds = 'Click to see best odds'; 
+ bbGlobal.txtClickToCollapse = 'Click to collapse';
+ bbGlobal.txtClickToExpand = 'Click to expand'; 
+ bbGlobal.txtNOCollapse = 'It is not possible to collapse the menu on this page';
+ 
+ 
+ bbGlobal.txtForumMessagePost01 = 'Thank you for your comment!';
+ if(bbGlobal.isBOV)
+ bbGlobal.txtForumMessagePost02 = 'We\'re sending it to BetOnValue now...';
+ else
+ bbGlobal.txtForumMessagePost02 = 'We\'re sending it to BetBrain now...';
+ bbGlobal.txtForumMessagePost08 = '<h4>Success!</h4><p>Your comment has been posted.</p>';
+ bbGlobal.txtForumMessagePost09 = '<h4>Error!</h4><p>Please input your comment before submitting...</p>';
+ bbGlobal.txtForumMessagePost10 = '<h4>Forbidden!</h4><p>You have to login in order to post a comment. <a href="/userLogin.do">Click here to login!</a></p>';
+ bbGlobal.txtForumMessagePost11 = '<h4>You cannot post a new message so soon.</h4><p>Please wait some time and try again!</p>';
+ bbGlobal.txtForumMessagePost12 = 'Be the first to post a comment for this event!';
+ bbGlobal.txtForumMessageReport01 = 'Your report was sent! Thank you!';
+ bbGlobal.txtForumMessageDelete01 = 'Are you sure you want to delete this post?';
+ 
+ 
+ bbGlobal.txtForumError01 = 'The topic you are trying to see does not exist.';
+ 
+ 
+ 
+ bbGlobal.txtAccounts = 'Računovodstvo';
+ bbGlobal.txtLIVE = 'UŽIVO';
+ bbGlobal.wcDays = 'DAN';
+ bbGlobal.wcDAY = 'DAY';
+ bbGlobal.wcHours = 'SATI';
+ bbGlobal.wcMinutes = 'MIN';
+ bbGlobal.wcSeconds = 'SEK'; 
+ 
+ bbGlobal.matchestxt = 'SUSRETI';
+ bbGlobal.leaguestxt = 'OUTRIGHTS';
+ bbGlobal.oddsFormat = 0;
+ initSound();
+ //synchronizeClock();
+ </script>
+ <div id="container">
+ <div id="maincontent" >
+ <div id="workArea">
+ <div id="infoPContent">
+ <script>
+ var pageTitle = "Spread Betting, Handicap Betting and Over/Under Bets | BetBrain.com";
+</script>
+
+<table>
+ <tr>
+ <td valign="top">
+ <div id="topBanner"></div>
+ <h1 class="headlineNormal pageHeaderSmall paddingLeft10">
+	Hendikep / spread, Over / Under Oklade, i azijskim Hendikep</h1><div class="infoText">
+ <div class="toggler">
+ <h2 class="headlineNormal subTitle">
+	Hendikep / Namazi</h2>	
+</div>
+ 
+ <div class="accordion">
+ <p> <span class="bold">Što su Hendikep / Namazi?</span> </p>
+ <p> Hendikepiranost je način izrade sportskih natjecanja više i time još više zanimljiv kao klađenje objekt. U klađenju, ovo je učinjeno je dodjelom jedne od momčadi, onaj koji je pobijeđen, neke bodove ili ciljeve ispred. Različita imena i konvencijama se koriste za to, ovisno o sportu i zemljopisnog podrijetla kladionici, ali kad vidiš kroz to, osnovni princip je uvijek isti.</p>
+ <p> <span class="bold"> Kako funkcionira hendikepiranost</span></p>
+ <p> Razmislite football (soccer) utakmica između Austrije i Brazila, a Austrija se domaća momčad. Kladioničar svibanj nuditi mogućnost klađenja na događaj, u kojem se daje prednost od Austrije ½ cilj u ulog. Hendikep je 0,5. Dakle, ako Austrija rezultate najviše golova, s ciljem ½ dodao je, oni će i dalje imati je osvojio. Ako je rezultat momčadi jednak broj golova, s ciljem ½ dodao, Austrija će imati osvojio hendikepirani kladiti. Međutim, ako je Brazil pobjedio (po 1 gol ili više), Brazil će imati pobijedio u okladi. Imajte na umu da uz hendikep od 0,5, igra nikada ne može završiti neriješeno.</p>
+ <p> Isti princip se može koristiti u bilo koje natjecanje između dvije ekipe ili pojedinci, gdje se određuje ishod natječaja od strane rezultate koji su najviše golova / bodova / ... Na primjer, u baseball utakmici, gdje ekipa bodovanje najviše radi je pobjednik, hendikep će biti broj prometuje dodijeljena gubitnik. Hendikepiranost je najčešći tip oklade u SAD-u timskim sportovima. Hendikep se često naziva širenje.</p>
+ <p> Radi lakšeg snalaženja, mi ćemo staviti na europskom nogometnom u sljedećim primjerima, ali je sve prevodi izravno na druge sportove. Samo razmjena ciljeva za bodove, pokreće ili što god rezultat se zove.</p>
+ <p> <span class="bold">Naši Prevaga Prezentacija</span></p>
+ <p> Mi uvijek koristiti konvencija ispis hendikepom u smislu (neto) bodova dodjeljuje se prvi od dva tima. Ako hendikep je negativna, na primjer - ½, to znači da tim 1 je omiljena i da će imati odbija od ciljeva je rezultat. Ako hendikep je pozitivan, to znači da tim 1 je onaj koji je pobijeđen i da će imati ciljeve dodao da je to rezultat.</p>
+ <p> <span class="bold">Opcija Draw / Draw Ne Opcija</span></p>
+ <p> Hendikep može biti cijeli broj, npr. +1,0 (što znači da tim 1 je dobio 1 gol ispred). U ovom slučaju, natječaj bi mogao završiti neriješeno - ako izgubi s team 1 točno 1 gol.</p>
+ <p> To se može rješavati na dva moguća načina: ili kladionici nudi mogućnost klađenja na izvlačenje, s hendikepom nacrtati opciju. Ili on ne, a zatim vraća ulog (po mogućnosti odbitka manje naknade), hendikepiranost bez neriješeno opciju.</p>
+ <p> U prvom slučaju, punter tada ima tri izbora, kao i obično u kući / privući / utakmica u gostima oklada. A u drugoj, on ima samo dva izbora, dom i gostujuće momčadi. Baš kao kad je bio hendikep 0,5. Potonje načelo uvijek koristi u SAD-sportova, gdje se skreće prilično vjerojatno u svakom slučaju zbog pravila sporta. U europskom nogometu, to varira između bookmakers, a neki čak nude obje vrste invaliditetu. 'No draw opciju "tip za Europski nogomet se često naziva Azijski Hendikep. Samo drugo ime.</p>
+ <p> U hendikep bez neriješeno opciju, bookmakers se razlikuju u doigravanje postotku, koja varira između 90% i 100%, a većina plaća puni iznos nazad. To odgovara prazan ulog, u suštini izjavljujući oklada ne mogu se smiriti i otkaz. Payback postoci su navedene na stranicama kladioničar informacijama.</p>
+ </div>
+ 
+ <div class="toggler">
+ <h2 class="headlineNormal subTitle">
+	Posebna značajka Azijski Hendikep - Hendikep (0, + ½) i (½, +1)</h2>	
+</div>
+ 
+ <div class="accordion"> 
+ <p> <span class="bold">Kombinirajući Hendikep</span></p>
+ <p> Za Azijski Hendikep - to jest, hendikep oklade bez izvlačenja mogućnost za europske nogometne utakmice - postoji daljnja specijalizacija se često koristi, kombinacija dva različita invaliditetu.</p>
+ <p> <span class="bold">Hendikep (+½,+ 1)</span></p>
+ <p> Na primjer, azijski hendikep oklada mogla biti ponudu koeficijenata za 1,90 Austrija Brazil pobijediti kod kuće sa hendikep (+½,+ 1). Ovaj hendikep se također ponekad navedena kao ¾ +, što može biti prilično zbunjujuće i loše metodologije. Što hendikep (+½,+ 1) znači, da punter će biti nagrađeni kao da je stavio 50% udjela na oklada s hendikepom + ½ i 50% udjela na okladi s hendikep +1.</p>
+ <p> Na primjer, punter će dobiti isplatu od 1,90 ako Austrije neriješeno ili pobjeda. I on će izgubiti svoj novac ako je Brazil pobjedio po dva gola ili više. Zašto? Budući da su za mito i hendikep + ½ i +1.</p>
+ <p> Ako Brazil pobjeđuje za 1 gol, npr. konačni rezultat Austrija 0, Brazil 1, zatim hendikep + ½ i +1 razlikuju. Punter novac bit će izgubljen u slučaju invaliditeta + ½, dajući isplatu od 0, a igra će biti vezan u slučaju invaliditeta +1, dajući doigravanje originalnih udjela. Miješanje dva zajedno, pedeset-pedeset, punter prima 0.5 x 0 + 0.5 x 1 = 0 + 0.5 = 0.5.</p>
+ <p> <span class="bold">Handicap (0, + ½)</span></p>
+ <p> Ako je hendikep (0 ,+½), dva hendikepa u kombinaciji razlikovat će se ako je vezan igra, npr. konačni rezultat Austrija 1, Brazil 1. Za hendikep 0, igra je vezan i punter se vratio ulog, isplatu od 1. Za hendikep + ½, Austrija je Prognozirajte pobjednika, a punter prima isplatu odgovara izgledi ponuđene, 1,90. Miješanje dva zajedno, pedeset-pedeset, punter prima 0.5 x 1 + 0.5 x 1,90 = 0,5 + 0,95 = 1,45.</p>
+ </div>
+ 
+ <div class="toggler">
+ <h2 class="headlineNormal subTitle">
+	Iznad / Ispod</h2>	
+</div>
+ 
+ 
+ <div class="accordion">
+ <p> <span class="bold">Što su iznad / ispod oklade?</span></p>
+ <p> Preko / ispod oklade spominje ovdje, jer podsjećaju puno o invaliditetu. U O / U ulog, ulog se određuje na ukupan broj golova / bodova / prolazi / setovi ... postigao u utakmici. Za Europska nogometna utakmica, ulog na primjer mogla ponuditi 2,10 koeficijente za ukupan broj golova premašiti 2.5. Ili u američki nogomet igra, ulog može ponuditi koeficijent 1,90 za ukupan broj bodova premašiti 35. I tako dalje. Možete ponuditi Over / Under ponude na ništa, što se određuje ishod nekog jedan broj.</p>
+ <p> Kao i sa smetnjama, iznad / ispod mogu kraj neutvrđen ako prag u ulog, ukupno je cijeli broj, npr. američki nogomet iznad / ispod sa ukupno 35. I opet je pitanje doigravanje / povrat kladiti udjela u slučaju da se to dogodi.</p>
+ <p> <span class="bold">Hendikep i Iznad / unders su iste ..</span></p>
+ <p> Sličnost između hendikep i Iznad / Ispod klađenje je osobito jasno kada primijetiti, da je hendikep oklade se jednostavno preko / ispod oklade, gdje se broj određuje Više / Manje je gol razlika između dvije ekipe. Također ćete vidjeti identičan prezentacija dva tipa oklada na ovim stranicama.</p>
+ </div>
+ </div>
+ </td>
+ <td width="10" ></td> 
+ <td width="120" valign="top">
+ <div id ="skyScrapper">
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.betbrain.com/www/delivery/ajs.php':'http://ads.betbrain.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=113");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script>
+var urlParam = '/SimpleJspForwarder.do'+'&' + 'website=1&view=aboutSpreads&site=0&' +'domain=betbrain.com';
+</script>
+</div>
+</td>
+ </tr>
+</table>
+
+</div>
+ </div>
+ <div id="left">
+ <table border="0" cellpadding="0" cellspacing="0" class="leftMenuTable">
+ <tr>
+ <td id="collapseContainer" class="">
+ <a title="Click this arrow to collapse the main menu!" href="#" id="collapseMe" style="height: 432px; padding: 422px 0pt 0pt;">
+ <span class="Hidden">Collapse the main menu ></span>
+ </a>
+ 
+ </td>
+ <td id="menuBody">
+ 
+ 
+ <div class="leftMenuTabsDiv">
+ <table class="leftMenuTabs" cellspacing="0" cellpadding="0" border="0">
+ <tr>
+ <td>
+ <ul class="leftMenuTabs">
+ <li class="leftmenu_mouse_out left" title="Find odds comparison for all events" name="leftMenuContainer">PREVAGA</li>
+ <li class="leftmenu_mouse_out right" title="See next matches - and filter by sport, bookmaker, popularity and more!" name="leftMenuNM">DALJE</li>
+ <li class="leftmenu_mouse_out left" title="Fast forward to the most popular matches and leagues on the site right now" name="leftMenuMP">POPULARNO</li>
+ <li class="leftmenu_mouse_out right" title="Compare odds for combo bets - or just store interesting outcomes together for your convenience" name="leftMenuCoupon">KUPON</li>
+ <li class="leftmenu_mouse_out left" title="Live scores and stats" name="leftMenuStats">REZULTATI</li>
+ <li class="leftmenu_mouse_out right" title="Compare live odds" name="leftMenuLive" style="color:#FF0000 !important;">LIVE!</li>
+ <li class="leftmenu_mouse_out right hidden" title="" name="leftMenuSearch">&nbsp;</li> 
+ 
+ <li class="leftmenu_mouse_out right hidden" title="" name="leftMenuSearch">&nbsp;</li> 
+ 
+ <!--always have an even number of tabs -->
+ </ul>
+ </td>
+ </tr>
+ <tr>
+ <td><!-- THE SEARCH ENGINE -->
+
+<form name="SearchForm" id="searchForm" action="/oddsSearch.do" onSubmit="if(document.getElementById('searchBox').value.trim()!=''){searchSubmit();}return false;"> 
+ <input id="searchBox"
+ type="text" 
+ name="searchedName" 
+ value="Traži"/>&nbsp;<img onclick="if(document.getElementById('searchBox').value.trim()!=''){searchSubmit();}"
+ id='searchFormImg' 
+ title='Traži' 
+ src="http://gfx.betbrain.com/gfx/image/search2.gif">
+</form>
+<div id="progressIndicator" style="display:none;">
+ <img src="http://gfx.betbrain.com/gfx/image/ajax_loader.gif" alt="" class="size66x66"/>
+</div>
+
+</td>
+ </tr>
+ </table>
+ </div>
+ 
+ <div id="leftMenuContainer" class="mootabsLeftMenu hidden leftMenuTree">
+ 
+ <script>
+ var allSportsText = 'All Sports';
+ var compareFromText = 'Compare odds from';
+ var leftMenuTree = [{'id': 1,'type': 4,'link': '/football/','hasAuxiliar': true,'name': "Nogomet",'hits': 430345,'isLive': false,'kids': [{'id': 'ZA','type': 5,'link': '/football/south-africa/','hasAuxiliar': true,'name': "South Africa",'isLive': false, 'hits':0},{'id': 'EC','type': 5,'link': '/football/ecuador/','hasAuxiliar': true,'name': "Ecuador",'isLive': false, 'hits':0},{'id': 'HR','type': 5,'link': '/football/croatia/','hasAuxiliar': true,'name': "Hrvatska",'isLive': false, 'hits':0},{'id': 'RO','type': 5,'link': '/football/romania/','hasAuxiliar': true,'name': "Rumunjska",'isLive': false, 'hits':0},{'id': 'HU','type': 5,'link': '/football/hungary/','hasAuxiliar': true,'name': "Ma&#273;arska",'isLive': false, 'hits':0},{'id': 'VE','type': 5,'link': '/football/venezuela/','hasAuxiliar': true,'name': "Venezuela",'isLive': false, 'hits':0},{'id': 'MK','type': 5,'link': '/football/republic-of-macedonia/','hasAuxiliar': true,'name': "Makedonija",'isLive': false, 'hits':0},{'id': 'MJ','type': 5,'link': '/football/montenegro/','hasAuxiliar': true,'name': "Montenegro",'isLive': false, 'hits':0},{'id': 'DE','type': 5,'link': '/football/germany/','hasAuxiliar': true,'name': "Njema&#269;ka",'isLive': false, 'hits':18275},{'id': 'MD','type': 5,'link': '/football/moldova/','hasAuxiliar': true,'name': "Moldova",'isLive': false, 'hits':0},{'id': 'DK','type': 5,'link': '/football/denmark/','hasAuxiliar': true,'name': "Danska",'isLive': false, 'hits':7527},{'id': 'AT','type': 5,'link': '/football/austria/','hasAuxiliar': true,'name': "Austria",'isLive': false, 'hits':0},{'id': 'AR','type': 5,'link': '/football/argentina/','hasAuxiliar': true,'name': "Argentina",'isLive': false, 'hits':0},{'id': 'IL','type': 5,'link': '/football/israel/','hasAuxiliar': true,'name': "Izrael",'isLive': false, 'hits':0},{'id': 'GB3','type': 5,'link': '/football/northern-ireland/','hasAuxiliar': true,'name': "Northern Ireland",'isLive': false, 'hits':0},{'id': 'AU','type': 5,'link': '/football/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':6662},{'id': 'GB4','type': 5,'link': '/football/wales/','hasAuxiliar': true,'name': "Vels",'isLive': false, 'hits':0},{'id': 'GB1','type': 5,'link': '/football/england/','hasAuxiliar': true,'name': "Engleska",'isLive': false, 'hits':47914},{'id': 'GB2','type': 5,'link': '/football/scotland/','hasAuxiliar': true,'name': "Škotska",'isLive': false, 'hits':0},{'id': 'IR','type': 5,'link': '/football/iran/','hasAuxiliar': true,'name': "Iran",'isLive': false, 'hits':0},{'id': 'EU','type': 5,'link': '/football/europe/','hasAuxiliar': true,'name': "Europa",'isLive': false, 'hits':98047},{'id': 'AZ','type': 5,'link': '/football/azerbaijan/','hasAuxiliar': true,'name': "Azerbaijan",'isLive': false, 'hits':0},{'id': 'IT','type': 5,'link': '/football/italy/','hasAuxiliar': true,'name': "Italija",'isLive': false, 'hits':17943},{'id': 'MT','type': 5,'link': '/football/malta/','hasAuxiliar': true,'name': "Malta",'isLive': false, 'hits':0},{'id': 'PT','type': 5,'link': '/football/portugal/','hasAuxiliar': true,'name': "Portugal",'isLive': false, 'hits':0},{'id': 'UA','type': 5,'link': '/football/ukraine/','hasAuxiliar': true,'name': "Ukrajina",'isLive': false, 'hits':0},{'id': 'ES','type': 5,'link': '/football/spain/','hasAuxiliar': true,'name': "Španjolska",'isLive': false, 'hits':21168},{'id': 'NL','type': 5,'link': '/football/netherlands/','hasAuxiliar': true,'name': "Nizozemska",'isLive': false, 'hits':7788},{'id': 'AL','type': 5,'link': '/football/albania/','hasAuxiliar': true,'name': "Albania",'isLive': false, 'hits':0},{'id': 'ASI','type': 5,'link': '/football/asia/','hasAuxiliar': true,'name': "Asia",'isLive': false, 'hits':0},{'id': 'GE','type': 5,'link': '/football/georgia/','hasAuxiliar': true,'name': "Gruzija",'isLive': false, 'hits':0},{'id': 'NZ','type': 5,'link': '/football/new-zealand/','hasAuxiliar': true,'name': "Novi Zeland",'isLive': false, 'hits':0},{'id': 'TR','type': 5,'link': '/football/turkey/','hasAuxiliar': true,'name': "Turska",'isLive': false, 'hits':0},{'id': 'NO','type': 5,'link': '/football/norway/','hasAuxiliar': true,'name': "Norveška",'isLive': false, 'hits':11857},{'id': 'SU','type': 5,'link': '/football/south-america/','hasAuxiliar': true,'name': "South America",'isLive': false, 'hits':0},{'id': 'BG','type': 5,'link': '/football/bulgaria/','hasAuxiliar': true,'name': "Bugarska",'isLive': false, 'hits':0},{'id': 'FR','type': 5,'link': '/football/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':13838},{'id': 'BE','type': 5,'link': '/football/belgium/','hasAuxiliar': true,'name': "Belgija",'isLive': false, 'hits':0},{'id': 'OC','type': 5,'link': '/football/oceania/','hasAuxiliar': true,'name': "Oceania",'isLive': false, 'hits':0},{'id': 'FI','type': 5,'link': '/football/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':10358},{'id': 'CZ','type': 5,'link': '/football/czech-republic/','hasAuxiliar': true,'name': "&#268;eška",'isLive': false, 'hits':0},{'id': 'WO','type': 5,'link': '/football/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':29609},{'id': 'CY','type': 5,'link': '/football/cyprus/','hasAuxiliar': true,'name': "Cipar",'isLive': false, 'hits':0},{'id': 'SE','type': 5,'link': '/football/sweden/','hasAuxiliar': true,'name': "Švedska",'isLive': false, 'hits':10894},{'id': 'SI','type': 5,'link': '/football/slovenia/','hasAuxiliar': true,'name': "Slovenija",'isLive': false, 'hits':0},{'id': 'SK','type': 5,'link': '/football/slovakia/','hasAuxiliar': true,'name': "Slova&#269;ka",'isLive': false, 'hits':0},{'id': 'PL','type': 5,'link': '/football/poland/','hasAuxiliar': true,'name': "Poljska",'isLive': false, 'hits':0},{'id': 'RS','type': 5,'link': '/football/serbia/','hasAuxiliar': true,'name': "Serbia",'isLive': false, 'hits':0},{'id': 'CH','type': 5,'link': '/football/switzerland/','hasAuxiliar': true,'name': "Švicarska",'isLive': false, 'hits':0},{'id': 'GR','type': 5,'link': '/football/greece/','hasAuxiliar': true,'name': "Gr&#269;ka",'isLive': false, 'hits':0},{'id': 'AFR','type': 5,'link': '/football/africa/','hasAuxiliar': true,'name': "Africa",'isLive': false, 'hits':0},{'id': 'PE','type': 5,'link': '/football/peru/','hasAuxiliar': true,'name': "Peru",'isLive': false, 'hits':0},{'id': 'CR','type': 5,'link': '/football/costa-rica/','hasAuxiliar': true,'name': "Kostarika",'isLive': false, 'hits':0},{'id': 'CO','type': 5,'link': '/football/colombia/','hasAuxiliar': true,'name': "Kolumbija",'isLive': false, 'hits':0},{'id': 'CL','type': 5,'link': '/football/chile/','hasAuxiliar': true,'name': "&#268;ile",'isLive': false, 'hits':0},{'id': -9999,'type': 5,'link': '','hasAuxiliar': false,'name': "Other Countries",'isLive': false, 'hits':0}]},{'id': 2,'type': 4,'link': '/golf/','hasAuxiliar': true,'name': "Golf",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/golf/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0},{'id': 'US','type': 5,'link': '/golf/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':0},{'id': 'GB','type': 5,'link': '/golf/united-kingdom/','hasAuxiliar': true,'name': "Velika Britanija",'isLive': false, 'hits':0}]},{'id': 3,'type': 4,'link': '/tennis/','hasAuxiliar': true,'name': "Tenis",'hits': 43049,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/tennis/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':1800},{'id': 'FR','type': 5,'link': '/tennis/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':4491},{'id': 'US','type': 5,'link': '/tennis/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':13931},{'id': 'AU','type': 5,'link': '/tennis/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':704},{'id': 'GB1','type': 5,'link': '/tennis/england/','hasAuxiliar': true,'name': "Engleska",'isLive': false, 'hits':5534},{'id': 'EG','type': 5,'link': '/tennis/egypt/','hasAuxiliar': true,'name': "Egipat",'isLive': false, 'hits':0}]},{'id': 5,'type': 4,'link': '/am-football/','hasAuxiliar': true,'name': "Am. Football",'hits': 48939,'isLive': false,'kids': [{'id': 'US','type': 5,'link': '/am-football/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':45766}]},{'id': 6,'type': 4,'link': '/ice-hockey/','hasAuxiliar': true,'name': "Hokej na Ledu",'hits': 20529,'isLive': false,'kids': [{'id': 'CZ','type': 5,'link': '/ice-hockey/czech-republic/','hasAuxiliar': true,'name': "&#268;eška",'isLive': false, 'hits':1255},{'id': 'WO','type': 5,'link': '/ice-hockey/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':600},{'id': 'AT','type': 5,'link': '/ice-hockey/austria/','hasAuxiliar': true,'name': "Austria",'isLive': false, 'hits':439},{'id': 'ASI','type': 5,'link': '/ice-hockey/asia/','hasAuxiliar': true,'name': "Asia",'isLive': false, 'hits':0},{'id': 'US','type': 5,'link': '/ice-hockey/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':6331},{'id': 'SE','type': 5,'link': '/ice-hockey/sweden/','hasAuxiliar': true,'name': "Švedska",'isLive': false, 'hits':2441},{'id': 'GB1','type': 5,'link': '/ice-hockey/england/','hasAuxiliar': true,'name': "Engleska",'isLive': false, 'hits':0},{'id': 'SK','type': 5,'link': '/ice-hockey/slovakia/','hasAuxiliar': true,'name': "Slova&#269;ka",'isLive': false, 'hits':913},{'id': 'IT','type': 5,'link': '/ice-hockey/italy/','hasAuxiliar': true,'name': "Italija",'isLive': false, 'hits':146},{'id': 'NO','type': 5,'link': '/ice-hockey/norway/','hasAuxiliar': true,'name': "Norveška",'isLive': false, 'hits':700},{'id': 'PL','type': 5,'link': '/ice-hockey/poland/','hasAuxiliar': true,'name': "Poljska",'isLive': false, 'hits':285},{'id': 'FR','type': 5,'link': '/ice-hockey/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':0},{'id': 'CH','type': 5,'link': '/ice-hockey/switzerland/','hasAuxiliar': true,'name': "Švicarska",'isLive': false, 'hits':949},{'id': 'RU','type': 5,'link': '/ice-hockey/russia/','hasAuxiliar': true,'name': "Rusija",'isLive': false, 'hits':2603},{'id': 'DE','type': 5,'link': '/ice-hockey/germany/','hasAuxiliar': true,'name': "Njema&#269;ka",'isLive': false, 'hits':941},{'id': 'FI','type': 5,'link': '/ice-hockey/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':1902},{'id': 'DK','type': 5,'link': '/ice-hockey/denmark/','hasAuxiliar': true,'name': "Danska",'isLive': false, 'hits':418},{'id': -9999,'type': 5,'link': '','hasAuxiliar': false,'name': "Other Countries",'isLive': false, 'hits':0}]},{'id': 7,'type': 4,'link': '/handball/','hasAuxiliar': true,'name': "Rukomet",'hits': 8888,'isLive': false,'kids': [{'id': 'CZ','type': 5,'link': '/handball/czech-republic/','hasAuxiliar': true,'name': "&#268;eška",'isLive': false, 'hits':0},{'id': 'WO','type': 5,'link': '/handball/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':485},{'id': 'AT','type': 5,'link': '/handball/austria/','hasAuxiliar': true,'name': "Austria",'isLive': false, 'hits':224},{'id': 'SE','type': 5,'link': '/handball/sweden/','hasAuxiliar': true,'name': "Švedska",'isLive': false, 'hits':839},{'id': 'SI','type': 5,'link': '/handball/slovenia/','hasAuxiliar': true,'name': "Slovenija",'isLive': false, 'hits':224},{'id': 'HR','type': 5,'link': '/handball/croatia/','hasAuxiliar': true,'name': "Hrvatska",'isLive': false, 'hits':227},{'id': 'SK','type': 5,'link': '/handball/slovakia/','hasAuxiliar': true,'name': "Slova&#269;ka",'isLive': false, 'hits':103},{'id': 'EU','type': 5,'link': '/handball/europe/','hasAuxiliar': true,'name': "Europa",'isLive': false, 'hits':1581},{'id': 'NO','type': 5,'link': '/handball/norway/','hasAuxiliar': true,'name': "Norveška",'isLive': false, 'hits':666},{'id': 'HU','type': 5,'link': '/handball/hungary/','hasAuxiliar': true,'name': "Ma&#273;arska",'isLive': false, 'hits':290},{'id': 'PL','type': 5,'link': '/handball/poland/','hasAuxiliar': true,'name': "Poljska",'isLive': false, 'hits':157},{'id': 'FR','type': 5,'link': '/handball/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':516},{'id': 'CH','type': 5,'link': '/handball/switzerland/','hasAuxiliar': true,'name': "Švicarska",'isLive': false, 'hits':133},{'id': 'GR','type': 5,'link': '/handball/greece/','hasAuxiliar': true,'name': "Gr&#269;ka",'isLive': false, 'hits':0},{'id': 'ES','type': 5,'link': '/handball/spain/','hasAuxiliar': true,'name': "Španjolska",'isLive': false, 'hits':758},{'id': 'DE','type': 5,'link': '/handball/germany/','hasAuxiliar': true,'name': "Njema&#269;ka",'isLive': false, 'hits':1372},{'id': 'DK','type': 5,'link': '/handball/denmark/','hasAuxiliar': true,'name': "Danska",'isLive': false, 'hits':934},{'id': -9999,'type': 5,'link': '','hasAuxiliar': false,'name': "Other Countries",'isLive': false, 'hits':0}]},{'id': 8,'type': 4,'link': '/basketball/','hasAuxiliar': true,'name': "Košarka",'hits': 51650,'isLive': false,'kids': [{'id': 'JP','type': 5,'link': '/basketball/japan/','hasAuxiliar': true,'name': "Japan",'isLive': false, 'hits':0},{'id': 'LT','type': 5,'link': '/basketball/lithuania/','hasAuxiliar': true,'name': "Litva",'isLive': false, 'hits':0},{'id': 'BR','type': 5,'link': '/basketball/brazil/','hasAuxiliar': true,'name': "Brazil",'isLive': false, 'hits':0},{'id': 'RO','type': 5,'link': '/basketball/romania/','hasAuxiliar': true,'name': "Rumunjska",'isLive': false, 'hits':0},{'id': 'TR','type': 5,'link': '/basketball/turkey/','hasAuxiliar': true,'name': "Turska",'isLive': false, 'hits':526},{'id': 'HU','type': 5,'link': '/basketball/hungary/','hasAuxiliar': true,'name': "Ma&#273;arska",'isLive': false, 'hits':0},{'id': 'FR','type': 5,'link': '/basketball/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':1406},{'id': 'DE','type': 5,'link': '/basketball/germany/','hasAuxiliar': true,'name': "Njema&#269;ka",'isLive': false, 'hits':1274},{'id': 'FI','type': 5,'link': '/basketball/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':0},{'id': 'IE','type': 5,'link': '/basketball/ireland/','hasAuxiliar': true,'name': "Irska",'isLive': false, 'hits':0},{'id': 'AT','type': 5,'link': '/basketball/austria/','hasAuxiliar': true,'name': "Austria",'isLive': false, 'hits':460},{'id': 'CZ','type': 5,'link': '/basketball/czech-republic/','hasAuxiliar': true,'name': "&#268;eška",'isLive': false, 'hits':497},{'id': 'MX','type': 5,'link': '/basketball/mexico/','hasAuxiliar': true,'name': "Meksiko",'isLive': false, 'hits':0},{'id': 'US','type': 5,'link': '/basketball/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':15255},{'id': 'IL','type': 5,'link': '/basketball/israel/','hasAuxiliar': true,'name': "Izrael",'isLive': false, 'hits':0},{'id': 'KR','type': 5,'link': '/basketball/republic-of-korea/','hasAuxiliar': true,'name': "Republic of Korea",'isLive': false, 'hits':0},{'id': 'AU','type': 5,'link': '/basketball/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':1016},{'id': 'SI','type': 5,'link': '/basketball/slovenia/','hasAuxiliar': true,'name': "Slovenija",'isLive': false, 'hits':0},{'id': 'EU','type': 5,'link': '/basketball/europe/','hasAuxiliar': true,'name': "Europa",'isLive': false, 'hits':12159},{'id': 'IT','type': 5,'link': '/basketball/italy/','hasAuxiliar': true,'name': "Italija",'isLive': false, 'hits':1620},{'id': 'PL','type': 5,'link': '/basketball/poland/','hasAuxiliar': true,'name': "Poljska",'isLive': false, 'hits':490},{'id': 'RS','type': 5,'link': '/basketball/serbia/','hasAuxiliar': true,'name': "Serbia",'isLive': false, 'hits':0},{'id': 'RU','type': 5,'link': '/basketball/russia/','hasAuxiliar': true,'name': "Rusija",'isLive': false, 'hits':514},{'id': 'GR','type': 5,'link': '/basketball/greece/','hasAuxiliar': true,'name': "Gr&#269;ka",'isLive': false, 'hits':834},{'id': 'PH','type': 5,'link': '/basketball/philippines/','hasAuxiliar': true,'name': "Philippines",'isLive': false, 'hits':1410},{'id': 'ES','type': 5,'link': '/basketball/spain/','hasAuxiliar': true,'name': "Španjolska",'isLive': false, 'hits':3516},{'id': 'NL','type': 5,'link': '/basketball/netherlands/','hasAuxiliar': true,'name': "Nizozemska",'isLive': false, 'hits':0},{'id': 'EE','type': 5,'link': '/basketball/estonia/','hasAuxiliar': true,'name': "Estonia",'isLive': false, 'hits':0},{'id': 'CN','type': 5,'link': '/basketball/china/','hasAuxiliar': true,'name': "Kina",'isLive': false, 'hits':0},{'id': -9999,'type': 5,'link': '','hasAuxiliar': false,'name': "Other Countries",'isLive': false, 'hits':0}]},{'id': 9,'type': 4,'link': '/baseball/','hasAuxiliar': true,'name': "Bejzbol",'hits': 38206,'isLive': false,'kids': [{'id': 'JP','type': 5,'link': '/baseball/japan/','hasAuxiliar': true,'name': "Japan",'isLive': false, 'hits':3244},{'id': 'US','type': 5,'link': '/baseball/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':30800},{'id': 'MX','type': 5,'link': '/baseball/mexico/','hasAuxiliar': true,'name': "Meksiko",'isLive': false, 'hits':1634},{'id': 'FI','type': 5,'link': '/baseball/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':1352}]},{'id': 74,'type': 4,'link': '/harness-racing/','hasAuxiliar': true,'name': "Harness Racing",'hits': 0,'isLive': false,'kids': [{'id': 'AU','type': 5,'link': '/harness-racing/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':0}]},{'id': 14,'type': 4,'link': '/badminton/','hasAuxiliar': true,'name': "Badmington",'hits': 0,'isLive': false,'kids': [{'id': 'DK','type': 5,'link': '/badminton/denmark/','hasAuxiliar': true,'name': "Danska",'isLive': false, 'hits':0}]},{'id': 20,'type': 4,'link': '/volleyball/','hasAuxiliar': true,'name': "Odbojka",'hits': 0,'isLive': false,'kids': [{'id': 'CZ','type': 5,'link': '/volleyball/czech-republic/','hasAuxiliar': true,'name': "&#268;eška",'isLive': false, 'hits':0},{'id': 'AT','type': 5,'link': '/volleyball/austria/','hasAuxiliar': true,'name': "Austria",'isLive': false, 'hits':0},{'id': 'SI','type': 5,'link': '/volleyball/slovenia/','hasAuxiliar': true,'name': "Slovenija",'isLive': false, 'hits':0},{'id': 'EU','type': 5,'link': '/volleyball/europe/','hasAuxiliar': true,'name': "Europa",'isLive': false, 'hits':0},{'id': 'IT','type': 5,'link': '/volleyball/italy/','hasAuxiliar': true,'name': "Italija",'isLive': false, 'hits':0},{'id': 'TR','type': 5,'link': '/volleyball/turkey/','hasAuxiliar': true,'name': "Turska",'isLive': false, 'hits':0},{'id': 'PT','type': 5,'link': '/volleyball/portugal/','hasAuxiliar': true,'name': "Portugal",'isLive': false, 'hits':0},{'id': 'PL','type': 5,'link': '/volleyball/poland/','hasAuxiliar': true,'name': "Poljska",'isLive': false, 'hits':0},{'id': 'FR','type': 5,'link': '/volleyball/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':0},{'id': 'RS','type': 5,'link': '/volleyball/serbia/','hasAuxiliar': true,'name': "Serbia",'isLive': false, 'hits':0},{'id': 'RU','type': 5,'link': '/volleyball/russia/','hasAuxiliar': true,'name': "Rusija",'isLive': false, 'hits':0},{'id': 'CH','type': 5,'link': '/volleyball/switzerland/','hasAuxiliar': true,'name': "Švicarska",'isLive': false, 'hits':0},{'id': 'GR','type': 5,'link': '/volleyball/greece/','hasAuxiliar': true,'name': "Gr&#269;ka",'isLive': false, 'hits':0},{'id': 'NL','type': 5,'link': '/volleyball/netherlands/','hasAuxiliar': true,'name': "Nizozemska",'isLive': false, 'hits':0},{'id': 'BE','type': 5,'link': '/volleyball/belgium/','hasAuxiliar': true,'name': "Belgija",'isLive': false, 'hits':0},{'id': 'FI','type': 5,'link': '/volleyball/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':0},{'id': -9999,'type': 5,'link': '','hasAuxiliar': false,'name': "Other Countries",'isLive': false, 'hits':0}]},{'id': 23,'type': 4,'link': '/motor-racing/','hasAuxiliar': true,'name': "Moto Utrke",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/motor-racing/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0}]},{'id': 25,'type': 4,'link': '/fighting/','hasAuxiliar': true,'name': "Borbe",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/fighting/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0}]},{'id': 24,'type': 4,'link': '/horse-racing/','hasAuxiliar': true,'name': "Utrke Konja",'hits': 51381,'isLive': false,'kids': [{'id': 9998,'type': 5,'link': '','hasAuxiliar': false,'name': "Today's Races",'isLive': true, 'hits':1,'kids':[{'id': 'GB','type': 5,'link': '/horse-racing/','hasAuxiliar': false,'name': "Velika Britanija", 'hits':31616,'isLive': false,'kids':[{'id': '187011140','type': 3,'hasAuxiliar': false,'name': "6:20 Wolverhampton", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/6-20-wolverhampton/winner/'},{'id': '187011141','type': 3,'hasAuxiliar': false,'name': "1:20 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/1-20-cheltenham/winner/'},{'id': '187011142','type': 3,'hasAuxiliar': false,'name': "12:35 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/12-35-southwell/winner/'},{'id': '187011136','type': 3,'hasAuxiliar': false,'name': "6:50 Wolverhampton", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/6-50-wolverhampton/winner/'},{'id': '187011137','type': 3,'hasAuxiliar': false,'name': "11:50 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/11-50-lingfield/winner/'},{'id': '187011138','type': 3,'hasAuxiliar': false,'name': "12:25 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/12-25-lingfield/winner/'},{'id': '187011139','type': 3,'hasAuxiliar': false,'name': "2:30 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/2-30-cheltenham/winner/'},{'id': '187011115','type': 3,'hasAuxiliar': false,'name': "1:35 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/1-35-lingfield/winner/'},{'id': '187011118','type': 3,'hasAuxiliar': false,'name': "1:10 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/1-10-southwell/winner/'},{'id': '187011119','type': 3,'hasAuxiliar': false,'name': "3:20 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/3-20-lingfield/winner/'},{'id': '187011116','type': 3,'hasAuxiliar': false,'name': "2:20 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/2-20-southwell/winner/'},{'id': '187011117','type': 3,'hasAuxiliar': false,'name': "3:40 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/3-40-cheltenham/winner/'},{'id': '187011123','type': 3,'hasAuxiliar': false,'name': "1:55 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/1-55-cheltenham/winner/'},{'id': '187011122','type': 3,'hasAuxiliar': false,'name': "2:45 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/2-45-lingfield/winner/'},{'id': '187011121','type': 3,'hasAuxiliar': false,'name': "7:50 Wolverhampton", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/7-50-wolverhampton/winner/'},{'id': '187011120','type': 3,'hasAuxiliar': false,'name': "2:10 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/2-10-lingfield/winner/'},{'id': '187011127','type': 3,'hasAuxiliar': false,'name': "12:45 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/12-45-cheltenham/winner/'},{'id': '187011126','type': 3,'hasAuxiliar': false,'name': "8:20 Wolverhampton", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/8-20-wolverhampton/winner/'},{'id': '187011125','type': 3,'hasAuxiliar': false,'name': "8:50 Wolverhampton", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/8-50-wolverhampton/winner/'},{'id': '187011124','type': 3,'hasAuxiliar': false,'name': "3:05 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/3-05-cheltenham/winner/'},{'id': '187011131','type': 3,'hasAuxiliar': false,'name': "3:30 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/3-30-southwell/winner/'},{'id': '187011130','type': 3,'hasAuxiliar': false,'name': "7:20 Wolverhampton", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/7-20-wolverhampton/winner/'},{'id': '187011129','type': 3,'hasAuxiliar': false,'name': "12:00 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/12-00-southwell/winner/'},{'id': '187011128','type': 3,'hasAuxiliar': false,'name': "2:55 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/2-55-southwell/winner/'},{'id': '187011135','type': 3,'hasAuxiliar': false,'name': "1:45 Southwell", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/1-45-southwell/winner/'},{'id': '187011134','type': 3,'hasAuxiliar': false,'name': "12:10 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/12-10-cheltenham/winner/'},{'id': '187011133','type': 3,'hasAuxiliar': false,'name': "11:40 Cheltenham", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/11-40-cheltenham/winner/'},{'id': '187011132','type': 3,'hasAuxiliar': false,'name': "1:00 Lingfield", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/1-00-lingfield/winner/'}]},{'id': 'AU','type': 5,'link': '/horse-racing/','hasAuxiliar': false,'name': "Australia", 'hits':11081,'isLive': false,'kids':[{'id': '187005772','type': 3,'hasAuxiliar': false,'name': "7:43 Rosehill", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-43-rosehill/winner/'},{'id': '187007248','type': 3,'hasAuxiliar': false,'name': "7:25 Flemington", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-25-flemington/winner/'},{'id': '187007249','type': 3,'hasAuxiliar': false,'name': "6:15 Morphettville", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-15-morphettville/winner/'},{'id': '187007254','type': 3,'hasAuxiliar': false,'name': "7:55 Eagle Farm", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-55-eagle-farm/winner/'},{'id': '187005768','type': 3,'hasAuxiliar': false,'name': "6:25 Rosehill", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-25-rosehill/winner/'},{'id': '187007252','type': 3,'hasAuxiliar': false,'name': "6:55 Morphettville", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-55-morphettville/winner/'},{'id': '187007253','type': 3,'hasAuxiliar': false,'name': "5:25 Flemington", 'hits':0,'isLive': false,'link': '/horse-racing/australia/5-25-flemington/winner/'},{'id': '187005771','type': 3,'hasAuxiliar': false,'name': "7:05 Rosehill", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-05-rosehill/winner/'},{'id': '187007259','type': 3,'hasAuxiliar': false,'name': "6:35 Eagle Farm", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-35-eagle-farm/winner/'},{'id': '187005766','type': 3,'hasAuxiliar': false,'name': "5:45 Rosehill", 'hits':0,'isLive': false,'link': '/horse-racing/australia/5-45-rosehill/winner/'},{'id': '187008786','type': 3,'hasAuxiliar': false,'name': "5:27 Mackay", 'hits':0,'isLive': false,'link': '/horse-racing/australia/5-27-mackay/winner/'},{'id': '187006704','type': 3,'hasAuxiliar': false,'name': "6:10 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-10-ascot/winner/'},{'id': '187007261','type': 3,'hasAuxiliar': false,'name': "6:05 Flemington", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-05-flemington/winner/'},{'id': '187006701','type': 3,'hasAuxiliar': false,'name': "8:05 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/8-05-ascot/winner/'},{'id': '187006700','type': 3,'hasAuxiliar': false,'name': "8:45 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/8-45-ascot/winner/'},{'id': '187006703','type': 3,'hasAuxiliar': false,'name': "6:50 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-50-ascot/winner/'},{'id': '187006702','type': 3,'hasAuxiliar': false,'name': "7:30 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-30-ascot/winner/'},{'id': '187006697','type': 3,'hasAuxiliar': false,'name': "10:35 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/10-35-ascot/winner/'},{'id': '187006699','type': 3,'hasAuxiliar': false,'name': "9:57 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/9-57-ascot/winner/'},{'id': '187006698','type': 3,'hasAuxiliar': false,'name': "9:20 Ascot", 'hits':0,'isLive': false,'link': '/horse-racing/australia/9-20-ascot/winner/'},{'id': '187007243','type': 3,'hasAuxiliar': false,'name': "7:15 Eagle Farm", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-15-eagle-farm/winner/'},{'id': '187007242','type': 3,'hasAuxiliar': false,'name': "6:45 Flemington", 'hits':0,'isLive': false,'link': '/horse-racing/australia/6-45-flemington/winner/'},{'id': '187007245','type': 3,'hasAuxiliar': false,'name': "5:35 Morphettville", 'hits':0,'isLive': false,'link': '/horse-racing/australia/5-35-morphettville/winner/'},{'id': '187007244','type': 3,'hasAuxiliar': false,'name': "7:35 Morphettville", 'hits':0,'isLive': false,'link': '/horse-racing/australia/7-35-morphettville/winner/'}]}]},{'id': 9999,'type': 5,'link': '/horse-racing/','hasAuxiliar': false,'name': "Antepost", 'hits':100,'isLive': false,'kids':[{'id': 'HK','type': 5,'link': '/horse-racing/','hasAuxiliar': false,'name': "Hong Kong", 'hits':165,'isLive': false,'kids':[{'id': '186983794','type': 3,'hasAuxiliar': false,'name': "Hong Kong Vase", 'hits':0,'isLive': false,'link': '/horse-racing/hong-kong/hong-kong-vase/'},{'id': '186983792','type': 3,'hasAuxiliar': false,'name': "Hong Kong Cup", 'hits':0,'isLive': false,'link': '/horse-racing/hong-kong/hong-kong-cup/'},{'id': '186983793','type': 3,'hasAuxiliar': false,'name': "Hong Kong Sprint", 'hits':0,'isLive': false,'link': '/horse-racing/hong-kong/hong-kong-sprint/'},{'id': '186983791','type': 3,'hasAuxiliar': false,'name': "Hong Kong Mile", 'hits':0,'isLive': false,'link': '/horse-racing/hong-kong/hong-kong-mile/'}]},{'id': 'AU','type': 5,'link': '/horse-racing/','hasAuxiliar': false,'name': "Australia", 'hits':11081,'isLive': false,'kids':[{'id': '186944331','type': 3,'hasAuxiliar': false,'name': "Melbourne Cup 2011", 'hits':0,'isLive': false,'link': '/horse-racing/australia/melbourne-cup/'}]},{'id': 'GB','type': 5,'link': '/horse-racing/','hasAuxiliar': false,'name': "Velika Britanija", 'hits':31616,'isLive': false,'kids':[{'id': '186529171','type': 3,'hasAuxiliar': false,'name': "Supreme Novices Hurdle 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/supreme-novices-hurdle/'},{'id': '186533382','type': 3,'hasAuxiliar': false,'name': "David Nicholson Mares Hurdle 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/david-nicholson-mares-hurdle-2011/'},{'id': '186967637','type': 3,'hasAuxiliar': false,'name': "Welsh Grand National", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/welsh-grand-national/'},{'id': '186832646','type': 3,'hasAuxiliar': false,'name': "Neptune Novices Hurdle", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/neptune-novices-hurdle/'},{'id': '186844925','type': 3,'hasAuxiliar': false,'name': "2010/2011 British Jumps Trainers Championship", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/british-jumps-trainers-championship/'},{'id': '186884315','type': 3,'hasAuxiliar': false,'name': "Kentucky Derby", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/kentucky-derby/'},{'id': '186789315','type': 3,'hasAuxiliar': false,'name': "JCB Triumph Hurdle 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/jcb-triumph-hurdle/'},{'id': '186580707','type': 3,'hasAuxiliar': false,'name': "Gold Cup 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/gold-cup-2011/'},{'id': '186509117','type': 3,'hasAuxiliar': false,'name': "Grand National 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/grand-national/'},{'id': '186488189','type': 3,'hasAuxiliar': false,'name': "Queen Mother Champion Chase 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/queen-mother-champion-chase/'},{'id': '186488188','type': 3,'hasAuxiliar': false,'name': "Champion Hurdle 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/champion-hurdle/'},{'id': '186985028','type': 3,'hasAuxiliar': false,'name': "Paddy Power Chase", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/paddy-power-chase/'},{'id': '186859364','type': 3,'hasAuxiliar': false,'name': "Jewson Novice Chase 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/jewson-novice-chase-2011/'},{'id': '186886034','type': 3,'hasAuxiliar': false,'name': "Jewson Novice Chase", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/jewson-novice-chase/'},{'id': '186987083','type': 3,'hasAuxiliar': false,'name': "Ladbrokes Hurdle", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/ladbrokes-hurdle/'},{'id': '186758250','type': 3,'hasAuxiliar': false,'name': "RSA Chase 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/rsa-chase/'},{'id': '186846637','type': 3,'hasAuxiliar': false,'name': "1000 Guineas", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/guineas/'},{'id': '186846633','type': 3,'hasAuxiliar': false,'name': "2000 Guineas", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/2000-guineas/'},{'id': '186808870','type': 3,'hasAuxiliar': false,'name': "Stan James Champion Hurdle 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/stan-james-champion-hurdle/'},{'id': '186488195','type': 3,'hasAuxiliar': false,'name': "King George Vi Chase", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/king-george-vi-chase/'},{'id': '186923910','type': 3,'hasAuxiliar': false,'name': "King George Vi & Queen Elizabeth Stakes", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/king-george-vi-queen-elizabeth-stakes/'},{'id': '186768622','type': 3,'hasAuxiliar': false,'name': "The Arkle 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/the-arkle-2011/'},{'id': '186766212','type': 3,'hasAuxiliar': false,'name': "Epsom Oaks 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/epsom-oaks/'},{'id': '186983879','type': 3,'hasAuxiliar': false,'name': "Tingle Creek", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/tingle-creek/'},{'id': '186864380','type': 3,'hasAuxiliar': false,'name': "Epsom Derby 2011", 'hits':0,'isLive': false,'link': '/horse-racing/united-kingdom/epsom-derby/'}]}]}]},{'id': 27,'type': 4,'link': '/greyhounds/','hasAuxiliar': true,'name': "Utrke Hrtova",'hits': 5712,'isLive': false,'kids': [{'id': 'AU','type': 5,'link': '/greyhounds/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':612}]},{'id': 26,'type': 4,'link': '/cricket/','hasAuxiliar': true,'name': "Kriket",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/cricket/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0},{'id': 'AU','type': 5,'link': '/cricket/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':0},{'id': 'GB1','type': 5,'link': '/cricket/england/','hasAuxiliar': true,'name': "Engleska",'isLive': false, 'hits':0}]},{'id': 28,'type': 4,'link': '/rugby-league/','hasAuxiliar': true,'name': "Ragbi Liga",'hits': 0,'isLive': false,'kids': [{'id': 'GB','type': 5,'link': '/rugby-league/united-kingdom/','hasAuxiliar': true,'name': "Velika Britanija",'isLive': false, 'hits':0},{'id': 'AU','type': 5,'link': '/rugby-league/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':0},{'id': 'GB1','type': 5,'link': '/rugby-league/england/','hasAuxiliar': true,'name': "Engleska",'isLive': false, 'hits':0},{'id': 'EU','type': 5,'link': '/rugby-league/europe/','hasAuxiliar': true,'name': "Europa",'isLive': false, 'hits':0}]},{'id': 34,'type': 4,'link': '/specials/','hasAuxiliar': true,'name': "Specijalne",'hits': 0,'isLive': false,'kids': [{'id': 'US','type': 5,'link': '/specials/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':0},{'id': 'GB','type': 5,'link': '/specials/united-kingdom/','hasAuxiliar': true,'name': "Velika Britanija",'isLive': false, 'hits':0}]},{'id': 38,'type': 4,'link': '/afl/','hasAuxiliar': true,'name': "AFL",'hits': 0,'isLive': false,'kids': [{'id': 'AU','type': 5,'link': '/afl/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':0}]},{'id': 39,'type': 4,'link': '/rugby-union/','hasAuxiliar': true,'name': "Ragbi Unija",'hits': 6022,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/rugby-union/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':2118},{'id': 'FR','type': 5,'link': '/rugby-union/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':406},{'id': 'ZA','type': 5,'link': '/rugby-union/south-africa/','hasAuxiliar': true,'name': "South Africa",'isLive': false, 'hits':230},{'id': 'AU','type': 5,'link': '/rugby-union/australia/','hasAuxiliar': true,'name': "Australia",'isLive': false, 'hits':166},{'id': 'GB1','type': 5,'link': '/rugby-union/england/','hasAuxiliar': true,'name': "Engleska",'isLive': false, 'hits':677},{'id': 'EU','type': 5,'link': '/rugby-union/europe/','hasAuxiliar': true,'name': "Europa",'isLive': false, 'hits':1760}]},{'id': 36,'type': 4,'link': '/snooker/','hasAuxiliar': true,'name': "Snooker",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/snooker/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0},{'id': 'FR','type': 5,'link': '/snooker/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':0},{'id': 'GB','type': 5,'link': '/snooker/united-kingdom/','hasAuxiliar': true,'name': "Velika Britanija",'isLive': false, 'hits':0}]},{'id': 37,'type': 4,'link': '/cycling/','hasAuxiliar': true,'name': "Biciklizam",'hits': 0,'isLive': false,'kids': [{'id': 'FR','type': 5,'link': '/cycling/france/','hasAuxiliar': true,'name': "Francuska",'isLive': false, 'hits':0},{'id': 'BE','type': 5,'link': '/cycling/belgium/','hasAuxiliar': true,'name': "Belgija",'isLive': false, 'hits':0}]},{'id': 40,'type': 4,'link': '/bandy/','hasAuxiliar': true,'name': "Bandy",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/bandy/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0},{'id': 'SE','type': 5,'link': '/bandy/sweden/','hasAuxiliar': true,'name': "Švedska",'isLive': false, 'hits':0}]},{'id': 41,'type': 4,'link': '/floorball/','hasAuxiliar': true,'name': "Floorball",'hits': 0,'isLive': false,'kids': [{'id': 'FI','type': 5,'link': '/floorball/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':0}]},{'id': 46,'type': 4,'link': '/hurling/','hasAuxiliar': true,'name': "Hurling",'hits': 0,'isLive': false,'kids': [{'id': 'IE','type': 5,'link': '/hurling/ireland/','hasAuxiliar': true,'name': "Irska",'isLive': false, 'hits':0}]},{'id': 47,'type': 4,'link': '/gaelic-football/','hasAuxiliar': true,'name': "Galski Nogomet",'hits': 0,'isLive': false,'kids': [{'id': 'IE','type': 5,'link': '/gaelic-football/ireland/','hasAuxiliar': true,'name': "Irska",'isLive': false, 'hits':0}]},{'id': 45,'type': 4,'link': '/darts/','hasAuxiliar': true,'name': "Pikado",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/darts/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0},{'id': 'GB','type': 5,'link': '/darts/united-kingdom/','hasAuxiliar': true,'name': "Velika Britanija",'isLive': false, 'hits':0}]},{'id': 49,'type': 4,'link': '/futsal/','hasAuxiliar': true,'name': "Futsal Mali Nogomet",'hits': 0,'isLive': false,'kids': [{'id': 'PT','type': 5,'link': '/futsal/portugal/','hasAuxiliar': true,'name': "Portugal",'isLive': false, 'hits':0},{'id': 'ES','type': 5,'link': '/futsal/spain/','hasAuxiliar': true,'name': "Španjolska",'isLive': false, 'hits':0},{'id': 'IT','type': 5,'link': '/futsal/italy/','hasAuxiliar': true,'name': "Italija",'isLive': false, 'hits':0},{'id': 'FI','type': 5,'link': '/futsal/finland/','hasAuxiliar': true,'name': "Finska",'isLive': false, 'hits':0}]},{'id': 48,'type': 4,'link': '/pool/','hasAuxiliar': true,'name': "Bilijar",'hits': 0,'isLive': false,'kids': [{'id': 'US','type': 5,'link': '/pool/united-states/','hasAuxiliar': true,'name': "United States",'isLive': false, 'hits':0}]},{'id': 54,'type': 4,'link': '/cross-country-skiing/','hasAuxiliar': true,'name': "Cross Country Skiing",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/cross-country-skiing/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0}]},{'id': 53,'type': 4,'link': '/alpine-skiing/','hasAuxiliar': true,'name': "Alpsko Skijanje",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/alpine-skiing/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0}]},{'id': 59,'type': 4,'link': '/biathlon/','hasAuxiliar': true,'name': "Biatlon",'hits': 0,'isLive': false,'kids': [{'id': 'AT','type': 5,'link': '/biathlon/austria/','hasAuxiliar': true,'name': "Austria",'isLive': false, 'hits':0},{'id': 'NO','type': 5,'link': '/biathlon/norway/','hasAuxiliar': true,'name': "Norveška",'isLive': false, 'hits':0}]},{'id': 57,'type': 4,'link': '/ski-jumping/','hasAuxiliar': true,'name': "Ski Jumping",'hits': 0,'isLive': false,'kids': [{'id': 'CZ','type': 5,'link': '/ski-jumping/czech-republic/','hasAuxiliar': true,'name': "&#268;eška",'isLive': false, 'hits':0},{'id': 'WO','type': 5,'link': '/ski-jumping/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0}]},{'id': 56,'type': 4,'link': '/nordic-combined/','hasAuxiliar': true,'name': "Nordic Combined",'hits': 0,'isLive': false,'kids': [{'id': 'WO','type': 5,'link': '/nordic-combined/world/','hasAuxiliar': true,'name': "World",'isLive': false, 'hits':0}]},{'id': -9999,'type': 4,'link': '','hasAuxiliar': false,'name': "Other Sports",'isLive': false, 'hits':0}];</script>
+ </div>
+ 
+<!--Next Matches -->
+
+<div class="hidden mootabsLeftMenu" id="leftMenuNM">
+ <script>
+ helpText = "<p>Choose a date from this dropdown. You will see all upcoming matches with the highest odds. From here the tool is highly configurable. E.g. you can select home-draw-away odds for football matches tomorrow where at least 5 bookmakers have odds, by your own choice of bookmakers and betting exchanges. You don't need to compare the odds as we show only the highest from <b>your</b> selection of bookmakers.</p>";
+ </script>
+ <form name="nextMBox" action="/nextMatches/" method="get">
+ <select name="dayId" class="box_select"
+ onchange="if (this.options[this.selectedIndex].value != -1) {loadPage('/nextMatches/day' + this.options[this.selectedIndex].value +'/'); this.selectedIndex = 0;}">
+ <option value="-1">Datum</option>
+ <option value="0">Danas 11 Pro</option>
+ <option value="1">Sutra 12 Pro</option>
+ <option value="2">Ponedjeljak 13 Pro</option>
+ <option value="3">Utorak 14 Pro</option>
+ <option value="4">Srijeda 15 Pro</option>
+ <option value="5">Četvrtak 16 Pro</option>
+ <option value="6">Petak 17 Pro</option>
+ <option value="7">Nakon Petak 18 Pro</option>
+ </select>
+ &nbsp; 
+ <img id="imgHelpNM" class="vAlignMiddle size10x10" onclick="javascript:viewHelpDiv(this.id, helpText)" 
+ src="http://gfx.betbrain.com/gfx/image/help_icon.gif"
+ title='About next matches'/>
+ </form>
+ <div id="nextMatchesBox">
+ <ul class="tooltipTable nextMatches">
+ <li id="ev187011276"><a href="/football/france/coupe-de-france/stade-rennes-fc-v-angers-sco/">Stade Rennes FC - Angers SCO</a> </li>
+ <li id="ev187008434"><a href="/fighting/world/mixed-martial-arts-matches/errol-zimmerman-v-ewerton-teixeira/">E. Zimmerman - E. Teixeira</a> </li>
+ <li id="ev187009842"><a href="/basketball/republic-of-korea/kbl/jeonju-kcc-egis-v-sonic-boom-kt/">Jeonju KCC Egis - Sonic Boom KT</a> </li>
+ <li id="ev186994682"><a href="/basketball/republic-of-korea/kbl/changwon-lg-sakers-v-mobis-phoebus/">Changwon LG Sake - Mobis Phoebus</a> </li>
+ <li id="ev187003846"><a href="/ice-hockey/asia/asian-league-ice-hockey/tohoku-free-blades-v-anyang-halla/">Tohoku Free Blad - Anyang Halla</a> </li>
+ <li id="ev187003847"><a href="/ice-hockey/asia/asian-league-ice-hockey/oji-eagles-v-hc-nikko-kobe-ice-bucks/">Oji Eagles - HC Nikko Kobe Ic</a> </li>
+ <li id="ev186983770"><a href="/ice-hockey/russia/khl-russia/khabarovsk-amur-v-metallurg-magnitogorsk/">Khabarovsk Amur - Metallurg Magnit</a> </li>
+ <li id="ev187008017"><a href="/basketball/republic-of-korea/wkbl/samsung-life-bichumi--w--v-woori-hansae--w-/">Samsung Life Bic - Woori Hansae (W)</a> </li>
+ <li id="ev186986899"><a href="/football/australia/aleague/melbourne-heart-v-melbourne-victory/">Melbourne Heart - Melbourne</a> </li>
+ <li id="ev187010008"><a href="/tennis/egypt/itf-ain-elsokhna-/ana-jovanovic-v-zuzana-linhova/">A. Jovanovic - Z. Linhova</a> </li>
+ <li id="ev186994683"><a href="/basketball/republic-of-korea/kbl/daegu-orions-v-seoul-samsung-thunders/">Daegu Orions - Seoul Samsung Th</a> </li>
+ <li id="ev187011278"><a href="/basketball/australia/wnbl/sydney-uni-flames--w--v-ais-australian-institute-of-sport--w-/">Sydney Uni Flame - Australian Insti</a> </li>
+ <li id="ev187011112"><a href="/basketball/australia/wnbl/dandenong-rangers--w--v-west-coast-waves-perth--w-/">Dandenong Ranger - West Coast Waves</a> </li>
+ <li id="ev187004005"><a href="/basketball/japan/bj-league/sendai-89ers-v-saitama-broncos/">Sendai 89ERS - Saitama Broncos</a> </li>
+ <li id="ev187004001"><a href="/basketball/japan/bj-league/miyazaki-v-kyoto-hannaryz/">Miyazaki - Kyoto Hannaryz</a> </li>
+ <li id="ev187004002"><a href="/basketball/japan/bj-league/hamamatsu-higashimikawa-phoenix-v-akita/">Hamamatsu Higash - Akita</a> </li>
+ <li id="ev187004000"><a href="/basketball/japan/bj-league/osaka-evessa-v-toyama-grouses/">Osaka Evessa - Toyama Grouses</a> </li>
+ <li id="ev187002530"><a href="/basketball/australia/nbl-incl-playoffs-/townsville-crocodiles-v-gold-coast-blaze/">Townsville Croco - Gold Coast Blaze</a> </li>
+ <li id="ev187004004"><a href="/basketball/japan/bj-league/takamatsu-five-arrows-v-shimane-susanoo-magic/">Takamatsu Five A - Shimane</a> </li>
+ <li id="ev187007796"><a href="/football/georgia/umaglesi-liga/fk-spartaki-tskhinvali-v-kolkheti-poti/">FK Spartaki Tskh - Kolkheti Poti</a> </li>
+ <li id="ev187003998"><a href="/basketball/japan/bj-league/ryukyu-golden-kings-okinawa-v-shiga-lakestars/">Ryukyu Golden Ki - Shiga Lakestars</a> </li>
+ <li id="ev187003999"><a href="/basketball/japan/bj-league/oita-heart-devils-v-rizing-fukuoka/">Oita Heart Devil - Rizing Fukuoka</a> </li>
+ <li id="ev187006303"><a href="/football/georgia/umaglesi-liga/olimpi-rustavi-v-fc-sioni-bolnisi/">Olimpi Rustavi - FC Sioni Bolnisi</a> </li>
+ <li id="ev187006300"><a href="/football/georgia/umaglesi-liga/fk-baia-zugdidi-v-fc-samtredia/">FK Baia Zugdidi - FC Samtredia</a> </li>
+ <li id="ev186986900"><a href="/football/australia/aleague/gold-coast-united-v-wellington-phoenix-fc/">Gold Coast Utd - Wellington</a> </li>
+ <li id="ev186983771"><a href="/ice-hockey/russia/khl-russia/sibir-novosibirsk-v-salavat-yulaev-ufa/">Sibir Novosibirs - Salavat Yulaev U</a> </li>
+ <li id="ev187003065"><a href="/basketball/turkey/tbl/banvit-basketbol-kulubu-v-efes-pilsen-istanbul/">Banvit Basketbol - Efes Pilsen</a> </li>
+ <li id="ev187009276"><a href="/football/moldova/divizia-nationala/usc-gagauziya-v-fc-sheriff-tiraspol/">USC Gagauziya - FC Sheriff Tiras</a> </li>
+ <li id="ev186986814"><a href="/football/romania/liga-1/sportul-studentesc-v-fc-dinamo-bucuresti/">Sportul Studente - Dinamo Buc</a> </li>
+ <li id="ev187009277"><a href="/football/moldova/divizia-nationala/fc-nistru-otaci-v-fc-zimbru-chisinau/">FC Nistru Otaci - FC Zimbru Chisin</a> </li>
+ <li id="ev187008865"><a href="/ice-hockey/russia/khl-russia/metallurg-novokuzneck-v-tractor-chelyabinsk/">Metallurg Novoku - Tractor Chelyabi</a> </li>
+ <li id="ev186989602"><a href="/football/turkey/super-ligi/kardemir-dc-karabukspor-v-antalyaspor/">Kardemir DC Kara - Antalyaspor</a> </li>
+ <li id="ev187009716"><a href="/basketball/china/cba/guandong-southern-tigers-v-zhejiang-chouzhou-bank/">Guandong Souther - Zhejiang Chouzho</a> </li>
+ <li id="ev187008770"><a href="/basketball/italy/serie-a/dinamo-ford-sassari-v-la-fortezza-vidivici-bologna-11-12-11-45/">Dinamo Banco di - La Fortezza Vidi</a> </li>
+ <li id="ev187003067"><a href="/basketball/russia/vtb-united-league/azovmash-mariupol-v-bc-zalgiris-kaunas/">Azovmash Mariupo - BC Zalgiris Kaun</a> </li>
+ <li id="ev187009446"><a href="/football/albania/superliga/kastrioti-kruje-v-ks-elbasani/">Kastrioti Kruje - KS Elbasani</a> </li>
+ <li id="ev187009872"><a href="/volleyball/russia/superleague/ural-ufa-v-dinamo-yantar-kaliningrad-11-12-12-00/">Ural Ufa - Dinamo-Yantar Ka</a> </li>
+ <li id="ev187003807"><a href="/football/republic-of-macedonia/first-league/fk-metalurg-skopje-v-rabotnicki-skopje/">FK Metalurg Skop - Rabotnicki Skopj</a> </li>
+ <li id="ev187004078"><a href="/football/republic-of-macedonia/first-league/fk-pelister-v-fk-skopje/">FK Pelister - FK Skopje</a> </li>
+ <li id="ev187003806"><a href="/football/republic-of-macedonia/first-league/renova-v-fk-teteks/">Renova - FK Teteks</a> </li>
+ <li id="ev186989588"><a href="/football/germany/2-bundesliga/fsv-frankfurt-v-fc-augsburg/">FSV Frankfurt - FC Augsburg</a> </li>
+ <li id="ev187004060"><a href="/football/republic-of-macedonia/first-league/fk-vardar-skopje-v-fk-napredok/">FK Vardar Skopje - FK Napredok</a> </li>
+ <li id="ev187009445"><a href="/football/albania/superliga/kf-laci-v-ks-vllaznia-shkoder/">KF Laci - KS Vllaznia Shko</a> </li>
+ <li id="ev187011147"><a href="/football/albania/superliga/ks-bylis-ballsh-v-kf-tirana/">KS Bylis Ballsh - KF Tirana</a> </li>
+ <li id="ev187006399"><a href="/football/republic-of-macedonia/first-league/fk-sileks-v-bregalnica-stip/">FK Sileks - Bregalnica Stip</a> </li>
+ <li id="ev186989564"><a href="/football/germany/3-liga/sv-babelsberg-03-v-sv-wehen/">SV Babelsberg 03 - SV Wehen</a> </li>
+ <li id="ev186989609"><a href="/football/germany/2-bundesliga/sc-paderborn-07-v-msv-duisburg/">SC Paderborn 07 - MSV Duisburg</a> </li>
+ <li id="ev186989610"><a href="/football/turkey/1-lig/boluspor-v-mersin-idmanyurdu/">Boluspor - Mersin Idmanyurd</a> </li>
+ <li id="ev187010013"><a href="/basketball/russia/pbl/enisey-krasnoyarsk-v-krasnye-krilya-samara/">Enisey Krasnoyar - Krasnye Krilya S</a> </li>
+ <li id="ev187004077"><a href="/football/republic-of-macedonia/first-league/fk-turnovo-v-fk--kendija-79/">FK Turnovo - FK Škendija 79</a> </li>
+ </ul>
+ </div>
+</div><div class="hidden mootabsLeftMenu" id="leftMenuMP">
+ <div>
+ <table class="leftMenuTabs">
+ <tr> 
+ <td>
+ <ul class="leftMenuTabs"> 
+ <li class="leftmenuMP_mouse_out left" title="Most Popular Matches" name="matchesMP">SUSRETI</li>
+ <li class="leftmenuMP_mouse_out right" title="Most Popular Leagues" name="outrightsMP">LIGE</li>
+ </ul>
+ </td>
+ </tr>
+ </table>
+ </div>
+ 
+ <div class="mootabsMostPopular hidden" id ="matchesMP">
+ <ul class="tooltipTable nextMatches" style="top:0">
+ <li id="ev186988533"><a href='/basketball-live/united-states/nba/golden-state-warriors-v-miami-heat/'>Golden State War - Miami Heat</a></li>
+ <li id="ev186991332"><a href='/football/netherlands/eredivisie/feyenoord-v-excelsior-rotterdam/'>Feyenoord - Excelsior Rotter</a></li>
+ <li id="ev187005020"><a href='/football/italy/serie-a/genoa-v-napoli-11-12-19-45/'>Genoa - Napoli</a></li>
+ <li id="ev186991357"><a href='/football/greece/greece-super-league/olympiakos-piraeus-fc-v-pae-aps-atromitos-athens-12-12-15-15/'>Olympiakos - PAE APS Atromito</a></li>
+ <li id="ev186989661"><a href='/football/netherlands/eredivisie/nec-nijmegen-v-willem-ii-tilburg/'>NEC Nijmegen - Willem II Tilbur</a></li>
+ <li id="ev186963340"><a href='/football/spain/primera-division/hercules-alicante-v-malaga-cf/'>Hercules Alicant - Malaga CF</a></li>
+ <li id="ev186991355"><a href='/football/portugal/taca-de-portugal/leix-es-v-pinhalnovense/'>Leixões - Pinhalnovense</a></li>
+ <li id="ev187005295"><a href='/football/italy/serie-a/cagliari-v-catania-calcio/'>Cagliari - Catania</a></li>
+ <li id="ev186989634"><a href='/football/scotland/scottish-premier-league/saint-mirren-fc-v-st--johnstone/'>Saint Mirren FC - St. Johnstone</a></li>
+ <li id="ev186989662"><a href='/football/netherlands/eredivisie/de-graafschap-v-psv-eindhoven/'>De Graafschap - PSV Eindhoven</a></li>
+ <li id="ev187005298"><a href='/football/italy/serie-a/udinese-calcio-v-ac-fiorentina/'>Udinese - Fiorentina</a></li>
+ <li id="ev186991335"><a href='/football/netherlands/eredivisie/sbv-vitesse-v-afc-ajax/'>SBV Vitesse - AFC Ajax</a></li>
+ <li id="ev186984452"><a href='/football/germany/bundesliga/1--fsv-mainz-05-v-fc-schalke-04-12-12-16-30/'>1. FSV Mainz 05 - Schalke 04</a></li>
+ <li id="ev186989626"><a href='/football/scotland/scottish-premier-league/hearts-of-midlothian-fc-v-aberdeen-fc/'>Hearts Of Midlot - Aberdeen FC</a></li>
+ <li id="ev186991329"><a href='/football/netherlands/eredivisie/fc-groningen-v-az/'>FC Groningen - AZ</a></li>
+ <li id="ev186989589"><a href='/football/greece/greece-super-league/ask-olympiakos-volos-v-aris-thessaloniki/'>ASK Olympiakos V - Aris Thessalonik</a></li>
+ <li id="ev186991353"><a href='/football/greece/greece-super-league/ergotelis-v-kerkyra/'>Ergotelis - Kerkyra</a></li>
+ <li id="ev187005297"><a href='/football/italy/serie-a/brescia-v-sampdoria/'>Brescia - Sampdoria</a></li>
+ <li id="ev186989590"><a href='/football/greece/greece-super-league/paok-fc-v-iraklis-fc/'>PAOK FC - Iraklis FC</a></li>
+ <li id="ev186983604"><a href='/am-football/united-states/nfl/minnesota-vikings-v-new-york-giants-12-12-18-00/'>Minnesota - NY Giants</a></li>
+ <li id="ev186963333"><a href='/football/spain/primera-division/sevilla-fc-v-union-deportiva-almeria/'>Sevilla FC - C.F. Almeria</a></li>
+ <li id="ev186963335"><a href='/football/spain/primera-division/valencia-cf-v-osasuna/'>Valencia CF - Osasuna</a></li>
+ <li id="ev186946424"><a href='/am-football/united-states/nfl/dallas-cowboys-v-philadelphia-eagles/'>Dallas Cowboys - Philadelphia</a></li>
+ <li id="ev186963378"><a href='/football/germany/bundesliga/fc-bayern-munchen-v-fc-st--pauli-11-12-14-30/'>Bayern - FC St. Pauli</a></li>
+ <li id="ev186989630"><a href='/football/scotland/scottish-premier-league/inverness-caledonian-thistle-v-glasgow-rangers-fc/'>Inverness Caledo - Glasgow Rangers</a></li>
+ <li id="ev187005296"><a href='/football/italy/serie-a/lecce-v-chievo-verona/'>Lecce - Chievo</a></li>
+ <li id="ev187006246"><a href='/football/chile/primera-division/audax-italiano-santiago-v-huachipato/'>Audax Italiano S - Huachipato</a></li>
+ <li id="ev186970087"><a href='/football/france/ligue-1/a-j--auxerre-v-olympique-marseille-11-12-20-00/'>A.J. Auxerre - Marseille</a></li>
+ <li id="ev186991356"><a href='/football/greece/greece-super-league/skoda-xanthi-fc-v-kavala/'>Skoda Xanthi FC - Kavala</a></li>
+ <li id="ev186963336"><a href='/football/spain/primera-division/real-zaragoza-v-real-madrid/'>Zaragoza - Real Madrid</a></li>
+ <li id="ev186991360"><a href='/football/greece/greece-super-league/asteras-tripolis-v-panathinaikos/'>Asteras Tripolis - Panathinaikos</a></li>
+ <li id="ev187005025"><a href='/football/italy/serie-a/as-roma-v-bari/'>AS Roma - Bari</a></li>
+ <li id="ev186991362"><a href='/football/greece/greece-super-league/aek-athens-v-larissa-fc/'>AEK Athens - Larissa FC</a></li>
+ <li id="ev186989513"><a href='/football/england/championship/bristol-city-fc-v-derby-county/'>Bristol City FC - Derby</a></li>
+ <li id="ev186963337"><a href='/football/spain/primera-division/fc-barcelona-v-real-sociedad/'>Barcelona - Real Sociedad</a></li>
+ <li id="ev186688379"><a href='/am-football/united-states/ncaa-football/army-black-knights-v-navy-midshipmen/'>Army Black Knigh - Navy Midshipmen</a></li>
+ <li id="ev186989520"><a href='/football/england/league-1/southampton-fc-v-brentford/'>Southampton FC - Brentford</a></li>
+ <li id="ev186989507"><a href='/football/england/league-1/sheffield-wednesday-fc-v-bristol-rovers/'>Sheffield Wednes - Bristol Rovers</a></li>
+ <li id="ev186984453"><a href='/football/germany/bundesliga/hamburger-sv-v-bayer-04-leverkusen-11-12-14-30/'>Hamburger - B. Leverkusen</a></li>
+ <li id="ev186963341"><a href='/football/spain/primera-division/atletico-madrid-v-deportivo-la-coruna-11-12-21-00/'>Atletico - La Coruna</a></li>
+ <li id="ev186970084"><a href='/football/france/ligue-1/as-nancy-lorraine-v-fc-sochaux-11-12-18-00/'>AS Nancy - FC Sochaux</a></li>
+ <li id="ev186984454"><a href='/football/germany/bundesliga/borussia-dortmund-v-sv-werder-bremen-11-12-17-30/'>B. Dortmund - Werder</a></li>
+ <li id="ev186989506"><a href='/football/england/championship/norwich-city-fc-v-portsmouth/'>Norwich City FC - Portsmouth</a></li>
+ <li id="ev186963334"><a href='/football/spain/primera-division/getafe-v-villarreal-cf-11-12-17-00/'>Getafe - Villarreal CF</a></li>
+ <li id="ev186989510"><a href='/football/england/league-1/charlton-athletic-fc-v-walsall/'>Charlton Athleti - Walsall</a></li>
+ <li id="ev186989578"><a href='/football/belgium/jupiler-pro-league/kaa-gent-v-royal-charleroi-sc-11-12-19-00/'>KAA Gent - Royal Charleroi</a></li>
+ <li id="ev186989663"><a href='/football/netherlands/eredivisie/sv-roda-jc-v-ado-den-haag/'>SV Roda JC - ADO Den Haag</a></li>
+ <li id="ev186989519"><a href='/football/england/championship/scunthorpe-united-v-nottingham-forest/'>Scunthorpe Utd - Nottingham Fores</a></li>
+ <li id="ev186963342"><a href='/football/spain/primera-division/real-mallorca-v-racing-santander-12-12-16-00/'>Mallorca - Racing Santander</a></li>
+ <li id="ev186989516"><a href='/football/england/championship/preston-north-end-fc-v-ipswich-town-fc/'>Preston North En - Ipswich Town FC</a></li>
+ <li id="ev186983602"><a href='/am-football/united-states/nfl/buffalo-bills-v-cleveland-browns/'>Buffalo - Cleveland</a></li>
+ <li id="ev186989525"><a href='/football/england/championship/leicester-city-v-doncaster-rovers/'>Leicester City - Doncaster Rovers</a></li>
+ <li id="ev186991586"><a href='/football/europe/uefa-europa-league-group-l/besiktas-jk-v-sk-rapid-wien/'>Besiktas JK - SK Rapid Wien</a></li>
+ <li id="ev186991570"><a href='/football/europe/uefa-europa-league-group-e/az-v-bate-borisov/'>AZ - BATE Borisov</a></li>
+ <li id="ev186989576"><a href='/football/belgium/jupiler-pro-league/kvc-westerlo-v-kfc-germinal-beerschot/'>KVC Westerlo - KFC Germinal Bee</a></li>
+ <li id="ev186991567"><a href='/football/europe/uefa-europa-league-group-c/osc-lille-v-kaa-gent/'>OSC Lille - KAA Gent</a></li>
+ <li id="ev186989609"><a href='/football/germany/2-bundesliga/sc-paderborn-07-v-msv-duisburg/'>SC Paderborn 07 - MSV Duisburg</a></li>
+ <li id="ev186991584"><a href='/football/europe/uefa-europa-league-group-k/napoli-v-fc-steaua-bucuresti/'>Napoli - FC Steaua</a></li>
+ <li id="ev186989517"><a href='/football/england/league-1/huddersfield-town-v-brighton-and-hove-albion/'>Huddersfield Tow - Brighton and Hov</a></li>
+ <li id="ev186991358"><a href='/football/greece/greece-super-league/panserraikos-v-panionios-nfc/'>Panserraikos - Panionios NFC</a></li>
+ <li id="ev186989514"><a href='/football/england/championship/burnley-fc-v-leeds-united/'>Burnley FC - Leeds Utd</a></li>
+ <li id="ev186989571"><a href='/football/switzerland/super-league/fc-thun-v-ac-bellinzona/'>FC Thun - AC Bellinzona</a></li>
+ <li id="ev186991587"><a href='/football/europe/uefa-europa-league-group-l/fc-porto-v-pfc-cska-sofia/'>FC Porto - PFC CSKA Sofia</a></li>
+ <li id="ev186991327"><a href='/football/belgium/jupiler-pro-league/kv-kortrijk-v-lierse-sk/'>KV Kortrijk - Lierse SK</a></li>
+ <li id="ev186989530"><a href='/football/england/league-2/stevenage-borough-v-northampton-town/'>Stevenage Boroug - Northampton Town</a></li>
+ <li id="ev187005022"><a href='/football/italy/serie-a/bologna-f-c--v-ac-milan/'>Bologna F.C. - AC Milan</a></li>
+ <li id="ev186971957"><a href='/football/africa/africa-cup-of-nations/sudan-v-swaziland/'>Sudan - Swaziland</a></li>
+ <li id="ev186970093"><a href='/football/france/ligue-1/fc-girondins-de-bordeaux-v-stade-rennes-fc/'>Bordeaux - Stade Rennes FC</a></li>
+ <li id="ev186991336"><a href='/football/netherlands/eredivisie/sc-heerenveen-v-fc-twente-1965/'>SC Heerenveen - FC Twente </a></li>
+ <li id="ev186989577"><a href='/football/belgium/jupiler-pro-league/cercle-brugge-ksv-v-zulte-waregem-11-12-19-00/'>Cercle Brugge KS - Zulte-Waregem</a></li>
+ <li id="ev186991572"><a href='/football/europe/uefa-europa-league-group-f/ac-sparta-praha-v-cska-moscow/'>AC Sparta Praha - CSKA Moscow</a></li>
+ <li id="ev186989631"><a href='/football/scotland/scottish-premier-league/celtic-fc-v-kilmarnock/'>Celtic FC - Kilmarnock</a></li>
+ <li id="ev186991571"><a href='/football/europe/uefa-europa-league-group-e/dynamo-kiev-v-fc-sheriff-tiraspol/'>Dyn Kiev - FC Sheriff Tiras</a></li>
+ <li id="ev186989524"><a href='/football/england/league-1/colchester-united-fc-v-yeovil-town/'>Colchester Utd F - Yeovil Town</a></li>
+ <li id="ev186983609"><a href='/am-football/united-states/nfl/new-orleans-saints-v-st--louis-rams/'>New Orleans - St. Louis</a></li>
+ <li id="ev186989518"><a href='/football/england/league-1/carlisle-united-v-dagenham---redbridge/'>Carlisle Utd - Dagenham & Redbr</a></li>
+ <li id="ev186989515"><a href='/football/england/league-1/tranmere-rovers-v-leyton-orient/'>Tranmere Rovers - Leyton Orient</a></li>
+ <li id="ev186989633"><a href='/football/scotland/scottish-premier-league/dundee-united-fc-v-motherwell/'>Dundee Utd FC - Motherwell</a></li>
+ <li id="ev186989573"><a href='/football/belgium/jupiler-pro-league/standard-liege-v-k--sint-truidense-11-12-19-00/'>Standard Liege - K. Sint-Truidens</a></li>
+ <li id="ev186971937"><a href='/football/africa/africa-cup-of-nations/congo-v-ghana/'>Congo - Ghana</a></li>
+ <li id="ev186963399"><a href='/football/germany/bundesliga/1--fc-koln-v-eintracht-frankfurt-11-12-14-30/'>1. FC Koln - Eintracht Frankf</a></li>
+ <li id="ev186989508"><a href='/football/england/league-1/notts-county-v-milton-keynes-dons-fc/'>Notts County - Milton Keynes Do</a></li>
+ <li id="ev186989632"><a href='/football/scotland/scottish-premier-league/hamilton-academicals-fc-v-hibernian-fc/'>Hamilton Academi - Hibernian FC</a></li>
+ <li id="ev186989509"><a href='/football/england/championship/crystal-palace-fc-v-hull-city-afc/'>Crystal Palace F - Hull City AFC</a></li>
+ <li id="ev186983600"><a href='/am-football/united-states/nfl/jacksonville-jaguars-v-oakland-raiders/'>Jacksonville - Oakland Raiders</a></li>
+ <li id="ev186984930"><a href='/football/world/friendly-international-matches/china-v-estonia/'>China - Estonia</a></li>
+ <li id="ev186983606"><a href='/am-football/united-states/nfl/carolina-panthers-v-atlanta-falcons/'>Carolina - Atlanta</a></li>
+ <li id="ev186983612"><a href='/am-football/united-states/nfl/arizona-cardinals-v-denver-broncos/'>Arizona - Denver Broncos</a></li>
+ <li id="ev186991585"><a href='/football/europe/uefa-europa-league-group-j/sevilla-fc-v-borussia-dortmund/'>Sevilla FC - B. Dortmund</a></li>
+ <li id="ev186989494"><a href='/football/cyprus/1-division/anorthosis-famagusta-v-alki-larnaca-fc/'>Anorthosis Famag - Alki Larnaca FC</a></li>
+ <li id="ev186946421"><a href='/am-football/united-states/nfl/houston-texans-v-baltimore-ravens/'>Houston - Baltimore</a></li>
+ <li id="ev186970086"><a href='/football/france/ligue-1/arles-v-osc-lille/'>Arles - OSC Lille</a></li>
+ <li id="ev186946418"><a href='/am-football/united-states/nfl/new-york-jets-v-miami-dolphins/'>NY Jets - Miami</a></li>
+ <li id="ev186989523"><a href='/football/england/league-1/plymouth-argyle-fc-v-exeter-city-fc/'>Plymouth Argyle  - Exeter City FC</a></li>
+ <li id="ev186989568"><a href='/football/switzerland/super-league/fc-luzern-v-fc-zurich/'>FC Luzern - FC Zurich</a></li>
+ <li id="ev186991563"><a href='/football/europe/uefa-europa-league-group-b/aris-thessaloniki-v-rosenborg-bk/'>Aris Thessalonik - Rosenborg BK</a></li>
+ <li id="ev186946438"><a href='/am-football/united-states/nfl/chicago-bears-v-new-england-patriots/'>Chicago - Patriots</a></li>
+ <li id="ev186983607"><a href='/am-football/united-states/nfl/washington-redskins-v-tampa-bay-buccaneers/'>Washington - Tampa Bay</a></li>
+ <li id="ev186970092"><a href='/football/france/ligue-1/olympique-lyonnais-v-fc-toulouse/'>Lyon - FC Toulouse</a></li>
+ <li id="ev186983611"><a href='/am-football/united-states/nfl/san-francisco-49ers-v-seattle-seahawks/'>49ers - Seattle Seahawks</a></li>
+ <li id="ev186989522"><a href='/football/england/league-1/oldham-athletic-v-swindon-town/'>Oldham Athletic - Swindon Town</a></li>
+ <li id="ev186986818"><a href='/football/portugal/liga-de-honra/gil-vicente-v-oliveirense/'>Gil Vicente - Oliveirense</a></li>
+ <li id="ev186989574"><a href='/football/belgium/jupiler-pro-league/racing-genk-v-eupen/'>Racing Genk - Eupen</a></li>
+ <li id="ev187005299"><a href='/football/italy/serie-a/juventus-fc-v-ss-lazio-12-12-19-45/'>Juventus - SS Lazio</a></li>
+ <li id="ev186991573"><a href='/football/europe/uefa-europa-league-group-f/lausanne-sports-v-palermo/'>Lausanne-Sports - Palermo</a></li>
+ <li id="ev186984451"><a href='/football/germany/bundesliga/sc-freiburg-v-borussia-monchengladbach/'>SC Freiburg - B. M'gladbach</a></li>
+ <li id="ev186989415"><a href='/football/austria/tmobile-bundesliga/sk-rapid-wien-v-fc-wacker-innsbruck/'>SK Rapid Wien - FC Wacker Innsbr</a></li>
+ <li id="ev187000335"><a href='/football/italy/serie-b/triestina-v-torino-fc-13-12-19-45/'>Triestina - Torino FC</a></li>
+ <li id="ev186983605"><a href='/am-football/united-states/nfl/detroit-lions-v-green-bay-packers/'>Detroit - Green Bay</a></li>
+ <li id="ev186991574"><a href='/football/europe/uefa-europa-league-group-g/aek-athens-v-fk-zenit-st--petersburg/'>AEK Athens - Zenit</a></li>
+ <li id="ev186991564"><a href='/football/europe/uefa-europa-league-group-b/bayer-04-leverkusen-v-atletico-madrid/'>B. Leverkusen - Atletico</a></li>
+ <li id="ev186963398"><a href='/football/germany/bundesliga/1--fc-kaiserslautern-v-vfl-wolfsburg-11-12-14-30/'>Kaiserslautern - VfL Wolfsburg</a></li>
+ <li id="ev186963339"><a href='/football/spain/primera-division/real-sporting-de-gijon-v-levante/'>Sporting de Gijon - Levante</a></li>
+ <li id="ev186963338"><a href='/football/spain/primera-division/athletic-bilbao-v-rcd-espanyol/'>Bilbao - RCD Espanyol</a></li>
+ <li id="ev186991582"><a href='/football/europe/uefa-europa-league-group-i/psv-eindhoven-v-fc-metalist-kharkiv/'>PSV Eindhoven - FC Metalist Khar</a></li>
+ <li id="ev186991568"><a href='/football/europe/uefa-europa-league-group-d/nk-dinamo-zagreb-v-paok-fc/'>NK Dinamo Zagreb - PAOK FC</a></li>
+ <li id="ev186989521"><a href='/football/england/championship/reading-v-coventry-city-fc/'>Reading - Coventry City FC</a></li>
+ <li id="ev186983601"><a href='/am-football/united-states/nfl/pittsburgh-steelers-v-cincinnati-bengals/'>Pittsburgh - Cincinnati</a></li>
+ <li id="ev186989512"><a href='/football/england/championship/middlesbrough-fc-v-cardiff-city-fc/'>M'brough - Cardiff City FC</a></li>
+ <li id="ev186991583"><a href='/football/europe/uefa-europa-league-group-j/fc-karpaty-lviv-v-paris-saint-germain-fc/'>FC Karpaty Lviv - PSG</a></li>
+ <li id="ev186991399"><a href='/football/turkey/super-ligi/sivasspor-v-kombassan-konyaspor/'>Sivasspor - Kombassan Konyas</a></li>
+ <li id="ev186989370"><a href='/football/england/league-cup/ipswich-town-fc-v-arsenal/'>Ipswich Town FC - Arsenal</a></li>
+ <li id="ev186963427"><a href='/football/england/premier-league/bolton-wanderers-v-blackburn-rovers/'>Bolton - Blackburn</a></li>
+ <li id="ev186991577"><a href='/football/europe/uefa-europa-league-group-h/vfb-stuttgart-v-ob-odense/'>VfB Stuttgart - OB Odense</a></li>
+ <li id="ev186971888"><a href='/football/africa/africa-cup-of-nations/cote-d-ivoire-v-benin/'>Cote d'Ivoire - Benin</a></li>
+ <li id="ev186991575"><a href='/football/europe/uefa-europa-league-group-g/rsc-anderlecht-v-hnk-hajduk-split/'>Anderlecht - HNK Hajduk Split</a></li>
+ <li id="ev186989511"><a href='/football/england/league-1/bournemouth-fc-v-hartlepool-united/'>Bournemouth FC - Hartlepool Utd</a></li>
+ <li id="ev186991579"><a href='/football/europe/uefa-europa-league-group-i/debrecen-vsc-v-sampdoria/'>Debrecen VSC - Sampdoria</a></li>
+ <li id="ev186989588"><a href='/football/germany/2-bundesliga/fsv-frankfurt-v-fc-augsburg/'>FSV Frankfurt - FC Augsburg</a></li>
+ <li id="ev186969967"><a href='/football/africa/africa-cup-of-nations/malawi-v-togo/'>Malawi - Togo</a></li>
+ <li id="ev187002516"><a href='/football/argentina/primera-division/olimpo-v-quilmes-atl-tico-club/'>Olimpo - Quilmes Atlético</a></li>
+ <li id="ev186991396"><a href='/football/italy/serie-c1-b/juve-stabia-v-benevento/'>Juve Stabia - Benevento</a></li>
+ <li id="ev186989413"><a href='/football/austria/tmobile-bundesliga/sv-mattersburg-v-fk-austria-wien-11-12-15-00/'>SV Mattersburg - FK Austria Wien</a></li>
+ <li id="ev186967255"><a href='/football/africa/africa-cup-of-nations/nigeria-v-ethiopia/'>Nigeria - Ethiopia</a></li>
+ <li id="ev186972008"><a href='/football/africa/africa-cup-of-nations/guinea-bissau-v-uganda/'>Guinea-Bissau - Uganda</a></li>
+ <li id="ev187006228"><a href='/football/netherlands/eredivisie/vvv-venlo-v-sv-roda-jc/'>VVV Venlo - SV Roda JC</a></li>
+ <li id="ev186970091"><a href='/football/france/ligue-1/as-monaco-v-as-st--etienne/'>AS Monaco - AS St. Etienne</a></li>
+ <li id="ev186989482"><a href='/football/cyprus/1-division/a-e--paphos-v-ethnikos-achnas-fc/'>A.E. Paphos - Ethnikos Achnas</a></li>
+ <li id="ev186970085"><a href='/football/france/ligue-1/fc-lorient-v-rc-lens/'>FC Lorient - RC Lens</a></li>
+ <li id="ev186989478"><a href='/football/italy/serie-b/atalanta-bergamo-v-albinoleffe/'>Atalanta Bergamo - Albinoleffe</a></li>
+ <li id="ev186963415"><a href='/football/england/premier-league/stoke-city-fc-v-blackpool-fc/'>Stoke City FC - Blackpool FC</a></li>
+ <li id="ev187008868"><a href='/basketball/united-states/nba/chicago-bulls-v-indiana-pacers/'>Chicago Bulls - Indiana Pacers</a></li>
+ <li id="ev186989526"><a href='/football/england/championship/barnsley-fc-v-sheffield-united-fc/'>Barnsley FC - Sheffield Utd FC</a></li>
+ <li id="ev187009446"><a href='/football/albania/superliga/kastrioti-kruje-v-ks-elbasani/'>Kastrioti Kruje - KS Elbasani</a></li>
+ <li id="ev186989606"><a href='/football/turkey/super-ligi/bucaspor-v-manisaspor/'>Bucaspor - Manisaspor</a></li>
+ <li id="ev186991397"><a href='/football/switzerland/super-league/grasshopper-club-z-rich-v-fc-basel/'>Grasshopper Club - FC Basel</a></li>
+ <li id="ev187005023"><a href='/football/italy/serie-a/ac-milan-v-as-roma/'>AC Milan - AS Roma</a></li>
+ <li id="ev186989479"><a href='/football/italy/serie-b/frosinone-v-novara/'>Frosinone - Novara</a></li>
+ <li id="ev187006240"><a href='/football/greece/greece-b-ethniki/agrotikos-asteras-v-doxa-dramas/'>Agrotikos Astera - Doxa Dramas</a></li>
+ <li id="ev186967211"><a href='/football/africa/africa-cup-of-nations/cape-verde-v-liberia/'>Cape Verde - Liberia</a></li>
+ <li id="ev186967448"><a href='/football/africa/africa-cup-of-nations/burkina-faso-v-namibia/'>Burkina Faso - Namibia</a></li>
+ <li id="ev186967248"><a href='/football/africa/africa-cup-of-nations/madagascar-v-guinea/'>Madagascar - Guinea</a></li>
+ <li id="ev187008183"><a href='/football/france/ligue-2/fc-nantes-v-cs-sedan-ardennes/'>FC Nantes - CS Sedan-Ardenne</a></li>
+ <li id="ev186989483"><a href='/football/italy/serie-b/empoli-v-portogruaro-summaga/'>Empoli - Portogruaro Summ</a></li>
+ <li id="ev187006004"><a href='/football/albania/superliga/ks-flamurtari-vlore-v-ks-besa-kavaje/'>KS Flamurtari Vl - KS Besa Kavaje</a></li>
+ <li id="ev186991412"><a href='/football/italy/serie-c1-b/us-siracusa-v-lucchese/'>US Siracusa - Lucchese</a></li>
+ <li id="ev187002947"><a href='/am-football/united-states/ncaa-football/oklahoma-state-cowboys-v-arizona-wildcats/'>Oklahoma State C - Arizona Wildcats</a></li>
+ <li id="ev186996516"><a href='/football/spain/segunda-division/recreativo-de-huelva-v-tenerife/'>Recreativo de Hu - Tenerife</a></li>
+ <li id="ev186989642"><a href='/football/netherlands/eredivisie/nac-breda-v-fc-utrecht-11-12-17-45/'>NAC Breda - FC Utrecht</a></li>
+ <li id="ev187005028"><a href='/football/italy/serie-a/catania-calcio-v-brescia/'>Catania - Brescia</a></li>
+ <li id="ev186991556"><a href='/football/europe/uefa-europa-league-group-a/fc-salzburg-v-kks-lech-poznan/'>FC Salzburg - KKS Lech Poznan</a></li>
+ <li id="ev187005018"><a href='/football/italy/serie-a/cesena-v-cagliari/'>Cesena - Cagliari</a></li>
+ <li id="ev186989570"><a href='/football/northern-ireland/ifa-premiership/dungannon-swifts-v-ballymena-united-fc/'>Dungannon Swifts - Ballymena Utd FC</a></li>
+ <li id="ev187002370"><a href='/ice-hockey/sweden/elitserien-incl-playoffs-/aik-if-v-timra-ik/'>AIK - Timrå IK</a></li>
+ <li id="ev187004172"><a href='/football/greece/greece-b-ethniki/pierikos-katerini-v-thrasivoulos/'>Pierikos Katerin - Thrasivoulos</a></li>
+ <li id="ev186989477"><a href='/football/italy/serie-b/crotone-v-cittadella/'>Crotone - Cittadella</a></li>
+ <li id="ev186967356"><a href='/football/africa/africa-cup-of-nations/algeria-v-morocco/'>Algeria - Morocco</a></li>
+ <li id="ev186967485"><a href='/football/africa/africa-cup-of-nations/niger-v-sierra-leone/'>Niger - Sierra Leone</a></li>
+ <li id="ev186967375"><a href='/football/africa/africa-cup-of-nations/senegal-v-cameroon/'>Senegal - Cameroon</a></li>
+ <li id="ev186989572"><a href='/football/northern-ireland/ifa-premiership/glentoran-fc-v-donegal-celtic/'>Glentoran FC - Donegal Celtic</a></li>
+ <li id="ev186996515"><a href='/football/spain/segunda-division/real-valladolid-v-cd-numancia/'>Valladolid - CD Numancia</a></li>
+ <li id="ev186991408"><a href='/football/italy/serie-c1-b/fc-esperia-viareggio-v-taranto/'>FC Esperia Viare - Taranto</a></li>
+ <li id="ev187002506"><a href='/ice-hockey-live/united-states/nhl/anaheim-ducks-v-calgary-flames/'>Anaheim Ducks - Calgary Flames</a></li>
+ <li id="ev186991558"><a href='/football/europe/uefa-europa-league-group-a/juventus-fc-v-manchester-city/'>Juventus - Man City</a></li>
+ <li id="ev186963457"><a href='/football/england/premier-league/tottenham-hotspur-v-chelsea/'>Tottenham - Chelsea</a></li>
+ <li id="ev186963443"><a href='/football/england/premier-league/wolverhampton-wanderers-v-birmingham-city-fc/'>W'hampton - Birmingham City </a></li>
+ <li id="ev186991413"><a href='/football/italy/serie-c1-b/foggia-v-cosenza/'>Foggia - Cosenza</a></li>
+ <li id="ev186989484"><a href='/football/italy/serie-b/siena-v-ascoli/'>Siena - Ascoli</a></li>
+ <li id="ev186989485"><a href='/football/italy/serie-b/pescara-v-vicenza/'>US Pescara - Vicenza</a></li>
+ <li id="ev187002944"><a href='/am-football/united-states/ncaa-football/air-force-falcons-v-georgia-tech-yellow-jackets/'>Air Force Falcon - Georgia Tech Yel</a></li>
+ <li id="ev186989490"><a href='/football/cyprus/1-division/doxa-katokopias-v-apollon-limmassol-fc/'>Doxa Katokopias - Apollon Limmasso</a></li>
+ <li id="ev186989488"><a href='/football/wales/welsh-premier-league/llanelli-afc-v-prestatyn-town/'>Llanelli AFC - Prestatyn Town</a></li>
+ <li id="ev187006241"><a href='/football/greece/greece-b-ethniki/levadiakos-v-pas-giannina/'>Levadiakos - Pas Giannina</a></li>
+ <li id="ev186967345"><a href='/football/africa/africa-cup-of-nations/tanzania-v-central-african-republic/'>Tanzania - Central African</a></li>
+ <li id="ev186989629"><a href='/football/scotland/1-division/dunfermline-v-queen-of-the-south-11-12-15-00/'>Dunfermline - Queen of the Sou</a></li>
+ <li id="ev186984981"><a href='/football/england/premier-league/blackpool-fc-v-tottenham-hotspur/'>Blackpool FC - Tottenham</a></li>
+ <li id="ev187003835"><a href='/football/portugal/super-liga/vitoria-setubal-v-sporting-clube-de-portugal/'>Vitoria Setubal - Sporting Clube d</a></li>
+ <li id="ev186999972"><a href='/am-football/united-states/ncaa-football/wofford-terriers-v-georgia-southern-eagles/'>Wofford Terriers - Georgia Southern</a></li>
+ <li id="ev186991569"><a href='/football/europe/uefa-europa-league-group-d/club-brugge-kv-v-villarreal-cf/'>Club Brugge KV - Villarreal CF</a></li>
+ <li id="ev187002775"><a href='/am-football/united-states/ncaa-football/wisconsin-badgers-v-tcu-horned-frogs/'>Wisconsin Badger - TCU Horned Frogs</a></li>
+ </ul>
+ </div>
+
+ <div class="mootabsMostPopular hidden" id ="outrightsMP"> 
+ <ul class="tooltipTable nextMatches" style="top:0">
+ <li id="ev187004965"><a href="/football/italy/serie-a/">Ita, Serie A </a>
+ </li>
+ <li id="ev179446906"><a href="/am-football/united-states/nfl/">Unit, NFL </a>
+ </li>
+ <li id="ev186632079"><a href="/football/netherlands/eredivisie/">Nizo, Eredivisie </a>
+ </li>
+ <li id="ev186456309"><a href="/am-football/united-states/ncaa-football/">Unit, NCAA Football </a>
+ </li>
+ <li id="ev186617178"><a href="/football/spain/primera-division/">Špan, Primera Div </a>
+ </li>
+ <li id="ev150511949"><a href="/football/england/championship/">Eng, Championship </a>
+ </li>
+ <li id="ev186669580"><a href="/basketball/united-states/nba/">Unit, NBA </a>
+ </li>
+ <li id="ev186607691"><a href="/football/greece/greece-super-league/">Gr&#269;k, Greece Super Leag </a>
+ </li>
+ <li id="ev181751534"><a href="/football/england/league-1/">Eng, League 1</a>
+ </li>
+ <li id="ev186559094"><a href="/football/germany/bundesliga/">Njem, Bundesliga </a>
+ </li>
+ <li id="ev186569875"><a href="/football/scotland/scottish-premier-league/">Ško, Scottish Prem. Leag </a>
+ </li>
+ <li id="ev186617088"><a href="/football/france/ligue-1/">Fran, Ligue 1 </a>
+ </li>
+ <li id="ev186792022"><a href="/ice-hockey/united-states/nhl/">Unit, NHL </a>
+ </li>
+ <li id="ev147193530"><a href="/basketball/united-states/ncaa-basketball/">Unit, NCAA Basketball </a>
+ </li>
+ <li id="ev186563308"><a href="/football/england/premier-league/">Eng, Prem. Leag </a>
+ </li>
+ <li id="ev186654931"><a href="/football/africa/africa-cup-of-nations/">Afri, Africa Cup of Nations  </a>
+ </li>
+ <li id="ev186640530"><a href="/football/belgium/jupiler-pro-league/">Belg, Jupiler Pro Leag </a>
+ </li>
+ <li id="ev186710799"><a href="/football/italy/serie-b/">Ita, Serie B </a>
+ </li>
+ <li id="ev186683854"><a href="/ice-hockey/russia/khl-russia/">Rus, KHL Russia </a>
+ </li>
+ <li id="ev186681868"><a href="/football/argentina/primera-division/">Arge, Primera Div </a>
+ </li>
+ <li id="ev186738206"><a href="/football/europe/uefa-europa-league-group-e/">Eur, UEFA Europa Leag  Grp. E</a>
+ </li>
+ <li id="ev186738208"><a href="/football/europe/uefa-europa-league-group-f/">Eur, UEFA Europa Leag  Grp. F</a>
+ </li>
+ <li id="ev186692661"><a href="/football/spain/segunda-division/">Špan, Segunda Div </a>
+ </li>
+ <li id="ev186738212"><a href="/football/europe/uefa-europa-league-group-j/">Eur, UEFA Europa Leag  Grp. J</a>
+ </li>
+ <li id="ev186738211"><a href="/football/europe/uefa-europa-league-group-i/">Eur, UEFA Europa Leag  Grp. I</a>
+ </li>
+ <li id="ev183192353"><a href="/football/europe/euro-qualification-matches/">Eur, Euro  Qual Matches</a>
+ </li>
+ <li id="ev186665851"><a href="/football/germany/3-liga/">Njem, 3. Liga </a>
+ </li>
+ <li id="ev186738210"><a href="/football/europe/uefa-europa-league-group-h/">Eur, UEFA Europa Leag  Grp. H</a>
+ </li>
+ <li id="ev186738209"><a href="/football/europe/uefa-europa-league-group-g/">Eur, UEFA Europa Leag  Grp. G</a>
+ </li>
+ <li id="ev186738203"><a href="/football/europe/uefa-europa-league-group-b/">Eur, UEFA Europa Leag  Grp. B</a>
+ </li>
+ <li id="ev186738202"><a href="/football/europe/uefa-europa-league-group-a/">Eur, UEFA Europa Leag  Grp. A</a>
+ </li>
+ <li id="ev186719066"><a href="/football/italy/serie-c1-b/">Ita, Serie C1 B </a>
+ </li>
+ <li id="ev186738204"><a href="/football/europe/uefa-europa-league-group-c/">Eur, UEFA Europa Leag  Grp. C</a>
+ </li>
+ <li id="ev186738205"><a href="/football/europe/uefa-europa-league-group-d/">Eur, UEFA Europa Leag  Grp. D</a>
+ </li>
+ <li id="ev186617125"><a href="/football/france/ligue-2/">Fran, Ligue 2 </a>
+ </li>
+ <li id="ev186738213"><a href="/football/europe/uefa-europa-league-group-k/">Eur, UEFA Europa Leag  Grp. K</a>
+ </li>
+ <li id="ev186738214"><a href="/football/europe/uefa-europa-league-group-l/">Eur, UEFA Europa Leag  Grp. L</a>
+ </li>
+ <li id="ev152257163"><a href="/football/switzerland/super-league/">Švic, Super Leag </a>
+ </li>
+ <li id="ev186658883"><a href="/football/turkey/super-ligi/">Tur, Super Ligi </a>
+ </li>
+ <li id="ev186665930"><a href="/football/germany/2-bundesliga/">Njem, 2. Bundesliga </a>
+ </li>
+ <li id="ev186607643"><a href="/football/portugal/super-liga/">Port, Super Liga </a>
+ </li>
+ <li id="ev186632109"><a href="/football/netherlands/eerste-divisie-jupiler-league-/">Nizo, Eerste Divisie (Jupiler Leag) </a>
+ </li>
+ <li id="ev186580366"><a href="/football/europe/uefa-champions-league/">Eur, UEFA Champions Leag </a>
+ </li>
+ <li id="ev186660255"><a href="/football/cyprus/1-division/">Cipa, 1 Div </a>
+ </li>
+ <li id="ev186645925"><a href="/football/europe/uefa-europa-league/">Eur, UEFA Europa Leag </a>
+ </li>
+ <li id="ev150511962"><a href="/football/england/league-2/">Eng, League 2</a>
+ </li>
+ <li id="ev183192223"><a href="/football/europe/euro-qualification-group-a/">Eur, Euro  Qual Grp. A</a>
+ </li>
+ <li id="ev183192256"><a href="/football/europe/euro-qualification-group-b/">Eur, Euro  Qual Grp. B</a>
+ </li>
+ <li id="ev183192285"><a href="/football/europe/euro-qualification-group-f/">Eur, Euro  Qual Grp. F</a>
+ </li>
+ <li id="ev55591596"><a href="/football/europe/euro/">Eur, Euro</a>
+ </li>
+ </ul>
+ </div>
+ 
+</div>
+ <div id="leftMenuCoupon" class="mootabsLeftMenu hidden">
+ <div class="text">
+ Click on "Add to Coupon" from odds pages to build your own preferred list of matches. This can be used both to easily keep track of favourite matches and to compare odds for coupons (combined bets).
+			</div>
+ </div>
+ 
+ <div id="leftMenuSearch" class="mootabsLeftMenu hidden"> 
+ <div id="searchLeftBox">
+ 
+ <div class="leftMenuTree tooltipTable"> 
+ </div>
+</div>
+</div>
+ 
+ <!--STATS AND SCORES -->
+
+<div class="hidden mootabsLeftMenu" id="leftMenuStats">
+ <ul class="nextMatches" style="top:0" >
+ <li class="liveresult"><a href="/scores/live/" >Live Today</a></li>
+ <li class="liveresult"><a href="/scores/result/">Results Today</a></li>
+ <li>
+ <a href="/league-scores/am--football/24/nfl/820380/" >Am. Football</a>
+ </li>
+ <li>
+ <a href="/league-scores/bandy/25/allsvenskan-norra/821634/" >Bandy</a>
+ </li>
+ <li>
+ <a href="/league-scores/floorball/28/salibandyliiga/-1/" >Floorball</a>
+ </li>
+ <li>
+ <a href="/league-scores/hokej-na-ledu/5/nhl/821570/" >Hokej na Ledu</a>
+ </li>
+ <li>
+ <a href="/league-scores/ko-arka/23/nba/821512/" >Košarka</a>
+ </li>
+ <li>
+ <a href="/league-scores/nogomet/1/serie-a/821429/" >Nogomet</a>
+ </li>
+ <li>
+ <a href="/league-scores/odbojka/51/cev-champions-league/821497/" >Odbojka</a>
+ </li>
+ <li>
+ <a href="/league-scores/rukomet/20/european-championship-women/821293/" >Rukomet</a>
+ </li>
+ </ul>
+</div><table class="bbbox bordertop">
+		<thead class="BoxTableHeader">
+		<tr class="headerRow" height="25">
+			<th class="center">
+				<h2 class="headlineNormal">
+				POSTAVKE</h2>
+			</th>			
+		</tr>
+		
+		</thead>
+	<tbody class="BoxTableContent">
+		<tr class="">
+			<td class="boxContent" colspan="2">
+				<form>
+		<table>
+			<tr>	
+				<td class="label" style="padding-top:4px">
+					<a   href="/infos/aboutOdds/" class="noTextDecoration black">		Format te&#269;ajeva</a>
+				
+					<select id="oddsFormatType"
+						onchange="applyOddsFormatChange();">
+						<option value="0" selected>EU</option>
+								<option value="1">UK</option>
+								<option value="3">US</option>
+								<option value="4">MA</option>
+								<option value="5">IN</option>
+								<option value="6">HK</option>
+								</select>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<form name="showExchForm">
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td class="leftAligned">
+				<input class="noBorder"
+					 type="checkbox" checked value="1"
+					  name="showExchangeOdds" 
+					 onclick="applyShowExchange();"></input>
+				</td> 
+			<td class="label" style="padding-top:2px">
+				Pokaži razmjena</td>
+			</tr>
+		</table>
+	</form>
+	
+	<div id ="commissionFreeOddsSelector" style="display: block;">
+	<form name="commissionFreeOddsSelector" >
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td class="leftAligned">
+                <input class="noBorder" 
+                		type="checkbox" value="1" 
+                		checked
+                		name="withCommission"
+                		 onclick="applyIncludeCommission();" >
+                </input> 
+
+				</td>
+				<td class="label">
+					Te&#269;ajevi su prikazani sa uklju&#269;enom standardnom provizijom</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+
+</td>
+		</tr>
+		</tbody>
+</table>
+<table class="bbbox bordertop">
+		<thead class="BoxTableHeader">
+		<tr class="headerRow" height="25">
+			<th onclick="hideBox(this,'COMKEY_INFOMATIONTAB')" class="closeBox">
+					<img src="http://gfx.betbrain.com/gfx/image/arrow_gray_right_header.gif" class="size9x9"/></th>
+			<th onclick="hideBoxNext(this,'COMKEY_INFOMATIONTAB')" class="center2">
+				<h2 class="headlineNormal">
+				INFORMACIJA</h2>
+			</th>			
+		</tr>
+		
+		</thead>
+	<tbody class="BoxTableContent">
+		<tr class="hidden">
+			<td class="boxContent" colspan="2">
+				<ul class="informationMenu">
+ <li><a onclick='return loadAPage(this);' href="/infos/aboutUsingWebsite/">
+ Upotreba BetBrain-a</a></li>
+ <li>Informacije za kla&#273;enje</li>
+ 
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/aboutGambling/">Kako Po&#269;eti</a></li>
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/aboutOdds/">Format Te&#269;ajeva</a></li>
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/aboutSpreads/">Hendikep i Iznad/Ispod</a></li>
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/aboutBettingExchanges/">Razmjene Oklada</a></li> 
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/aboutProbabilityCalculation/">Vjer. Izra&#269;un</a></li>
+ <li><a onclick='return loadAPage(this);' href="/infos/partners/">Partnerstva</a></li>
+ <li>Info o Tvrtki</li> 
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/companyInfo/">O BetBrain.com</a></li>
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/advertizing/">Oglašavanje</a></li>
+ <li class="secondlevel"><img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/infos/betBrainPictures/">Slike</a></li>
+ <li><a onclick='return loadAPage(this);' href="/infos/disclaimer/">Uvjeti Upotrebe</a></li>
+ <li><a onclick='return loadAPage(this);' href="/infos/privacypolicy/">Vaša Privatnost</a></li>
+ <li><a onclick='return loadAPage(this);' href="/infos/terms-and-conditions/">Nagodbe i uvjeti</a></li>
+ </ul>
+ </td>
+		</tr>
+		</tbody>
+</table>
+<table class="bbbox bordertop">
+		<thead class="BoxTableHeader">
+		<tr class="headerRow" height="25">
+			<th onclick="hideBox(this,'COMKEY_WIDGETTAB')" class="closeBox">
+					<img src="http://gfx.betbrain.com/gfx/image/arrow_gray_right_header.gif" class="size9x9"/></th>
+			<th onclick="hideBoxNext(this,'COMKEY_WIDGETTAB')" class="center2">
+				<h2 class="headlineNormal">
+				WIDGET</h2>
+			</th>			
+		</tr>
+		
+		</thead>
+	<tbody class="BoxTableContent">
+		<tr class="hidden">
+			<td class="boxContent" colspan="2">
+				<ul class="informationMenu">
+ <li>
+ <a onclick='return loadAPage(this);' href="/widgets/overviewWidgets.do">Widgets tvornica</a>
+ </li>
+ <li class="secondlevel">
+ <img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/widgets/customizeWidgets.do?type=3&name=0">Najpopularnije događaje</a>
+ </li>
+ <li class="secondlevel">
+ <img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/widgets/customizeWidgets.do?type=3&name=2">Nadolazeći Utakmice</a>
+ </li>
+ <li class="secondlevel">
+ <img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/><a onclick='return loadAPage(this);' href="/widgets/customizeWidgets.do?type=3&name=3">Najviša kvota</a>
+ </li>
+ </ul>
+ </td>
+		</tr>
+		</tbody>
+</table>
+<div class="marginBottom10 marginTop10">
+ <table class="bbbox" style="border: 0pt none;">
+ <tr>
+ <td style="padding: 0pt;">
+ <a target="_blank" href="http://www.igbaffiliateawards.com/"> 
+ <img style="border: 0pt none; vertical-align: top;"
+ src="http://gfx.betbrain.com/gfx/IGBAward2010.gif" width='156'/>
+ </a>
+ </td>
+ </tr>
+ </table>
+ </div>
+ </td>
+ </tr>
+ </table>
+ </div>
+ 
+ <div id="footer"><table border="0" width="98%" cellspacing="0" cellborder="0" align="center">
+ <tr><td><img src="http://gfx.betbrain.com/gfx/pics/spc.gif" width="1" height="3" border="0"></td></tr>
+ 
+ <tr>
+ <td class="smallText bund" valign="top" width=100%>
+ <center>
+ <a class="bund" title="Serie A&nbsp;odds" href="/football/italy/serie-a/">Serie A&nbsp;odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="NFL&nbsp;odds" href="/am-football/united-states/nfl/">NFL&nbsp;odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Eredivisie&nbsp;odds" href="/football/netherlands/eredivisie/">Eredivisie&nbsp;odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="NCAA Football&nbsp;odds" href="/am-football/united-states/ncaa-football/">NCAA Football&nbsp;odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Primera Div&nbsp;odds" href="/football/spain/primera-division/">Primera Div&nbsp;odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Championship&nbsp;odds" href="/football/england/championship/">Championship&nbsp;odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="NBA&nbsp;odds" href="/basketball/united-states/nba/">NBA&nbsp;odds</a>
+ </center>
+ </td>
+ </tr>
+ <tr>
+ <td class="smallText bund" valign="top" width=100%>
+ <center>
+ <a class="bund" title="Nogomet&nbsp;betting odds" href="/football/">Nogomet&nbsp;betting odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Košarka&nbsp;betting odds" href="/basketball/">Košarka&nbsp;betting odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Hokej na Ledu&nbsp;betting odds" href="/ice-hockey/">Hokej na Ledu&nbsp;betting odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Am. Football&nbsp;betting odds" href="/am-football/">Am. Football&nbsp;betting odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Utrke Konja&nbsp;betting odds" href="/horse-racing/">Utrke Konja&nbsp;betting odds</a>
+ 
+ &nbsp;|&nbsp;
+ <a class="bund" title="Rukomet&nbsp;betting odds" href="/handball/">Rukomet&nbsp;betting odds</a>
+ </center>
+ </td>
+ </tr>
+ <tr>
+ <td class="smallText bund" valign="top" width=100%>
+ <center>
+ <a class="bund" href="/infos/advertizing/">Oglašavanje</a> | 
+ Copyright © 2000-2010 BetBrain.com. All Rights Reserved. | Contact us at: <a href="mailto:betbrain@betbrain.com" class="contactUs">betbrain@betbrain.com</a> |
+ <a class="bund" href="/infos/terms-and-conditions/"> Nagodbe i uvjeti</a> | <a class="bund" href="/infos/disclaimer/">Uvjeti Upotrebe</a> | <a class="bund" href="/infos/privacypolicy/">Vaša Privatnost</a> | 
+ <a class="bund" href="/map/">Sitemap</a>
+ </center>
+ </td>
+ </tr>
+ <tr><td><img src="http://gfx.betbrain.com/gfx/pics/spc.gif" width="1" height="3" border="0"></td></tr>
+ </table>
+ </div>
+ </div>
+ <div id="header" style="background: url(http://gfx.betbrain.com/gfx/image/top_hr_1.jpg) no-repeat;">
+ 
+ <script>
+ var args= "2010#11#11#5#26#56#660".split("#");
+ bbGlobal.offsetTime = new Date().getTime() - new Date(args[0], args[1] , args[2], args[3], args[4], args[5], args[6]).getTime();
+ var time = new Date (new Date ().getTime() - bbGlobal.offsetTime);
+ if (!$defined(bbGlobal.userClock))
+ bbGlobal.userClock = time;
+ var userGMTOffset = 1 * 60 * 60 * 1000;
+ bbGlobal.serverClock = new Date (bbGlobal.userClock - userGMTOffset);
+ 
+ </script> 
+ <div id="bblogo">
+ <a href="/">
+ <img class="siteLogo" src="http://gfx.betbrain.com/gfx/image/bb_logo.gif"/>
+ </a>
+ </div>
+ 
+ <div class="boxLoginForm">
+ <div class="header">
+ Moj Usporedba Kvota</div>
+
+<table id='headerInputForm'>
+ 
+ <form action="/userLogin.do" method="post" > 
+ 
+ <tr>
+ <td>
+ <input type="text" size="15" name="username" 
+ value="Korisni&#269;ko ime"
+ id="loginUsername" tabindex="1"/>
+ </td>
+ <td>
+ <input name="LoginButton" class="buttonCommit" type="submit" value="Login" tabindex="4" >
+ </td>
+ </tr>
+ <tr> 
+ <td width="106">
+ <input type="password" size="15" 
+ name="password" 
+ value="12345" 
+ id='loginPassword'
+ tabindex="2" /></td>
+ <td width="110"> 
+ <img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/> 
+ <a href="/user/register/" class="loginbox_black">Registrovati</a>
+ </td>
+ </tr>
+ <tr>
+ <td class="rememberMe">
+ <img src="http://gfx.betbrain.com/gfx/image/uncheck.gif" 
+ alt="unchecked"
+ id="rememberMeCheckBox"/>
+ 
+ <input id="rememberMe" type="hidden" name="rememberMe" value=""/>
+ 
+ <span class="loginbox_black" >Zapamti me</span>
+ </td>
+ <td class="rememberMe"> 
+ <img class="size8x9" src="http://gfx.betbrain.com/gfx/image/next-arrow.gif"/>
+ <a href="/user/recover-password/" class="loginbox_black">Izgubljena lozinka?</a>
+ </td>
+ </tr>
+
+ </form>
+ <tr class="userSettings">
+ <td align="left" colspan="2" style="height: 20px;">
+ <div id ='timeZoneHandler'>
+ <img src="http://gfx.betbrain.com/gfx/image/clock.gif" class="clockImg" id="clockImg"/>
+ <span id="clock">5:26:56</span>
+ 
+ <div id="timeZoneSetup" class="hidden">
+ <div>
+ <form name="clockForm" method="post"><select name="gmtTimeZoneOffset" 
+ id="timeZoneSelect"
+ size = 6
+ onclick="changeClockSetting(this.options[this.selectedIndex].value);">
+ 
+ <option value="-12" >UKT-12</option>
+ <option value="-11" >UKT-11</option>
+ <option value="-10" >UKT-10</option>
+ <option value="-9" >UKT-9</option>
+ <option value="-8" >UKT-8</option>
+ <option value="-7" >UKT-7</option>
+ <option value="-6" >UKT-6</option>
+ <option value="-5" >UKT-5</option>
+ <option value="-4" >UKT-4</option>
+ <option value="-3" >UKT-3</option>
+ <option value="-2" >UKT-2</option>
+ <option value="-1" >UKT-1</option>
+ <option value="0" >UKT</option>
+ <option value="1" selected>UKT+1</option>
+ <option value="2" >UKT+2</option>
+ <option value="3" >UKT+3</option>
+ <option value="4" >UKT+4</option>
+ <option value="5" >UKT+5</option>
+ <option value="6" >UKT+6</option>
+ <option value="7" >UKT+7</option>
+ <option value="8" >UKT+8</option>
+ <option value="9" >UKT+9</option>
+ <option value="10" >UKT+10</option>
+ <option value="11" >UKT+11</option>
+ <option value="12" >UKT+12</option>
+ <option value="13" >UKT+13</option>
+ </select>
+ </form>
+ </div>
+ </div>
+ 
+ </div>
+ <div id="divLanguage">
+ <img src="http://gfx.betbrain.com/gfx/flags/hr_HR.gif" class="langFlag" />
+ 
+ <div id="tableLanguage" class="tableLanguage" >
+ <ul id="bb-langs">
+ <li><a href="http://bg.betbrain.com/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Bulgaria" src="http://gfx.betbrain.com/gfx/flags/bg_BG.gif"/>
+ &nbsp;Български</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.cn/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="China" src="http://gfx.betbrain.com/gfx/flags/zh_CN.gif"/>
+ &nbsp;中文</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.cz/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Czech Republic" src="http://gfx.betbrain.com/gfx/flags/cz_CZ.gif"/>
+ &nbsp;Čeština</a>
+ </li>
+ 
+ <li><a href="http://fi.betbrain.com/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Finland" src="http://gfx.betbrain.com/gfx/flags/fi_FI.gif"/>
+ &nbsp;Suomi</a>
+ </li>
+ 
+ <li><a href="http://fr.betbrain.com/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="France" src="http://gfx.betbrain.com/gfx/flags/fr_FR.gif"/>
+ &nbsp;Français</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.de/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Germany" src="http://gfx.betbrain.com/gfx/flags/de_DE.gif"/>
+ &nbsp;Deutsch</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.gr/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Greece" src="http://gfx.betbrain.com/gfx/flags/gr_GR.gif"/>
+ &nbsp;Ελληνικά</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.com/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="International" src="http://gfx.betbrain.com/gfx/flags/en_GB.gif"/>
+ &nbsp;English</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.it/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Italy" src="http://gfx.betbrain.com/gfx/flags/it_IT.gif"/>
+ &nbsp;Italiano</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.nl/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Netherlands" src="http://gfx.betbrain.com/gfx/flags/nl_NL.gif"/>
+ &nbsp;Nederlands</a>
+ </li>
+ 
+ <li><a href="http://no.betbrain.com/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Norway" src="http://gfx.betbrain.com/gfx/flags/no_NO.gif"/>
+ &nbsp;Norsk</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.pl/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Poland" src="http://gfx.betbrain.com/gfx/flags/pl_PL.gif"/>
+ &nbsp;Polski</a>
+ </li>
+ 
+ <li><a href="http://pt.betbrain.com/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Portugal" src="http://gfx.betbrain.com/gfx/flags/pt_PT.gif"/>
+ &nbsp;Português</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.ro/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Romania" src="http://gfx.betbrain.com/gfx/flags/ro_RO.gif"/>
+ &nbsp;Română</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.ru/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Russia" src="http://gfx.betbrain.com/gfx/flags/ru_RU.gif"/>
+ &nbsp;Pyccĸий</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.es/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Spain" src="http://gfx.betbrain.com/gfx/flags/es_ES.gif"/>
+ &nbsp;Español</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.se/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="Sweden" src="http://gfx.betbrain.com/gfx/flags/sv_SE.gif"/>
+ &nbsp;Svenska</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.co.uk/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="UK" src="http://gfx.betbrain.com/gfx/flags/uk_UK.gif"/>
+ &nbsp;UK</a>
+ </li>
+ 
+ <li><a href="http://www.betbrain.us/SimpleJspForwarder.do?website=1&view=aboutSpreads&site=0">
+ <img title="USA" src="http://gfx.betbrain.com/gfx/flags/us_US.gif"/>
+ &nbsp;USA</a>
+ </li>
+ 
+ </ul>
+ </div>
+ </div>
+ </tr>
+ 
+ 
+</table></div>
+
+<div class="headerMenu">
+ <ul class="nowWebsite">
+ <li>
+ Trenutno na BetBrain-u::
+ </li>
+ <li>156</li>
+ <li class="content"> kladionice</li>
+ <li>1,941</li>
+ <li class="content"> doga&#273;aji</li>
+ <li>656</li>
+ <li class="content"> lige</li>
+ <li>1,577,794</li>
+ <li class="content"> te&#269;aj</li>
+ <li>39</li>
+ <li class="content"> free bets</li>
+ </ul>
+ </div>
+ 
+ </div>
+ 
+</div>
+ 
+ <script type="text/javascript" src="http://js.betbrain.com/javascript/footerfiles201012101330.js"></script>
+ 
+ 
+ 
+ 
+ 
+ 
+<script type="text/javascript" src="http://js.betbrain.com/javascript/nextMatches201012101330.js"></script>
+ 
+ 
+
+<script type="text/javascript" src="http://js.betbrain.com/javascript/floatingBanner201012101330.js"></script> 
+ 
+ <div id="loadingLeftMenu">
+ <img src="http://gfx.betbrain.com/gfx/image/ajax_loader_small.gif" alt="" class="size16x16"/>
+ </div>
+ 
+ <script>
+ init();
+ </script>
+ <div id="topBannerFake" class="hidden">
+<div style="width: 156px; float: left;">
+<script type='text/javascript'>   var m3_u = (location.protocol=='https:'?'https://ads.betbrain.com/www/delivery/ajs.php':'http://ads.betbrain.com/www/delivery/ajs.php');   var m3_r = Math.floor(Math.random()*99999999999);   if (!document.MAX_used) document.MAX_used = ',';   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);   document.write ("?zoneid=164");   document.write ('&amp;cb=' + m3_r);   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);   document.write ("&amp;loc=" + escape(window.location));   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));   if (document.context) document.write ("&context=" + escape(document.context));   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");   document.write ("'><\/scr"+"ipt>");</script>
+</div>
+<div style="width: 156px; float: left;padding-left:13px;">
+<script type='text/javascript'>   var m3_u = (location.protocol=='https:'?'https://ads.betbrain.com/www/delivery/ajs.php':'http://ads.betbrain.com/www/delivery/ajs.php');   var m3_r = Math.floor(Math.random()*99999999999);   if (!document.MAX_used) document.MAX_used = ',';   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);   document.write ("?zoneid=165");   document.write ('&amp;cb=' + m3_r);   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);   document.write ("&amp;loc=" + escape(window.location));   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));   if (document.context) document.write ("&context=" + escape(document.context));   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");   document.write ("'><\/scr"+"ipt>");</script>
+</div>
+<div style="width: 156px; float: left;padding-left:13px;">
+<script type='text/javascript'>   var m3_u = 
+(location.protocol=='https:'?'https://ads.betbrain.com/www/delivery/ajs.php':'http://ads.betbrain.com/www/delivery/ajs.php');   var m3_r = Math.floor(Math.random()*99999999999);   if (!document.MAX_used) document.MAX_used = ',';   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);   document.write ("?zoneid=166");   document.write ('&amp;cb=' + m3_r);   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);   document.write ("&amp;loc=" + escape(window.location));   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));   if (document.context) document.write ("&context=" + escape(document.context));   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");   document.write ("'><\/scr"+"ipt>");</script>
+</div>
+<div style="width: 156px; float: left;padding-left:13px;">
+<script type='text/javascript'>   var m3_u = (location.protocol=='https:'?'https://ads.betbrain.com/www/delivery/ajs.php':'http://ads.betbrain.com/www/delivery/ajs.php');   var m3_r = Math.floor(Math.random()*99999999999);   if (!document.MAX_used) document.MAX_used = ',';   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);   document.write ("?zoneid=188");   document.write ('&amp;cb=' + m3_r);   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);   document.write ("&amp;loc=" + escape(window.location));   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));   if (document.context) document.write ("&context=" + escape(document.context));   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");   document.write ("'><\/scr"+"ipt>");</script>
+</div><script>
+ var urlParam = '/SimpleJspForwarder.do'+'&' + 'website=1&view=aboutSpreads&site=0&' +'domain=betbrain.com';
+ </script>
+ </div><div id="rightSkyscrapperFake" class="hidden">
+ <div id ="skyScrapper">
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.betbrain.com/www/delivery/ajs.php':'http://ads.betbrain.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=113");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><script>
+var urlParam = '/SimpleJspForwarder.do'+'&' + 'website=1&view=aboutSpreads&site=0&' +'domain=betbrain.com';
+</script>
+</div>
+</div>
+
+
+<script type="text/javascript">
+ var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+ <script type="text/javascript">
+ try {
+ var pageTracker = _gat._getTracker("UA-613177-19");
+ pageTracker._trackPageview();
+ } catch(err) {}
+ </script>
+</body>
+</html>

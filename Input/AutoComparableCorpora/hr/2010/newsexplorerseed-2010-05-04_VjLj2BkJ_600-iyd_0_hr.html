@@ -1,0 +1,587 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>The Journey....</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+<meta name="copyright" content="Design by nelchee @ inobscuro.com" />
+<style type="text/css">
+* {margin: 0; padding: 0; border: none; text-decoration: none}
+body, html {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-bg9qa.gif) #3D3E4D center top;
+	text-align: center;
+	font: 10px "Georgia", "Palatino Linotype", "Times New Roman", serif;
+	color: #3f2f30;
+}
+body {padding-bottom: 15px;}
+#container {
+	width: 757px;
+	margin: auto;
+	text-align: left;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-contentbg0ow.gif) left top repeat-y;
+}
+#header {
+	height: 170px;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-header4gg.jpg) left top no-repeat;
+}
+#header h1 {
+	padding: 36px 350px 0 60px;
+	color: #61626f;
+	font: italic bold 36px "Times New Roman", "Georgia", sans-serif;
+}
+#header h2 {
+	padding: 10px 350px 0 80px;
+	color: #492022;
+	font: italic normal 18px "Times New Roman", "Georgia", sans-serif;
+}
+#footer {
+	height: 122px;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-footer6kb.jpg) left top no-repeat;
+	clear: both;
+}
+#footer p {
+	padding: 20px 130px 0 230px;
+	text-align: right;
+	line-height: 20px;
+}
+#content {
+	width: 525px;
+	float: left;
+	padding: 7px 40px 10px 20px;
+	line-height: 20px;
+	margin-top: -12px;
+	font-size: 11px;
+	overflow: hidden;
+}
+#column {
+	width: 172px;
+	float: left;
+	line-height: 16px;
+	overflow: hidden;
+}
+#content p, #content li {
+	text-align: justify;
+}
+#content h1 {
+	font: italic bold 24px "Times New Roman", "Georgia", sans-serif;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-heading0fs.gif) left bottom no-repeat;
+	padding: 20px 0 20px 65px;
+	color: #5f4c41;
+}
+h2 {
+	color: #4d4f5f;
+	font: italic bold 18px "Times New Roman", "Georgia", sans-serif;
+}
+p, ul, ol {
+	font-size: 11px;
+	padding: 10px 0;
+}
+#content li {
+	margin-left: 26px;
+}
+a:link, a:visited {
+	color: #373d7f;
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-line5hr.gif) center bottom repeat-x;
+}
+a:visited {
+	background: none;
+}
+a:hover {
+	color: #7f85c7;
+}
+code {
+	color: #9f4f54;
+	font-family: "lucida console", "courier new", "courier", monospace;
+}
+em, strong {
+	color: #9f4f54;
+}
+.box {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-paperblue8ji.gif) #D0D6DD;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-left: 1px solid #B9BBC1;
+	border-bottom: 1px solid #A9A6AB;
+	overflow: auto;
+}
+.box h2 {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-staple2vw.gif) top left no-repeat;
+	text-align: right;
+	padding: 0 0 5px 0;
+	text-indent: 30px;
+}
+#content .comment {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-comment3lw.gif) left top no-repeat;
+	padding: 62px 0 0 0;
+	position: relative;
+	list-style: none;
+	margin: 0 0 20px 0;
+}
+.comment * {
+	background: url(http://www.blog.hr/img/hr/design_pics/leptirsivi-paperblue8ji.gif);
+	padding: 5px;
+	margin-left: 13px;
+}
+.comment * * {
+	padding: 0; margin: 0; background: none;
+}
+.comment .author {
+	position: absolute;
+	left: 99px;
+	top: 16px !important;
+	top: 13px;
+	width: 406px;
+	margin: 0;
+	height: 26px;
+	font: italic normal 16px "Times New Roman", "Georgia", sans-serif;
+	padding: 20px 0 0 20px;
+}
+.slika {
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-right: 1em
+}
+#content p.time {clear: both; text-align: right;}
+
+.kalendar {width:100%;height:150px;font-size:10px;}
+.kalendar-aktivni-dani {background:#C8CFD8;text-align:center;}
+.kalendar-aktivni-dani-linkovi {color:blue;text-decoration:underline;}
+.kalendar-aktivni-dani-linkovi:hover {color:black;text-decoration:none;}
+.kalendar-neaktivni-dani {background:#C8CFD8;color:#606060;text-align:center;}
+.kalendar-prazni-dani {background:#C8CFD8;}
+.kalendar-nazivi-dana {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-mjesec-godina {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-strelica-natrag {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-strelica-natrag:hover {color:black;text-decoration:none;}
+.kalendar-strelica-naprijed {background:#C8CFD8;color:black;text-align:center;}
+.kalendar-strelica-naprijed:hover {color:black;text-decoration:none;}
+
+.quoted {
+	font-style: italic;
+	padding: 10px;
+	color: #492022;
+}
+</style>
+<link rel="alternate" type="application/rss+xml" title="The Journey...." href="http://thejourney.blog.hr/rss.xml" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.blog.hr/wlw/rsd.php?11893476" />
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+<meta name="keywords" content="thejourney,blog,hrvatska,film,fotografija,gastronomija,ljubav,glazba,humor,internet,karijera,književnost,novac,obitelj,obrazovanje,osobno,poezija,politika,prièe,putopisi,raèunala,religija,seks,sex,sport,televizija,umjetnost,zdravlje,znanost,rasprave,diskusije,korisnik,politika,www" />
+<meta name="description" content="thejourney.blog.hr" />
+<!-- (C)2000-2008 Gemius SA - gemiusAudience / blog.hr / Almost Cool -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String('11Llb2M2CYWADltIr19DBqRvfZsiUbsTejmpwsF_HHT.Z7');
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.blog.hr/xgemius.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8213121-28']);
+  _gaq.push(['_setDomainName', '.blog.hr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="http://www.blog.hr/js/hr/prototype.lite.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/moo.ajax.js?=1"></script>
+<script type="text/javascript" src="http://www.blog.hr/js/hr/frontend.js?=1"></script>
+
+<link rel="shortcut icon" href="http://www.blog.hr/blog.ico" type="image/ico" />
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1>The Journey....</h1>
+<h2>http://thejourney.blog.hr</h2>
+</div>
+<div id="content">
+
+<a name="1627482982"></a>
+
+<!-- Datum posta -->
+
+<h4>ponedjeljak, <a name="dan3"></a>03.05.2010.</h4>
+
+<!-- Datum posta kraj-->	
+
+<h1>Nevidljive veze (prijateljstva) su nam jedina konstanta<br /><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fthejourney.blog.hr%2F2010%2F05%2F1627482982%2Fnevidljive-veze-prijateljstva-su-nam-jedina-konstanta.html&amp;locale=hr_HR&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=dark&amp;height=35" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:450px;height:35px; margin:10px 0 5px" allowTransparency="true"></iframe></h1>
+
+<!-- Slika uz post -->
+
+<!-- Slika uz post kraj -->
+
+<p><b>1945.</b><br />
+<b>Mala O.</b> se igra u Rijeci na ulici ispred kuæe. Ima 4 godine. Nitko je ne èuva kao i nikog od djece s kojom se igra. Njezini pogledaju s vremena na vrijeme kroz prozor, ali nema se što lošega dogoditi....nema auta, nema droge... <br />
+Dolazi obiteljska prijateljica i daje joj naranèu. Mala O. je presretna što je dobila lopticu. <br />
+Tko je od djece tada znao što je naranèa?!<br />
+<b>Barba Lj.</b> joj je napravio "Zlatni grad". Kuæe su od kutija za lijekove. Predivan je! <br />
+Uživa kad joj èitaju prièu o Zaštoèiæu.<br />
+Nema <i>prave</i> lutke kao njezina najbolja prijateljiæa, <b>mala M.</b>. Ona je dobila svoje Bubu i Rajku iz inozemstva. Mala O. æe svoju Ameri dobiti od tatine tete iz Amerike tek 3 godine kasnije. <br />
+<br />
+Puno godina poslije Ameri je mjesto bilo na fotelji obasjanoj suncem. Mala O. nije više tako mala i studira u Zagrebu. Jednom kad se vratila, Amerino gumeno tijelo je bilo rastopljeno. Nije je mogla baciti.<br />
+<br />
+<b>1977.</b><br />
+<b>Mala V.</b> se igra ispred kuæe s <b>malim R.</b> Imaju 5 godina. <br />
+Dobro je što je ispred kuæe pješaèka zona pa nema opasnosti od auta. Tu je negdje i starija seka, <b>mala S.</b> koja je brani od vršnjaka u onim uobièajenim djeèjim natezanjima, a mama O. èesto pogleda kroz prozor je li sve u redu. Nema razloga da netko od odraslih bude s njima stalno vani.<br />
+Mala V. je naruèila elektrièni vlak, napokon je za roðendan od strica iz Rijeke dobila jako veliku lutku, a od voæa su joj najdraže banane. <br />
+Nikada poslije neæe shvatiti zašto nije rekla da žarko želi pistu kakvu je imao brat malog R, a i neæe se sjeæati kako su se zvale njezine lutke, ukljuèujuæi i veliku. Tko zna koje su baèene, a koje su negdje u drvarnici?! Možda je tamo i žuto-plava plastièna vaga koju je dobila za 6. roðendan od <b>male T.</b>.. <br />
+Postoji samo jedna igraèka koju nije mogla ostaviti u kutijama kad je puno godina poslije odselila u Dublin. Plišana zeèica Plavka s kojom je kao dijete spavala je otišla s njom....vjerojatno kao jedna od uspomena na djetinjstvo. <br />
+<br />
+<b>2010.<br />
+Mala M.</b> se ne igra sama ispred kuæe u Rijeci. Ima 4 godine. Nitko od djece te dobi se ne igra sam vani...Ima previše opasnosti da bi ih se pustilo.<br />
+Kad doðe <b>noni O.</b>, ode pogledati tko je online na Skype-u. <br />
+Koja joj je najdraža igraèka? Voli se igrati s puno stvari. S <b>tetom V.</b> se voli igrati pèelice i mišice. Pèelica živi u drvenoj kuæici, a mišica je doðe posjetiti. Pèelica stavlja drveni stoliæ i stolice u obliku cvijeæa van, a mišica otvara prozore i vrata da se sve prozraèi. Sada veæ velika V., rastavi drvenu kuæicu. Mišica i pèelica sjednu na terasu i popiju i pojedu što je pèelica skuhala. Kad su gotove, pèelica se ide odmoriti pa moraju napraviti krevet, zatvoriti prozore i vrata i sklopiti kuæu. Mišica odlazi.<br />
+V. je kupila kamp kuæicu, kuhinju i još neke dodatke da sljedeæi put prošire scenarij <img src="http://www.blog.hr/img/hr/smiles/sretan.gif" alt="sretan" border="0"/>.<br />
+<br />
+Mala M. je s <b>mamom S.</b> na roditeljskom sastanku  u školi, jednom od dva starija brata. Psihologinja drži predavanje i prièa: "Bla, bla, truæ, truæ, NE ZNAM ZAŠTO, bla, bla, truæ, truæ, NE ZNAM ZAŠTO...". Mala M. je prekine i kaže: "Pogledaj na internetu" <img src="http://www.blog.hr/img/hr/smiles/rofl.gif" alt="rofl" border="0"/>.<br />
+<br />
+Mali R. nije više onako mali, živi u Hollywoodu, lijeènik je i s vremena na vrijeme se <i>zaleti</i> u Rijeku. Na žalost se zadnji put mimoišao s "malom" V. Ona je bila u Rijeci nekoliko dana prije, na povratku iz Japana. Nije mogla ostati dulje jer je morala u Maleziju. Nije Rijeka baš usput na putu iz Japana u Dublin, ali su baš prošla 2 mjeseca otkad je sve vidjela....i mamu O. i sister S&co. i sad veæ, ne više tako malu T. i tetu M. i sve ostale koje je ostavila tamo.<br />
+<br />
+Da, internet komentar male M. me potaknuo da pišem kako su se vremena promijenila u materijalnom i tehnološkom smislu. To mi je bila prva ideja. Stvari koje su nekada bile èudo, sad se podrazumijevaju, a pogled kroz prozor prije 65 godina je bio potpuno drugaèiji. <br />
+No, kroz ove prièe je isplivala jedna konstanta, a to je konstanta dubokih, nematerijalnih i nevidljivih veza meðu onima koji se odaberu u životu. Jer mama O. i teta M. s kraja prièe su male O. i M. iz 1945. Mali R., V. i T. iz '77 su ovi veliki, rasuti po svijetu 2010., ali i dalje jako vezani. Da, postoji puno onih koji su se izgubili negdje na tom putu, ali ljepota života je u onima koji su ostali i onima koji su se kasnije pridružili. <br />
+Nije bitno koja je godina; 1945., 1977., 2010., 2025...nitko ne može biti "Pale sam na svijetu" i pogled na to je uvijek isti. <br />
+Meni osobno su ovakve veze kao voda....nužne za život i nadam se da æe internetski svjesna mala M. i njezina dva brata, za sljedeæih 65 godina razmišljati o tome jednako kao danas ja.</p>
+<p class="time">- 00:19 -</p>
+<p><a href="http://www.blog.hr/komentari/post/1627482982/nevidljive-veze-prijateljstva-su-nam-jedina-konstanta.html" target="_blank">Komentari</a> (24) - 
+<a href="http://www.blog.hr/print/id/1627482982/nevidljive-veze-prijateljstva-su-nam-jedina-konstanta.html" target="_blank">Isprintaj</a> - 
+<a href="http://thejourney.blog.hr/2010/05/1627482982/nevidljive-veze-prijateljstva-su-nam-jedina-konstanta.html" title="Permalink">#</a></p>
+<ul>
+
+<!-- Komentari ispod posta -->  
+<div id="komentari_post_1627482982">
+<script type="text/javascript">
+	get_post_comments('http://thejourney.blog.hr', '1627482982', '11893476', '0');
+</script>
+</div>
+<!-- Komentari ispod posta kraj -->
+
+</ul>
+<p><div align="center">
+<A HREF="http://thejourney.blog.hr/2010/04/index.html"><< Prethodni mjesec</A> | <A HREF="http://thejourney.blog.hr/2010/08/index.html">Sljedeæi mjesec >></A></div>
+</p>
+
+</div>
+<div id="column">
+
+<div class="box">
+
+<!-- Logo -->
+
+<p><a href="http://thejourney.blog.hr"><img src="http://thejourney.blog.hr/slike/logo.jpg" alt="" class="logo"></a>
+</p>
+
+<!-- Logo kraj -->
+<!-- Kalendar -->
+<!-- Kalendar -->
+<table class="kalendar" cellspacing="1">
+<tr>
+	<td class="kalendar-strelica-natrag"><a href="http://thejourney.blog.hr/2010/04/index.html">&lt;</a></td>
+	<td COLSPAN="5" class="kalendar-mjesec-godina">svibanj, 2010</td>
+	<td class="kalendar-strelica-naprijed"><a href="http://thejourney.blog.hr/2010/08/index.html">&gt;</a></td>
+</tr>
+<tr class="kalendar-nazivi-dana">
+	<td>P</td>
+	<td>U</td>
+	<td>S</td>
+	<td>È</td>
+	<td>P</td>
+	<td>S</td>
+	<td>N</td>
+</tr>
+<tr>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-neaktivni-dani">1</td>
+		<td class="kalendar-neaktivni-dani">2</td>
+</tr>
+<tr>
+		<td class="kalendar-aktivni-dani"><a href="http://thejourney.blog.hr/2010/05/index.html#dan3"  class="kalendar-aktivni-dani-linkovi">3</a></td>
+		<td class="kalendar-neaktivni-dani">4</td>
+		<td class="kalendar-neaktivni-dani">5</td>
+		<td class="kalendar-neaktivni-dani">6</td>
+		<td class="kalendar-neaktivni-dani">7</td>
+		<td class="kalendar-neaktivni-dani">8</td>
+		<td class="kalendar-neaktivni-dani">9</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">10</td>
+		<td class="kalendar-neaktivni-dani">11</td>
+		<td class="kalendar-neaktivni-dani">12</td>
+		<td class="kalendar-neaktivni-dani">13</td>
+		<td class="kalendar-neaktivni-dani">14</td>
+		<td class="kalendar-neaktivni-dani">15</td>
+		<td class="kalendar-neaktivni-dani">16</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">17</td>
+		<td class="kalendar-neaktivni-dani">18</td>
+		<td class="kalendar-neaktivni-dani">19</td>
+		<td class="kalendar-neaktivni-dani">20</td>
+		<td class="kalendar-neaktivni-dani">21</td>
+		<td class="kalendar-neaktivni-dani">22</td>
+		<td class="kalendar-neaktivni-dani">23</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">24</td>
+		<td class="kalendar-neaktivni-dani">25</td>
+		<td class="kalendar-neaktivni-dani">26</td>
+		<td class="kalendar-neaktivni-dani">27</td>
+		<td class="kalendar-neaktivni-dani">28</td>
+		<td class="kalendar-neaktivni-dani">29</td>
+		<td class="kalendar-neaktivni-dani">30</td>
+</tr>
+<tr>
+		<td class="kalendar-neaktivni-dani">31</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+		<td class="kalendar-prazni-dani">&nbsp;</td>
+</tr>
+</table><br/>
+<!-- Kalendar kraj-->
+<!-- Link za prikaz komentara -->
+<br><A HREF="http://thejourney.blog.hr/2010/05/index.2.html">Komentari On/Off</A>
+<!-- Link za prikaz komentara kraj-->
+</div>
+<!-- Prvi box -->
+
+<div class="box">
+<h2>Linkovi</h2>
+<p><form style="border:1px solid #ccc;padding:3px;text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=blog/ChRO', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><b>E-mail</b> da golub pismonoša javi kad dolphinA napiše nešto novoga<p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="blog/ChRO" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /><p>Delivered by <a href="http://feedburner.google.com" target="_blank">FeedBurner</a></p></form><font color=#000066>Moj je dolfinus.a MAJMUN gmail.com</font><br />
+<br />
+<a href="http://visionthing.blog.hr/2010/01/1627207545/apel-za-blogerima-za-pomoc-blogerici.html" target="_blank"><img src=" http://img51.imageshack.us/img51/6003/darijabanner.jpg" width="180" height="50"  alt="Daria" border="0"/></a><br />
+<br />
+<a href="http://www.sczg.hr/radiosc/wp-content/uploads/2010/03/BLOGOTrON-The-Journey-21.12.2009.mp3" target="_blank">Radio emisija Studenskog radia o mom blogu</a><br />
+<br />
+<b>Recepti</b><br />
+<a href="http://thejourney.blog.hr/2008/08/1625236375/tradicionalna-irska-kuhinja-irish-stew.html" target="_blank">Irish stew</a><br />
+<a href="http://thejourney.blog.hr/2008/08/1625293380/rabarbara.html" target="_blank">Džem od rabarbare</a><br />
+<a href="http://thejourney.blog.hr/2007/09/1623155054/vrijeme-u-irskoj-i-kako-ga-zaboraviti.html" target="_blank">Pašta s okusom Mediterana</a><br />
+<br />
+<b>EUROPA</b><br />
+<b>Hrvatska</b><br />
+<a href="http://thejourney.blog.hr/2008/07/1625133725/rijecki-plac.html" target="_blank">Rijeèki plac</a><br />
+<a href="http://thejourney.blog.hr/2008/07/1625172939/nostalgija.html" target="_blank">Nostalgija</a><br />
+<a href="http://thejourney.blog.hr/2008/01/1624096967/tuna-nasa-jadranska.html" target="_blank">Tuna naša jadranska</a><br />
+<br><b>Irska</b><br />
+<b>Dublin i okolica</b><br />
+<a href="http://thejourney.blog.hr/2007/12/1623718659/dublin.html" target="_blank">Dublin</a><br />
+<a href="http://thejourney.blog.hr/2007/10/1623345414/juzni-i-sjeverni-dublin.html" target="_blank">Južni i sjeverni Dublin</a><br />
+<a href="http://thejourney.blog.hr/2008/02/1623673391/ne-treba-mi-jack-pot-radije-bih-konja-s-pedigreom-irska-nacionalna-ergela.html" target="_blank">Nacionalna ergela (National Stud)</a><br />
+<a href="http://thejourney.blog.hr/2009/02/1625912942/nevjerojatno-ali-istinitoirska-nam-nije-zelena.html" target="_blank">Irska pod snijegom (Dublin mountains)</a><br />
+<b>Zapad</b><br />
+<a href="http://thejourney.blog.hr/2007/10/1623396308/setnja-po-zapadnoj-obali-irske.html" target="_blank">Zapadna Irska</a><br />
+<a href="http://thejourney.blog.hr/2009/05/1626169593/bridges-of-ross-dobro-cuvana-quotirska-tajnaquot.html" target="_blank">Bridges of Ross</a><br />
+<a href="http://thejourney.blog.hr/2008/08/1625285965/adare-najljepse-selo-u-irskoj.html" target="_blank">Adare, najljepše selo u Irskoj</a><br />
+<a href="http://thejourney.blog.hr/2009/05/1626248063/aran-islands-inishmore-ponajvise.html" target="_blank">Aran islands</a><br />
+<b>Sjever</b><br />
+<a href="http://thejourney.blog.hr/2007/10/1623409447/put-kojeg-je-maccool-sagradio-da-dode-do-svoje-drage-divice.html" target="_blank">Sjeverna Irska</a><br />
+<b>Jug</b><br />
+<a href="http://thejourney.blog.hr/2007/10/1623421271/skelligs-stijene-svetog-fionana-i-manje-i-vise-cudnih-ptica.html" target="_blank">Skelligs</a><br />
+<b>O svemu i svaèemu</b><br />
+<a href="http://thejourney.blog.hr/2007/10/1623403325/irske-prometnice.html" target="_blank">Vožnja po Irskoj</a><br />
+<a href="http://thejourney.blog.hr/2007/11/1623525293/blue-card-green-card-prica-o-nekim-sadasnjim-i-buducim-radnim-dozvolama-eu.html" target="_blank">Radne dozvole u Irskoj</a><br />
+<a href="http://thejourney.blog.hr/2007/10/1623489803/kako-je-tikva-dobila-ime-jack-olantern-i-neke-druge-price.html" target="_blank">Noæ vještica (Halloween)</a><br />
+<a href="http://thejourney.blog.hr/2008/04/1624693514/more.html" target="_blank">Irsko more</a><br />
+<a href="http://thejourney.blog.hr/2008/12/1625616687/sport-u-iraca-i-ja-kao-promatrac.html" target="_blank">Sport u Iraca i ja kao promatraè</a><br />
+<a href="http://thejourney.blog.hr/2009/02/1625893283/irski-kalendar-stiglo-nam-je-proljece.html" target="_blank">Irski kalendar</a><br />
+<a href="http://thejourney.blog.hr/2009/04/1626182804/koliko-platiti-trajekt-za-aran-islands-ili-crtica-o-irskom-turizmu.html" target="_blank">Koliko platiti trajekt za Aran islands ili crtica o irskom turizmu</a><br />
+<a href="http://thejourney.blog.hr/2009/05/1626197601/u-koju-luku-ici-na-trajekt-ili-druga-crtica-o-irskom-turizmu.html" target="_blank">U koju luku iæi na trajekt ili druga crtica o irskom turizmu</a><br />
+<a href="http://thejourney.blog.hr/2008/08/1625211800/kulturoloske-razlike-3-pretezno-o-ircima.html" target="_blank">Kulturološke razlike 3 / Pretežno o Ircima</a><br />
+<a href="http://thejourney.blog.hr/2009/02/1625951000/a-kako-je-u-katolickoj-irskoj-s-umjetnom-oplodnjom.html" target="_blank">A kako je u katolièkoj Irskoj s umjetnom oplodnjom?</a><br />
+<a href="http://thejourney.blog.hr/2009/02/1625953247/irska-u-vrijeme-recesije.html" target="_blank">Irska u vrijeme recesije</a><br />
+<br><b>Island</b><br />
+<a href="http://thejourney.blog.hr/2008/09/1625301417/ltemgtthe-journeyltemgt-to-iceland.html" target="_blank">Island opæenito</a><br />
+<br><b>Italija</b><br />
+<a href="http://thejourney.blog.hr/2009/03/1626017054/je-li-neron-kriv-sto-nema-vise-ostataka-starog-rima.html" target="_blank">Rim - Antika</a><br />
+<a href="http://thejourney.blog.hr/2009/03/1626018280/rimske-atmosfere.html" target="_blank">Rimske atmosfere</a><br />
+<br><b>Madrid</b><br />
+<a href="http://thejourney.blog.hr/2008/04/1624639400/madrid.html" target="_blank">Madrid</a><br />
+<a href="http://thejourney.blog.hr/2008/03/1624374299/siesta-je-zakon.html" target="_blank">Siesta je zakon</a><br />
+<br><b>Pariz</b><br />
+<a href="http://thejourney.blog.hr/2008/09/1625368192/mjesto-gdje-se-prodaju-picasso-amp-co.html" target="_blank">Mjesto gdje se prodaju Picasso & co.</a><br />
+<a href="http://thejourney.blog.hr/2009/01/1625820605/bijeli-pariz.html" target="_blank">Bijeli Pariz</a><br />
+<br><b>Prag</b><br />
+<a href="http://thejourney.blog.hr/2008/02/1624161467/pocetak-kratke-setnje-pragom.html" target="_blank">Poèetak kratke šetnje Pragom</a><br />
+<a href="http://thejourney.blog.hr/2008/02/1624188634/kraj-kratke-setnje-pragom.html" target="_blank">Kraj kratke šetnje Pragom</a><br />
+<br><b>Škotska</b><br />
+<a href="http://thejourney.blog.hr/2008/09/1625402395/the-scottish-highlands.html" target="_blank">The Scottish Highlands</a><br />
+<a href="http://thejourney.blog.hr/2008/09/1625408959/skoti-krava-s-frizurom-i-aberdeen.html" target="_blank">Škoti, krava s frizurom i Aberdeen</a><br />
+<a href="http://thejourney.blog.hr/2008/11/1625598457/edinburgh.html" target="_blank">Edinburgh</a><br />
+<br><b>Rusija</b><br />
+<a href="http://thejourney.blog.hr/2009/06/1626381768/sto-su-mi-quotobicniquot-moskovljani-pricali-o-njihovim-politicarima.html" target="_blank">Ruski politicari gledani iz kuta Moskovljana</a><br />
+<a href="http://thejourney.blog.hr/2009/07/1626493836/moskovljani-i-moskva-videni-iz-mojeg-kuta.html" target="_blank">Moskovljani i Moskva iz mojeg kuta</a><br />
+<a href="http://thejourney.blog.hr/2009/07/1626514007/moskovska-podzemna.html" target="_blank">Moskovska podzemna</a><br />
+<br><b>USA</b><br />
+<b>Manhattan</b><br />
+<a href="http://thejourney.blog.hr/2008/01/1623975187/manhattan-ukratko.html" target="_blank">Manhattan ukratko</a><br />
+<a href="http://thejourney.blog.hr/2008/01/index.html#dan12" target="_blank">Chinatown</a><br />
+<a href="http://thejourney.blog.hr/2008/01/1623982810/guggenheim-moma-i-slucaj-ogromnog-bijelog-platna.html" target="_blank">Guggenheim i MoMA</a><br />
+<a href="http://thejourney.blog.hr/2008/01/1623903934/velicina-je-vazna.html" target="_blank">Velièina je važna</a><br />
+<a href="http://thejourney.blog.hr/2008/01/1624007400/opasnost-vreba-svugdje-oko-nasooopsnjih.html" target="_blank">Security</a><br />
+<br><b>AZIJA</b><br />
+<b>Malezija</b><br />
+<a href="http://thejourney.blog.hr/2008/04/1624742536/penang-onako-uvodnomalo-o-obicajima-ljudima-i-zivotinjama.html" target="_blank">Penang uvodno</a><br />
+<a href="http://thejourney.blog.hr/2008/04/1624622291/penang-hill.html" target="_blank">Penang Hill</a><br />
+<a href="http://thejourney.blog.hr/2008/05/1624759701/kek-lok-si.html" target="_blank">Kek Lok Si</a><br />
+<a href="http://thejourney.blog.hr/2008/05/1624813048/pokusaj-zavrsetka-price-o-penangu-ili-prica-o-cijenama-shoppingu-i-restoranima-sretan.html" target="_blank">Cijene, shopping, restorani</a><br />
+<a href="http://thejourney.blog.hr/2010/04/1627435433/nije-svako-zlo-za-zlo-sretan-ili-prica-o-4-dana-na-redangu.html" target="_blank">Redang</a><br />
+<b>Kina</b><br />
+<a href="http://thejourney.blog.hr/2008/05/1624867690/velicina-je-relativna-sretan.html" target="_blank">Velièina gradova</a><br />
+<a href="http://thejourney.blog.hr/2008/06/1624911546/pricice-o-mom-prvom-kineskom-iskustvu.2.html" target="_blank">Prièice o Kini</a><br />
+<a href="http://thejourney.blog.hr/2008/05/1624901084/orhideje.html" target="_blank">Orhideje</a><br />
+<a href="http://thejourney.blog.hr/2008/10/1625519757/em-ti-kinesko.html" target="_blank">'em ti kinesko</a><br />
+<a href="http://thejourney.blog.hr/2009/12/1627056868/chinglish.html" target="_blank">Chinglish</a><br />
+<a href="http://thejourney.blog.hr/2009/12/1627069188/art-zone-798-manje-poznati-peking.html" target="_blank">Art Zone 798</a><br />
+<a href="http://thejourney.blog.hr/2009/12/1627059454/da-smo-svi-jednaki-bilo-bi-dosadno-putovati-pricice-o-mom-drugom-kineskom-iskustvu.html" target="_blank">Prièice o Kini2</a><br />
+<a href="http://thejourney.blog.hr/2009/12/1627100712/vrhovi-oko-rijeke-li.html" target="_blank">Rijeka Li</a><br />
+<a href="http://thejourney.blog.hr/2009/12/1627145330/jedno-normalno-kinesko-selo.html" target="_blank">Normalno kinesko selo</a><br />
+<b>Hong Kong</b> - still missing<br />
+<b>Macau</b> - still missing<br />
+<b>Japan</b><br />
+<a href="http://thejourney.blog.hr/2010/02/1627284272/moj-prvi-dodir-s-japanom.html" target="_blank">Prvi dodir s Japanom</a><br />
+<b>Skitam i promatram...</b><br />
+<a href="http://thejourney.blog.hr/2008/08/1625218011/kulturoloske-razlike-4-perhaps-they-are-in-the-woods.html" target="_blank">Perhaps, they are in the woods</a><br />
+<a href="http://thejourney.blog.hr/2008/08/1625212041/kulturoloske-razlike-2-indijci.html" target="_blank">Kulturološke razlike / Indijci</a><br />
+<a href="http://thejourney.blog.hr/2008/04/1624577712/luton-tak-imam-te-rad.html" target="_blank">Luton, tak imam te rad</a><br />
+<br />
+<b><a href="http://thejourney.blog.hr/2008/07/1625115038/prava-putnika-avionima-u-eu-vjerovali-ili-ne-imamo-ih.html" target="_blank">Prava putnika u avionima</a></b><br />
+<br />
+<b>Osobni miš-maš</b><br />
+<a href="http://thejourney.blog.hr/2010/05/1627482982/nevidljive-veze-prijateljstva-su-nam-jedina-konstanta.html" target="_blank">Nevidljive veze</a><br />
+<a href="http://thejourney.blog.hr/2009/04/1626079178/amarcordmi-ricordosjecam-se.html" target="_blank">Amarcord...mi ricordo...sjeæam se... </a><br />
+<a href="http://thejourney.blog.hr/2009/02/1625944523/jedanaestogodisnjaci-profesionalci.html" target="_blank">Jedanaestogodišnjaci profesionalci</a><br />
+<a href="http://thejourney.blog.hr/2008/08/1625206746/kulturoloske-razlike-1-od-sutra-sam-quotslobodnaquot-u-irskoj.html" target="_blank">Kulturološke razlike 1 / Od sutra sam slobodna u Irskoj</a><br />
+<a href="http://thejourney.blog.hr/2009/01/1625849488/adagio-sjecanja.html" target="_blank">Adagio sjeæanja</a><br />
+<a href="http://thejourney.blog.hr/2008/12/1625672903/je-li-nona-imala-pravo.html" target="_blank">Je li nona imala pravo?</a><br />
+<a href="http://thejourney.blog.hr/2008/09/1625353654/jedna-opustajuca-vecer.html" target="_blank">Jedna opuštajuæa veèer</a><br />
+<a href="http://thejourney.blog.hr/2008/07/1625159617/2-dokaza-da-su-muski-i-zenski-mozak-razliciti-new-scientistov-i-moj-analizom-hrvatskog-galeba.html" target="_blank">2 dokaza da su muški i ženski mozak razlièiti; New Scientistov i moj analizom hrvatskog galeba</a><br />
+<a href="http://thejourney.blog.hr/2008/06/1625002070/11-godina.html" target="_blank">11 godina</a><br />
+<a href="http://thejourney.blog.hr/2008/04/1624719974/tko-ce-me-od-sad-onako-pitati-quotima-li-sto-novoga-na-onom-planuquot.html" target="_blank">Tko æe me od sad onako pitati: "Ima li što novoga na 'onom planu'?"</a><br />
+<a href="http://thejourney.blog.hr/2008/04/1624438459/mrs-joan.html" target="_blank">Mrs Joan</a><br />
+<a href="http://thejourney.blog.hr/2008/02/1624275261/pa-pa-milizmili.html" target="_blank">Pa pa Mili-Zmili </a><br />
+<br><b>Predstave, gigovi...</b><br />
+<a href="http://thejourney.blog.hr/2009/09/1626748680/la-clique-est-magnifique.html" target="_blank">La Clique est magnifique</a><br />
+<a href="http://thejourney.blog.hr/2009/07/1626522177/u2-i-sto-me-opet-tjera-iz-dublina.html" target="_blank">U2 i što me opet tjera iz Dublina</a><br />
+<a href="http://thejourney.blog.hr/2009/07/1626532521/druga-strana-koncerta-u2.html" target="_blank">Druga starana koncerta U2</a><br />
+<br><b>Zanimljivi blogeri</b>:<br />
+<A HREF="http://protivnasilja.blog.hr"><img src="http://img88.imageshack.us/img88/3414/srcavratimohrvatskojosmub0.jpg " border="0" width="130" alt="Image Hosted by ImageShack.us" /></a><br />
+<a href="http://gusarskabanda.blog.hr/" target="_blank"><b>Bugenvilija</b></a> - Netko tko radi prekrasne macro fotografije i uèi nas puno o suživotu s drugim biæima na Zemlji....kukcima npr.<br />
+<a href="http://doninsvijet.blog.hr/" target="_blank"><b>Donin svijet</b></a> - Lijepi postovi o svemu i svaèemu<br />
+<a href="http://ispravisedelfina.blog.hr/" target="_blank"><b>Ispravi se Delfina</b></a> - Lijepe pjesme<br />
+<a href="http://justthepine.blog.hr/" target="_blank"><b>Hvalospjev gluposti</b></a> - Duhoviti Samoborac koji je u prošlom životu bio Leprechaun<br />
+<a href="http://priceizbeckesume.blog.hr/" target="_blank"><b>Lipa Mare</b></a> - Dogodovštine jedne <i>Beèanke</i><br />
+<a href="http://www.makedoblog.net" target="_blank"><b>Makedo</b></a> - Još jedna s <i>previše</i> peèata u putovnici<br />
+<a href="http://demirijeka.blogspot.com/" target="_blank">Micula</a> - JAKO volim njegove fotografije<br />
+<a href="http://nepoznatizagreb.blog.hr/" target="_blank"><b>Nepoznati Zagreb</b></a> - Grad kojeg sam oduvijek voljela i to se neæe promijeniti<br />
+<a href="http://donajulia.blog.hr" target="_blank"><b>Pardon my French</b></a> - Zabavni osvrti na pariški/francuski život<br />
+<a href="http://mcind.blog.hr/" target="_blank"><b>Po putu i azimutu</b></a>- Planinarenje, pretežno po okolici Rijeke - podsjeæa me na sve što sam trebala puno više raditi dok sam bila tamo :-S<br />
+<a href="http://smilingcricket.blog.hr/" target="_blank"><b>Smiling cricket</b></a> - Prvi haiku koji me zaintrigirao<br />
+<a href="http://valivolitorte.blog.hr/" target="_blank"><b>Vali</b></a> - Fini recepti<br />
+<a href="http://zarazna.blog.hr/" target="_blank"><b>Zarazna</b></a> - Zabavno opisane crtice iz života još jedne gastiæke<br />
+<a href="http://praviseenglez.blog.hr/" target="_blank"><b>Zvrk</b></a> - Dogodovštine sa susjednog Otoka<br />
+<a href="http://izvorbezvode.blog.hr/" target="_blank"><b>Žubor vode</b></a> - Lijepe misli iz Slavonije<br />
+<br />
+Oni su zadnje napisali ovo:<br />
+<script type="text/javascript" src="http://tagafeed.com/lists/dolphinA/dn/windows-1250"></script><br />
+<br />
+<b>Gdje potražiti dobru hranu u Dublinu</b>:<br />
+<a href="http://www.menupages.ie/?RefID=thvamuzXgfM=">Visit MenuPages.ie</a><br />
+<br />
+<b>Kako jeftino doletiti negdje</b>:<br />
+<a href="http://www.flylc.com/directall-en.asp" target="_blank">Flylc</a><br />
+<a href="http://www.flycheapo.com/" target="_blank">Flycheapo</a><br />
+<a href="http://www.skyscanner.net/" target="_blank">Skyscanner</a><br />
+<a href="http://www.volagratis.com/" target="_blank">Volagratis</a><br />
+<a href="http://www.whichbudget.com/" target="_blank">Whichbudget</a><br />
+<br />
+<a href="http://www.met.ie" target="_blank">Irish Weather Forecast</a><br />
+<br />
+Veselije teme od vremena:<br />
+<a href="http://www.niktitanik.com/" target="_blank">Nik Titanik me uvijek dobro nasmije</a><br />
+<br />
+Muzika s ovih Otoka:<br />
+<a href="http://www.kila.ie" target="_blank">Kíla</a><br />
+<a href="http://www.declandebarra.com/music.html" target="_blank">Declan de Barra - pjesme</a><br />
+<a href="http://www.amymacdonald.co.uk" target="_blank">Amy Macdonald</a><br />
+<br />
+<b>Gdje potražiti dobre koncertiæe u Dublinu</b>:<br />
+<a href="http://www.whelanslive.com" target="_blank">Whelan's</a><br />
+<a href="http://www.bleunoteclub.com" target="_blank">Bleu Note</a><br />
+<a href="http://www.thesugarclub.com" target="_blank">The Sugar Club</a><br />
+<br />
+Obrazovanje:<br />
+<a href="http://www.novilist.hr/" target="_blank">Novi List</a><br />
+<a href="http://www.vecernji.hr/home/index.do" target="_blank">Veèernjak</a><br />
+<a href="http://www.monitor.hr" target="_blank">Monitor.hr</a><br />
+<a href="http://www.dnevnik.hr" target="_blank">Dnevnik.hr</a><br />
+<a href="http://www.independent.ie/" target="_blank">Irish Independent</a></p>
+</div>
+
+<!-- Prvi box kraj -->
+
+<!-- Drugi box -->
+
+<div class="box">
+<h2>Opis bloga</h2>
+<p><font size=1>Nakon cijelog ljeta putovanja i druženja s putnicima kod mene, krenula sam odgovarati na zaostale mail-ove i došla do zakljuèka da su blogovi izvrsna ideja da vam kažem gdje sam/što sam/ kako sam. <br />
+<br />
+Da, Modesti, priznajem <img src="http://www.blog.hr/img/hr/smiles/belj.gif" alt="belj" border="0"/>.<br />
+<br />
+Zašto The Journey?<br />
+Po naslovu knjige koju sam poèela èitati kad sam napisala prvi post, "The Journey Home".<br />
+Kupili su mi ju moji Maja i Ivan dok smo lutali po Islandu to ljeto. <br />
+Napisali su intersantnu posvetu: "Uživaj u svojoj misiji, ali kao što i sama znaš, svaka ptica svojem jatu leti....i uvijek ga naðe. Èekamo te!". <img src="http://www.blog.hr/img/hr/smiles/sretan.gif" alt="sretan" border="0"/><br />
+<br />
+Toèno. Rekla sam kad sam odlazila da ja na ovo gledam kao na malo dulje putovanje....pa evo prièa, i pokoji recept iz <b>Dublina</b> <b>i uže i šire okolice </b>:).... dok ne doðem doma <img src="http://www.blog.hr/img/hr/smiles/wink.gif" alt="wink" border="0"/><br />
+Fotografije su moje.... i iako nisam niti profesionalac niti umjetnik, zaštiæujem ih Copyrightom <img src="http://www.blog.hr/img/hr/smiles/sretan.gif" alt="sretan" border="0"/>.</font></p>
+</div>
+
+<!-- Drugi box kraj -->
+
+<!-- Treci box -->
+
+<div class="box">
+<h2></h2>
+<p><div style="text-align:center"><img border="0" src="http://www.webcounter.com/4712a379bb8b0/counter.png"/></a><br /></div><br />
+<br />
+<b><center><a href="http://www.usersonline.com"><img src="http://m.usersonline.com/counter/thejourney.png" border="0" alt="users online"/></a></center></b></p>
+</div>
+
+<!-- Treci box kraj -->
+
+<!-- Cetvrti box -->
+
+<div class="box">
+<h2></h2>
+<p><a href="http://www3.clustrmaps.com/counter/maps.php?url=http://thejourney.blog.hr/" id="clustrMapsLink"><img src="http://www3.clustrmaps.com/counter/index2.php?url=http://thejourney.blog.hr/" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null; this.src='http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg'; document.getElementById('clustrMapsLink').href='http://www2.clustrmaps.com'" /><br />
+</a><br />
+<br />
+<script type="text/javascript" src="http://feedjit.com/serve/?bc=FFFFFF&amp;tc=008000&amp;brd1=336699&amp;lnk=008000&amp;hc=336699&amp;ww=160"></script><noscript><a href="http://feedjit.com/">Feedjit Live Blog Stats</a></noscript></p>
+</div>
+
+<!-- Cetvrti box kraj -->
+
+</div>
+<div id="footer">
+<p></p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Radosna vijest - KTA</title>
+
+<link href="/css/default.css" rel="stylesheet" type="text/css" />
+<link href="/css/info.css" rel="stylesheet" type="text/css" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="description" content="Glavni grad Indije je Delhi, koji ima oko 13 milijuna stanovnika doseljenih iz čitave Indije, na povr&scaron;ini od 1.485 km&sup2;. Tu je jedna od naj..." />
+
+<link rel="alternate" type="application/rss+xml" title="Naslovna" href="/rss/default.asp" />
+<link rel="alternate" type="application/rss+xml" title="Top vijesti" href="/rss/topvijest.asp" />
+<link rel="alternate" type="application/rss+xml" title="Najave" href="/rss/najave.asp" />
+<link rel="alternate" type="application/rss+xml" title="Izdvajamo" href="/rss/izdvajamo.asp" />
+<link rel="alternate" type="application/rss+xml" title="Vijesti" href="/rss/vijesti.asp" />
+<link rel="alternate" type="application/rss+xml" title="Izdvajamo" href="/rss/izdvajamo.asp" />
+<link rel="alternate" type="application/rss+xml" title="Poruke i poslanice" href="/rss/poruke.asp" />
+<link rel="alternate" type="application/rss+xml" title="Iz katoličkog riska" href="/rss/tisak.asp" />
+<link rel="alternate" type="application/rss+xml" title="Nova izdanja" href="/rss/novaizdanja.asp" />
+<link rel="alternate" type="application/rss+xml" title="Meditacija" href="/rss/meditacija.asp" />
+<link rel="alternate" type="application/rss+xml" title="Intevju" href="/rss/intervju.asp" />
+
+
+
+<script type="text/javascript" src="js/jquery-1.2.3.pack.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript">
+/* MEDITACIJA */
+
+var Medit = function() {
+	// get offset from link
+	offset = $(this).attr('href').slice($(this).attr('href').lastIndexOf("?"));	
+	divid = $(this).parent().parent().parent().attr("id") 
+	// ajax load
+	$(this).parent().parent().load('box/'+divid+'.asp'+offset, function(){
+	// li style & img src
+	li()
+	})
+	return false;
+};
+
+
+// li style & img src
+function li () {
+  $("#meditacija li:first").addClass("selected");
+  
+  $("#meditacija li a").hover(function(){
+  			$("#meditacija li").removeClass("selected")
+			$(this).parent().addClass("selected");
+ 			$("#meditacijaSlika").attr("src", $(this).children().attr("src"))
+ 	},function(){
+			$("#meditacija li").removeClass("selected")
+			 $(this).parent().addClass("selected");
+	});
+};
+
+	// fire livequery
+$('#meditacija .boxnav a').livequery('click', Medit);
+
+$(document).ready(function() {
+   li()
+ });
+
+/* postavi sirinu paragrafa ispod slike */
+function komentarSlike() {
+   $("div.slika").width(  $(".slika img").width())
+ };
+ 
+
+
+
+// *** LINKS SCREENSHOTS SCRIPT  *** 
+$(document).ready(function() {
+	if ( $("ul.websnapr").length > 0 ) { 
+		$("ul.websnapr li a").each(function(){
+		$(this).append("<img src=http://images.websnapr.com/?url=" + $(this).attr("href") + "/>").parent().append("<span>"+ $(this).attr("href")+"</span>")
+		});
+	}
+});
+
+/* Link ikone */
+$(document).ready(function() {
+	$("div#vijesti div.tekst li a[@href*='.pdf']").parent().addClass("pdf");
+	$("div#vijesti div.tekst li a[@href*='.doc']").parent().addClass("doc");
+	$("div#vijesti div.tekst li a[@href*='.xls']").parent().addClass("xls");
+	$("div#vijesti div.tekst li a[@href*='.ppt']").parent().addClass("ppt");
+	$("div#vijesti div.tekst li a[@href*='mailto:']").parent().addClass("email");
+	$("div#vijesti div.tekst li a[@href*='http://']").parent().addClass("link");
+});
+
+</script>
+</head>
+<body>
+<div id="glavni">
+  <div id="zaglavlje">
+    <h1><a href="default.asp"><strong>K</strong>atoli&#269;ka <strong>T</strong>iskovna <strong>A</strong>gencija<br/>
+      <span>Biskupske konferencije Bosne i Hercegovine</span></a></h1>
+    <ul>
+      <li><a href="/default.asp">NASLOVNA</a></li>
+      <li><a href="info.asp?id=756">O NAMA</a></li>
+      <li><a onclick="location.href='mailto:'+String.fromCharCode(107,116,97,98,105,104,64,98,105,104,46,110,101,116,46,98,97)+'?'">KONTAKT</a></li>
+      <li><a href="info.asp?id=760">RSS KANALI</a></li>
+      <li><a href="info.asp?id=757">LINKOVI</a></li>
+    </ul>
+     <div style="float:right; margin:-20px 15px 0 0; color:#d9ada7; font:normal 10px Verdana, Arial, Helvetica, sans-serif">12. prosinac 2010. <span id="datumsat"></span></div>
+    <form action="pretraga.asp" method="get" name="frmTrazi" id="frmTrazi" />
+  
+  
+    
+  <button type="submit" name="btnTrazi" id="btnTrazi">Traži</button>
+    <input type="text" name="txtTrazi" id="txtTrazi" onkeyup="lookup(this.value);" onblur="fill();"/>
+    </form>
+    <div class="suggestionsBox" id="suggestions" style="display: none;">
+				<img src="../images/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
+				<div class="suggestionList" id="autoSuggestionsList">
+					&nbsp;
+				</div>
+	</div>
+  </div>
+  
+  <div id="veliki">
+    
+    <div id="vijesti">
+    <div class="alati">
+        <a href="#preporuka"><img src="images/ico/mail_back.gif" alt="Pošalji" /> Preporuči</a>
+        <a href="box/tiskaj.asp?id=24087" target="_blank"><img src="images/ico/printer.gif" alt="Tiskaj" /> Tiskaj</a>
+        <a href="box/word.asp?id=24087" target="_blank"><img src="images/ico/document.gif" alt="Word" /> Word</a>
+       <a href="#"><img src="images/ico/social.gif" alt="Pohrani" class="socializer"/> Pohrani</a>	</div>
+
+
+      <h2>Iz katoličkog tiska </h2>
+
+     <div class="slika"> <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/10_2010/radosna_vijest_418.jpg&w=110&h=150" alt="Radosna vijest br. 418" onload="komentarSlike()"><p>Radosna vijest br. 418</p></div>
+     
+     
+      <span class="datum">
+      Sarajevo,
+        28. svibanj 2010. </span>
+ 
+       
+      <h3>Radosna vijest</h3>
+      
+      
+          <h4>Indija je prelijepa zemlja</h4>
+          
+ 
+     <div class="tekst">  
+     
+       <p style="text-align: justify">Glavni grad Indije je Delhi, koji ima oko 13 milijuna stanovnika doseljenih iz čitave Indije, na povr&scaron;ini od 1.485 km&sup2;. Tu je jedna od najstarijih svjetskih civilizacija, stara barem 5.000 godina, nastala je na tlu dana&scaron;nje Indije. Arijska plemena sa sjeverozapada oko 1.500 godine pr. Kr. upala su na područja nastanjena Dravidskim stanovni&scaron;tvom i mije&scaron;anjem tih dviju civilizacija stvorena je klasična indijska kultura. Arapski upadi započeli su u 8. stoljeću, a u 12. stoljeću svoj je utjecaj pro&scaron;irila i Turska da bi počev&scaron;i od 15. stoljeća europski trgovci jačali trgovinu s Indijom. U 19. stoljeću britanski imperij preuzeo je kontrolu nad gotovo svim indijskim zemljama. Nenasilni otpor britanskom kolonijalizmu koji su predvodili Mahatma Gandhi i Jawaharlal Nehru donio je nezavisnost 1947. godine. Indijski potkontinent je tada podijeljen na sekularnu državu Indiju i muslimansku državu Pakistan. Treći rat između dvije zemlje doveo je do nastanka treće države Banglade&scaron;, koja je nastala od Istočnog Pakistana.</p>
+<h4>Miroljubivi i tolerantni ljudi</h4>
+<p style="text-align: justify">Danas je Indija savezna država sastavljena od 28 država i 7 saveznih teritorija. Unatoč impresivnim pomacima u razvoju, Indija se i danas suočava s velikim problemima kao &scaron;to su sukobi sa Pakistanom oko Ka&scaron;mira, ogromna prenapučenost, ekolo&scaron;ka degradacija okoli&scaron;a može se reći u svakom pogledu. Kanalizacija često otvorenog tipa u pojedinim dijelovima naselja i gradova. Smeća pune ulice, preko kojeg se prolazi, nikome ne smeta, po njemu hodaju, svete &bdquo;krave&ldquo; i prebiru po usmrdjelom smeću. Vjerujem da su stanovnici Indije ogrezli u prljav&scaron;tini i kao takvi odoljeli su mnogim bacilima i bakterijama. Postali su na mnoge zaraze imuni. Kaka bi se mi kretali kuda se oni kreću i gdje žive, sigurno bi &bdquo;fasovali&ldquo; koju od bolesti. Ekstremno siroma&scaron;tvo veliko dijela stanovni&scaron;tava. Ne može&scaron; korak ići da te sirotinja ne zaskoči tražeći milostinju, ili će te povući za rukav. Skoro svako dijete zna prositi, čini mi se čim stane na noge već zna tražiti ukazujući prstima na novac. Posebno očekuju europejce, jer unaprijed misle oni imaju novaca i od njih treba tražiti. Unatoč svega mirni su, nisu toliko ni nasilni, ne svađaju se, a podnose jedni druge. Vjerojatno svjesni svatko svoje bijede. Često i uglavnom hodaju bosi. Od izmeta kravljega i stočnoga prave male gomile od po kilogram po prilici, su&scaron;e na suncu i stavljaju u stog pa kada dođu monsunske ki&scaron;e i malo bude hladnije onda im to služi za ogrjev. Ogrjev im malo treba u doba monsuna. Inače ovdje su temperature od oko 30-ak stupnjeva. Kažu da izmet kravlji i mokraća služi u medicini za spravljanje različitih vrsta lijekova posebno za probavni i stomačni trakt. Zna se često dogoditi i etnička i vjerska napetost.</p>
+<h4>Grad različitosti i monumentalnosti</h4>
+<p style="text-align: justify">Povr&scaron;ina ove zemlje je oko 3.300.000 km&sup2;. Klima je od tropske monsunske na jugu do umjerene na sjeveru. Stanovni&scaron;tvo je masovno oko 1.080.000.000, kako kažu statistike iz 2005. godine, &scaron;to će reći da je sada već za neki milion vi&scaron;e. Prosječna starost stanovni&scaron;tva je 24,5 godine. Religije: hindu 80%, muslimani 13,4%, kr&scaron;ćani 2,3%, sikhi 1,9%.<br />
+Delhi je podijeljen u dva dijela: stari i novi, stari dio grada smje&scaron;ten je unutar obrambenih zidna i prostire se zapadno od čuvene Crvene utvrde (Red fort) koju je dao sagraditi mongolski vladar &Scaron;ah Jahan u prvoj polovici 17. stoljeća. Inače povijest grada stara je preko 3.000 godina. Grad su napadali mnogi osvajači: Timer Lenko u 14. stoljeću, Babur u 16. stoljeću, a među ostalim u 19. stoljeću i Britanci. Osim navedene Crvene tvrđave od povijesnih građevina treba spomenuti Jama Masjid, najveću džamiju u Indiji, sagrađenu također po nalogu &Scaron;ah Jahana. Stoga se stari dio grada jo&scaron; naziva i Shah Jahanabad. Tu u spletu uličica i trgova žive jedni uz druge, ali ipak odvojeno, svaki u svojoj četvrti, muslimani, sikhi i hindusi. <br />
+Južno od starog dijela grada prostire se New Delhi, ponos graditeljstva britanskog imperija. Prebaciv&scaron;i prijestolnicu Indije iz Kalkute u Delhi, Britanci su 1911. godine proglasom kralja Georgea V. započeli s izgradnjom novog grada koji je inauguriran 1931. godine. Novi se grad protezao na povr&scaron;ini od 26 km&sup2; i trebao je svojim &scaron;irokim avenijama i velikim urađenim parkovima simbolizirati veličinu i snagu Carstva. I danas se nazire ta grandioznost, palača potkralja i prostranstvo, unatoč naknadnoj izgradnji na ranije slobodnim povr&scaron;inama. Mjesta od posebnog zanimanja turista su: India Gate spomenik palim indijskim vojnicima u I. svjetskom ratu, Parlament house, National museum i mnoge impresivne palače u kojima je danas uglavnom smje&scaron;tena državna administracija. Južno od sredi&scaron;ta grada treba posjetiti Qutb Minar kompleks koji se sastoji od džamije, medrese i minareta visokog 73 m koji je svojom izgradnjom krajem 12. i početkom 13. stoljeća trebao simbolizirati dominaciju islama nad nevjernicima. Ima oko 5 nekih katova, idući prema vrhu sve su uži. Svaki kat je posebnim figurama u kamenu urađen. Okruglog je oblika. Oko njega je kompleks objekata vrlo lijepih i turističkih atraktivni. <br />
+Sagrađena 1464. godine Nemrana spada u najstarije indijske palače-hotele. Na povr&scaron;ini od 10 hektara stepenasto se uzdižu palače urezane u obronak brda pružajući prekrasan pogled. Godine 1986. ru&scaron;evine te utvrde palače su obnovljene.</p>
+<h4>&bdquo;Ružičasti&ldquo; Jaipur</h4>
+<p style="text-align: justify">Jaipur je živopisna prijestolnica savezne države Radžastan, poznat je i pod nazivom &bdquo;ružičasti grad&ldquo; zbog boje fasada mnogih građevina. Potpuno je zasluženo uvr&scaron;ten u tzv. &bdquo;Zlatni trokut&ldquo; najposjećenijih destinacija u Indiji. Delhi, Agra i Jaipur. Grad je 1727. osnovao maharadža Jai Singh II. koji je gajio sklonost prema znanosti i kulturi. Stoga je grad sagrađen planski i za 4 godine su zavr&scaron;ene glavne palače, sredi&scaron;nji trg i glavne ulice. Položaj ulica baziran je na matematičkom uzorku 9 trgova koji predstavljaju staru Hindu mapu svemira sa svetim brdom Meru, domom &Scaron;ive koji zauzima sredi&scaron;nji trg. U Jaipuru se u sredi&scaron;tu nalazi kraljevska palača, danas gradska palača, sagrađena između 1728 i 1732. godine. Osim palače, posjetioce fascinira i Hawa Mahal, palača vjetrova, iz 1799. godine koja čini dio istočnih zidina gradske palače i najljep&scaron;e se vidi izvana, s ulice. To je vjerojatno najpoznatija Jaipurska građevina koju krasi čipkasta ružičasta fasada sagrađena za žene iz harema koje su kroz otvore na pročelju mogle promatrati život na ulici, a da istovremeno ne budu viđene. Jantar Mantar u doslovnom prijevodu &bdquo;instrumenti za mjerenje sklada u nebesima&ldquo;, jedan je od najstarijih i najslavnijih opservatorija na svijetu, sagrađen između 1728. i 1734. godine. Svaki od instrumenata ima posebnu funkciju i svaki daje precizno čitanje. Idući u smjeru kazaljke na satu vidjet ćete sljedeće instrumente: veliki sunčani sat koji ima označene sate i minute, &bdquo;Dhruva&ldquo; pokazuje položaj zvijezde Sjevernjače, &bdquo;Narivalya&ldquo; ima dva brojčanika: južni za vrijeme kad sunce na južnoj hemisferi i sjeverni za ostatak godine, mali &bdquo;Kranti&ldquo; je služio za mjerenje geografske duljine i &scaron;irine za nebeska tijela, &bdquo;Raj&ldquo; &ndash; kralj svih instrumenata se koristio jednom godi&scaron;nje za izračun hinduskog kalendara i drugih parametara ove vrste. Utvrda i palača Amber sagrađena je početkom 17. stoljeća na mjestu hinduskog hrama iz 10. stoljeća na strate&scaron;ki važnom položaju koji dominira uskom dolinom. U palaču se ulazi kroz pet obrambenih zidova. Od građevina unutar utvrde treba izdvojiti Shila Mate Temple, hram posvećen božici rata-Kali, dvoranu za javne prijeme Diwan-i-Am, dvorana za privatne posjete: Jai Mandir mramorni paviljon, Shish Mahals ili Palača ogledala. Na zapadu se nalazi Sukh Niwas, palača užitka sa tekućom vodom koja hladi zrak i vratima ukra&scaron;enim slonovačom i sandalovinom.</p>
+<h4>Biser Indije &ndash; Taj Mahal</h4>
+<p style="text-align: justify">Tijekom 16. i 17. stoljeća Agra je bila jedna od mogulskih prijestolnica. Vrhunac razvoja grad je doživio za vladavine mogula Akbara. Od ostalih vladara treba spomenuti već navedenog &Scaron;aha Jahana stari Delhi koji je Agri ostavio neke od i danas najslavnijih građevina &ndash; čuvena džamija Jama Majsid koju je &scaron;ah Jahan posvetio najstarijoj kćeri, većina građevina unutar tvrđave Agra i najslavniji biser Indije: Taj Mahal. Ovo remek djelo koje je spomenuti &scaron;ah posvetio svojoj voljenoj kraljici Mumataz Mahal opisano je kao suza na licu vječnosti (Tagora) i vječni spomenik ljubavi. Monumentalni spomenik se gradio 22 godine počev&scaron;i od 1631. godine i danas se smatra jednim od 7 svjetskih čuda. Bijeli mramor od kojeg je taj građen blije&scaron;ti čak i za tmurnog vremena. Perzijski graditelj Ustad Isa građevinu je podigao na mramornoj platformi veličine 313 četvornih stopa usred koje se uzdiže najveća od ukupno 22 kupole i 70 metara iznad ostatka građevine. <br />
+Utvrdu Agra započeo je mogul Akbar.g., a zavr&scaron;io njegov unuk &Scaron;ah Jahan. Građena je uglavnom od crvenog pje&scaron;čenjaka, vrlo je slična Crvenoj utvrdi u Delhiju. Od građevina u utvrdi treba spomenuti Pearl Mosque mramorna džamija savr&scaron;enih proporcija, a natpis na perzijskom unutar građevine uspoređuje je s savr&scaron;enim biserom. Tu se jo&scaron; nalaze brojne palače: Jahangiri Mahal vi&scaron;ekatnica koju je Akbar posvetio supruzi Jodha Bai u koju se ulazi kroz impresivna vrata i dvori&scaron;te &ndash; neke od dvorana dekorirane su u perzijskom stilu zlatno-plavim &scaron;tukaturama, druge se ističu prebogato obrađenim detaljima u kamenu. Smatra se da je veći dio tih ukrasa stoljeće kasnije prenesen u druge palače u utvrdi kao &scaron;to su Diwan-i-Kas, Mausam Burj, Shaha Burj&hellip;</p>
+<h4>Khajuraho hramovi</h4>
+<p style="text-align: justify">Slava i veličina Orche nastala je u 16. stoljeću kad je plemeniti glave&scaron;ina Rudar Pratap iz dinastije Bundela odlučio na tom mjestu uz rijeku Betwa podići svoje sjedi&scaron;te. Kompleks utvrde udomljuje tri prekrasne palače smje&scaron;tene u otvoreni četverokut: Jehongir Mahal, Raj Mahal i Raj Praveen Mahal. Uz njih je na čvrstoj stijeni sagrađen hram Chaturbhuj koji je trebao poslužiti kao sveti&scaron;te, ali je slika Rama zbog koje je hram sagrađen ipak ostala u susjednoj palači Ram Raja Mandir koja je zbog te svrhe pretvorena u hram. Ram Raja Mandir je kamenom stazom povezan s hramom Laxminarayan. Ovdje je stil gradnje mje&scaron;avina utvrde i hrama. Unutra&scaron;njost krije zanimljive zidne slikarije-reprezentativne primjerke slikarske &scaron;kole Bundela. <br />
+Khajuraho hramovi su jedna od najvećih indijskih atrakcija. Nekada&scaron;nja prijestolnica dinastija Chandela, Khajuraho je danas mirno selo s jedva 6 tisuća stanovnika. Hramovi su savr&scaron;en primjer into-arijske arhitekture, ali su dekoracije sa slobodnim motivima ono &scaron;to je Khajuraho učinilo slavnim. Skulpture su u kamenu prikazali mnoge aspekte indijskog života od prije 1.000 godina: božanstva i božice, ratnike i glazbenike, životinje, one iz prirodnog okruženja i one mitolo&scaron;ke. Hramove je izgradila dinastija Chandella koja je vladala tijekom pet stoljeća sve do pada pod islamsku vlast. Gotovo svi hramovi nastaju u stoljeću najvećeg procvata stvarala&scaron;tva: od 950 do 1.050 godine. Svi hramovi mogu se podijeliti u tri dijela: ulazi se kroz trijem znan imenom Ardhamandapa, slijedi dvorana ili Mahandapa poduprta stupovima i okružena hodnikom. Vestibul vodi dalje u Garbhagrihu-unutarnje sveti&scaron;te sa prikazom božanstva kojem je hram posvećen. Neki od najstarijih hramova građeni su od granita ali svi oni koji potječu iz klasičnog perioda povijesti Khajuraha građeni su od pje&scaron;čenjaka. Hramove dijelimo na zapadne, istočne i južne od kojih se oni zapadni smatraju najimpresivnijima: Varaha hram iz 10. stoljeća posvećen trećoj inkarnaciji Vi&scaron;ne nasuprot kojem se nalazi hram Lakshmana najstariji među hramovima, iz 950 godine. Hram je bogato ukra&scaron;en prizorima iz lova i bitaka kao i erotskim motivima. Hram Kandariya Mahadeva je najveći i najvi&scaron;i, posvećen &Scaron;ivi. Krase ga vi&scaron;e od 800 statua bogova i boginja, glazbenika i likova u raznim erotskim pozama. Hram Chitragupta iz ranog 11. stoljeća jedini je posvećen bogu sunca-Surya. Unutar istočne grupe hramova sagrađen je muzej Jain sa kružnom galerijom u kojoj su postavljene statue 24 Tirthankarasa.</p>
+<h4>Gatovi rijeke Ganges</h4>
+<p style="text-align: justify">Varanasi grad, jedan je od najvažnijih hodočasničkih sjeci&scaron;ta u Indiji, ujedno i jedna od najvećih turističkih atrakcija. Smje&scaron;ten na obalama rijeke Ganges, Varanasi je sredi&scaron;te civilizacija već vi&scaron;e od 2.000 godina. Tu u blizini, u 10 km udaljenom Saranathu, Buda je propovijedao svoju poruku prosvjetljenja prije 25 stoljeća. Poznat po imenima Kashi i Benares, Varanasi je dobio ime kombinacijom imena dviju rijeka: Varuna i Assi. Za svakog pobožnog Hindusa, smrt u ovom gradu izravno ga vodi u raj. Grad je uostalom igrao veliku ulogu u promociji hindu jezika, a ovom su gradu pripadali i veliki pisac Prem Chand i pjesnik Tulsi Das. Glavna atrakcija Varanasija je zapadna obala rijeke Ganges na kojoj se obavlja ritualno kupanje na vi&scaron;e od 100 gatova. Osim gatova treba spomenuti Tulsi Manas sagrađen 1964. godine. Židovi tog hrama ukra&scaron;eni su stihovima i scenama iz Ram Charit Manas koju je napisao već spomenuti pjesnik Tulsi Das. Na drugom katu hrama možete promatrati elektrikom pokretane statue i scene iz hinduske mitologije. <br />
+Nizvodno se nalazi i poznato Benares Hindu University (BHU), sveučili&scaron;te sagrađeno 1918.godine koje zauzima povr&scaron;inu od 5 km&sup2; i slovi kao sredi&scaron;te za proučavanje indijske umjetnosti, kulture i glazbe kao i studij sanskrita. Pola sata pje&scaron;ice od sveučili&scaron;ta nalazi se novi hram Vishwanath koji je osmislio veliki indijski nacionalist Pandit Madan Mohan Malaviya koji je želio oživjeti hinduizam bez predrasuda &ndash; stoga je taj hram otvoren svim ljudima. S druge strane rijeke, nasuprot hramu nalazi se Ram Nagar Fort, dom maharadže od Benaresa.</p>
+<p style="text-align: justify"><br />
+<em>Ivan Ravlić, župnik u Novom Sarajevu</em></p>
+     </div>
+     
+     <div class="preporuci">
+       <a name="preporuka"></a>
+     <form action="box/mailpreporuci.asp" method="post" name="preporuciFrm" id="preporuciFrm">
+       <fieldset>
+       <legend>PREPORUČI</legend>
+       <label style="float:right; width:210px; "> Kratka poruka
+       <textarea name="poruka" id="poruka"></textarea>
+       </label>
+       <label>Vaša e-mail adresa
+       <input name="from" id="from" type="text" size="30" maxlength="50" />
+       </label>
+       <label>E-mail adresa primaoca
+       <input name="to" id="to" type="text" size="30" maxlength="50" />
+       </label>
+       <button type="submit" name="btnTrazi" id="btnTrazi2" >Pošalji</button>
+       <input name="id" type="hidden" value="24087" style="display:none;" />
+       </fieldset>
+     
+     </form>
+     </div>
+    </div>
+    
+    
+    
+    
+    
+    
+  
+  
+  
+    
+  </div>
+  
+  
+  
+  <div id="lijevi">
+      <div id="ostale" class="box sivi">
+      
+      
+        <h2><a href="#">IZ KATOLIČKOG TISKA</a></h2>
+        
+        <div class="sredina">
+          
+
+
+
+<ul>
+   
+    <li><a href="info.asp?id=26621">
+    <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/23_2010/svjetlo_rijeci_333.jpg&w=50&h=70" />
+    
+    
+    <div class="nadnaslov"></div>
+    
+    
+    <h3>Svjetlo riječi</h3>
+    <div class="podnaslov">Melem koji otvara oči</div>
+    </a>
+    </li>
+    
+
+    <li><a href="info.asp?id=26613">
+    <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/23_2010/katolicki_tjednik_49.jpg&w=50&h=70" />
+    
+    
+    <div class="nadnaslov"></div>
+    
+    
+    <h3>Katolički tjednik</h3>
+    <div class="podnaslov">Šarena laža</div>
+    </a>
+    </li>
+    
+
+    <li><a href="info.asp?id=26535">
+    <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/23_2010/veritas_12.jpg&w=50&h=70" />
+    
+    
+    <div class="nadnaslov"></div>
+    
+    
+    <h3>Veritas</h3>
+    <div class="podnaslov">Put u zemlju čuda</div>
+    </a>
+    </li>
+    
+
+    <li><a href="info.asp?id=26517">
+    <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/23_2010/katolicki_tjednik_48.jpg&w=50&h=70" />
+    
+    
+    <div class="nadnaslov"></div>
+    
+    
+    <h3>Katolički tjednik</h3>
+    <div class="podnaslov">Faljnis', pope!</div>
+    </a>
+    </li>
+    
+
+    <li><a href="info.asp?id=26429">
+    <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/22_2010/katolicki_tjednik_47.jpg&w=50&h=70" />
+    
+    
+    <div class="nadnaslov"></div>
+    
+    
+    <h3>Katolički tjednik</h3>
+    <div class="podnaslov">Nesposobni za demokraciju</div>
+    </a>
+    </li>
+    
+
+    <li><a href="info.asp?id=26383">
+    <img src="thumb/img.php?src=/files/image/Iz%20katolickog%20tiska/2010/22_2010/rv_423.jpg&w=50&h=70" />
+    
+    
+    <div class="nadnaslov"></div>
+    
+    
+    <h3>Radosna vijest</h3>
+    <div class="podnaslov">Provincijal fra Ivan Sesar posjetio misionare u DR Kongu</div>
+    </a>
+    </li>
+    
+
+</ul>
+ 
+ <div class="boxnav">
+ 
+ 
+   
+     <a href="/info.asp?id=24087&offset=6"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+        </div>
+        <div class="dole">&nbsp;</div>
+      </div>
+      <div class="baner"><a href="http://nasa-ognjista.com/" target='_blank'><img src='/files/image/baneri/nasa_ognjista.jpg' title='Naša ognjišta' alt='Hrvatski katolički mjesečnik - Naša ognjišta'/></a></div>
+      
+      <div id="rubrike" class="box sivi">
+        <h2><a href="#">RUBRIKE</a></h2>
+        <div class="sredina">
+          
+		  <ul>
+           <li><a href="/">NASLOVNA</a></li>
+            <li><a href="info.asp?rubrika=2">NAJAVE</a></li>
+	        <li> <a href="info.asp?rubrika=3">IZDVAJAMO</a> </li>
+			<li><a href="info.asp?rubrika=4">VIJESTI</a></li>
+		    <li> <a href="info.asp?rubrika=5">PORUKE I POSLANICE</a></li>
+		    <li> <a href="info.asp?rubrika=8">SVETAC DANA I PATRON ŽUPE</a></li>
+		    <li> <a href="info.asp?rubrika=7">POD POVEČALOM</a></li>
+		    <li> <a href="info.asp?rubrika=6">PREDSTAVLJAMO</a></li>
+		    <li> <a href="info.asp?rubrika=9">IZ KATOLIČKOG TISKA</a></li>
+		    <li> <a href="info.asp?rubrika=12">INTERVJU</a></li>
+		    <li> <a href="info.asp?rubrika=10">NOVA IZDANJA</a></li>
+		    <li> <a href="info.asp?rubrika=11">MEDITACIJA</a></li>
+		    <li> <a href="info.asp?id=112">KOMENTARI</a> </li>
+            <li> <a href="foto.asp">FOTOGALERIJA</a> </li>
+	      </ul>
+        </div>
+        <div class="dole">&nbsp;</div>
+      </div>
+  </div>
+
+  
+  <div id="desni">
+<div id="multimedia" class="box sivi">
+  <h2  style=" float:left;padding:0 5px 5px 10px; position: relative; z-index:3; "> <a id="LinkVideo" href="box/multimedia.asp?Kategorija=2">VIDEO</a></h2>
+  <h2 style=" float:left;padding:0 0px 5px 10px; position: relative; margin-left:-20px; z-index:2;  background:url(images/sivi/top.png) top left  no-repeat;"> <a id="LinkFoto" href="box/multimedia.asp?Kategorija=1">FOTO</a></h2>
+  <h2 style=" float:left;padding:0 5px 5px 10px; position: relative; margin-left:-15px; z-index:1; background:url(images/sivi/top.png) top left  no-repeat;"> <a id="LinkAudio" href="box/multimedia.asp?Kategorija=3">AUDIO</a></h2>
+
+  <div class="sredina" >
+    
+
+
+
+
+
+<ul>
+
+ <li> <div class="brdr"> <embed src='/js/mediaplayer.swf' width='220' height='165' allowscriptaccess='always' allowfullscreen='true' wmode='transparent' flashvars='height=165&width=220&file=http://media01.vatiradio.va/podcast/00001694.flv&image=http://www.radiovaticana.org/flv/ctv_frame001694.jpg&wmode=transparent'></embed></div>
+  <div class="tekst">
+    <strong>10. prosinac 2010.</strong>
+    <h3>Benedetto XVI riceve la presidente della Lituania</h3>
+    </div>
+  </li>
+   
+</ul>
+
+
+<div class="boxnav">
+   
+     <a href="/info.asp?id=24087&index=1"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+  </div>
+  <div class="dole">&nbsp;</div>
+</div>
+
+    <div class="baner"><a href="http://www.ks.hr/" target='_blank'><img src='/files/image/baneri/krscanska_sadasnjost.jpg' title='Kršćanska sadašnjost' alt='Nakladnička kuća Kršćanska sadašnjost'/></a></div>
+    <div id="novaizdanja" class="box sivi">
+      <h2><a href="info.asp?rubrika=10">NOVA IZDANJA</a></h2>
+      <div class="sredina">
+        
+
+
+
+<ul>
+   
+    <li><a href="info.asp?id=26427">
+    <img src="thumb/img.php?src=/files/image/Nova%20izdanja/Svjetlo_svijeta.jpg&w=70&h=95" alt="Svjetlo svijeta" />
+    <div class="nadnaslov">Benedikt XVI. - Joseph Ratzinger, Peter Seewald</div>
+             <h3>SVJETLO SVIJETA</h3>
+             <div class="ukratko"> Papa, Crkva i znakovi vremena. Razgovor s Peterom Seewaldom</div>
+             
+          
+            
+            
+     </a></li>
+    
+    <li><a href="info.asp?id=26634">
+    <img src="thumb/img.php?src=/files/image/Nova%20izdanja/Crkvena_godina.jpg&w=70&h=95" alt="Crkvena godina" />
+    <div class="nadnaslov">Karl-Heinrich Bieritz</div>
+             <h3>CRKVENA GODINA</h3>
+             <div class="ukratko"> Svetkovine, blagdani i spomendani u povijesti i danas</div>
+             
+          
+            
+            
+     </a></li>
+    
+    <li><a href="info.asp?id=26623">
+    <img src="thumb/img.php?src=/files/image/Nova%20izdanja/Rabin_razgovara_Isusom.jpg&w=70&h=95" alt="Rabin razgovara s Isusom" />
+    <div class="nadnaslov">Jacob Neusner</div>
+             <h3>RABIN RAZGOVARA S ISUSOM</h3>
+             <div class="ukratko"> "Najvažnija knjiga za židovsko-kršćanski dijalog u zadnjem desetljeću"</div>
+             
+          
+            
+            
+     </a></li>
+    
+ </ul>
+ 
+ <div class="boxnav">
+   
+     <a href="/info.asp?id=24087&offset=3"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+      </div>
+      <div class="dole"> </div>
+    </div>
+    <div id="meditacija" class="box sivi">
+      <h2><a href="info.asp?rubrika=11">MEDITACIJA</a></h2>
+      <div class="sredina">
+        
+
+
+<img src="thumb/img.php?src=/files/image/Meditacija/misije.jpg&w=100&h=140" id="meditacijaSlika"/>
+<ul>
+   
+    <li><a href="info.asp?id=18152">
+    <img src="thumb/img.php?src=/files/image/Meditacija/misije.jpg&w=100&h=140" />
+    <div class="datum">Ivanka Brađašević</div>
+            <h3>Misionar</h3>
+            </a></li>
+    
+    <li><a href="info.asp?id=18341">
+    <img src="thumb/img.php?src=/files/image/Meditacija/poniznost(1).jpg&w=100&h=140" />
+    <div class="datum">Winfried Wermter</div>
+            <h3>Poniznost</h3>
+            </a></li>
+    
+ </ul>
+ 
+ <div class="boxnav">
+   
+     <a href="/info.asp?id=24087&offset=2"><img src="../images/box-nav-desno-link.png" alt="Sljedeca" /></a>
+     
+</div>
+
+
+      </div>
+      <div class="dole">&nbsp;</div>
+    </div>
+  </div>
+  
+  
+  
+  <div  id="donji">
+    
+  </div>
+</div>
+  <div id="podnozje">
+<div>
+<p style="float:right; text-align:right">Copyright © 1996-2010 KTA BK BiH. Sva prava pridržana. <br />
+Sadržaji s ovih stranica se mogu prenositi bez posebne dozvole uz navođenje izvora.</p>
+
+<p style="float:left;">Katolička tiskovna agncija Biskupske konferencije Bosne i Hercegovine<br />
+Kaptol 32, 71000 Sarajevo, Bosna i Hercegovina<br />
+tel/fax: + 387 33 666 865<br />
+e-mail: <a onclick="javascript:location.href='mailto:'+String.fromCharCode(107,116,97,98,105,104,64,98,105,104,46,110,101,116,46,98,97)+'?'"><script>document.write (String.fromCharCode(107,116,97,98,105,104,64,98,105,104,46,110,101,116,46,98,97))</script></a>
+</p>
+</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5872611-1");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
